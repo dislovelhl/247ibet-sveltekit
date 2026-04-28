@@ -51,10 +51,9 @@
         </div>
       </div>
 
-      <div class="group/routes relative overflow-hidden rounded-[1.5rem] border border-navy-border luxury-card p-5 sm:rounded-3xl sm:p-8 md:p-10">
-        <div class="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none"></div>
+      <div class="rounded-[1.5rem] border border-white/5 p-5 sm:rounded-3xl sm:p-8 md:p-10">
         <p class="page-hub-kicker mb-4 sm:mb-6">Accelerated Routes</p>
-        <div class="relative z-10 space-y-3">
+        <div class="space-y-3">
           <SafeExternalLink
             href={IBET_URLS.casino}
             class="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm font-bold text-white transition-all hover:border-prestige-gold/40 hover:bg-white/[0.05] group/item"
