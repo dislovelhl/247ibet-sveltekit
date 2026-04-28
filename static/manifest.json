@@ -1,0 +1,18 @@
+{
+  "name": "247iBET Canada",
+  "short_name": "247iBET",
+  "description": "Canada's regulated iGaming research and comparison platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050B14",
+  "theme_color": "#050B14",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "scope": "/"
+}
