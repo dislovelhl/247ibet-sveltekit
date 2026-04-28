@@ -1,11 +1,5 @@
 <script lang="ts">
-  // TODO: migrate from app/about/editorial-policy/page.tsx
+  // Permanent redirect to /editorial-policy
+  import { redirect } from '@sveltejs/kit';
+  throw redirect(308, '/editorial-policy');
 </script>
-
-<svelte:head>
-  <title>247iBET</title>
-</svelte:head>
-
-<div class="flex flex-col">
-  <!-- TODO: port /about/editorial-policy -->
-</div>

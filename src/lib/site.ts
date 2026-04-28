@@ -49,6 +49,13 @@ export const TRACKING = {
   legacyNewsletterDismissedKey: 'canadacasa_newsletter_dismissed',
 } as const;
 
+export const PARTNER = {
+  name: '247iBET',
+  url: 'https://247ibet.ca/home',
+  apiBase: 'https://boapi.ibet247.ca',
+  casinoUrl: 'https://247ibet.ca/casino',
+} as const;
+
 export function canonicalUrl(path: string): string {
   const clean = path.startsWith('/') ? path : `/${path}`;
   return `${SITE.url}${clean}`;

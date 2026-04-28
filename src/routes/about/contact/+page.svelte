@@ -1,11 +1,5 @@
 <script lang="ts">
-  // TODO: migrate from app/about/contact/page.tsx
+  // Permanent redirect to /contact
+  import { redirect } from '@sveltejs/kit';
+  throw redirect(308, '/contact');
 </script>
-
-<svelte:head>
-  <title>247iBET</title>
-</svelte:head>
-
-<div class="flex flex-col">
-  <!-- TODO: port /about/contact -->
-</div>

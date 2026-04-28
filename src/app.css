@@ -9,7 +9,7 @@
 @import '@fontsource/plus-jakarta-sans/700.css';
 @import '@fontsource/jetbrains-mono/400.css';
 
-/* Global UX baseline — Managed via html[data-scroll-behavior] in layout.tsx */
+/* Global UX baseline */
 
 @theme {
   /* ── 247iBET Prestige Navy palette (2026) ── */
@@ -34,10 +34,6 @@
   --color-text-tertiary: #4B5563; /* Aligned with DESIGN.md */
   --color-navy-border: rgba(255, 255, 255, 0.07); /* Aligned with DESIGN.md */
   --color-navy-border-active: rgba(255, 255, 255, 0.16); /* Aligned with DESIGN.md */
-
-  /* Aliases for commonly referenced colors */
-  --color-slate-blue:  #4A9EBF;
-  --color-prestige-gold:  #D4943A;
 
   /* ── iGaming semantics — odds movement, live data, win states ── */
   --color-odds-up:     #22C55E;  /* odds shortened — your team got better */
@@ -891,6 +887,14 @@
   }
   .animate-dropdown-in {
     animation: dropdown-in 0.2s ease-out forwards;
+  }
+
+  @keyframes pulse-19 {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+  .animate-pulse-19 {
+    animation: pulse-19 2.8s ease-in-out infinite;
   }
 
   @keyframes fade-in-up {

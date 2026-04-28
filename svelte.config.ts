@@ -6,10 +6,7 @@ const config: Config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter(),
-    alias: {
-      $components: 'src/lib/components',
-      $utils: 'src/lib/utils'
-    }
+    alias: {}
   }
 };
 

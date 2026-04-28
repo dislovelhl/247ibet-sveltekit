@@ -1,11 +1,5 @@
 <script lang="ts">
-  // TODO: migrate from app/about/privacy-policy/page.tsx
+  // Permanent redirect to /privacy-policy
+  import { redirect } from '@sveltejs/kit';
+  throw redirect(308, '/privacy-policy');
 </script>
-
-<svelte:head>
-  <title>247iBET</title>
-</svelte:head>
-
-<div class="flex flex-col">
-  <!-- TODO: port /about/privacy-policy -->
-</div>

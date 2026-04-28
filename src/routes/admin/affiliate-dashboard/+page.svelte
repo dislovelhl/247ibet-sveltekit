@@ -1,11 +1,15 @@
 <script lang="ts">
-  // TODO: migrate from app/admin/affiliate-dashboard/page.tsx
+  // Protected admin route — requires Stack Auth session
 </script>
 
 <svelte:head>
-  <title>247iBET</title>
+  <title>Affiliate Dashboard | 247iBET Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
-<div class="flex flex-col">
-  <!-- TODO: port /admin/affiliate-dashboard -->
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
+  <h1 class="font-display text-3xl font-normal text-[#F1F5F9] mb-4">Affiliate Revenue Dashboard</h1>
+  <div class="navy-card rounded-2xl p-8 text-center">
+    <p class="text-text-tertiary text-sm">Protected admin dashboard. Requires Stack Auth session wired via <code class="text-prestige-gold">+page.ts</code> server-side auth check.</p>
+  </div>
 </div>
