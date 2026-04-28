@@ -1,6 +1,7 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
+
   const faqItems = [
     { question: 'Is Alberta already fully live for private iGaming operators?', answer: 'Treat Alberta as a launch-status market and verify current official operator availability before registering. The framework may be active while individual operator access still changes.' },
     { question: 'What is the legal gambling age in Alberta?', answer: 'The legal age for online gambling in Alberta is 18+, the same as Manitoba and Quebec. Most other provinces, including Ontario, require players to be 19+.' },
@@ -45,7 +46,6 @@
   <span class="inline-flex items-center gap-1.5 rounded-full bg-warning/15 border border-warning/30 px-3 py-1 text-xs font-bold text-warning uppercase tracking-wider">Alberta · Pending 2026</span>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
-    <img src="/images/editorial/alberta-intel.png" alt="Alberta iGaming market launch — 247iBET" class="object-cover w-full h-full" />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

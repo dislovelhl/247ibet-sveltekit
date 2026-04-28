@@ -3,6 +3,7 @@
   import { IBET_URLS } from '$lib/ibet-brand';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
+
   const trustPoints = [
     'Fast Interac Payouts in Canada',
     'Casino and sportsbook in one account',
@@ -12,10 +13,6 @@
 
 <section class="my-12 sm:my-16" aria-labelledby="ready-to-play-heading">
   <div class="relative overflow-hidden rounded-[1.75rem] border border-navy-border luxury-card p-6 sm:rounded-3xl sm:p-8 md:p-12">
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 bg-[url('/banners/banner-galaxy-bg.png')] bg-cover bg-center opacity-20 pointer-events-none"
-    ></div>
     <div
       aria-hidden="true"
       class="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-prestige-gold/8 blur-[64px] sm:-top-20 sm:-right-20 sm:h-80 sm:w-80 sm:blur-[80px]"

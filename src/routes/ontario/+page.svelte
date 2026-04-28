@@ -1,6 +1,7 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
+
   const sourceCards = [
     { name: 'AGCO', href: 'https://www.agco.ca/', note: 'Ontario gaming regulator and standards authority.' },
     { name: 'iGaming Ontario', href: 'https://www.igamingontario.ca/en', note: 'Ontario market operator and public registrant information.' },
@@ -60,7 +61,6 @@
   <span class="inline-flex items-center gap-1.5 rounded-full bg-success/15 border border-success/30 px-3 py-1 text-xs font-bold text-success uppercase tracking-wider">Ontario · Active</span>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
-    <img src="/images/editorial/ontario-market.png" alt="Ontario online casino and sportsbook hub — 247iBET" class="object-cover w-full h-full" />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

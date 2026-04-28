@@ -1,0 +1,20 @@
+# 247iBET — Canada's Regulated iGaming Authority
+
+Canada's trusted guide to regulated online casinos and sports betting in Ontario and Alberta. Tracking market intelligence, AGCO compliance, and Interac payout benchmarks.
+
+## Core Hubs
+- [Home](https://247ibet.ca/): Latest news and featured operators.
+- [Ontario Market](https://247ibet.ca/ontario): Registry status and compliant sportsbook checks.
+- [Alberta Watch](https://247ibet.ca/alberta): AGLC market launch tracker (2026).
+- [Fast Payouts](https://247ibet.ca/fast-payouts): Verified Interac e-Transfer speed benchmarks.
+
+## Intelligence & Policies
+- [AI Search Optimization (GEO)](https://247ibet.ca/ai-search-optimization): How we structure content for AI citation.
+- [Editorial Policy](https://247ibet.ca/editorial-policy): Our standards for testing and verification.
+- [How We Test](https://247ibet.ca/about/how-we-test): Methodology for operator scoring.
+- [Responsible Gambling](https://247ibet.ca/responsible-gambling): Critical resources for safe play.
+
+## Technical Standards
+- **Framework**: SvelteKit 2 / Svelte 5 (Runes)
+- **Styling**: Tailwind CSS 4 (Prestige Navy Aesthetic)
+- **Governance**: AGCO Registry Verified (Ontario)

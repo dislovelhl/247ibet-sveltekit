@@ -6,43 +6,36 @@
       path: '/casino/slots',
       pageName: 'Online Slots',
       taxonomyDescription: 'Understand RTP, compare classic and video formats, and learn how progressive jackpots change slot volatility.',
-      image: '/images/hero/hero-slots-premium.png',
     },
     {
       path: '/casino/live-casino',
       pageName: 'Live Casino',
       taxonomyDescription: 'See how live blackjack, roulette, and baccarat work, and what to expect from real-dealer tables streamed in HD.',
-      image: '/images/editorial/live-dealer-premium.png',
     },
     {
       path: '/casino/blackjack',
       pageName: 'Blackjack Online',
       taxonomyDescription: 'Compare classic, multi-hand, and live blackjack with a practical view of strategy basics and expected RTP ranges.',
-      image: '/images/games/blackjack.jpg',
     },
     {
       path: '/casino/roulette',
       pageName: 'Roulette Online',
       taxonomyDescription: 'Compare European, French, and American roulette, with the key house-edge and live-table differences laid out clearly.',
-      image: '/images/games/roulette1.jpg',
     },
     {
       path: '/casino/baccarat',
       pageName: 'Baccarat Online',
       taxonomyDescription: 'Review the core bets, understand live baccarat pacing, and keep strategy centred on the lower-edge options.',
-      image: '/images/games/baccarat.jpg',
     },
     {
       path: '/casino/mobile',
       pageName: 'Mobile Casino',
       taxonomyDescription: 'Understand touch-optimised games, mobile web versus app-style access, and how PWA-style features help Canadian players.',
-      image: '/images/editorial/mobile-betting-premium.png',
     },
     {
       path: '/casino/cad',
       pageName: 'CAD Casino',
       taxonomyDescription: 'Learn why a Canadian-dollar account matters, how Interac supports it, and what to check before making your first deposit.',
-      image: '/images/editorial/interac-safety.png',
     },
   ];
 
@@ -105,15 +98,12 @@
   <section class="mt-16 space-y-12">
     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {#each categoryCards as cat}
-        <div class="navy-card relative p-6 flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10">
-          {#if cat.image}
-            <img src={cat.image} alt="" class="object-cover opacity-[0.13] mix-blend-luminosity pointer-events-none absolute inset-0 w-full h-full" />
-          {/if}
-          <div class="relative z-10">
+        <div class="navy-card p-6 flex flex-col justify-between rounded-2xl border border-white/10">
+          <div>
             <h3 class="text-xl font-bold text-white mb-3">{cat.pageName}</h3>
             <p class="text-sm text-gray-400 leading-relaxed mb-6">{cat.taxonomyDescription}</p>
           </div>
-          <a href={cat.path} class="relative z-10 text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">
+          <a href={cat.path} class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">
             Explore {cat.pageName} →
           </a>
         </div>
@@ -145,10 +135,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="mt-12">
-    <IBetShowcase variant="banner" ctaText="Join Now" contextLabel="Secure Interac Deposits · Fast CAD Payouts · 19+" />
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">

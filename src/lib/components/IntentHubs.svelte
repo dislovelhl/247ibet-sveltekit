@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Zap, Trophy, CreditCard, Smartphone, Star, MapPin, ArrowRight } from 'lucide-svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
-
   const primaryHubs = [
     {
       guideHref: '/casino',
@@ -12,7 +11,6 @@
       stat: '500+ games',
       iconColor: 'text-slate-blue',
       iconBg: 'bg-slate-blue/10',
-      image: '/images/editorial/casino-premium.png',
       guideText: 'View Games',
       playText: 'Play Now',
       featured: true,
@@ -26,7 +24,6 @@
       stat: 'Live betting',
       iconColor: 'text-prestige-gold',
       iconBg: 'bg-prestige-gold/10',
-      image: '/images/editorial/sports-premium.png',
       guideText: 'View Odds',
       playText: 'Enter Sportsbook',
       featured: false,
@@ -43,7 +40,6 @@
       stat: 'Rapid cashout',
       iconColor: 'text-green-500',
       iconBg: 'bg-green-500/10',
-      image: '/images/editorial/fast-payouts.png',
       guideText: 'Learn More',
       playText: 'Fast Deposit',
     },
@@ -56,7 +52,6 @@
       stat: 'CAD Native',
       iconColor: 'text-slate-blue',
       iconBg: 'bg-slate-blue/10',
-      image: '/images/editorial/interac-safety.png',
       guideText: 'Learn More',
       playText: 'Interac Deposit',
     },
@@ -69,7 +64,6 @@
       stat: 'iOS & Android',
       iconColor: 'text-slate-blue',
       iconBg: 'bg-slate-blue/10',
-      image: '/images/editorial/mobile-betting-premium.png',
       guideText: 'Learn More',
       playText: 'Play on Mobile',
     },
@@ -82,7 +76,6 @@
       stat: 'Ontario Available',
       iconColor: 'text-success',
       iconBg: 'bg-success/10',
-      image: '/images/editorial/ontario-market.png',
       guideText: 'Ontario Guide',
       playText: 'Play in Ontario',
     },
@@ -103,9 +96,9 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
     {#each primaryHubs as hub}
       <div
-        class="group md:col-span-2 navy-card specular-edge flex flex-col gap-5 overflow-hidden relative transition-transform duration-300 hover:-translate-y-1 {hub.featured ? 'min-h-[420px] hover:shadow-[0_0_50px_rgba(212,148,58,0.2)] border-prestige-gold/20' : 'min-h-[360px] hover:shadow-[0_0_40px_rgba(212,148,58,0.1)]'}"
+        class="group md:col-span-2 navy-card specular-edge flex flex-col gap-5 overflow-hidden transition-transform duration-300 hover:-translate-y-1 {hub.featured ? 'min-h-[420px] hover:shadow-[0_0_50px_rgba(212,148,58,0.2)] border-prestige-gold/20' : 'min-h-[360px] hover:shadow-[0_0_40px_rgba(212,148,58,0.1)]'}"
       >
-        <div class="p-6 md:p-8 flex flex-col gap-5 flex-1 relative z-10">
+        <div class="p-6 md:p-8 flex flex-col gap-5 flex-1">
           <div class="flex items-start justify-between">
             <div class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 {hub.iconBg} border border-white/10 shadow-lg">
               <svelte:component this={hub.icon} class="w-7 h-7 {hub.iconColor} drop-shadow-[0_0_8px_rgba(74,158,191,0.3)]" aria-hidden="true" />
@@ -143,17 +136,12 @@
             </a>
           </div>
         </div>
-
-        <div class="absolute inset-0 pointer-events-none z-0">
-          <img src={hub.image} alt="" aria-hidden="true" class="object-cover w-full h-full opacity-20 mix-blend-screen group-hover:opacity-40 transition-opacity duration-300" />
-          <div class="absolute inset-0 bg-gradient-to-t from-navy-black/90 via-navy-black/40 to-transparent"></div>
-        </div>
       </div>
     {/each}
 
     {#each secondaryHubs as hub}
-      <div class="group col-span-1 navy-card flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-navy-border-active overflow-hidden relative">
-        <div class="p-5 flex flex-col gap-4 flex-1 relative z-10">
+      <div class="group col-span-1 navy-card flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-navy-border-active overflow-hidden">
+        <div class="p-5 flex flex-col gap-4 flex-1">
           <div class="flex items-start justify-between">
             <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 {hub.iconBg} border border-white/5">
               <svelte:component this={hub.icon} class="w-5 h-5 {hub.iconColor}" aria-hidden="true" />
@@ -179,11 +167,6 @@
               {hub.playText} <ArrowRight class="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
             </a>
           </div>
-        </div>
-
-        <div class="absolute inset-0 pointer-events-none z-0">
-          <img src={hub.image} alt="" aria-hidden="true" class="object-cover w-full h-full opacity-10 mix-blend-screen group-hover:opacity-20 transition-opacity duration-300" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A101C] via-[#0A101C]/80 to-transparent"></div>
         </div>
       </div>
     {/each}

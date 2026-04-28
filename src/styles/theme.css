@@ -1,0 +1,98 @@
+@theme {
+  /* ── 247iBET Prestige Navy palette (2026) ── */
+  /* See DESIGN.md for full token documentation */
+
+  /* Surfaces */
+  --color-navy-black: #070C18;
+  --color-navy-card:  #0D1629;
+  --color-navy-raised: #142038;
+
+  /* Accents */
+  --color-prestige-gold:       #D4943A;
+  --color-prestige-gold-light: #E8AC52;
+  --color-slate-blue:          #4A9EBF;
+
+  /* Semantic */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error:   #EF4444;
+  --color-text-primary: #F1F5F9;
+  --color-text-body:    #94A3B8;
+  --color-text-tertiary: #4B5563;
+  --color-navy-border: rgba(255, 255, 255, 0.07);
+  --color-navy-border-active: rgba(255, 255, 255, 0.16);
+
+  /* ── iGaming semantics — odds movement, live data, win states ── */
+  --color-odds-up:     #22C55E;
+  --color-odds-down:   #EF4444;
+  --color-odds-frozen: #94A3B8;
+  --color-live-pulse:  #22C55E;
+  --color-boost:       #B86FD9;
+  --color-jackpot:     #E8AC52;
+  --color-win-flash:   #FFD700;
+
+  /* Fonts */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "JetBrains Mono", monospace;
+
+  /* ── Spacing System ── */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* ── Typography Scale ── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* ── Containers ── */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* ── Shadows ── */
+  --shadow-navy: 0 30px 45px -30px rgba(7, 12, 24, 0.5);
+  --shadow-gold-accent: 0 18px 36px -18px rgba(212, 148, 58, 0.06);
+}
+
+:root {
+  /* iGaming semantics */
+  --selection-fill: rgba(212, 148, 58, 0.16);
+
+  /* Shadow stack */
+  --shadow-cta-gold: 0 1px 0 0 rgba(255, 255, 255, 0.22) inset, 0 8px 20px -10px rgba(212, 148, 58, 0.5);
+  --shadow-bet-slip: 0 -8px 40px -12px rgba(0, 0, 0, 0.6), -1px 0 rgba(212, 148, 58, 0.20);
+  --shadow-jackpot: 0 0 0 1px rgba(232, 172, 82, 0.30), 0 16px 40px -10px rgba(232, 172, 82, 0.18);
+
+  /* Motion */
+  --dur-micro: 100ms;
+  --dur-short: 200ms;
+  --dur-medium: 300ms;
+
+  /* Fluid typography */
+  --fluid-type: clamp(1rem, 2vw + 1rem, 1.2rem);
+  --fluid-h1: clamp(2rem, 5vw + 1rem, 4rem);
+  --fluid-h2: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+}
