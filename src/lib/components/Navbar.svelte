@@ -3,7 +3,7 @@
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
-  import { Menu, X, Search, User } from 'lucide-svelte';
+  import { ArrowRight, CreditCard, Headphones, Menu, Search, ShieldCheck, User, X } from 'lucide-svelte';
   import { SITE, PARTNER } from '$lib/site';
   import { IBET_URLS } from '$lib/ibet-brand';
 
@@ -27,6 +27,12 @@
     { href: '/interac', label: 'Interac' },
     { href: '/responsible-gambling', label: 'Help' },
   ];
+
+  const quickLinks = [
+    { href: '/fast-payouts', label: 'Fast payouts', icon: CreditCard },
+    { href: '/legal-online-gambling-canada', label: 'Legal guide', icon: ShieldCheck },
+    { href: '/contact', label: 'Support', icon: Headphones },
+  ] as const;
 
   // ---------------------------------------------------------------------------
   // State (Svelte 5 runes)
@@ -147,20 +153,20 @@
 
 <nav
   aria-label="Main navigation"
-  class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 animate-fade-down {scrolled
-    ? 'navy-card border-white/10 h-14'
-    : 'bg-navy-black/90 border-white/5 h-20'}"
+  class="fixed top-0 left-0 right-0 z-50 border-b transition-[height,background-color,border-color,box-shadow] duration-200 ease-out animate-fade-down {scrolled
+    ? 'h-16 border-white/10 bg-navy-black/92 shadow-[0_18px_42px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl'
+    : 'h-20 border-white/5 bg-navy-black/82 backdrop-blur-md'}"
 >
   <div
-    class="container mx-auto px-4 flex items-center justify-between transition-all duration-500 {scrolled
-      ? 'h-14'
+    class="container mx-auto flex items-center justify-between gap-4 px-4 transition-[height] duration-200 ease-out sm:px-6 lg:px-8 {scrolled
+      ? 'h-16'
       : 'h-20'}"
   >
     <!-- Logo + desktop nav links -->
-    <div class="flex items-center gap-8">
+    <div class="flex min-w-0 items-center gap-5 lg:gap-8">
       <a
         href="/"
-        class="flex items-center"
+        class="flex min-h-[44px] shrink-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
         aria-current={pathname === '/' ? 'page' : undefined}
       >
         <img
@@ -169,29 +175,23 @@
           width="140"
           height="40"
           fetchpriority="high"
-          class="object-contain w-[140px] h-10"
+          class="h-10 w-[132px] object-contain sm:w-[140px]"
         />
         <span class="sr-only">{SITE.name} Home</span>
       </a>
 
-      <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+      <ul class="hidden items-center rounded-full border border-white/8 bg-white/[0.035] p-1 text-sm font-semibold text-gray-300 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] md:flex">
         {#each mainLinks as item (item.href)}
           <li>
             <a
               href={item.href}
-              class="relative py-3 min-h-[44px] inline-flex items-center hover:text-gradient-premium transition-colors {pathname ===
+              class="relative inline-flex min-h-[40px] items-center rounded-full px-4 text-text-body transition-colors hover:text-white {pathname ===
               item.href
-                ? 'text-gradient-premium'
+                ? 'bg-prestige-gold/12 text-prestige-gold shadow-[0_0_0_1px_rgba(212,148,58,0.18)_inset]'
                 : ''}"
               aria-current={pathname === item.href ? 'page' : undefined}
             >
               {item.label}
-              {#if pathname === item.href}
-                <span
-                  class="absolute bottom-0 left-0 right-0 h-[2px] bg-slate-blue rounded-full"
-                  aria-hidden="true"
-                ></span>
-              {/if}
             </a>
           </li>
         {/each}
@@ -199,28 +199,33 @@
     </div>
 
     <!-- Right-side actions -->
-    <div class="flex items-center gap-4">
-      <!-- Search stub (desktop) -->
+    <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+      <div class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-success lg:flex">
+        <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
+        19+ Play responsibly
+      </div>
+
+      <!-- Search (desktop) -->
       <div class="hidden xl:block">
-        <button
-          type="button"
+        <a
+          href="/search"
           aria-label="Search"
-          class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-text-body transition-all"
+          class="flex min-h-[44px] min-w-[132px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-text-body transition-all hover:border-prestige-gold/30 hover:bg-white/8 hover:text-white"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
           <span class="hidden md:inline">Search...</span>
-        </button>
+        </a>
       </div>
 
-      <!-- Search stub (mobile compact) -->
+      <!-- Search (mobile compact) -->
       <div class="md:hidden">
-        <button
-          type="button"
+        <a
+          href="/search"
           aria-label="Search"
-          class="flex justify-center items-center h-10 w-10 rounded-full bg-white/5 border border-white/10 text-text-body transition-all"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
-        </button>
+        </a>
       </div>
 
       <!-- Play Now CTA -->
@@ -229,10 +234,11 @@
           href={PARTNER.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="px-6 py-2 btn-glossy-gold rounded-full text-sm inline-block hover:scale-[1.03] active:scale-[0.97] transition-transform"
+          class="page-cta-primary-sm"
           aria-label="Open game lobby"
         >
           Play Now
+          <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
         </a>
       </div>
 
@@ -242,7 +248,7 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Sign in to your 247iBET account"
-        class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-colors"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white"
       >
         <User class="w-4 h-4" aria-hidden="true" />
       </a>
@@ -251,7 +257,7 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="md:hidden p-2.5 text-gray-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
+        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold md:hidden"
         onclick={toggleMobileMenu}
         aria-label="Toggle mobile menu"
         aria-haspopup="menu"
@@ -276,17 +282,17 @@
       aria-modal="true"
       aria-label="Mobile navigation"
       tabindex="-1"
-      class="md:hidden bg-navy-raised border-b border-navy-border overflow-hidden max-h-[calc(100dvh-5rem)] overflow-y-auto"
+      class="max-h-[calc(100dvh-5rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
       transition:slide={{ duration: 300, easing: cubicOut }}
     >
-      <div class="px-4 py-6 space-y-6">
-        <div class="flex flex-col gap-4">
+      <div class="space-y-6 px-4 py-6">
+        <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
           <!-- Home link -->
           <a
             href="/"
-            class="text-lg font-bold min-h-[44px] flex items-center hover:text-slate-blue transition-colors {pathname ===
+            class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold {pathname ===
             '/'
-              ? 'text-slate-blue'
+              ? 'bg-prestige-gold/12 text-prestige-gold'
               : ''}"
             aria-current={pathname === '/' ? 'page' : undefined}
             onclick={closeMobileMenu}
@@ -298,9 +304,9 @@
           {#each mainLinks as item (item.href)}
             <a
               href={item.href}
-              class="text-lg font-bold min-h-[44px] flex items-center hover:text-slate-blue transition-colors {pathname ===
+              class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold {pathname ===
               item.href
-                ? 'text-slate-blue'
+                ? 'bg-prestige-gold/12 text-prestige-gold'
                 : ''}"
               aria-current={pathname === item.href ? 'page' : undefined}
               onclick={closeMobileMenu}
@@ -310,24 +316,53 @@
           {/each}
         </div>
 
+        <div>
+          <p class="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+            Popular routes
+          </p>
+          <div class="grid gap-2">
+            {#each quickLinks as item}
+              {@const ItemIcon = item.icon}
+              <a
+                href={item.href}
+                class="flex min-h-[48px] items-center justify-between rounded-xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm font-semibold text-text-body transition-colors hover:border-prestige-gold/30 hover:text-white"
+                onclick={closeMobileMenu}
+              >
+                <span class="inline-flex items-center gap-2">
+                  <ItemIcon class="h-4 w-4 text-prestige-gold" aria-hidden="true" />
+                  {item.label}
+                </span>
+                <ArrowRight class="h-4 w-4 text-text-tertiary" aria-hidden="true" />
+              </a>
+            {/each}
+          </div>
+        </div>
+
         <!-- Bottom actions -->
-        <div class="pt-6 border-t border-white/10 flex flex-col gap-4">
+        <div class="flex flex-col gap-3 border-t border-white/10 pt-6">
           <a
             href={PARTNER.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full text-center px-6 py-3 btn-glossy-gold rounded-full text-sm"
+            class="page-cta-primary w-full"
             onclick={closeMobileMenu}
           >
             Play Now
+            <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </a>
 
-          <div class="flex items-center px-4 py-3 rounded-xl bg-navy-raised border border-navy-border">
+          <a
+            href={IBET_URLS.login}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex min-h-[48px] items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white transition-colors hover:border-prestige-gold/30 hover:bg-white/[0.07]"
+            onclick={closeMobileMenu}
+          >
             <div class="flex items-center gap-2">
               <User class="w-5 h-5 text-gray-300" aria-hidden="true" />
-              <span class="text-sm font-medium text-gray-300">Profile</span>
+              <span class="text-sm font-medium text-gray-300">Sign in</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@
 
         <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
           <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
-            PLAY NOW
+            CREATE ACCOUNT
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </SafeExternalLink>
           <SafeExternalLink href={IBET_URLS.casino} class="page-cta-secondary w-full sm:w-auto">
@@ -87,7 +87,7 @@
           </a>
         </div>
 
-        <p class="mt-5 text-[10px] font-mono leading-relaxed uppercase tracking-tighter text-gradient-premium opacity-60 sm:mt-6">
+        <p class="mt-5 text-[10px] font-mono leading-relaxed uppercase tracking-tighter text-text-tertiary opacity-80 sm:mt-6">
           STRICTLY 19+ · TERMS APPLY · PLAY RESPONSIBLY
         </p>
       </div>

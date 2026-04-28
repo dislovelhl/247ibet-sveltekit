@@ -61,8 +61,13 @@
 
 <section aria-labelledby="guides-heading">
   <div class="flex items-baseline gap-4 mb-8">
-    <h2 id="guides-heading" class="page-hub-title text-2xl font-sans">Expert Guides</h2>
-    <div class="h-px flex-1 bg-white/5"></div>
+    <h2
+      id="guides-heading"
+      class="page-hub-title text-xl md:text-2xl text-gradient-slate uppercase tracking-[0.18em]"
+    >
+      Expert Guides
+    </h2>
+    <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
     <a
       href="/guides"
       class="text-xs font-bold text-prestige-gold hover:text-prestige-gold transition-colors whitespace-nowrap shrink-0 group flex items-center gap-1 uppercase tracking-wider"
@@ -73,7 +78,7 @@
   </div>
 
   <div
-    class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0"
+    class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 pr-10 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0 lg:pr-0 [scroll-padding-inline-start:1rem] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-2rem),transparent)] lg:[mask-image:none]"
     style="scrollbar-width: none"
   >
     {#each highlights as { href, icon, iconColor, title, description, category, cta }}

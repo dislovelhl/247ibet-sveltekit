@@ -1,5 +1,6 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import { optimizeSrcSet } from '$lib/image';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Roulette Online';
@@ -82,7 +83,13 @@
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
 
   <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
-    <img src={heroImage} alt={pageName} class="object-cover w-full h-full" />
+    <img
+      src={heroImage}
+      srcset={optimizeSrcSet(heroImage, [640, 960, 1280, 1672], 82)}
+      sizes="(min-width: 768px) 960px, 100vw"
+      alt={pageName}
+      class="object-cover w-full h-full"
+    />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

@@ -1,5 +1,15 @@
 <script lang="ts">
-  import { Send, Music2, ChevronDown, Zap } from 'lucide-svelte';
+  import {
+    ArrowRight,
+    BadgeCheck,
+    ChevronDown,
+    CreditCard,
+    Headphones,
+    Music2,
+    Send,
+    ShieldCheck,
+    Zap,
+  } from 'lucide-svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { SITE, PARTNER } from '$lib/site';
 
@@ -68,6 +78,12 @@
     { href: '/privacy-policy', label: 'Privacy Policy' },
     { href: '/cookie-policy', label: 'Cookie Policy' },
   ] as const;
+
+  const footerHighlights = [
+    { label: 'Interac-first payouts', detail: 'Canadian banking routes', icon: CreditCard },
+    { label: 'Safety resources', detail: 'Responsible play support', icon: ShieldCheck },
+    { label: 'Help centre', detail: 'Guides, FAQ, contact', icon: Headphones },
+  ] as const;
 </script>
 
 <footer
@@ -106,112 +122,75 @@
     </div>
   </div>
 
-  <div class="container mx-auto px-4 pt-16 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-4xl space-y-8">
-      <div class="py-6 text-center">
-        <p class="mb-4 text-sm text-slate-400">
-          Ready to play? Join 247iBET for casino games, live betting, and fast Interac payouts.
-        </p>
-        <a
-          href={PARTNER.url}
-          class="inline-flex items-center gap-2 rounded-lg bg-prestige-gold px-6 py-3 text-sm font-semibold text-navy-black transition-colors hover:bg-prestige-gold-light"
-          rel="nofollow noopener noreferrer"
-          target="_blank"
-        >
-          Start Playing Today
-        </a>
-      </div>
-
-      <!-- SEO Content Accordion -->
-      <details class="group">
-        <summary
-          class="mb-4 flex cursor-pointer list-none items-center gap-2 text-sm font-bold text-slate-blue"
-        >
-          About 247iBET
-          <ChevronDown class="h-4 w-4 transition-transform group-open:rotate-180" />
-        </summary>
-        <div class="prose prose-invert prose-sm max-w-none font-sans text-gray-400">
-          <h2 class="mb-4 font-sans text-2xl font-bold text-white">
-            247iBET — Online Casino &amp; Sports Betting for Canadian Players
-          </h2>
-          <p>
-            247iBET is an online casino and sportsbook built for Canadian players. We offer 500+
-            casino games, live dealer tables, and a full sportsbook covering NHL, NBA, UFC, and more
-            — all with fast Interac payouts.
-          </p>
-          <h3 class="mb-3 mt-6 font-sans text-xl font-bold text-white">
-            Fast Interac Payouts in Canada
-          </h3>
-          <p>
-            Interac e-Transfer is our primary payment method. Deposits are instant. Withdrawals are
-            processed quickly once your account is verified — just your Canadian bank account and a
-            clean verification flow.
-          </p>
-
-          <h3 class="mb-3 mt-6 font-sans text-xl font-bold text-white">Quick Answers</h3>
-          <div class="space-y-4">
-            <div>
-              <p class="font-bold text-gray-300">
-                What is the fastest payout method at 247iBET?
-              </p>
-              <p class="text-sm">
-                Interac e-Transfer is the fastest payout method for Canadian players. Most
-                withdrawals are processed within a few hours after identity verification.
-              </p>
-            </div>
-            <div>
-              <p class="font-bold text-gray-300">What games does 247iBET offer?</p>
-              <p class="text-sm">
-                247iBET offers 500+ slots, live dealer blackjack, roulette, baccarat, and a full
-                sportsbook. New games are added regularly.
-              </p>
-            </div>
+  <div class="container mx-auto px-4 pt-12 sm:px-6 sm:pt-16 lg:px-8">
+    <div class="mx-auto max-w-7xl space-y-10">
+      <section
+        aria-labelledby="footer-cta-heading"
+        class="grid gap-6 rounded-2xl border border-white/8 bg-white/[0.035] p-5 shadow-[0_28px_70px_-52px_rgba(0,0,0,0.95)] sm:p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-8"
+      >
+        <div>
+          <div class="page-hub-kicker mb-4">
+            <BadgeCheck class="h-3.5 w-3.5" aria-hidden="true" />
+            Canada-focused casino and sportsbook
           </div>
-
-          <hr class="my-8 border-white/10" />
-
-          <p>
-            {SITE.name} is an online casino and sportsbook serving Canadian players. We process wagers
-            and offer real-money gaming. Must be 19+ (18+ in Alberta and Quebec) to play. Please gamble
-            responsibly.
+          <h2 id="footer-cta-heading" class="page-hub-title max-w-2xl text-2xl sm:text-3xl">
+            Casino games, sports markets, and Interac payout guidance in one place.
+          </h2>
+          <p class="mt-4 max-w-2xl text-sm leading-relaxed text-text-body sm:text-base">
+            Use 247iBET to compare routes into casino play, sportsbook markets, payment guides, and responsible gambling resources before you open a lobby.
           </p>
         </div>
-      </details>
+        <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
+          <a
+            href={PARTNER.url}
+            class="page-cta-primary w-full sm:w-auto"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            Start Playing
+            <ArrowRight class="h-4 w-4" aria-hidden="true" />
+          </a>
+          <a href="/responsible-gambling" class="page-cta-secondary w-full sm:w-auto">
+            Safety Tools
+          </a>
+        </div>
+      </section>
 
-      <AffiliateDisclosure variant="footer" />
-
-      <!-- Responsible Gambling & Links -->
-      <div class="grid grid-cols-1 gap-8 text-sm md:grid-cols-4">
-        <div class="md:col-span-2">
-          <div class="mb-4 flex items-center gap-2">
-            <div
-              class="flex h-6 w-6 items-center justify-center rounded bg-prestige-gold text-navy-black"
-            >
-              <span class="font-mono text-[10px] font-bold">iB</span>
+      <div class="grid gap-4 md:grid-cols-3">
+        {#each footerHighlights as item}
+          {@const ItemIcon = item.icon}
+          <div class="rounded-xl border border-white/8 bg-navy-card/80 p-4">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-prestige-gold/20 bg-prestige-gold/10">
+              <ItemIcon class="h-5 w-5 text-prestige-gold" aria-hidden="true" />
             </div>
-            <span class="font-bold tracking-wider text-white">{SITE.name.toUpperCase()}</span>
+            <p class="text-sm font-bold text-white">{item.label}</p>
+            <p class="mt-1 text-xs leading-relaxed text-text-body">{item.detail}</p>
           </div>
-          <p class="mb-4 text-xs uppercase leading-relaxed tracking-wider text-gray-300">
-            Must be 19+ to gamble online in most of Canada and 18+ in Alberta and Quebec. If you or
-            someone you know has a gambling problem, call the AHS Addiction Helpline at
-            1-866-332-2322 or ConnexOntario at 1-866-531-2600.
-          </p>
-          <p class="mb-4 text-xs leading-relaxed text-gray-300">
-            Gambling can be addictive. Please play responsibly. 19+ only. {SITE.name} only accepts visitors
-            over 19 years of age. If you or someone you know has a gambling problem, help is available.
-          </p>
-          <div class="mb-4 flex gap-4">
-            <span class="rounded border border-gray-600 px-2 py-1 text-xs font-bold text-gray-300"
-              >19+</span
-            >
-            <span class="rounded border border-gray-600 px-2 py-1 text-xs font-bold text-gray-300"
-              >BeGambleAware</span
-            >
-            <span class="rounded border border-gray-600 px-2 py-1 text-xs font-bold text-gray-300"
-              >GamCare</span
-            >
+        {/each}
+      </div>
+
+      <div class="grid grid-cols-1 gap-10 border-t border-white/8 pt-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+        <section aria-labelledby="footer-brand-heading">
+          <div class="mb-4 flex items-center gap-3">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-prestige-gold text-navy-black">
+              <span class="font-mono text-xs font-black">iB</span>
+            </div>
+            <div>
+              <h2 id="footer-brand-heading" class="text-sm font-black uppercase tracking-[0.12em] text-white">
+                {SITE.name}
+              </h2>
+              <p class="text-xs text-text-body">{SITE.tagline}</p>
+            </div>
           </div>
-          <div class="flex gap-3">
+          <p class="max-w-md text-sm leading-relaxed text-text-body">
+            Canadian iGaming coverage for casino, sportsbook, payments, and player safety. Must be 19+ in most provinces and 18+ in Alberta and Quebec.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/12 px-3 py-1.5 text-xs font-bold text-gray-300">19+</span>
+            <span class="rounded-full border border-white/12 px-3 py-1.5 text-xs font-bold text-gray-300">Play responsibly</span>
+            <span class="rounded-full border border-white/12 px-3 py-1.5 text-xs font-bold text-gray-300">Canada</span>
+          </div>
+          <div class="mt-5 flex gap-3">
             <a
               href={SOCIAL.x}
               target="_blank"
@@ -269,45 +248,84 @@
               <Music2 class="h-3.5 w-3.5" aria-hidden="true" />
             </a>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <p class="mb-4 font-bold text-white">Play at 247iBET</p>
+        <nav aria-labelledby="footer-play-heading">
+          <h2 id="footer-play-heading" class="mb-4 text-sm font-bold text-white">Play at 247iBET</h2>
           <ul class="space-y-0 text-xs">
             {#each playLinks as link}
               <li>
                 <a
                   href={link.href}
-                  class="block min-h-[44px] py-2.5 text-gray-400 transition-colors hover:text-white"
+                  class="block min-h-[44px] py-2.5 text-gray-400 transition-colors hover:text-prestige-gold"
                 >
                   {link.label}
                 </a>
               </li>
             {/each}
           </ul>
-        </div>
+        </nav>
 
-        <div>
-          <p class="mb-4 font-bold text-white">Support</p>
+        <nav aria-labelledby="footer-support-heading">
+          <h2 id="footer-support-heading" class="mb-4 text-sm font-bold text-white">Support</h2>
           <ul class="space-y-0 text-xs">
             {#each supportLinks as link}
               <li>
                 <a
                   href={link.href}
-                  class="block min-h-[44px] py-2.5 text-gray-400 transition-colors hover:text-white"
+                  class="block min-h-[44px] py-2.5 text-gray-400 transition-colors hover:text-prestige-gold"
                 >
                   {link.label}
                 </a>
               </li>
             {/each}
           </ul>
-        </div>
+        </nav>
+
+        <section aria-labelledby="footer-safety-heading" class="rounded-2xl border border-white/8 bg-white/[0.025] p-5">
+          <h2 id="footer-safety-heading" class="mb-3 text-sm font-bold text-white">
+            Responsible gambling
+          </h2>
+          <p class="text-xs uppercase leading-relaxed tracking-[0.08em] text-gray-300">
+            If you or someone you know has a gambling problem, call the AHS Addiction Helpline at
+            1-866-332-2322 or ConnexOntario at 1-866-531-2600.
+          </p>
+          <a
+            href="/responsible-gambling"
+            class="mt-5 inline-flex min-h-[44px] items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
+          >
+            View safety resources
+            <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </section>
       </div>
 
+      <details class="group rounded-2xl border border-white/8 bg-white/[0.025] p-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-bold text-slate-blue">
+          About 247iBET
+          <ChevronDown class="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden="true" />
+        </summary>
+        <div class="mt-5 max-w-4xl space-y-4 font-sans text-sm leading-relaxed text-gray-400">
+          <h2 class="font-sans text-xl font-bold text-white">
+            247iBET — Online Casino &amp; Sports Betting for Canadian Players
+          </h2>
+          <p>
+            247iBET is an online casino and sportsbook built for Canadian players. It covers casino games,
+            live dealer tables, NHL, NBA, UFC, and payment guidance with a focus on Interac access.
+          </p>
+          <p>
+            {SITE.name} is intended for adults only. Must be 19+ in most provinces and 18+ in Alberta and Quebec. Please gamble responsibly.
+          </p>
+        </div>
+      </details>
+
+      <AffiliateDisclosure variant="footer" />
+
       <div
-        class="flex flex-col items-center justify-between border-t border-white/5 pt-8 font-mono text-xs text-gray-300 md:flex-row"
+        class="flex flex-col gap-3 border-t border-white/8 pt-8 font-mono text-xs text-gray-300 md:flex-row md:items-center md:justify-between"
       >
         <p>&copy; Copyright 2026 {SITE.name}. All Rights Reserved.</p>
+        <p>{SITE.legalName} · {SITE.locale}</p>
       </div>
     </div>
   </div>

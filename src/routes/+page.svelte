@@ -18,9 +18,14 @@
 <div class="flex flex-col">
   <HeroBanner />
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
-    <IBetShowcase />
+  <!--
+    Vertical rhythm: tighter top (hero already heavy), wider gaps between
+    intro/hub/guide blocks to give the eye rest. ReadyToPlay owns its own
+    margin so it sits closer to the footer.
+  -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 sm:pt-10 space-y-16 md:space-y-24">
     <HomeIntro />
+    <IBetShowcase />
     <IntentHubs />
     <GuideHighlights />
     <ReadyToPlay />

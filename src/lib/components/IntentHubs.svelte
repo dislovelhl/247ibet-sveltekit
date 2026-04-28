@@ -12,7 +12,7 @@
       iconColor: 'text-prestige-gold',
       iconBg: 'bg-prestige-gold/10',
       guideText: 'View Games',
-      playText: 'Play Now',
+      playText: 'Open Lobby',
       featured: true,
     },
     {
@@ -25,7 +25,7 @@
       iconColor: 'text-prestige-gold',
       iconBg: 'bg-prestige-gold/10',
       guideText: 'View Odds',
-      playText: 'Enter Sportsbook',
+      playText: 'Start Sportsbook',
       featured: false,
     },
   ] as const;
@@ -52,9 +52,9 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
     {#each primaryHubs as hub}
       <div
-        class="group md:col-span-2 navy-card specular-edge flex flex-col gap-5 overflow-hidden transition-transform duration-300 hover:-translate-y-1 {hub.featured ? 'min-h-[420px] hover:shadow-[0_0_50px_rgba(212,148,58,0.2)] border-prestige-gold/20' : 'min-h-[360px] hover:shadow-[0_0_40px_rgba(212,148,58,0.1)]'}"
+        class="group md:col-span-2 navy-card specular-edge flex flex-col gap-5 overflow-hidden transition-transform duration-300 hover:-translate-y-1 {hub.featured ? 'min-h-[340px] hover:shadow-[0_0_50px_rgba(212,148,58,0.2)] border-prestige-gold/20' : 'min-h-[300px] hover:shadow-[0_0_40px_rgba(212,148,58,0.1)]'}"
       >
-        <div class="p-6 md:p-8 flex flex-col gap-5 flex-1">
+        <div class="p-6 md:p-7 flex flex-col gap-4 flex-1">
           <div class="flex items-start justify-between">
             <div class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 {hub.iconBg} border border-white/10 shadow-lg">
               <svelte:component this={hub.icon} class="w-7 h-7 {hub.iconColor}" aria-hidden="true" />

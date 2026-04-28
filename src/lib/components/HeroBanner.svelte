@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ChevronRight } from 'lucide-svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
+  import { optimizeSrcSet } from '$lib/image';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
   const HERO_IMAGE = {
@@ -67,8 +68,11 @@
   <div class="relative w-full min-h-[430px] overflow-hidden aspect-[5/6] sm:min-h-0 sm:aspect-[16/10] lg:aspect-[21/9]">
     <img
       src={HERO_IMAGE.src}
+      srcset={optimizeSrcSet(HERO_IMAGE.src, [640, 960, 1280, 1672], 82)}
+      sizes="(min-width: 1024px) 100vw, 100vw"
       alt={HERO_IMAGE.alt}
       fetchpriority="high"
+      decoding="async"
       width="1280"
       height="549"
       class="absolute inset-0 w-full h-full object-cover"
@@ -77,8 +81,8 @@
     <!-- Dark overlay -->
     <div class="absolute inset-0 z-10 bg-black/52 pointer-events-none transition-opacity duration-700 group-hover:bg-black/38 sm:bg-black/44"></div>
 
-    <!-- Bottom fade -->
-    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent pointer-events-none z-10"></div>
+    <!-- Bottom fade — strengthened for AA contrast on subtitle copy -->
+    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-black via-navy-black/85 to-transparent pointer-events-none z-10"></div>
 
     <!-- Content overlay -->
     <div class="absolute inset-0 z-20 flex flex-col justify-end p-5 sm:p-6 md:p-10 lg:p-16">
