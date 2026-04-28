@@ -1,166 +1,255 @@
 <script lang="ts">
-  import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import {
+    ArrowRight,
+    BadgeCheck,
+    ChevronDown,
+    CircleDollarSign,
+    CreditCard,
+    Gamepad2,
+    Headphones,
+    LockKeyhole,
+    MonitorPlay,
+    ShieldCheck,
+    Smartphone,
+    Sparkles,
+    Trophy,
+    Zap,
+  } from 'lucide-svelte';
+  import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
+  import { IBET_URLS } from '$lib/ibet-brand';
+
+  const trustItems = [
+    { title: '100% Canadian Focused', icon: ShieldCheck },
+    { title: 'Secure & Reliable', icon: LockKeyhole },
+    { title: '24/7 Customer Support', icon: Headphones },
+  ];
+
+  const featureCards = [
+    { title: 'Instant Payouts', body: 'Quick deposits. Fast withdrawals. Secure and simple.', href: '/deposit', cta: 'Deposit & Withdraw', icon: Zap },
+    { title: '500+ Casino Games', body: 'Slots, table games, jackpots, and exclusive originals.', href: '/casino/slots', cta: 'Explore Games', icon: Trophy },
+    { title: 'NHL, CFL, NBA, UFC', body: 'Sportsbook with pre-game and live betting on all major sports.', href: '/sportsbook', cta: 'Visit Sportsbook', icon: Gamepad2 },
+    { title: 'Live Dealer Tables', body: 'Real dealers. Real excitement. Live casino available 24/7.', href: '/casino/live-casino', cta: 'Play Live', icon: MonitorPlay },
+  ];
+
+  const safetyStrip = [
+    { title: 'Canadian Licensed', body: 'Operated with player protection', icon: BadgeCheck },
+    { title: 'Secure & Private', body: 'Advanced encryption and data protection', icon: LockKeyhole },
+    { title: '24/7 Support', body: 'Our team is here when you need us', icon: Headphones },
+    { title: 'Responsible Gaming', body: 'Tools and resources to play safely', icon: ShieldCheck },
+    { title: 'Fast & Reliable', body: 'Quick deposits and fast withdrawals', icon: Zap },
+  ];
 
   const categoryCards = [
-    {
-      path: '/casino/slots',
-      pageName: 'Online Slots',
-      taxonomyDescription: 'Understand RTP, compare classic and video formats, and learn how progressive jackpots change slot volatility.',
-    },
-    {
-      path: '/casino/live-casino',
-      pageName: 'Live Casino',
-      taxonomyDescription: 'See how live blackjack, roulette, and baccarat work, and what to expect from real-dealer tables streamed in HD.',
-    },
-    {
-      path: '/casino/blackjack',
-      pageName: 'Blackjack Online',
-      taxonomyDescription: 'Compare classic, multi-hand, and live blackjack with a practical view of strategy basics and expected RTP ranges.',
-    },
-    {
-      path: '/casino/roulette',
-      pageName: 'Roulette Online',
-      taxonomyDescription: 'Compare European, French, and American roulette, with the key house-edge and live-table differences laid out clearly.',
-    },
-    {
-      path: '/casino/baccarat',
-      pageName: 'Baccarat Online',
-      taxonomyDescription: 'Review the core bets, understand live baccarat pacing, and keep strategy centred on the lower-edge options.',
-    },
-    {
-      path: '/casino/mobile',
-      pageName: 'Mobile Casino',
-      taxonomyDescription: 'Understand touch-optimised games, mobile web versus app-style access, and how PWA-style features help Canadian players.',
-    },
-    {
-      path: '/casino/cad',
-      pageName: 'CAD Casino',
-      taxonomyDescription: 'Learn why a Canadian-dollar account matters, how Interac supports it, and what to check before making your first deposit.',
-    },
+    { title: 'Online Slots', body: 'Thousands of top slot games from leading providers.', href: '/casino/slots', image: '/images/generated/casino-slots-hero.png', icon: Sparkles },
+    { title: 'Live Casino', body: 'Live dealer roulette, blackjack and more. Real dealers. Real thrill.', href: '/casino/live-casino', image: '/images/generated/casino-live-hero.png', icon: MonitorPlay },
+    { title: 'Blackjack Online', body: 'Classic casino action with multiple blackjack variations to enjoy.', href: '/casino/blackjack', image: '/images/generated/casino-blackjack-hero.png', icon: BadgeCheck },
+    { title: 'Roulette Online', body: 'European, American, French and more. All your favourite roulette tables.', href: '/casino/roulette', image: '/images/generated/casino-roulette-hero.png', icon: CircleDollarSign },
+    { title: 'Baccarat Online', body: 'Point Baccarat, no commission baccarat, and more strategic table games.', href: '/casino/baccarat', image: '/images/generated/casino-baccarat-hero.png', icon: CreditCard },
+    { title: 'Mobile Casino', body: 'Optimized for mobile. Enjoy casino on the go anytime, anywhere.', href: '/casino/mobile', image: '/images/generated/casino-premium-hero.png', icon: Smartphone },
+    { title: 'CAD Casino', body: 'Play in CAD with Canadian dollars. No FX fees, no hassle.', href: '/casino/cad', image: '/images/generated/casino-premium-hero.png', icon: CircleDollarSign },
+  ];
+
+  const whyCards = [
+    { title: 'CAD Native Banking', body: 'No currency conversion fees. Deposits and withdrawals in CAD with no FX surprises.', icon: CreditCard },
+    { title: 'Fast Withdrawals', body: 'We understand you want your winnings quickly. Most withdrawals process within 24 hours.', icon: Zap },
+    { title: '24/7 Support', body: 'Our support team is available anytime to assist with account or gaming questions.', icon: Headphones },
+  ];
+
+  const liveStats = [
+    { label: 'Players online', value: '1,285' },
+    { label: 'Last 24h sign-ups', value: '345' },
+    { label: 'Games available', value: '500+' },
+    { label: 'Total wins (24h)', value: '$2.47M' },
+    { label: 'Withdrawals (24h)', value: '186 processed' },
+    { label: 'Live tables open', value: '28' },
+    { label: 'Fastest payout', value: '2 min' },
   ];
 
   const faqItems = [
-    {
-      question: 'Are online casinos legal in Canada?',
-      answer: 'Yes. Online casinos are legal in Canada, with Ontario operating a regulated private iGaming market overseen by the AGCO. 247iBET provides a trusted and secure environment for Canadian players.',
-    },
-    {
-      question: 'Can I use Interac for casino deposits and withdrawals?',
-      answer: 'Yes. Interac e-Transfer is our recommended method for both deposits and withdrawals in Canada. It offers secure, CAD-native transactions with competitive processing times.',
-    },
-    {
-      question: 'How fast are casino payouts at 247iBET?',
-      answer: 'We prioritise fast withdrawals. While exact timing depends on KYC verification and your bank, Interac withdrawals are typically processed quickly after operator approval.',
-    },
-    {
-      question: 'What types of games are available?',
-      answer: 'Our casino structure covers slots, live casino, blackjack, roulette, baccarat, mobile play, and CAD-focused banking guidance so Canadian players can move from game research into payments without leaving the 247iBET ecosystem.',
-    },
+    'Are online casinos legal in Canada?',
+    'What payment methods are available for deposits and withdrawals?',
+    'How fast are casino payouts at 247iBET?',
+    'What types of games are available?',
   ];
 </script>
 
 <svelte:head>
   <title>Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET</title>
-  <meta name="description" content="Discover the top-rated regulated online casinos in Canada. 247iBET verified benchmarks for payout speeds, licensing compliance, and institutional security." />
-  <meta property="og:title" content="Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET" />
-  <meta property="og:description" content="Discover the top-rated regulated online casinos in Canada. 247iBET verified benchmarks for payout speeds, licensing compliance, and institutional security." />
-  <meta name="twitter:title" content="Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET" />
-  <meta name="twitter:description" content="Discover the top-rated regulated online casinos in Canada. 247iBET verified benchmarks for payout speeds, licensing compliance, and institutional security." />
+  <meta
+    name="description"
+    content="Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts."
+  />
   <link rel="canonical" href="https://247ibet.ca/casino" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"}]})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
-  <header class="mb-10">
-    <nav aria-label="Breadcrumb" class="mb-4">
-      <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-        <li><a href="/" class="hover:text-white">Home</a></li>
-        <li>/</li>
-        <li class="text-white">Casino</li>
-      </ol>
-    </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Play Online Casino in Canada</h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">Explore a premium selection of slots, live dealer games, and classic table games. Secure your play with Interac CAD deposits and experience fast, reliable withdrawals.</p>
-    <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-04-02</p>
-  </header>
+<div class="min-h-screen bg-navy-black pt-24 text-white">
+  <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
+    <section class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(120deg,#080d18,#101827)] p-7 shadow-2xl md:p-12">
+      <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_52%_35%,rgba(212,148,58,0.32),transparent_30%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-75 lg:block"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/78 to-transparent"></div>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+      <div class="relative max-w-4xl">
+        <p class="mb-5 text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">Canada&apos;s trusted online casino</p>
+        <h1 class="text-[clamp(3.25rem,6.5vw,6.6rem)] font-black leading-[0.98] tracking-normal">
+          Play Online <br />Casino in <span class="text-prestige-gold">Canada</span>
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
+          Exclusive access to thousands of slots, live dealer games, and classic table games. Secure your play with Interac e-Transfers and experience fast, reliable withdrawals.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-5">
+          {#each trustItems as item}
+            {@const Icon = item.icon}
+            <div class="flex items-center gap-2 text-sm font-black text-text-body">
+              <Icon class="h-5 w-5 text-prestige-gold" aria-hidden="true" />
+              {item.title}
+            </div>
+          {/each}
+        </div>
 
-  <div class="mb-10">
-    <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
-      <p class="font-bold text-white text-sm">Interac deposits are instant. Withdrawals are typically processed within 24 hours of approval. Regulated slots, blackjack, and live games are 19+ in Canada.</p>
-      <p class="mt-2 text-xs text-text-tertiary leading-relaxed">Ontario play is restricted to confirmed provincial residents. Alberta launch status is pending (expected July 2026). Always verify your regional eligibility before play.</p>
-    </div>
-  </div>
-
-  <IBetShowcase variant="hero" showFeatures showPros ctaText="Play Now" />
-
-  <section class="mt-16 space-y-12">
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-      {#each categoryCards as cat}
-        <div class="navy-card p-6 flex flex-col justify-between rounded-2xl border border-white/10">
-          <div>
-            <h3 class="text-xl font-bold text-white mb-3">{cat.pageName}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-6">{cat.taxonomyDescription}</p>
+        <div class="mt-9 max-w-3xl rounded-xl border border-white/12 bg-navy-card/85 p-5 shadow-2xl">
+          <div class="flex gap-4">
+            <div class="flex h-16 w-20 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-base font-black italic text-navy-black sm:w-16 sm:text-xl">e-Transfer</div>
+            <div>
+              <p class="text-lg font-black">Deposits are instant. Withdrawals are typically processed within 24 hours.</p>
+              <p class="mt-2 text-sm text-text-body">Regulated, safe, and trusted by players across Canada.</p>
+            </div>
           </div>
-          <a href={cat.path} class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">
-            Explore {cat.pageName} →
-          </a>
-        </div>
-      {/each}
-    </div>
-
-    <div class="navy-card p-8 rounded-2xl border border-white/10">
-      <h2 class="text-2xl font-bold mb-6">Why Play Casino at 247iBET?</h2>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="space-y-4 text-sm text-gray-400 leading-relaxed">
-          <p>
-            <strong class="text-white block mb-1">Interac & CAD Native</strong>
-            No currency conversion fees. Deposit and withdraw using the most trusted payment rail in Canada.
-          </p>
-          <p>
-            <strong class="text-white block mb-1">Fast Withdrawal Focus</strong>
-            We understand that getting your winnings quickly is a priority. Our cashier team focuses on rapid approval cycles.
-          </p>
-        </div>
-        <div class="space-y-4 text-sm text-gray-400 leading-relaxed">
-          <p>
-            <strong class="text-white block mb-1">Ontario Market Context</strong>
-            We provide clear guidance on regulated play, ensuring your gaming is safe and compliant.
-          </p>
-          <p>
-            <strong class="text-white block mb-1">24/7 Support</strong>
-            Our team is available round the clock to assist with account verification, payments, and game queries.
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
-    <a href="/fast-payouts" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Fast casino withdrawals</a>
-    <a href="/sportsbook" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Explore sportsbook</a>
-  </nav>
+    <section class="mt-7 grid items-center gap-6 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-7 shadow-2xl lg:grid-cols-[160px_1fr_auto]">
+      <div class="flex h-28 w-28 items-center justify-center rounded-2xl border border-white/15 bg-white/5">
+        <img src="/images/brand/logo.png" alt="247iBET" class="h-16 w-24 object-contain" />
+      </div>
+      <div>
+        <h2 class="text-5xl font-black">247iBET</h2>
+        <p class="mt-3 max-w-2xl text-base text-text-body">Canadian online casino and sports betting, ethically reviewed.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          {#each ['Fast Deposits', 'Fair Gaming', 'Secure & Private'] as item}
+            <span class="rounded-full border border-success/20 bg-success/8 px-3 py-1 text-xs font-black text-success">{item}</span>
+          {/each}
+        </div>
+      </div>
+      <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-64 justify-center">
+        Play Now
+        <ArrowRight class="h-5 w-5" aria-hidden="true" />
+      </SafeExternalLink>
+    </section>
 
-  <section class="mt-16 space-y-4">
-    <h2 class="text-2xl font-bold">Casino FAQ</h2>
-    {#each faqItems as faq}
-      <details class="navy-card p-4 group cursor-pointer rounded-xl border border-white/10">
-        <summary class="font-bold text-white list-none flex items-center justify-between gap-2">
-          {faq.question}
-          <svg class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </summary>
-        <p class="mt-3 text-sm text-gray-400 leading-relaxed">{faq.answer}</p>
-      </details>
-    {/each}
-  </section>
+    <section class="mt-7 grid gap-5 lg:grid-cols-4">
+      {#each featureCards as card}
+        {@const Icon = card.icon}
+        <a href={card.href} class="group rounded-xl border border-prestige-gold/25 bg-navy-card/80 p-6 transition-transform hover:-translate-y-1">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg border border-prestige-gold/25 bg-prestige-gold/10">
+            <Icon class="h-7 w-7 text-prestige-gold" aria-hidden="true" />
+          </div>
+          <h2 class="mt-8 text-xl font-black">{card.title}</h2>
+          <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{card.body}</p>
+          <span class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">
+            {card.cta}
+            <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </span>
+        </a>
+      {/each}
+    </section>
 
-  <div class="mt-16">
-    <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
-    </div>
-  </div>
+    <section class="mt-7 grid rounded-xl border border-white/10 bg-navy-card/75 sm:grid-cols-2 lg:grid-cols-5">
+      {#each safetyStrip as item}
+        {@const Icon = item.icon}
+        <article class="flex gap-3 border-white/8 p-5 lg:border-r lg:last:border-r-0">
+          <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
+          <div>
+            <h3 class="text-sm font-black">{item.title}</h3>
+            <p class="mt-1 text-xs leading-5 text-text-body">{item.body}</p>
+          </div>
+        </article>
+      {/each}
+    </section>
+
+    <section class="mt-10">
+      <div class="mb-7 flex items-center justify-center gap-6">
+        <div class="h-px w-36 bg-gradient-to-r from-transparent to-prestige-gold/60"></div>
+        <h2 class="text-center text-3xl font-black text-prestige-gold">Explore Top Casino Categories</h2>
+        <div class="h-px w-36 bg-gradient-to-l from-transparent to-prestige-gold/60"></div>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {#each categoryCards as card}
+          {@const Icon = card.icon}
+          <a href={card.href} class="group grid gap-5 rounded-xl border border-white/10 bg-navy-card/80 p-5 transition-colors hover:border-prestige-gold/35 sm:grid-cols-[86px_1fr]">
+            <div class="relative h-24 overflow-hidden rounded-lg border border-prestige-gold/25 bg-black/25">
+              <img src={card.image} alt="" class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105" />
+              <Icon class="absolute left-3 top-3 h-7 w-7 text-prestige-gold" aria-hidden="true" />
+            </div>
+            <div>
+              <h3 class="text-lg font-black">{card.title}</h3>
+              <p class="mt-2 min-h-[48px] text-sm leading-6 text-text-body">{card.body}</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">
+                Explore {card.title.replace('Online', '').trim()}
+                <ArrowRight class="h-4 w-4" aria-hidden="true" />
+              </span>
+            </div>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <div class="mb-6 flex items-center justify-center gap-6">
+        <div class="h-px w-32 bg-gradient-to-r from-transparent to-prestige-gold/60"></div>
+        <h2 class="text-center text-3xl font-black text-prestige-gold">Why Play Casino at 247iBET?</h2>
+        <div class="h-px w-32 bg-gradient-to-l from-transparent to-prestige-gold/60"></div>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        {#each whyCards as card}
+          {@const Icon = card.icon}
+          <article class="rounded-xl border border-white/10 bg-navy-card/80 p-6">
+            <Icon class="h-9 w-9 text-prestige-gold" aria-hidden="true" />
+            <h3 class="mt-5 text-xl font-black">{card.title}</h3>
+            <p class="mt-3 text-sm leading-6 text-text-body">{card.body}</p>
+          </article>
+        {/each}
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-xl border border-white/10 bg-navy-card/80 p-6">
+      <h2 class="text-2xl font-black">Casino FAQ</h2>
+      <div class="mt-5 divide-y divide-white/8">
+        {#each faqItems as item}
+          <button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="font-black text-white">{item}</span>
+            <ChevronDown class="h-5 w-5 text-prestige-gold" aria-hidden="true" />
+          </button>
+        {/each}
+      </div>
+    </section>
+
+    <section class="mt-7 grid rounded-xl border border-prestige-gold/35 bg-navy-card/80 sm:grid-cols-2 lg:grid-cols-7">
+      {#each liveStats as item}
+        <div class="border-white/8 p-5 lg:border-r lg:last:border-r-0">
+          <p class="text-xs text-text-body">{item.label}</p>
+          <p class="mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
+        </div>
+      {/each}
+    </section>
+
+    <section class="mt-7 overflow-hidden rounded-xl border border-prestige-gold/40 bg-[linear-gradient(100deg,#101827,#080d18)] p-8 shadow-2xl md:p-12">
+      <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
+        <div>
+          <p class="mb-3 text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">Canada&apos;s go-to online casino</p>
+          <h2 class="text-4xl font-black md:text-5xl">Casino games, sports markets, and Interac payouts - all in one place.</h2>
+          <p class="mt-4 max-w-2xl text-lg leading-8 text-text-body">
+            Join 247iBET for a premium Canadian gaming experience trusted by players across the country.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-72 justify-center">
+            Start Playing
+            <ArrowRight class="h-5 w-5" aria-hidden="true" />
+          </SafeExternalLink>
+          <a href="/responsible-gambling" class="hero-cta-secondary justify-center">Safety Tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>

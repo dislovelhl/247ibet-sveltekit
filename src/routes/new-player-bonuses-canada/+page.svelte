@@ -45,6 +45,11 @@
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">Bonuses · Canada · 2026</div>
     <h1 class="font-display font-light text-4xl leading-tight text-[#F1F5F9]">New Player Welcome Offers Canada</h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">Welcome offers explained for Canadian players — how deposit matches, sportsbook credits, and casino offers work, and what terms to read before claiming.</p>
+    <div class="relative my-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card">
+      <img src="/images/generated/bonus-wagering-hero.png" alt="" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+    </div>
     <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
   </header>
 

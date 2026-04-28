@@ -88,6 +88,7 @@
 
   <!-- Editorial image callout -->
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
+    <img src="/images/generated/fast-payouts-hero.png" alt="" class="h-full w-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

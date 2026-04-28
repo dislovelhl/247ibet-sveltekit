@@ -4,7 +4,7 @@
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Roulette Online';
-  const heroImage = '/images/games/roulette1.jpg';
+  const heroImage = '/images/generated/casino-roulette-hero.png';
 
   const intro = {
     eyebrow: 'Roulette online Canada',

@@ -83,61 +83,43 @@
       name: '247iBET',
       welcome: 'Site offer',
       boosts: 'Daily boosts',
-      payout: 'Fast Interac',
+      payout: 'Fast',
       rating: 'Featured',
       highlight: true,
     },
     {
-      name: 'bet365',
+      name: 'Other',
       welcome: 'Market dependent',
-      boosts: 'Acca boost',
-      payout: 'Very fast',
-      rating: 'Strong',
-      highlight: false,
-    },
-    {
-      name: 'William Hill',
-      welcome: 'Market dependent',
-      boosts: 'Odds boosts',
-      payout: 'Fast',
-      rating: 'Established',
-      highlight: false,
-    },
-    {
-      name: 'BetVictor',
-      welcome: 'Market dependent',
-      boosts: 'Acca boost',
-      payout: 'Very fast',
-      rating: 'Established',
+      boosts: 'Varies',
+      payout: 'Standard',
+      rating: 'Standard',
       highlight: false,
     },
   ];
 
   const topOdds = [
-    { match: 'Man City vs Arsenal', pick: 'Man City', ibet: '2.10', bet365: '2.05', william: '2.10', victor: '2.00' },
-    { match: 'Liverpool vs Chelsea', pick: 'Liverpool', ibet: '2.15', bet365: '2.10', william: '2.15', victor: '2.05' },
-    { match: 'Man United vs Newcastle', pick: 'Draw', ibet: '3.50', bet365: '3.40', william: '3.40', victor: '3.50' },
-    { match: 'Oilers vs Maple Leafs', pick: 'Over 5.5', ibet: '1.92', bet365: '1.88', william: '1.91', victor: '1.89' },
+    { match: 'Man City vs Arsenal', pick: 'Man City', ibet: '2.10', other: '2.05' },
+    { match: 'Liverpool vs Chelsea', pick: 'Liverpool', ibet: '2.15', other: '2.10' },
+    { match: 'Man United vs Newcastle', pick: 'Draw', ibet: '3.50', other: '3.40' },
+    { match: 'Oilers vs Maple Leafs', pick: 'Over 5.5', ibet: '1.92', other: '1.88' },
   ];
 
   const liveRows = [
-    { event: 'Real Madrid vs Barcelona', score: '1-0', ibet: '1.80', bet365: '1.75', william: '1.80', victor: '1.75' },
-    { event: 'N. Djokovic vs C. Alcaraz', score: '4-3', ibet: '1.86', bet365: '1.91', william: '1.95', victor: '1.92' },
-    { event: 'Denver Nuggets vs Boston Celtics', score: 'Q3', ibet: '1.45', bet365: '1.40', william: '1.45', victor: '1.40' },
+    { event: 'Real Madrid vs Barcelona', score: '1-0', ibet: '1.80', other: '1.75' },
+    { event: 'N. Djokovic vs C. Alcaraz', score: '4-3', ibet: '1.86', other: '1.91' },
+    { event: 'Denver Nuggets vs Boston Celtics', score: 'Q3', ibet: '1.45', other: '1.40' },
   ];
 
   const offerCards = [
     { brand: '247iBET', amount: 'Site offer', detail: 'Sportsbook + casino account', cta: 'Play now' },
-    { brand: 'bet365', amount: 'Market offer', detail: 'Sports and live markets', cta: 'Compare' },
-    { brand: 'William Hill', amount: 'Market offer', detail: 'Football and racing depth', cta: 'Compare' },
-    { brand: 'BetVictor', amount: 'Market offer', detail: 'Parlays and price boosts', cta: 'Compare' },
+    { brand: 'Other', amount: 'Market offer', detail: 'Sports and live markets', cta: 'Compare' },
   ];
 
   const boosts = [
     { boost: 'Man City to win', event: 'vs Arsenal', old: '1.85', boosted: '2.10', book: '247iBET' },
-    { boost: 'Liverpool to win', event: 'vs Chelsea', old: '1.90', boosted: '2.15', book: 'bet365' },
-    { boost: 'Both teams to score', event: 'Real Madrid vs Barcelona', old: '1.70', boosted: '2.00', book: 'William Hill' },
-    { boost: 'Over 2.5 goals', event: 'Man United vs Newcastle', old: '1.80', boosted: '2.05', book: 'BetVictor' },
+    { boost: 'Liverpool to win', event: 'vs Chelsea', old: '1.90', boosted: '2.15', book: 'Other' },
+    { boost: 'Both teams to score', event: 'Real Madrid vs Barcelona', old: '1.70', boosted: '2.00', book: 'Other' },
+    { boost: 'Over 2.5 goals', event: 'Man United vs Newcastle', old: '1.80', boosted: '2.05', book: 'Other' },
   ];
 
   const guideCards = [
@@ -148,11 +130,11 @@
   ];
 
   const sportsRows = [
-    { sport: 'Football', events: '1,246', market: 'Match result', ibet: '2.10', bet365: '2.05', william: '2.10', victor: '2.00' },
-    { sport: 'NHL', events: '318', market: 'Moneyline', ibet: '1.92', bet365: '1.88', william: '1.91', victor: '1.89' },
-    { sport: 'Tennis', events: '156', market: 'Match winner', ibet: '1.66', bet365: '1.61', william: '1.66', victor: '1.62' },
-    { sport: 'Basketball', events: '89', market: 'Spread', ibet: '1.45', bet365: '1.40', william: '1.45', victor: '1.40' },
-    { sport: 'UFC / MMA', events: '32', market: 'Fight winner', ibet: '1.70', bet365: '1.65', william: '1.70', victor: '1.65' },
+    { sport: 'Football', events: '1,246', market: 'Match result', ibet: '2.10', other: '2.05' },
+    { sport: 'NHL', events: '318', market: 'Moneyline', ibet: '1.92', other: '1.88' },
+    { sport: 'Tennis', events: '156', market: 'Match winner', ibet: '1.66', other: '1.61' },
+    { sport: 'Basketball', events: '89', market: 'Spread', ibet: '1.45', other: '1.40' },
+    { sport: 'UFC / MMA', events: '32', market: 'Fight winner', ibet: '1.70', other: '1.65' },
   ];
 
   const paymentMethods = ['VISA', 'Mastercard', 'Apple Pay', 'Google Pay', 'PayPal', 'Skrill', 'Neteller'];
@@ -179,11 +161,11 @@
   ];
 
   const leagueRows = [
-    { league: 'Premier League', matches: '380', market: 'Outright winner', ibet: '2.25', bet365: '2.20', william: '2.25', victor: '2.15' },
-    { league: 'Champions League', matches: '125', market: 'Outright winner', ibet: '4.00', bet365: '3.75', william: '4.00', victor: '3.70' },
-    { league: 'La Liga', matches: '240', market: 'Outright winner', ibet: '2.80', bet365: '2.70', william: '2.80', victor: '2.60' },
-    { league: 'Serie A', matches: '230', market: 'Outright winner', ibet: '3.00', bet365: '2.90', william: '3.00', victor: '2.85' },
-    { league: 'Bundesliga', matches: '204', market: 'Outright winner', ibet: '2.40', bet365: '2.30', william: '2.40', victor: '2.25' },
+    { league: 'Premier League', matches: '380', market: 'Outright winner', ibet: '2.25', other: '2.20' },
+    { league: 'Champions League', matches: '125', market: 'Outright winner', ibet: '4.00', other: '3.75' },
+    { league: 'La Liga', matches: '240', market: 'Outright winner', ibet: '2.80', other: '2.70' },
+    { league: 'Serie A', matches: '230', market: 'Outright winner', ibet: '3.00', other: '2.90' },
+    { league: 'Bundesliga', matches: '204', market: 'Outright winner', ibet: '2.40', other: '2.30' },
   ];
 
   const statTools = [
@@ -195,7 +177,7 @@
 
   const supportCards = [
     { href: '/guides/sports-betting-odds-explained', title: 'How to bet', body: 'Learn odds, bet slips, and market settlement.', icon: GraduationCap },
-    { href: '/interac', title: 'Deposits and withdrawals', body: 'Review Interac and CAD account funding.', icon: CreditCard },
+    { href: '/deposit', title: 'Deposits and withdrawals', body: 'Review deposit and withdrawal options.', icon: CreditCard },
     { href: '/security', title: 'Account verification', body: 'Understand identity checks and secure login.', icon: LockKeyhole },
     { href: '/responsible-gambling', title: 'Responsible gambling', body: 'Play safer with limits and support.', icon: Headphones },
   ];
@@ -224,8 +206,8 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-24 pb-20">
-  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-6 lg:grid-cols-[190px_minmax(0,1fr)]">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
+    <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
         <div class="sticky top-28 space-y-5 rounded-xl border border-white/8 bg-black/25 p-3">
           <a href="/" class="flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-bold text-white hover:bg-white/5">
@@ -254,9 +236,15 @@
       </aside>
 
       <main class="min-w-0 space-y-5">
-        <section class="relative min-w-0 overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_15%_0%,rgba(74,158,191,0.22),transparent_32%),linear-gradient(135deg,#101827_0%,#080D18_54%,#121212_100%)] p-4 shadow-2xl sm:p-6">
+        <section class="relative min-w-0 overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(135deg,#101827_0%,#080D18_54%,#121212_100%)] p-4 shadow-2xl sm:p-6">
+          <img
+            src="/images/generated/sportsbook-premium-hero.png"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover opacity-42"
+          />
+          <div class="absolute inset-0 bg-[linear-gradient(90deg,#080d18_0%,rgba(8,13,24,0.9)_44%,rgba(8,13,24,0.62)_100%)]"></div>
           <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent"></div>
-          <div class="grid min-w-0 gap-4 xl:grid-cols-[1fr_0.76fr]">
+          <div class="relative grid min-w-0 gap-4 xl:grid-cols-[1fr_0.76fr]">
             <div class="min-w-0">
               <div class="mb-5 flex flex-wrap items-center gap-2">
                 <span class="page-hero-kicker">Canadian sportsbook hub</span>
@@ -374,9 +362,7 @@
                   <th class="px-4 py-3">Match</th>
                   <th class="px-4 py-3">Market</th>
                   <th class="px-4 py-3">247iBET</th>
-                  <th class="px-4 py-3">bet365</th>
-                  <th class="px-4 py-3">William Hill</th>
-                  <th class="px-4 py-3">BetVictor</th>
+                  <th class="px-4 py-3">Other</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/8">
@@ -385,9 +371,7 @@
                     <td class="px-4 py-3 font-semibold text-white">{row.match}</td>
                     <td class="px-4 py-3 text-text-body">{row.pick}</td>
                     <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.bet365}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.william}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.victor}</td>
+                    <td class="odds px-4 py-3 text-text-body">{row.other}</td>
                   </tr>
                 {/each}
               </tbody>
@@ -411,9 +395,7 @@
                   <th class="px-4 py-3">Event</th>
                   <th class="px-4 py-3">Score</th>
                   <th class="px-4 py-3">247iBET</th>
-                  <th class="px-4 py-3">bet365</th>
-                  <th class="px-4 py-3">William Hill</th>
-                  <th class="px-4 py-3">BetVictor</th>
+                  <th class="px-4 py-3">Other</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-white/8">
@@ -422,9 +404,7 @@
                     <td class="px-4 py-3 font-semibold text-white">{row.event}</td>
                     <td class="odds px-4 py-3 text-success">{row.score}</td>
                     <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.bet365}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.william}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.victor}</td>
+                    <td class="odds px-4 py-3 text-text-body">{row.other}</td>
                   </tr>
                 {/each}
               </tbody>
@@ -509,9 +489,7 @@
                     <th class="px-4 py-3">Events</th>
                     <th class="px-4 py-3">Top market</th>
                     <th class="px-4 py-3">247iBET</th>
-                    <th class="px-4 py-3">bet365</th>
-                    <th class="px-4 py-3">William Hill</th>
-                    <th class="px-4 py-3">BetVictor</th>
+                    <th class="px-4 py-3">Other</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-white/8">
@@ -521,9 +499,7 @@
                       <td class="stat px-4 py-3 text-text-body">{row.events}</td>
                       <td class="px-4 py-3 text-text-body">{row.market}</td>
                       <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.bet365}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.william}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.victor}</td>
+                      <td class="odds px-4 py-3 text-text-body">{row.other}</td>
                     </tr>
                   {/each}
                 </tbody>
@@ -577,9 +553,7 @@
                     <th class="px-4 py-3">Matches</th>
                     <th class="px-4 py-3">Top market</th>
                     <th class="px-4 py-3">247iBET</th>
-                    <th class="px-4 py-3">bet365</th>
-                    <th class="px-4 py-3">William Hill</th>
-                    <th class="px-4 py-3">BetVictor</th>
+                    <th class="px-4 py-3">Other</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-white/8">
@@ -589,9 +563,7 @@
                       <td class="stat px-4 py-3 text-text-body">{row.matches}</td>
                       <td class="px-4 py-3 text-text-body">{row.market}</td>
                       <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.bet365}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.william}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.victor}</td>
+                      <td class="odds px-4 py-3 text-text-body">{row.other}</td>
                     </tr>
                   {/each}
                 </tbody>

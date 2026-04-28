@@ -9,10 +9,8 @@
   ];
 
   const benchmarkReviewCards = [
-    { href: '/reviews/sports-interaction-canada', title: 'Online Casino Alberta | 247iBET', description: 'Useful benchmark for Alberta-facing multi-province coverage and CFL market depth.' },
-    { href: '/reviews/bet99-canada', title: 'BET99 review', description: 'Compare broader Canadian product fit and cashier expectations before checking Alberta access.' },
-    { href: '/reviews/bet365-canada', title: 'bet365 review', description: 'Ontario market benchmark for product depth and launch-watch relevance. Not proof of Alberta approval.' },
-    { href: '/reviews/draftkings-canada', title: 'DraftKings review', description: 'Ontario benchmark for sportsbook product quality and launch-watch prioritisation. Not proof of Alberta approval.' },
+    { href: '/casino', title: '247iBET Casino', description: 'Canadian casino and sportsbook — check current availability for Alberta players.' },
+    { href: '/sportsbook', title: '247iBET Sportsbook', description: 'Sports betting markets for NHL, NBA, UFC, and more. Check Alberta access status.' },
   ];
 
   const guideItems = [
@@ -46,6 +44,7 @@
   <span class="inline-flex items-center gap-1.5 rounded-full bg-warning/15 border border-warning/30 px-3 py-1 text-xs font-bold text-warning uppercase tracking-wider">Alberta · Pending 2026</span>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
+    <img src="/images/generated/canada-market-hero.png" alt="" class="h-full w-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

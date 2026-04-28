@@ -6,8 +6,8 @@
     { type: 'Puck Line', ex: 'Oilers -1.5 goals (-150)', desc: 'Similar to a point spread for hockey. The favourite needs a 2+ goal margin to cover. The underdog loses by 1 goal or wins — and still covers. Typical puck line is -1.5 or +1.5.' },
     { type: 'Total (Over/Under)', ex: 'Over 5.5 goals (-110)', desc: 'Bet on whether the total goals in the game goes over or under a set line. 5.5 is the most common total in NHL betting.' },
     { type: 'Period Betting', ex: '1st Period Result — Leafs -110', desc: 'Bet on the outcome of an individual period. Popular for in-play betting after the game starts.' },
-    { type: 'Player Props', ex: 'McDavid Over 0.5 points (-165)', desc: 'Bet on individual player statistics — points, goals, assists, shots on goal. Available at bet365, DraftKings, and FanDuel.' },
-    { type: 'Live In-Play', ex: 'Canucks to win from 0-1 down (+250)', desc: 'Bet while the game is in progress. Odds shift in real time. bet365 and DraftKings have the deepest in-play NHL markets.' },
+    { type: 'Player Props', ex: 'McDavid Over 0.5 points (-165)', desc: 'Bet on individual player statistics — points, goals, assists, shots on goal. Available at major sportsbooks.' },
+    { type: 'Live In-Play', ex: 'Canucks to win from 0-1 down (+250)', desc: 'Bet while the game is in progress. Odds shift in real time. Major sportsbooks offer the deepest in-play NHL markets.' },
   ];
 </script>
 

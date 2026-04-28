@@ -10,7 +10,7 @@
     },
     {
       question: 'Which online casinos accept Interac in Canada?',
-      answer: "Many Ontario-facing casinos support Interac e-Transfer deposits and withdrawals. Leading options often include Jackpot City, Spin Casino, bet365, and FanDuel, but cashier support should still be verified before funding an account. See our dedicated Interac casino page for the full list.",
+      answer: "Many Ontario-facing casinos support e-Transfer deposits and withdrawals, but cashier support should still be verified before funding an account. See our dedicated payments page for the full list.",
     },
     {
       question: 'How fast are casino withdrawals in Canada?',
@@ -23,16 +23,8 @@
   ];
 
   const topCasinos = [
-    { name: 'bet365 Canada', url: 'https://247ibet.ca/reviews/bet365-canada', description: 'Sports and casino leader with Interac support' },
-    { name: 'DraftKings Canada', url: 'https://247ibet.ca/reviews/draftkings-canada', description: 'Licensed Ontario sportsbook and casino' },
-    { name: 'FanDuel Canada', url: 'https://247ibet.ca/reviews/fanduel-canada', description: 'Top-rated Ontario casino with fast Interac payouts' },
-    { name: 'BetMGM Canada', url: 'https://247ibet.ca/reviews/betmgm-canada', description: 'Major US brand with strong Canadian presence' },
-    { name: 'Jackpot City Canada', url: 'https://247ibet.ca/reviews/jackpot-city-canada', description: 'Established casino with Interac deposit support' },
-    { name: 'Spin Casino Canada', url: 'https://247ibet.ca/reviews/spin-casino-canada', description: 'Casino-focused operator with fast withdrawals' },
-    { name: 'BetRivers Canada', url: 'https://247ibet.ca/reviews/betrivers-canada', description: 'Ontario-licensed casino and sportsbook combo' },
-    { name: 'LeoVegas Canada', url: 'https://247ibet.ca/reviews/leovegas-canada', description: 'Mobile-first casino with broad payment support' },
-    { name: 'NorthStar Bets Canada', url: 'https://247ibet.ca/reviews/northstar-bets-canada', description: 'Canadian-native operator with Ontario licence' },
-    { name: 'bet99 Canada', url: 'https://247ibet.ca/reviews/bet99-canada', description: 'Sports-focused with casino offering' },
+    { name: '247iBET', url: 'https://247ibet.ca', description: 'Canadian casino and sportsbook with fast payouts and 24/7 support' },
+    { name: 'Other', url: 'https://247ibet.ca/casino', description: 'Compare other Ontario-licensed operators for your province' },
   ];
 </script>
 
@@ -57,6 +49,11 @@
         <li class="text-white font-medium">Best Online Casinos</li>
       </ol>
     </nav>
+    <div class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56">
+      <img src="/images/generated/review-checklist-hero.png" alt="" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+    </div>
     <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Top 10 Rated Canadian Casinos</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">Our experts have audited and ranked the top 10 Canadian online casinos for 2026. Use this verified list of the best online casinos Canada has to offer to compare Interac payout speeds, game depth, and provincial compliance.</p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>

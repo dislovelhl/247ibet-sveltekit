@@ -112,7 +112,7 @@
       <p>If your Interac deposit is declined, confirm that your registered email matches your Interac account and that daily transfer limits have not been reached. Contact your bank if the issue persists.</p>
 
       <h3>Deposit Processing Timelines at 247iBET Canada</h3>
-      <p>INTERAC® e-Transfer: Up to 10 minutes. Please note that this is an estimate. In most cases, your deposit may be processed in a significantly shorter period of time. In certain unusual cases, your deposit could take up to 24 hours to process.</p>
+      <p>e-Transfer: Up to 10 minutes. Please note that this is an estimate. In most cases, your deposit may be processed in a significantly shorter period of time. In certain unusual cases, your deposit could take up to 24 hours to process.</p>
 
       <h2>Withdrawals &amp; Payouts</h2>
 
@@ -129,7 +129,7 @@
       <p>At most regulated Canadian operators, withdrawals undergo a standard security review. Top-tier sportsbooks and casinos process withdrawal requests within hours. However, exact receipt of funds depends on your chosen payment method.</p>
 
       <h3>Withdrawal Payment Processing Timelines</h3>
-      <p>INTERAC® E-TRANSFER: Typically under 1 hour (up to 24 hours for unverified accounts).</p>
+      <p>e-Transfer: Typically under 1 hour (up to 24 hours for unverified accounts).</p>
       <p>All time frames are generally calculated in business days (Monday through Friday). Operators endeavor to process all withdrawals quickly, however there may be delays due to initial KYC verification procedures or bank processing times.</p>
 
       <h3>Understanding Bonus Withdrawal Limits</h3>

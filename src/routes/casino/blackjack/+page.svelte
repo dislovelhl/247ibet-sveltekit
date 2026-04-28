@@ -4,7 +4,7 @@
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Blackjack Online';
-  const heroImage = '/images/games/blackjack.jpg';
+  const heroImage = '/images/generated/casino-blackjack-hero.png';
 
   const intro = {
     eyebrow: 'Blackjack online Canada',

@@ -3,7 +3,18 @@
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
-  import { ArrowRight, CreditCard, Headphones, Menu, Search, ShieldCheck, User, X } from 'lucide-svelte';
+  import {
+    ArrowRight,
+    CreditCard,
+    Headphones,
+    Menu,
+    Music2,
+    Search,
+    Send,
+    ShieldCheck,
+    User,
+    X,
+  } from 'lucide-svelte';
   import { SITE, PARTNER } from '$lib/site';
   import { IBET_URLS } from '$lib/ibet-brand';
 
@@ -24,8 +35,21 @@
   const mainLinks: NavItem[] = [
     { href: '/casino', label: 'Casino' },
     { href: '/sportsbook', label: 'Sportsbook' },
-    { href: '/interac', label: 'Interac' },
+    { href: '/deposit', label: 'Interac' },
     { href: '/responsible-gambling', label: 'Help' },
+  ];
+
+  const subLinks: NavItem[] = [
+    { href: '/casino/slots', label: 'Slots' },
+    { href: '/casino/blackjack', label: 'Blackjack' },
+    { href: '/casino/roulette', label: 'Roulette' },
+    { href: '/casino/baccarat', label: 'Baccarat' },
+    { href: '/casino/live-casino', label: 'Live Casino' },
+    { href: '/sportsbook/nhl', label: 'NHL' },
+    { href: '/sportsbook/nba', label: 'NBA' },
+    { href: '/sportsbook/ufc', label: 'UFC' },
+    { href: '/fast-payouts', label: 'Fast Payouts' },
+    { href: '/casino-bonuses-canada', label: 'Bonuses' },
   ];
 
   const quickLinks = [
@@ -44,11 +68,9 @@
   let mobileMenuRef: HTMLDivElement | undefined = $state();
   let mobileMenuButtonRef: HTMLButtonElement | undefined = $state();
 
-  // Track last-focused element before opening mobile menu, for focus restoration
   let lastMobileFocus: HTMLElement | null = null;
   let mobileMenuWasOpen = false;
 
-  // Derived pathname
   const pathname = $derived(page.url.pathname);
 
   // ---------------------------------------------------------------------------
@@ -101,7 +123,6 @@
 
     mobileMenuWasOpen = true;
 
-    // Focus first focusable element inside the menu once it is rendered
     window.setTimeout(() => {
       if (!mobileMenuRef) return;
       const focusable = Array.from(
@@ -153,14 +174,94 @@
 
 <nav
   aria-label="Main navigation"
-  class="fixed top-0 left-0 right-0 z-50 border-b transition-[height,background-color,border-color,box-shadow] duration-200 ease-out animate-fade-down {scrolled
-    ? 'h-16 border-white/10 bg-navy-black/92 shadow-[0_18px_42px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl'
-    : 'h-20 border-white/5 bg-navy-black/82 backdrop-blur-md'}"
+  class="fixed top-0 left-0 right-0 z-50 border-b transition-[border-color,background-color,box-shadow] duration-200 ease-out animate-fade-down {scrolled
+    ? 'border-white/10 bg-navy-black/92 shadow-[0_18px_42px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl'
+    : 'border-white/5 bg-navy-black/82 backdrop-blur-md'}"
 >
+  <!-- Tier 1: Utility bar — desktop only, collapses on scroll -->
   <div
-    class="container mx-auto flex items-center justify-between gap-4 px-4 transition-[height] duration-200 ease-out sm:px-6 lg:px-8 {scrolled
-      ? 'h-16'
-      : 'h-20'}"
+    class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
+      ? 'max-h-0 opacity-0'
+      : 'max-h-8 opacity-100'}"
+  >
+    <div
+      class="hidden h-8 items-center justify-between border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
+    >
+      <div class="flex items-center gap-2">
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"
+        ></span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-400"
+          >19+ · Play Responsibly</span
+        >
+      </div>
+      <div class="flex items-center gap-1" aria-label="Social media links">
+        <a
+          href="https://x.com/247ibet"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow {SITE.name} on X"
+          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-3 w-3"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 4l16 16M4 20L20 4" />
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/247ibet/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow {SITE.name} on Instagram"
+          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-3 w-3"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <a
+          href="https://t.me/247iBET"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Join {SITE.name} on Telegram"
+          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+        >
+          <Send class="h-3 w-3" aria-hidden="true" />
+        </a>
+        <a
+          href="https://www.tiktok.com/@247ibet"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow {SITE.name} on TikTok"
+          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+        >
+          <Music2 class="h-3 w-3" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 2: Main bar (always visible) -->
+  <div
+    class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
   >
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-5 lg:gap-8">
@@ -180,7 +281,9 @@
         <span class="sr-only">{SITE.name} Home</span>
       </a>
 
-      <ul class="hidden items-center rounded-full border border-white/8 bg-white/[0.035] p-1 text-sm font-semibold text-gray-300 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] md:flex">
+      <ul
+        class="hidden items-center rounded-full border border-white/8 bg-white/[0.035] p-1 text-sm font-semibold text-gray-300 shadow-[0_1px_0_rgba(255,255,255,0.05)_inset] md:flex"
+      >
         {#each mainLinks as item (item.href)}
           <li>
             <a
@@ -200,7 +303,9 @@
 
     <!-- Right-side actions -->
     <div class="flex shrink-0 items-center gap-2 sm:gap-3">
-      <div class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-success lg:flex">
+      <div
+        class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-success lg:flex"
+      >
         <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
         19+ Play responsibly
       </div>
@@ -242,7 +347,7 @@
         </a>
       </div>
 
-      <!-- User profile / login (external operator URL) -->
+      <!-- User profile / login -->
       <a
         href={IBET_URLS.login}
         target="_blank"
@@ -273,6 +378,36 @@
     </div>
   </div>
 
+  <!-- Tier 3: Sub-nav — desktop only, collapses on scroll -->
+  <div
+    class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
+      ? 'max-h-0 opacity-0'
+      : 'max-h-10 opacity-100'}"
+  >
+    <div class="hidden border-t border-white/5 lg:block">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Quick category navigation">
+          <ul class="flex h-10 items-center overflow-x-auto [scrollbar-width:none]">
+            {#each subLinks as link (link.href)}
+              <li>
+                <a
+                  href={link.href}
+                  class="flex h-full shrink-0 items-center border-r border-white/5 px-4 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold {pathname ===
+                  link.href
+                    ? 'text-prestige-gold'
+                    : 'text-gray-500'}"
+                  aria-current={pathname === link.href ? 'page' : undefined}
+                >
+                  {link.label}
+                </a>
+              </li>
+            {/each}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile menu panel -->
   {#if isMobileMenuOpen}
     <div
@@ -282,12 +417,11 @@
       aria-modal="true"
       aria-label="Mobile navigation"
       tabindex="-1"
-      class="max-h-[calc(100dvh-5rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
+      class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
       transition:slide={{ duration: 300, easing: cubicOut }}
     >
       <div class="space-y-6 px-4 py-6">
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
-          <!-- Home link -->
           <a
             href="/"
             class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold {pathname ===
@@ -300,7 +434,6 @@
             Home
           </a>
 
-          <!-- Main nav links -->
           {#each mainLinks as item (item.href)}
             <a
               href={item.href}
@@ -338,7 +471,6 @@
           </div>
         </div>
 
-        <!-- Bottom actions -->
         <div class="flex flex-col gap-3 border-t border-white/10 pt-6">
           <a
             href={PARTNER.url}

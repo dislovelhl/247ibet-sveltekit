@@ -12,6 +12,7 @@
     keywords: 'UFC betting Canada, MMA betting Canada, UFC odds Canada',
     heroSubheading:
       'Follow fight nights and major PPV cards with method-of-victory, round, and prop markets, plus live UFC odds that move as the fight develops.',
+    heroImage: '/images/generated/sportsbook-ufc-hero.png',
     overviewTitle: 'How UFC betting is structured',
     overviewIntro:
       'MMA betting behaves differently from team sports because the menu is built around the matchup, the method of finish, and how quickly the market reacts during fight week.',
@@ -146,6 +147,12 @@
         <li class="text-white font-medium">{page.breadcrumbLabel}</li>
       </ol>
     </nav>
+    <div class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60">
+      <img src={page.heroImage} alt="" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+      <div class="absolute bottom-5 left-6 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold md:left-8">{page.breadcrumbLabel}</div>
+    </div>
     <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">{page.heading}</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">{page.heroSubheading}</p>
   </header>

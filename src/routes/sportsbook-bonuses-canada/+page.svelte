@@ -33,7 +33,7 @@
     },
     {
       question: 'Are sportsbook bonuses available in provinces outside Ontario?',
-      answer: "Ontario's AGCO-licensed operators (DraftKings, FanDuel, BetMGM, etc.) only serve Ontario residents and cannot offer promotions cross-provincially. Bettors in BC, Alberta, and other provinces may access offshore sportsbooks (Sports Interaction, BET99) that operate under Kahnawake licensing and offer their own promotions.",
+      answer: "Ontario-licensed operators only serve Ontario residents and cannot offer promotions cross-provincially. Bettors in BC, Alberta, and other provinces may access offshore sportsbooks that operate under Kahnawake licensing and offer their own promotions.",
     },
   ];
 </script>

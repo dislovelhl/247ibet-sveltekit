@@ -9,10 +9,8 @@
   ];
 
   const reviewCards = [
-    { href: '/reviews/bet365-canada', title: 'bet365 review', description: 'Use this when comparing sportsbook depth, cashier flow, and CAD account handling for Ontario players.' },
-    { href: '/reviews/draftkings-canada', title: 'DraftKings review', description: 'Use this when comparing same-game parlay depth and Ontario-only market positioning.' },
-    { href: '/reviews/fanduel-canada', title: 'FanDuel review', description: 'Review payout workflow, app quality, and Ontario market fit before registration.' },
-    { href: '/reviews/betmgm-canada', title: 'BetMGM review', description: 'Compare casino breadth, sportsbook integration, and public-market positioning in Ontario.' },
+    { href: '/casino', title: '247iBET Casino', description: 'Ontario-available casino with fast payouts, live dealer games, and 24/7 support.' },
+    { href: '/sportsbook', title: '247iBET Sportsbook', description: 'Sports betting for Ontario players — NHL, NBA, UFC, and more.' },
   ];
 
   const faqItems = [
@@ -61,6 +59,7 @@
   <span class="inline-flex items-center gap-1.5 rounded-full bg-success/15 border border-success/30 px-3 py-1 text-xs font-bold text-success uppercase tracking-wider">Ontario · Active</span>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
+    <img src="/images/generated/canada-market-hero.png" alt="" class="h-full w-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">

@@ -5,7 +5,7 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
   const HERO_IMAGE = {
-    src: '/images/hero/hero-casino-premium.png',
+    src: '/images/generated/casino-premium-hero.png',
     alt: 'Premium Online Casino Experience — 247iBET Canada',
   };
 

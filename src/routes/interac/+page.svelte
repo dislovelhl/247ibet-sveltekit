@@ -1,247 +1,286 @@
 <script lang="ts">
-  import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import {
+    ArrowRight,
+    BadgeCheck,
+    Banknote,
+    ChevronDown,
+    Clock3,
+    CreditCard,
+    Download,
+    Info,
+    LockKeyhole,
+    ShieldCheck,
+    Upload,
+    WalletCards,
+    Zap,
+  } from 'lucide-svelte';
+  import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
+  import { IBET_URLS } from '$lib/ibet-brand';
 
-  import { ArrowRightLeft } from 'lucide-svelte';
-
-  const faqItems = [
-    {
-      question: 'How long does an Interac withdrawal take?',
-      answer:
-        "While Interac transfers themselves are almost instant (up to 30 minutes), the total withdrawal time depends on the casino's internal approval process and KYC status. Many top operators process Interac payouts within 1-4 hours.",
-    },
-    {
-      question: 'Are there fees for using Interac?',
-      answer:
-        "Most reputable casinos do not charge for Interac deposits. However, your bank may have transaction fees depending on your account plan. Always check both casino and bank terms.",
-    },
-    {
-      question: 'What is the minimum Interac deposit?',
-      answer:
-        "The typical minimum deposit for Interac in Canada ranges from CAD $10 to $20. Minimums are set by the operator and your bank's transfer limits.",
-    },
-    {
-      question: 'Is Interac safer than cards?',
-      answer:
-        "Interac e-Transfer is highly secure as it uses your bank's established encryption and doesn't require sharing card details directly with the casino.",
-    },
+  const trustItems = [
+    { title: 'Trusted by Canadians', body: 'Canada&apos;s most trusted payment method', icon: BadgeCheck },
+    { title: 'Fast & Reliable', body: 'Deposits in minutes. Withdrawals in 1-24 hours.', icon: Clock3 },
+    { title: 'Secure & Protected', body: 'Bank-level security to protect your funds', icon: ShieldCheck },
   ];
 
   const depositSteps = [
-    {
-      title: 'Log in to your 247iBET account',
-      description: 'Access your account from any device and ensure you have no active bonus blocks.',
-    },
-    {
-      title: 'Navigate to the Cashier',
-      description: 'Select "Deposit" and choose Interac e-Transfer from the listed payment methods.',
-    },
-    {
-      title: 'Enter your deposit amount',
-      description: 'Input the amount you wish to fund (typically CAD $10–$20 minimum).',
-    },
-    {
-      title: 'Confirm the transaction',
-      description: 'Follow the secure Interac prompts to authorize the transfer from your bank.',
-    },
+    'Log in to your 247iBET account',
+    'Navigate to the Cashier',
+    'Enter your deposit amount',
+    'Confirm the transaction',
+    'Funds in your account',
   ];
 
   const withdrawalSteps = [
-    {
-      title: 'Choose Interac e-Transfer',
-      description: 'Select Interac in the withdrawal section of the cashier.',
-    },
-    {
-      title: 'Confirm your account is verified',
-      description: 'Ensure your account is KYC-verified to prevent avoidable payout delays.',
-    },
-    {
-      title: 'Wait for operator approval',
-      description: 'The operator approval cycle typically takes 1-24 hours before release.',
-    },
-    {
-      title: 'Accept the transfer',
-      description: 'Accept the Interac notification from your email or SMS into your bank.',
-    },
+    'Choose Interac e-Transfer',
+    'Confirm your account is verified',
+    'Wait for operator approval',
+    'Accept the transfer',
+    'Funds in your bank account',
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
-    }))
-  };
+  const timingRows = [
+    { service: 'Interac Deposit', time: 'Immediate - 10 mins', limit: 'CAD $10 - $3,000', notes: 'Most deposits are instant.' },
+    { service: 'Interac Withdrawal', time: '1 - 24 hours (post-approval)', limit: 'CAD $20 - $5,000', notes: 'Payouts typically received in 15-30 mins.' },
+    { service: 'Account Verification', time: 'Instant - 24 hours', limit: 'N/A', notes: 'Required for withdrawals for your security.' },
+  ];
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://247ibet.ca" },
-      { "@type": "ListItem", "position": 2, "name": "Interac", "item": "https://247ibet.ca/interac" }
-    ]
-  };
+  const guideCards = [
+    { href: '/interac/deposit', title: 'How to Deposit with Interac', body: 'Follow our simple step-by-step guide to make your first Interac e-Transfer deposit.', cta: 'View Deposit Guide', icon: Banknote },
+    { href: '/interac/withdraw', title: 'How to Withdraw with Interac', body: 'Everything you need to know about withdrawing funds securely.', cta: 'View Withdrawal Guide', icon: WalletCards },
+  ];
+
+  const faqItems = [
+    'How long does an Interac withdrawal take?',
+    'Are there fees for using Interac?',
+    'What is the minimum Interac deposit?',
+    'Is Interac safer than cards?',
+    'Why was my Interac transfer declined?',
+  ];
 </script>
 
 <svelte:head>
-  <title>Interac Casino Canada: Fast Deposits &amp; Withdrawals at 247iBET</title>
-  <meta name="description" content="Compare the best Canadian casinos accepting Interac e-Transfer. 247iBET data on deposit limits, withdrawal security, and instant payout verification." />
-  <meta property="og:title" content="Interac Casino Canada: Fast Deposits &amp; Withdrawals at 247iBET" />
-  <meta property="og:description" content="Compare the best Canadian casinos accepting Interac e-Transfer. 247iBET data on deposit limits, withdrawal security, and instant payout verification." />
+  <title>Interac Casino Canada: Fast Deposits & Withdrawals at 247iBET</title>
+  <meta
+    name="description"
+    content="Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance."
+  />
   <link rel="canonical" href="https://247ibet.ca/interac" />
-  <script type="application/ld+json">{@html JSON.stringify(faqSchema)}</script>
-  <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
-  <header class="mb-10">
-    <nav aria-label="Breadcrumb" class="mb-4">
-      <ol class="flex items-center gap-2 text-xs text-text-tertiary">
+<div class="min-h-screen bg-navy-black pt-24 text-white">
+  <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
+    <nav aria-label="Breadcrumb" class="mb-10">
+      <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
-        <li>/</li>
-        <li class="text-white font-medium">Interac</li>
+        <li aria-hidden="true">›</li>
+        <li class="text-white">Interac</li>
+        <li aria-hidden="true">›</li>
+        <li class="text-white">Deposit &amp; Withdraw</li>
       </ol>
     </nav>
 
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
-      Deposit &amp; Withdraw with Interac in Canada
-    </h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Interac keeps casino deposits CAD-native, bank-backed, and fast for Canadian players.
-    </p>
-  </header>
+    <header class="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+      <div>
+        <h1 class="max-w-4xl text-[clamp(3rem,6.5vw,6rem)] font-black leading-[1.02] tracking-normal">
+          Deposit &amp; Withdraw <br />
+          with <span class="text-prestige-gold">Interac</span> in Canada
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
+          Fast, secure, and trusted. Use Interac e-Transfer to deposit and withdraw CAD at 247iBET, built for Canadian players.
+        </p>
 
-  <!-- Editorial image callout -->
-  <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
-    <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
-        CAD Native · Bank Backed · Instant
-      </div>
-      <p class="text-lg md:text-xl font-bold text-white">Interac e-Transfer Payments</p>
-    </div>
-  </div>
-
-  <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
-    <p class="font-bold text-white text-sm">Interac e-Transfer payouts at 247iBET are typically processed within 15–30 minutes of approval.</p>
-    <p class="mt-2 text-xs text-text-tertiary leading-relaxed">This provides the fastest legal withdrawal route for Canadian players, with direct bank integration and no hidden processing fees.</p>
-  </div>
-
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
-
-  <section class="mt-16 space-y-12">
-    <!-- Steps -->
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="space-y-6">
-        <h3 class="text-xl font-bold text-white flex items-center gap-2">
-          <ArrowRightLeft class="w-5 h-5 text-prestige-gold" aria-hidden="true" /> How to Deposit
-        </h3>
-        <ol class="space-y-4 mt-4">
-          {#each depositSteps as step, i}
-            <li class="flex gap-4">
-              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center">{i + 1}</span>
-              <div>
-                <p class="font-bold text-white text-sm">{step.title}</p>
-                <p class="mt-1 text-sm text-text-tertiary leading-relaxed">{step.description}</p>
+        <div class="mt-10 grid gap-3 rounded-xl border border-white/10 bg-navy-card/70 p-4 sm:grid-cols-3">
+          {#each trustItems as item}
+            {@const Icon = item.icon}
+            <div class="flex gap-3 rounded-lg bg-black/14 p-3">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold">
+                <Icon class="h-5 w-5" aria-hidden="true" />
               </div>
-            </li>
-          {/each}
-        </ol>
-      </div>
-      <div class="space-y-6">
-        <h3 class="text-xl font-bold text-white flex items-center gap-2">
-          <ArrowRightLeft class="w-5 h-5 text-prestige-gold" aria-hidden="true" /> How to Withdraw
-        </h3>
-        <ol class="space-y-4 mt-4">
-          {#each withdrawalSteps as step, i}
-            <li class="flex gap-4">
-              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center">{i + 1}</span>
               <div>
-                <p class="font-bold text-white text-sm">{step.title}</p>
-                <p class="mt-1 text-sm text-text-tertiary leading-relaxed">{step.description}</p>
+                <p class="text-sm font-black text-white">{item.title}</p>
+                <p class="mt-1 text-xs leading-5 text-text-body">{@html item.body}</p>
               </div>
-            </li>
+            </div>
           {/each}
-        </ol>
+        </div>
       </div>
-    </div>
 
-    <!-- Timing & Limits table -->
-    <div class="navy-card rounded-2xl p-8 overflow-x-auto">
-      <h2 class="text-2xl font-bold text-white mb-6">Timing &amp; Expectation Limits</h2>
-      <table class="w-full text-sm text-left">
-        <thead class="text-gray-500 uppercase text-xs tracking-wider border-b border-white/10">
-          <tr>
-            <th class="px-4 py-3">Service</th>
-            <th class="px-4 py-3">Timing</th>
-            <th class="px-4 py-3">Limit (Typical)</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-400 divide-y divide-white/5">
-          <tr>
-            <td class="px-4 py-4 text-white font-semibold">Interac Deposit</td>
-            <td class="px-4 py-4">Immediate - 30 mins</td>
-            <td class="px-4 py-4">CAD $10 - $3,000</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-4 text-white font-semibold">Interac Withdrawal</td>
-            <td class="px-4 py-4">1 - 24 hours (post-approval)</td>
-            <td class="px-4 py-4">CAD $20 - $5,000</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-4 text-white font-semibold">KYC Verification</td>
-            <td class="px-4 py-4">24 - 48 hours (once per user)</td>
-            <td class="px-4 py-4">N/A</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl">
+        <img
+          src="/images/generated/interac-payment-hero.png"
+          alt="Interac e-Transfer secure payment visual"
+          class="h-full min-h-[340px] w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-8">
+          <p class="text-base font-semibold text-white">Secure payments. Trusted by millions.</p>
+          <p class="mt-2 max-w-md text-sm leading-6 text-text-body">
+            Interac keeps sensitive payment steps inside your bank flow while 247iBET records the cashier result.
+          </p>
+        </div>
+      </div>
+    </header>
 
-    <!-- Supporting Pages -->
-    <div class="grid gap-6 md:grid-cols-2">
-      <a href="/interac/deposit" class="navy-card rounded-2xl p-6 hover:border-prestige-gold/30 transition-colors">
-        <h3 class="text-lg font-bold text-white mb-2">How to Deposit with Interac</h3>
-        <p class="text-sm text-gray-400">Step-by-step guide to making your first Interac e-Transfer deposit.</p>
-      </a>
-      <a href="/interac/withdraw" class="navy-card rounded-2xl p-6 hover:border-prestige-gold/30 transition-colors">
-        <h3 class="text-lg font-bold text-white mb-2">How to Withdraw with Interac</h3>
-        <p class="text-sm text-gray-400">Withdrawal steps, timing expectations, and how to speed up cashouts.</p>
-      </a>
-    </div>
-
-    <!-- Cross-Pillar Routing -->
-    <section>
-      <div class="flex flex-wrap gap-6">
-        <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Play casino with Interac</a>
-        <a href="/sportsbook" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Bet on sports with Interac</a>
-        <a href="/fast-payouts" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Compare fast payout methods</a>
+    <section class="mt-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex gap-4">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+            <Info class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <div>
+            <p class="font-black text-white">
+              Interac e-Transfer payouts at 247iBET are typically processed within 15-30 minutes of approval.
+            </p>
+            <p class="mt-2 max-w-3xl text-sm leading-6 text-text-body">
+              This process includes fraud checks and bank verification. In rare cases, timing may vary based on bank and security review.
+            </p>
+          </div>
+        </div>
+        <a href="/fast-payouts" class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold hover:text-prestige-gold-light">
+          Learn more about timing
+          <ArrowRight class="h-4 w-4" aria-hidden="true" />
+        </a>
       </div>
     </section>
-  </section>
 
-  <!-- FAQ Section -->
-  <section class="mt-16 space-y-4">
-    <h2 class="text-2xl font-bold text-white">Interac FAQ</h2>
-    {#each faqItems as faq}
-      <details class="navy-card rounded-xl p-4 group cursor-pointer">
-        <summary class="font-bold text-white list-none flex items-center justify-between gap-2">
-          {faq.question}
-          <svg class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </summary>
-        <p class="mt-3 text-sm text-gray-400 font-sans leading-relaxed">{faq.answer}</p>
-      </details>
-    {/each}
-  </section>
+    <section class="mt-12 grid gap-6 lg:grid-cols-2">
+      <div class="navy-card p-6 md:p-8">
+        <div class="mb-8 flex items-center gap-4">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+            <Upload class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h2 class="text-3xl font-black text-white">How to Deposit</h2>
+        </div>
+        <ol class="space-y-7">
+          {#each depositSteps as step, index}
+            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black">{index + 1}</span>
+              <span>
+                <span class="block text-lg font-black text-white">{step}</span>
+                <span class="mt-2 block text-sm leading-6 text-text-body">
+                  {index === 0 ? 'Access your account and make sure you have enabled 2FA.' : index === 1 ? 'Select Deposit and choose Interac e-Transfer from the list of payment methods.' : index === 2 ? 'Input the amount you wish to fund.' : index === 3 ? 'Follow the secure Interac prompts to authorize the transfer from your bank.' : 'Your deposit is credited in minutes.'}
+                </span>
+              </span>
+            </li>
+          {/each}
+        </ol>
+      </div>
 
-  <div class="mt-16">
-    <IBetShowcase variant="banner" ctaText="Deposit Now" />
-  </div>
+      <div class="navy-card p-6 md:p-8">
+        <div class="mb-8 flex items-center gap-4">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+            <Download class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h2 class="text-3xl font-black text-white">How to Withdraw</h2>
+        </div>
+        <ol class="space-y-7">
+          {#each withdrawalSteps as step, index}
+            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black">{index + 1}</span>
+              <span>
+                <span class="block text-lg font-black text-white">{step}</span>
+                <span class="mt-2 block text-sm leading-6 text-text-body">
+                  {index === 0 ? 'Select Interac e-Transfer as your withdrawal method.' : index === 1 ? 'Ensure your account is fully verified to prevent delays.' : index === 2 ? 'Withdrawals are reviewed and approved, typically within 1-24 hours.' : index === 3 ? 'Accept the Interac e-Transfer directly in your email or through your bank.' : 'Once accepted, funds typically arrive within 15-30 minutes.'}
+                </span>
+              </span>
+            </li>
+          {/each}
+        </ol>
+      </div>
+    </section>
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
-  </div>
+    <section class="mt-12 navy-card overflow-hidden p-6 md:p-8">
+      <h2 class="text-3xl font-black text-white">Timing &amp; Expectation Limits</h2>
+      <div class="mt-7 overflow-x-auto">
+        <table class="w-full min-w-[760px] text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary">
+              <th class="px-4 py-4 font-black">Service</th>
+              <th class="px-4 py-4 font-black">Typical Time</th>
+              <th class="px-4 py-4 font-black">Limits</th>
+              <th class="px-4 py-4 font-black">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/6">
+            {#each timingRows as row}
+              <tr class="text-text-body">
+                <td class="px-4 py-5 font-black text-white">{row.service}</td>
+                <td class="px-4 py-5">{row.time}</td>
+                <td class="px-4 py-5">{row.limit}</td>
+                <td class="px-4 py-5">{row.notes}</td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-7 flex gap-3 rounded-lg border border-white/10 bg-black/24 p-4 text-sm text-text-body">
+        <ShieldCheck class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
+        <p>All times are estimates and may vary based on your bank, verification status, and security reviews.</p>
+      </div>
+    </section>
+
+    <section class="mt-12 grid gap-6 md:grid-cols-2">
+      {#each guideCards as card}
+        {@const Icon = card.icon}
+        <a href={card.href} class="navy-card group p-7 transition-transform hover:-translate-y-0.5">
+          <div class="flex items-start justify-between gap-6">
+            <div>
+              <h2 class="text-2xl font-black text-white">{card.title}</h2>
+              <p class="mt-3 max-w-md text-sm leading-6 text-text-body">{card.body}</p>
+              <span class="mt-6 inline-flex items-center gap-2 text-sm font-black text-prestige-gold group-hover:text-prestige-gold-light">
+                {card.cta}
+                <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              </span>
+            </div>
+            <Icon class="h-16 w-16 shrink-0 text-prestige-gold/80" aria-hidden="true" />
+          </div>
+        </a>
+      {/each}
+    </section>
+
+    <section class="mt-12 navy-card p-6 md:p-8">
+      <h2 class="text-3xl font-black text-white">Interac FAQ</h2>
+      <div class="mt-6 divide-y divide-white/8">
+        {#each faqItems as item}
+          <button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left">
+            <span class="text-base font-black text-white">{item}</span>
+            <ChevronDown class="h-5 w-5 shrink-0 text-text-body" aria-hidden="true" />
+          </button>
+        {/each}
+      </div>
+      <p class="mt-6 text-center text-sm text-text-body">
+        Still have questions? <a href="/contact" class="font-black text-prestige-gold hover:text-prestige-gold-light">Contact our support team 24/7.</a>
+      </p>
+    </section>
+
+    <section class="mt-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-7 shadow-2xl md:p-10">
+      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+        <div>
+          <h2 class="text-3xl font-black text-white md:text-4xl">Ready to make a secure deposit?</h2>
+          <p class="mt-3 text-base text-text-body">Join 247iBET today and enjoy fast, trusted Interac payments.</p>
+        </div>
+        <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
+          Join Now - It&apos;s Free
+          <ArrowRight class="h-5 w-5" aria-hidden="true" />
+        </SafeExternalLink>
+      </div>
+    </section>
+
+    <section class="mt-7 rounded-xl border border-prestige-gold/35 bg-navy-card/80 p-6">
+      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-4">
+          <ShieldCheck class="h-9 w-9 text-prestige-gold" aria-hidden="true" />
+          <div>
+            <h2 class="text-xl font-black">We play for keeps.</h2>
+            <p class="mt-1 text-sm text-text-body">Play responsibly. Set limits. Need help?</p>
+          </div>
+        </div>
+        <a href="/responsible-gambling" class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold">
+          Visit Responsible Gaming
+          <ArrowRight class="h-4 w-4" aria-hidden="true" />
+        </a>
+      </div>
+    </section>
+  </main>
 </div>

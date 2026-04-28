@@ -4,7 +4,7 @@
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Online Slots';
-  const heroImage = '/images/hero/hero-slots-premium.png';
+  const heroImage = '/images/generated/casino-slots-hero.png';
 
   const intro = {
     eyebrow: 'Online slots Canada',

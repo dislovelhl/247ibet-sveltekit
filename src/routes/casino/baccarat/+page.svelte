@@ -5,7 +5,7 @@
 
   const pageName = 'Baccarat Online';
   const path = '/casino/baccarat';
-  const heroImage = '/images/games/baccarat.jpg';
+  const heroImage = '/images/generated/casino-baccarat-hero.png';
 
   const intro = {
     eyebrow: 'Baccarat online Canada',

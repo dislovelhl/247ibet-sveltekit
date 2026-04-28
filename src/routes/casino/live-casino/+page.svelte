@@ -3,6 +3,7 @@
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Live Casino';
+  const heroImage = '/images/generated/casino-live-hero.png';
 
   const intro = {
     eyebrow: 'Live dealer Canada',
@@ -80,11 +81,16 @@
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
 
-  <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
-    <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
-      {intro.eyebrow}
+  <div class="relative h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card mb-8 md:h-60">
+    <img src={heroImage} alt={pageName} class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/65 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+    <div class="absolute bottom-5 left-6 md:left-8">
+      <div class="mb-1.5 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold">
+        {intro.eyebrow}
+      </div>
+      <p class="text-xl font-bold text-white md:text-2xl">{pageName}</p>
     </div>
-    <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
   </div>
 
   <nav aria-label="Breadcrumb" class="mb-6">
