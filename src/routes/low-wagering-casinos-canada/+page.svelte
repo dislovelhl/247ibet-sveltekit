@@ -43,6 +43,11 @@
         <li class="text-white font-medium">Low Wagering Casinos</li>
       </ol>
     </nav>
+    <div class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56">
+      <img src="/images/generated/bonus-wagering-hero.png" alt="" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+    </div>
     <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Low Wagering Casinos Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">Canadian online casinos ranked by wagering requirement fairness. We calculate effective offer value after wagering conditions — so you see what an offer is actually worth before you claim it.</p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>

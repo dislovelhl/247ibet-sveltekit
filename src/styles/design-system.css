@@ -3,7 +3,7 @@
   .money-hero-display {
     font-family: var(--font-display); font-weight: 300;
     font-size: clamp(2.5rem, 7vw, 5.5rem); line-height: 0.95;
-    letter-spacing: clamp(-0.06em, -0.025em - 0.25vw, -0.02em);
+    letter-spacing: 0;
     color: var(--color-text-primary); text-wrap: balance;
   }
   .money-hero-lede {
@@ -20,14 +20,14 @@
   .page-hero-kicker, .page-hub-kicker, .page-detail-kicker {
     @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-prestige-gold;
   }
-  .page-hero-title { @apply font-display font-light tracking-[-0.045em] leading-[0.98] text-white; text-wrap: balance; }
-  .page-hub-title { @apply font-display font-normal tracking-[-0.03em] leading-[1.05] text-white; text-wrap: balance; }
-  .page-detail-title { @apply font-display font-semibold tracking-[-0.03em] leading-[1.08] text-white; text-wrap: balance; }
+  .page-hero-title { @apply font-display font-light leading-[0.98] text-white; letter-spacing: 0; text-wrap: balance; }
+  .page-hub-title { @apply font-display font-normal leading-[1.05] text-white; letter-spacing: 0; text-wrap: balance; }
+  .page-detail-title { @apply font-display font-semibold leading-[1.08] text-white; letter-spacing: 0; text-wrap: balance; }
   .page-hero-subtitle, .page-hub-subtitle, .page-detail-copy { @apply text-text-body; line-height: 1.72; }
 
   /* ── Prose & Immersive Layouts ── */
   .guide-immersive .prose, .immersive-page .prose { max-width: none; }
-  .guide-immersive .prose h1, .immersive-page .prose h1 { @apply font-display font-semibold; letter-spacing: -0.04em; line-height: 1.02; margin-bottom: 0.85rem; }
+  .guide-immersive .prose h1, .immersive-page .prose h1 { @apply font-display font-semibold; letter-spacing: 0; line-height: 1.02; margin-bottom: 0.85rem; }
   .guide-immersive .prose p, .immersive-page .prose p { margin-top: 0; margin-bottom: 1rem; max-width: 68ch; line-height: 1.72; }
 
   /* ── Data & Sportsbook UI ── */
@@ -47,9 +47,56 @@
   }
   .jackpot-ticker__amount {
     font-family: var(--font-display); font-weight: 300; font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-    letter-spacing: -0.045em; line-height: 0.95; font-variant-numeric: tabular-nums;
+    letter-spacing: 0; line-height: 0.95; font-variant-numeric: tabular-nums;
     background: linear-gradient(180deg, #F4D790 0%, #E8AC52 45%, #C0842E 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  main :where(.container) {
+    scroll-margin-top: 6rem;
+  }
+
+  main :where(p, li, dd) {
+    text-wrap: pretty;
+  }
+
+  main :where(h1, h2, h3) {
+    text-wrap: balance;
+  }
+
+  main :where(nav[aria-label='Breadcrumb']) a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  main :where(details.navy-card) {
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+
+  main :where(details.navy-card[open]) {
+    border-color: rgba(212, 148, 58, 0.22);
+    background: linear-gradient(180deg, rgba(20, 32, 56, 0.88), rgba(13, 22, 41, 0.94));
+  }
+
+  main :where(details.navy-card > summary) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 10px;
+    list-style: none;
+  }
+
+  main :where(details.navy-card > summary)::after {
+    content: '+';
+    margin-left: auto;
+    color: var(--color-prestige-gold);
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+
+  main :where(details.navy-card[open] > summary)::after {
+    content: '−';
   }
 
   /* ── Decorative ── */

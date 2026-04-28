@@ -13,10 +13,8 @@
   ];
 
   const operatorAudits = [
-    { href: '/reviews/draftkings-canada', title: 'DraftKings Audit', description: 'SGP audit and app-layer infrastructure audit.' },
-    { href: '/reviews/fanduel-canada', title: 'FanDuel Audit', description: 'Product clarity and payout latency benchmarking.' },
-    { href: '/reviews/bet365-canada', title: 'bet365 Audit', description: 'Live betting depth and institutional cashier analysis.' },
-    { href: '/reviews/caesars-canada', title: 'Caesars Audit', description: 'Brand governance and account setup friction audit.' },
+    { href: '/sportsbook', title: '247iBET Sportsbook Audit', description: 'SGP, live betting depth, and cashier analysis for Ontario players.' },
+    { href: '/casino', title: '247iBET Casino Audit', description: 'Product clarity, payout latency, and account setup benchmarking.' },
   ];
 
   const networkLinks = [

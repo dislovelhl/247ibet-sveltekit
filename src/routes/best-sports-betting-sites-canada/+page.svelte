@@ -19,11 +19,11 @@
     },
     {
       question: 'Which sportsbooks are available in Ontario vs other provinces?',
-      answer: "Ontario has the most restrictive regulated market (AGCO). Operators like DraftKings, FanDuel, BetMGM, and Caesars are available only in Ontario. Sports Interaction and BET99 operate under Kahnawake and serve multiple provinces. Always verify availability for your province before registering.",
+      answer: "Ontario has the most restrictive regulated market. Some operators are available only in Ontario while others operate under Kahnawake licensing and serve multiple provinces. Always verify availability for your province before registering.",
     },
     {
       question: 'Can I bet on CFL games in Canada?',
-      answer: "Yes. CFL betting is available at all major Canadian sportsbooks. Sports Interaction and BET99 typically offer the deepest CFL markets including game props, player props, and futures.",
+      answer: "Yes. CFL betting is available at major Canadian sportsbooks. Many operators offer deep CFL markets including game props, player props, and futures.",
     },
     {
       question: 'Do Canadian sportsbooks pay out winnings in CAD?',

@@ -12,6 +12,7 @@
     keywords: 'NHL betting Canada, hockey betting Canada, NHL odds Canada',
     heroSubheading:
       'Track Canadian teams, compare puck line and total markets, and follow live NHL odds throughout the regular season, playoffs, and Stanley Cup futures board.',
+    heroImage: '/images/generated/sportsbook-nhl-hero.png',
     overviewTitle: 'Canadian NHL betting coverage',
     overviewIntro:
       'NHL betting pages need to match how Canadian fans actually follow hockey: national broadcasts, rivalry games, playoff races, and futures that stay open for months.',
@@ -146,6 +147,12 @@
         <li class="text-white font-medium">{page.breadcrumbLabel}</li>
       </ol>
     </nav>
+    <div class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60">
+      <img src={page.heroImage} alt="" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
+      <div class="absolute bottom-5 left-6 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold md:left-8">{page.breadcrumbLabel}</div>
+    </div>
     <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">{page.heading}</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">{page.heroSubheading}</p>
   </header>

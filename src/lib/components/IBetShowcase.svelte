@@ -3,7 +3,7 @@
   import { IBET_PROFILE, IBET_URLS, IBET_CTA, IBET_DISCLAIMER } from '$lib/ibet-brand';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
-  const featureIconMap: Record<string, unknown> = { Zap, Gamepad2, Trophy, MonitorPlay };
+  const featureIconMap: Partial<Record<string, typeof Zap>> = { Zap, Gamepad2, Trophy, MonitorPlay };
 
   interface Props {
     variant?: 'hero' | 'compact' | 'banner';
@@ -153,7 +153,7 @@
                 {@const FeatureIcon = featureIconMap[feat.icon]}
                 <div class="rounded-xl border p-3.5 material-inset {feat.bg} transition-shadow">
                   {#if FeatureIcon}
-                    <svelte:component this={FeatureIcon} class="w-5 h-5 mb-1.5 {feat.accent}" aria-hidden="true" />
+                    <FeatureIcon class="w-5 h-5 mb-1.5 {feat.accent}" aria-hidden="true" />
                   {/if}
                   <div class="font-bold text-sm mb-0.5 {feat.accent}">{feat.label}</div>
                   <p class="text-xs text-text-body font-sans leading-snug">{feat.detail}</p>

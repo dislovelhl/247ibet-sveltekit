@@ -73,10 +73,10 @@
   const quickStakes = ['$10', '$25', '$50', '$100'];
 
   const tableRows = [
-    ['BetRivers',  'ON · AGCO',  20, '47 min',  '9.4'],
-    ['DraftKings', 'ON · AGCO',  10, '52 min',  '9.2'],
-    ['BET99',      'ON · AGCO',  10, '1h 12m',  '8.8'],
-    ['Caesars',    'ON · AGCO',  20, '1h 04m',  '8.7'],
+    ['Operator A', 'ON · Licensed', 20, '47 min',  '9.4'],
+    ['Operator B', 'ON · Licensed', 10, '52 min',  '9.2'],
+    ['Operator C', 'ON · Licensed', 10, '1h 12m',  '8.8'],
+    ['Operator D', 'ON · Licensed', 20, '1h 04m',  '8.7'],
   ];
 
   const slipAnatomy = [

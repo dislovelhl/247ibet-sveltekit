@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { vitePlugin } from 'braintrust/vite';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, type Plugin, type PluginOption } from 'vite';
 
 // In Vite 6 SSR mode, ?inline CSS modules may not produce `export default "css"`
 // causing Kit's inline_styles pipeline to store a non-string, non-function value
@@ -18,6 +18,12 @@ const cssInlineSSRFix: Plugin = {
   }
 };
 
-export default defineConfig({
-  plugins: [tailwindcss(), vitePlugin(), sveltekit(), cssInlineSSRFix]
-});
+function braintrustBuildPlugin(command: string): PluginOption[] {
+  if (command !== 'build') return [];
+  const plugin = vitePlugin({});
+  return Array.isArray(plugin) ? plugin : [plugin];
+}
+
+export default defineConfig(({ command }) => ({
+  plugins: [tailwindcss(), ...braintrustBuildPlugin(command), sveltekit(), cssInlineSSRFix]
+}));

@@ -13,10 +13,8 @@
   ];
 
   const operatorAudits = [
-    { href: '/reviews/jackpot-city-canada', title: 'Jackpot City Audit', description: 'Institutional comparison of game depth and Ontario cashier behaviour.' },
-    { href: '/reviews/spin-casino-canada', title: 'Spin Casino Audit', description: 'Payment flow evaluation and regulatory placement benchmark.' },
-    { href: '/reviews/bet365-canada', title: 'bet365 Audit', description: 'Infrastructure audit for sportsbook/casino hybrid environments.' },
-    { href: '/reviews/fanduel-canada', title: 'FanDuel Audit', description: 'Withdrawal speed benchmarks and Ontario market transparency.' },
+    { href: '/casino', title: '247iBET Casino Audit', description: 'Game depth, cashier flow, and Ontario withdrawal benchmarks.' },
+    { href: '/sportsbook', title: '247iBET Sportsbook Audit', description: 'Withdrawal speed benchmarks and Ontario market transparency.' },
   ];
 
   const networkLinks = [
