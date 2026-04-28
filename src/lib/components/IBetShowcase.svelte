@@ -172,26 +172,26 @@
           </div>
         {/if}
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-6">
+        <dl class="mb-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-white/8 py-5 sm:grid-cols-4 sm:divide-x sm:divide-white/8 sm:gap-y-0">
           {#each IBET_PROFILE.trustPanel as item}
-            <div class="rounded-xl border border-white/8 material-inset p-4 transition-shadow">
-              <div class="mb-2 flex items-center gap-2">
+            <div class="sm:px-6 sm:first:pl-0 sm:last:pr-0">
+              <dt class="mb-1.5 flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.18em] text-text-body">
                 {#if item.label === 'Licence'}
-                  <ShieldCheck class="w-4 h-4 text-green-400" aria-hidden="true" />
+                  <ShieldCheck class="w-3.5 h-3.5 text-green-400" aria-hidden="true" />
                 {:else if item.label === 'Payments'}
-                  <CreditCard class="w-4 h-4 text-text-body" aria-hidden="true" />
+                  <CreditCard class="w-3.5 h-3.5 text-text-body" aria-hidden="true" />
                 {:else if item.label === 'Security'}
-                  <LockKeyhole class="w-4 h-4 text-text-body" aria-hidden="true" />
+                  <LockKeyhole class="w-3.5 h-3.5 text-text-body" aria-hidden="true" />
                 {:else}
-                  <Star class="w-4 h-4 text-prestige-gold fill-prestige-gold" aria-hidden="true" />
+                  <Star class="w-3.5 h-3.5 text-prestige-gold fill-prestige-gold" aria-hidden="true" />
                 {/if}
-                <div class="text-[10px] font-mono uppercase tracking-[0.18em] text-text-body">{item.label}</div>
-              </div>
-              <div class="mb-1 text-sm font-bold text-white">{item.value}</div>
-              <p class="text-xs leading-snug text-text-body">{item.detail}</p>
+                {item.label}
+              </dt>
+              <dd class="text-sm font-bold text-white">{item.value}</dd>
+              <p class="mt-0.5 text-xs leading-snug text-text-body">{item.detail}</p>
             </div>
           {/each}
-        </div>
+        </dl>
 
         {#if showPros}
           <div class="pt-4 border-t border-white/8">

@@ -5,6 +5,7 @@
   import { cubicOut } from 'svelte/easing';
   import { Menu, X, Search, User } from 'lucide-svelte';
   import { SITE, PARTNER } from '$lib/site';
+  import { IBET_URLS } from '$lib/ibet-brand';
 
   // ---------------------------------------------------------------------------
   // Constants
@@ -235,10 +236,12 @@
         </a>
       </div>
 
-      <!-- User profile placeholder -->
+      <!-- User profile / login (external operator URL) -->
       <a
-        href="/login"
-        aria-label="Sign in to your account"
+        href={IBET_URLS.login}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Sign in to your 247iBET account"
         class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-colors"
       >
         <User class="w-4 h-4" aria-hidden="true" />
@@ -248,7 +251,7 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="md:hidden p-2.5 text-gray-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-blue"
+        class="md:hidden p-2.5 text-gray-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
         onclick={toggleMobileMenu}
         aria-label="Toggle mobile menu"
         aria-haspopup="menu"
