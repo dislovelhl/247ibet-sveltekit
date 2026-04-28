@@ -7,3 +7,5 @@ build
 !.env.example
 vite.config.ts.timestamp-*
 .gstack/
+.omc/
+.omx/
