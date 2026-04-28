@@ -79,9 +79,6 @@
           <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
             {ctaText ?? IBET_CTA.primary} <ExternalLink class="w-3 h-3" aria-hidden="true" />
           </SafeExternalLink>
-          <SafeExternalLink href={IBET_URLS.casino} class="page-cta-secondary w-full sm:w-auto">
-            {IBET_CTA.casino}
-          </SafeExternalLink>
           <p class="text-[11px] text-text-body font-sans">{IBET_DISCLAIMER.slice(0, 50)}…</p>
         </div>
       </div>
@@ -144,9 +141,6 @@
             <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full">
               {ctaText ?? IBET_CTA.primary}
               <ExternalLink class="w-4 h-4" aria-hidden="true" />
-            </SafeExternalLink>
-            <SafeExternalLink href={IBET_URLS.casino} class="hero-cta-secondary w-full">
-              {IBET_CTA.casino} →
             </SafeExternalLink>
             <p class="text-[11px] text-text-body font-sans leading-tight">{IBET_DISCLAIMER}</p>
           </div>

@@ -112,13 +112,15 @@
     <p class="mt-4 text-base leading-relaxed text-gray-400">{intro.body}</p>
   </section>
 
-  <section class="mt-12 grid gap-6 md:grid-cols-3">
-    {#each cards as card}
-      <div class="navy-card rounded-2xl border border-white/10 p-6">
-        <h2 class="text-xl font-bold text-white">{card.title}</h2>
-        <p class="mt-3 text-sm leading-relaxed text-gray-400">{card.body}</p>
-      </div>
-    {/each}
+  <section class="mt-12">
+    <ul class="divide-y divide-white/10">
+      {#each cards as card}
+        <li class="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:gap-10 md:py-7">
+          <h3 class="text-xl font-bold text-white">{card.title}</h3>
+          <p class="text-sm leading-relaxed text-gray-400">{card.body}</p>
+        </li>
+      {/each}
+    </ul>
   </section>
 
   <section class="mt-12 grid gap-6 md:grid-cols-2">
