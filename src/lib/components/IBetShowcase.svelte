@@ -113,7 +113,7 @@
                 <h2 class="page-hub-title text-3xl md:text-5xl uppercase">{IBET_PROFILE.name}</h2>
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
-                <span class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-slate-blue/10 text-slate-blue border border-slate-blue/20 uppercase tracking-widest">
+                <span class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest">
                   <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Registry Status: Verified
                 </span>
               {/if}
@@ -164,7 +164,7 @@
               <button
                 type="button"
                 onclick={() => (isExpanded = true)}
-                class="text-xs font-bold text-slate-blue hover:text-prestige-gold transition-colors py-2 flex items-center gap-1"
+                class="text-xs font-bold text-text-body hover:text-prestige-gold transition-colors py-2 flex items-center gap-1"
               >
                 + View {IBET_PROFILE.features.length - 4} more features
               </button>
@@ -179,11 +179,11 @@
                 {#if item.label === 'Licence'}
                   <ShieldCheck class="w-4 h-4 text-green-400" aria-hidden="true" />
                 {:else if item.label === 'Payments'}
-                  <CreditCard class="w-4 h-4 text-slate-blue" aria-hidden="true" />
+                  <CreditCard class="w-4 h-4 text-text-body" aria-hidden="true" />
                 {:else if item.label === 'Security'}
-                  <LockKeyhole class="w-4 h-4 text-yellow-400" aria-hidden="true" />
+                  <LockKeyhole class="w-4 h-4 text-text-body" aria-hidden="true" />
                 {:else}
-                  <Star class="w-4 h-4 text-slate-blue fill-slate-blue" aria-hidden="true" />
+                  <Star class="w-4 h-4 text-prestige-gold fill-prestige-gold" aria-hidden="true" />
                 {/if}
                 <div class="text-[10px] font-mono uppercase tracking-[0.18em] text-text-body">{item.label}</div>
               </div>

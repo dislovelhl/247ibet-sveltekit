@@ -9,8 +9,8 @@
       label: 'Online Casino',
       description: 'Play premium online casino games — 500+ certified slots, live dealer tables, and fast Interac payouts.',
       stat: '500+ games',
-      iconColor: 'text-slate-blue',
-      iconBg: 'bg-slate-blue/10',
+      iconColor: 'text-prestige-gold',
+      iconBg: 'bg-prestige-gold/10',
       guideText: 'View Games',
       playText: 'Play Now',
       featured: true,
@@ -57,7 +57,7 @@
         <div class="p-6 md:p-8 flex flex-col gap-5 flex-1">
           <div class="flex items-start justify-between">
             <div class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 {hub.iconBg} border border-white/10 shadow-lg">
-              <svelte:component this={hub.icon} class="w-7 h-7 {hub.iconColor} drop-shadow-[0_0_8px_rgba(74,158,191,0.3)]" aria-hidden="true" />
+              <svelte:component this={hub.icon} class="w-7 h-7 {hub.iconColor}" aria-hidden="true" />
             </div>
             <div class="flex items-center gap-2">
               {#if hub.featured}

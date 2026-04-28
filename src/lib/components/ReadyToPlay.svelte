@@ -13,15 +13,6 @@
 
 <section class="my-12 sm:my-16" aria-labelledby="ready-to-play-heading">
   <div class="relative overflow-hidden rounded-[1.75rem] border border-navy-border luxury-card p-6 sm:rounded-3xl sm:p-8 md:p-12">
-    <div
-      aria-hidden="true"
-      class="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-prestige-gold/8 blur-[64px] sm:-top-20 sm:-right-20 sm:h-80 sm:w-80 sm:blur-[80px]"
-    ></div>
-    <div
-      aria-hidden="true"
-      class="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-slate-blue/8 blur-[48px] sm:-bottom-20 sm:-left-20 sm:h-64 sm:w-64 sm:blur-[60px]"
-    ></div>
-
     <div class="relative z-10 grid gap-6 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
       <div>
         <div class="page-hero-kicker mb-3 sm:mb-4">
@@ -73,10 +64,10 @@
           </SafeExternalLink>
           <SafeExternalLink
             href={IBET_URLS.register}
-            class="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm font-bold text-white transition-all hover:border-slate-blue/40 hover:bg-white/[0.05] group/item"
+            class="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm font-bold text-white transition-all hover:border-prestige-gold/40 hover:bg-white/[0.05] group/item"
           >
             <span>Sports Betting</span>
-            <ArrowRight class="h-4 w-4 text-slate-blue transition-transform duration-200 group-hover/item:translate-x-1" aria-hidden="true" />
+            <ArrowRight class="h-4 w-4 text-prestige-gold transition-transform duration-200 group-hover/item:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
           <a
             href="/fast-payouts"

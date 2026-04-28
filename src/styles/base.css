@@ -3,8 +3,6 @@
     background-color: #070C18;
     background-image:
       radial-gradient(ellipse 80% 60% at 50% 0%, rgba(20, 32, 56, 0.45) 0%, transparent 70%),
-      radial-gradient(circle at 18% 18%, rgba(74, 158, 191, 0.08) 0%, transparent 28%),
-      radial-gradient(circle at 82% 12%, rgba(212, 148, 58, 0.05) 0%, transparent 24%),
       linear-gradient(180deg, rgba(7, 12, 24, 0.92) 0%, rgba(7, 12, 24, 1) 100%);
     color: #F1F5F9;
     line-height: 1.75;

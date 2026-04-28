@@ -55,5 +55,5 @@
   /* ── Decorative ── */
   .seam-rule { display: block; border: 0; height: 1px; width: 56px; margin: 2rem 0; background: rgba(212, 148, 58, 0.28); }
   .text-gradient-gold { background: linear-gradient(135deg, #E8AC52 0%, #D4943A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .text-gradient-slate { background: linear-gradient(135deg, #FFF 0%, #4A9EBF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .text-gradient-slate { background: linear-gradient(135deg, #FFF 0%, #94A3B8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 }
