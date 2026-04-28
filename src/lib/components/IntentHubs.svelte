@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Zap, Trophy, CreditCard, Smartphone, Star, MapPin, ArrowRight } from 'lucide-svelte';
+  import { Trophy, Star, ArrowRight } from 'lucide-svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
   const primaryHubs = [
     {
@@ -31,54 +31,10 @@
   ] as const;
 
   const secondaryHubs = [
-    {
-      guideHref: '/fast-payouts',
-      playHref: IBET_URLS.deposit,
-      icon: Zap,
-      label: 'Fast Payouts',
-      description: 'Experience fast payouts for all games — rapid secure withdrawals.',
-      stat: 'Rapid cashout',
-      iconColor: 'text-green-500',
-      iconBg: 'bg-green-500/10',
-      guideText: 'Learn More',
-      playText: 'Fast Deposit',
-    },
-    {
-      guideHref: '/interac',
-      playHref: IBET_URLS.deposit,
-      icon: CreditCard,
-      label: 'Interac Payments',
-      description: 'Deposit and withdraw with Interac — secure, seamless, and instant confirmation.',
-      stat: 'CAD Native',
-      iconColor: 'text-slate-blue',
-      iconBg: 'bg-slate-blue/10',
-      guideText: 'Learn More',
-      playText: 'Interac Deposit',
-    },
-    {
-      guideHref: '/best-betting-apps-canada',
-      playHref: IBET_URLS.register,
-      icon: Smartphone,
-      label: 'Mobile Betting',
-      description: 'Full casino + sportsbook on iOS and Android — optimised for action.',
-      stat: 'iOS & Android',
-      iconColor: 'text-slate-blue',
-      iconBg: 'bg-slate-blue/10',
-      guideText: 'Learn More',
-      playText: 'Play on Mobile',
-    },
-    {
-      guideHref: '/ontario',
-      playHref: IBET_URLS.register,
-      icon: MapPin,
-      label: 'Ontario Hub',
-      description: '247iBET is available for Ontario players — fast Interac payouts and full casino + sportsbook access.',
-      stat: 'Ontario Available',
-      iconColor: 'text-success',
-      iconBg: 'bg-success/10',
-      guideText: 'Ontario Guide',
-      playText: 'Play in Ontario',
-    },
+    { href: '/fast-payouts', label: 'Fast Payouts', stat: 'Rapid cashout' },
+    { href: '/interac', label: 'Interac Payments', stat: 'CAD native' },
+    { href: '/best-betting-apps-canada', label: 'Mobile Betting', stat: 'iOS & Android' },
+    { href: '/ontario', label: 'Ontario Hub', stat: 'Available now' },
   ] as const;
 </script>
 
@@ -139,36 +95,27 @@
       </div>
     {/each}
 
-    {#each secondaryHubs as hub}
-      <div class="group col-span-1 navy-card flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:border-navy-border-active overflow-hidden">
-        <div class="p-5 flex flex-col gap-4 flex-1">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 {hub.iconBg} border border-white/5">
-              <svelte:component this={hub.icon} class="w-5 h-5 {hub.iconColor}" aria-hidden="true" />
-            </div>
-            <span class="font-mono text-[10px] text-text-tertiary bg-black/40 px-2 py-1 rounded-sm tabular-nums">
-              {hub.stat}
-            </span>
-          </div>
-
-          <div class="flex-1">
-            <h3 class="page-hub-title text-base text-white mb-2">{hub.label}</h3>
-            <p class="page-hub-subtitle text-xs group-hover:text-text-body transition-colors duration-300">{hub.description}</p>
-          </div>
-
-          <div class="flex flex-col gap-2 mt-auto">
-            <a href={hub.guideHref} class="page-cta-primary-sm w-full text-center">{hub.guideText}</a>
-            <a
-              href={hub.playHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="page-cta-secondary-sm text-center group/link flex items-center justify-center gap-1"
-            >
-              {hub.playText} <ArrowRight class="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </div>
-      </div>
-    {/each}
   </div>
+
+  <nav aria-label="Quick destinations" class="mt-10 border-t border-white/5 pt-6">
+    <p class="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+      Quick destinations
+    </p>
+    <ul class="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-4">
+      {#each secondaryHubs as hub}
+        <li>
+          <a
+            href={hub.href}
+            class="group/strip flex items-baseline justify-between gap-3 border-b border-white/0 py-1 text-sm text-text-primary transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold"
+          >
+            <span class="flex items-baseline gap-2">
+              <span class="font-medium">{hub.label}</span>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">{hub.stat}</span>
+            </span>
+            <ArrowRight class="h-3.5 w-3.5 shrink-0 -translate-x-1 opacity-60 transition-all group-hover/strip:translate-x-0 group-hover/strip:opacity-100" aria-hidden="true" />
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
 </section>
