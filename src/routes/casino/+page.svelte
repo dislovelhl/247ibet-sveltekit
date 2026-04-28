@@ -82,7 +82,7 @@
   <link rel="canonical" href="https://247ibet.ca/casino" />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-24 text-white">
+<div class="min-h-screen bg-navy-black pt-6 text-white">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(120deg,#080d18,#101827)] p-7 shadow-2xl md:p-12">
       <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_52%_35%,rgba(212,148,58,0.32),transparent_30%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-75 lg:block"></div>

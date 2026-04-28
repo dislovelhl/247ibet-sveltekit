@@ -13,7 +13,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"About 247iBET | Canada's Online Casino & Sportsbook","description":"247iBET is a Canadian online casino and sportsbook with fast Interac payouts, casino games, and live sports betting built for Canadian players.","url":"https://247ibet.ca/about"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <section class="mx-auto max-w-5xl mt-8">
     <h2 class="text-2xl font-bold text-white mb-4">What 247iBET Offers</h2>
     <div class="navy-card overflow-x-auto rounded-2xl">

@@ -13,7 +13,7 @@
   <script type="application/ld+json">{@html JSON.stringify([{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Service","description":"Terms and conditions for using 247iBET guides and services.","url":"https://247ibet.ca/terms-of-service"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://247ibet.ca/terms-of-service"}]}])}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 z-10 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 z-10 max-w-4xl">
 
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">

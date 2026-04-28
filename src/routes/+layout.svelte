@@ -30,7 +30,7 @@
 
 <div class="min-h-screen flex flex-col relative overflow-hidden">
   <Navbar />
-  <main id="main-content" class="flex-grow">
+  <main id="main-content" class="flex-grow pt-16 lg:pt-[136px]">
     {#key page.url.pathname}
       <div in:fade={{ duration: 120 }}>
         {@render children()}

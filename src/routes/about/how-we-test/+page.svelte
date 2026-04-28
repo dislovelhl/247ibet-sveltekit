@@ -99,7 +99,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"How We Verify Online Casinos and Sportsbooks","description":"Documented Canadian iGaming testing methodology covering licensing, withdrawals, payments, KYC, support, and promotional fairness.","url":"https://247ibet.ca/about/how-we-test"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
 
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">

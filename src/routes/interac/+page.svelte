@@ -68,7 +68,7 @@
   <link rel="canonical" href="https://247ibet.ca/interac" />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-24 text-white">
+<div class="min-h-screen bg-navy-black pt-6 text-white">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">

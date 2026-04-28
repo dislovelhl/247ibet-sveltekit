@@ -68,7 +68,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"HowTo","name":"How to Withdraw Casino Winnings in Canada","step":["Complete KYC before cash-out","Check bonus status first","Open the cashier and select your payout method","Enter the withdrawal amount and confirm the request","Watch for approval and accept the payment"].map((name,i)=>({'@type':'HowToStep','position':i+1,'name':name}))})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>

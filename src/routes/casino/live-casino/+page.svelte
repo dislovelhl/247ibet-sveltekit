@@ -79,7 +79,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Live Casino","item":"https://247ibet.ca/casino/live-casino"}]})}</script>
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
 
   <div class="relative h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card mb-8 md:h-60">
     <img src={heroImage} alt={pageName} class="h-full w-full object-cover" />

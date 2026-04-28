@@ -105,7 +105,7 @@
   <script type="application/ld+json">{@html JSON.stringify(faqSchema)}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <div aria-hidden="true" class="fixed right-0 top-0 -z-10 h-[400px] w-[400px] rounded-full bg-yellow-500/5 blur-[100px] opacity-30 pointer-events-none"></div>
 
   <header class="mb-10">
