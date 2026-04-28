@@ -35,7 +35,8 @@ export type SeoIssue = {
 		| 'missing-og'
 		| 'missing-jsonld'
 		| 'multiple-h1'
-		| 'short-title';
+		| 'short-title'
+		| 'fetch-failed';
 	severity: 'error' | 'warn';
 	detail?: string;
 };
@@ -73,6 +74,8 @@ export type EEATScore = {
 	total: number;
 };
 
+export type GeoPageFailure = { path: string; reason: string };
+
 export type GeoResult = {
 	generatedAt: string;
 	version: '1.0';
@@ -80,5 +83,6 @@ export type GeoResult = {
 	scores: EEATScore[];
 	avgScore: number;
 	recommendations: string[];
+	failures: GeoPageFailure[];
 	llmsTxtProposed: string;
 };

@@ -1,17 +1,9 @@
-import type { GeoResult } from '$lib/workflows/types.js';
+import type { GeoPageFailure, GeoResult } from '$lib/workflows/types.js';
 import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
+import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
 import { scoreEEAT } from './steps/score-eeat.js';
 import { writeReport } from './steps/write-report.js';
-
-async function getBaseUrl(): Promise<string> {
-	'use step';
-	return (
-		process.env.PUBLIC_SITE_URL?.trim() ||
-		(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '') ||
-		'https://247ibet.ca'
-	);
-}
 
 export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 	'use workflow';
@@ -21,6 +13,7 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 		(typeof process !== 'undefined' && process.env.VERCEL_GIT_COMMIT_SHA) || undefined;
 	const scores = [];
 	const recommendations: string[] = [];
+	const failures: GeoPageFailure[] = [];
 
 	for (const page of PAGE_REGISTRY) {
 		try {
@@ -32,8 +25,11 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 				recommendations.push(`Add <time datetime="..."> to ${page.path}`);
 			if (score.structuredData === 0)
 				recommendations.push(`Add JSON-LD structured data to ${page.path}`);
-		} catch {
-			// non-fatal in local dev (pages may not be reachable)
+		} catch (err) {
+			failures.push({
+				path: page.path,
+				reason: err instanceof Error ? err.message : String(err)
+			});
 		}
 	}
 
@@ -60,6 +56,7 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 		scores,
 		avgScore,
 		recommendations,
+		failures,
 		llmsTxtProposed: lines.join('\n')
 	};
 

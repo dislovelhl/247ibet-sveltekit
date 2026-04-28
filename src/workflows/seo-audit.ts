@@ -1,16 +1,8 @@
 import type { SeoAuditResult, SeoIssue, SeoPageReport } from '$lib/workflows/types.js';
 import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
+import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
 import { writeReport } from './steps/write-report.js';
-
-async function getBaseUrl(): Promise<string> {
-	'use step';
-	return (
-		process.env.PUBLIC_SITE_URL?.trim() ||
-		(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '') ||
-		'https://247ibet.ca'
-	);
-}
 
 export async function seoAuditWorkflow(): Promise<SeoAuditResult> {
 	'use workflow';
@@ -65,9 +57,9 @@ export async function seoAuditWorkflow(): Promise<SeoAuditResult> {
 			if (jsonLdCount === 0) issues.push({ rule: 'missing-jsonld', severity: 'error' });
 		} catch (err) {
 			issues.push({
-				rule: 'missing-title',
+				rule: 'fetch-failed',
 				severity: 'error',
-				detail: `Fetch failed: ${err instanceof Error ? err.message : String(err)}`
+				detail: err instanceof Error ? err.message : String(err)
 			});
 		}
 
