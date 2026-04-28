@@ -1,5 +1,8 @@
 <script lang="ts">
+  import SchemaInjector from '$lib/components/SchemaInjector.svelte';
 </script>
+
+<SchemaInjector slug="faq" />
 
 <svelte:head>
   <title>247iBET FAQ: Your Guide to Deposits, Withdrawals &amp; Support</title>
