@@ -1,6 +1,6 @@
 <section class="max-w-5xl space-y-5">
   <div>
-    <div class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-blue/20 bg-slate-blue/10 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-widest text-slate-blue shadow-[0_0_15px_rgba(74,158,191,0.15)]">
+    <div class="inline-flex items-center justify-center gap-2 rounded-full border border-prestige-gold/20 bg-prestige-gold/5 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-widest text-prestige-gold">
       Canada's Regulated iGaming Research Platform
     </div>
   </div>

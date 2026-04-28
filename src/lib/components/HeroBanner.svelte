@@ -109,12 +109,6 @@
             Play Now
             <ChevronRight class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
           </SafeExternalLink>
-          <a
-            href="/deposit"
-            class="hero-cta-secondary group w-full sm:w-auto"
-          >
-            How to Deposit
-          </a>
         </div>
       </div>
     </div>
@@ -131,7 +125,7 @@
 
     <!-- Live label -->
     <div class="absolute left-0 top-0 bottom-0 flex items-center pl-3 pr-4 border-r border-white/5 bg-navy-raised/90 z-20 gap-2">
-      <span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse flex-shrink-0" aria-hidden="true"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" aria-hidden="true"></span>
       <span class="text-[10px] font-mono font-bold text-success uppercase tracking-[0.18em] whitespace-nowrap">Live Odds</span>
     </div>
 
