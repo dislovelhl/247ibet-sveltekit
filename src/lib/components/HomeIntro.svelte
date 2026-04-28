@@ -5,9 +5,9 @@
     </div>
   </div>
 
-  <h1 class="max-w-4xl font-display text-[clamp(2.5rem,5vw,4rem)] font-light leading-[1.02] tracking-[-0.035em] text-text-primary">
+  <h2 class="max-w-4xl font-display text-[clamp(2.5rem,5vw,4rem)] font-light leading-[1.02] tracking-[-0.035em] text-text-primary">
     Regulated Canadian iGaming, <span class="text-gradient-slate">clearly explained.</span>
-  </h1>
+  </h2>
 
   <p class="max-w-3xl text-lg leading-relaxed text-text-body md:text-xl">
     Independent verification of payout speed, licensing registry, and player protection protocols for Ontario and Alberta residents.

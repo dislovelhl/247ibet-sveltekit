@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { Star, CheckCircle, ExternalLink, Zap, ShieldCheck, CreditCard, LockKeyhole } from 'lucide-svelte';
+  import { Star, CheckCircle, ExternalLink, Zap, Gamepad2, Trophy, MonitorPlay, ShieldCheck, CreditCard, LockKeyhole } from 'lucide-svelte';
   import { IBET_PROFILE, IBET_URLS, IBET_CTA, IBET_DISCLAIMER } from '$lib/ibet-brand';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
+
+  const featureIconMap: Record<string, unknown> = { Zap, Gamepad2, Trophy, MonitorPlay };
 
   interface Props {
     variant?: 'hero' | 'compact' | 'banner';
@@ -38,21 +40,18 @@
 {/snippet}
 
 {#if variant === 'banner'}
-  <div class="relative navy-card rounded-2xl border border-navy-border p-4 flex flex-col sm:flex-row items-center gap-4 overflow-hidden">
-    <div aria-hidden="true" class="absolute inset-0 bg-[url('/banners/banner-galaxy-bg.png')] bg-cover bg-center opacity-15 pointer-events-none"></div>
-    <div class="relative z-10 flex flex-col sm:flex-row items-center gap-4 w-full">
-      <div class="flex items-center gap-3 flex-1">
-        <Zap class="w-5 h-5 text-prestige-gold shrink-0" aria-hidden="true" />
-        <div>
-          <div class="page-hub-title text-sm">{IBET_PROFILE.name}</div>
-          <div class="page-hub-subtitle text-xs">{contextLabel ?? IBET_PROFILE.tagline}</div>
-        </div>
+  <div class="navy-card rounded-2xl border border-navy-border p-4 flex flex-col sm:flex-row items-center gap-4">
+    <div class="flex items-center gap-3 flex-1">
+      <Zap class="w-5 h-5 text-prestige-gold shrink-0" aria-hidden="true" />
+      <div>
+        <div class="page-hub-title text-sm">{IBET_PROFILE.name}</div>
+        <div class="page-hub-subtitle text-xs">{contextLabel ?? IBET_PROFILE.tagline}</div>
       </div>
-      <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary whitespace-nowrap shrink-0">
-        {ctaText ?? IBET_CTA.primary} →
-      </SafeExternalLink>
-      <p class="text-[11px] text-text-body sm:hidden font-sans w-full">{IBET_DISCLAIMER}</p>
     </div>
+    <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary whitespace-nowrap shrink-0">
+      {ctaText ?? IBET_CTA.primary} →
+    </SafeExternalLink>
+    <p class="text-[11px] text-text-body sm:hidden font-sans w-full">{IBET_DISCLAIMER}</p>
   </div>
 {:else if variant === 'compact'}
   <div class="navy-card rounded-xl p-5 md:p-6">
@@ -79,9 +78,6 @@
         <div class="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
           <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
             {ctaText ?? IBET_CTA.primary} <ExternalLink class="w-3 h-3" aria-hidden="true" />
-          </SafeExternalLink>
-          <SafeExternalLink href={IBET_URLS.casino} class="page-cta-secondary w-full sm:w-auto">
-            {IBET_CTA.casino}
           </SafeExternalLink>
           <p class="text-[11px] text-text-body font-sans">{IBET_DISCLAIMER.slice(0, 50)}…</p>
         </div>
@@ -117,7 +113,7 @@
                 <h2 class="page-hub-title text-3xl md:text-5xl uppercase">{IBET_PROFILE.name}</h2>
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
-                <span class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-slate-blue/10 text-slate-blue border border-slate-blue/20 uppercase tracking-widest">
+                <span class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest">
                   <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Registry Status: Verified
                 </span>
               {/if}
@@ -146,9 +142,6 @@
               {ctaText ?? IBET_CTA.primary}
               <ExternalLink class="w-4 h-4" aria-hidden="true" />
             </SafeExternalLink>
-            <SafeExternalLink href={IBET_URLS.casino} class="hero-cta-secondary w-full">
-              {IBET_CTA.casino} →
-            </SafeExternalLink>
             <p class="text-[11px] text-text-body font-sans leading-tight">{IBET_DISCLAIMER}</p>
           </div>
         </div>
@@ -157,8 +150,11 @@
           <div class="mb-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-2">
               {#each visibleFeatures as feat}
+                {@const FeatureIcon = featureIconMap[feat.icon]}
                 <div class="rounded-xl border p-3.5 material-inset {feat.bg} transition-shadow">
-                  <div class="text-xl mb-1.5" aria-hidden="true">{feat.icon}</div>
+                  {#if FeatureIcon}
+                    <svelte:component this={FeatureIcon} class="w-5 h-5 mb-1.5 {feat.accent}" aria-hidden="true" />
+                  {/if}
                   <div class="font-bold text-sm mb-0.5 {feat.accent}">{feat.label}</div>
                   <p class="text-xs text-text-body font-sans leading-snug">{feat.detail}</p>
                 </div>
@@ -168,7 +164,7 @@
               <button
                 type="button"
                 onclick={() => (isExpanded = true)}
-                class="text-xs font-bold text-slate-blue hover:text-prestige-gold transition-colors py-2 flex items-center gap-1"
+                class="text-xs font-bold text-text-body hover:text-prestige-gold transition-colors py-2 flex items-center gap-1"
               >
                 + View {IBET_PROFILE.features.length - 4} more features
               </button>
@@ -183,11 +179,11 @@
                 {#if item.label === 'Licence'}
                   <ShieldCheck class="w-4 h-4 text-green-400" aria-hidden="true" />
                 {:else if item.label === 'Payments'}
-                  <CreditCard class="w-4 h-4 text-slate-blue" aria-hidden="true" />
+                  <CreditCard class="w-4 h-4 text-text-body" aria-hidden="true" />
                 {:else if item.label === 'Security'}
-                  <LockKeyhole class="w-4 h-4 text-yellow-400" aria-hidden="true" />
+                  <LockKeyhole class="w-4 h-4 text-text-body" aria-hidden="true" />
                 {:else}
-                  <Star class="w-4 h-4 text-slate-blue fill-slate-blue" aria-hidden="true" />
+                  <Star class="w-4 h-4 text-prestige-gold fill-prestige-gold" aria-hidden="true" />
                 {/if}
                 <div class="text-[10px] font-mono uppercase tracking-[0.18em] text-text-body">{item.label}</div>
               </div>

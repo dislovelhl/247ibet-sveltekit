@@ -41,7 +41,7 @@
     {
       href: '/legal-online-gambling-canada',
       icon: Shield,
-      iconColor: 'text-slate-blue',
+      iconColor: 'text-prestige-gold',
       title: 'Legal Status Canada',
       description: 'Federal law, provincial frameworks, and what legal online gambling means for Canadian players.',
       category: 'Compliance',
@@ -50,7 +50,7 @@
     {
       href: '/guides/alberta-operator-readiness-index',
       icon: MapPin,
-      iconColor: 'text-slate-blue',
+      iconColor: 'text-prestige-gold',
       title: 'Alberta 2026 Licensing',
       description: "Track operator availability and launch context as Alberta's market develops.",
       category: 'Regulation',
@@ -65,7 +65,7 @@
     <div class="h-px flex-1 bg-white/5"></div>
     <a
       href="/guides"
-      class="text-xs font-bold text-slate-blue hover:text-prestige-gold transition-colors whitespace-nowrap shrink-0 group flex items-center gap-1 uppercase tracking-wider"
+      class="text-xs font-bold text-prestige-gold hover:text-prestige-gold transition-colors whitespace-nowrap shrink-0 group flex items-center gap-1 uppercase tracking-wider"
     >
       View all guides
       <ArrowRight class="w-3 h-3 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -86,7 +86,7 @@
             <div class="w-10 h-10 rounded-xl bg-navy-raised border border-white/5 flex items-center justify-center shrink-0 shadow-lg">
               <svelte:component this={icon} class="w-5 h-5 {iconColor}" aria-hidden="true" />
             </div>
-            <span class="badge-glossy text-[10px] font-bold text-slate-blue px-2.5 py-1 uppercase tracking-wider">
+            <span class="badge-glossy text-[10px] font-bold text-prestige-gold px-2.5 py-1 uppercase tracking-wider">
               {category}
             </span>
           </div>
@@ -98,7 +98,7 @@
             <p class="page-hub-subtitle text-sm line-clamp-2">{description}</p>
           </div>
 
-          <div class="flex items-center gap-1 text-[11px] text-slate-blue font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.22em]">
+          <div class="flex items-center gap-1 text-[11px] text-prestige-gold font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.22em]">
             {cta}
             <ArrowRight class="w-3 h-3 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </div>
@@ -109,12 +109,12 @@
     <div class="flex flex-none w-[180px] snap-start lg:hidden">
       <a
         href="/guides"
-        class="group navy-card p-6 flex flex-col items-center justify-center gap-3 transition-all duration-300 flex-1 border border-white/5 hover:border-slate-blue/30 text-center"
+        class="group navy-card p-6 flex flex-col items-center justify-center gap-3 transition-all duration-300 flex-1 border border-white/5 hover:border-prestige-gold/30 text-center"
       >
         <div class="w-10 h-10 rounded-xl bg-navy-raised border border-white/5 flex items-center justify-center">
-          <ArrowRight class="w-5 h-5 text-slate-blue group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
+          <ArrowRight class="w-5 h-5 text-prestige-gold group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
         </div>
-        <span class="text-xs font-bold text-slate-blue uppercase tracking-widest leading-tight">
+        <span class="text-xs font-bold text-prestige-gold uppercase tracking-widest leading-tight">
           View All<br />Guides
         </span>
       </a>

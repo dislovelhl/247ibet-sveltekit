@@ -3,7 +3,6 @@
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Live Casino';
-  const heroImage = '/images/editorial/live-dealer-premium.png';
 
   const intro = {
     eyebrow: 'Live dealer Canada',
@@ -81,16 +80,11 @@
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
 
-  <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
-    <img src={heroImage} alt={pageName} class="object-cover w-full h-full" />
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
-    <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
-        {intro.eyebrow}
-      </div>
-      <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
+  <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
+    <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
+      {intro.eyebrow}
     </div>
+    <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
   </div>
 
   <nav aria-label="Breadcrumb" class="mb-6">
@@ -118,13 +112,15 @@
     <p class="mt-4 text-base leading-relaxed text-gray-400">{intro.body}</p>
   </section>
 
-  <section class="mt-12 grid gap-6 md:grid-cols-3">
-    {#each cards as card}
-      <div class="navy-card rounded-2xl border border-white/10 p-6">
-        <h2 class="text-xl font-bold text-white">{card.title}</h2>
-        <p class="mt-3 text-sm leading-relaxed text-gray-400">{card.body}</p>
-      </div>
-    {/each}
+  <section class="mt-12">
+    <ul class="divide-y divide-white/10">
+      {#each cards as card}
+        <li class="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:gap-10 md:py-7">
+          <h3 class="text-xl font-bold text-white">{card.title}</h3>
+          <p class="text-sm leading-relaxed text-gray-400">{card.body}</p>
+        </li>
+      {/each}
+    </ul>
   </section>
 
   <section class="mt-12 grid gap-6 md:grid-cols-2">

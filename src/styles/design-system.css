@@ -1,0 +1,59 @@
+@layer utilities {
+  /* ── Typography & Headers ── */
+  .money-hero-display {
+    font-family: var(--font-display); font-weight: 300;
+    font-size: clamp(2.5rem, 7vw, 5.5rem); line-height: 0.95;
+    letter-spacing: clamp(-0.06em, -0.025em - 0.25vw, -0.02em);
+    color: var(--color-text-primary); text-wrap: balance;
+  }
+  .money-hero-lede {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem); line-height: 1.55;
+    color: var(--color-text-body); max-width: 58ch;
+  }
+  .money-hero-kicker {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-prestige-gold);
+  }
+
+  .page-hero-kicker, .page-hub-kicker, .page-detail-kicker {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-prestige-gold;
+  }
+  .page-hero-title { @apply font-display font-light tracking-[-0.045em] leading-[0.98] text-white; text-wrap: balance; }
+  .page-hub-title { @apply font-display font-normal tracking-[-0.03em] leading-[1.05] text-white; text-wrap: balance; }
+  .page-detail-title { @apply font-display font-semibold tracking-[-0.03em] leading-[1.08] text-white; text-wrap: balance; }
+  .page-hero-subtitle, .page-hub-subtitle, .page-detail-copy { @apply text-text-body; line-height: 1.72; }
+
+  /* ── Prose & Immersive Layouts ── */
+  .guide-immersive .prose, .immersive-page .prose { max-width: none; }
+  .guide-immersive .prose h1, .immersive-page .prose h1 { @apply font-display font-semibold; letter-spacing: -0.04em; line-height: 1.02; margin-bottom: 0.85rem; }
+  .guide-immersive .prose p, .immersive-page .prose p { margin-top: 0; margin-bottom: 1rem; max-width: 68ch; line-height: 1.72; }
+
+  /* ── Data & Sportsbook UI ── */
+  .odds, .money, .stat { font-family: var(--font-mono); font-feature-settings: "tnum" 1, "ss01" 1; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .live-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 9999px; background: #22C55E;
+    box-shadow: 0 0 0 0 #22C55E; animation: live-pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .live-tag {
+    display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono);
+    font-size: 0.625rem; font-weight: 700; color: #22C55E; text-transform: uppercase; letter-spacing: 0.20em;
+  }
+
+  .jackpot-ticker {
+    position: relative; overflow: hidden; border-radius: 12px; border: 1px solid rgba(232, 172, 82, 0.25);
+    box-shadow: var(--shadow-jackpot); background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(232, 172, 82, 0.10), transparent 70%), #0D1629;
+  }
+  .jackpot-ticker__amount {
+    font-family: var(--font-display); font-weight: 300; font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    letter-spacing: -0.045em; line-height: 0.95; font-variant-numeric: tabular-nums;
+    background: linear-gradient(180deg, #F4D790 0%, #E8AC52 45%, #C0842E 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  /* ── Decorative ── */
+  .seam-rule { display: block; border: 0; height: 1px; width: 56px; margin: 2rem 0; background: rgba(212, 148, 58, 0.28); }
+  .text-gradient-gold { background: linear-gradient(135deg, #E8AC52 0%, #D4943A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .text-gradient-slate { background: linear-gradient(135deg, #FFF 0%, #94A3B8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+}

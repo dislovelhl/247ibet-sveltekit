@@ -23,6 +23,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.0.0",
     "@fontsource/playfair-display": "^5.0.0",
     "@fontsource/plus-jakarta-sans": "^5.0.0",

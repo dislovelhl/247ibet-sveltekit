@@ -22,10 +22,10 @@ export const IBET_PROFILE = {
   paymentMethods: ['Interac'],
   provinces: ['ON', 'AB', 'BC', 'MB', 'SK', 'QC', 'NS', 'NB', 'PE', 'NL'],
   features: [
-    { icon: '⚡', label: 'Instant Interac Payouts', detail: 'Secure Interac e-Transfer for Canadian players.', accent: 'text-[#4A9EBF]', bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20' },
-    { icon: '🎰', label: '500+ Casino Games', detail: 'Slots, live dealer, blackjack, roulette — certified RNG.', accent: 'text-yellow-400', bg: 'bg-yellow-500/8 border-yellow-500/20' },
-    { icon: '⚽', label: 'NHL · CFL · NBA · UFC', detail: 'Deep Canadian sports coverage with in-play betting and parlays.', accent: 'text-green-400', bg: 'bg-green-500/8 border-green-500/20' },
-    { icon: '🎥', label: 'Live Dealer Tables', detail: '24/7 live blackjack, roulette, baccarat streamed in HD.', accent: 'text-[#4A9EBF]', bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20' },
+    { icon: 'Zap', label: 'Instant Interac Payouts', detail: 'Secure Interac e-Transfer for Canadian players.', accent: 'text-[#4A9EBF]', bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20' },
+    { icon: 'Gamepad2', label: '500+ Casino Games', detail: 'Slots, live dealer, blackjack, roulette — certified RNG.', accent: 'text-yellow-400', bg: 'bg-yellow-500/8 border-yellow-500/20' },
+    { icon: 'Trophy', label: 'NHL · CFL · NBA · UFC', detail: 'Deep Canadian sports coverage with in-play betting and parlays.', accent: 'text-green-400', bg: 'bg-green-500/8 border-green-500/20' },
+    { icon: 'MonitorPlay', label: 'Live Dealer Tables', detail: '24/7 live blackjack, roulette, baccarat streamed in HD.', accent: 'text-[#4A9EBF]', bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20' },
   ],
   trustSignals: [
     'Canadian-focused iGaming experience',

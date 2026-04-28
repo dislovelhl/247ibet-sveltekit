@@ -1,5 +1,6 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+
   import { ArrowRightLeft } from 'lucide-svelte';
 
   const faqItems = [
@@ -113,11 +114,6 @@
 
   <!-- Editorial image callout -->
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
-    <img
-      src="/images/editorial/interac-safety.png"
-      alt="Interac secure banking for Canadian players"
-      class="object-cover w-full h-full"
-    />
     <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">
