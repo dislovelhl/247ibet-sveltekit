@@ -3,7 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   const LAST_UPDATED = '2026-04-13';
 
@@ -282,6 +282,13 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
         class="text-slate-blue hover:underline">Responsible gambling resources</a
       >.
     </div>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
-  </div>
+      <AuthorByline authorId="editorial" date={LAST_UPDATED} />
+
+      <nav class="mt-8 flex flex-wrap gap-6" aria-label="Related pages">
+        <a href="/new-online-casinos-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">New Online Casinos</a>
+        <a href="/casino-bonuses-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Casino Bonuses</a>
+        <a href="/low-wagering-casinos-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Low Wagering Casinos</a>
+        <a href="/fast-payouts" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Fast Payout Casinos</a>
+      </nav>
+    </div>
 </div>

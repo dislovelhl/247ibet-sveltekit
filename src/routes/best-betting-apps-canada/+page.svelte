@@ -4,6 +4,9 @@
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -113,6 +116,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         reliability — for casual betting, mobile web is fully sufficient.
       </p>
     </div>
+
+<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a

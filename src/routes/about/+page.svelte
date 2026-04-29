@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   const LAST_UPDATED = '2026-04-28';
   // page
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -37,6 +38,7 @@
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <section class="mx-auto max-w-5xl mt-8">
     <p class="text-xs text-text-tertiary mb-4">Last updated: {LAST_UPDATED}</p>
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
     <h2 class="text-2xl font-bold text-white mb-4">What 247iBET Offers</h2>
     <div class="navy-card overflow-x-auto rounded-2xl">
       <table class="w-full text-sm">

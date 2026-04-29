@@ -118,6 +118,9 @@
         'Use the legal and product background page when sportsbook copy needs federal context rather than operator claims.',
     },
   ];
+
+const LAST_UPDATED = '2026-04-29';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -412,6 +415,8 @@
       </details>
     {/each}
   </section>
+
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

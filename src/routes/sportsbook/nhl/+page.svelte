@@ -106,6 +106,18 @@
           'Brush up on decimal, American, and implied probability formats before comparing NHL prices.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top-rated Canadian sports betting sites for hockey.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert NHL odds and calculate hockey parlay payouts.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'NHL · puck line · player props · 19+',
   };

@@ -107,6 +107,9 @@
   const liveFeatures = ['24/7 Available', 'HD Streaming', 'Multiple Limits', 'Interac Deposits'];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -323,7 +326,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >How to Choose an Online Casino in Canada</a
       >
       <a
-        href="/online-casino-canada"
+        href="/guides/legal-online-casino-canada"
         class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
         >Online Casino Canada Legal Guide</a
       >
@@ -334,6 +337,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       >
     </div>
   </nav>
+
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

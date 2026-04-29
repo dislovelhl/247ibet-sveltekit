@@ -106,6 +106,24 @@
           'See how in-play basketball markets behave once pace and foul trouble start moving the board.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top-rated Canadian sports betting sites for basketball.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert NBA odds and calculate parlay payouts.',
+        accent: 'blue',
+      },
+      {
+        href: '/guides/sports-betting-odds-explained',
+        label: 'Odds Explained',
+        description: 'Learn how basketball moneylines, spreads, and totals work.',
+        accent: 'neutral',
+      },
     ],
     ctaContextLabel: 'NBA · Raptors · player props · 19+',
   };

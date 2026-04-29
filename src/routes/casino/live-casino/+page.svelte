@@ -209,6 +209,21 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
       >Deposit with Interac</a
     >
+    <a
+      href="/best-online-casinos-canada"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Best Online Casinos</a
+    >
+    <a
+      href="/guides/how-to-choose-online-casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >How to Choose a Casino</a
+    >
+    <a
+      href="/fast-payouts"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Fast Payouts</a
+    >
   </nav>
 
   <section class="mt-12">

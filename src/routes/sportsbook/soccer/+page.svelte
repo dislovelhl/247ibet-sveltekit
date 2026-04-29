@@ -106,6 +106,18 @@
           'Review pricing formats before comparing match result, totals, and selected handicap markets.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top Canadian sportsbooks for soccer betting markets.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert soccer odds between decimal, fractional, and American formats.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'Soccer · EPL · Champions League · 19+',
   };

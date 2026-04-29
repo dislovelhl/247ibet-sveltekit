@@ -6,6 +6,7 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({
+      runtime: 'nodejs24.x',
       images: {
         sizes: [320, 640, 768, 960, 1280, 1672, 1920],
         domains: [],

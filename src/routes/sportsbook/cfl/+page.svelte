@@ -106,6 +106,18 @@
           'Review how Canadian single-event wagering works before comparing weekly CFL lines.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top-rated Canadian sports betting sites side by side.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert odds formats and calculate implied probability for CFL lines.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'CFL · Grey Cup futures · three-down football · 19+',
   };

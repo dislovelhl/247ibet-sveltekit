@@ -106,6 +106,18 @@
           'Run your combined odds through the onsite calculator before building the full slip.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Find sportsbooks with the best parlay features for Canadian bettors.',
+        accent: 'gold',
+      },
+      {
+        href: '/guides/sports-betting-odds-explained',
+        label: 'Odds Explained',
+        description: 'Understand how parlay odds multiply across each leg.',
+        accent: 'neutral',
+      },
     ],
     ctaContextLabel: 'Parlays · same-game parlay · calculator · 19+',
   };

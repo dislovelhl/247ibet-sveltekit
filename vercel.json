@@ -7,6 +7,13 @@
     { "path": "/api/workflows/seo-audit", "schedule": "0 4 * * 1" },
     { "path": "/api/workflows/geo-optimizer", "schedule": "0 5 1 * *" }
   ],
+  "redirects": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.png",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

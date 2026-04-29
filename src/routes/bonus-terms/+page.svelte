@@ -2,6 +2,9 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -181,4 +184,6 @@
       <li><a href="/contact">Contact and Support</a></li>
     </ul>
   </section>
+
+<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 </div>

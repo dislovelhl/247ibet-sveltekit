@@ -204,6 +204,7 @@
       ],
     },
   ];
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -253,6 +254,7 @@
           your play with Interac e-Transfers and experience fast, reliable withdrawals.
         </p>
         <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+        <AuthorByline authorId="editorial" date={LAST_UPDATED} />
         <div class="mt-8 flex flex-wrap gap-5">
           {#each trustItems as item}
             {@const Icon = item.icon}

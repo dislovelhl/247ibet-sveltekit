@@ -106,6 +106,18 @@
           'Review price formats and implied probability before comparing fight winner and prop markets.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top Canadian sportsbooks for UFC and MMA betting.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Calculate UFC fight odds and multi-fight parlay payouts.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'UFC · PPV cards · method props · 19+',
   };

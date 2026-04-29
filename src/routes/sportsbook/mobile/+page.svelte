@@ -106,6 +106,18 @@
           'Review how pricing formats read on mobile screens before comparing lines across markets.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Find sportsbooks with the best mobile betting apps in Canada.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Quick odds conversions optimized for mobile screens.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'Mobile sportsbook · live odds · current devices · 19+',
   };

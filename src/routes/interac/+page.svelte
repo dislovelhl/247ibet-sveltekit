@@ -111,6 +111,9 @@
   ];
 
   let faqOpenIndex = $state<number | null>(null);
+
+const LAST_UPDATED = '2026-04-29';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -431,5 +434,6 @@
         </a>
       </div>
     </section>
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </main>
 </div>
