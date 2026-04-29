@@ -78,7 +78,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"CAD Casino","item":"https://247ibet.ca/casino/cad"}]})}</script>
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
 
   <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
     <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">

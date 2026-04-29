@@ -24,7 +24,7 @@
   <script type="application/ld+json">{@html JSON.stringify(articleSchema)}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
 
   <div class="max-w-6xl mx-auto space-y-16">
 

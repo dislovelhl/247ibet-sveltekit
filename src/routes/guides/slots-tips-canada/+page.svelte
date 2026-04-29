@@ -61,7 +61,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://247ibet.ca/guides"},{"@type":"ListItem","position":3,"name":"Online Slots Tips Canada","item":"https://247ibet.ca/guides/slots-tips-canada"}]})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
 
   <header class="space-y-4">
     <div class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">

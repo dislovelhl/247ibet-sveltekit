@@ -93,7 +93,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-20 text-white">
+<div class="min-h-screen bg-navy-black pt-6 text-white">
   <section class="relative overflow-hidden border-b border-prestige-gold/30">
     <div class="absolute inset-0">
       <img src="/images/generated/casino-premium-hero.png" alt="" class="h-full w-full object-cover opacity-70" />

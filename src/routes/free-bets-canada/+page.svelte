@@ -30,7 +30,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"Sportsbook Welcome Offers Canada 2026 — How They Work","description":"Sportsbook welcome offers in Canada explained: how they work, wagering requirements, Ontario AGCO rules, and what to check before claiming.","url":"https://247ibet.ca/free-bets-canada","datePublished":"2026-03-01","dateModified":"2026-03-30"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
 
   <header class="space-y-4">
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">Promotions Guide · Canada</div>

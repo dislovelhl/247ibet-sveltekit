@@ -57,7 +57,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqItems.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div class="flex items-center gap-2 text-xs font-medium text-[#EF4444] uppercase tracking-widest">
       Responsible Gambling · Help Resources

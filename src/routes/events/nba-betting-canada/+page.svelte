@@ -60,7 +60,7 @@
   <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 max-w-5xl space-y-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl space-y-16">
 
   <header>
     <nav aria-label="Breadcrumb" class="mb-4">

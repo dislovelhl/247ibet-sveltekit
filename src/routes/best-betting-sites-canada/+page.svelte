@@ -12,7 +12,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"Best Betting Sites Canada 2026 — Casino & Sportsbook","description":"Compare Canadian betting sites across casino and sportsbook categories. Rankings weigh Interac payout speed, Ontario availability, odds value, and player support.","url":"https://247ibet.ca/best-betting-sites-canada","datePublished":"2026-03-01","dateModified":"2026-03-30"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
 
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">

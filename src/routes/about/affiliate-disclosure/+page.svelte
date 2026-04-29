@@ -13,7 +13,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"Platform Disclosure — How 247iBET Earns Revenue","description":"How 247iBET earns revenue and handles commercial relationships for Canadian iGaming content.","url":"https://247ibet.ca/about/affiliate-disclosure"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
 
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">

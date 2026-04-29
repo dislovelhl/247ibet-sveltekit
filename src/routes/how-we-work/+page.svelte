@@ -9,7 +9,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"How 247iBET Works","url":"https://247ibet.ca/how-we-work","description":"Transparency page explaining 247iBET's affiliate partnerships and editorial standards."})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <section class="mx-auto max-w-5xl mt-8">
     <h2 class="text-2xl font-bold text-white mb-4">Our Standards</h2>
     <div class="navy-card overflow-x-auto rounded-2xl">

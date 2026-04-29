@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I open a 247iBET account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Opening an account takes about two minutes. Click the Sign Up button on any page and complete three quick steps: Enter your details — first name, last name, email address, and mobile number. Verify your identity — an SMS link guides you through a photo ID upload and a selfie. This satisfies Ontario's AGCO-mandated KYC requirement. Set your credentials — create a username and password, confirm you are 19 or older, and accept the terms. Once your registration at a chosen casino is complete, your account will be active and you can make your first deposit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What games can Canadians play at regulated online casinos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regulated Canadian operators offer a full range of iGaming options: Sports betting — single-game and parlay wagers on NHL, NFL, NBA, UFC, Premier League, and more. Online slots — hundreds of titles from top providers with varying RTP and volatility profiles. Live casino — real-time blackjack, roulette, baccarat, and game-show tables streamed in HD. Virtual sports — simulated events available around the clock. Game availability may vary by province. Ontario players have access to the full catalogue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make a deposit with Interac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Log in to your chosen operator's account. Click on \"My Account\" at the top and select the \"Deposit\" tab. Choose the \"Interac\" option from the list of deposit methods. Enter the amount you want to deposit. Enter the email or mobile number you have registered with Interac. Click \"Next\". You will be redirected to a page with transaction details. Check your email to receive the message and complete the deposit procedure. After the deposit is successful, your game wallet balance will be updated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Was My Deposit Declined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your Interac deposit is declined, confirm that your registered email matches your Interac account and that daily transfer limits have not been reached. Contact your bank if the issue persists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Deposit Processing Timelines at 247iBET Canada",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "e-Transfer: Up to 10 minutes. Please note that this is an estimate. In most cases, your deposit may be processed in a significantly shorter period of time. In certain unusual cases, your deposit could take up to 24 hours to process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I withdraw with Interac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Log in to your chosen operator's account. Click on the \"My Account\" button at the top and select the \"Withdraw\" tab. When adding a new linked email, you will need to verify the email. All fields must be completed. Choose the \"Interac\" option from the list of withdrawal methods. Enter the amount you wish to withdraw and submit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my withdrawal pending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At most regulated Canadian operators, withdrawals undergo a standard security review. Top-tier sportsbooks and casinos process withdrawal requests within hours. However, exact receipt of funds depends on your chosen payment method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Withdrawal Payment Processing Timelines",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "e-Transfer: Typically under 1 hour (up to 24 hours for unverified accounts). All time frames are generally calculated in business days (Monday through Friday). Operators endeavor to process all withdrawals quickly, however there may be delays due to initial KYC verification procedures or bank processing times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Understanding Bonus Withdrawal Limits",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you place a wager using bonus funds and win, the maximum payout you can receive is dictated by the specific terms and conditions of that operator's offer. Always read the terms carefully."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Standard KYC Account Verification Process",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under AGCO and Canadian regulatory requirements, identity verification (KYC) is a prerequisite before initiating your first deposit or withdrawal. The verification process typically entails two straightforward steps: Step 1 – Confirming your full legal name and date of birth. Step 2 – Validating your residential address and conducting a facial verification match."
+      }
+    }
+  ]
+}

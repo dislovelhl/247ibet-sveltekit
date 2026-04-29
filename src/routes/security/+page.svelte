@@ -9,7 +9,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"Security Standards at 247iBET | Account & Data Protection","description":"Review account protection controls, 2FA requirements, and data-security standards at 247iBET — Canada's online casino and sportsbook.","url":"https://247ibet.ca/security"})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <section class="sr-only" aria-label="Related security and compliance resources">
     <h2>Related Resources</h2>
     <ul>

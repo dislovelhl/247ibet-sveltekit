@@ -45,7 +45,7 @@
   <script type="application/ld+json">{@html JSON.stringify([{"@context":"https://schema.org","@type":"WebPage","name":"Sources & Regulatory References","url":"https://247ibet.ca/sources","description":"Canonical source index for 247iBET educational content and regulatory references."},{"@context":"https://schema.org","@type":"ItemList","itemListElement":withFreshness.map((source, index) => ({"@type":"ListItem","position":index + 1,"name":source.name,"url":source.url}))}])}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 z-10 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 z-10 max-w-5xl">
 
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">

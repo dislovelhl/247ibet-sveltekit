@@ -39,7 +39,7 @@
   <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":"Best Online Casinos Canada 2026","itemListElement":topCasinos.map((c,i)=>({'@type':'ListItem','position':i+1,'name':c.name,'url':c.url,'description':c.description}))})}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
 
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">

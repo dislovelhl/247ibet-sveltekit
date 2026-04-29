@@ -9,7 +9,7 @@
   <script type="application/ld+json">{@html JSON.stringify([{"@context":"https://schema.org","@type":"ContactPage","name":"Contact 247iBET Editorial & Partnerships","description":"Contact the 247iBET editorial team for press inquiries, partnerships, or questions about our independent Canadian iGaming guides.","url":"https://247ibet.ca/contact"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://247ibet.ca/contact"}]}])}</script>
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 z-10 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 z-10 max-w-4xl">
 
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">

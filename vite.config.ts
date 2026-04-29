@@ -24,6 +24,15 @@ function braintrustBuildPlugin(command: string): PluginOption[] {
   return Array.isArray(plugin) ? plugin : [plugin];
 }
 
-export default defineConfig(({ command }) => ({
-  plugins: [tailwindcss(), ...braintrustBuildPlugin(command), sveltekit(), cssInlineSSRFix]
-}));
+export default defineConfig(async ({ command }) => {
+  let workflowPlugins: PluginOption[] = [];
+  try {
+    const { workflowPlugin } = await import('workflow/sveltekit');
+    workflowPlugins = workflowPlugin();
+  } catch {
+    // workflow/sveltekit unavailable — using fallback (plain async handlers)
+  }
+  return {
+    plugins: [tailwindcss(), ...workflowPlugins, ...braintrustBuildPlugin(command), sveltekit(), cssInlineSSRFix]
+  };
+});
