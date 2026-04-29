@@ -27,6 +27,8 @@
         'Many Ontario-facing operators do not charge standard withdrawal fees on common methods like Interac or cards, but fee policies still vary. Always review the cashier terms and your bank plan before choosing a withdrawal method.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -92,11 +94,7 @@
     <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 

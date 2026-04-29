@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   const faqItems = [
     {
       question: 'Is Alberta already fully live for private iGaming operators?',
@@ -107,7 +108,7 @@
   </div>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
-    <img src="/images/generated/canada-market-hero.png" alt="" class="h-full w-full object-cover" />
+    <img src="/images/generated/canada-market-hero.png" alt="Alberta online gambling market overview" class="h-full w-full object-cover" />
     <div
       class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"
     ></div>
@@ -130,11 +131,7 @@
     </p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
     <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">

@@ -120,6 +120,8 @@
     { stat: '100%', label: 'Compliance with mandatory license display in cashier footers.' },
     { stat: '16%', label: 'Requested secondary KYC on first-time Interac withdrawals.' },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -206,11 +208,7 @@
     </div>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-3xl p-10 border border-white/10 mb-12">
     <h2 class="text-xs font-black text-prestige-gold mb-6 uppercase tracking-[0.4em] font-mono">

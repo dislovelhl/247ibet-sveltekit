@@ -18,9 +18,12 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+  const LAST_UPDATED = '2026-04-29';
 
   const heroTrust = [
-    { label: 'Fast Payouts', body: 'Withdrawals in minutes', icon: Zap },
+    { label: 'Fast Payouts', body: 'Interac withdrawals in under 24h', icon: Zap },
     { label: 'Secure & Private', body: 'Bank-grade security', icon: LockKeyhole },
     { label: '1000+ Casino Games', body: 'Slots, live casino & more', icon: Trophy },
     { label: '30+ Sports Covered', body: 'NHL, NBA, NFL & more', icon: BadgeCheck },
@@ -55,7 +58,7 @@
     {
       name: '247iBET',
       rating: '4.8',
-      payout: '2-15 mins',
+      payout: '15 min – 24h',
       live: 'Yes',
       offers: 'High',
       best: 'Overall Experience',
@@ -63,11 +66,20 @@
     {
       name: 'Industry Average',
       rating: '4.1',
-      payout: '1-24 hrs',
+      payout: '1–24h',
       live: 'Yes',
       offers: 'Medium',
       best: 'General Play',
     },
+    // TODO: Add 3-5 real competitor listings with verified data
+    // {
+    //   name: 'Operator A',
+    //   rating: '4.5',
+    //   payout: 'Under 24h',
+    //   live: 'Yes',
+    //   offers: 'Medium',
+    //   best: 'Live Betting',
+    // },
   ];
 
   const processSteps = [
@@ -84,17 +96,17 @@
     {
       title: 'Withdraw',
       body: 'Request your payout after account and bonus review.',
-      status: '2-15 mins',
+      status: '15 min – 24h',
     },
     {
       title: 'Enjoy',
-      body: 'Receive winnings in minutes after approval.',
-      status: 'Up to 15 mins',
+      body: 'Receive winnings after approval — typically within 24 hours.',
+      status: 'Varies',
     },
   ];
 
   const standOut = [
-    { title: 'Lightning Fast Payouts', body: 'Most withdrawals processed in minutes.', icon: Zap },
+    { title: 'Fast Withdrawals', body: 'Most Interac withdrawals processed under 24h.', icon: Zap },
     { title: '24/7 Live Support', body: 'Real people, anytime you need help.', icon: Headphones },
     {
       title: 'Huge Game Selection',
@@ -191,13 +203,33 @@
   ];
 
   const faqs = [
-    'How fast are withdrawals?',
-    'Do you offer a welcome bonus?',
-    'Is 247iBET safe and secure?',
-    'What documents are required to verify my account?',
-    'What sports can I bet on?',
-    'How do I contact support?',
+    {
+      q: 'How fast are withdrawals?',
+      a: 'Interac e-Transfer withdrawals are typically processed within 15–30 minutes after operator approval. First withdrawals may take longer due to KYC verification.',
+    },
+    {
+      q: 'Do you offer a welcome bonus?',
+      a: 'Yes — new players can access welcome offers after registration. Bonus details are shown in your account after signup. Always read the wagering requirements before claiming.',
+    },
+    {
+      q: 'Is 247iBET safe and secure?',
+      a: 'Yes. 247iBET uses bank-grade encryption, follows KYC verification standards, and operates with player protection measures including deposit limits and self-exclusion tools.',
+    },
+    {
+      q: 'What documents are required to verify my account?',
+      a: 'You will need a government-issued photo ID (passport or driver\'s licence) and a proof of address (utility bill or bank statement dated within 90 days).',
+    },
+    {
+      q: 'What sports can I bet on?',
+      a: 'NHL, CFL, NBA, NFL, UFC, Premier League soccer, and more — with pre-game, live in-play, and same-game parlay markets.',
+    },
+    {
+      q: 'How do I contact support?',
+      a: 'Live chat is available 24/7. You can also reach us via email or the contact form on our Contact page.',
+    },
   ];
+
+  let homeFaqOpenIndex = $state<number | null>(null);
 
   const homeSchema = [
     {
@@ -275,8 +307,9 @@
         </h1>
         <p class="mt-6 max-w-2xl animate-fade-in-up-delay-2 text-lg leading-8 text-text-body">
           Play your favourite casino games and bet on the biggest sports markets with secure
-          deposits, lightning-fast withdrawals, and 24/7 Canadian support.
+          deposits, fast Interac withdrawals, and 24/7 Canadian support.
         </p>
+        <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
         <div class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row">
           <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
             Join 247iBET Now
@@ -595,18 +628,44 @@
           >View All FAQs</a
         >
       </div>
-      <div class="grid gap-3 md:grid-cols-2">
-        {#each faqs as faq}
-          <button
-            type="button"
-            class="flex items-center justify-between rounded-lg border border-white/10 bg-black/20 px-4 py-4 text-left text-sm font-black text-white transition-colors hover:border-prestige-gold/50 hover:bg-black/30"
-          >
-            {faq}
-            <ChevronDown class="h-4 w-4 text-prestige-gold" aria-hidden="true" />
-          </button>
+      <div class="flex flex-col gap-2">
+        {#each faqs as faq, i}
+          <div class="rounded-lg border border-white/10">
+            <button
+              id="home-faq-btn-{i}"
+              type="button"
+              class="flex w-full items-center justify-between bg-black/20 px-4 py-4 text-left text-sm font-black text-white transition-colors hover:border-prestige-gold/50 hover:bg-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold {homeFaqOpenIndex ===
+              i
+                ? 'rounded-t-lg'
+                : 'rounded-lg'}"
+              aria-expanded={homeFaqOpenIndex === i}
+              aria-controls="home-faq-panel-{i}"
+              onclick={() => (homeFaqOpenIndex = homeFaqOpenIndex === i ? null : i)}
+            >
+              {faq.q}
+              <ChevronDown
+                class="h-4 w-4 text-prestige-gold transition-transform duration-200 {homeFaqOpenIndex ===
+                i
+                  ? 'rotate-180'
+                  : ''}"
+                aria-hidden="true"
+              />
+            </button>
+            <div
+              id="home-faq-panel-{i}"
+              role="region"
+              aria-labelledby="home-faq-btn-{i}"
+              hidden={homeFaqOpenIndex !== i}
+              class="rounded-b-lg border-t border-white/10 bg-black/10 px-4 py-3"
+            >
+              <p class="text-sm leading-6 text-text-body">{faq.a}</p>
+            </div>
+          </div>
         {/each}
       </div>
     </section>
+
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
     <section
       class="overflow-hidden rounded-xl border border-prestige-gold/40 bg-[linear-gradient(100deg,#101827,#080d18)] p-8 shadow-2xl md:p-12"

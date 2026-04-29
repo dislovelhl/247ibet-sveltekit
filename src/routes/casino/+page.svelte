@@ -20,6 +20,8 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
 
+  const LAST_UPDATED = '2026-04-28';
+
   const trustItems = [
     { title: '100% Canadian Focused', icon: ShieldCheck },
     { title: 'Secure & Reliable', icon: LockKeyhole },
@@ -139,14 +141,14 @@
     },
   ];
 
-  const liveStats = [
-    { label: 'Players online', value: '1,285' },
-    { label: 'Last 24h sign-ups', value: '345' },
-    { label: 'Games available', value: '500+' },
-    { label: 'Total wins (24h)', value: '$2.47M' },
-    { label: 'Withdrawals (24h)', value: '186 processed' },
-    { label: 'Live tables open', value: '28' },
-    { label: 'Fastest payout', value: '2 min' },
+  const platformStats = [
+    { label: 'Casino games', value: '500+' },
+    { label: 'Live dealer tables', value: 'Available 24/7' },
+    { label: 'Interac e-Transfer', value: 'Deposits instant' },
+    { label: 'Withdrawal speed', value: 'Typically under 24h' },
+    { label: 'Support', value: '24/7 live chat' },
+    { label: 'Currency', value: 'CAD native' },
+    { label: 'Mobile', value: 'Desktop & mobile' },
   ];
 
   const faqItems = [
@@ -160,7 +162,7 @@
     },
     {
       q: 'How fast are casino payouts at 247iBET?',
-      a: 'Most withdrawal requests are processed within 24 hours. Interac e-Transfer payouts are among the fastest available to Canadian players, with many withdrawals completing in as little as 2 minutes once approved. There are no FX fees when playing in CAD.',
+      a: 'Most withdrawal requests are processed within 24 hours. Interac e-Transfer payouts are among the fastest available to Canadian players, with many completing within 15–30 minutes once approved. There are no FX fees when playing in CAD.',
     },
     {
       q: 'What types of games are available?',
@@ -250,6 +252,7 @@
           Exclusive access to thousands of slots, live dealer games, and classic table games. Secure
           your play with Interac e-Transfers and experience fast, reliable withdrawals.
         </p>
+        <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
         <div class="mt-8 flex flex-wrap gap-5">
           {#each trustItems as item}
             {@const Icon = item.icon}
@@ -372,11 +375,11 @@
             <div
               class="relative h-24 overflow-hidden rounded-lg border border-prestige-gold/25 bg-black/25"
             >
-              <img
-                src={card.image}
-                alt=""
-                class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105"
-              />
+<img
+                 src={card.image}
+                 alt={card.title + ' casino games'}
+                 class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105"
+               />
               <Icon class="absolute left-3 top-3 h-7 w-7 text-prestige-gold" aria-hidden="true" />
             </div>
             <div>
@@ -452,7 +455,7 @@
     <section
       class="mt-7 grid rounded-xl border border-prestige-gold/35 bg-navy-card/80 sm:grid-cols-2 lg:grid-cols-7"
     >
-      {#each liveStats as item}
+      {#each platformStats as item}
         <div
           class="border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
         >

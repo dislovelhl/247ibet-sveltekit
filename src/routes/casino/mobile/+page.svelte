@@ -71,6 +71,8 @@
         'PWA refers to a progressive web app style experience. In practice, it means a browser-based site that can feel closer to a native app through speed, home-screen access, and cleaner mobile behaviour.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -137,11 +139,7 @@
     </p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
     <div

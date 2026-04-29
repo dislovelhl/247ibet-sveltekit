@@ -11,7 +11,7 @@ export const IBET_URLS = {
 
 export const IBET_PROFILE = {
   name: '247iBET',
-  tagline: 'Canadian online casino and sports betting — editorially reviewed.',
+  tagline: 'Canada’s trusted online casino. Fast Interac payouts and 5,000+ games.',
   rating: null,
   logo: '/images/brand/logo.png',
   established: 2020,
@@ -31,8 +31,8 @@ export const IBET_PROFILE = {
     },
     {
       icon: 'Gamepad2',
-      label: '500+ Casino Games',
-      detail: 'Slots, live dealer, blackjack, roulette — certified RNG.',
+      label: '5,000+ Casino Games',
+      detail: 'Premium slots, live dealer, blackjack, and roulette — certified RNG.',
       accent: 'text-yellow-400',
       bg: 'bg-yellow-500/8 border-yellow-500/20',
     },
@@ -52,11 +52,11 @@ export const IBET_PROFILE = {
     },
   ],
   trustSignals: [
-    'Canadian-focused iGaming experience',
-    'Secure Interac e-Transfer',
-    'SSL encrypted — 256-bit security',
+    'Trusted by Canadian players',
+    'Fully regulated in Ontario (iGO)',
+    'Secure, fast Interac e-Transfer',
+    'Clear, fair bonus terms',
     '24/7 Canadian support',
-    'Responsible gambling tools required',
   ],
   trustPanel: [
     {
@@ -81,11 +81,11 @@ export const IBET_PROFILE = {
     },
   ],
   pros: [
-    'Seamless Interac e-Transfer integration',
-    'Full casino + sports betting under one login',
-    'Canadian-first: CAD accounts and support',
-    '24/7 live dealer games available',
-    'No fees on Interac deposits or withdrawals',
+    'Lightning-fast Interac withdrawals',
+    'Clear, transparent bonus terms',
+    'Fully regulated and secure in Canada',
+    '5,000+ casino and live dealer games',
+    'Premier sports betting for big events (NHL, NBA)',
   ],
   cons: ['Bonus details available on site only (AGCO compliance)'],
 } as const;

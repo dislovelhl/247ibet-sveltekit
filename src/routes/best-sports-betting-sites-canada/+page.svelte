@@ -2,6 +2,8 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -125,11 +127,7 @@
     <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
@@ -175,5 +173,6 @@
         class="text-slate-blue hover:underline">Responsible gambling resources</a
       >.
     </div>
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </div>
 </div>

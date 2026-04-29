@@ -79,6 +79,8 @@
       description: 'Interac protocol audit for bidirectional CAD settlement.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -164,11 +166,7 @@
     <p class="mt-2 text-xs text-text-tertiary">Last updated: April 2, 2026</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-3xl p-8 md:p-10 mb-10">
     <h2 class="text-xs font-black text-prestige-gold mb-6 uppercase tracking-[0.2em] font-mono">

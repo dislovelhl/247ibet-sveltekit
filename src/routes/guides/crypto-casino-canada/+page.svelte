@@ -21,6 +21,8 @@
       body: "Crypto values fluctuate. Winning 0.01 BTC when Bitcoin is at $60,000 CAD is worth $600 — but if BTC drops to $30,000 before you sell, that's $300. Factor in price volatility when managing crypto gambling bankrolls.",
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -87,11 +89,7 @@
     </p>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="mb-8">
     <IBetShowcase variant="compact" showFeatures={true} />

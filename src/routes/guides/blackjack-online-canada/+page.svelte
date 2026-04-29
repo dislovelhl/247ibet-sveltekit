@@ -105,6 +105,8 @@
   ];
 
   const liveFeatures = ['24/7 Available', 'HD Streaming', 'Multiple Limits', 'Interac Deposits'];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -177,11 +179,7 @@
     <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · Play responsibly</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section aria-labelledby="variants-heading">
     <h2 id="variants-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
