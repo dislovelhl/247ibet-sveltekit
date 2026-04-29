@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
 
@@ -31,23 +32,34 @@
   ];
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://247ibet.ca" },
-      { "@type": "ListItem", "position": 2, "name": "Interac", "item": "https://247ibet.ca/interac" },
-      { "@type": "ListItem", "position": 3, "name": "Withdrawal Guide", "item": "https://247ibet.ca/interac/withdraw" }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+      { '@type': 'ListItem', position: 2, name: 'Interac', item: 'https://247ibet.ca/interac' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Withdrawal Guide',
+        item: 'https://247ibet.ca/interac/withdraw',
+      },
+    ],
   };
 </script>
 
 <svelte:head>
   <title>Interac Withdrawal Times at 247iBET Canada</title>
-  <meta name="description" content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts." />
+  <meta
+    name="description"
+    content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
+  />
   <meta property="og:title" content="Interac Withdrawal Times at 247iBET Canada" />
-  <meta property="og:description" content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts." />
+  <meta
+    property="og:description"
+    content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
+  />
   <link rel="canonical" href="https://247ibet.ca/interac/withdraw" />
-  <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
+  <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
 <div class="container mx-auto max-w-3xl px-4 pt-10 pb-20 sm:px-6 lg:px-8">
@@ -67,8 +79,14 @@
 
   <section class="mt-12">
     <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
-      <p class="font-bold text-white text-sm">Interac withdrawals typically arrive within 1-4 hours after operator approval. First withdrawals may take 24-48 hours due to KYC verification.</p>
-      <p class="mt-2 text-xs text-text-tertiary leading-relaxed">Ensure your bank account name matches your 247iBET account. Check your bank's e-Transfer acceptance settings.</p>
+      <p class="font-bold text-white text-sm">
+        Interac withdrawals typically arrive within 1-4 hours after operator approval. First
+        withdrawals may take 24-48 hours due to KYC verification.
+      </p>
+      <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
+        Ensure your bank account name matches your 247iBET account. Check your bank's e-Transfer
+        acceptance settings.
+      </p>
     </div>
   </section>
 
@@ -77,7 +95,10 @@
     <ol class="space-y-4 mt-4">
       {#each steps as step, i}
         <li class="flex gap-4">
-          <span class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center">{i + 1}</span>
+          <span
+            class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center"
+            >{i + 1}</span
+          >
           <div>
             <p class="font-bold text-white text-sm">{step.title}</p>
             <p class="mt-1 text-sm text-text-tertiary leading-relaxed">{step.description}</p>
@@ -92,22 +113,34 @@
     <div class="grid gap-8 text-sm leading-relaxed text-text-body md:grid-cols-2">
       <div class="space-y-4">
         <p>
-          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary">First-Time Withdrawal:</strong>
-          Your very first request triggers a deeper security check to prevent fraud, which may add a few hours to the initial timing.
+          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary"
+            >First-Time Withdrawal:</strong
+          >
+          Your very first request triggers a deeper security check to prevent fraud, which may add a few
+          hours to the initial timing.
         </p>
         <p>
-          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary">Large Amounts:</strong>
-          High-value withdrawals (typically over CAD $2,000) may require additional manual approval steps from our senior cashier team.
+          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary"
+            >Large Amounts:</strong
+          >
+          High-value withdrawals (typically over CAD $2,000) may require additional manual approval steps
+          from our senior cashier team.
         </p>
       </div>
       <div class="space-y-4">
         <p>
-          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary">Bank-Side Processing:</strong>
-          While Interac is fast, some smaller credit unions or banks may have longer internal clearing times for incoming e-Transfers.
+          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary"
+            >Bank-Side Processing:</strong
+          >
+          While Interac is fast, some smaller credit unions or banks may have longer internal clearing
+          times for incoming e-Transfers.
         </p>
         <p>
-          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary">Unmet Wagering:</strong>
-          If you have an active bonus, ensure the wagering requirements are 100% complete, or the withdrawal request may be cancelled.
+          <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary"
+            >Unmet Wagering:</strong
+          >
+          If you have an active bonus, ensure the wagering requirements are 100% complete, or the withdrawal
+          request may be cancelled.
         </p>
       </div>
     </div>
@@ -122,11 +155,16 @@
       </li>
       <li class="flex items-start gap-3">
         <CheckCircle class="mt-1 h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
-        <span>Auto-deposit can speed up receipt, but you should still monitor your Interac email or SMS notifications.</span>
+        <span
+          >Auto-deposit can speed up receipt, but you should still monitor your Interac email or SMS
+          notifications.</span
+        >
       </li>
       <li class="flex items-start gap-3">
         <CheckCircle class="mt-1 h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
-        <span>Withdrawal timing starts after operator approval, not when you first submit the request.</span>
+        <span
+          >Withdrawal timing starts after operator approval, not when you first submit the request.</span
+        >
       </li>
     </ul>
   </section>
@@ -136,12 +174,27 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Interac</a>
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Play casino games</a>
-    <a href="/fast-payouts" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Compare payout speeds</a>
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Interac</a
+    >
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Play casino games</a
+    >
+    <a
+      href="/fast-payouts"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Compare payout speeds</a
+    >
   </nav>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

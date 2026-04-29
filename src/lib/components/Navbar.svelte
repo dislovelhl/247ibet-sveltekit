@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -77,7 +76,7 @@
   // Scroll + global keyboard listeners
   // ---------------------------------------------------------------------------
 
-  onMount(() => {
+  $effect(() => {
     const handleScroll = () => {
       scrolled = window.scrollY > 20;
     };
@@ -188,8 +187,7 @@
       class="hidden h-8 items-center justify-between border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
     >
       <div class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"
-        ></span>
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"></span>
         <span class="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-400"
           >19+ · Play Responsibly</span
         >
@@ -199,7 +197,7 @@
           href="https://x.com/247ibet"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on X"
+          aria-label={`Follow ${SITE.name} on X`}
           class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
         >
           <svg
@@ -219,7 +217,7 @@
           href="https://www.instagram.com/247ibet/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on Instagram"
+          aria-label={`Follow ${SITE.name} on Instagram`}
           class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
         >
           <svg
@@ -241,7 +239,7 @@
           href="https://t.me/247iBET"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Join {SITE.name} on Telegram"
+          aria-label={`Join ${SITE.name} on Telegram`}
           class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
         >
           <Send class="h-3 w-3" aria-hidden="true" />
@@ -250,7 +248,7 @@
           href="https://www.tiktok.com/@247ibet"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on TikTok"
+          aria-label={`Follow ${SITE.name} on TikTok`}
           class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
         >
           <Music2 class="h-3 w-3" aria-hidden="true" />
@@ -260,9 +258,7 @@
   </div>
 
   <!-- Tier 2: Main bar (always visible) -->
-  <div
-    class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
-  >
+  <div class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-5 lg:gap-8">
       <a
@@ -272,7 +268,7 @@
       >
         <img
           src={LOGO_SRC}
-          alt="{SITE.name} Logo"
+          alt={`${SITE.name} Logo`}
           width="140"
           height="40"
           fetchpriority="high"

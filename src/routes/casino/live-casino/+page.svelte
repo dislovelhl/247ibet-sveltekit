@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
 
@@ -51,42 +52,75 @@
   const faqItems = [
     {
       question: 'What games are usually included in a live casino?',
-      answer: 'The core live lineup is blackjack, roulette, and baccarat. Some lobbies also add game-show formats, poker variants, or specialty tables depending on the studio mix.',
+      answer:
+        'The core live lineup is blackjack, roulette, and baccarat. Some lobbies also add game-show formats, poker variants, or specialty tables depending on the studio mix.',
     },
     {
       question: 'Is live casino slower than RNG casino games?',
-      answer: 'Usually yes. The dealer has to complete each round on camera, so live play feels more deliberate than instant-spin slots or auto-resolved table games.',
+      answer:
+        'Usually yes. The dealer has to complete each round on camera, so live play feels more deliberate than instant-spin slots or auto-resolved table games.',
     },
     {
       question: 'Can I play live casino on mobile in Canada?',
-      answer: 'Yes, provided your device and connection are stable enough for video streaming. Mobile live tables work best on recent phones with reliable Wi-Fi or strong data coverage.',
+      answer:
+        'Yes, provided your device and connection are stable enough for video streaming. Mobile live tables work best on recent phones with reliable Wi-Fi or strong data coverage.',
     },
     {
       question: 'Do live dealer tables use HD streaming?',
-      answer: 'Most modern live casino studios do. Stream quality still depends on the provider, your device, and your network conditions, so the best setup is the one that stays stable during longer sessions.',
+      answer:
+        'Most modern live casino studios do. Stream quality still depends on the provider, your device, and your network conditions, so the best setup is the one that stays stable during longer sessions.',
     },
   ];
 </script>
 
 <svelte:head>
   <title>Live Casino Canada | 247iBET Canada</title>
-  <meta name="description" content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup." />
+  <meta
+    name="description"
+    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+  />
   <meta property="og:title" content="Live Casino Canada | 247iBET Canada" />
-  <meta property="og:description" content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup." />
+  <meta
+    property="og:description"
+    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+  />
   <meta name="twitter:title" content="Live Casino Canada | 247iBET Canada" />
-  <meta name="twitter:description" content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup." />
+  <meta
+    name="twitter:description"
+    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+  />
   <link rel="canonical" href="https://247ibet.ca/casino/live-casino" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Live Casino","item":"https://247ibet.ca/casino/live-casino"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Casino', item: 'https://247ibet.ca/casino' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Live Casino',
+          item: 'https://247ibet.ca/casino/live-casino',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-
-  <div class="relative h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card mb-8 md:h-60">
+  <div
+    class="relative h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card mb-8 md:h-60"
+  >
     <img src={heroImage} alt={pageName} class="h-full w-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/65 to-transparent"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/65 to-transparent"
+    ></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="mb-1.5 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold">
+      <div
+        class="mb-1.5 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold"
+      >
         {intro.eyebrow}
       </div>
       <p class="text-xl font-bold text-white md:text-2xl">{pageName}</p>
@@ -105,13 +139,23 @@
 
   <header class="mb-10">
     <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Live Casino in Canada</h1>
-    <p class="text-base text-text-body leading-relaxed max-w-3xl">Live casino blends the convenience of online play with real dealers, real tables, and HD studio streams. For Canadian players, the experience comes down to table variety, streaming quality, betting limits, and stable banking in Canadian dollars.</p>
+    <p class="text-base text-text-body leading-relaxed max-w-3xl">
+      Live casino blends the convenience of online play with real dealers, real tables, and HD
+      studio streams. For Canadian players, the experience comes down to table variety, streaming
+      quality, betting limits, and stable banking in Canadian dollars.
+    </p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
-    <div class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold">
+    <div
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+    >
       {intro.eyebrow}
     </div>
     <h2 class="text-2xl font-bold text-white">{intro.title}</h2>
@@ -156,8 +200,16 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Online Casino Canada</a>
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Online Casino Canada</a
+    >
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Deposit with Interac</a
+    >
   </nav>
 
   <section class="mt-12">
@@ -170,7 +222,14 @@
       <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
         <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -181,7 +240,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

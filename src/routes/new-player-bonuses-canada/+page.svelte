@@ -1,13 +1,34 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Shield, CheckCircle } from 'lucide-svelte';
 
   const bonusTypes = [
-    { name: 'Deposit Match Bonus', desc: 'The platform matches your first deposit by a percentage (e.g. 100% up to a cap). Wagering requirements apply to the bonus amount before withdrawal.', riskLevel: 'Medium' },
-    { name: 'Free Bet Welcome Offer', desc: 'Receive free bet credits on your first qualifying bet. Typically lower wagering (often 1x) than casino bonuses.', riskLevel: 'Lower' },
-    { name: 'No Deposit Bonus', desc: 'Credits awarded just for registering — no deposit required. Higher wagering requirements, strict withdrawal limits. Rare in regulated Canadian market.', riskLevel: 'Higher terms' },
-    { name: 'Matched Free Bets', desc: 'Deposit a qualifying amount and receive free bets equal to that deposit (up to a cap). Common at AGCO-licensed sportsbooks.', riskLevel: 'Lower' },
-    { name: 'Casino Free Spins', desc: 'Free plays on selected slot games. Wins from free spins are subject to bonus wagering requirements.', riskLevel: 'Medium' },
+    {
+      name: 'Deposit Match Bonus',
+      desc: 'The platform matches your first deposit by a percentage (e.g. 100% up to a cap). Wagering requirements apply to the bonus amount before withdrawal.',
+      riskLevel: 'Medium',
+    },
+    {
+      name: 'Free Bet Welcome Offer',
+      desc: 'Receive free bet credits on your first qualifying bet. Typically lower wagering (often 1x) than casino bonuses.',
+      riskLevel: 'Lower',
+    },
+    {
+      name: 'No Deposit Bonus',
+      desc: 'Credits awarded just for registering — no deposit required. Higher wagering requirements, strict withdrawal limits. Rare in regulated Canadian market.',
+      riskLevel: 'Higher terms',
+    },
+    {
+      name: 'Matched Free Bets',
+      desc: 'Deposit a qualifying amount and receive free bets equal to that deposit (up to a cap). Common at AGCO-licensed sportsbooks.',
+      riskLevel: 'Lower',
+    },
+    {
+      name: 'Casino Free Spins',
+      desc: 'Free plays on selected slot games. Wins from free spins are subject to bonus wagering requirements.',
+      riskLevel: 'Medium',
+    },
   ];
 
   const termsList = [
@@ -31,37 +52,89 @@
 
 <svelte:head>
   <title>New Player Welcome Offers Canada 2026 | Welcome Offers | 247iBET</title>
-  <meta name="description" content="New player welcome offers at Canadian sportsbooks and online casinos, plus Ontario advertising restrictions and terms to check before claiming." />
+  <meta
+    name="description"
+    content="New player welcome offers at Canadian sportsbooks and online casinos, plus Ontario advertising restrictions and terms to check before claiming."
+  />
   <meta property="og:title" content="New Player Welcome Offers Canada 2026 | Welcome Offers" />
-  <meta property="og:description" content="Welcome offers explained with terms, AGCO compliance, and what to check." />
+  <meta
+    property="og:description"
+    content="Welcome offers explained with terms, AGCO compliance, and what to check."
+  />
   <link rel="canonical" href="https://247ibet.ca/new-player-bonuses-canada" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"New Player Welcome Offers","item":"https://247ibet.ca/new-player-bonuses-canada"}]})}</script>
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"New Player Welcome Offers Canada 2026","description":"New player welcome offers at Canadian sportsbooks and online casinos, plus Ontario advertising restrictions and terms to check before claiming.","url":"https://247ibet.ca/new-player-bonuses-canada","datePublished":"2026-03-01","dateModified":"2026-03-30"})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'New Player Welcome Offers',
+          item: 'https://247ibet.ca/new-player-bonuses-canada',
+        },
+      ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'New Player Welcome Offers Canada 2026',
+      description:
+        'New player welcome offers at Canadian sportsbooks and online casinos, plus Ontario advertising restrictions and terms to check before claiming.',
+      url: 'https://247ibet.ca/new-player-bonuses-canada',
+      datePublished: '2026-03-01',
+      dateModified: '2026-03-30',
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
-
   <header class="space-y-4">
-    <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">Bonuses · Canada · 2026</div>
-    <h1 class="font-display font-light text-4xl leading-tight text-[#F1F5F9]">New Player Welcome Offers Canada</h1>
-    <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">Welcome offers explained for Canadian players — how deposit matches, sportsbook credits, and casino offers work, and what terms to read before claiming.</p>
+    <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
+      Bonuses · Canada · 2026
+    </div>
+    <h1 class="font-display font-light text-4xl leading-tight text-[#F1F5F9]">
+      New Player Welcome Offers Canada
+    </h1>
+    <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
+      Welcome offers explained for Canadian players — how deposit matches, sportsbook credits, and
+      casino offers work, and what terms to read before claiming.
+    </p>
     <div class="relative my-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card">
-      <img src="/images/generated/bonus-wagering-hero.png" alt="" class="h-full w-full object-cover opacity-80" />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <img
+        src="/images/generated/bonus-wagering-hero.png"
+        alt=""
+        class="h-full w-full object-cover opacity-80"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
+      ></div>
       <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     </div>
     <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <aside class="navy-card rounded-lg p-5">
     <div class="flex items-start gap-3">
       <Shield class="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
       <div>
-        <p class="font-semibold text-[#F1F5F9] text-sm mb-1">Ontario AGCO — Bonus Advertising Rules</p>
+        <p class="font-semibold text-[#F1F5F9] text-sm mb-1">
+          Ontario AGCO — Bonus Advertising Rules
+        </p>
         <p class="text-xs text-[#94A3B8] leading-relaxed">
-          Under AGCO iGaming Ontario regulations, licensed operators cannot publicly advertise specific bonus amounts to the general public. You will see "See Offer" rather than "$X Welcome Bonus" on most promotional material from Ontario-available platforms. Offer details are available after registration on the platform itself.
+          Under AGCO iGaming Ontario regulations, licensed operators cannot publicly advertise
+          specific bonus amounts to the general public. You will see "See Offer" rather than "$X
+          Welcome Bonus" on most promotional material from Ontario-available platforms. Offer
+          details are available after registration on the platform itself.
         </p>
       </div>
     </div>
@@ -76,7 +149,9 @@
         <div class="navy-card rounded-lg p-4 flex flex-col gap-1.5">
           <div class="flex items-center justify-between gap-4">
             <span class="font-semibold text-[#F1F5F9] text-sm">{b.name}</span>
-            <span class="text-[10px] font-medium text-[#94A3B8] bg-[#142038] px-2 py-0.5 rounded shrink-0">
+            <span
+              class="text-[10px] font-medium text-[#94A3B8] bg-[#142038] px-2 py-0.5 rounded shrink-0"
+            >
               Risk: {b.riskLevel}
             </span>
           </div>
@@ -101,25 +176,39 @@
       </ul>
     </div>
     <p class="text-xs text-[#8492A6] mt-3">
-      <a href="/guides/wagering-requirements-explained" class="text-[#4A9EBF] underline decoration-dotted">
+      <a
+        href="/guides/wagering-requirements-explained"
+        class="text-[#4A9EBF] underline decoration-dotted"
+      >
         Full wagering requirements guide →
       </a>
     </p>
   </section>
 
-  <IBetShowcase variant="hero" ctaText="See Welcome Offer at 247iBET" contextLabel="Offer details available after free registration" />
+  <IBetShowcase
+    variant="hero"
+    ctaText="See Welcome Offer at 247iBET"
+    contextLabel="Offer details available after free registration"
+  />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">
     <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-widest font-medium">Related</p>
     <div class="flex flex-wrap gap-3">
       {#each relatedLinks as l}
-        <a href={l.href} class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md">
+        <a
+          href={l.href}
+          class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        >
           {l.label}
         </a>
       {/each}
     </div>
   </nav>
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.</div>
-
+  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
+  </div>
 </div>

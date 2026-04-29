@@ -4,8 +4,14 @@ import { safeJsonLd } from '../src/lib/json-ld';
 describe('safeJsonLd', () => {
   it('serializes a plain object', () => {
     const out = safeJsonLd({ a: 1, b: 'hi' });
-    expect(JSON.parse(out.replace(/\\u003c/g, '<').replace(/\\u003e/g, '>').replace(/\\u0026/g, '&')))
-      .toEqual({ a: 1, b: 'hi' });
+    expect(
+      JSON.parse(
+        out
+          .replace(/\\u003c/g, '<')
+          .replace(/\\u003e/g, '>')
+          .replace(/\\u0026/g, '&'),
+      ),
+    ).toEqual({ a: 1, b: 'hi' });
   });
 
   it('escapes < to prevent <script> breakout', () => {
@@ -22,8 +28,8 @@ describe('safeJsonLd', () => {
     expect(out).not.toMatch(/[<>&]/);
   });
 
-  it('does not corrupt unicode that JSON.stringify already handles', () => {
-    // U+2028 LINE SEPARATOR / U+2029 PARAGRAPH SEPARATOR are escaped by JSON.stringify per ES2019.
+  it('escapes U+2028 and U+2029 for safe HTML embedding', () => {
+    // JSON.stringify does not reliably escape these in all Node versions; safeJsonLd does it explicitly.
     const out = safeJsonLd({ x: '  ' });
     expect(out).toContain('\\u2028');
     expect(out).toContain('\\u2029');

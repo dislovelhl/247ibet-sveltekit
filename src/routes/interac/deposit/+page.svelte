@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
 
@@ -31,23 +32,37 @@
   ];
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://247ibet.ca" },
-      { "@type": "ListItem", "position": 2, "name": "Interac", "item": "https://247ibet.ca/interac" },
-      { "@type": "ListItem", "position": 3, "name": "How to Deposit", "item": "https://247ibet.ca/interac/deposit" }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+      { '@type': 'ListItem', position: 2, name: 'Interac', item: 'https://247ibet.ca/interac' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'How to Deposit',
+        item: 'https://247ibet.ca/interac/deposit',
+      },
+    ],
   };
 </script>
 
 <svelte:head>
   <title>How to Deposit with Interac at 247iBET: A Step-by-Step Guide</title>
-  <meta name="description" content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits." />
-  <meta property="og:title" content="How to Deposit with Interac at 247iBET: A Step-by-Step Guide" />
-  <meta property="og:description" content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits." />
+  <meta
+    name="description"
+    content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
+  />
+  <meta
+    property="og:title"
+    content="How to Deposit with Interac at 247iBET: A Step-by-Step Guide"
+  />
+  <meta
+    property="og:description"
+    content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
+  />
   <link rel="canonical" href="https://247ibet.ca/interac/deposit" />
-  <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
+  <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl">
@@ -67,8 +82,14 @@
 
   <section class="mt-12">
     <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
-      <p class="font-bold text-white text-sm">Interac deposits are instant or processed within 30 minutes. Minimum CAD $10. No fees from 247iBET.</p>
-      <p class="mt-2 text-xs text-text-tertiary leading-relaxed">Your bank may apply standard e-Transfer transaction charges. Ensure the name on your bank account matches your 247iBET account.</p>
+      <p class="font-bold text-white text-sm">
+        Interac deposits are instant or processed within 30 minutes. Minimum CAD $10. No fees from
+        247iBET.
+      </p>
+      <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
+        Your bank may apply standard e-Transfer transaction charges. Ensure the name on your bank
+        account matches your 247iBET account.
+      </p>
     </div>
   </section>
 
@@ -77,7 +98,10 @@
     <ol class="space-y-4 mt-4">
       {#each steps as step, i}
         <li class="flex gap-4">
-          <span class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center">{i + 1}</span>
+          <span
+            class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center"
+            >{i + 1}</span
+          >
           <div>
             <p class="font-bold text-white text-sm">{step.title}</p>
             <p class="mt-1 text-sm text-text-tertiary leading-relaxed">{step.description}</p>
@@ -93,15 +117,24 @@
     <ul class="space-y-4 text-sm text-gray-400">
       <li class="flex items-start gap-3">
         <CheckCircle class="w-4 h-4 text-green-500 shrink-0 mt-1" aria-hidden="true" />
-        <span>Ensure you use the <strong class="text-white">exact security code</strong> provided to avoid delays in crediting your account.</span>
+        <span
+          >Ensure you use the <strong class="text-white">exact security code</strong> provided to avoid
+          delays in crediting your account.</span
+        >
       </li>
       <li class="flex items-start gap-3">
         <CheckCircle class="w-4 h-4 text-green-500 shrink-0 mt-1" aria-hidden="true" />
-        <span>Your bank account name <strong class="text-white">must match</strong> the name on your 247iBET account.</span>
+        <span
+          >Your bank account name <strong class="text-white">must match</strong> the name on your 247iBET
+          account.</span
+        >
       </li>
       <li class="flex items-start gap-3">
         <CheckCircle class="w-4 h-4 text-green-500 shrink-0 mt-1" aria-hidden="true" />
-        <span>Verify your daily and weekly e-Transfer limits with your financial institution before attempting large deposits.</span>
+        <span
+          >Verify your daily and weekly e-Transfer limits with your financial institution before
+          attempting large deposits.</span
+        >
       </li>
     </ul>
   </section>
@@ -111,12 +144,27 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Interac</a>
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Play casino with Interac</a>
-    <a href="/sportsbook" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Bet on sports with Interac</a>
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Interac</a
+    >
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Play casino with Interac</a
+    >
+    <a
+      href="/sportsbook"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Bet on sports with Interac</a
+    >
   </nav>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

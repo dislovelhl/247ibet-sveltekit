@@ -45,8 +45,20 @@ describe('src/lib/site.ts', () => {
     expect(ogImageUrl()).toBe('https://247ibet.ca/og-image.png');
   });
 
+  it('falls back to the production canonical when DEV is off and no URL is set', async () => {
+    vi.resetModules();
+    vi.unstubAllEnvs();
+    vi.stubEnv('PUBLIC_SITE_URL', '');
+    vi.stubEnv('VERCEL_URL', '');
+    vi.stubEnv('DEV', false);
+    const { SITE } = await import('../src/lib/site');
+    expect(SITE.url).toBe('https://247ibet.ca');
+  });
+
   it('exposes the expected brand metadata', async () => {
-    const { SITE, SEO, TRACKING, PARTNER } = await loadSiteModule({ PUBLIC_SITE_URL: 'https://247ibet.ca' });
+    const { SITE, SEO, TRACKING, PARTNER } = await loadSiteModule({
+      PUBLIC_SITE_URL: 'https://247ibet.ca',
+    });
 
     expect(SITE.name).toBe('247iBET');
     expect(SITE.locale).toBe('en-CA');

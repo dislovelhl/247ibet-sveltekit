@@ -18,7 +18,7 @@ function canUseVercelOptimizer(): boolean {
 export function optimizeSrcSet(
   src: string,
   widths: number[] = DEFAULT_WIDTHS,
-  quality = DEFAULT_QUALITY
+  quality = DEFAULT_QUALITY,
 ): string {
   if (!canUseVercelOptimizer()) return src;
 

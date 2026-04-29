@@ -1,7 +1,7 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
-  const PAGE_PATH = '/interac-casino-canada';
   const LAST_UPDATED = '2026-03-30';
 
   const sourceCards = [
@@ -48,65 +48,87 @@
   const howToSteps = [
     {
       title: 'Register and verify your account',
-      description: 'Complete the casino registration and KYC (ID verification) before attempting your first deposit. This avoids delays when you later want to withdraw.',
+      description:
+        'Complete the casino registration and KYC (ID verification) before attempting your first deposit. This avoids delays when you later want to withdraw.',
     },
     {
       title: 'Go to the cashier / deposits section',
-      description: "Select 'Interac e-Transfer' or 'Interac' from the payment method list. Enter your deposit amount (minimum typically CAD $10–$20).",
+      description:
+        "Select 'Interac e-Transfer' or 'Interac' from the payment method list. Enter your deposit amount (minimum typically CAD $10–$20).",
     },
     {
       title: 'Send the e-Transfer from your bank',
-      description: "Log into your online banking. Send an Interac e-Transfer to the casino's deposit email address. Use the security question/answer provided in the casino instructions. Funds typically arrive in minutes.",
+      description:
+        "Log into your online banking. Send an Interac e-Transfer to the casino's deposit email address. Use the security question/answer provided in the casino instructions. Funds typically arrive in minutes.",
     },
     {
       title: 'Withdrawals work in reverse',
-      description: "Request a withdrawal via Interac e-Transfer in the cashier section. The casino sends an e-Transfer to your registered email. Accept it through your banking app. Faster operators can complete this quickly after KYC, but timing still depends on review and bank-side completion.",
+      description:
+        'Request a withdrawal via Interac e-Transfer in the cashier section. The casino sends an e-Transfer to your registered email. Accept it through your banking app. Faster operators can complete this quickly after KYC, but timing still depends on review and bank-side completion.',
     },
   ];
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://247ibet.ca" },
-      { "@type": "ListItem", "position": 2, "name": "Interac Casinos", "item": "https://247ibet.ca/interac-casino-canada" }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Interac Casinos',
+        item: 'https://247ibet.ca/interac-casino-canada',
+      },
+    ],
   };
 
   const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Interac Casino Canada 2026",
-    "description": "Use Interac e-Transfer at 247iBET Canada with direct answers on deposit speed, withdrawal timing, limits, fees, and payout checks.",
-    "url": "https://247ibet.ca/interac-casino-canada",
-    "datePublished": "2026-03-01",
-    "dateModified": LAST_UPDATED
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Interac Casino Canada 2026',
+    description:
+      'Use Interac e-Transfer at 247iBET Canada with direct answers on deposit speed, withdrawal timing, limits, fees, and payout checks.',
+    url: 'https://247ibet.ca/interac-casino-canada',
+    datePublished: '2026-03-01',
+    dateModified: LAST_UPDATED,
   };
 
   const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
-    }))
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
   };
 </script>
 
 <svelte:head>
   <title>Interac Casino Canada 2026: Deposits, Withdrawals &amp; Limits | 247iBET</title>
-  <meta name="description" content="Compare Interac e-Transfer use at Canadian online casinos, including deposits, withdrawals, limits, fees, and cashier checks for verified accounts." />
-  <meta property="og:title" content="Interac Casino Canada 2026: Deposits, Withdrawals &amp; Limits | 247iBET" />
-  <meta property="og:description" content="See how Interac deposits, withdrawals, fees, and cashier rules work for Canadian online casino players." />
+  <meta
+    name="description"
+    content="Compare Interac e-Transfer use at Canadian online casinos, including deposits, withdrawals, limits, fees, and cashier checks for verified accounts."
+  />
+  <meta
+    property="og:title"
+    content="Interac Casino Canada 2026: Deposits, Withdrawals &amp; Limits | 247iBET"
+  />
+  <meta
+    property="og:description"
+    content="See how Interac deposits, withdrawals, fees, and cashier rules work for Canadian online casino players."
+  />
   <link rel="canonical" href="https://247ibet.ca/interac-casino-canada" />
-  <script type="application/ld+json">{@html JSON.stringify(articleSchema)}</script>
-  <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
-  <script type="application/ld+json">{@html JSON.stringify(faqSchema)}</script>
+  <JsonLd schema={articleSchema} />
+  <JsonLd schema={breadcrumbSchema} />
+  <JsonLd schema={faqSchema} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
-  <div aria-hidden="true" class="fixed right-0 top-0 -z-10 h-[400px] w-[400px] rounded-full bg-yellow-500/5 blur-[100px] opacity-30 pointer-events-none"></div>
+  <div
+    aria-hidden="true"
+    class="fixed right-0 top-0 -z-10 h-[400px] w-[400px] rounded-full bg-yellow-500/5 blur-[100px] opacity-30 pointer-events-none"
+  ></div>
 
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
@@ -116,17 +138,32 @@
         <li class="text-white">Interac Casinos</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Interac Casino Canada: e-Transfer Deposits, Withdrawals, Limits</h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">Compare Interac e-Transfer deposits, withdrawals, limits, and payout reliability for Canadian bank account holders.</p>
+    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+      Interac Casino Canada: e-Transfer Deposits, Withdrawals, Limits
+    </h1>
+    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
+      Compare Interac e-Transfer deposits, withdrawals, limits, and payout reliability for Canadian
+      bank account holders.
+    </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
 
   <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
-    <p class="font-bold text-white text-sm">Interac e-Transfer payouts at 247iBET are typically processed within 15–30 minutes of approval.</p>
-    <p class="mt-2 text-xs text-text-tertiary leading-relaxed">This provides the fastest legal withdrawal route for Canadian players, with direct bank integration and no hidden processing fees.</p>
+    <p class="font-bold text-white text-sm">
+      Interac e-Transfer payouts at 247iBET are typically processed within 15–30 minutes of
+      approval.
+    </p>
+    <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
+      This provides the fastest legal withdrawal route for Canadian players, with direct bank
+      integration and no hidden processing fees.
+    </p>
   </div>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <IBetShowcase variant="hero" showFeatures showPros />
 
@@ -152,7 +189,9 @@
     <h2 class="text-2xl font-bold mb-4">Why Interac stays the default CAD rail</h2>
     <ul class="space-y-3 text-sm text-gray-400">
       <li>Interac gives Canadian players a familiar CAD deposit and withdrawal flow.</li>
-      <li>Speed depends on both the operator and the bank, so the cashier matters as much as the rail.</li>
+      <li>
+        Speed depends on both the operator and the bank, so the cashier matters as much as the rail.
+      </li>
       <li>Payment details are mostly bank-side and cashier-side checks, not email magic.</li>
       <li>You can remove most payout friction before your first cash-out if KYC is complete.</li>
     </ul>
@@ -178,7 +217,9 @@
           <tr>
             <td class="px-3 py-4 font-semibold text-white">Withdrawal review</td>
             <td class="px-3 py-4">KYC status, bonus wagering, and payout queue.</td>
-            <td class="px-3 py-4">The casino still reviews the withdrawal before Interac sends it.</td>
+            <td class="px-3 py-4"
+              >The casino still reviews the withdrawal before Interac sends it.</td
+            >
           </tr>
           <tr>
             <td class="px-3 py-4 font-semibold text-white">Fees and limits</td>
@@ -199,7 +240,10 @@
       <ol class="space-y-4 mt-4">
         {#each howToSteps as step, i}
           <li class="flex gap-4">
-            <span class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center">{i + 1}</span>
+            <span
+              class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center"
+              >{i + 1}</span
+            >
             <div>
               <p class="font-bold text-white text-sm">{step.title}</p>
               <p class="mt-1 text-sm text-text-tertiary leading-relaxed">{step.description}</p>
@@ -217,7 +261,14 @@
       <details class="navy-card rounded-xl border border-white/10 p-4 group cursor-pointer">
         <summary class="font-bold text-white list-none flex items-center justify-between gap-2">
           {faq.question}
-          <svg class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -227,6 +278,9 @@
   </section>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

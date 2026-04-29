@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
   import { CheckCircle2 } from 'lucide-svelte';
@@ -52,36 +53,63 @@
   const faqItems = [
     {
       question: 'Which roulette version has the best odds?',
-      answer: 'French roulette can be the strongest on certain even-money bets when La Partage or En Prison rules apply. European roulette is usually the clean default because it still uses a single-zero wheel and avoids the higher edge of American roulette.',
+      answer:
+        'French roulette can be the strongest on certain even-money bets when La Partage or En Prison rules apply. European roulette is usually the clean default because it still uses a single-zero wheel and avoids the higher edge of American roulette.',
     },
     {
       question: 'Why is American roulette less favourable?',
-      answer: 'The extra double-zero pocket raises the house edge from 2.70% on European roulette to 5.26% on American roulette. That difference is large enough to matter over time.',
+      answer:
+        'The extra double-zero pocket raises the house edge from 2.70% on European roulette to 5.26% on American roulette. That difference is large enough to matter over time.',
     },
     {
       question: 'Is live roulette different from RNG roulette?',
-      answer: 'The core payouts are the same for the same wheel type, but the format changes. Live roulette uses a real wheel and dealer, while RNG roulette resolves digitally and usually at a faster pace.',
+      answer:
+        'The core payouts are the same for the same wheel type, but the format changes. Live roulette uses a real wheel and dealer, while RNG roulette resolves digitally and usually at a faster pace.',
     },
     {
       question: 'Are outside bets safer in roulette?',
-      answer: 'Outside bets like red or black tend to hit more often, but they still carry the same house edge as other standard bets on the same wheel. They reduce volatility, not the casino advantage.',
+      answer:
+        'Outside bets like red or black tend to hit more often, but they still carry the same house edge as other standard bets on the same wheel. They reduce volatility, not the casino advantage.',
     },
   ];
 </script>
 
 <svelte:head>
   <title>Roulette Online Canada | 247iBET Canada</title>
-  <meta name="description" content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in." />
+  <meta
+    name="description"
+    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+  />
   <meta property="og:title" content="Roulette Online Canada | 247iBET Canada" />
-  <meta property="og:description" content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in." />
+  <meta
+    property="og:description"
+    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+  />
   <meta name="twitter:title" content="Roulette Online Canada | 247iBET Canada" />
-  <meta name="twitter:description" content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in." />
+  <meta
+    name="twitter:description"
+    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+  />
   <link rel="canonical" href="https://247ibet.ca/casino/roulette" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Roulette Online","item":"https://247ibet.ca/casino/roulette"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Casino', item: 'https://247ibet.ca/casino' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Roulette Online',
+          item: 'https://247ibet.ca/casino/roulette',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-
   <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
     <img
       src={heroImage}
@@ -90,10 +118,14 @@
       alt={pageName}
       class="object-cover w-full h-full"
     />
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
+    ></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
+      <div
+        class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
+      >
         {intro.eyebrow}
       </div>
       <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
@@ -112,13 +144,23 @@
 
   <header class="mb-10">
     <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Roulette Online in Canada</h1>
-    <p class="text-base text-text-body leading-relaxed max-w-3xl">Roulette is easy to enter because the betting map is simple, the pace is readable, and the rule differences are clear once you know how many zero pockets are on the wheel. For Canadian players, that makes variant selection more important than chasing gimmicks.</p>
+    <p class="text-base text-text-body leading-relaxed max-w-3xl">
+      Roulette is easy to enter because the betting map is simple, the pace is readable, and the
+      rule differences are clear once you know how many zero pockets are on the wheel. For Canadian
+      players, that makes variant selection more important than chasing gimmicks.
+    </p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
-    <div class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold">
+    <div
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+    >
       {intro.eyebrow}
     </div>
     <h2 class="text-2xl font-bold text-white">{intro.title}</h2>
@@ -161,8 +203,16 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Online Casino Canada</a>
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Online Casino Canada</a
+    >
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Deposit with Interac</a
+    >
   </nav>
 
   <section class="mt-12">
@@ -175,7 +225,14 @@
       <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
         <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -186,7 +243,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

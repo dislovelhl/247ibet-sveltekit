@@ -1,16 +1,21 @@
 <section class="max-w-5xl space-y-5">
   <div>
-    <div class="inline-flex items-center justify-center gap-2 rounded-full border border-prestige-gold/20 bg-prestige-gold/5 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-widest text-prestige-gold">
+    <div
+      class="inline-flex items-center justify-center gap-2 rounded-full border border-prestige-gold/20 bg-prestige-gold/5 px-4 py-1.5 text-xs font-mono font-bold uppercase tracking-widest text-prestige-gold"
+    >
       Canada's Regulated iGaming Research Platform
     </div>
   </div>
 
-  <h2 class="max-w-4xl font-display text-[clamp(2.5rem,5vw,4rem)] font-light leading-[1.02] tracking-[-0.035em] text-text-primary">
+  <h2
+    class="max-w-4xl font-display text-[clamp(2.5rem,5vw,4rem)] font-light leading-[1.02] tracking-[-0.035em] text-text-primary"
+  >
     Regulated Canadian iGaming, <span class="text-gradient-slate">clearly explained.</span>
   </h2>
 
   <p class="max-w-3xl text-lg leading-relaxed text-text-body md:text-xl">
-    Independent verification of payout speed, licensing registry, and player protection protocols for Ontario and Alberta residents.
+    Independent verification of payout speed, licensing registry, and player protection protocols
+    for Ontario and Alberta residents.
   </p>
 
   <div class="flex flex-wrap items-center gap-3">

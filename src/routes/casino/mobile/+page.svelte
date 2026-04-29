@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
 
@@ -50,38 +51,67 @@
   const faqItems = [
     {
       question: 'Do I need to download an app to play mobile casino in Canada?',
-      answer: 'Not always. Many strong mobile casino experiences work directly in the browser and can still feel app-like when the navigation, speed, and home-screen behaviour are handled well.',
+      answer:
+        'Not always. Many strong mobile casino experiences work directly in the browser and can still feel app-like when the navigation, speed, and home-screen behaviour are handled well.',
     },
     {
       question: 'What devices are best for mobile casino play?',
-      answer: 'Recent iPhone and Android devices usually provide the smoothest experience, with tablets offering more space for live tables and multitasking. Device quality matters most when you want long sessions or live streaming.',
+      answer:
+        'Recent iPhone and Android devices usually provide the smoothest experience, with tablets offering more space for live tables and multitasking. Device quality matters most when you want long sessions or live streaming.',
     },
     {
       question: 'Which casino games work best on mobile?',
-      answer: 'Slots usually translate best because they are designed around quick taps and simple screen layouts. Live dealer tables can also work well, but they need a more stable connection and benefit from a larger display.',
+      answer:
+        'Slots usually translate best because they are designed around quick taps and simple screen layouts. Live dealer tables can also work well, but they need a more stable connection and benefit from a larger display.',
     },
     {
       question: 'What does PWA mean for a mobile casino?',
-      answer: 'PWA refers to a progressive web app style experience. In practice, it means a browser-based site that can feel closer to a native app through speed, home-screen access, and cleaner mobile behaviour.',
+      answer:
+        'PWA refers to a progressive web app style experience. In practice, it means a browser-based site that can feel closer to a native app through speed, home-screen access, and cleaner mobile behaviour.',
     },
   ];
 </script>
 
 <svelte:head>
   <title>Mobile Casino Canada | 247iBET Canada</title>
-  <meta name="description" content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens." />
+  <meta
+    name="description"
+    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+  />
   <meta property="og:title" content="Mobile Casino Canada | 247iBET Canada" />
-  <meta property="og:description" content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens." />
+  <meta
+    property="og:description"
+    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+  />
   <meta name="twitter:title" content="Mobile Casino Canada | 247iBET Canada" />
-  <meta name="twitter:description" content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens." />
+  <meta
+    name="twitter:description"
+    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+  />
   <link rel="canonical" href="https://247ibet.ca/casino/mobile" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Mobile Casino","item":"https://247ibet.ca/casino/mobile"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Casino', item: 'https://247ibet.ca/casino' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Mobile Casino',
+          item: 'https://247ibet.ca/casino/mobile',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-
   <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
-    <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
+    <div
+      class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
+    >
       {intro.eyebrow}
     </div>
     <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
@@ -99,13 +129,23 @@
 
   <header class="mb-10">
     <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Mobile Casino in Canada</h1>
-    <p class="text-base text-text-body leading-relaxed max-w-3xl">Mobile casino in Canada is no longer just a scaled-down desktop lobby. The real benchmark is whether the site feels native on modern phones, keeps payments simple, and lets you move between slots, live tables, and account tools without friction.</p>
+    <p class="text-base text-text-body leading-relaxed max-w-3xl">
+      Mobile casino in Canada is no longer just a scaled-down desktop lobby. The real benchmark is
+      whether the site feels native on modern phones, keeps payments simple, and lets you move
+      between slots, live tables, and account tools without friction.
+    </p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
-    <div class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold">
+    <div
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+    >
       {intro.eyebrow}
     </div>
     <h2 class="text-2xl font-bold text-white">{intro.title}</h2>
@@ -150,8 +190,16 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Online Casino Canada</a>
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Online Casino Canada</a
+    >
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Deposit with Interac</a
+    >
   </nav>
 
   <section class="mt-12">
@@ -164,7 +212,14 @@
       <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
         <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -175,7 +230,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

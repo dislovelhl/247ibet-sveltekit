@@ -17,7 +17,7 @@ describe('searchItems', () => {
   });
 
   it('normalizes punctuation and case in queries', () => {
-    const results = searchItems("INTERAC, Casino!!");
+    const results = searchItems('INTERAC, Casino!!');
 
     expect(results[0]?.href).toBe('/interac-casino-canada');
     expect(results[0]?.matchedTerms).toContain('interac');

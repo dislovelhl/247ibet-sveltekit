@@ -19,6 +19,10 @@
   let { children } = $props();
 </script>
 
+<svelte:head>
+  <meta name="author" content="247iBET Editorial Team" />
+</svelte:head>
+
 <AgeGate />
 
 <a

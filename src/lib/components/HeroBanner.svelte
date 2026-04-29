@@ -65,7 +65,9 @@
   class="relative mb-10 w-full overflow-hidden rounded-[1.75rem] bg-navy-black shadow-2xl group sm:mb-12 sm:rounded-3xl"
 >
   <!-- Hero image -->
-  <div class="relative w-full min-h-[430px] overflow-hidden aspect-[5/6] sm:min-h-0 sm:aspect-[16/10] lg:aspect-[21/9]">
+  <div
+    class="relative w-full min-h-[430px] overflow-hidden aspect-[5/6] sm:min-h-0 sm:aspect-[16/10] lg:aspect-[21/9]"
+  >
     <img
       src={HERO_IMAGE.src}
       srcset={optimizeSrcSet(HERO_IMAGE.src, [640, 960, 1280, 1672], 82)}
@@ -79,19 +81,25 @@
     />
 
     <!-- Dark overlay -->
-    <div class="absolute inset-0 z-10 bg-black/52 pointer-events-none transition-opacity duration-700 group-hover:bg-black/38 sm:bg-black/44"></div>
+    <div
+      class="absolute inset-0 z-10 bg-black/52 pointer-events-none transition-opacity duration-700 group-hover:bg-black/38 sm:bg-black/44"
+    ></div>
 
     <!-- Bottom fade — strengthened for AA contrast on subtitle copy -->
-    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-black via-navy-black/85 to-transparent pointer-events-none z-10"></div>
+    <div
+      class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-black via-navy-black/85 to-transparent pointer-events-none z-10"
+    ></div>
 
     <!-- Content overlay -->
     <div class="absolute inset-0 z-20 flex flex-col justify-end p-5 sm:p-6 md:p-10 lg:p-16">
       <div class="max-w-3xl">
-
         <!-- Kicker + trust badge row -->
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <div class="page-hero-kicker">
-            <span class="text-[9px] font-mono font-black uppercase tracking-[0.16em] text-prestige-gold sm:text-[10px] sm:tracking-[0.2em]">247iBET CANADA</span>
+            <span
+              class="text-[9px] font-mono font-black uppercase tracking-[0.16em] text-prestige-gold sm:text-[10px] sm:tracking-[0.2em]"
+              >247iBET CANADA</span
+            >
           </div>
         </div>
 
@@ -101,8 +109,11 @@
           <span class="sr-only"> — 247iBET Canada Online Casino &amp; Sports Betting</span>
         </h1>
 
-        <p class="page-hero-subtitle mb-6 max-w-lg text-sm font-light leading-relaxed drop-shadow-lg sm:mb-8 sm:text-base md:text-lg">
-          Play 500+ casino games and bet on your favourite sports. Fast Interac deposits and withdrawals, live dealer tables, and same-game parlays — built for Canadian players.
+        <p
+          class="page-hero-subtitle mb-6 max-w-lg text-sm font-light leading-relaxed drop-shadow-lg sm:mb-8 sm:text-base md:text-lg"
+        >
+          Play 500+ casino games and bet on your favourite sports. Fast Interac deposits and
+          withdrawals, live dealer tables, and same-game parlays — built for Canadian players.
         </p>
 
         <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:gap-4">
@@ -111,26 +122,44 @@
             class="hero-cta-primary group w-full sm:w-auto"
           >
             Play Now
-            <ChevronRight class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
+            <ChevronRight
+              class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5"
+            />
           </SafeExternalLink>
         </div>
       </div>
     </div>
 
     <!-- Prestige border on hover -->
-    <div class="absolute inset-0 z-20 rounded-[1.75rem] border-[1.5px] border-prestige-gold/0 pointer-events-none transition-all duration-700 shadow-[inset_0_0_40px_rgba(212,148,58,0)] group-hover:border-prestige-gold/30 group-hover:shadow-[inset_0_0_40px_rgba(212,148,58,0.15)] sm:rounded-3xl"></div>
+    <div
+      class="absolute inset-0 z-20 rounded-[1.75rem] border-[1.5px] border-prestige-gold/0 pointer-events-none transition-all duration-700 shadow-[inset_0_0_40px_rgba(212,148,58,0)] group-hover:border-prestige-gold/30 group-hover:shadow-[inset_0_0_40px_rgba(212,148,58,0.15)] sm:rounded-3xl"
+    ></div>
   </div>
 
   <!-- Live Odds Strip -->
-  <div class="relative border-t border-white/5 bg-navy-raised/80 overflow-hidden" aria-label="Sample live sports odds">
+  <div
+    class="relative border-t border-white/5 bg-navy-raised/80 overflow-hidden"
+    aria-label="Sample live sports odds"
+  >
     <!-- Gradient masks on edges -->
-    <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-navy-raised/80 to-transparent z-10 pointer-events-none" aria-hidden="true"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-navy-raised/80 to-transparent z-10 pointer-events-none" aria-hidden="true"></div>
+    <div
+      class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-navy-raised/80 to-transparent z-10 pointer-events-none"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-navy-raised/80 to-transparent z-10 pointer-events-none"
+      aria-hidden="true"
+    ></div>
 
     <!-- Live label -->
-    <div class="absolute left-0 top-0 bottom-0 flex items-center pl-3 pr-4 border-r border-white/5 bg-navy-raised/90 z-20 gap-2">
+    <div
+      class="absolute left-0 top-0 bottom-0 flex items-center pl-3 pr-4 border-r border-white/5 bg-navy-raised/90 z-20 gap-2"
+    >
       <span class="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" aria-hidden="true"></span>
-      <span class="text-[10px] font-mono font-bold text-success uppercase tracking-[0.18em] whitespace-nowrap">Live Odds</span>
+      <span
+        class="text-[10px] font-mono font-bold text-success uppercase tracking-[0.18em] whitespace-nowrap"
+        >Live Odds</span
+      >
     </div>
 
     <!-- Scrolling odds -->
@@ -138,7 +167,10 @@
       <div class="odds-marquee flex gap-0 whitespace-nowrap py-2.5" aria-hidden="true">
         {#each oddsDoubled as game, i (i)}
           <span class="inline-flex items-center gap-3 px-5 border-r border-white/5 text-[11px]">
-            <span class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-[10px]">{game.sport}</span>
+            <span
+              class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-[10px]"
+              >{game.sport}</span
+            >
             <span class="text-text-body">{game.home}</span>
             <span class="font-mono font-bold text-white">{game.homeOdds}</span>
             <span class="text-text-body">vs</span>

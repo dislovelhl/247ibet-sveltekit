@@ -1,0 +1,47 @@
+# CI — Quality Gates
+
+## Overview
+
+Every push to `main` and every pull request targeting `main` runs the `quality-gates` job
+defined in `.github/workflows/ci.yml`. All four gates must pass before a PR can be merged.
+
+## The 4 Gates
+
+| Step | Command | What it checks |
+|------|---------|----------------|
+| Type check | `pnpm check` | SvelteKit + TypeScript types via `svelte-check` |
+| Lint | `pnpm lint` | ESLint rules across `.svelte`, `.ts`, `.js` files |
+| Unit + integration tests | `pnpm test` | Vitest test suite (`tests/*.test.ts`) |
+| Build | `pnpm build` | Full production build via Vite / `@sveltejs/adapter-auto` |
+
+## Running Locally
+
+Run all four gates in order before pushing:
+
+```bash
+pnpm check && pnpm lint && pnpm test && pnpm build
+```
+
+All commands must exit with code 0. Fix any failures before pushing — never iterate via CI.
+
+## Required GitHub Branch Protection (for `main`)
+
+Navigate to **Settings → Branches → Branch protection rules** and configure:
+
+1. **Require a pull request before merging** — enable, require at least 1 approval
+2. **Require status checks to pass before merging** — enable
+   - Check **Require branches to be up to date before merging**
+   - Add required status check: `quality-gates`
+3. **Do not allow bypassing the above settings** — ensure this is NOT checked (no admin bypass)
+
+## Recovery: If a Gate Fails on a PR
+
+1. Reproduce the failure locally: `pnpm check && pnpm lint && pnpm test && pnpm build`
+2. Fix the root cause in your local branch
+3. Commit the fix and push to the **PR branch** — CI will re-run automatically
+4. **NEVER force-push to `main`** — this can overwrite others' work and bypass protection rules
+
+## E2E Tests (Planned)
+
+The `tests/e2e/` directory is reserved for Playwright end-to-end tests (Team E, future workstream).
+Once scaffolded, a second CI job `e2e` will be added to the workflow.

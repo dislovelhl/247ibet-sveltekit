@@ -1,3 +1,4 @@
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { vitePlugin } from 'braintrust/vite';
@@ -15,7 +16,7 @@ const cssInlineSSRFix: Plugin = {
     if (!/[?&]inline\b/.test(id)) return;
     if (code.includes('export default')) return;
     return { code: `export default ${JSON.stringify(code)}`, map: null };
-  }
+  },
 };
 
 function braintrustBuildPlugin(command: string): PluginOption[] {
@@ -33,6 +34,13 @@ export default defineConfig(async ({ command }) => {
     // workflow/sveltekit unavailable — using fallback (plain async handlers)
   }
   return {
-    plugins: [tailwindcss(), ...workflowPlugins, ...braintrustBuildPlugin(command), sveltekit(), cssInlineSSRFix]
+    plugins: [
+      enhancedImages(),
+      tailwindcss(),
+      ...workflowPlugins,
+      ...braintrustBuildPlugin(command),
+      sveltekit(),
+      cssInlineSSRFix,
+    ],
   };
 });

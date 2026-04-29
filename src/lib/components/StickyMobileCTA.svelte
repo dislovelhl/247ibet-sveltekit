@@ -8,7 +8,6 @@
    * PWA Awareness: Detects if the app is installable and prompts for "Install" on returning sessions.
    */
 
-  import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -27,12 +26,12 @@
   let isStandalone = $state(false);
   let dismissed = $state(false);
 
-  onMount(() => {
+  $effect(() => {
     if (!browser) return;
 
     // Initialize isStandalone
     isStandalone =
-      (window.navigator as any).standalone ||
+      (window.navigator as Navigator & { standalone?: boolean }).standalone ||
       window.matchMedia('(display-mode: standalone)').matches;
 
     // Initialize dismissed from sessionStorage
@@ -93,14 +92,16 @@
     role="navigation"
     aria-label="Quick actions"
   >
-    <div class="border-t border-navy-border bg-navy-raised/95 px-3 py-2.5 backdrop-blur-md shadow-2xl">
+    <div
+      class="border-t border-navy-border bg-navy-raised/95 px-3 py-2.5 backdrop-blur-md shadow-2xl"
+    >
       <div class="flex items-center gap-2">
         {#if installPrompt}
           <button
             onclick={handleInstall}
             class="flex min-h-12 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-3 py-3 text-sm active:scale-95"
           >
-            <Download class="h-4 w-4 shrink-0" />
+            <Download class="h-4 w-4 shrink-0" aria-hidden="true" />
             Install App
           </button>
         {:else}

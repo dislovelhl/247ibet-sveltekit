@@ -1,10 +1,10 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Baccarat Online';
-  const path = '/casino/baccarat';
   const heroImage = '/images/generated/casino-baccarat-hero.png';
 
   const intro = {
@@ -53,36 +53,63 @@
   const faqItems = [
     {
       question: 'What is the safest baccarat bet?',
-      answer: 'Banker is usually the strongest long-run option because it carries the lowest house edge under standard rules, even after commission is taken on winning Banker bets.',
+      answer:
+        'Banker is usually the strongest long-run option because it carries the lowest house edge under standard rules, even after commission is taken on winning Banker bets.',
     },
     {
       question: 'Is Tie a good baccarat bet?',
-      answer: 'Tie can be entertaining because of the larger payout, but it usually has a much higher house edge than Banker or Player. Most practical baccarat strategy keeps Tie exposure limited.',
+      answer:
+        'Tie can be entertaining because of the larger payout, but it usually has a much higher house edge than Banker or Player. Most practical baccarat strategy keeps Tie exposure limited.',
     },
     {
       question: 'Is live baccarat different from online baccarat?',
-      answer: 'The core rules are the same. The main difference is format: live baccarat uses a real dealer and studio stream, while RNG baccarat resolves digitally at a faster pace.',
+      answer:
+        'The core rules are the same. The main difference is format: live baccarat uses a real dealer and studio stream, while RNG baccarat resolves digitally at a faster pace.',
     },
     {
       question: 'Do I need strategy charts for baccarat?',
-      answer: 'Not in the same way you do for blackjack. Baccarat strategy is more about bet selection and bankroll control than about memorising decision trees.',
+      answer:
+        'Not in the same way you do for blackjack. Baccarat strategy is more about bet selection and bankroll control than about memorising decision trees.',
     },
   ];
 </script>
 
 <svelte:head>
   <title>Baccarat Online Canada | 247iBET Canada</title>
-  <meta name="description" content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics." />
+  <meta
+    name="description"
+    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+  />
   <meta property="og:title" content="Baccarat Online Canada | 247iBET Canada" />
-  <meta property="og:description" content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics." />
+  <meta
+    property="og:description"
+    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+  />
   <meta name="twitter:title" content="Baccarat Online Canada | 247iBET Canada" />
-  <meta name="twitter:description" content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics." />
+  <meta
+    name="twitter:description"
+    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+  />
   <link rel="canonical" href="https://247ibet.ca/casino/baccarat" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Baccarat Online","item":"https://247ibet.ca/casino/baccarat"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Casino', item: 'https://247ibet.ca/casino' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Baccarat Online',
+          item: 'https://247ibet.ca/casino/baccarat',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-
   <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
     <img
       src={heroImage}
@@ -91,10 +118,14 @@
       alt={pageName}
       class="object-cover w-full h-full"
     />
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
+    ></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
+      <div
+        class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
+      >
         {intro.eyebrow}
       </div>
       <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
@@ -113,13 +144,23 @@
 
   <header class="mb-10">
     <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Baccarat Online in Canada</h1>
-    <p class="text-base text-text-body leading-relaxed max-w-3xl">Baccarat is built for players who want a simple betting structure and quick rounds. Once you understand Banker, Player, and Tie, the main job is choosing the lower-edge option and avoiding the temptation to overcomplicate a game that is strongest when kept simple.</p>
+    <p class="text-base text-text-body leading-relaxed max-w-3xl">
+      Baccarat is built for players who want a simple betting structure and quick rounds. Once you
+      understand Banker, Player, and Tie, the main job is choosing the lower-edge option and
+      avoiding the temptation to overcomplicate a game that is strongest when kept simple.
+    </p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
-    <div class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold">
+    <div
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+    >
       {intro.eyebrow}
     </div>
     <h2 class="text-2xl font-bold text-white">{intro.title}</h2>
@@ -162,8 +203,16 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Online Casino Canada</a>
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Online Casino Canada</a
+    >
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Deposit with Interac</a
+    >
   </nav>
 
   <section class="mt-12">
@@ -176,7 +225,14 @@
       <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
         <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -187,7 +243,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

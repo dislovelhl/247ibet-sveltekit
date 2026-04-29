@@ -1,6 +1,5 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-  import { page } from '$app/stores';
 </script>
 
 <svelte:head>
@@ -25,10 +24,18 @@
   </p>
 
   <div class="navy-card rounded-2xl p-8 text-center">
-    <p class="text-text-tertiary text-sm">Guide content loaded from WordPress CMS. Wire up <code class="text-prestige-gold">+page.ts</code> to fetch guide post by slug.</p>
+    <p class="text-text-tertiary text-sm">
+      Guide content loaded from WordPress CMS. Wire up <code class="text-prestige-gold"
+        >+page.ts</code
+      > to fetch guide post by slug.
+    </p>
   </div>
 
   <div class="mt-12">
-    <IBetShowcase variant="banner" ctaText="Play at 247iBET" contextLabel="Fast payouts · Interac · 19+" />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Play at 247iBET"
+      contextLabel="Fast payouts · Interac · 19+"
+    />
   </div>
 </div>

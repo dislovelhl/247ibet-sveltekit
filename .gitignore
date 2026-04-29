@@ -9,7 +9,33 @@ vite.config.ts.timestamp-*
 .gstack/
 .omc/
 .omx/
+.claude/
+.codex
 
 # Workflow audit reports and runtime data (local only, gitignored)
-static/reports/**/*.json
+static/reports/
 .workflow-data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build/test
+coverage/
+*.lcov
+*.log
+dist/
+
+# Env
+.env.local
+.env.production
+
+# npm
+*.tgz

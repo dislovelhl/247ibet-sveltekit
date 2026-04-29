@@ -1,4 +1,5 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle, ShieldCheck, BookOpen } from 'lucide-svelte';
 
@@ -6,7 +7,7 @@
     {
       n: 1,
       title: 'Verify the licence',
-      body: "For Ontario: search the iGaming Ontario registrant list (igamingontario.ca) before registering. For other provinces: look for an MGA (Malta Gaming Authority) or Gibraltar licence — both tier-1 regulators with player protection standards comparable to AGCO.",
+      body: 'For Ontario: search the iGaming Ontario registrant list (igamingontario.ca) before registering. For other provinces: look for an MGA (Malta Gaming Authority) or Gibraltar licence — both tier-1 regulators with player protection standards comparable to AGCO.',
       cta: { text: 'Check AGCO-licensed casinos', href: '/best-online-casinos-canada' },
     },
     {
@@ -24,8 +25,11 @@
     {
       n: 4,
       title: 'Read the offer terms before claiming',
-      body: "Wagering requirements above 40× make most offers unprofitable. Check: wagering multiplier, game restrictions (slots only?), max bet while active, expiry date, and withdrawal cap. Ontario players: offer details must be viewed on the operator site directly.",
-      cta: { text: 'Wagering requirements explained', href: '/guides/wagering-requirements-explained' },
+      body: 'Wagering requirements above 40× make most offers unprofitable. Check: wagering multiplier, game restrictions (slots only?), max bet while active, expiry date, and withdrawal cap. Ontario players: offer details must be viewed on the operator site directly.',
+      cta: {
+        text: 'Wagering requirements explained',
+        href: '/guides/wagering-requirements-explained',
+      },
     },
     {
       n: 5,
@@ -48,21 +52,63 @@
   ];
 
   const auditRows = [
-    { check: 'Registry Status', metric: 'AGCO/iGaming Ontario Verification', variance: 'No registered address or licence number found.' },
-    { check: 'Settlement Efficiency', metric: 'Interac e-Transfer < 24h Benchmark', variance: 'Vague latency or 5+ day settlement policies.' },
-    { check: 'Bonus Integrity', metric: 'Wagering < 40x / Fair Contribution', variance: 'Hidden caps or impossible playthrough logic.' },
+    {
+      check: 'Registry Status',
+      metric: 'AGCO/iGaming Ontario Verification',
+      variance: 'No registered address or licence number found.',
+    },
+    {
+      check: 'Settlement Efficiency',
+      metric: 'Interac e-Transfer < 24h Benchmark',
+      variance: 'Vague latency or 5+ day settlement policies.',
+    },
+    {
+      check: 'Bonus Integrity',
+      metric: 'Wagering < 40x / Fair Contribution',
+      variance: 'Hidden caps or impossible playthrough logic.',
+    },
   ];
 </script>
 
 <svelte:head>
   <title>How to Choose an Online Casino in Canada in 2026: A 7-Step Guide | 247iBET</title>
-  <meta name="description" content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators. Play responsibly." />
-  <meta property="og:title" content="How to Choose an Online Casino in Canada in 2026: A 7-Step Guide | 247iBET" />
-  <meta property="og:description" content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators." />
-  <meta name="twitter:title" content="How to Choose an Online Casino in Canada in 2026: A 7-Step Guide | 247iBET" />
-  <meta name="twitter:description" content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators." />
+  <meta
+    name="description"
+    content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators. Play responsibly."
+  />
+  <meta
+    property="og:title"
+    content="How to Choose an Online Casino in Canada in 2026: A 7-Step Guide | 247iBET"
+  />
+  <meta
+    property="og:description"
+    content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators."
+  />
+  <meta
+    name="twitter:title"
+    content="How to Choose an Online Casino in Canada in 2026: A 7-Step Guide | 247iBET"
+  />
+  <meta
+    name="twitter:description"
+    content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators."
+  />
   <link rel="canonical" href="https://247ibet.ca/guides/how-to-choose-online-casino" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://247ibet.ca/guides"},{"@type":"ListItem","position":3,"name":"How to Choose an Online Casino","item":"https://247ibet.ca/guides/how-to-choose-online-casino"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://247ibet.ca/guides' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'How to Choose an Online Casino',
+          item: 'https://247ibet.ca/guides/how-to-choose-online-casino',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
@@ -76,37 +122,64 @@
     </ol>
   </nav>
 
-  <div class="navy-card rounded-3xl border border-white/10 p-8 md:p-12 mb-10 relative overflow-hidden">
-    <div aria-hidden="true" class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-prestige-gold/5 blur-3xl pointer-events-none"></div>
+  <div
+    class="navy-card rounded-3xl border border-white/10 p-8 md:p-12 mb-10 relative overflow-hidden"
+  >
+    <div
+      aria-hidden="true"
+      class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-prestige-gold/5 blur-3xl pointer-events-none"
+    ></div>
     <div class="relative z-10">
       <div class="flex items-center gap-3 mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-prestige-gold/10 border border-prestige-gold/20 flex items-center justify-center">
+        <div
+          class="w-12 h-12 rounded-2xl bg-prestige-gold/10 border border-prestige-gold/20 flex items-center justify-center"
+        >
           <ShieldCheck class="w-7 h-7 text-prestige-gold" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] font-black">Audit Protocol: 01-SELECT</div>
+        <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] font-black">
+          Audit Protocol: 01-SELECT
+        </div>
       </div>
-      <h1 class="text-4xl md:text-7xl font-sans font-black text-white mb-6 uppercase tracking-tight leading-[0.9] italic">
+      <h1
+        class="text-4xl md:text-7xl font-sans font-black text-white mb-6 uppercase tracking-tight leading-[0.9] italic"
+      >
         How to <span class="text-prestige-gold not-italic">Choose</span> a Platform
       </h1>
       <p class="text-text-body font-sans text-xl max-w-xl leading-relaxed italic opacity-80">
-        A 7-step institutional framework for auditing online casinos — from registry verification to cryptographic settlement speed benchmarks.
+        A 7-step institutional framework for auditing online casinos — from registry verification to
+        cryptographic settlement speed benchmarks.
       </p>
     </div>
   </div>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="space-y-4 mb-12">
     {#each steps as step}
-      <div class="navy-card rounded-2xl border border-white/10 p-6 md:p-8 flex gap-6 group hover:border-prestige-gold/30 transition-colors">
-        <div class="shrink-0 w-14 h-14 rounded-2xl bg-black/40 border border-white/10 flex items-center justify-center text-prestige-gold font-sans font-black text-2xl">
+      <div
+        class="navy-card rounded-2xl border border-white/10 p-6 md:p-8 flex gap-6 group hover:border-prestige-gold/30 transition-colors"
+      >
+        <div
+          class="shrink-0 w-14 h-14 rounded-2xl bg-black/40 border border-white/10 flex items-center justify-center text-prestige-gold font-sans font-black text-2xl"
+        >
           {step.n}
         </div>
         <div class="flex-1">
-          <h2 class="font-sans font-black text-white text-xl mb-2 uppercase tracking-tight italic group-hover:text-prestige-gold transition-colors">{step.title}</h2>
+          <h2
+            class="font-sans font-black text-white text-xl mb-2 uppercase tracking-tight italic group-hover:text-prestige-gold transition-colors"
+          >
+            {step.title}
+          </h2>
           <p class="text-base text-text-body font-sans leading-relaxed mb-4">{step.body}</p>
           {#if step.cta}
-            <a href={step.cta.href} class="inline-flex items-center gap-2 text-xs font-black text-prestige-gold uppercase tracking-widest hover:underline font-mono">
+            <a
+              href={step.cta.href}
+              class="inline-flex items-center gap-2 text-xs font-black text-prestige-gold uppercase tracking-widest hover:underline font-mono"
+            >
               <CheckCircle class="w-4 h-4" aria-hidden="true" />
               {step.cta.text} <span class="opacity-50">→</span>
             </a>
@@ -117,7 +190,9 @@
   </section>
 
   <section class="navy-card rounded-2xl border border-white/10 p-6 md:p-8 mb-10">
-    <h2 class="text-xs font-black text-prestige-gold mb-8 uppercase tracking-[0.2em] font-mono flex items-center gap-2">
+    <h2
+      class="text-xs font-black text-prestige-gold mb-8 uppercase tracking-[0.2em] font-mono flex items-center gap-2"
+    >
       <BookOpen class="w-4 h-4" aria-hidden="true" /> Platform Audit Checklist
     </h2>
     <div class="overflow-hidden rounded-2xl border border-white/5 bg-black/40">
@@ -125,8 +200,12 @@
         <thead>
           <tr class="bg-white/[0.03]">
             <th class="text-left px-5 py-4 text-slate-500 font-mono font-black">Audit Check</th>
-            <th class="text-left px-5 py-4 text-slate-500 font-mono font-black">Verification Metric</th>
-            <th class="text-left px-5 py-4 text-slate-500 font-mono font-black">Critical Variance</th>
+            <th class="text-left px-5 py-4 text-slate-500 font-mono font-black"
+              >Verification Metric</th
+            >
+            <th class="text-left px-5 py-4 text-slate-500 font-mono font-black"
+              >Critical Variance</th
+            >
           </tr>
         </thead>
         <tbody class="divide-y divide-white/5">
@@ -143,31 +222,74 @@
   </section>
 
   <section class="mb-10">
-    <h2 class="text-xs font-black text-prestige-gold mb-8 uppercase tracking-[0.2em] font-mono flex items-center gap-2">
+    <h2
+      class="text-xs font-black text-prestige-gold mb-8 uppercase tracking-[0.2em] font-mono flex items-center gap-2"
+    >
       <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Top-Rated Canadian Platform Registries
     </h2>
     <IBetShowcase variant="compact" showFeatures={true} />
   </section>
 
-  <div class="text-[11px] text-slate-500 font-mono uppercase tracking-[0.2em] mb-12 border-t border-white/5 pt-12">
+  <div
+    class="text-[11px] text-slate-500 font-mono uppercase tracking-[0.2em] mb-12 border-t border-white/5 pt-12"
+  >
     Institutional Registry:
-    <a href="/best-online-casinos-canada" class="text-prestige-gold hover:underline decoration-prestige-gold/30">Tier-1 Platform Audit</a>
+    <a
+      href="/best-online-casinos-canada"
+      class="text-prestige-gold hover:underline decoration-prestige-gold/30"
+      >Tier-1 Platform Audit</a
+    >
     ·
-    <a href="/guides/kyc-verification-online-casino" class="text-prestige-gold hover:underline decoration-prestige-gold/30">Identity Verification Protocols</a>
+    <a
+      href="/guides/kyc-verification-online-casino"
+      class="text-prestige-gold hover:underline decoration-prestige-gold/30"
+      >Identity Verification Protocols</a
+    >
     ·
-    <a href="/guides/how-to-withdraw-casino-winnings" class="text-prestige-gold hover:underline decoration-prestige-gold/30">Cashier Settlement Flows</a>
+    <a
+      href="/guides/how-to-withdraw-casino-winnings"
+      class="text-prestige-gold hover:underline decoration-prestige-gold/30"
+      >Cashier Settlement Flows</a
+    >
   </div>
 
   <nav aria-label="Related guides" class="mt-8">
     <ul class="flex flex-wrap gap-3">
-      <li><a href="/best-online-casinos-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Best online casinos Canada 2026</a></li>
-      <li><a href="/guides/kyc-verification-online-casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Casino KYC verification Canada</a></li>
-      <li><a href="/guides/how-to-withdraw-casino-winnings" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">How to withdraw casino winnings in Canada</a></li>
-      <li><a href="/guides/legal-online-casino-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Legal online casino Canada guide</a></li>
+      <li>
+        <a
+          href="/best-online-casinos-canada"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Best online casinos Canada 2026</a
+        >
+      </li>
+      <li>
+        <a
+          href="/guides/kyc-verification-online-casino"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Casino KYC verification Canada</a
+        >
+      </li>
+      <li>
+        <a
+          href="/guides/how-to-withdraw-casino-winnings"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >How to withdraw casino winnings in Canada</a
+        >
+      </li>
+      <li>
+        <a
+          href="/guides/legal-online-casino-canada"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Legal online casino Canada guide</a
+        >
+      </li>
     </ul>
   </nav>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

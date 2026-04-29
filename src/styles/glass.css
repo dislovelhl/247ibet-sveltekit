@@ -2,22 +2,14 @@
   /* ── Prestige Ultra Liquid Glass materials ── */
   .glass-thin {
     backdrop-filter: blur(12px) saturate(180%) brightness(120%);
-    background: linear-gradient(
-      175deg,
-      rgba(22, 36, 64, 0.4) 0%,
-      rgba(13, 22, 41, 0.3) 100%
-    );
+    background: linear-gradient(175deg, rgba(22, 36, 64, 0.4) 0%, rgba(13, 22, 41, 0.3) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top-color: rgba(255, 255, 255, 0.18);
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset;
   }
   .glass-regular {
     backdrop-filter: blur(40px) saturate(200%) brightness(110%);
-    background: linear-gradient(
-      175deg,
-      rgba(22, 36, 64, 0.55) 0%,
-      rgba(13, 22, 41, 0.45) 100%
-    );
+    background: linear-gradient(175deg, rgba(22, 36, 64, 0.55) 0%, rgba(13, 22, 41, 0.45) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-top-color: rgba(255, 255, 255, 0.2);
     box-shadow:
@@ -26,11 +18,7 @@
   }
   .glass-thick {
     backdrop-filter: blur(80px) saturate(220%) brightness(100%);
-    background: linear-gradient(
-      175deg,
-      rgba(22, 36, 64, 0.75) 0%,
-      rgba(13, 22, 41, 0.65) 100%
-    );
+    background: linear-gradient(175deg, rgba(22, 36, 64, 0.75) 0%, rgba(13, 22, 41, 0.65) 100%);
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-top-color: rgba(255, 255, 255, 0.24);
     box-shadow:
@@ -39,11 +27,7 @@
   }
   .glass-shimmer {
     backdrop-filter: blur(32px) saturate(160%) brightness(105%);
-    background: linear-gradient(
-      175deg,
-      rgba(22, 36, 64, 0.6) 0%,
-      rgba(13, 22, 41, 0.5) 100%
-    );
+    background: linear-gradient(175deg, rgba(22, 36, 64, 0.6) 0%, rgba(13, 22, 41, 0.5) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-top-color: rgba(255, 255, 255, 0.2);
     box-shadow:

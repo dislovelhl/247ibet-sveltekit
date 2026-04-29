@@ -4,13 +4,22 @@
   interface Props {
     href: string;
     class?: string;
+    rel?: string;
     children: Snippet;
     [key: string]: unknown;
   }
 
-  let { href, class: className = '', children, ...rest }: Props = $props();
+  // Default rel for affiliate iGaming outbound — AGCO/AGLC + Google compliant.
+  // sponsored: declares paid/affiliate link; nofollow: no PageRank flow; noopener noreferrer: tab-jacking + referrer leak guard.
+  let {
+    href,
+    class: className = '',
+    rel = 'nofollow sponsored noopener noreferrer',
+    children,
+    ...rest
+  }: Props = $props();
 </script>
 
-<a {href} class={className} target="_blank" rel="noopener noreferrer" {...rest}>
+<a {href} class={className} target="_blank" {rel} {...rest}>
   {@render children()}
 </a>

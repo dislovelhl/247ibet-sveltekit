@@ -1,5 +1,14 @@
 <script lang="ts">
-  import { ShieldCheck, Zap, CreditCard, Gamepad2, Headphones, Scale, BookOpen } from 'lucide-svelte';
+  import JsonLd from '$lib/components/JsonLd.svelte';
+  import {
+    ShieldCheck,
+    Zap,
+    CreditCard,
+    Gamepad2,
+    Headphones,
+    Scale,
+    BookOpen,
+  } from 'lucide-svelte';
 
   const CRITERIA = [
     {
@@ -90,17 +99,34 @@
 
 <svelte:head>
   <title>How We Verify Online Casinos and Sportsbooks | 247iBET</title>
-  <meta name="description" content="Our Canadian casino and sportsbook testing covers licensing checks, real withdrawal tests, payment methods, KYC documentation, support response, and game fairness audits." />
+  <meta
+    name="description"
+    content="Our Canadian casino and sportsbook testing covers licensing checks, real withdrawal tests, payment methods, KYC documentation, support response, and game fairness audits."
+  />
   <meta property="og:title" content="How We Verify Online Casinos and Sportsbooks | 247iBET" />
-  <meta property="og:description" content="Canadian casino and sportsbook verification methodology covering licensing, withdrawals, payments, KYC, and game fairness." />
+  <meta
+    property="og:description"
+    content="Canadian casino and sportsbook verification methodology covering licensing, withdrawals, payments, KYC, and game fairness."
+  />
   <meta name="twitter:title" content="How We Verify Online Casinos and Sportsbooks | 247iBET" />
-  <meta name="twitter:description" content="Our Canadian iGaming testing process: licensing, withdrawals, payments, KYC, support, and promotional fairness." />
+  <meta
+    name="twitter:description"
+    content="Our Canadian iGaming testing process: licensing, withdrawals, payments, KYC, support, and promotional fairness."
+  />
   <link rel="canonical" href="https://247ibet.ca/about/how-we-test" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"How We Verify Online Casinos and Sportsbooks","description":"Documented Canadian iGaming testing methodology covering licensing, withdrawals, payments, KYC, support, and promotional fairness.","url":"https://247ibet.ca/about/how-we-test"})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      headline: 'How We Verify Online Casinos and Sportsbooks',
+      description:
+        'Documented Canadian iGaming testing methodology covering licensing, withdrawals, payments, KYC, support, and promotional fairness.',
+      url: 'https://247ibet.ca/about/how-we-test',
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
-
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -112,17 +138,26 @@
   </nav>
 
   <header class="navy-card rounded-3xl p-6 md:p-10 mb-10 relative overflow-hidden">
-    <div aria-hidden="true" class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-slate-blue/5 blur-3xl pointer-events-none"></div>
+    <div
+      aria-hidden="true"
+      class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-slate-blue/5 blur-3xl pointer-events-none"
+    ></div>
     <div class="relative z-10">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-xl bg-slate-blue/10 border border-slate-blue/20 flex items-center justify-center">
+        <div
+          class="w-12 h-12 rounded-xl bg-slate-blue/10 border border-slate-blue/20 flex items-center justify-center"
+        >
           <BookOpen class="w-6 h-6 text-slate-blue" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em]">Verification Methodology</div>
+        <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em]">
+          Verification Methodology
+        </div>
       </div>
       <h1 class="text-3xl md:text-4xl font-black text-white mb-4">How We Verify Operators</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
-        Every featured page on 247iBET follows a documented, repeatable verification process. We open real accounts, make real deposits, and test real withdrawals. No pay-to-place. No undisclosed conflicts.
+        Every featured page on 247iBET follows a documented, repeatable verification process. We
+        open real accounts, make real deposits, and test real withdrawals. No pay-to-place. No
+        undisclosed conflicts.
       </p>
     </div>
   </header>
@@ -131,14 +166,7 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-4">Verification Principles</h2>
     <ul class="space-y-3 text-sm text-gray-400 font-sans">
-      {#each [
-        'We open and fund real accounts — our team tests withdrawals with real money.',
-        'Operators cannot pay for placement or to alter their position.',
-        "We disclose all commercial relationships — commissions don't influence our placement decisions.",
-        'Featured pages are updated at least quarterly; major changes are updated within 72 hours.',
-        'We comply with AGCO advertising guidelines — bonus amounts are not displayed on public pages.',
-        "We cite primary sources — regulators, operator T&Cs, and test results — not secondary claims.",
-      ] as principle}
+      {#each ['We open and fund real accounts — our team tests withdrawals with real money.', 'Operators cannot pay for placement or to alter their position.', "We disclose all commercial relationships — commissions don't influence our placement decisions.", 'Featured pages are updated at least quarterly; major changes are updated within 72 hours.', 'We comply with AGCO advertising guidelines — bonus amounts are not displayed on public pages.', 'We cite primary sources — regulators, operator T&Cs, and test results — not secondary claims.'] as principle}
         <li class="flex items-start gap-2">
           <ShieldCheck class="w-4 h-4 text-slate-blue shrink-0 mt-0.5" aria-hidden="true" />
           {principle}
@@ -172,16 +200,11 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-3">Update Policy</h2>
     <p class="text-sm text-gray-400 font-sans mb-3">
-      All operator reviews display a "last reviewed" date. Full re-reviews happen quarterly. Triggered re-reviews happen within 72 hours when:
+      All operator reviews display a "last reviewed" date. Full re-reviews happen quarterly.
+      Triggered re-reviews happen within 72 hours when:
     </p>
     <ul class="space-y-2 text-sm text-gray-400 font-sans">
-      {#each [
-        "An operator's AGCO/MGA licence status changes",
-        'A major withdrawal delay or payment issue is reported',
-        'Ownership or parent company changes',
-        'New payment methods are added or removed',
-        'An AGCO enforcement action is taken',
-      ] as item}
+      {#each ["An operator's AGCO/MGA licence status changes", 'A major withdrawal delay or payment issue is reported', 'Ownership or parent company changes', 'New payment methods are added or removed', 'An AGCO enforcement action is taken'] as item}
         <li class="flex items-start gap-2">
           <span class="text-slate-blue shrink-0">·</span>
           {item}
@@ -192,9 +215,9 @@
 
   <div class="mt-4 text-sm text-gray-500 font-sans">
     Questions about our process?
-    <a href="/contact" class="text-slate-blue hover:underline">Contact us</a>.
-    See also:
-    <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">Affiliate Disclosure</a>.
+    <a href="/contact" class="text-slate-blue hover:underline">Contact us</a>. See also:
+    <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline"
+      >Affiliate Disclosure</a
+    >.
   </div>
-
 </div>

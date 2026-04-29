@@ -8,10 +8,10 @@
     Download,
     Info,
     Landmark,
-    LockKeyhole,
     ShieldCheck,
     Upload,
   } from 'lucide-svelte';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
 
@@ -133,7 +133,9 @@
   let selectedAmount = $state(100);
   let openFaq = $state(0);
 
-  const reviewWindow = $derived(selectedAmount >= 1000 ? 'manual review may apply' : 'standard review');
+  const reviewWindow = $derived(
+    selectedAmount >= 1000 ? 'manual review may apply' : 'standard review',
+  );
   const estimatedWindow = $derived(selectedAmount >= 1000 ? '30-60 min' : '15-30 min');
 
   const faqSchema = {
@@ -159,7 +161,7 @@
     content="Deposit and withdraw with Interac e-Transfer at 247iBET. Fast CAD payments for Canadian players."
   />
   <link rel="canonical" href="https://247ibet.ca/deposit" />
-  <script type="application/ld+json">{@html JSON.stringify(faqSchema).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')}</script>
+  <JsonLd schema={faqSchema} />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-28 pb-20">
@@ -176,20 +178,26 @@
 
     <header class="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
       <div>
-        <h1 class="max-w-4xl text-[clamp(2.75rem,6.5vw,5.75rem)] font-black leading-[1.02] tracking-normal text-white">
+        <h1
+          class="max-w-4xl text-[clamp(2.75rem,6.5vw,5.75rem)] font-black leading-[1.02] tracking-normal text-white"
+        >
           Deposit &amp; Withdraw <br />
           with <span class="text-prestige-gold">Interac</span> in Canada
         </h1>
         <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
-          Fast, secure, and trusted Interac e-Transfer deposits and withdrawals at 247iBET,
-          built for Canadian players who want CAD-native banking.
+          Fast, secure, and trusted Interac e-Transfer deposits and withdrawals at 247iBET, built
+          for Canadian players who want CAD-native banking.
         </p>
 
-        <div class="mt-10 grid gap-3 rounded-xl border border-white/10 bg-navy-card/70 p-4 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3">
+        <div
+          class="mt-10 grid gap-3 rounded-xl border border-white/10 bg-navy-card/70 p-4 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
+        >
           {#each trustItems as item}
             {@const Icon = item.icon}
             <div class="flex gap-3 rounded-lg bg-black/14 p-3">
-              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold">
+              <div
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
+              >
                 <Icon class="h-5 w-5" aria-hidden="true" />
               </div>
               <div>
@@ -201,24 +209,30 @@
         </div>
       </div>
 
-      <div class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl">
+      <div
+        class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl"
+      >
         <img
           src="/images/generated/interac-payment-hero.png"
           alt="Interac e-Transfer secure payment visual"
           class="h-full min-h-[520px] w-full object-cover"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-navy-black/86 via-navy-black/15 to-transparent"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-navy-black/86 via-navy-black/15 to-transparent"
+        ></div>
         <div class="absolute inset-x-0 bottom-0 p-8">
           <p class="text-base font-semibold text-white">Secure payments. Trusted by millions.</p>
           <p class="mt-2 max-w-md text-sm leading-6 text-text-body">
-            Interac keeps sensitive payment steps inside your bank flow while 247iBET records the cashier result.
+            Interac keeps sensitive payment steps inside your bank flow while 247iBET records the
+            cashier result.
           </p>
           <div class="mt-8 rounded-xl border border-white/10 bg-black/24 p-4">
             <div class="flex flex-wrap items-center gap-3">
               {#each amountOptions as amount}
                 <button
                   type="button"
-                  class="rounded-full border px-4 py-2 text-xs font-black transition-colors {selectedAmount === amount
+                  class="rounded-full border px-4 py-2 text-xs font-black transition-colors {selectedAmount ===
+                  amount
                     ? 'border-prestige-gold bg-prestige-gold text-navy-black'
                     : 'border-white/10 bg-white/5 text-white hover:border-white/24'}"
                   onclick={() => (selectedAmount = amount)}
@@ -229,11 +243,15 @@
             </div>
             <div class="mt-5 grid gap-3 text-sm sm:grid-cols-2">
               <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">Selected amount</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                  Selected amount
+                </p>
                 <p class="mt-1 text-xl font-black text-white">CAD ${selectedAmount}</p>
               </div>
               <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">Estimated payout</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                  Estimated payout
+                </p>
                 <p class="mt-1 text-xl font-black text-prestige-gold">{estimatedWindow}</p>
               </div>
             </div>
@@ -243,22 +261,31 @@
       </div>
     </header>
 
-    <section class="mt-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6">
+    <section
+      class="mt-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
+    >
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div class="flex gap-4">
-          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
+          >
             <Info class="h-6 w-6" aria-hidden="true" />
           </div>
           <div>
             <p class="font-black text-white">
-              Interac e-Transfer payouts at 247iBET are typically processed within 15-30 minutes of approval.
+              Interac e-Transfer payouts at 247iBET are typically processed within 15-30 minutes of
+              approval.
             </p>
             <p class="mt-2 max-w-3xl text-sm leading-6 text-text-body">
-              This provides a fast Canadian withdrawal route, with direct bank integration and security review before release.
+              This provides a fast Canadian withdrawal route, with direct bank integration and
+              security review before release.
             </p>
           </div>
         </div>
-        <a href="/fast-payouts" class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light">
+        <a
+          href="/fast-payouts"
+          class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light"
+        >
           Learn more about timing
           <ArrowRight class="h-4 w-4" aria-hidden="true" />
         </a>
@@ -268,7 +295,9 @@
     <section class="mt-12 grid gap-6 lg:grid-cols-2">
       <div class="navy-card p-6 md:p-8">
         <div class="mb-8 flex items-center gap-4">
-          <div class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
+          >
             <Upload class="h-7 w-7" aria-hidden="true" />
           </div>
           <h2 class="text-3xl font-black text-white">How to Deposit</h2>
@@ -276,7 +305,10 @@
         <ol class="space-y-7">
           {#each depositSteps as step, index}
             <li class="grid grid-cols-[2.25rem_1fr] gap-4">
-              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black">{index + 1}</span>
+              <span
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
+                >{index + 1}</span
+              >
               <span>
                 <span class="block text-lg font-black text-white">{step.title}</span>
                 <span class="mt-2 block text-sm leading-6 text-text-body">{step.body}</span>
@@ -288,7 +320,9 @@
 
       <div class="navy-card p-6 md:p-8">
         <div class="mb-8 flex items-center gap-4">
-          <div class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold">
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
+          >
             <Download class="h-7 w-7" aria-hidden="true" />
           </div>
           <h2 class="text-3xl font-black text-white">How to Withdraw</h2>
@@ -296,7 +330,10 @@
         <ol class="space-y-7">
           {#each withdrawalSteps as step, index}
             <li class="grid grid-cols-[2.25rem_1fr] gap-4">
-              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black">{index + 1}</span>
+              <span
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
+                >{index + 1}</span
+              >
               <span>
                 <span class="block text-lg font-black text-white">{step.title}</span>
                 <span class="mt-2 block text-sm leading-6 text-text-body">{step.body}</span>
@@ -312,7 +349,9 @@
       <div class="mt-7 overflow-x-auto">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
-            <tr class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary">
+            <tr
+              class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary"
+            >
               <th class="px-4 py-4 font-black">Service</th>
               <th class="px-4 py-4 font-black">Typical Time</th>
               <th class="px-4 py-4 font-black">Limit</th>
@@ -331,9 +370,14 @@
           </tbody>
         </table>
       </div>
-      <div class="mt-7 flex gap-3 rounded-lg border border-white/10 bg-black/24 p-4 text-sm text-text-body">
+      <div
+        class="mt-7 flex gap-3 rounded-lg border border-white/10 bg-black/24 p-4 text-sm text-text-body"
+      >
         <ShieldCheck class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
-        <p>All times are estimates and may vary based on bank, verification status, and account review.</p>
+        <p>
+          All times are estimates and may vary based on bank, verification status, and account
+          review.
+        </p>
       </div>
     </section>
 
@@ -345,9 +389,14 @@
             <div>
               <h2 class="text-2xl font-black text-white">{card.title}</h2>
               <p class="mt-3 max-w-md text-sm leading-6 text-text-body">{card.body}</p>
-              <span class="mt-6 inline-flex items-center gap-2 text-sm font-black text-prestige-gold group-hover:text-prestige-gold-light">
+              <span
+                class="mt-6 inline-flex items-center gap-2 text-sm font-black text-prestige-gold group-hover:text-prestige-gold-light"
+              >
                 {card.cta}
-                <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                <ArrowRight
+                  class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
               </span>
             </div>
             <Icon class="h-16 w-16 shrink-0 text-prestige-gold/80" aria-hidden="true" />
@@ -368,7 +417,12 @@
               onclick={() => (openFaq = openFaq === index ? -1 : index)}
             >
               <span class="text-base font-black text-white">{item.question}</span>
-              <ChevronDown class="h-5 w-5 shrink-0 text-text-body transition-transform {openFaq === index ? 'rotate-180' : ''}" aria-hidden="true" />
+              <ChevronDown
+                class="h-5 w-5 shrink-0 text-text-body transition-transform {openFaq === index
+                  ? 'rotate-180'
+                  : ''}"
+                aria-hidden="true"
+              />
             </button>
             {#if openFaq === index}
               <p class="pb-5 pr-10 text-sm leading-6 text-text-body">{item.answer}</p>
@@ -378,15 +432,23 @@
       </div>
       <p class="mt-6 text-center text-sm text-text-body">
         Still have questions?
-        <a href="/contact" class="font-black text-prestige-gold hover:text-prestige-gold-light">Contact our support team 24/7.</a>
+        <a href="/contact" class="font-black text-prestige-gold hover:text-prestige-gold-light"
+          >Contact our support team 24/7.</a
+        >
       </p>
     </section>
 
-    <section class="mt-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-7 shadow-2xl md:p-10">
+    <section
+      class="mt-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-7 shadow-2xl md:p-10"
+    >
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
-          <h2 class="text-3xl font-black text-white md:text-4xl">Ready to make a secure deposit?</h2>
-          <p class="mt-3 text-base text-text-body">Join 247iBET today and use fast, trusted Interac payments.</p>
+          <h2 class="text-3xl font-black text-white md:text-4xl">
+            Ready to make a secure deposit?
+          </h2>
+          <p class="mt-3 text-base text-text-body">
+            Join 247iBET today and use fast, trusted Interac payments.
+          </p>
         </div>
         <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
           Join Now - It&apos;s Free

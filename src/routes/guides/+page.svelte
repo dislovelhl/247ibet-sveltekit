@@ -1,15 +1,34 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
 <svelte:head>
   <title>Canadian Betting Guides &amp; Resources | 247iBET</title>
-  <meta name="description" content="Browse 247iBET guides on legal betting in Canada: Alberta and Ontario market explainers, strategy basics, payments, and responsible gambling." />
+  <meta
+    name="description"
+    content="Browse 247iBET guides on legal betting in Canada: Alberta and Ontario market explainers, strategy basics, payments, and responsible gambling."
+  />
   <meta property="og:title" content="Canadian Betting Guides &amp; Resources | 247iBET" />
-  <meta property="og:description" content="Browse 247iBET educational guides on legal betting in Canada." />
+  <meta
+    property="og:description"
+    content="Browse 247iBET educational guides on legal betting in Canada."
+  />
   <meta name="twitter:title" content="Canadian Betting Guides &amp; Resources | 247iBET" />
-  <meta name="twitter:description" content="Browse 247iBET educational guides on legal betting in Canada." />
+  <meta
+    name="twitter:description"
+    content="Browse 247iBET educational guides on legal betting in Canada."
+  />
   <link rel="canonical" href="https://247ibet.ca/guides" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://247ibet.ca/guides"}]})}</script>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://247ibet.ca/guides' },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
@@ -70,8 +89,20 @@
 
   <nav aria-label="Related guides" class="mt-8">
     <ul class="flex flex-wrap gap-3">
-      <li><a href="/alberta" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Alberta iGaming Hub</a></li>
-      <li><a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Interac Casino Guide</a></li>
+      <li>
+        <a
+          href="/alberta"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Alberta iGaming Hub</a
+        >
+      </li>
+      <li>
+        <a
+          href="/interac"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Interac Casino Guide</a
+        >
+      </li>
     </ul>
   </nav>
 </div>
