@@ -1,5 +1,5 @@
-import type { EEATScore, GeoPageFailure, GeoResult } from '$lib/workflows/types.js';
-import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
+import type { EEATScore, GeoPageFailure, GeoResult } from '../lib/workflows/types.js';
+import { PAGE_REGISTRY } from '../lib/workflows/pages.js';
 import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
 import { scoreEEAT } from './steps/score-eeat.js';

@@ -1,5 +1,5 @@
-import type { SeoAuditResult, SeoIssue, SeoPageReport } from '$lib/workflows/types.js';
-import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
+import type { SeoAuditResult, SeoIssue, SeoPageReport } from '../lib/workflows/types.js';
+import { PAGE_REGISTRY } from '../lib/workflows/pages.js';
 import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
 import { writeReport } from './steps/write-report.js';

@@ -1,4 +1,4 @@
-import type { EEATScore } from '$lib/workflows/types.js';
+import type { EEATScore } from '../../lib/workflows/types.js';
 
 export async function scoreEEAT(path: string, html: string): Promise<EEATScore> {
 	'use step';

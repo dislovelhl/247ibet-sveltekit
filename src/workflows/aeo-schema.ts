@@ -1,5 +1,5 @@
-import type { AeoSchemaInput, AeoSchemaResult, FAQPageSchema } from '$lib/workflows/types.js';
-import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
+import type { AeoSchemaInput, AeoSchemaResult, FAQPageSchema } from '../lib/workflows/types.js';
+import { PAGE_REGISTRY } from '../lib/workflows/pages.js';
 import { parseSvelteFaq } from './steps/parse-svelte-faq.js';
 
 async function writeSchemaFile(slug: string, schema: FAQPageSchema): Promise<void> {

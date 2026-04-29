@@ -1,4 +1,4 @@
-import type { FAQItem } from '$lib/workflows/types.js';
+import type { FAQItem } from '../../lib/workflows/types.js';
 
 export async function parseSvelteFaq(slug: string): Promise<FAQItem[]> {
 	'use step';
