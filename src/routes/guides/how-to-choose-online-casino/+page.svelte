@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle, ShieldCheck, BookOpen } from 'lucide-svelte';
@@ -92,7 +93,7 @@
     name="twitter:description"
     content="Step-by-step guide to choosing a safe, licensed online casino in Canada. How to check AGCO licensing, verify payouts, review promotional terms, and avoid rogue operators."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/how-to-choose-online-casino" />
+  <link rel="canonical" href={canonicalUrl('/guides/how-to-choose-online-casino')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

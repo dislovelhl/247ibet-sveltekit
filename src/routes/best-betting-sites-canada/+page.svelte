@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 </script>
@@ -17,7 +18,7 @@
     property="og:description"
     content="Compare Canadian betting sites across casino and sportsbook categories. Rankings weigh Interac payout speed, Ontario availability, odds value, and player support."
   />
-  <link rel="canonical" href="https://247ibet.ca/best-betting-sites-canada" />
+  <link rel="canonical" href={canonicalUrl('/best-betting-sites-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -56,13 +57,19 @@
         <li class="text-white font-medium">Best Betting Sites</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Best Betting Sites Canada</h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      All-category rankings covering Canada's top casino and sportsbook operators. Compare by
+    <div class="mb-5 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">All-category rankings</span>
+      <span class="status-badge status-badge--licensed">AGCO &amp; Kahnawake reviewed</span>
+    </div>
+    <h1 class="page-hero-title text-[clamp(2rem,8vw,3.75rem)] mb-4">Best Betting Sites Canada</h1>
+    <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
+      All-category rankings covering Canada's top casino and sportsbook operators — compare by
       Interac payout speed, province availability, licensing context, market depth, and player
       experience.
     </p>
-    <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-03-01</p>
+    <p class="mt-3 text-xs text-text-tertiary">
+      Last updated: <time datetime="2026-03-01" class="stat">2026-03-01</time>
+    </p>
   </header>
 
   <div
@@ -74,16 +81,21 @@
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} ctaText="Join Now" />
 
   <div class="navy-card rounded-xl mt-16 p-6 md:p-8">
-    <h2 class="text-2xl font-bold mb-4">What Matters Most on the Best Betting Sites in Canada</h2>
+    <h2 class="font-display text-2xl font-semibold mb-2 sm:text-3xl">
+      What Matters Most on the Best Betting Sites in Canada
+    </h2>
+    <p class="mb-6 max-w-2xl text-sm leading-relaxed text-text-tertiary">
+      The four pillars that separate a money page from a marketing page.
+    </p>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400 font-sans leading-relaxed"
+      class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-text-body font-sans leading-relaxed"
     >
       <div>
         <h3 class="text-white font-bold mb-2">Payout reliability</h3>
         <p>
           We prioritize sites that support Interac e-Transfer and publish realistic withdrawal
-          windows. Fast payout claims only matter when KYC, banking method, and support quality line
-          up.
+          windows. Fast-payout claims only matter when KYC, banking method, and support quality
+          line up.
         </p>
       </div>
       <div>
@@ -97,7 +109,7 @@
       <div>
         <h3 class="text-white font-bold mb-2">Casino + sportsbook depth</h3>
         <p>
-          The strongest betting sites cover both casino and sports well: NHL and CFL market depth,
+          The strongest betting sites cover both casino and sports well — NHL and CFL market depth,
           same-game parlays, live betting, plus a casino lobby that supports CAD accounts and
           familiar banking rails.
         </p>

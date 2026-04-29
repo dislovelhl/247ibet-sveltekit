@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
@@ -17,7 +18,7 @@
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/bonus-terms" />
-  <link rel="canonical" href="https://247ibet.ca/bonus-terms" />
+  <link rel="canonical" href={canonicalUrl('/bonus-terms')} />
   <JsonLd
     schema={[
       {

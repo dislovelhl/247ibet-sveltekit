@@ -5,7 +5,7 @@ import type { RequestHandler } from './$types';
 import { aeoSchemaWorkflow } from '../../../../workflows/aeo-schema.js';
 import type { AeoSchemaInput } from '$lib/workflows/types.js';
 
-export const config = { runtime: 'nodejs20.x', maxDuration: 60 };
+export const config = { runtime: 'nodejs24.x', maxDuration: 60 };
 
 const MAX_BODY_BYTES = 10_000;
 const MAX_PAGES = 50;

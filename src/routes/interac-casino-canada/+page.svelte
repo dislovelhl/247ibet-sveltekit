@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -118,7 +119,7 @@
     property="og:description"
     content="See how Interac deposits, withdrawals, fees, and cashier rules work for Canadian online casino players."
   />
-  <link rel="canonical" href="https://247ibet.ca/interac-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/interac-casino-canada')} />
   <JsonLd schema={articleSchema} />
   <JsonLd schema={breadcrumbSchema} />
   <JsonLd schema={faqSchema} />

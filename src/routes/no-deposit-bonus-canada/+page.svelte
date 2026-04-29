@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { AlertTriangle, Info, CheckCircle } from 'lucide-svelte';
@@ -70,7 +71,7 @@
     property="og:description"
     content="Understanding deposit-free offers in Canada. Ontario AGCO compliance explained. Compare casinos with play credit offers outside Ontario."
   />
-  <link rel="canonical" href="https://247ibet.ca/no-deposit-bonus-canada" />
+  <link rel="canonical" href={canonicalUrl('/no-deposit-bonus-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

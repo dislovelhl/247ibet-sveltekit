@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Wallet, LockKeyhole } from 'lucide-svelte';
@@ -137,7 +138,7 @@
     name="twitter:description"
     content="Interac casino guide for Canadian players. Audit deposits, withdrawals, limits, fees, common banking questions, and Play responsibly before you use the cashier."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/interac-e-transfer-casino" />
+  <link rel="canonical" href={canonicalUrl('/guides/interac-e-transfer-casino')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

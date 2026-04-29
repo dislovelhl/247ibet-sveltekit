@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const auditItems = [
     {
@@ -46,7 +47,7 @@
     name="twitter:description"
     content="How to verify legit online casinos in Canada. Our security audit covers AGCO/AGLC licensing, RNG certificates, and player fund protection protocols."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/legit-safe-online-casinos" />
+  <link rel="canonical" href={canonicalUrl('/guides/legit-safe-online-casinos')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -112,7 +113,7 @@
     content="Bet on the NBA in Canada at 247iBET — game lines, player props, parlays, and live in-play. Fast Interac payouts. 19+."
   />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://247ibet.ca/events/nba-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/events/nba-betting-canada')} />
   <JsonLd schema={articleSchema} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>

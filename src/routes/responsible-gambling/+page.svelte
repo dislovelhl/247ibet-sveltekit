@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     AlertTriangle,
@@ -203,7 +204,7 @@
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/responsible-gambling" />
-  <link rel="canonical" href="https://247ibet.ca/responsible-gambling" />
+  <link rel="canonical" href={canonicalUrl('/responsible-gambling')} />
   <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 

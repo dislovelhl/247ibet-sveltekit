@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import {
     ArrowRight,
     BadgeCheck,
@@ -101,7 +102,7 @@
     name="description"
     content="Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance."
   />
-  <link rel="canonical" href="https://247ibet.ca/interac" />
+  <link rel="canonical" href={canonicalUrl('/interac')} />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-6 text-white">

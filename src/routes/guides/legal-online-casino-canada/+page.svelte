@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -142,7 +143,7 @@
     name="twitter:description"
     content="See when online casino play is legal in Canada, how Ontario and Alberta differ, and how to verify a regulated site before depositing."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/legal-online-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/legal-online-casino-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   const PROVINCE_STATUS = [
     {
       province: 'Ontario',
@@ -98,7 +99,7 @@
     name="twitter:description"
     content="Learn how province-specific rules affect online casino and sportsbook access across Canada."
   />
-  <link rel="canonical" href="https://247ibet.ca/legal-online-gambling-canada" />
+  <link rel="canonical" href={canonicalUrl('/legal-online-gambling-canada')} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">

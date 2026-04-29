@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
@@ -19,7 +20,7 @@
     name="twitter:description"
     content="How 247iBET uses cookies on our Canadian iGaming platform."
   />
-  <link rel="canonical" href="https://247ibet.ca/cookie-policy" />
+  <link rel="canonical" href={canonicalUrl('/cookie-policy')} />
   <JsonLd
     schema={[
       {

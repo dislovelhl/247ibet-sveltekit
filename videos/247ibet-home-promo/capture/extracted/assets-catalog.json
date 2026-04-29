@@ -1,0 +1,751 @@
+[
+  {
+    "url": "http://localhost:5175/images/brand/logo.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "247iBET Logo",
+    "description": "247iBET Logo",
+    "aboveFold": true
+  },
+  {
+    "url": "http://localhost:5175/images/generated/casino-premium-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]",
+      "css url()"
+    ],
+    "notes": null,
+    "nearestHeading": "Online Casino & Sportsbook + Fast Payouts",
+    "sectionClasses": "relative overflow-hidden border-b border-prestige-gold/30",
+    "aboveFold": true
+  },
+  {
+    "url": "http://localhost:5175/images/generated/casino-slots-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/casino-live-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/casino-blackjack-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/sportsbook-premium-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/sportsbook-live-betting-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/sportsbook-nhl-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/sportsbook-nba-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Casino",
+    "sectionClasses": "grid gap-6 xl:grid-cols-2",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/sportsbook-parlay-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Expert Guides",
+    "sectionClasses": "rounded-xl border border-white/10 bg-navy-card/80 p-5",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/fast-payouts-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Expert Guides",
+    "sectionClasses": "rounded-xl border border-white/10 bg-navy-card/80 p-5",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/images/generated/bonus-wagering-hero.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": null,
+    "nearestHeading": "Expert Guides",
+    "sectionClasses": "rounded-xl border border-white/10 bg-navy-card/80 p-5",
+    "aboveFold": false
+  },
+  {
+    "url": "http://localhost:5175/favicon.png",
+    "type": "Icon",
+    "contexts": [
+      "link[rel=\"icon\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5173/og-image.png",
+    "type": "Image",
+    "contexts": [
+      "meta[og:image]",
+      "meta[twitter:image]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/images/generated/safe-play-shield-hero.png",
+    "type": "Background",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-300-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-300-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-300-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-300-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-300-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-300-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-vietnamese-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-ext-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+be-vietnam-pro@5.2.8/node_modules/@fontsource/be-vietnam-pro/files/be-vietnam-pro-latin-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-500-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-500-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-600-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-600-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-cyrillic-ext-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-vietnamese-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-ext-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-700-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+plus-jakarta-sans@5.2.8/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-700-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-cyrillic-ext-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-cyrillic-ext-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-cyrillic-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-cyrillic-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-greek-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-greek-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-vietnamese-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-vietnamese-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-ext-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-ext-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "http://localhost:5175/node_modules/.pnpm/@fontsource+jetbrains-mono@5.2.8/node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  }
+]

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Shield } from 'lucide-svelte';
@@ -54,7 +55,7 @@
     property="og:description"
     content="How sportsbook welcome offers work, wagering requirements, and Ontario compliance rules."
   />
-  <link rel="canonical" href="https://247ibet.ca/free-bets-canada" />
+  <link rel="canonical" href={canonicalUrl('/free-bets-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

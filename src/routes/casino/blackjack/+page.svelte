@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
@@ -90,7 +91,7 @@
     name="twitter:description"
     content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/blackjack" />
+  <link rel="canonical" href={canonicalUrl('/casino/blackjack')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

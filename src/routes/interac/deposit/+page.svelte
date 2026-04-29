@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
@@ -61,7 +62,7 @@
     property="og:description"
     content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
   />
-  <link rel="canonical" href="https://247ibet.ca/interac/deposit" />
+  <link rel="canonical" href={canonicalUrl('/interac/deposit')} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

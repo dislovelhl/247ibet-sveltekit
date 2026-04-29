@@ -1,6 +1,7 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { page } from '$app/stores';
+  import { canonicalUrl } from '$lib/site';
 </script>
 
 <svelte:head>
@@ -9,7 +10,7 @@
     name="description"
     content="Complete guide to payment methods at 247iBET for Canadian players — Interac, deposits, withdrawals."
   />
-  <link rel="canonical" href={`https://247ibet.ca/payments/${$page.params.slug}`} />
+  <link rel="canonical" href={canonicalUrl(`/payments/${$page.params.slug}`)} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">

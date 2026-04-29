@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -98,7 +99,7 @@
   />
   <link
     rel="canonical"
-    href="https://247ibet.ca/guides/ontario-sportsbook-registration-checklist"
+    href={canonicalUrl('/guides/ontario-sportsbook-registration-checklist')}
   />
   <JsonLd
     schema={{

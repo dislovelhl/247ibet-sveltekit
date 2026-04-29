@@ -492,8 +492,17 @@
                     <td class="px-4 py-4 text-text-body">{row.boosts}</td>
                     <td class="px-4 py-4 text-text-body">{row.payout}</td>
                     <td class="px-4 py-4">
-                      <span class="inline-flex items-center gap-1 text-prestige-gold">
-                        <Star class="h-3.5 w-3.5 fill-prestige-gold" aria-hidden="true" />
+                      <span
+                        class="inline-flex items-center gap-1 {row.highlight
+                          ? 'text-prestige-gold'
+                          : 'text-text-tertiary'}"
+                      >
+                        <Star
+                          class="h-3.5 w-3.5 {row.highlight
+                            ? 'fill-prestige-gold'
+                            : 'fill-none stroke-current'}"
+                          aria-hidden="true"
+                        />
                         <span class="font-mono text-xs">{row.rating}</span>
                       </span>
                     </td>
@@ -855,7 +864,10 @@
             Review the market, confirm the odds, set your limits, and use the 247iBET sportsbook hub
             as your starting point.
           </p>
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary mt-5">
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="hero-cta-primary mt-5 w-full justify-center sm:w-auto sm:min-w-72"
+          >
             Enter sportsbook
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </SafeExternalLink>

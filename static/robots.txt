@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /design-system/
+Disallow: /lab/
+Disallow: /handler/
+Disallow: /search
+Disallow: /api/
+
 Sitemap: https://247ibet.ca/sitemap.xml

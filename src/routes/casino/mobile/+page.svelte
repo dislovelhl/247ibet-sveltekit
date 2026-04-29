@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
@@ -88,7 +89,7 @@
     name="twitter:description"
     content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/mobile" />
+  <link rel="canonical" href={canonicalUrl('/casino/mobile')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

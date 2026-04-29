@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
@@ -22,7 +23,7 @@
     content="Privacy Policy: How 247iBET Protects Your Data in Canada | 2026"
   />
   <meta name="twitter:description" content="How 247iBET handles and protects your personal data." />
-  <link rel="canonical" href="https://247ibet.ca/privacy-policy" />
+  <link rel="canonical" href={canonicalUrl('/privacy-policy')} />
   <JsonLd
     schema={[
       {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -39,7 +40,7 @@
     property="og:description"
     content="Find the best low wagering casinos in Canada by offer fairness. We compare wagering multiples, game restrictions, and withdrawal caps to show true value."
   />
-  <link rel="canonical" href="https://247ibet.ca/low-wagering-casinos-canada" />
+  <link rel="canonical" href={canonicalUrl('/low-wagering-casinos-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

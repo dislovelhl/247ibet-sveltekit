@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     ArrowRight,
@@ -219,7 +220,7 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://247ibet.ca/casino" />
-  <link rel="canonical" href="https://247ibet.ca/casino" />
+  <link rel="canonical" href={canonicalUrl('/casino')} />
   <JsonLd schema={casinoSchema} />
 </svelte:head>
 
@@ -236,9 +237,12 @@
       ></div>
 
       <div class="relative max-w-4xl">
-        <p class="mb-5 text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">
-          Canada&apos;s trusted online casino
-        </p>
+        <div class="mb-5 flex flex-wrap items-center gap-3">
+          <p class="text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">
+            Canada&apos;s trusted online casino
+          </p>
+          <span class="live-tag"><span class="live-dot"></span> Live tables open</span>
+        </div>
         <h1 class="text-[clamp(2rem,6.5vw,6.6rem)] font-black leading-[0.98] tracking-normal">
           Play Online <br />Casino in <span class="text-prestige-gold">Canada</span>
         </h1>
@@ -261,7 +265,7 @@
         >
           <div class="flex gap-4">
             <div
-              class="flex h-16 w-20 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-base font-black italic text-navy-black sm:w-16 sm:text-xl"
+              class="flex h-16 w-24 shrink-0 items-center justify-center rounded-lg bg-prestige-gold px-2 text-center text-sm font-black leading-tight text-navy-black sm:w-28 sm:text-base"
             >
               e-Transfer
             </div>
@@ -321,7 +325,7 @@
           <h2 class="mt-8 text-xl font-black">{card.title}</h2>
           <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{card.body}</p>
           <span
-            class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+            class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold"
           >
             {card.cta}
             <ArrowRight
@@ -379,7 +383,7 @@
               <h3 class="text-lg font-black">{card.title}</h3>
               <p class="mt-2 min-h-[48px] text-sm leading-6 text-text-body">{card.body}</p>
               <span
-                class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+                class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold"
               >
                 Explore {card.title.replace('Online', '').trim()}
                 <ArrowRight class="h-4 w-4" aria-hidden="true" />
@@ -416,13 +420,14 @@
         {#each faqItems as item, i}
           <div>
             <button
+              id="faq-btn-{i}"
               type="button"
               class="flex w-full items-center justify-between gap-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
               aria-expanded={openFaqIndex === i}
               aria-controls="faq-panel-{i}"
               onclick={() => toggleFaq(i)}
             >
-              <span class="font-black text-white">{item.q}</span>
+              <span class="text-base font-black text-white">{item.q}</span>
               <ChevronDown
                 class="h-5 w-5 shrink-0 text-prestige-gold transition-transform duration-200 {openFaqIndex ===
                 i
@@ -451,8 +456,8 @@
         <div
           class="border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
         >
-          <p class="text-xs text-text-body">{item.label}</p>
-          <p class="mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
+          <p class="text-xs uppercase tracking-[0.16em] text-text-tertiary">{item.label}</p>
+          <p class="stat mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
         </div>
       {/each}
     </section>
@@ -466,7 +471,7 @@
             Canada&apos;s go-to online casino
           </p>
           <h2 class="text-4xl font-black md:text-5xl">
-            Casino games, sports markets, and Interac payouts - all in one place.
+            Casino games, sports markets, and Interac payouts &mdash; all in one place.
           </h2>
           <p class="mt-4 max-w-2xl text-lg leading-8 text-text-body">
             Join 247iBET for a premium Canadian gaming experience trusted by players across the
@@ -481,7 +486,12 @@
             Start Playing
             <ArrowRight class="h-5 w-5" aria-hidden="true" />
           </SafeExternalLink>
-          <a href="/responsible-gambling" class="hero-cta-secondary justify-center">Safety Tools</a>
+          <a
+            href="/responsible-gambling"
+            class="hero-cta-secondary w-full justify-center sm:w-auto sm:min-w-72"
+          >
+            Safety Tools
+          </a>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
@@ -9,7 +10,7 @@
     name="description"
     content="Contact the 247iBET editorial team for press inquiries, partnerships, or questions about our independent Canadian iGaming guides."
   />
-  <link rel="canonical" href="https://247ibet.ca/contact" />
+  <link rel="canonical" href={canonicalUrl('/contact')} />
   <JsonLd
     schema={[
       {

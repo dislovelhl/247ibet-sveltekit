@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -39,7 +40,7 @@
     property="og:description"
     content="Review the best new online casinos for Canadians in 2026 and compare recently launched operators."
   />
-  <link rel="canonical" href="https://247ibet.ca/new-online-casinos-canada" />
+  <link rel="canonical" href={canonicalUrl('/new-online-casinos-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

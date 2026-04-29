@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -18,7 +19,7 @@
     name="twitter:description"
     content="How to read American, decimal, and fractional odds with payout examples for Canadian bettors."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/sports-betting-odds-explained" />
+  <link rel="canonical" href={canonicalUrl('/guides/sports-betting-odds-explained')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

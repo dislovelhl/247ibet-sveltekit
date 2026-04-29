@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
@@ -94,7 +95,7 @@
     name="twitter:description"
     content="Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/cad" />
+  <link rel="canonical" href={canonicalUrl('/casino/cad')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

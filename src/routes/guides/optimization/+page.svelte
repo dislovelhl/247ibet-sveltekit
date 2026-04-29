@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -8,7 +9,7 @@
     name="description"
     content="Master Next.js 15 performance, AI integration, and technical SEO for the Canadian iGaming market. Advanced optimization patterns for 247iBET."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/optimization" />
+  <link rel="canonical" href={canonicalUrl('/guides/optimization')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

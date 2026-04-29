@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -84,7 +85,7 @@
     name="twitter:description"
     content="Editorial launch watchlist for sportsbooks targeting Alberta, with payment and verification context."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/upcoming-alberta-sportsbooks" />
+  <link rel="canonical" href={canonicalUrl('/guides/upcoming-alberta-sportsbooks')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

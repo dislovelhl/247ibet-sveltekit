@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     ArrowRight,
@@ -235,7 +236,7 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://247ibet.ca" />
-  <link rel="canonical" href="https://247ibet.ca" />
+  <link rel="canonical" href={canonicalUrl('/')} />
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
@@ -245,6 +246,9 @@
       <img
         src="/images/generated/casino-premium-hero.png"
         alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
         class="h-full w-full object-cover opacity-70"
       />
       <div
@@ -259,17 +263,21 @@
       class="relative mx-auto grid min-h-[620px] max-w-[1720px] items-center px-4 py-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 xl:px-16"
     >
       <div class="max-w-4xl">
-        <p class="mb-5 text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">
+        <p
+          class="mb-5 animate-fade-in-up text-xs font-black uppercase tracking-[0.24em] text-prestige-gold"
+        >
           Canada&apos;s trusted betting destination
         </p>
-        <h1 class="text-[clamp(2rem,7vw,6.4rem)] font-black leading-[0.98] tracking-normal">
+        <h1
+          class="animate-fade-in-up-delay-1 text-[clamp(2rem,7vw,6.4rem)] font-black leading-[0.98] tracking-normal"
+        >
           Online Casino &amp; Sportsbook + <span class="text-prestige-gold">Fast Payouts</span>
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-text-body">
+        <p class="mt-6 max-w-2xl animate-fade-in-up-delay-2 text-lg leading-8 text-text-body">
           Play your favourite casino games and bet on the biggest sports markets with secure
           deposits, lightning-fast withdrawals, and 24/7 Canadian support.
         </p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <div class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row">
           <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
             Join 247iBET Now
             <ArrowRight class="h-5 w-5" aria-hidden="true" />
@@ -296,6 +304,43 @@
           </div>
         </div>
       {/each}
+    </section>
+
+    <section
+      class="grid gap-6 overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 shadow-2xl lg:grid-cols-[0.38fr_0.62fr] lg:p-7"
+      aria-labelledby="home-promo-video-title"
+    >
+      <div class="flex flex-col justify-center">
+        <p class="text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
+          Watch the overview
+        </p>
+        <h2 id="home-promo-video-title" class="mt-3 text-3xl font-black md:text-4xl">
+          See the 247iBET experience in 30 seconds
+        </h2>
+        <p class="mt-4 text-sm leading-6 text-text-body">
+          A quick look at the casino, sportsbook, fast payout flow, support, and responsible-play
+          tools built for Canadian players.
+        </p>
+        <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary mt-6 w-full justify-center sm:w-fit">
+          Join 247iBET Now
+          <ArrowRight class="h-5 w-5" aria-hidden="true" />
+        </SafeExternalLink>
+      </div>
+
+      <div class="overflow-hidden rounded-xl border border-white/10 bg-black/30">
+        <video
+          class="aspect-video w-full bg-navy-black object-cover"
+          controls
+          playsinline
+          preload="metadata"
+          poster="/images/generated/casino-premium-hero.png"
+          aria-label="247iBET casino, sportsbook, and fast payouts overview video"
+        >
+          <source src="/videos/247ibet-home-promo.mp4" type="video/mp4" />
+          Your browser does not support embedded video. Open the 247iBET overview video at
+          /videos/247ibet-home-promo.mp4.
+        </video>
+      </div>
     </section>
 
     <section
@@ -433,10 +478,10 @@
     <section class="grid gap-6 xl:grid-cols-2">
       <div class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
         <div class="mb-4 flex items-end justify-between">
-          <h2 class="text-2xl font-black">Casino</h2>
+          <h2 class="text-3xl font-black">Casino</h2>
           <a
             href="/casino"
-            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
             >View All Casino</a
           >
         </div>
@@ -444,7 +489,7 @@
           {#each casinoCards as card}
             <a
               href={card.href}
-              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20"
+              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20 transition-colors hover:border-prestige-gold/60"
             >
               <img
                 src={card.image}
@@ -463,10 +508,10 @@
 
       <div class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
         <div class="mb-4 flex items-end justify-between">
-          <h2 class="text-2xl font-black">Sportsbook</h2>
+          <h2 class="text-3xl font-black">Sportsbook</h2>
           <a
             href="/sportsbook"
-            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
             >View All Sports</a
           >
         </div>
@@ -474,7 +519,7 @@
           {#each sportsCards as card}
             <a
               href={card.href}
-              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20"
+              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20 transition-colors hover:border-prestige-gold/60"
             >
               <img
                 src={card.image}
@@ -517,8 +562,10 @@
 
     <section class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
       <div class="mb-4 flex items-end justify-between">
-        <h2 class="text-2xl font-black">Expert Guides</h2>
-        <a href="/guides" class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+        <h2 class="text-3xl font-black">Expert Guides</h2>
+        <a
+          href="/guides"
+          class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
           >View All Guides</a
         >
       </div>
@@ -526,7 +573,7 @@
         {#each guideCards as card}
           <a
             href={card.href}
-            class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 md:grid-cols-[116px_1fr]"
+            class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 transition-colors hover:border-prestige-gold/50 md:grid-cols-[116px_1fr]"
           >
             <img src={card.image} alt="" class="h-24 w-full rounded-lg object-cover md:w-[116px]" />
             <div>
@@ -541,8 +588,10 @@
 
     <section class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
       <div class="mb-4 flex items-end justify-between">
-        <h2 class="text-2xl font-black">Frequently Asked Questions</h2>
-        <a href="/faq" class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+        <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
+        <a
+          href="/faq"
+          class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
           >View All FAQs</a
         >
       </div>
@@ -550,7 +599,7 @@
         {#each faqs as faq}
           <button
             type="button"
-            class="flex items-center justify-between rounded-lg border border-white/10 bg-black/20 px-4 py-4 text-left text-sm font-black text-white"
+            class="flex items-center justify-between rounded-lg border border-white/10 bg-black/20 px-4 py-4 text-left text-sm font-black text-white transition-colors hover:border-prestige-gold/50 hover:bg-black/30"
           >
             {faq}
             <ChevronDown class="h-4 w-4 text-prestige-gold" aria-hidden="true" />

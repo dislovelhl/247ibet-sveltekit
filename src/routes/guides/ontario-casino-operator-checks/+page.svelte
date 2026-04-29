@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -95,7 +96,7 @@
     name="twitter:description"
     content="Ontario casino signup checklist covering operator status, Interac support, KYC, and payout handling."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/ontario-casino-operator-checks" />
+  <link rel="canonical" href={canonicalUrl('/guides/ontario-casino-operator-checks')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

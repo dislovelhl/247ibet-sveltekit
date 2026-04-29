@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -21,7 +22,7 @@
     name="twitter:description"
     content="Why Canadians should play on AGCO/AGLC regulated platforms instead of offshore casinos."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/regulated-vs-offshore" />
+  <link rel="canonical" href={canonicalUrl('/guides/regulated-vs-offshore')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

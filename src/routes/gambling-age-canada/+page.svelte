@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   const AGES = [
     {
       province: 'Alberta',
@@ -103,7 +104,7 @@
     name="twitter:description"
     content="Minimum gambling age in Canada by province and territory, with age-verification context."
   />
-  <link rel="canonical" href="https://247ibet.ca/gambling-age-canada" />
+  <link rel="canonical" href={canonicalUrl('/gambling-age-canada')} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl">

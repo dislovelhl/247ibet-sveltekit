@@ -1,6 +1,7 @@
 <script lang="ts">
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import { canonicalUrl } from '$lib/site';
 
   const page = {
     slug: 'live-betting',
@@ -145,7 +146,7 @@
   <meta name="description" content={page.metaDescription} />
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.metaDescription} />
-  <link rel="canonical" href={'https://247ibet.ca' + page.path} />
+  <link rel="canonical" href={canonicalUrl(page.path)} />
   <JsonLd schema={breadcrumbSchema} />
   <JsonLd schema={faqSchema} />
 </svelte:head>

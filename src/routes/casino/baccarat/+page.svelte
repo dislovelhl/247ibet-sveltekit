@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
@@ -90,7 +91,7 @@
     name="twitter:description"
     content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/baccarat" />
+  <link rel="canonical" href={canonicalUrl('/casino/baccarat')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

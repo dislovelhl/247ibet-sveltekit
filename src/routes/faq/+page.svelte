@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import type { FAQPageSchema } from '$lib/workflows/types.js';
 
@@ -66,7 +67,7 @@
     name="twitter:description"
     content="Quick answers for Canadian players about Interac deposits, withdrawals, and KYC verification. Play responsibly. 19+ only."
   />
-  <link rel="canonical" href="https://247ibet.ca/faq" />
+  <link rel="canonical" href={canonicalUrl('/faq')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

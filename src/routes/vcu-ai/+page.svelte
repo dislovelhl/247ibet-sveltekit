@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const orgSchema = {
     '@context': 'https://schema.org',
@@ -22,7 +23,7 @@
     property="og:description"
     content="247iBET tracks the Canadian regulated market — real-time operator data, AGCO and AGLC compliance signals, and clear paths to the best casino and sportsbook options for Ontario and Alberta players."
   />
-  <link rel="canonical" href="https://247ibet.ca/vcu-ai" />
+  <link rel="canonical" href={canonicalUrl('/vcu-ai')} />
   <JsonLd schema={orgSchema} />
 </svelte:head>
 

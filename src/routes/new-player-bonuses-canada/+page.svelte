@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Shield, CheckCircle } from 'lucide-svelte';
@@ -61,7 +62,7 @@
     property="og:description"
     content="Welcome offers explained with terms, AGCO compliance, and what to check."
   />
-  <link rel="canonical" href="https://247ibet.ca/new-player-bonuses-canada" />
+  <link rel="canonical" href={canonicalUrl('/new-player-bonuses-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

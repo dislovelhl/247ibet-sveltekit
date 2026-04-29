@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
   const faqs = [
@@ -49,7 +50,7 @@
     name="twitter:description"
     content="Federal law, provincial licensing, legal betting age, and player protections across Canada."
   />
-  <link rel="canonical" href="https://247ibet.ca/gambling-laws-canada" />
+  <link rel="canonical" href={canonicalUrl('/gambling-laws-canada')} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">

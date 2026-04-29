@@ -6,6 +6,7 @@
   import { page } from '$app/state';
   import { inject } from '@vercel/analytics';
   import { injectSpeedInsights } from '@vercel/speed-insights';
+  import { SITE, ogImageUrl } from '$lib/site';
   import Navbar from '$lib/components/Navbar.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
   import AgeGate from '$lib/components/AgeGate.svelte';
@@ -21,6 +22,14 @@
 
 <svelte:head>
   <meta name="author" content="247iBET Editorial Team" />
+  <meta property="og:image" content={ogImageUrl()} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{SITE.name} — {SITE.tagline}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImageUrl()} />
+  <link rel="preconnect" href="https://boapi.ibet247.ca" />
+  <link rel="dns-prefetch" href="https://boapi.ibet247.ca" />
 </svelte:head>
 
 <AgeGate />

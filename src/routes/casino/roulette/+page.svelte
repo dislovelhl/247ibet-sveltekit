@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
@@ -90,7 +91,7 @@
     name="twitter:description"
     content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/roulette" />
+  <link rel="canonical" href={canonicalUrl('/casino/roulette')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -76,7 +77,7 @@
     property="og:description"
     content="Institutional-grade tracking of casino withdrawal speeds. 247iBET verified data on Interac e-Transfer processing times for Canadian players."
   />
-  <link rel="canonical" href="https://247ibet.ca/fast-payouts" />
+  <link rel="canonical" href={canonicalUrl('/fast-payouts')} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

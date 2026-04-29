@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -134,7 +135,7 @@
     name="twitter:description"
     content="Ontario hub for casino games, sports betting, Interac guidance, age checks, and account setup context for players in the province."
   />
-  <link rel="canonical" href="https://247ibet.ca/ontario" />
+  <link rel="canonical" href={canonicalUrl('/ontario')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -156,10 +157,11 @@
     </ol>
   </nav>
 
-  <span
-    class="inline-flex items-center gap-1.5 rounded-full bg-success/15 border border-success/30 px-3 py-1 text-xs font-bold text-success uppercase tracking-wider"
-    >Ontario · Active</span
-  >
+  <div class="mb-5 flex flex-wrap items-center gap-2">
+    <span class="page-hero-kicker">Ontario regulated market</span>
+    <span class="live-tag"><span class="live-dot"></span> Active</span>
+    <span class="status-badge status-badge--licensed">AGCO · 19+</span>
+  </div>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
     <img src="/images/generated/canada-market-hero.png" alt="" class="h-full w-full object-cover" />
@@ -178,10 +180,10 @@
   </div>
 
   <header class="mt-4 mb-10">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <h1 class="page-hero-title text-4xl md:text-5xl mb-4">
       Play in Ontario with 247iBET
     </h1>
-    <p class="text-lg text-[#94A3B8] leading-relaxed max-w-3xl">
+    <p class="page-hero-subtitle mt-4 max-w-3xl text-base sm:text-lg">
       Casino games, sports betting, and Interac-friendly payments for players in Ontario. Use this
       page to check age rules, payout expectations, and the right route into the platform.
     </p>
@@ -272,17 +274,9 @@
         <span class="text-slate-blue text-sm font-bold mt-4">Explore →</span>
       </a>
     </div>
-    <div class="flex flex-wrap gap-6 mt-6">
-      <a
-        href="/interac"
-        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-        >Ontario Interac payments</a
-      >
-      <a
-        href="/fast-payouts"
-        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-        >Fast Ontario payouts</a
-      >
+    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-6">
+      <a href="/interac" class="view-all-link">Ontario Interac payments →</a>
+      <a href="/fast-payouts" class="view-all-link">Fast Ontario payouts →</a>
     </div>
   </section>
 

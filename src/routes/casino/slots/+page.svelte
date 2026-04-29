@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
@@ -90,7 +91,7 @@
     name="twitter:description"
     content="Play online slots in Canada at 247iBET. Learn how RTP works, compare classic, video, and progressive slots, and understand the providers Canadian players usually look for."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/slots" />
+  <link rel="canonical" href={canonicalUrl('/casino/slots')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

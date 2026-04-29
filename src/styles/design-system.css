@@ -134,6 +134,44 @@
     scroll-margin-top: 6rem;
   }
 
+  /* Anchor jump targets clear the sticky navbar (64px mobile, ~136px desktop with utility bar).
+     Uses the most generous offset so headings + sections land below the bar on every breakpoint. */
+  main :where([id]):not(.container, html, body, main) {
+    scroll-margin-top: 6.5rem;
+  }
+  @media (min-width: 1024px) {
+    main :where([id]):not(.container, html, body, main) {
+      scroll-margin-top: 9rem;
+    }
+  }
+
+  /* Repeating "View all" CTA pattern used across home, hubs, and category sections.
+     Replaces the ad-hoc text-xs font-black uppercase tracking-[0.18em] text-prestige-gold combo. */
+  .view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-prestige-gold);
+    transition: color 180ms ease;
+  }
+  .view-all-link:hover,
+  .view-all-link:focus-visible {
+    color: #fff;
+  }
+  .view-all-link:focus-visible {
+    outline: none;
+    border-radius: 2px;
+    box-shadow:
+      0 0 0 2px var(--color-navy-black),
+      0 0 0 4px var(--color-prestige-gold);
+  }
+
   main :where(p, li, dd) {
     text-wrap: pretty;
   }
@@ -197,5 +235,16 @@
     background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* Keyboard accessibility — visible gold ring for in-prose links that don't
+     define their own focus styling. Scoped under main + .prose so it doesn't
+     touch CTA buttons, nav links, or anything with explicit focus state. */
+  main :where(.prose, .guide-immersive, .immersive-page) a:focus-visible {
+    outline: none;
+    border-radius: 2px;
+    box-shadow:
+      0 0 0 2px var(--color-navy-black),
+      0 0 0 4px var(--color-prestige-gold);
   }
 }

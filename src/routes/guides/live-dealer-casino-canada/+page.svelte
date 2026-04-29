@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -70,7 +71,7 @@
     name="twitter:description"
     content="Audit live dealer casinos in Canada by table selection, studio quality, game providers, and AGCO licensing."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/live-dealer-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/live-dealer-casino-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

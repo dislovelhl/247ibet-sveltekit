@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -24,7 +25,7 @@
     name="twitter:description"
     content="Compare secure casino payment methods for Canadian players. Interac, e-Transfer, crypto, credit cards — speeds, fees, and safety for deposits and withdrawals."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/casino-payment-methods" />
+  <link rel="canonical" href={canonicalUrl('/guides/casino-payment-methods')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

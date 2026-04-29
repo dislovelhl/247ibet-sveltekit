@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -58,7 +59,7 @@
     name="twitter:description"
     content="NHL betting guide for Canadian fans. Best sportsbooks for hockey, how to read puck lines, NHL odds explained, and live in-play betting tips for the 2025–26 season."
   />
-  <link rel="canonical" href="https://247ibet.ca/nhl-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/nhl-betting-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

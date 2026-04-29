@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { FileText, ShieldCheck, UserRoundCheck } from 'lucide-svelte';
 
@@ -123,7 +124,7 @@
     name="twitter:description"
     content="Learn what casino KYC verification means, when casinos ask for documents, how to reduce delay before your first withdrawal."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/kyc-verification-online-casino" />
+  <link rel="canonical" href={canonicalUrl('/guides/kyc-verification-online-casino')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

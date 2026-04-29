@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const coverageAreas = [
     {
@@ -40,7 +41,7 @@
     content="Stay updated with the latest Canadian iGaming news, regulatory changes in Alberta and Ontario, and technical analysis of the 2026 betting landscape."
   />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://247ibet.ca/news" />
+  <link rel="canonical" href={canonicalUrl('/news')} />
   <JsonLd schema={articleSchema} />
 </svelte:head>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const sources = [
     {
@@ -86,7 +87,7 @@
     name="twitter:description"
     content="Verified AGCO, AGLC, and iGaming Ontario references behind our editorial content."
   />
-  <link rel="canonical" href="https://247ibet.ca/sources" />
+  <link rel="canonical" href={canonicalUrl('/sources')} />
   <JsonLd
     schema={[
       {

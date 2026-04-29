@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -46,7 +47,7 @@
     name="twitter:description"
     content="Online casino promotions for Canadians compared by real value after wagering requirements and expiry terms."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino-bonuses-canada" />
+  <link rel="canonical" href={canonicalUrl('/casino-bonuses-canada')} />
   <JsonLd
     schema={[
       {

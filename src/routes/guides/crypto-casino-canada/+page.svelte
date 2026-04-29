@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -44,7 +45,7 @@
     name="twitter:description"
     content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/crypto-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/crypto-casino-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

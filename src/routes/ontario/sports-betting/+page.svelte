@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -37,7 +38,7 @@
     name="twitter:description"
     content="Ontario sports betting with live markets, Interac deposits, and secure CAD payouts."
   />
-  <link rel="canonical" href="https://247ibet.ca/ontario/sports-betting" />
+  <link rel="canonical" href={canonicalUrl('/ontario/sports-betting')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

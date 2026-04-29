@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -89,7 +90,7 @@
     name="twitter:description"
     content="How single-game sports betting became legal in Canada under Bill C-218 and what legal markets look like in 2026."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/single-game-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/single-game-betting-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

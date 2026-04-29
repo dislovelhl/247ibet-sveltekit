@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { AlertTriangle, CheckCircle2, Clock3, Wallet } from 'lucide-svelte';
 
@@ -156,7 +157,7 @@
     name="twitter:description"
     content="How to withdraw casino winnings in Canada: step-by-step payout guide, Interac timing, KYC checklist, promotion restrictions, and the main reasons withdrawals get delayed."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/how-to-withdraw-casino-winnings" />
+  <link rel="canonical" href={canonicalUrl('/guides/how-to-withdraw-casino-winnings')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

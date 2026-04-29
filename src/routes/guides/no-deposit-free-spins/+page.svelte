@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -18,7 +19,7 @@
     name="twitter:description"
     content="Find the most reliable no deposit extra spins in Canada. Wagering requirements, game restrictions, and payout limits audited."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/no-deposit-free-spins" />
+  <link rel="canonical" href={canonicalUrl('/guides/no-deposit-free-spins')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

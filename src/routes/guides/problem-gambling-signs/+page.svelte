@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const warningSignsBehavioural = [
     'Spending more money or time gambling than intended',
@@ -132,7 +133,7 @@
     content="Recognise the signs of problem gambling and access Canadian help resources."
   />
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="canonical" href="https://247ibet.ca/guides/problem-gambling-signs" />
+  <link rel="canonical" href={canonicalUrl('/guides/problem-gambling-signs')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -24,7 +25,7 @@
     name="twitter:description"
     content="Discover legal online gambling options in Canada. Provincial rules for Ontario and Alberta, top Interac casinos, bonuses, and responsible play guidance."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/online-gambling-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/online-gambling-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

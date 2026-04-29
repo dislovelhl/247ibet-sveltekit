@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -32,7 +33,7 @@
     name="twitter:description"
     content="Online casinos accepting PayPal in Canada — PayPal vs Interac comparison and AGCO-licensed sites."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/paypal-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/paypal-casino-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

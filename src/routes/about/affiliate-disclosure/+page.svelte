@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { Info, ShieldCheck, Scale } from 'lucide-svelte';
 </script>
@@ -19,7 +20,7 @@
     name="twitter:description"
     content="How 247iBET earns revenue and handles commercial relationships."
   />
-  <link rel="canonical" href="https://247ibet.ca/about/affiliate-disclosure" />
+  <link rel="canonical" href={canonicalUrl('/about/affiliate-disclosure')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

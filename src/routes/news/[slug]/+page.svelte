@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { canonicalUrl } from '$lib/site';
 </script>
 
 <svelte:head>
@@ -8,7 +9,7 @@
     name="description"
     content="Latest iGaming news and updates for Canadian players from 247iBET."
   />
-  <link rel="canonical" href={`https://247ibet.ca/news/${$page.params.slug}`} />
+  <link rel="canonical" href={canonicalUrl(`/news/${$page.params.slug}`)} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">

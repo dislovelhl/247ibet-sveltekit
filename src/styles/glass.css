@@ -1,6 +1,7 @@
 @layer utilities {
   /* ── Prestige Ultra Liquid Glass materials ── */
   .glass-thin {
+    -webkit-backdrop-filter: blur(12px) saturate(180%) brightness(120%);
     backdrop-filter: blur(12px) saturate(180%) brightness(120%);
     background: linear-gradient(175deg, rgba(22, 36, 64, 0.4) 0%, rgba(13, 22, 41, 0.3) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -8,6 +9,7 @@
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset;
   }
   .glass-regular {
+    -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(110%);
     backdrop-filter: blur(40px) saturate(200%) brightness(110%);
     background: linear-gradient(175deg, rgba(22, 36, 64, 0.55) 0%, rgba(13, 22, 41, 0.45) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -17,6 +19,7 @@
       0 8px 32px -8px rgba(0, 0, 0, 0.4);
   }
   .glass-thick {
+    -webkit-backdrop-filter: blur(80px) saturate(220%) brightness(100%);
     backdrop-filter: blur(80px) saturate(220%) brightness(100%);
     background: linear-gradient(175deg, rgba(22, 36, 64, 0.75) 0%, rgba(13, 22, 41, 0.65) 100%);
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -26,6 +29,7 @@
       0 12px 48px -8px rgba(0, 0, 0, 0.6);
   }
   .glass-shimmer {
+    -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(105%);
     backdrop-filter: blur(32px) saturate(160%) brightness(105%);
     background: linear-gradient(175deg, rgba(22, 36, 64, 0.6) 0%, rgba(13, 22, 41, 0.5) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -35,6 +39,20 @@
       0 8px 32px -8px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
+  }
+
+  /* Solid fallback for browsers without backdrop-filter (older Firefox, etc.) */
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass-thin {
+      background: rgba(13, 22, 41, 0.92);
+    }
+    .glass-regular {
+      background: rgba(13, 22, 41, 0.94);
+    }
+    .glass-thick,
+    .glass-shimmer {
+      background: rgba(13, 22, 41, 0.96);
+    }
   }
 
   @media (max-width: 1023px) {

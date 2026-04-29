@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -112,7 +113,7 @@
     content="Bet on UFC in Canada — fight winner, method of victory, round betting, and live in-play at 247iBET. Fast Interac payouts. 18+/19+."
   />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://247ibet.ca/events/ufc-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/events/ufc-betting-canada')} />
   <JsonLd schema={articleSchema} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>

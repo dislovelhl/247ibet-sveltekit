@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     ShieldCheck,
@@ -113,7 +114,7 @@
     name="twitter:description"
     content="Our Canadian iGaming testing process: licensing, withdrawals, payments, KYC, support, and promotional fairness."
   />
-  <link rel="canonical" href="https://247ibet.ca/about/how-we-test" />
+  <link rel="canonical" href={canonicalUrl('/about/how-we-test')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

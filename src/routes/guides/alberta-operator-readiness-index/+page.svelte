@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { CircleCheckBig, Gauge, MapPin, ShieldCheck } from 'lucide-svelte';
 
@@ -67,7 +68,7 @@
     name="twitter:description"
     content="Editorial readiness index for operators targeting the Alberta iGaming market."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/alberta-operator-readiness-index" />
+  <link rel="canonical" href={canonicalUrl('/guides/alberta-operator-readiness-index')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

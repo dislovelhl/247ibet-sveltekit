@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { BookOpen, Calculator, AlertTriangle, CheckCircle } from 'lucide-svelte';
@@ -88,7 +89,7 @@
     name="twitter:description"
     content="Learn how wagering requirements work, how to calculate playthrough, and which offer terms reduce value most."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/wagering-requirements-explained" />
+  <link rel="canonical" href={canonicalUrl('/guides/wagering-requirements-explained')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

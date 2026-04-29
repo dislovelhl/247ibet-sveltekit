@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -24,7 +25,7 @@
     name="twitter:description"
     content="New casinos in Canada 2026 — licensed operators, bonuses, and payment methods for Canadian players."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/new-casino-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/new-casino-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -31,6 +31,9 @@ Thumbs.db
 coverage/
 *.lcov
 *.log
+.playwright-mcp/
+**/.thumbnails/
+**/.waveform-cache/
 dist/
 
 # Env

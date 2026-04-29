@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -26,7 +27,7 @@
     name="twitter:description"
     content="Official launch announcement for 247iBET regulatory tracking and data standardization."
   />
-  <link rel="canonical" href="https://247ibet.ca/news/vcu-ai-launch-2026" />
+  <link rel="canonical" href={canonicalUrl('/news/vcu-ai-launch-2026')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -182,7 +183,7 @@
       <h3 class="font-bold text-white mb-2 text-sm uppercase tracking-widest">Media Contact</h3>
       <p class="text-sm text-gray-400">
         247iBET Press Office · press@247ibet.ca · <a
-          href="https://247ibet.ca"
+          href={canonicalUrl('/')}
           class="text-slate-blue hover:underline">247ibet.ca</a
         >
       </p>

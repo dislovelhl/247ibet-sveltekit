@@ -46,6 +46,6 @@ describe('safeJsonLd', () => {
   });
 
   it('escapes U+2028 and U+2029 line terminators', () => {
-    expect(safeJsonLd({ s: '  ' })).toBe('{"s":"\\u2028\\u2029"}');
+    expect(safeJsonLd({ s: '\u2028\u2029' })).toBe('{"s":"\\u2028\\u2029"}');
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { safeJsonLd } from '../src/lib/json-ld';
+import { safeJsonLd, jsonLdScriptHtml } from '../src/lib/json-ld';
 
 describe('safeJsonLd', () => {
   it('serializes a plain object', () => {
@@ -30,7 +30,7 @@ describe('safeJsonLd', () => {
 
   it('escapes U+2028 and U+2029 for safe HTML embedding', () => {
     // JSON.stringify does not reliably escape these in all Node versions; safeJsonLd does it explicitly.
-    const out = safeJsonLd({ x: '  ' });
+    const out = safeJsonLd({ x: '\u2028\u2029' });
     expect(out).toContain('\\u2028');
     expect(out).toContain('\\u2029');
   });
@@ -66,5 +66,43 @@ describe('safeJsonLd', () => {
       .replace(/\\u003e/g, '>')
       .replace(/\\u0026/g, '&');
     expect(JSON.parse(decoded)).toEqual(schema);
+  });
+});
+
+describe('jsonLdScriptHtml', () => {
+  // Regression: the previous implementation rendered the script via Svelte's
+  // <svelte:element this={scriptTag}>{@html ...}</svelte:element> pattern, which
+  // emitted hydration anchor comments inside the <script> body. The browser parsed
+  // those comments as script text content; Svelte then failed to find them as
+  // Comment nodes during hydration and logged hydration_mismatch on every page
+  // that rendered structured data.
+  it('returns a single complete <script> element', () => {
+    const out = jsonLdScriptHtml({ a: 1 });
+    expect(out.startsWith('<script type="application/ld+json">')).toBe(true);
+    expect(out.endsWith('</script>')).toBe(true);
+  });
+
+  it('places no comment markers inside the script body', () => {
+    const out = jsonLdScriptHtml({ a: 1, b: [2, 3] });
+    const body = out.replace(/^<script[^>]*>/, '').replace(/<\/script>$/, '');
+    expect(body).not.toContain('<!--');
+    expect(body).not.toContain('-->');
+  });
+
+  it('round-trips the schema through the script body', () => {
+    const schema = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'X' };
+    const out = jsonLdScriptHtml(schema);
+    const body = out.replace(/^<script[^>]*>/, '').replace(/<\/script>$/, '');
+    const decoded = body
+      .replace(/\\u003c/g, '<')
+      .replace(/\\u003e/g, '>')
+      .replace(/\\u0026/g, '&');
+    expect(JSON.parse(decoded)).toEqual(schema);
+  });
+
+  it('escapes a </script> payload so the element cannot be broken out of', () => {
+    const out = jsonLdScriptHtml({ x: '</script><script>alert(1)</script>' });
+    // The literal closing tag must appear exactly once — the trailing one we emit.
+    expect(out.match(/<\/script>/g)?.length).toBe(1);
   });
 });

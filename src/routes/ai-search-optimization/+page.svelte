@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const LAST_UPDATED = '2026-03-30';
 
@@ -95,7 +96,7 @@
     content="了解 247iBET 如何通过 GEO、结构化内容、llms.txt、schema 和合规写法，让加拿大 iGaming 页面更容易被 AI 理解、比较和引用。"
   />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://247ibet.ca/ai-search-optimization" />
+  <link rel="canonical" href={canonicalUrl('/ai-search-optimization')} />
   <JsonLd schema={articleSchema} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>

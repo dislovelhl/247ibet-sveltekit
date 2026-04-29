@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -63,7 +64,7 @@
     property="og:description"
     content="Free Canadian sports betting odds calculator. Convert American odds (+/-) to potential payout and profit."
   />
-  <link rel="canonical" href="https://247ibet.ca/tools/odds-calculator" />
+  <link rel="canonical" href={canonicalUrl('/tools/odds-calculator')} />
   <JsonLd {schema} />
 </svelte:head>
 
@@ -77,13 +78,14 @@
   </nav>
 
   <header class="mb-8">
-    <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
-      Free Betting Tool
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">Free betting tool</span>
     </div>
-    <h1 class="text-3xl md:text-4xl font-black text-white mb-3">Sports Betting Odds Calculator</h1>
-    <p class="text-gray-400 font-sans text-base max-w-2xl">
-      Enter American odds (e.g., -110 or +200) and your stake to instantly calculate potential
-      profit and total payout. Works for all major Canadian sports.
+    <h1 class="page-hero-title text-3xl md:text-4xl mb-3">Sports Betting Odds Calculator</h1>
+    <p class="page-hero-subtitle mt-3 max-w-2xl text-base">
+      Enter American odds (e.g., <span class="odds">-110</span> or <span class="odds">+200</span>)
+      and your stake to instantly calculate potential profit and total payout. Works for all major
+      Canadian sports.
     </p>
   </header>
 
@@ -105,7 +107,7 @@
         <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.25em] mb-1">
           Break-even
         </div>
-        <div class="text-white font-bold">-110 = 52.4%</div>
+        <div class="text-white font-bold stat">-110 = 52.4%</div>
         <div class="text-gray-500 mt-1">
           You need to win more than 52.4% of the time to beat the line.
         </div>
@@ -114,7 +116,7 @@
         <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.25em] mb-1">
           Underdog
         </div>
-        <div class="text-white font-bold">+200 = 33.3%</div>
+        <div class="text-white font-bold stat">+200 = 33.3%</div>
         <div class="text-gray-500 mt-1">
           A lower win rate can still be profitable if the payout is large enough.
         </div>
@@ -168,27 +170,30 @@
   </section>
 
   <section class="mt-8">
-    <h2 class="text-xl font-bold mb-4">Related Betting Tools</h2>
+    <div class="mb-4 flex items-baseline justify-between gap-3">
+      <h2 class="text-xl font-bold">Related Betting Tools</h2>
+      <a href="/tools" class="view-all-link">View all tools →</a>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
       <a
         href="/tools/parlay-calculator"
-        class="navy-card rounded-xl border border-white/10 p-4 hover:border-slate-blue/40 transition-colors flex items-center justify-between"
+        class="navy-card rounded-xl border border-white/10 p-4 hover:border-slate-blue/40 hover:-translate-y-0.5 transition-all flex items-center justify-between"
       >
         <div>
           <div class="font-bold text-sm text-white">Parlay Calculator</div>
           <div class="text-xs text-gray-500">Multi-leg bet payout estimator</div>
         </div>
-        <span class="text-slate-blue">→</span>
+        <span class="text-slate-blue" aria-hidden="true">→</span>
       </a>
       <a
         href="/best-sports-betting-sites-canada"
-        class="navy-card rounded-xl border border-white/10 p-4 hover:border-slate-blue/40 transition-colors flex items-center justify-between"
+        class="navy-card rounded-xl border border-white/10 p-4 hover:border-slate-blue/40 hover:-translate-y-0.5 transition-all flex items-center justify-between"
       >
         <div>
           <div class="font-bold text-sm text-white">Best Sportsbooks</div>
           <div class="text-xs text-gray-500">Compare top Canadian sportsbooks</div>
         </div>
-        <span class="text-slate-blue">→</span>
+        <span class="text-slate-blue" aria-hidden="true">→</span>
       </a>
     </div>
   </section>
@@ -228,7 +233,7 @@
         <tbody class="divide-y divide-white/5">
           {#each oddsReference as row}
             <tr>
-              <td class="p-4 text-white font-bold">{row.odds}</td>
+              <td class="p-4 text-white font-bold odds">{row.odds}</td>
               <td class="p-4 text-gray-300">{row.example}</td>
               <td class="p-4 text-gray-300">{row.meaning}</td>
             </tr>

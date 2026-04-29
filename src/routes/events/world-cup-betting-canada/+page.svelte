@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -114,7 +115,7 @@
     content="Bet on the 2026 FIFA World Cup in Canada — game lines, tournament winner odds, group stage betting, and live in-play at 247iBET."
   />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://247ibet.ca/events/world-cup-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/events/world-cup-betting-canada')} />
   <JsonLd schema={articleSchema} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Smartphone } from 'lucide-svelte';
@@ -46,7 +47,7 @@
     property="og:description"
     content="Best Canadian casino apps for iOS and Android. Rated on load speed, touch UX, game selection, Interac deposits, and AGCO licensing. Updated 2026."
   />
-  <link rel="canonical" href="https://247ibet.ca/best-casino-apps-canada" />
+  <link rel="canonical" href={canonicalUrl('/best-casino-apps-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -85,15 +86,21 @@
         <li class="text-white font-medium">Best Casino Apps</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <div class="mb-5 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">Mobile casino rankings</span>
+      <span class="status-badge status-badge--licensed">AGCO data-protection vetted</span>
+    </div>
+    <h1 class="page-hero-title text-[clamp(2rem,8vw,3.75rem)] mb-4">
       Best Casino Apps Canada 2026
     </h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Top-rated Canadian casino apps reviewed for game stability and Interac speed. We prioritize
+    <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
+      Top-rated Canadian casino apps reviewed for game stability and Interac speed — we prioritize
       native iOS/Android experiences that maintain strict AGCO data protection and provincial
       residency verification standards.
     </p>
-    <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-03-01</p>
+    <p class="mt-3 text-xs text-text-tertiary">
+      Last updated: <time datetime="2026-03-01" class="stat">2026-03-01</time>
+    </p>
   </header>
 
   <div
@@ -106,16 +113,19 @@
 
   <div class="mt-10 space-y-10 sm:mt-12 sm:space-y-12">
     <div class="navy-card rounded-xl p-5 sm:p-6 md:p-8">
-      <h2 class="mb-4 flex items-center gap-2 text-lg font-bold sm:text-xl">
-        <Smartphone class="h-5 w-5 text-slate-blue" aria-hidden="true" />
+      <h2 class="mb-2 flex items-center gap-2 font-display text-2xl font-semibold sm:text-3xl">
+        <Smartphone class="h-6 w-6 text-slate-blue" aria-hidden="true" />
         What We Test on Mobile Casino Apps
       </h2>
+      <p class="mb-5 max-w-2xl text-sm leading-relaxed text-text-tertiary">
+        Six checkpoints, every device — what a casino app earns its install for.
+      </p>
       <div
-        class="grid grid-cols-1 gap-4 text-sm text-gray-400 font-sans sm:grid-cols-2 xl:grid-cols-3"
+        class="grid grid-cols-1 gap-4 text-sm text-text-body font-sans sm:grid-cols-2 xl:grid-cols-3"
       >
         {#each testItems as { item, detail }}
-          <div class="navy-card p-4">
-            <div class="mb-1 text-xs font-bold text-white">{item}</div>
+          <div class="rounded-lg border border-white/5 bg-navy-raised p-4">
+            <div class="mb-1.5 text-sm font-bold text-white">{item}</div>
             <p class="text-xs leading-relaxed">{detail}</p>
           </div>
         {/each}

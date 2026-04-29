@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -18,7 +19,7 @@
     name="twitter:description"
     content="Browse 247iBET educational guides on legal betting in Canada."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides" />
+  <link rel="canonical" href={canonicalUrl('/guides')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

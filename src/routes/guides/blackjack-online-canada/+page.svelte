@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle, BookOpen } from 'lucide-svelte';
@@ -128,7 +129,7 @@
     name="twitter:description"
     content="Online blackjack for Canadian players: game rules, basic strategy, RTP rates, live dealer blackjack, and AGCO-licensed casinos. 18+/19+."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/blackjack-online-canada" />
+  <link rel="canonical" href={canonicalUrl('/guides/blackjack-online-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

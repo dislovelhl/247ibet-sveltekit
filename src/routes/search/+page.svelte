@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import { getFeaturedSearchItems, searchItems } from '$lib/search-index.js';
 
   let query = $state('');
@@ -19,7 +20,7 @@
     content="Search 247iBET for operator reviews, betting guides, casino bonuses, tools, and Canadian iGaming news."
   />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://247ibet.ca/search" />
+  <link rel="canonical" href={canonicalUrl('/search')} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">

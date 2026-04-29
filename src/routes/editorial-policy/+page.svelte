@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
@@ -17,7 +18,7 @@
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/editorial-policy" />
-  <link rel="canonical" href="https://247ibet.ca/editorial-policy" />
+  <link rel="canonical" href={canonicalUrl('/editorial-policy')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

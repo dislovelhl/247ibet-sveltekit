@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import {
     ArrowRight,
     BadgeCheck,
@@ -160,7 +161,7 @@
     property="og:description"
     content="Deposit and withdraw with Interac e-Transfer at 247iBET. Fast CAD payments for Canadian players."
   />
-  <link rel="canonical" href="https://247ibet.ca/deposit" />
+  <link rel="canonical" href={canonicalUrl('/deposit')} />
   <JsonLd schema={faqSchema} />
 </svelte:head>
 

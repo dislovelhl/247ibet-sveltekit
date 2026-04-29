@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -77,7 +78,7 @@
     name="twitter:description"
     content="Your authority on the Alberta regulated iGaming launch. 247iBET verified tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
   />
-  <link rel="canonical" href="https://247ibet.ca/alberta" />
+  <link rel="canonical" href={canonicalUrl('/alberta')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -99,10 +100,11 @@
     </ol>
   </nav>
 
-  <span
-    class="inline-flex items-center gap-1.5 rounded-full bg-warning/15 border border-warning/30 px-3 py-1 text-xs font-bold text-warning uppercase tracking-wider"
-    >Alberta · Pending 2026</span
-  >
+  <div class="mb-5 flex flex-wrap items-center gap-2">
+    <span class="page-hero-kicker">Alberta launch watch</span>
+    <span class="status-badge status-badge--soon">Pending 2026</span>
+    <span class="status-badge status-badge--licensed">AGLC · 18+</span>
+  </div>
 
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
     <img src="/images/generated/canada-market-hero.png" alt="" class="h-full w-full object-cover" />
@@ -121,8 +123,8 @@
   </div>
 
   <header class="mt-4 mb-10">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Alberta Online Gambling</h1>
-    <p class="text-lg text-[#94A3B8] leading-relaxed max-w-3xl">
+    <h1 class="page-hero-title text-4xl md:text-5xl mb-4">Alberta Online Gambling</h1>
+    <p class="page-hero-subtitle mt-4 max-w-3xl text-base sm:text-lg">
       Alberta launch-status hub covering legal age, payment checks, and safer signup guidance.
       Verify current official operator availability before registering.
     </p>
@@ -243,26 +245,14 @@
     {/each}
   </section>
 
-  <nav class="mt-12 flex flex-wrap gap-6 mb-10" aria-label="Related pages">
-    <a
-      href="/casino"
-      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Explore casino games</a
-    >
-    <a
-      href="/sportsbook"
-      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Explore sportsbook</a
-    >
-    <a
-      href="/interac"
-      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Interac payment methods</a
-    >
+  <nav class="mt-12 flex flex-wrap gap-x-6 gap-y-3 mb-10" aria-label="Related pages">
+    <a href="/casino" class="view-all-link">Explore casino games →</a>
+    <a href="/sportsbook" class="view-all-link">Explore sportsbook →</a>
+    <a href="/interac" class="view-all-link">Interac payment methods →</a>
   </nav>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a
+    Play responsibly. 18+ in Alberta. <a
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a
     >.

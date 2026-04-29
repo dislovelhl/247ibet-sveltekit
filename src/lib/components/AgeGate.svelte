@@ -150,7 +150,7 @@
           href="https://www.responsiblegambling.org"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-slate-blue underline font-bold inline-flex items-center gap-0.5 hover:text-slate-blue/80"
+          class="inline-flex items-center gap-0.5 rounded-sm font-bold text-slate-blue underline underline-offset-2 transition-colors hover:text-slate-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-blue/60"
         >
           Get help <ExternalLink class="w-2.5 h-2.5" />
         </a>
@@ -163,7 +163,7 @@
           bind:this={acceptButtonRef}
           type="button"
           onclick={handleAccept}
-          class="page-cta-primary-sm flex-1 hover:scale-[1.03] active:scale-[0.97] transition-transform"
+          class="page-cta-primary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           I Am 19+&nbsp;— Enter
         </button>
@@ -171,7 +171,7 @@
           id="age-gate-decline"
           type="button"
           onclick={handleDecline}
-          class="page-cta-secondary-sm flex-1 hover:scale-[1.03] active:scale-[0.97] transition-transform"
+          class="page-cta-secondary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           Exit
         </button>

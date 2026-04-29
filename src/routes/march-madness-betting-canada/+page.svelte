@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -52,7 +53,7 @@
     name="twitter:description"
     content="How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites."
   />
-  <link rel="canonical" href="https://247ibet.ca/march-madness-betting-canada" />
+  <link rel="canonical" href={canonicalUrl('/march-madness-betting-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

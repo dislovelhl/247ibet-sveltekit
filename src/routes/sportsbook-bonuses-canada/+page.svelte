@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -55,7 +56,7 @@
     property="og:description"
     content="Compare the best sportsbook promotions in Canada for 2026. We evaluate bet credits, price enhancements, parlay insurance, and reload offers from top Canadian sportsbooks. Updated monthly."
   />
-  <link rel="canonical" href="https://247ibet.ca/sportsbook-bonuses-canada" />
+  <link rel="canonical" href={canonicalUrl('/sportsbook-bonuses-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

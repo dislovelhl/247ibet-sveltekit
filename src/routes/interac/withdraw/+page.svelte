@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
@@ -58,7 +59,7 @@
     property="og:description"
     content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
   />
-  <link rel="canonical" href="https://247ibet.ca/interac/withdraw" />
+  <link rel="canonical" href={canonicalUrl('/interac/withdraw')} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -71,7 +72,7 @@
     property="og:description"
     content="Canadian sportsbooks for NHL, CFL, NBA, UFC, and more."
   />
-  <link rel="canonical" href="https://247ibet.ca/best-sports-betting-sites-canada" />
+  <link rel="canonical" href={canonicalUrl('/best-sports-betting-sites-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -109,14 +110,19 @@
         <li class="text-white font-medium">Best Sportsbooks</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <div class="mb-5 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">Canadian sportsbook rankings — 2026</span>
+      <span class="status-badge status-badge--licensed">AGCO verified</span>
+      <span class="live-tag"><span class="live-dot"></span> Live markets open</span>
+    </div>
+    <h1 class="page-hero-title mb-4 text-[clamp(2rem,7vw,3.25rem)]">
       Best Sports Betting Sites Canada
     </h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Canada's strongest sportsbook options, compared by market depth, Interac efficiency, and
-      live-betting reliability. Use this page to choose the platform that fits how you bet.
+    <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
+      Canada's strongest sportsbook options — compared on market depth, Interac efficiency, and
+      live-betting reliability. Pick the platform that fits how you bet.
     </p>
-    <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+    <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
 
   <div
@@ -128,7 +134,7 @@
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
   <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
-    <h2 class="text-2xl font-bold mb-6">Canadian Sports Coverage — What Matters Most</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6">Canadian Sports Coverage — What Matters Most</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
       {#each sportItems as { sport, note }}
         <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08]">
@@ -140,7 +146,7 @@
   </section>
 
   <section class="mt-10 space-y-4">
-    <h2 class="text-2xl font-bold">Sports Betting Canada FAQ</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold">Sports Betting Canada FAQ</h2>
     {#each faqItems as faq}
       <details class="navy-card rounded-xl p-4">
         <summary

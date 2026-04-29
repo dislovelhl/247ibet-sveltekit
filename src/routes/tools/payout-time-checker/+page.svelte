@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -81,7 +82,7 @@
     property="og:description"
     content="Compare Interac e-Transfer withdrawal speeds, payment methods, and verified processing times for Canadian online casinos."
   />
-  <link rel="canonical" href="https://247ibet.ca/tools/payout-time-checker" />
+  <link rel="canonical" href={canonicalUrl('/tools/payout-time-checker')} />
   <JsonLd {schema} />
 </svelte:head>
 
@@ -95,11 +96,12 @@
   </nav>
 
   <header class="mb-8">
-    <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
-      Free Tool
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">Free tool</span>
+      <span class="status-badge status-badge--licensed">Interac benchmark</span>
     </div>
-    <h1 class="text-3xl md:text-4xl font-black text-white mb-3">Casino Payout Time Checker</h1>
-    <p class="text-gray-400 font-sans text-base max-w-2xl">
+    <h1 class="page-hero-title text-3xl md:text-4xl mb-3">Casino Payout Time Checker</h1>
+    <p class="page-hero-subtitle mt-3 max-w-2xl text-base">
       Reference withdrawal speeds for all major Canadian online casinos. Sorted by payout score —
       fastest sites appear first. Interac e-Transfer is the main benchmark because it is the most
       common CAD payout rail for Canadian players.
@@ -200,22 +202,10 @@
     </div>
   </section>
 
-  <div class="flex flex-wrap gap-3 mb-8">
-    <a
-      href="/fast-payouts"
-      class="px-4 py-2 rounded-xl bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-sm hover:bg-slate-blue/20 transition-colors"
-      >Fast Payout Casino Rankings →</a
-    >
-    <a
-      href="/interac-casino-canada"
-      class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-sm hover:bg-white/10 transition-colors"
-      >Interac Casino Guide →</a
-    >
-    <a
-      href="/guides/kyc-verification-online-casino"
-      class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-sm hover:bg-white/10 transition-colors"
-      >KYC Guide →</a
-    >
+  <div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+    <a href="/fast-payouts" class="view-all-link">Fast Payout Casino Rankings →</a>
+    <a href="/interac-casino-canada" class="view-all-link">Interac Casino Guide →</a>
+    <a href="/guides/kyc-verification-online-casino" class="view-all-link">KYC Guide →</a>
   </div>
 
   <section class="navy-card rounded-2xl border border-white/10 p-6 md:p-8 mb-8">

@@ -3,7 +3,7 @@ import { json } from '@sveltejs/kit';
 import { safeEq } from '$lib/server/auth.js';
 import type { RequestHandler } from './$types';
 
-export const config = { runtime: 'nodejs20.x', maxDuration: 30 };
+export const config = { runtime: 'nodejs24.x', maxDuration: 30 };
 
 const RUN_ID_RE = /^[0-9a-zA-Z_-]{8,64}$/;
 

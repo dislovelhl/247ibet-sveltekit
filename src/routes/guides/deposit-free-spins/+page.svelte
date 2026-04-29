@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -26,7 +27,7 @@
     name="twitter:description"
     content="Deposit credits are a popular promotional tool used by online casinos to attract new players and retain existing ones."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/deposit-free-spins" />
+  <link rel="canonical" href={canonicalUrl('/guides/deposit-free-spins')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

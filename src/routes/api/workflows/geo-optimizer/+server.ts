@@ -4,7 +4,7 @@ import { safeEq } from '$lib/server/auth.js';
 import type { RequestHandler } from './$types';
 import { geoOptimizerWorkflow } from '../../../../workflows/geo-optimizer.js';
 
-export const config = { runtime: 'nodejs20.x', maxDuration: 60 };
+export const config = { runtime: 'nodejs24.x', maxDuration: 60 };
 
 async function runWorkflow(): Promise<{ runId: string; async: boolean }> {
   let runId: string = crypto.randomUUID();

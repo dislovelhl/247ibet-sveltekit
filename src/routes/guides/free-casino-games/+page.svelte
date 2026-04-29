@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -27,7 +28,7 @@
     name="twitter:description"
     content="Playing casino games for fun has become a popular pastime for many, offering an engaging way to enjoy gaming without the financial risks associated with real-money gambling."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/free-casino-games" />
+  <link rel="canonical" href={canonicalUrl('/guides/free-casino-games')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -91,7 +91,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
               >
                 <svg
                   aria-hidden="true"
@@ -141,7 +141,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="block py-1.5 text-sm text-gray-500 transition-colors hover:text-gray-200"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -163,7 +163,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="block py-1.5 text-sm text-gray-500 transition-colors hover:text-gray-200"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -174,9 +174,17 @@
           <div class="mt-8 border-t border-white/5 pt-6">
             <p class="text-xs leading-relaxed text-gray-600">
               Problem gambling helplines:
-              <a href="tel:18663322322" class="text-gray-400 hover:text-gray-200">1-866-332-2322</a>
+              <a
+                href="tel:18663322322"
+                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                >1-866-332-2322</a
+              >
               (Alberta) ·
-              <a href="tel:18665312600" class="text-gray-400 hover:text-gray-200">1-866-531-2600</a>
+              <a
+                href="tel:18665312600"
+                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                >1-866-531-2600</a
+              >
               (Ontario).
             </p>
           </div>
@@ -195,7 +203,11 @@
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">
           {#each legalLinks as link}
-            <a href={link.href} class="transition-colors hover:text-gray-400">{link.label}</a>
+            <a
+              href={link.href}
+              class="rounded-sm transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+              >{link.label}</a
+            >
           {/each}
         </nav>
       </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -39,7 +40,7 @@
     property="og:description"
     content="Canadian online casinos ranked by payout percentage, Interac timelines, and withdrawal limits."
   />
-  <link rel="canonical" href="https://247ibet.ca/best-paying-online-casinos-canada" />
+  <link rel="canonical" href={canonicalUrl('/best-paying-online-casinos-canada')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -77,14 +78,18 @@
         <li class="text-white font-medium">Best Paying Casinos</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <div class="mb-5 flex flex-wrap items-center gap-2">
+      <span class="page-hero-kicker">Payout-first rankings — 2026</span>
+      <span class="status-badge status-badge--licensed">AGCO verified</span>
+    </div>
+    <h1 class="page-hero-title mb-4 text-[clamp(2rem,7vw,3.25rem)]">
       Best Paying Online Casinos Canada
     </h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Compare Canadian casinos by verified RTP, payout transparency, and withdrawal speed. The focus
-      here is simple: which sites actually return value and cash out cleanly.
+    <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
+      Canadian casinos compared by verified RTP, payout transparency, and withdrawal speed — which
+      sites actually return value and cash out cleanly.
     </p>
-    <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+    <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
 
   <div
@@ -96,34 +101,34 @@
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
   <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
-    <h2 class="text-2xl font-bold mb-4">What We Measure Before We Put a Casino on This List</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">What We Measure Before We Put a Casino on This List</h2>
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400 font-sans leading-relaxed"
     >
       <div>
-        <h3 class="text-white font-bold mb-2">RTP Certification (30%)</h3>
+        <h3 class="text-white font-bold mb-2">RTP Certification <span class="stat text-prestige-gold">(30%)</span></h3>
         <p>
           Return to Player (RTP) percentages must be certified by testing labs. We check that
           published RTPs match the certified figure and flag anything that looks padded or vague.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">Withdrawal Speed (35%)</h3>
+        <h3 class="text-white font-bold mb-2">Withdrawal Speed <span class="stat text-prestige-gold">(35%)</span></h3>
         <p>
           Our primary metric. We test Interac e-Transfer withdrawal timelines from real accounts.
           Sites that move money quickly after KYC are easier to trust and easier to recommend.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">Withdrawal Limits &amp; Fees (20%)</h3>
+        <h3 class="text-white font-bold mb-2">Withdrawal Limits &amp; Fees <span class="stat text-prestige-gold">(20%)</span></h3>
         <p>
-          We assess minimum withdrawal thresholds (should be ≤$20), maximum daily/monthly limits,
+          We assess minimum withdrawal thresholds (should be ≤<span class="money">$20</span>), maximum daily/monthly limits,
           and whether withdrawal fees apply. High-limit players should verify VIP withdrawal caps
           before depositing large amounts.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">KYC Processing (15%)</h3>
+        <h3 class="text-white font-bold mb-2">KYC Processing <span class="stat text-prestige-gold">(15%)</span></h3>
         <p>
           Identity verification delays are the #1 complaint in Canadian casino withdrawals. We test
           KYC completion time from document submission to approval — operators that take more than
@@ -132,20 +137,21 @@
       </div>
     </div>
     <p class="mt-4 text-xs text-gray-600 font-sans">
-      Full methodology: <a href="/about/how-we-test" class="text-slate-blue hover:underline"
-        >How we verify operators</a
-      >. Scores reflect current platform checks as of {LAST_UPDATED}. We may earn affiliate
+      Scores reflect current platform checks as of {LAST_UPDATED}. We may earn affiliate
       commissions —
       <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline"
         >read our disclosure</a
       >.
     </p>
+    <a href="/about/how-we-test" class="view-all-link mt-4">
+      How we verify operators →
+    </a>
   </section>
 
   <section class="navy-card mt-8 rounded-2xl p-6 md:p-8">
-    <h2 class="text-2xl font-bold mb-4">Payout Quality Signals</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Payout Quality Signals</h2>
+    <div class="table-scroll-wrap -mx-6 px-6 md:mx-0 md:px-0">
+      <table class="w-full min-w-[640px] text-sm">
         <thead>
           <tr class="border-b border-white/10 bg-white/[0.03]">
             <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Signal</th>
@@ -156,17 +162,17 @@
         <tbody class="divide-y divide-white/5">
           <tr>
             <td class="p-4 text-white font-bold">RTP</td>
-            <td class="p-4 text-gray-300">Certified game values, usually 95%+</td>
+            <td class="p-4 text-gray-300">Certified game values, usually <span class="stat text-white">95%+</span></td>
             <td class="p-4 text-gray-300">Higher certified RTP improves long-run player value.</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-bold">Interac speed</td>
-            <td class="p-4 text-gray-300">1-4 hours after KYC</td>
+            <td class="p-4 text-gray-300"><span class="stat text-white">1–4 hours</span> after KYC</td>
             <td class="p-4 text-gray-300">Fast withdrawals reduce friction after a win.</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-bold">Withdrawal limits</td>
-            <td class="p-4 text-gray-300">$20 minimum, clear daily/monthly caps</td>
+            <td class="p-4 text-gray-300"><span class="money text-white">$20</span> minimum, clear daily/monthly caps</td>
             <td class="p-4 text-gray-300">Transparent limits make cashouts easier to plan.</td>
           </tr>
         </tbody>
@@ -175,7 +181,7 @@
   </section>
 
   <section class="mt-10 space-y-4">
-    <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold">Frequently Asked Questions</h2>
     {#each faqItems as faq}
       <details class="navy-card rounded-xl p-4">
         <summary

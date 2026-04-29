@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
@@ -89,7 +90,7 @@
     name="twitter:description"
     content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
   />
-  <link rel="canonical" href="https://247ibet.ca/casino/live-casino" />
+  <link rel="canonical" href={canonicalUrl('/casino/live-casino')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

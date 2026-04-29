@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -18,7 +19,7 @@
     name="twitter:description"
     content="Advanced betting strategies: counter-intuition, zoning, and information density for elite-level play."
   />
-  <link rel="canonical" href="https://247ibet.ca/guides/strategy" />
+  <link rel="canonical" href={canonicalUrl('/guides/strategy')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
@@ -192,7 +193,7 @@
           sports betting.
         </p>
         <a
-          href="https://247ibet.ca/register"
+          href={canonicalUrl('/register')}
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-prestige-gold text-navy-black font-semibold text-sm hover:opacity-90 transition-opacity uppercase tracking-[0.14em]"
