@@ -1,18 +1,11 @@
-import { timingSafeEqual } from 'node:crypto';
 import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
+import { safeEq } from '$lib/server/auth.js';
 import type { RequestHandler } from './$types';
 
 export const config = { runtime: 'nodejs20.x', maxDuration: 30 };
 
 const RUN_ID_RE = /^[0-9a-zA-Z_-]{8,64}$/;
-
-function safeEq(a: string, b: string): boolean {
-	const ab = Buffer.from(a);
-	const bb = Buffer.from(b);
-	if (ab.length !== bb.length) return false;
-	return timingSafeEqual(ab, bb);
-}
 
 export const GET: RequestHandler = async ({ request, params }) => {
 	const secret = request.headers.get('x-workflow-secret') ?? '';
@@ -29,7 +22,7 @@ export const GET: RequestHandler = async ({ request, params }) => {
 	try {
 		const { getRun } = await import('workflow/api');
 		const run = getRun(runId);
-		return json({ runId, run });
+		return json({ runId, status: 'active', run });
 	} catch {
 		return json({
 			runId,

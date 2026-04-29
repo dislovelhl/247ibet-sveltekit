@@ -159,7 +159,7 @@
     content="Deposit and withdraw with Interac e-Transfer at 247iBET. Fast CAD payments for Canadian players."
   />
   <link rel="canonical" href="https://247ibet.ca/deposit" />
-  <script type="application/ld+json">{@html JSON.stringify(faqSchema)}</script>
+  <script type="application/ld+json">{@html JSON.stringify(faqSchema).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')}</script>
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-28 pb-20">

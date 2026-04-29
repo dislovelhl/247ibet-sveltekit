@@ -1,29 +1,23 @@
-import { timingSafeEqual } from 'node:crypto';
 import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
+import { safeEq } from '$lib/server/auth.js';
 import type { RequestHandler } from './$types';
 import { aeoSchemaWorkflow } from '../../../../workflows/aeo-schema.js';
 import type { AeoSchemaInput } from '$lib/workflows/types.js';
 
 export const config = { runtime: 'nodejs20.x', maxDuration: 60 };
 
-function safeEq(a: string, b: string): boolean {
-	const ab = Buffer.from(a);
-	const bb = Buffer.from(b);
-	if (ab.length !== bb.length) return false;
-	return timingSafeEqual(ab, bb);
-}
-
-async function runWorkflow(input: AeoSchemaInput) {
+async function runWorkflow(input: AeoSchemaInput): Promise<{ runId: string; async: boolean }> {
 	let runId: string = crypto.randomUUID();
 	try {
 		const { start } = await import('workflow/api');
 		const run = await start(aeoSchemaWorkflow, [input]);
 		runId = run.runId ?? runId;
+		return { runId, async: true };
 	} catch {
 		await aeoSchemaWorkflow(input);
+		return { runId, async: false };
 	}
-	return runId;
 }
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -34,8 +28,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const input: AeoSchemaInput = await request.json().catch(() => ({}));
-	const runId = await runWorkflow(input);
-	return json({ runId, status: 'started' }, { status: 202 });
+	const { runId, async: isAsync } = await runWorkflow(input);
+	if (isAsync) {
+		return json({ runId, status: 'started' }, { status: 202 });
+	}
+	return json({ runId, status: 'completed-sync' }, { status: 200 });
 };
 
 // Vercel Cron calls GET with Authorization: Bearer <CRON_SECRET>
@@ -46,6 +43,9 @@ export const GET: RequestHandler = async ({ request }) => {
 		return json({ error: 'unauthorized' }, { status: 401 });
 	}
 
-	const runId = await runWorkflow({});
-	return json({ runId, status: 'started' }, { status: 202 });
+	const { runId, async: isAsync } = await runWorkflow({});
+	if (isAsync) {
+		return json({ runId, status: 'started' }, { status: 202 });
+	}
+	return json({ runId, status: 'completed-sync' }, { status: 200 });
 };
