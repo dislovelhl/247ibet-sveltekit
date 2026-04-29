@@ -1,4 +1,4 @@
-import type { GeoPageFailure, GeoResult } from '$lib/workflows/types.js';
+import type { EEATScore, GeoPageFailure, GeoResult } from '$lib/workflows/types.js';
 import { PAGE_REGISTRY } from '$lib/workflows/pages.js';
 import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
@@ -11,26 +11,35 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 	const baseUrl = await getBaseUrl();
 	const commit =
 		(typeof process !== 'undefined' && process.env.VERCEL_GIT_COMMIT_SHA) || undefined;
-	const scores = [];
+
+	const results = await Promise.allSettled(
+		PAGE_REGISTRY.map(async (page) => {
+			const html = await fetchPageHtml(page.path, baseUrl);
+			const score = await scoreEEAT(page.path, html);
+			return { page, score };
+		})
+	);
+
+	const scores: EEATScore[] = [];
 	const recommendations: string[] = [];
 	const failures: GeoPageFailure[] = [];
 
-	for (const page of PAGE_REGISTRY) {
-		try {
-			const html = await fetchPageHtml(page.path, baseUrl);
-			const score = await scoreEEAT(page.path, html);
-			scores.push(score);
-			if (score.author === 0) recommendations.push(`Add <meta name="author"> to ${page.path}`);
-			if (score.date === 0)
-				recommendations.push(`Add <time datetime="..."> to ${page.path}`);
-			if (score.structuredData === 0)
-				recommendations.push(`Add JSON-LD structured data to ${page.path}`);
-		} catch (err) {
+	for (let i = 0; i < results.length; i++) {
+		const result = results[i];
+		const page = PAGE_REGISTRY[i];
+		if (result.status === 'rejected') {
 			failures.push({
 				path: page.path,
-				reason: err instanceof Error ? err.message : String(err)
+				reason: 'page fetch failed'
 			});
+			continue;
 		}
+		const { score } = result.value;
+		scores.push(score);
+		if (score.author === 0) recommendations.push(`Add <meta name="author"> to ${page.path}`);
+		if (score.date === 0) recommendations.push(`Add <time datetime="..."> to ${page.path}`);
+		if (score.structuredData === 0)
+			recommendations.push(`Add JSON-LD structured data to ${page.path}`);
 	}
 
 	const avgScore =
@@ -42,9 +51,7 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 		`# 247iBET — LLM-Friendly Sitemap`,
 		`# Canada's regulated iGaming authority`,
 		``,
-		...PAGE_REGISTRY.map(
-			(p) => `- ${baseUrl}${p.path === '/' ? '' : p.path} — tier:${p.tier}`
-		),
+		...PAGE_REGISTRY.map((p) => `- ${baseUrl}${p.path === '/' ? '' : p.path} — tier:${p.tier}`),
 		``,
 		`# Updated: ${generatedAt}`
 	];

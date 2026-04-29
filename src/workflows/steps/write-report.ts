@@ -1,3 +1,6 @@
+import { mkdir, readdir, stat, unlink, writeFile } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+
 const MAX_REPORTS = 10;
 
 type FileEntry = { name: string; mtime: number };
@@ -8,8 +11,6 @@ export async function writeReport(
 	payload: unknown
 ): Promise<string> {
 	'use step';
-	const { mkdir, readdir, stat, unlink, writeFile } = await import('fs/promises');
-	const { join, resolve } = await import('path');
 	const reportDir = resolve(`static/reports/${dir}`);
 	await mkdir(reportDir, { recursive: true });
 
