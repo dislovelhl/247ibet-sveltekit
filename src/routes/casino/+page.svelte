@@ -90,7 +90,7 @@
 
       <div class="relative max-w-4xl">
         <p class="mb-5 text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">Canada&apos;s trusted online casino</p>
-        <h1 class="text-[clamp(3.25rem,6.5vw,6.6rem)] font-black leading-[0.98] tracking-normal">
+        <h1 class="text-[clamp(2rem,6.5vw,6.6rem)] font-black leading-[0.98] tracking-normal">
           Play Online <br />Casino in <span class="text-prestige-gold">Canada</span>
         </h1>
         <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
@@ -157,7 +157,7 @@
     <section class="mt-7 grid rounded-xl border border-white/10 bg-navy-card/75 sm:grid-cols-2 lg:grid-cols-5">
       {#each safetyStrip as item}
         {@const Icon = item.icon}
-        <article class="flex gap-3 border-white/8 p-5 lg:border-r lg:last:border-r-0">
+        <article class="flex gap-3 border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0">
           <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
             <h3 class="text-sm font-black">{item.title}</h3>
@@ -226,7 +226,7 @@
 
     <section class="mt-7 grid rounded-xl border border-prestige-gold/35 bg-navy-card/80 sm:grid-cols-2 lg:grid-cols-7">
       {#each liveStats as item}
-        <div class="border-white/8 p-5 lg:border-r lg:last:border-r-0">
+        <div class="border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0">
           <p class="text-xs text-text-body">{item.label}</p>
           <p class="mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
         </div>
@@ -243,7 +243,7 @@
           </p>
         </div>
         <div class="flex flex-col gap-3">
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-72 justify-center">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72">
             Start Playing
             <ArrowRight class="h-5 w-5" aria-hidden="true" />
           </SafeExternalLink>

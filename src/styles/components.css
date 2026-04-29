@@ -332,6 +332,12 @@
   .status-badge--blocked { color: #EF4444; border: 1px solid rgba(239,68,68,0.30); background: rgba(239,68,68,0.06); }
   .status-badge--licensed { color: #D4943A; border: 1px solid rgba(212,148,58,0.30); background: rgba(212,148,58,0.06); }
 
+  /* ── Scrollable table container — smooth iOS momentum + touch hint ── */
+  .table-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* ── Form Controls ── */
   .ds-input, .ds-select {
     display: block; width: 100%; min-height: 44px; padding: 0 14px; background: #142038;

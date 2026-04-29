@@ -104,7 +104,7 @@
     <div class="relative mx-auto grid min-h-[620px] max-w-[1720px] items-center px-4 py-16 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 xl:px-16">
       <div class="max-w-4xl">
         <p class="mb-5 text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">Canada&apos;s trusted betting destination</p>
-        <h1 class="text-[clamp(3.25rem,6.8vw,6.4rem)] font-black leading-[0.98] tracking-normal">
+        <h1 class="text-[clamp(2rem,7vw,6.4rem)] font-black leading-[0.98] tracking-normal">
           Online Casino &amp; Sportsbook + <span class="text-prestige-gold">Fast Payouts</span>
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-text-body">
@@ -127,7 +127,7 @@
     <section class="grid rounded-xl border border-white/10 bg-navy-card/90 shadow-2xl sm:grid-cols-2 lg:grid-cols-6">
       {#each heroTrust as item}
         {@const Icon = item.icon}
-        <div class="flex items-center gap-3 border-white/10 p-4 lg:border-r lg:last:border-r-0">
+        <div class="flex items-center gap-3 border-b border-white/10 p-4 last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0">
           <Icon class="h-7 w-7 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
             <p class="text-sm font-black">{item.label}</p>
@@ -163,7 +163,7 @@
 
       <div class="p-7">
         <h2 class="text-2xl font-black">Why Canadian Players Choose 247iBET</h2>
-        <div class="mt-5 grid gap-4 md:grid-cols-4">
+        <div class="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {#each whyCards as card}
             {@const Icon = card.icon}
             <article class="rounded-xl border border-white/10 bg-white/[0.035] p-5">
@@ -174,7 +174,7 @@
           {/each}
         </div>
 
-        <div class="mt-6 overflow-x-auto rounded-xl border border-white/10">
+        <div class="table-scroll-wrap mt-6 overflow-x-auto rounded-xl border border-white/10">
           <table class="w-full min-w-[760px] text-left text-sm">
             <thead class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
               <tr>
@@ -211,7 +211,7 @@
         <p class="mt-3 text-sm leading-6 text-text-body">Simple. Secure. Lightning fast.</p>
         <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex">Learn More</a>
       </div>
-      <div class="grid gap-4 md:grid-cols-4">
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         {#each processSteps as step, index}
           <article class="rounded-xl border border-white/10 bg-black/20 p-5">
             <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black">{index + 1}</div>
@@ -224,7 +224,7 @@
     </section>
 
     <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-6">
-      <div class="grid gap-5 lg:grid-cols-[0.25fr_repeat(5,1fr)]">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-[0.25fr_repeat(5,1fr)]">
         <div>
           <h2 class="text-3xl font-black">Why 247iBET Stands Out</h2>
           <p class="mt-3 text-sm leading-6 text-text-body">Built for Canadian players who want one premium account.</p>
@@ -248,7 +248,7 @@
           <h2 class="text-2xl font-black">Casino</h2>
           <a href="/casino" class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">View All Casino</a>
         </div>
-        <div class="grid gap-4 md:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {#each casinoCards as card}
             <a href={card.href} class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20">
               <img src={card.image} alt="" class="h-28 w-full object-cover transition-transform group-hover:scale-105" />
@@ -267,7 +267,7 @@
           <h2 class="text-2xl font-black">Sportsbook</h2>
           <a href="/sportsbook" class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">View All Sports</a>
         </div>
-        <div class="grid gap-4 md:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {#each sportsCards as card}
             <a href={card.href} class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20">
               <img src={card.image} alt="" class="h-28 w-full object-cover transition-transform group-hover:scale-105" />
@@ -282,7 +282,7 @@
       </div>
     </section>
 
-    <section class="grid gap-5 lg:grid-cols-4">
+    <section class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       <article class="rounded-xl border border-prestige-gold/25 bg-navy-card/80 p-6">
         <CreditCard class="h-10 w-10 text-prestige-gold" aria-hidden="true" />
         <h2 class="mt-4 text-xl font-black">Payment Methods</h2>
@@ -310,7 +310,7 @@
         <h2 class="text-2xl font-black">Expert Guides</h2>
         <a href="/guides" class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">View All Guides</a>
       </div>
-      <div class="grid gap-4 md:grid-cols-4">
+      <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         {#each guideCards as card}
           <a href={card.href} class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 md:grid-cols-[116px_1fr]">
             <img src={card.image} alt="" class="h-24 w-full rounded-lg object-cover md:w-[116px]" />
@@ -347,7 +347,7 @@
             Join thousands of Canadian players enjoying fast payouts, top odds, and a premium gaming experience.
           </p>
         </div>
-        <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-72 justify-center">
+        <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72">
           Join 247iBET Now
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
