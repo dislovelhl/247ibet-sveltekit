@@ -30,9 +30,10 @@ pnpm build        # production build
 pnpm preview      # preview production build locally
 pnpm check        # type-check via svelte-check (run before committing)
 pnpm lint         # ESLint
+pnpm test         # run vitest test suite (77 tests)
 ```
 
-No test suite exists yet. The three gates before pushing are: `pnpm check && pnpm lint && pnpm build`.
+Test suite added in April 2026 — 77 tests across 8 files covering lib modules. The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.
 
 ## Architecture
 
