@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
   const lastUpdated = '2026-03-30';
@@ -25,13 +27,52 @@
 
 <svelte:head>
   <title>Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET</title>
-  <meta name="description" content="Compare Canadian casino promotions by real value after wagering requirements. We compare deposit matches, play credits, and reload offers from top Canadian casinos." />
-  <meta property="og:title" content="Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET" />
-  <meta property="og:description" content="Online casino promotions for Canadians compared by effective value after wagering requirements." />
-  <meta name="twitter:title" content="Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET" />
-  <meta name="twitter:description" content="Online casino promotions for Canadians compared by real value after wagering requirements and expiry terms." />
-  <link rel="canonical" href="https://247ibet.ca/casino-bonuses-canada" />
-  <script type="application/ld+json">{@html JSON.stringify([{"@context":"https://schema.org","@type":"WebPage","name":"Casino Promotions Canada 2026 — Deposit Offers & Rewards","description":"Online casino promotions for Canadians compared by real value. Deposit match offers, play credits, and reload offers from top Canadian casinos compared by effective worth.","url":"https://247ibet.ca/casino-bonuses-canada","dateModified":"2026-03-30","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino Bonuses","item":"https://247ibet.ca/casino-bonuses-canada"}]}}])}</script>
+  <meta
+    name="description"
+    content="Compare Canadian casino promotions by real value after wagering requirements. We compare deposit matches, play credits, and reload offers from top Canadian casinos."
+  />
+  <meta
+    property="og:title"
+    content="Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET"
+  />
+  <meta
+    property="og:description"
+    content="Online casino promotions for Canadians compared by effective value after wagering requirements."
+  />
+  <meta
+    name="twitter:title"
+    content="Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET"
+  />
+  <meta
+    name="twitter:description"
+    content="Online casino promotions for Canadians compared by real value after wagering requirements and expiry terms."
+  />
+  <link rel="canonical" href={canonicalUrl('/casino-bonuses-canada')} />
+  <JsonLd
+    schema={[
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Casino Promotions Canada 2026 — Deposit Offers & Rewards',
+        description:
+          'Online casino promotions for Canadians compared by real value. Deposit match offers, play credits, and reload offers from top Canadian casinos compared by effective worth.',
+        url: 'https://247ibet.ca/casino-bonuses-canada',
+        dateModified: '2026-03-30',
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Casino Bonuses',
+              item: 'https://247ibet.ca/casino-bonuses-canada',
+            },
+          ],
+        },
+      },
+    ]}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
@@ -43,12 +84,22 @@
         <li class="text-white">Casino Bonuses</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Casino Promotions Canada 2026</h1>
-    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">Online casino promotions for Canadians compared by real value — not headline numbers. We calculate effective offer worth after wagering requirements, game restrictions, and expiry terms, so you claim offers that actually pay out.</p>
+    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+      Casino Promotions Canada 2026
+    </h1>
+    <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
+      Online casino promotions for Canadians compared by real value — not headline numbers. We
+      calculate effective offer worth after wagering requirements, game restrictions, and expiry
+      terms, so you claim offers that actually pay out.
+    </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {lastUpdated}</p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <IBetShowcase variant="hero" showFeatures showPros />
 
@@ -57,19 +108,38 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400 leading-relaxed">
       <div>
         <h3 class="text-white font-bold mb-2">Deposit Match Bonuses</h3>
-        <p>The operator matches your deposit by a percentage — typically 50%–100% — up to a maximum amount. A 100% match up to $200 gives you $200 in bonus funds for a $200 deposit. Value depends on wagering requirement (25x–40x is typical), game contributions, and whether the bonus can be declined.</p>
+        <p>
+          The operator matches your deposit by a percentage — typically 50%–100% — up to a maximum
+          amount. A 100% match up to $200 gives you $200 in bonus funds for a $200 deposit. Value
+          depends on wagering requirement (25x–40x is typical), game contributions, and whether the
+          bonus can be declined.
+        </p>
       </div>
       <div>
         <h3 class="text-white font-bold mb-2">Free Spins</h3>
-        <p>Free spins allow you to play eligible slot games without using your cash balance. Each spin has a fixed value (usually $0.10–$0.20). Winnings from free spins are typically capped ($20–$50) and subject to 20x–30x wagering before withdrawal. Net value is often modest and low up-front risk.</p>
+        <p>
+          Free spins allow you to play eligible slot games without using your cash balance. Each
+          spin has a fixed value (usually $0.10–$0.20). Winnings from free spins are typically
+          capped ($20–$50) and subject to 20x–30x wagering before withdrawal. Net value is often
+          modest and low up-front risk.
+        </p>
       </div>
       <div>
         <h3 class="text-white font-bold mb-2">Reload & Loyalty Bonuses</h3>
-        <p>Ongoing promotions reward continued play — weekly reload matches, cashback on losses, or free spins on featured games. AGCO operators must not make unsolicited direct marketing offers. Loyalty programs (tiered VIP clubs) offer the best long-term value for regular players.</p>
+        <p>
+          Ongoing promotions reward continued play — weekly reload matches, cashback on losses, or
+          free spins on featured games. AGCO operators must not make unsolicited direct marketing
+          offers. Loyalty programs (tiered VIP clubs) offer the best long-term value for regular
+          players.
+        </p>
       </div>
     </div>
     <p class="mt-4 text-xs text-gray-600">
-      Bonus values and terms change frequently. Always read the full terms and conditions on the operator's site before claiming. We may earn affiliate commissions — <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">read our disclosure</a>.
+      Bonus values and terms change frequently. Always read the full terms and conditions on the
+      operator's site before claiming. We may earn affiliate commissions — <a
+        href="/about/affiliate-disclosure"
+        class="text-slate-blue hover:underline">read our disclosure</a
+      >.
     </p>
   </section>
 
@@ -111,7 +181,14 @@
       <details class="navy-card rounded-xl p-4 group cursor-pointer">
         <summary class="font-bold text-white list-none flex items-center justify-between gap-2">
           {q}
-          <svg class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="w-4 h-4 shrink-0 text-gray-500 group-open:rotate-180 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -122,7 +199,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

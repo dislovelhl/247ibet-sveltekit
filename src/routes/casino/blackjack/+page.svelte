@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
   import { CheckCircle2 } from 'lucide-svelte';
@@ -52,36 +54,63 @@
   const faqItems = [
     {
       question: 'What blackjack variant is best for beginners?',
-      answer: 'Classic blackjack is usually the easiest place to start because there is only one hand to manage and the round pace is slower. That makes strategy decisions easier to follow and review.',
+      answer:
+        'Classic blackjack is usually the easiest place to start because there is only one hand to manage and the round pace is slower. That makes strategy decisions easier to follow and review.',
     },
     {
       question: 'Does basic strategy guarantee profit in blackjack?',
-      answer: "No. Basic strategy lowers avoidable mistakes and helps you play closer to the game's theoretical RTP, but blackjack still carries house edge and session variance.",
+      answer:
+        "No. Basic strategy lowers avoidable mistakes and helps you play closer to the game's theoretical RTP, but blackjack still carries house edge and session variance.",
     },
     {
       question: 'Is live blackjack better than RNG blackjack?',
-      answer: 'It depends on what you value. RNG blackjack is faster and more volume-driven, while live blackjack feels more social and closer to a physical table experience.',
+      answer:
+        'It depends on what you value. RNG blackjack is faster and more volume-driven, while live blackjack feels more social and closer to a physical table experience.',
     },
     {
       question: 'Why do side bets change blackjack value?',
-      answer: 'Side bets usually carry a higher house edge than the base hand. They can add entertainment value, but they are rarely the most efficient part of a blackjack session.',
+      answer:
+        'Side bets usually carry a higher house edge than the base hand. They can add entertainment value, but they are rarely the most efficient part of a blackjack session.',
     },
   ];
 </script>
 
 <svelte:head>
   <title>Blackjack Online Canada | 247iBET Canada</title>
-  <meta name="description" content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges." />
+  <meta
+    name="description"
+    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+  />
   <meta property="og:title" content="Blackjack Online Canada | 247iBET Canada" />
-  <meta property="og:description" content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges." />
+  <meta
+    property="og:description"
+    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+  />
   <meta name="twitter:title" content="Blackjack Online Canada | 247iBET Canada" />
-  <meta name="twitter:description" content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges." />
-  <link rel="canonical" href="https://247ibet.ca/casino/blackjack" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Casino","item":"https://247ibet.ca/casino"},{"@type":"ListItem","position":3,"name":"Blackjack Online","item":"https://247ibet.ca/casino/blackjack"}]})}</script>
+  <meta
+    name="twitter:description"
+    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+  />
+  <link rel="canonical" href={canonicalUrl('/casino/blackjack')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Casino', item: 'https://247ibet.ca/casino' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Blackjack Online',
+          item: 'https://247ibet.ca/casino/blackjack',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-
   <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
     <img
       src={heroImage}
@@ -90,10 +119,14 @@
       alt={pageName}
       class="object-cover w-full h-full"
     />
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
+    ></div>
     <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     <div class="absolute bottom-5 left-6 md:left-8">
-      <div class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5">
+      <div
+        class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
+      >
         {intro.eyebrow}
       </div>
       <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
@@ -111,14 +144,26 @@
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Blackjack Online in Canada</h1>
-    <p class="text-base text-text-body leading-relaxed max-w-3xl">Blackjack stays popular because it combines straightforward rules with some of the strongest RTP ranges in the casino lobby. The right version for you depends on whether you want slower classic rounds, faster multi-hand volume, or a more social live dealer table.</p>
+    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">
+      Play Blackjack Online in Canada
+    </h1>
+    <p class="text-base text-text-body leading-relaxed max-w-3xl">
+      Blackjack stays popular because it combines straightforward rules with some of the strongest
+      RTP ranges in the casino lobby. The right version for you depends on whether you want slower
+      classic rounds, faster multi-hand volume, or a more social live dealer table.
+    </p>
   </header>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
-    <div class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold">
+    <div
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+    >
       {intro.eyebrow}
     </div>
     <h2 class="text-2xl font-bold text-white">{intro.title}</h2>
@@ -161,8 +206,16 @@
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
-    <a href="/casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Back to Online Casino Canada</a>
-    <a href="/interac" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Deposit with Interac</a>
+    <a
+      href="/casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Back to Online Casino Canada</a
+    >
+    <a
+      href="/interac"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Deposit with Interac</a
+    >
   </nav>
 
   <section class="mt-12">
@@ -175,7 +228,14 @@
       <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
         <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -186,7 +246,10 @@
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
   </div>
 </div>

@@ -3,33 +3,33 @@
   /* See DESIGN.md for full token documentation */
 
   /* Surfaces */
-  --color-navy-black: #070C18;
-  --color-navy-card:  #0D1629;
+  --color-navy-black: #070c18;
+  --color-navy-card: #0d1629;
   --color-navy-raised: #142038;
 
   /* Accents */
-  --color-prestige-gold:       #D4943A;
-  --color-prestige-gold-light: #E8AC52;
-  --color-slate-blue:          #4A9EBF;
+  --color-prestige-gold: #d4943a;
+  --color-prestige-gold-light: #e8ac52;
+  --color-slate-blue: #4a9ebf;
 
   /* Semantic */
-  --color-success: #22C55E;
-  --color-warning: #F59E0B;
-  --color-error:   #EF4444;
-  --color-text-primary: #F1F5F9;
-  --color-text-body:    #94A3B8;
-  --color-text-tertiary: #4B5563;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-text-primary: #f1f5f9;
+  --color-text-body: #94a3b8;
+  --color-text-tertiary: #4b5563;
   --color-navy-border: rgba(255, 255, 255, 0.07);
   --color-navy-border-active: rgba(255, 255, 255, 0.16);
 
   /* ── iGaming semantics — odds movement, live data, win states ── */
-  --color-odds-up:     #22C55E;
-  --color-odds-down:   #EF4444;
-  --color-odds-frozen: #94A3B8;
-  --color-live-pulse:  #22C55E;
-  --color-boost:       #B86FD9;
-  --color-jackpot:     #E8AC52;
-  --color-win-flash:   #FFD700;
+  --color-odds-up: #22c55e;
+  --color-odds-down: #ef4444;
+  --color-odds-frozen: #94a3b8;
+  --color-live-pulse: #22c55e;
+  --color-boost: #b86fd9;
+  --color-jackpot: #e8ac52;
+  --color-win-flash: #ffd700;
 
   /* Fonts */
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
@@ -82,9 +82,10 @@
   --selection-fill: rgba(212, 148, 58, 0.16);
 
   /* Shadow stack */
-  --shadow-cta-gold: 0 1px 0 0 rgba(255, 255, 255, 0.22) inset, 0 8px 20px -10px rgba(212, 148, 58, 0.5);
-  --shadow-bet-slip: 0 -8px 40px -12px rgba(0, 0, 0, 0.6), -1px 0 rgba(212, 148, 58, 0.20);
-  --shadow-jackpot: 0 0 0 1px rgba(232, 172, 82, 0.30), 0 16px 40px -10px rgba(232, 172, 82, 0.18);
+  --shadow-cta-gold:
+    0 1px 0 0 rgba(255, 255, 255, 0.22) inset, 0 8px 20px -10px rgba(212, 148, 58, 0.5);
+  --shadow-bet-slip: 0 -8px 40px -12px rgba(0, 0, 0, 0.6), -1px 0 rgba(212, 148, 58, 0.2);
+  --shadow-jackpot: 0 0 0 1px rgba(232, 172, 82, 0.3), 0 16px 40px -10px rgba(232, 172, 82, 0.18);
 
   /* Motion */
   --dur-micro: 100ms;

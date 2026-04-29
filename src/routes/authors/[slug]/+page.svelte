@@ -1,11 +1,12 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { canonicalUrl } from '$lib/site';
 </script>
 
 <svelte:head>
   <title>Author | 247iBET Canada</title>
   <meta name="description" content="Expert iGaming author and analyst at 247iBET Canada." />
-  <link rel="canonical" href="https://247ibet.ca/authors/{$page.params.slug}" />
+  <link rel="canonical" href={canonicalUrl(`/authors/${$page.params.slug}`)} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
@@ -23,7 +24,11 @@
       Expert iGaming analyst and writer covering Canadian online casino and sports betting markets.
     </p>
     <div class="mt-6 navy-card rounded-xl p-6 text-center">
-      <p class="text-text-tertiary text-sm">Author profile loaded from authors library. Wire up <code class="text-prestige-gold">+page.ts</code> to fetch author by slug.</p>
+      <p class="text-text-tertiary text-sm">
+        Author profile loaded from authors library. Wire up <code class="text-prestige-gold"
+          >+page.ts</code
+        > to fetch author by slug.
+      </p>
     </div>
   </div>
 </div>

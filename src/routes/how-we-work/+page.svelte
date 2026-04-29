@@ -1,12 +1,26 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
 
 <svelte:head>
   <title>How 247iBET Works: Affiliate &amp; Editorial Standards Explained</title>
-  <meta name="description" content="Learn how 247iBET is funded, our affiliate partnerships, editorial independence standards, and review methodology for Canadian iGaming guides." />
-  <link rel="canonical" href="https://247ibet.ca/how-we-work" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"How 247iBET Works","url":"https://247ibet.ca/how-we-work","description":"Transparency page explaining 247iBET's affiliate partnerships and editorial standards."})}</script>
+  <meta
+    name="description"
+    content="Learn how 247iBET is funded, our affiliate partnerships, editorial independence standards, and review methodology for Canadian iGaming guides."
+  />
+  <link rel="canonical" href={canonicalUrl('/how-we-work')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      headline: 'How 247iBET Works',
+      url: 'https://247ibet.ca/how-we-work',
+      description:
+        "Transparency page explaining 247iBET's affiliate partnerships and editorial standards.",
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">

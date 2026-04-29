@@ -10,11 +10,20 @@ const config = {
         sizes: [320, 640, 768, 960, 1280, 1672, 1920],
         domains: [],
         formats: ['image/avif', 'image/webp'],
-        minimumCacheTTL: 31536000
-      }
+        minimumCacheTTL: 31536000,
+      },
     }),
-    alias: {}
-  }
+    alias: {},
+    csp: {
+      mode: 'hash',
+      directives: {
+        'script-src': ['self'],
+        'style-src': ['self', 'unsafe-inline'],
+        'img-src': ['self', 'data:', 'https:'],
+        'connect-src': ['self', 'https://vitals.vercel-insights.com'],
+      },
+    },
+  },
 };
 
 export default config;

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     AlertTriangle,
     ArrowRight,
@@ -37,24 +39,94 @@
     'Using gambling to cope with stress or emotions',
   ];
 
+  // Provincial regulators, self-exclusion registries, and clinical helplines.
+  // Order: 24/7 helplines first, then provincial self-exclusion registries, then peer support.
   const supportLinks = [
-    { name: 'ConnexOntario', meta: '24/7 · 1-866-531-2600 · connexontario.ca', href: 'https://www.connexontario.ca/' },
-    { name: 'Alberta Health Services', meta: '24/7 · 1-866-332-2322 · albertahealthservices.ca', href: 'https://www.albertahealthservices.ca/' },
+    {
+      name: 'ConnexOntario',
+      meta: '24/7 · 1-866-531-2600 · connexontario.ca',
+      href: 'https://www.connexontario.ca/',
+    },
+    {
+      name: 'Alberta Health Services — Addiction & Mental Health',
+      meta: '24/7 · 1-866-332-2322 · albertahealthservices.ca',
+      href: 'https://www.albertahealthservices.ca/',
+    },
+    {
+      name: 'iGaming Ontario — Self-Exclusion',
+      meta: 'Ontario provincial self-exclusion registry · igamingontario.ca',
+      href: 'https://igamingontario.ca/en/self-exclusion',
+    },
+    {
+      name: 'AGLC — Voluntary Self-Exclusion Program',
+      meta: 'Alberta self-exclusion registry · aglc.ca',
+      href: 'https://aglc.ca/gambling/help-problem-gambling/voluntary-self-exclusion-vse-program',
+    },
+    {
+      name: 'AGLC — Help with Problem Gambling',
+      meta: 'Alberta provincial RG resources · aglc.ca',
+      href: 'https://aglc.ca/gambling/help-problem-gambling',
+    },
+    {
+      name: 'Gamblers Anonymous Canada',
+      meta: 'Peer-support fellowship meetings · gamblersanonymous.org',
+      href: 'https://www.gamblersanonymous.org/',
+    },
   ];
 
   const controlTools = [
-    { title: 'Deposit Limits', body: 'Set daily, weekly or monthly limits that suit your budget.', cta: 'Set Limit', icon: WalletCards },
-    { title: 'Cooling-Off Periods', body: 'Take a break from betting. Choose a custom time-out.', cta: 'Take a Break', icon: Clock3 },
-    { title: 'Self-Exclusion', body: 'Lock your account for 6 months, 1 year or permanently.', cta: 'Get Started', icon: LockKeyhole },
-    { title: 'Session Limits', body: 'Set reminders or automatic session time-outs.', cta: 'Manage Time', icon: HelpCircle },
+    {
+      title: 'Deposit Limits',
+      body: 'Set daily, weekly or monthly limits that suit your budget.',
+      cta: 'Set Limit',
+      icon: WalletCards,
+    },
+    {
+      title: 'Cooling-Off Periods',
+      body: 'Take a break from betting. Choose a custom time-out.',
+      cta: 'Take a Break',
+      icon: Clock3,
+    },
+    {
+      title: 'Self-Exclusion',
+      body: 'Lock your account for 6 months, 1 year or permanently.',
+      cta: 'Get Started',
+      icon: LockKeyhole,
+    },
+    {
+      title: 'Session Limits',
+      body: 'Set reminders or automatic session time-outs.',
+      cta: 'Manage Time',
+      icon: HelpCircle,
+    },
   ];
 
   const tableRows = [
-    { tool: 'Deposit Limits', best: 'Managing budgets and bankroll', step: 'Set a daily or weekly deposit limit' },
-    { tool: 'Cooling-Off', best: 'Short breaks from play', step: 'Pause your account for 24 hrs, 7 days, or 30 days' },
-    { tool: 'Self-Exclusion', best: 'Extended break or permanent exclusion', step: 'Choose 6 months, 1 year, or permanent' },
-    { tool: 'Session Limits', best: 'Managing time spent playing', step: 'Set session reminders or auto-logout' },
-    { tool: 'Reality Check', best: 'Staying aware while you play', step: 'Receive time and activity reminders' },
+    {
+      tool: 'Deposit Limits',
+      best: 'Managing budgets and bankroll',
+      step: 'Set a daily or weekly deposit limit',
+    },
+    {
+      tool: 'Cooling-Off',
+      best: 'Short breaks from play',
+      step: 'Pause your account for 24 hrs, 7 days, or 30 days',
+    },
+    {
+      tool: 'Self-Exclusion',
+      best: 'Extended break or permanent exclusion',
+      step: 'Choose 6 months, 1 year, or permanent',
+    },
+    {
+      tool: 'Session Limits',
+      best: 'Managing time spent playing',
+      step: 'Set session reminders or auto-logout',
+    },
+    {
+      tool: 'Reality Check',
+      best: 'Staying aware while you play',
+      step: 'Receive time and activity reminders',
+    },
   ];
 
   let answers: Record<number, Answer> = $state({});
@@ -83,6 +155,40 @@
             body: 'Your answers suggest gambling may be affecting your wellbeing. Confidential support is available now.',
           },
   );
+
+  const responsibleGamblingSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Responsible Gambling Canada',
+      headline: 'Safe Play Protocols',
+      description:
+        'Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts.',
+      url: 'https://247ibet.ca/responsible-gambling',
+      author: {
+        '@type': 'Organization',
+        name: '247iBET Editorial Team',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Responsible Gambling',
+          item: 'https://247ibet.ca/responsible-gambling',
+        },
+      ],
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -91,7 +197,15 @@
     name="description"
     content="Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts."
   />
-  <link rel="canonical" href="https://247ibet.ca/responsible-gambling" />
+  <meta property="og:title" content="Safe Play Protocols | Responsible Gambling Canada | 247iBET" />
+  <meta
+    property="og:description"
+    content="Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://247ibet.ca/responsible-gambling" />
+  <link rel="canonical" href={canonicalUrl('/responsible-gambling')} />
+  <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-6 text-white">
@@ -106,20 +220,31 @@
       </ol>
     </nav>
 
-    <header class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(90deg,#090f1d,#0d1629)] p-7 shadow-2xl md:p-12">
-      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-35"></div>
-      <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_72%_30%,rgba(212,148,58,0.24),transparent_34%),url('/images/generated/safe-play-shield-hero.png')] bg-cover bg-center opacity-70 md:block"></div>
+    <header
+      class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(90deg,#090f1d,#0d1629)] p-7 shadow-2xl md:p-12"
+    >
+      <div
+        class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-35"
+      ></div>
+      <div
+        class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_72%_30%,rgba(212,148,58,0.24),transparent_34%),url('/images/generated/safe-play-shield-hero.png')] bg-cover bg-center opacity-70 md:block"
+      ></div>
 
       <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
         <div>
-          <h1 class="text-[clamp(2.85rem,12vw,7.5rem)] font-black uppercase leading-[0.95] tracking-normal">
+          <h1
+            class="text-[clamp(2.85rem,12vw,7.5rem)] font-black uppercase leading-[0.95] tracking-normal"
+          >
             Safe Play <br />
             <span class="text-prestige-gold">Protocols</span>
           </h1>
           <p class="mt-7 max-w-3xl text-lg leading-8 text-text-body">
-            At 247iBET, your well-being is our priority. Our player protection framework is built on evidence-based standards, proactive monitoring, and confidential support.
+            At 247iBET, your well-being is our priority. Our player protection framework is built on
+            evidence-based standards, proactive monitoring, and confidential support.
           </p>
-          <div class="mt-9 grid max-w-3xl gap-3 rounded-xl border border-white/10 bg-black/28 p-3 sm:grid-cols-3">
+          <div
+            class="mt-9 grid max-w-3xl gap-3 rounded-xl border border-white/10 bg-black/28 p-3 sm:grid-cols-3"
+          >
             {#each trustItems as item}
               {@const Icon = item.icon}
               <div class="flex gap-3 rounded-lg bg-white/[0.035] p-4">
@@ -133,9 +258,13 @@
           </div>
         </div>
 
-        <div class="mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-xl border border-white/15 bg-black/35 shadow-2xl backdrop-blur-sm">
+        <div
+          class="mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-xl border border-white/15 bg-black/35 shadow-2xl backdrop-blur-sm"
+        >
           <ShieldCheck class="h-28 w-28 text-prestige-gold" strokeWidth={1.3} aria-hidden="true" />
-          <p class="mt-6 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold">Committed to you</p>
+          <p class="mt-6 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold">
+            Committed to you
+          </p>
           <p class="mt-4 max-w-xs text-center text-sm leading-6 text-text-body">
             Operating to high standards of player protection.
           </p>
@@ -146,13 +275,16 @@
     <section class="mt-7 grid gap-6 lg:grid-cols-2">
       <article class="navy-card p-7 md:p-8">
         <div class="mb-5 flex items-center gap-4">
-          <div class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold">
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold"
+          >
             <AlertTriangle class="h-8 w-8" aria-hidden="true" />
           </div>
           <h2 class="text-3xl font-black uppercase">Recognizing Risk</h2>
         </div>
         <p class="max-w-2xl text-sm leading-6 text-text-body">
-          Understanding the signs is the first step to maintaining a healthy relationship with gaming.
+          Understanding the signs is the first step to maintaining a healthy relationship with
+          gaming.
         </p>
         <ul class="mt-7 space-y-3">
           {#each riskItems as item}
@@ -166,17 +298,25 @@
 
       <article class="navy-card p-7 md:p-8">
         <div class="mb-5 flex items-center gap-4">
-          <div class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold">
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold"
+          >
             <Users class="h-8 w-8" aria-hidden="true" />
           </div>
           <h2 class="text-3xl font-black uppercase">Active Support Matrix</h2>
         </div>
         <p class="max-w-2xl text-sm leading-6 text-text-body">
-          We work with trusted organizations to provide professional assistance for players in Canada.
+          We work with trusted organizations to provide professional assistance for players in
+          Canada.
         </p>
         <div class="mt-7 space-y-4">
           {#each supportLinks as link}
-            <a href={link.href} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] p-5 transition-colors hover:border-prestige-gold/35">
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] p-5 transition-colors hover:border-prestige-gold/35"
+            >
               <div>
                 <p class="font-black text-white">{link.name}</p>
                 <p class="mt-1 text-sm text-text-body">{link.meta}</p>
@@ -185,7 +325,9 @@
             </a>
           {/each}
         </div>
-        <p class="mt-5 text-sm text-text-body">In immediate crisis? Call 911 or your local emergency services.</p>
+        <p class="mt-5 text-sm text-text-body">
+          In immediate crisis? Call 911 or your local emergency services.
+        </p>
       </article>
     </section>
 
@@ -194,10 +336,13 @@
         <div>
           <h2 class="text-3xl font-black uppercase">Quick Self-Assessment</h2>
           <p class="mt-3 max-w-4xl text-sm leading-6 text-text-body">
-            Answer honestly. Results are private and for your insight only. Based on the PGSI framework.
+            Answer honestly. Results are private and for your insight only. Based on the PGSI
+            framework.
           </p>
         </div>
-        <span class="inline-flex w-fit rounded-full border border-prestige-gold/35 bg-prestige-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold">
+        <span
+          class="inline-flex w-fit rounded-full border border-prestige-gold/35 bg-prestige-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+        >
           Confidential · takes 60 seconds
         </span>
       </div>
@@ -215,7 +360,11 @@
                   type="button"
                   aria-pressed={answers[index] === 'yes'}
                   onclick={() => (answers = { ...answers, [index]: 'yes' })}
-                  class="min-w-20 rounded-lg border px-5 py-2 text-sm font-black transition-colors {answers[index] === 'yes' ? 'border-prestige-gold bg-prestige-gold text-navy-black' : 'border-white/12 bg-white/5 text-white hover:border-prestige-gold/40'}"
+                  class="min-w-20 rounded-lg border px-5 py-2 text-sm font-black transition-colors {answers[
+                    index
+                  ] === 'yes'
+                    ? 'border-prestige-gold bg-prestige-gold text-navy-black'
+                    : 'border-white/12 bg-white/5 text-white hover:border-prestige-gold/40'}"
                 >
                   Yes
                 </button>
@@ -223,7 +372,11 @@
                   type="button"
                   aria-pressed={answers[index] === 'no'}
                   onclick={() => (answers = { ...answers, [index]: 'no' })}
-                  class="min-w-20 rounded-lg border px-5 py-2 text-sm font-black transition-colors {answers[index] === 'no' ? 'border-white bg-white text-navy-black' : 'border-white/12 bg-white/5 text-white hover:border-white/30'}"
+                  class="min-w-20 rounded-lg border px-5 py-2 text-sm font-black transition-colors {answers[
+                    index
+                  ] === 'no'
+                    ? 'border-white bg-white text-navy-black'
+                    : 'border-white/12 bg-white/5 text-white hover:border-white/30'}"
                 >
                   No
                 </button>
@@ -234,7 +387,8 @@
 
         <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p class="text-sm text-text-body">
-            {answeredCount} of {assessmentQuestions.length} answered. If you answer “Yes” to any question, consider using our tools or speaking with a support professional.
+            {answeredCount} of {assessmentQuestions.length} answered. If you answer “Yes” to any question,
+            consider using our tools or speaking with a support professional.
           </p>
           <button
             type="button"
@@ -265,7 +419,9 @@
 
     <section class="mt-7 navy-card p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Platform Control Infrastructure</h2>
-      <p class="mt-2 text-sm text-text-body">Powerful tools to help you manage your play, your way.</p>
+      <p class="mt-2 text-sm text-text-body">
+        Powerful tools to help you manage your play, your way.
+      </p>
       <div class="mt-7 grid gap-4 md:grid-cols-4">
         {#each controlTools as tool}
           {@const Icon = tool.icon}
@@ -273,7 +429,10 @@
             <Icon class="h-8 w-8 text-prestige-gold" aria-hidden="true" />
             <h3 class="mt-5 text-xl font-black">{tool.title}</h3>
             <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{tool.body}</p>
-            <a href="/contact" class="mt-4 inline-flex items-center gap-2 text-sm font-black text-prestige-gold">
+            <a
+              href="/contact"
+              class="mt-4 inline-flex items-center gap-2 text-sm font-black text-prestige-gold"
+            >
               {tool.cta}
               <ArrowRight class="h-4 w-4" aria-hidden="true" />
             </a>
@@ -284,7 +443,9 @@
 
     <section class="mt-7 navy-card overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Safety Tools at a Glance</h2>
-      <p class="mt-2 text-sm text-text-body">Use these tools anytime from your Responsible Gaming dashboard.</p>
+      <p class="mt-2 text-sm text-text-body">
+        Use these tools anytime from your Responsible Gaming dashboard.
+      </p>
       <div class="mt-6 overflow-x-auto rounded-xl border border-white/10">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
@@ -313,18 +474,26 @@
           <HelpCircle class="h-9 w-9 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
             <h2 class="text-xl font-black">Need help now?</h2>
-            <p class="mt-2 text-sm text-text-body">You&apos;re not alone. Our support partners are here 24/7.</p>
+            <p class="mt-2 text-sm text-text-body">
+              You&apos;re not alone. Our support partners are here 24/7.
+            </p>
           </div>
         </div>
       </div>
-      <a href="/contact" class="hero-cta-primary justify-center self-stretch md:min-w-72">Get Support Now</a>
+      <a href="/contact" class="hero-cta-primary justify-center self-stretch md:min-w-72"
+        >Get Support Now</a
+      >
     </section>
 
-    <section class="mt-7 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[linear-gradient(100deg,#0d1629,#080d18)] p-8 shadow-2xl md:p-10">
+    <section
+      class="mt-7 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[linear-gradient(100deg,#0d1629,#080d18)] p-8 shadow-2xl md:p-10"
+    >
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
           <h2 class="text-4xl font-black">Play smart. Stay in control.</h2>
-          <p class="mt-3 text-base text-text-body">Tools, support, and guidance right when you need it.</p>
+          <p class="mt-3 text-base text-text-body">
+            Tools, support, and guidance right when you need it.
+          </p>
         </div>
         <a href="/responsible-gambling#tools" class="hero-cta-primary justify-center">
           Explore Responsible Gaming Tools

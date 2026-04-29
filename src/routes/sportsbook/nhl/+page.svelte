@@ -1,5 +1,7 @@
 <script lang="ts">
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import { canonicalUrl } from '$lib/site';
 
   const page = {
     slug: 'nhl',
@@ -86,19 +88,22 @@
       {
         href: '/interac',
         label: 'Interac Funding Guide',
-        description: 'Review CAD deposit and withdrawal flow details for Canadian betting accounts.',
+        description:
+          'Review CAD deposit and withdrawal flow details for Canadian betting accounts.',
         accent: 'blue',
       },
       {
         href: '/sportsbook/live-betting',
         label: 'Live Betting Guide',
-        description: 'See how in-play odds shift during hockey games and when markets tend to reopen.',
+        description:
+          'See how in-play odds shift during hockey games and when markets tend to reopen.',
         accent: 'neutral',
       },
       {
         href: '/guides/sports-betting-odds-explained',
         label: 'Odds Explained',
-        description: 'Brush up on decimal, American, and implied probability formats before comparing NHL prices.',
+        description:
+          'Brush up on decimal, American, and implied probability formats before comparing NHL prices.',
         accent: 'neutral',
       },
     ],
@@ -110,8 +115,18 @@
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
-      { '@type': 'ListItem', position: 2, name: 'Sportsbook', item: 'https://247ibet.ca/sportsbook' },
-      { '@type': 'ListItem', position: 3, name: page.breadcrumbLabel, item: 'https://247ibet.ca' + page.path },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Sportsbook',
+        item: 'https://247ibet.ca/sportsbook',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: page.breadcrumbLabel,
+        item: 'https://247ibet.ca' + page.path,
+      },
     ],
   };
 
@@ -131,9 +146,9 @@
   <meta name="description" content={page.metaDescription} />
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.metaDescription} />
-  <link rel="canonical" href={"https://247ibet.ca" + page.path} />
-  <script type="application/ld+json">{@html JSON.stringify(breadcrumbSchema)}</script>
-  <script type="application/ld+json">{@html JSON.stringify(faqSchema)}</script>
+  <link rel="canonical" href={canonicalUrl(page.path)} />
+  <JsonLd schema={breadcrumbSchema} />
+  <JsonLd schema={faqSchema} />
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pt-10 pb-20 sm:px-6 lg:px-8">
@@ -147,11 +162,19 @@
         <li class="text-white font-medium">{page.breadcrumbLabel}</li>
       </ol>
     </nav>
-    <div class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60">
+    <div
+      class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
+    >
       <img src={page.heroImage} alt="" class="h-full w-full object-cover opacity-80" />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
+      ></div>
       <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
-      <div class="absolute bottom-5 left-6 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold md:left-8">{page.breadcrumbLabel}</div>
+      <div
+        class="absolute bottom-5 left-6 text-[9px] font-mono font-bold uppercase tracking-[0.22em] text-prestige-gold md:left-8"
+      >
+        {page.breadcrumbLabel}
+      </div>
     </div>
     <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">{page.heading}</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">{page.heroSubheading}</p>
@@ -182,7 +205,11 @@
     </div>
   </section>
 
-  <div class="mt-12 rounded-xl border {page.infoPanelAccent === 'gold' ? 'border-prestige-gold/20 bg-prestige-gold/5' : 'border-slate-blue/20 bg-slate-blue/5'} p-6">
+  <div
+    class="mt-12 rounded-xl border {page.infoPanelAccent === 'gold'
+      ? 'border-prestige-gold/20 bg-prestige-gold/5'
+      : 'border-slate-blue/20 bg-slate-blue/5'} p-6"
+  >
     <h2 class="text-lg font-bold text-white mb-3">{page.infoPanelTitle}</h2>
     <p class="text-sm text-text-tertiary leading-relaxed mb-4">{page.infoPanelBody}</p>
     <ul class="space-y-2">
@@ -200,7 +227,11 @@
       {#each page.relatedLinks as link}
         <a
           href={link.href}
-          class="{link.accent === 'gold' ? 'text-prestige-gold' : link.accent === 'blue' ? 'text-slate-blue' : 'text-text-tertiary'} font-bold text-sm hover:underline uppercase tracking-wider"
+          class="{link.accent === 'gold'
+            ? 'text-prestige-gold'
+            : link.accent === 'blue'
+              ? 'text-slate-blue'
+              : 'text-text-tertiary'} font-bold text-sm hover:underline uppercase tracking-wider"
         >
           {link.label}
         </a>
@@ -214,7 +245,14 @@
       <details class="navy-card rounded-xl p-4 group cursor-pointer">
         <summary class="flex list-none items-center justify-between gap-2 font-bold text-[#F1F5F9]">
           {faq.question}
-          <svg class="h-4 w-4 shrink-0 text-text-tertiary transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg
+            class="h-4 w-4 shrink-0 text-text-tertiary transition-transform group-open:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
           </svg>
         </summary>
@@ -228,6 +266,9 @@
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

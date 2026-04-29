@@ -1,17 +1,36 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   // page
 </script>
 
 <svelte:head>
   <title>247iBET Editorial Standards: Our Independence Policy</title>
-  <meta name="description" content="247iBET's editorial independence policy. How we evaluate operators, maintain impartial recommendations, and ensure Canadian iGaming compliance." />
+  <meta
+    name="description"
+    content="247iBET's editorial independence policy. How we evaluate operators, maintain impartial recommendations, and ensure Canadian iGaming compliance."
+  />
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="canonical" href="https://247ibet.ca/editorial-policy" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"Editorial Standards — 247iBET","url":"https://247ibet.ca/editorial-policy","description":"247iBET's editorial independence policy and operator evaluation methodology."})}</script>
+  <meta property="og:title" content="247iBET Editorial Standards: Our Independence Policy" />
+  <meta
+    property="og:description"
+    content="247iBET's editorial independence policy. How we evaluate operators, maintain impartial recommendations, and ensure Canadian iGaming compliance."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://247ibet.ca/editorial-policy" />
+  <link rel="canonical" href={canonicalUrl('/editorial-policy')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      headline: 'Editorial Standards — 247iBET',
+      url: 'https://247ibet.ca/editorial-policy',
+      description: "247iBET's editorial independence policy and operator evaluation methodology.",
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
-
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>

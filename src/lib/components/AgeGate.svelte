@@ -68,7 +68,7 @@
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         const focusable = Array.from(
-          document.querySelectorAll<HTMLElement>('#age-gate-accept, #age-gate-decline')
+          document.querySelectorAll<HTMLElement>('#age-gate-accept, #age-gate-decline'),
         );
         if (focusable.length !== 2) return;
         const [first, last] = focusable;
@@ -101,7 +101,6 @@
 </script>
 
 {#if visible}
-  <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
   <div
     role="dialog"
     aria-modal="true"
@@ -117,44 +116,41 @@
     >
       <!-- Badge -->
       <div class="flex justify-center mb-6">
-        <div class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-error">
+        <div
+          class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-error"
+        >
           <ShieldAlert class="w-3.5 h-3.5" aria-hidden="true" />
           Age Verification Required
         </div>
       </div>
 
       <!-- 19+ badge -->
-      <div class="mx-auto mb-5 w-20 h-20 rounded-full bg-navy-raised border-2 border-prestige-gold flex items-center justify-center animate-pulse-19">
-        <span
-          class="text-3xl font-black text-gradient-gold"
-          style="font-family: var(--font-sans);"
-        >
+      <div
+        class="mx-auto mb-5 w-20 h-20 rounded-full bg-navy-raised border-2 border-prestige-gold flex items-center justify-center animate-pulse-19"
+      >
+        <span class="text-3xl font-black text-gradient-gold" style="font-family: var(--font-sans);">
           19+
         </span>
       </div>
 
-      <h2
-        id="age-gate-title"
-        class="page-detail-title text-xl md:text-2xl mb-3"
-      >
-        Adults Only
-      </h2>
-      <p
-        id="age-gate-desc"
-        class="page-detail-copy text-sm mb-6"
-      >
-        This website contains content related to online gambling and is intended strictly for individuals who are
-        <strong class="text-text-primary">19 years of age or older</strong>. By entering, you confirm you meet the legal gambling age in your province.
+      <h2 id="age-gate-title" class="page-detail-title text-xl md:text-2xl mb-3">Adults Only</h2>
+      <p id="age-gate-desc" class="page-detail-copy text-sm mb-6">
+        This website contains content related to online gambling and is intended strictly for
+        individuals who are
+        <strong class="text-text-primary">19 years of age or older</strong>. By entering, you
+        confirm you meet the legal gambling age in your province.
       </p>
 
       <!-- Disclaimer strip -->
-      <div class="mb-6 p-3 rounded-lg bg-white/5 border border-white/10 text-xs text-text-body leading-relaxed">
+      <div
+        class="mb-6 p-3 rounded-lg bg-white/5 border border-white/10 text-xs text-text-body leading-relaxed"
+      >
         Gambling can be addictive. Play responsibly.
         <a
           href="https://www.responsiblegambling.org"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-slate-blue underline font-bold inline-flex items-center gap-0.5 hover:text-slate-blue/80"
+          class="inline-flex items-center gap-0.5 rounded-sm font-bold text-slate-blue underline underline-offset-2 transition-colors hover:text-slate-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-blue/60"
         >
           Get help <ExternalLink class="w-2.5 h-2.5" />
         </a>
@@ -167,7 +163,7 @@
           bind:this={acceptButtonRef}
           type="button"
           onclick={handleAccept}
-          class="page-cta-primary-sm flex-1 hover:scale-[1.03] active:scale-[0.97] transition-transform"
+          class="page-cta-primary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           I Am 19+&nbsp;— Enter
         </button>
@@ -175,7 +171,7 @@
           id="age-gate-decline"
           type="button"
           onclick={handleDecline}
-          class="page-cta-secondary-sm flex-1 hover:scale-[1.03] active:scale-[0.97] transition-transform"
+          class="page-cta-secondary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           Exit
         </button>

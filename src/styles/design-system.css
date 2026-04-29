@@ -1,59 +1,175 @@
 @layer utilities {
   /* ── Typography & Headers ── */
   .money-hero-display {
-    font-family: var(--font-display); font-weight: 300;
-    font-size: clamp(2.5rem, 7vw, 5.5rem); line-height: 0.95;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 0.95;
     letter-spacing: 0;
-    color: var(--color-text-primary); text-wrap: balance;
+    color: var(--color-text-primary);
+    text-wrap: balance;
   }
   .money-hero-lede {
-    font-family: var(--font-sans); font-weight: 400;
-    font-size: clamp(1.0625rem, 1.5vw, 1.25rem); line-height: 1.55;
-    color: var(--color-text-body); max-width: 58ch;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-text-body);
+    max-width: 58ch;
   }
   .money-hero-kicker {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500;
-    letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-prestige-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-prestige-gold);
   }
 
-  .page-hero-kicker, .page-hub-kicker, .page-detail-kicker {
+  .page-hero-kicker,
+  .page-hub-kicker,
+  .page-detail-kicker {
     @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-prestige-gold;
   }
-  .page-hero-title { @apply font-display font-light leading-[0.98] text-white; letter-spacing: 0; text-wrap: balance; }
-  .page-hub-title { @apply font-display font-normal leading-[1.05] text-white; letter-spacing: 0; text-wrap: balance; }
-  .page-detail-title { @apply font-display font-semibold leading-[1.08] text-white; letter-spacing: 0; text-wrap: balance; }
-  .page-hero-subtitle, .page-hub-subtitle, .page-detail-copy { @apply text-text-body; line-height: 1.72; }
+  .page-hero-title {
+    @apply font-display font-light leading-[0.98] text-white;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+  .page-hub-title {
+    @apply font-display font-normal leading-[1.05] text-white;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+  .page-detail-title {
+    @apply font-display font-semibold leading-[1.08] text-white;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+  .page-hero-subtitle,
+  .page-hub-subtitle,
+  .page-detail-copy {
+    @apply text-text-body;
+    line-height: 1.72;
+  }
 
   /* ── Prose & Immersive Layouts ── */
-  .guide-immersive .prose, .immersive-page .prose { max-width: none; }
-  .guide-immersive .prose h1, .immersive-page .prose h1 { @apply font-display font-semibold; letter-spacing: 0; line-height: 1.02; margin-bottom: 0.85rem; }
-  .guide-immersive .prose p, .immersive-page .prose p { margin-top: 0; margin-bottom: 1rem; max-width: 68ch; line-height: 1.72; }
+  .guide-immersive .prose,
+  .immersive-page .prose {
+    max-width: none;
+  }
+  .guide-immersive .prose h1,
+  .immersive-page .prose h1 {
+    @apply font-display font-semibold;
+    letter-spacing: 0;
+    line-height: 1.02;
+    margin-bottom: 0.85rem;
+  }
+  .guide-immersive .prose p,
+  .immersive-page .prose p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 68ch;
+    line-height: 1.72;
+  }
 
   /* ── Data & Sportsbook UI ── */
-  .odds, .money, .stat { font-family: var(--font-mono); font-feature-settings: "tnum" 1, "ss01" 1; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .odds,
+  .money,
+  .stat {
+    font-family: var(--font-mono);
+    font-feature-settings:
+      'tnum' 1,
+      'ss01' 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
   .live-dot {
-    display: inline-block; width: 7px; height: 7px; border-radius: 9999px; background: #22C55E;
-    box-shadow: 0 0 0 0 #22C55E; animation: live-pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: #22c55e;
+    box-shadow: 0 0 0 0 #22c55e;
+    animation: live-pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   .live-tag {
-    display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono);
-    font-size: 0.625rem; font-weight: 700; color: #22C55E; text-transform: uppercase; letter-spacing: 0.20em;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: #22c55e;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
   }
 
   .jackpot-ticker {
-    position: relative; overflow: hidden; border-radius: 12px; border: 1px solid rgba(232, 172, 82, 0.25);
-    box-shadow: var(--shadow-jackpot); background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(232, 172, 82, 0.10), transparent 70%), #0D1629;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(232, 172, 82, 0.25);
+    box-shadow: var(--shadow-jackpot);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(232, 172, 82, 0.1), transparent 70%), #0d1629;
   }
   .jackpot-ticker__amount {
-    font-family: var(--font-display); font-weight: 300; font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-    letter-spacing: 0; line-height: 0.95; font-variant-numeric: tabular-nums;
-    background: linear-gradient(180deg, #F4D790 0%, #E8AC52 45%, #C0842E 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    letter-spacing: 0;
+    line-height: 0.95;
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(180deg, #f4d790 0%, #e8ac52 45%, #c0842e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   main :where(.container) {
     scroll-margin-top: 6rem;
+  }
+
+  /* Anchor jump targets clear the sticky navbar (64px mobile, ~136px desktop with utility bar).
+     Uses the most generous offset so headings + sections land below the bar on every breakpoint. */
+  main :where([id]):not(.container, html, body, main) {
+    scroll-margin-top: 6.5rem;
+  }
+  @media (min-width: 1024px) {
+    main :where([id]):not(.container, html, body, main) {
+      scroll-margin-top: 9rem;
+    }
+  }
+
+  /* Repeating "View all" CTA pattern used across home, hubs, and category sections.
+     Replaces the ad-hoc text-xs font-black uppercase tracking-[0.18em] text-prestige-gold combo. */
+  .view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-prestige-gold);
+    transition: color 180ms ease;
+  }
+  .view-all-link:hover,
+  .view-all-link:focus-visible {
+    color: #fff;
+  }
+  .view-all-link:focus-visible {
+    outline: none;
+    border-radius: 2px;
+    box-shadow:
+      0 0 0 2px var(--color-navy-black),
+      0 0 0 4px var(--color-prestige-gold);
   }
 
   main :where(p, li, dd) {
@@ -71,7 +187,9 @@
   }
 
   main :where(details.navy-card) {
-    transition: border-color 180ms ease, background-color 180ms ease;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease;
   }
 
   main :where(details.navy-card[open]) {
@@ -100,7 +218,33 @@
   }
 
   /* ── Decorative ── */
-  .seam-rule { display: block; border: 0; height: 1px; width: 56px; margin: 2rem 0; background: rgba(212, 148, 58, 0.28); }
-  .text-gradient-gold { background: linear-gradient(135deg, #E8AC52 0%, #D4943A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .text-gradient-slate { background: linear-gradient(135deg, #FFF 0%, #94A3B8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .seam-rule {
+    display: block;
+    border: 0;
+    height: 1px;
+    width: 56px;
+    margin: 2rem 0;
+    background: rgba(212, 148, 58, 0.28);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #e8ac52 0%, #d4943a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-slate {
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Keyboard accessibility — visible gold ring for in-prose links that don't
+     define their own focus styling. Scoped under main + .prose so it doesn't
+     touch CTA buttons, nav links, or anything with explicit focus state. */
+  main :where(.prose, .guide-immersive, .immersive-page) a:focus-visible {
+    outline: none;
+    border-radius: 2px;
+    box-shadow:
+      0 0 0 2px var(--color-navy-black),
+      0 0 0 4px var(--color-prestige-gold);
+  }
 }

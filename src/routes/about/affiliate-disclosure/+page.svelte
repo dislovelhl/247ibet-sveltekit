@@ -1,20 +1,39 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import { Info, ShieldCheck, Scale } from 'lucide-svelte';
 </script>
 
 <svelte:head>
   <title>Platform Disclosure — How 247iBET Earns Revenue</title>
-  <meta name="description" content="247iBET earns revenue from platform activity and internal CTAs. Read how we disclose commercial relationships and manage conflicts of interest." />
+  <meta
+    name="description"
+    content="247iBET earns revenue from platform activity and internal CTAs. Read how we disclose commercial relationships and manage conflicts of interest."
+  />
   <meta property="og:title" content="Platform Disclosure — How 247iBET Earns Revenue" />
-  <meta property="og:description" content="247iBET earnings model and commercial relationship policy for Canadian iGaming content." />
+  <meta
+    property="og:description"
+    content="247iBET earnings model and commercial relationship policy for Canadian iGaming content."
+  />
   <meta name="twitter:title" content="Platform Disclosure — How 247iBET Earns Revenue" />
-  <meta name="twitter:description" content="How 247iBET earns revenue and handles commercial relationships." />
-  <link rel="canonical" href="https://247ibet.ca/about/affiliate-disclosure" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"WebPage","headline":"Platform Disclosure — How 247iBET Earns Revenue","description":"How 247iBET earns revenue and handles commercial relationships for Canadian iGaming content.","url":"https://247ibet.ca/about/affiliate-disclosure"})}</script>
+  <meta
+    name="twitter:description"
+    content="How 247iBET earns revenue and handles commercial relationships."
+  />
+  <link rel="canonical" href={canonicalUrl('/about/affiliate-disclosure')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      headline: 'Platform Disclosure — How 247iBET Earns Revenue',
+      description:
+        'How 247iBET earns revenue and handles commercial relationships for Canadian iGaming content.',
+      url: 'https://247ibet.ca/about/affiliate-disclosure',
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
-
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -26,17 +45,26 @@
   </nav>
 
   <header class="navy-card rounded-3xl p-6 md:p-10 mb-10 relative overflow-hidden">
-    <div aria-hidden="true" class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-slate-blue/5 blur-3xl pointer-events-none"></div>
+    <div
+      aria-hidden="true"
+      class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-slate-blue/5 blur-3xl pointer-events-none"
+    ></div>
     <div class="relative z-10">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+        <div
+          class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center"
+        >
           <Info class="w-6 h-6 text-yellow-400" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-yellow-400 uppercase tracking-[0.3em]">Transparency Notice</div>
+        <div class="text-[10px] font-mono text-yellow-400 uppercase tracking-[0.3em]">
+          Transparency Notice
+        </div>
       </div>
       <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Disclosure</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
-        247iBET.ca is the official website of the 247iBET betting platform. Our guides, tools, and support content are built to help Canadian players move from browsing to play, and all CTAs on this site direct to 247iBET's own casino and sportsbook.
+        247iBET.ca is the official website of the 247iBET betting platform. Our guides, tools, and
+        support content are built to help Canadian players move from browsing to play, and all CTAs
+        on this site direct to 247iBET's own casino and sportsbook.
       </p>
     </div>
   </header>
@@ -49,14 +77,12 @@
     </h2>
     <div class="space-y-3 text-sm text-gray-400 font-sans leading-relaxed">
       <p>
-        247iBET.ca is the official digital home of the <strong class="text-white">247iBET betting platform</strong>. This website serves two purposes:
+        247iBET.ca is the official digital home of the <strong class="text-white"
+          >247iBET betting platform</strong
+        >. This website serves two purposes:
       </p>
       <ul class="space-y-1.5 pl-4">
-        {#each [
-          'Guides, tools, and regulatory information to help Canadian players choose how to play',
-          "Platform promotion: all operator CTAs direct to 247iBET's own casino (247ibet.ca/casino) and sportsbook (247ibet.ca/home)",
-          'Compliance resource: AGCO regulatory information, responsible gambling tools, and provincial legal guidance',
-        ] as item}
+        {#each ['Guides, tools, and regulatory information to help Canadian players choose how to play', "Platform promotion: all operator CTAs direct to 247iBET's own casino (247ibet.ca/casino) and sportsbook (247ibet.ca/home)", 'Compliance resource: AGCO regulatory information, responsible gambling tools, and provincial legal guidance'] as item}
           <li class="flex items-start gap-2">
             <span class="text-yellow-400 shrink-0">·</span>
             {item}
@@ -64,7 +90,8 @@
         {/each}
       </ul>
       <p>
-        This site does <strong class="text-white">not</strong> earn commission from third-party operators. Revenue is generated by players who register and deposit on the 247iBET platform.
+        This site does <strong class="text-white">not</strong> earn commission from third-party operators.
+        Revenue is generated by players who register and deposit on the 247iBET platform.
       </p>
     </div>
   </section>
@@ -77,16 +104,10 @@
     </h2>
     <div class="space-y-3 text-sm text-gray-400 font-sans leading-relaxed">
       <p class="text-green-300 font-medium">
-        Commercial relationships do NOT influence our product placement, platform notes, or written assessments.
+        Commercial relationships do NOT influence our product placement, platform notes, or written
+        assessments.
       </p>
-      {#each [
-        'Operators cannot pay to improve their placement.',
-        'Operators cannot request removal of negative findings from our coverage.',
-        'Commercial and content decisions stay separated.',
-        'Recommendations follow documented platform checks.',
-        'We may choose not to partner with operators we cannot stand behind.',
-        'Negative findings are published when warranted.',
-      ] as item}
+      {#each ['Operators cannot pay to improve their placement.', 'Operators cannot request removal of negative findings from our coverage.', 'Commercial and content decisions stay separated.', 'Recommendations follow documented platform checks.', 'We may choose not to partner with operators we cannot stand behind.', 'Negative findings are published when warranted.'] as item}
         <div class="flex items-start gap-2">
           <ShieldCheck class="w-4 h-4 text-green-500 shrink-0 mt-0.5" aria-hidden="true" />
           <p>{item}</p>
@@ -136,10 +157,15 @@
     <div class="space-y-3 text-sm text-gray-400 font-sans leading-relaxed">
       <p>
         247iBET operates with awareness of the Alcohol and Gaming Commission of Ontario's
-        <strong class="text-white">Registrar's Standards for Internet Gaming</strong>, which include guidelines on affiliate marketing and the public advertising of inducements (bonuses, credits, free bets).
+        <strong class="text-white">Registrar's Standards for Internet Gaming</strong>, which include
+        guidelines on affiliate marketing and the public advertising of inducements (bonuses,
+        credits, free bets).
       </p>
       <p>
-        As a result of these guidelines, we do <strong class="text-white">not publicly display specific bonus amounts</strong> on pages accessible to Ontario residents. Ontario-directed content presents feature comparisons and directs players to operator sites to view current terms.
+        As a result of these guidelines, we do <strong class="text-white"
+          >not publicly display specific bonus amounts</strong
+        > on pages accessible to Ontario residents. Ontario-directed content presents feature comparisons
+        and directs players to operator sites to view current terms.
       </p>
       <p>
         If you believe any content on 247iBET violates AGCO guidelines, please
@@ -152,10 +178,14 @@
   <section class="navy-card rounded-2xl p-6 mb-6">
     <h2 class="text-xl font-bold mb-4">Identifying Affiliate Links</h2>
     <p class="text-sm text-gray-400 font-sans mb-3">
-      Affiliate links on 247iBET are marked with the <code class="text-xs bg-white/5 px-1.5 py-0.5 rounded font-mono">rel="sponsored"</code> HTML attribute as required by Google's webmaster guidelines. The disclosure bar on all money pages and platform pages also states that commissions may be earned.
+      Affiliate links on 247iBET are marked with the <code
+        class="text-xs bg-white/5 px-1.5 py-0.5 rounded font-mono">rel="sponsored"</code
+      > HTML attribute as required by Google's webmaster guidelines. The disclosure bar on all money pages
+      and platform pages also states that commissions may be earned.
     </p>
     <p class="text-sm text-gray-400 font-sans">
-      Operator logos, names, and any "Visit Site" / "Play Now" buttons are affiliate links unless otherwise stated.
+      Operator logos, names, and any "Visit Site" / "Play Now" buttons are affiliate links unless
+      otherwise stated.
     </p>
   </section>
 
@@ -163,12 +193,7 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-4">External Standards We Follow</h2>
     <ul class="space-y-2 text-sm text-gray-400 font-sans">
-      {#each [
-        'Ad Standards Canada — Code for Responsible Gaming Advertising (effective 2026)',
-        'Canadian Gaming Association responsible gambling advertising code',
-        'Competition Bureau Canada guidelines on endorsements and testimonials',
-        'Google Webmaster Guidelines on affiliate links (rel=sponsored)',
-      ] as item}
+      {#each ['Ad Standards Canada — Code for Responsible Gaming Advertising (effective 2026)', 'Canadian Gaming Association responsible gambling advertising code', 'Competition Bureau Canada guidelines on endorsements and testimonials', 'Google Webmaster Guidelines on affiliate links (rel=sponsored)'] as item}
         <li class="flex items-start gap-2">
           <span class="text-slate-blue shrink-0">·</span>
           {item}
@@ -178,9 +203,10 @@
   </section>
 
   <div class="text-sm text-gray-500 font-sans">
-    Last updated: April 28, 2026.
-    Questions? <a href="/contact" class="text-slate-blue hover:underline">Contact us</a>.
-    See also:
+    Last updated: April 28, 2026. Questions? <a
+      href="/contact"
+      class="text-slate-blue hover:underline">Contact us</a
+    >. See also:
     <a href="/about/how-we-test" class="text-slate-blue hover:underline">Testing Methodology</a>
     ·
     <a href="/editorial-policy" class="text-slate-blue hover:underline">Editorial Policy</a>.

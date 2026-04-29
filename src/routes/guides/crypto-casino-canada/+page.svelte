@@ -1,23 +1,67 @@
 <script lang="ts">
+  import { canonicalUrl } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
   const considerations = [
-    { title: 'Speed advantage', body: "Crypto withdrawals are typically instant or within 1 hour — faster than any fiat method. Once the casino processes the request, funds appear in your wallet within minutes (Bitcoin) or seconds (newer chains)." },
-    { title: 'AGCO licensing', body: "Most crypto-first casinos (like Stake) are NOT AGCO-licensed for Ontario. They operate under Curaçao or other offshore licences. This means Ontario's player protections don't apply. Always verify licensing for your province." },
-    { title: 'Canadian tax treatment', body: "The Canada Revenue Agency (CRA) treats cryptocurrency as property, not currency. Gains from crypto gambling activities may be taxable. Consult a Canadian tax professional for your specific situation — especially for high-volume activity." },
-    { title: 'Volatility risk', body: "Crypto values fluctuate. Winning 0.01 BTC when Bitcoin is at $60,000 CAD is worth $600 — but if BTC drops to $30,000 before you sell, that's $300. Factor in price volatility when managing crypto gambling bankrolls." },
+    {
+      title: 'Speed advantage',
+      body: 'Crypto withdrawals are typically instant or within 1 hour — faster than any fiat method. Once the casino processes the request, funds appear in your wallet within minutes (Bitcoin) or seconds (newer chains).',
+    },
+    {
+      title: 'AGCO licensing',
+      body: "Most crypto-first casinos (like Stake) are NOT AGCO-licensed for Ontario. They operate under Curaçao or other offshore licences. This means Ontario's player protections don't apply. Always verify licensing for your province.",
+    },
+    {
+      title: 'Canadian tax treatment',
+      body: 'The Canada Revenue Agency (CRA) treats cryptocurrency as property, not currency. Gains from crypto gambling activities may be taxable. Consult a Canadian tax professional for your specific situation — especially for high-volume activity.',
+    },
+    {
+      title: 'Volatility risk',
+      body: "Crypto values fluctuate. Winning 0.01 BTC when Bitcoin is at $60,000 CAD is worth $600 — but if BTC drops to $30,000 before you sell, that's $300. Factor in price volatility when managing crypto gambling bankrolls.",
+    },
   ];
 </script>
 
 <svelte:head>
   <title>Crypto Casino Canada 2026 — Bitcoin &amp; Ethereum Casino Sites | 247iBET</title>
-  <meta name="description" content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed. Compliance and tax considerations for Canadian crypto gamblers." />
-  <meta property="og:title" content="Crypto Casino Canada 2026 — Bitcoin &amp; Ethereum Casino Sites | 247iBET" />
-  <meta property="og:description" content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed." />
-  <meta name="twitter:title" content="Crypto Casino Canada 2026 — Bitcoin &amp; Ethereum Casino Sites | 247iBET" />
-  <meta name="twitter:description" content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed." />
-  <link rel="canonical" href="https://247ibet.ca/guides/crypto-casino-canada" />
-  <script type="application/ld+json">{@html JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://247ibet.ca"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://247ibet.ca/guides"},{"@type":"ListItem","position":3,"name":"Crypto Casino Canada","item":"https://247ibet.ca/guides/crypto-casino-canada"}]})}</script>
+  <meta
+    name="description"
+    content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed. Compliance and tax considerations for Canadian crypto gamblers."
+  />
+  <meta
+    property="og:title"
+    content="Crypto Casino Canada 2026 — Bitcoin &amp; Ethereum Casino Sites | 247iBET"
+  />
+  <meta
+    property="og:description"
+    content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed."
+  />
+  <meta
+    name="twitter:title"
+    content="Crypto Casino Canada 2026 — Bitcoin &amp; Ethereum Casino Sites | 247iBET"
+  />
+  <meta
+    name="twitter:description"
+    content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed."
+  />
+  <link rel="canonical" href={canonicalUrl('/guides/crypto-casino-canada')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://247ibet.ca/guides' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Crypto Casino Canada',
+          item: 'https://247ibet.ca/guides/crypto-casino-canada',
+        },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
@@ -32,12 +76,22 @@
   </nav>
 
   <div class="navy-card rounded-3xl border border-white/10 p-6 md:p-10 mb-8">
-    <div class="text-[10px] font-mono text-orange-400 uppercase tracking-[0.3em] mb-3">Payments Guide</div>
+    <div class="text-[10px] font-mono text-orange-400 uppercase tracking-[0.3em] mb-3">
+      Payments Guide
+    </div>
     <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Crypto Casino Canada</h1>
-    <p class="text-gray-300 font-sans text-lg max-w-xl">Bitcoin and Ethereum gambling sites available to Canadian players — including instant-withdrawal advantages, AGCO licensing status, and Canadian tax considerations for crypto winnings.</p>
+    <p class="text-gray-300 font-sans text-lg max-w-xl">
+      Bitcoin and Ethereum gambling sites available to Canadian players — including
+      instant-withdrawal advantages, AGCO licensing status, and Canadian tax considerations for
+      crypto winnings.
+    </p>
   </div>
 
-  <div class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary">Affiliate disclosure: This page may contain affiliate links.</div>
+  <div
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+  >
+    Affiliate disclosure: This page may contain affiliate links.
+  </div>
 
   <section class="mb-8">
     <IBetShowcase variant="compact" showFeatures={true} />
@@ -80,7 +134,9 @@
           <tr>
             <td class="p-4 text-white font-bold">Stablecoins</td>
             <td class="p-4 text-gray-300">Fast on supported chains</td>
-            <td class="p-4 text-gray-300">Lower price-volatility risk than floating crypto assets.</td>
+            <td class="p-4 text-gray-300"
+              >Lower price-volatility risk than floating crypto assets.</td
+            >
           </tr>
         </tbody>
       </table>
@@ -89,20 +145,52 @@
 
   <div class="text-sm text-gray-500 font-sans mb-8">
     Related:
-    <a href="/legal-online-gambling-canada" class="text-slate-blue hover:underline">Canadian gambling laws and crypto casinos</a> ·
-    <a href="/fast-payouts" class="text-slate-blue hover:underline">Fast payout casinos Canada 2026</a>
+    <a href="/legal-online-gambling-canada" class="text-slate-blue hover:underline"
+      >Canadian gambling laws and crypto casinos</a
+    >
+    ·
+    <a href="/fast-payouts" class="text-slate-blue hover:underline"
+      >Fast payout casinos Canada 2026</a
+    >
   </div>
 
   <nav aria-label="Related guides" class="mt-8">
     <ul class="flex flex-wrap gap-3">
-      <li><a href="/legal-online-gambling-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Canadian gambling laws and crypto casinos</a></li>
-      <li><a href="/fast-payouts" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Fast payout casinos Canada 2026</a></li>
-      <li><a href="/guides/interac-e-transfer-casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Interac e-Transfer Casino Guide Canada</a></li>
-      <li><a href="/guides/how-to-choose-online-casino" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">How to Choose an Online Casino in Canada</a></li>
+      <li>
+        <a
+          href="/legal-online-gambling-canada"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Canadian gambling laws and crypto casinos</a
+        >
+      </li>
+      <li>
+        <a
+          href="/fast-payouts"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Fast payout casinos Canada 2026</a
+        >
+      </li>
+      <li>
+        <a
+          href="/guides/interac-e-transfer-casino"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >Interac e-Transfer Casino Guide Canada</a
+        >
+      </li>
+      <li>
+        <a
+          href="/guides/how-to-choose-online-casino"
+          class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+          >How to Choose an Online Casino in Canada</a
+        >
+      </li>
     </ul>
   </nav>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

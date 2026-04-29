@@ -1,3 +1,4 @@
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { vitePlugin } from 'braintrust/vite';
@@ -7,6 +8,13 @@ import { defineConfig, type Plugin, type PluginOption } from 'vite';
 // causing Kit's inline_styles pipeline to store a non-string, non-function value
 // which then throws TypeError at render.js:286. This plugin ensures the default
 // export is always a CSS string.
+//
+// The naive fallback `export default <whole-code>` would stringify a JS HMR
+// wrapper produced by upstream plugins (containing `__vite__updateStyle` etc.),
+// not the actual CSS — that broke style injection at runtime. We extract the
+// real CSS literal first and only fall back to the raw code if no wrapper is
+// detected.
+const CSS_LITERAL_RE = /const\s+__vite__css\s*=\s*("(?:\\.|[^"\\])*")/;
 const cssInlineSSRFix: Plugin = {
   name: 'css-inline-ssr-fix',
   enforce: 'post',
@@ -14,8 +22,10 @@ const cssInlineSSRFix: Plugin = {
     if (!options?.ssr) return;
     if (!/[?&]inline\b/.test(id)) return;
     if (code.includes('export default')) return;
-    return { code: `export default ${JSON.stringify(code)}`, map: null };
-  }
+    const match = code.match(CSS_LITERAL_RE);
+    const cssExport = match ? match[1] : JSON.stringify(code);
+    return { code: `export default ${cssExport};`, map: null };
+  },
 };
 
 function braintrustBuildPlugin(command: string): PluginOption[] {
@@ -25,14 +35,22 @@ function braintrustBuildPlugin(command: string): PluginOption[] {
 }
 
 export default defineConfig(async ({ command }) => {
+  // Workflow plugin only runs in build. In dev it watches files it generates
+  // itself, triggering a rebuild loop that prevents Vite from settling and
+  // breaks CSS injection.
   let workflowPlugins: PluginOption[] = [];
-  try {
+  if (command === 'build') {
     const { workflowPlugin } = await import('workflow/sveltekit');
     workflowPlugins = workflowPlugin();
-  } catch {
-    // workflow/sveltekit unavailable — using fallback (plain async handlers)
   }
   return {
-    plugins: [tailwindcss(), ...workflowPlugins, ...braintrustBuildPlugin(command), sveltekit(), cssInlineSSRFix]
+    plugins: [
+      enhancedImages(),
+      tailwindcss(),
+      ...workflowPlugins,
+      ...braintrustBuildPlugin(command),
+      sveltekit(),
+      cssInlineSSRFix,
+    ],
   };
 });

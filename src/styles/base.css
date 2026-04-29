@@ -1,10 +1,10 @@
 @layer base {
   body {
-    background-color: #070C18;
+    background-color: #070c18;
     background-image:
       radial-gradient(ellipse 80% 60% at 50% 0%, rgba(20, 32, 56, 0.45) 0%, transparent 70%),
       linear-gradient(180deg, rgba(7, 12, 24, 0.92) 0%, rgba(7, 12, 24, 1) 100%);
-    color: #F1F5F9;
+    color: #f1f5f9;
     line-height: 1.75;
     letter-spacing: 0;
     -webkit-text-size-adjust: 100%;
@@ -47,7 +47,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #D4943A;
+    outline: 2px solid #d4943a;
     outline-offset: 2px;
   }
 
@@ -55,8 +55,8 @@
     outline: none;
   }
 
-  :where(.font-mono, [style*="--font-mono"], code, kbd, pre, samp) {
-    font-feature-settings: "tnum" 1;
+  :where(.font-mono, [style*='--font-mono'], code, kbd, pre, samp) {
+    font-feature-settings: 'tnum' 1;
     font-variant-numeric: tabular-nums;
   }
 
@@ -64,21 +64,22 @@
     font-family: var(--font-display);
     font-weight: 300;
     letter-spacing: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   h2 {
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0;
   }
-  h3, h4 {
+  h3,
+  h4 {
     font-family: var(--font-sans);
     font-weight: 700;
   }
 
   ::selection {
-    background: #D4943A;
-    color: #070C18;
+    background: #d4943a;
+    color: #070c18;
   }
 
   a {

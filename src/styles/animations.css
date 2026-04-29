@@ -13,33 +13,62 @@
   }
 
   @keyframes ticker-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes odds-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes fade-in {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-down {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes dropdown-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes pulse-19 {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.04);
+    }
   }
 
   @keyframes fade-in-up {
@@ -65,29 +94,90 @@
   }
 
   @keyframes live-pulse-ring {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
-    50%      { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0); }
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
+    }
+    50% {
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);
+    }
   }
 
   @keyframes win-flash {
-    0%   { background-color: rgba(255, 215, 0, 0.0); }
-    20%  { background-color: rgba(255, 215, 0, 0.25); }
-    100% { background-color: rgba(255, 215, 0, 0.0); }
+    0% {
+      background-color: rgba(255, 215, 0, 0);
+    }
+    20% {
+      background-color: rgba(255, 215, 0, 0.25);
+    }
+    100% {
+      background-color: rgba(255, 215, 0, 0);
+    }
   }
 
   @keyframes ticker-rollup {
-    from { transform: translateY(0.5em); opacity: 0; }
-    to   { transform: translateY(0);     opacity: 1; }
+    from {
+      transform: translateY(0.5em);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  .animate-fade-down { animation: fade-down 0.4s ease-out forwards; }
-  .animate-dropdown-in { animation: dropdown-in 0.2s ease-out forwards; }
-  .animate-pulse-19 { animation: pulse-19 2.8s ease-in-out infinite; }
-  .animate-fade-in-up { animation: fade-in-up 0.6s ease-out both; }
-  .animate-fade-in-up-delay-1 { animation: fade-in-up 0.6s ease-out 0.1s both; }
-  .animate-fade-in-up-delay-2 { animation: fade-in-up 0.6s ease-out 0.2s both; }
-  .animate-fade-in-up-delay-3 { animation: fade-in-up 0.6s ease-out 0.3s both; }
-  .animate-fade-in-scale { animation: fade-in-scale 0.6s ease-out both; }
+  @keyframes jackpot-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @keyframes won-celebrate {
+    0% {
+      box-shadow:
+        0 0 0 0 rgba(212, 148, 58, 0.55),
+        0 0 0 0 rgba(255, 215, 0, 0.4);
+    }
+    50% {
+      box-shadow:
+        0 0 0 4px rgba(212, 148, 58, 0.18),
+        0 0 14px 2px rgba(255, 215, 0, 0.18);
+    }
+    100% {
+      box-shadow:
+        0 0 0 8px rgba(212, 148, 58, 0),
+        0 0 0 0 rgba(255, 215, 0, 0);
+    }
+  }
+
+  .animate-fade-down {
+    animation: fade-down 0.4s ease-out forwards;
+  }
+  .animate-dropdown-in {
+    animation: dropdown-in 0.2s ease-out forwards;
+  }
+  .animate-pulse-19 {
+    animation: pulse-19 2.8s ease-in-out infinite;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out both;
+  }
+  .animate-fade-in-up-delay-1 {
+    animation: fade-in-up 0.6s ease-out 0.1s both;
+  }
+  .animate-fade-in-up-delay-2 {
+    animation: fade-in-up 0.6s ease-out 0.2s both;
+  }
+  .animate-fade-in-up-delay-3 {
+    animation: fade-in-up 0.6s ease-out 0.3s both;
+  }
+  .animate-fade-in-scale {
+    animation: fade-in-scale 0.6s ease-out both;
+  }
 
   .money-hero-reveal {
     opacity: 0;
@@ -96,8 +186,8 @@
   }
 
   .skeleton {
-    background: #0D1629;
-    background: linear-gradient(110deg, #0D1629 8%, #142038 18%, #0D1629 33%);
+    background: #0d1629;
+    background: linear-gradient(110deg, #0d1629 8%, #142038 18%, #0d1629 33%);
     border-radius: 4px;
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
@@ -108,8 +198,20 @@
     will-change: transform;
   }
 
-  .win-flash { animation: win-flash 800ms ease-out; }
-  .ticker-digit { display: inline-block; animation: ticker-rollup 400ms ease-out; }
+  .win-flash {
+    animation: win-flash 800ms ease-out;
+  }
+  .ticker-digit {
+    display: inline-block;
+    animation: ticker-rollup 400ms ease-out;
+  }
+  .animate-jackpot-float {
+    animation: jackpot-float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+  .animate-won-celebrate {
+    animation: won-celebrate 1.4s ease-out;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     .money-hero-reveal {
@@ -123,14 +225,20 @@
       will-change: auto;
     }
     .live-dot,
-    .animate-pulse-19 {
+    .animate-pulse-19,
+    .animate-jackpot-float,
+    .animate-won-celebrate,
+    .win-flash,
+    .skeleton {
       animation: none;
       box-shadow: none;
     }
     html {
       scroll-behavior: auto;
     }
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;

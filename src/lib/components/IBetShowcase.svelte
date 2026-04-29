@@ -1,9 +1,25 @@
 <script lang="ts">
-  import { Star, CheckCircle, ExternalLink, Zap, Gamepad2, Trophy, MonitorPlay, ShieldCheck, CreditCard, LockKeyhole } from 'lucide-svelte';
+  import {
+    Star,
+    CheckCircle,
+    ExternalLink,
+    Zap,
+    Gamepad2,
+    Trophy,
+    MonitorPlay,
+    ShieldCheck,
+    CreditCard,
+    LockKeyhole,
+  } from 'lucide-svelte';
   import { IBET_PROFILE, IBET_URLS, IBET_CTA, IBET_DISCLAIMER } from '$lib/ibet-brand';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
-  const featureIconMap: Partial<Record<string, typeof Zap>> = { Zap, Gamepad2, Trophy, MonitorPlay };
+  const featureIconMap: Partial<Record<string, typeof Zap>> = {
+    Zap,
+    Gamepad2,
+    Trophy,
+    MonitorPlay,
+  };
 
   interface Props {
     variant?: 'hero' | 'compact' | 'banner';
@@ -24,7 +40,9 @@
   }: Props = $props();
 
   let isExpanded = $state(false);
-  const visibleFeatures = $derived(isExpanded ? IBET_PROFILE.features : IBET_PROFILE.features.slice(0, 4));
+  const visibleFeatures = $derived(
+    isExpanded ? IBET_PROFILE.features : IBET_PROFILE.features.slice(0, 4),
+  );
 </script>
 
 {#snippet starRating(rating: number | null)}
@@ -32,7 +50,12 @@
     {@const filled = Math.round(rating / 2)}
     <div class="flex items-center gap-0.5">
       {#each [1, 2, 3, 4, 5] as star}
-        <Star class="w-4 h-4 {star <= filled ? 'text-prestige-gold fill-prestige-gold' : 'text-navy-border'}" aria-hidden="true" />
+        <Star
+          class="w-4 h-4 {star <= filled
+            ? 'text-prestige-gold fill-prestige-gold'
+            : 'text-navy-border'}"
+          aria-hidden="true"
+        />
       {/each}
       <span class="ml-1.5 text-sm font-bold text-white">{rating.toFixed(1)}/10</span>
     </div>
@@ -40,7 +63,9 @@
 {/snippet}
 
 {#if variant === 'banner'}
-  <div class="navy-card rounded-2xl border border-navy-border p-4 flex flex-col sm:flex-row items-center gap-4">
+  <div
+    class="navy-card rounded-2xl border border-navy-border p-4 flex flex-col sm:flex-row items-center gap-4"
+  >
     <div class="flex items-center gap-3 flex-1">
       <Zap class="w-5 h-5 text-prestige-gold shrink-0" aria-hidden="true" />
       <div>
@@ -57,14 +82,22 @@
   <div class="navy-card rounded-xl p-5 md:p-6">
     <div class="relative z-10">
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
-        <div class="w-14 h-14 rounded-xl border border-white/10 overflow-hidden bg-white/5 shrink-0 flex items-center justify-center">
-          <img src={IBET_PROFILE.logo} alt="247iBET logo" class="object-contain p-1 w-full h-full" />
+        <div
+          class="w-14 h-14 rounded-xl border border-white/10 overflow-hidden bg-white/5 shrink-0 flex items-center justify-center"
+        >
+          <img
+            src={IBET_PROFILE.logo}
+            alt="247iBET logo"
+            class="object-contain p-1 w-full h-full"
+          />
         </div>
         <div class="flex-1">
           <div class="flex items-center gap-2 flex-wrap mb-1">
             <span class="page-hub-title text-lg">{IBET_PROFILE.name}</span>
             {#if IBET_PROFILE.agcoLicensed}
-              <span class="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
+              <span
+                class="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20"
+              >
                 <CheckCircle class="w-3 h-3" aria-hidden="true" /> Ontario Compliant
               </span>
             {/if}
@@ -77,7 +110,8 @@
         </div>
         <div class="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
           <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
-            {ctaText ?? IBET_CTA.primary} <ExternalLink class="w-3 h-3" aria-hidden="true" />
+            {ctaText ?? IBET_CTA.primary}
+            <ExternalLink class="w-3 h-3" aria-hidden="true" />
           </SafeExternalLink>
           <p class="text-[11px] text-text-body font-sans">{IBET_DISCLAIMER.slice(0, 50)}…</p>
         </div>
@@ -99,8 +133,14 @@
     <div class="bg-navy-black p-8 md:p-14 relative">
       <div class="relative z-10">
         <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-10">
-          <div class="w-24 h-24 rounded-2xl border border-white/10 overflow-hidden bg-white/5 shrink-0 flex items-center justify-center">
-            <img src={IBET_PROFILE.logo} alt="247iBET logo" class="object-contain p-3 w-full h-full" />
+          <div
+            class="w-24 h-24 rounded-2xl border border-white/10 overflow-hidden bg-white/5 shrink-0 flex items-center justify-center"
+          >
+            <img
+              src={IBET_PROFILE.logo}
+              alt="247iBET logo"
+              class="object-contain p-3 w-full h-full"
+            />
           </div>
 
           <div class="flex-1">
@@ -113,26 +153,37 @@
                 <h2 class="page-hub-title text-3xl md:text-5xl uppercase">{IBET_PROFILE.name}</h2>
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
-                <span class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest">
+                <span
+                  class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest"
+                >
                   <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Registry Status: Verified
                 </span>
               {/if}
             </div>
             {#if IBET_PROFILE.rating !== null}
               <div class="flex items-center gap-2">
-                <span class="text-xs font-bold text-text-tertiary uppercase tracking-widest">Performance Rating:</span>
+                <span class="text-xs font-bold text-text-tertiary uppercase tracking-widest"
+                  >Performance Rating:</span
+                >
                 {@render starRating(IBET_PROFILE.rating)}
               </div>
             {/if}
-            <p class="page-hero-subtitle font-sans text-lg mt-5 max-w-2xl font-light">{IBET_PROFILE.tagline}</p>
+            <p class="page-hero-subtitle font-sans text-lg mt-5 max-w-2xl font-light">
+              {IBET_PROFILE.tagline}
+            </p>
             <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-3">
-              <span class="flex items-center gap-1 text-xs text-success font-bold whitespace-nowrap">
+              <span
+                class="flex items-center gap-1 text-xs text-success font-bold whitespace-nowrap"
+              >
                 <Zap class="w-3 h-3" aria-hidden="true" />
                 {IBET_PROFILE.withdrawalSpeed}
               </span>
               <span class="hidden sm:inline text-text-tertiary" aria-hidden="true">·</span>
               {#each IBET_PROFILE.paymentMethods.slice(0, 4) as pm}
-                <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/5 border border-navy-border text-text-body whitespace-nowrap">{pm}</span>
+                <span
+                  class="text-[11px] px-2 py-0.5 rounded-full bg-white/5 border border-navy-border text-text-body whitespace-nowrap"
+                  >{pm}</span
+                >
               {/each}
             </div>
           </div>
@@ -172,10 +223,14 @@
           </div>
         {/if}
 
-        <dl class="mb-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-white/8 py-5 sm:grid-cols-4 sm:divide-x sm:divide-white/8 sm:gap-y-0">
+        <dl
+          class="mb-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-white/8 py-5 sm:grid-cols-4 sm:divide-x sm:divide-white/8 sm:gap-y-0"
+        >
           {#each IBET_PROFILE.trustPanel as item}
             <div class="sm:px-6 sm:first:pl-0 sm:last:pr-0">
-              <dt class="mb-1.5 flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.18em] text-text-body">
+              <dt
+                class="mb-1.5 flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.18em] text-text-body"
+              >
                 {#if item.label === 'Licence'}
                   <ShieldCheck class="w-3.5 h-3.5 text-green-400" aria-hidden="true" />
                 {:else if item.label === 'Payments'}
@@ -183,7 +238,10 @@
                 {:else if item.label === 'Security'}
                   <LockKeyhole class="w-3.5 h-3.5 text-text-body" aria-hidden="true" />
                 {:else}
-                  <Star class="w-3.5 h-3.5 text-prestige-gold fill-prestige-gold" aria-hidden="true" />
+                  <Star
+                    class="w-3.5 h-3.5 text-prestige-gold fill-prestige-gold"
+                    aria-hidden="true"
+                  />
                 {/if}
                 {item.label}
               </dt>

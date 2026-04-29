@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>247iBET Home Promo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        src: url("capture/assets/fonts/plus-jakarta-sans-400.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        src: url("capture/assets/fonts/plus-jakarta-sans-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "Plus Jakarta Sans";
+        src: url("capture/assets/fonts/plus-jakarta-sans-800.woff2") format("woff2");
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: "Be Vietnam Pro";
+        src: url("capture/assets/fonts/be-vietnam-pro-400.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("capture/assets/fonts/jetbrains-mono-400.woff2") format("woff2");
+        font-weight: 400;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: #070c18;
+        color: #ffffff;
+        font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      }
+      [data-composition-id="main"] {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #070c18;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #070c18;
+        opacity: 0;
+      }
+      .scene-content {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        padding: 96px 128px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 34px;
+      }
+      .bg-img,
+      .bg-shot {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bg-shot {
+        opacity: 0.22;
+        filter: saturate(0.85) brightness(0.68);
+      }
+      .navy-veil {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background:
+          radial-gradient(circle at 72% 38%, rgba(212, 148, 58, 0.22), transparent 28%),
+          radial-gradient(circle at 18% 84%, rgba(34, 197, 94, 0.1), transparent 22%),
+          rgba(7, 12, 24, 0.72);
+      }
+      .logo {
+        width: 210px;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.6));
+      }
+      .kicker {
+        color: #d4943a;
+        font: 400 18px/1 "JetBrains Mono", monospace;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+      .hero-title {
+        max-width: 860px;
+        margin: 0;
+        font-size: 104px;
+        line-height: 0.96;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+      .gold {
+        color: #d4943a;
+      }
+      .body {
+        max-width: 760px;
+        color: #94a3b8;
+        font: 400 30px/1.45 "Be Vietnam Pro", Arial, sans-serif;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        border-radius: 999px;
+        padding: 0 22px;
+        color: #22c55e;
+        background: rgba(34, 197, 94, 0.08);
+        font: 400 16px/1 "JetBrains Mono", monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .pill-dot {
+        width: 8px;
+        height: 8px;
+        margin-right: 10px;
+        border-radius: 999px;
+        background: #22c55e;
+        box-shadow: 0 0 16px rgba(34, 197, 94, 0.8);
+      }
+      .top-right {
+        position: absolute;
+        top: 78px;
+        right: 112px;
+        z-index: 8;
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 330px;
+        height: 70px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: linear-gradient(135deg, #ebb55e 0%, #d4943a 50%, #b87826 100%);
+        color: #070c18;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.24) inset,
+          0 18px 38px -18px rgba(212, 148, 58, 0.8);
+      }
+      .arrow {
+        margin-left: 14px;
+        font-size: 30px;
+        line-height: 1;
+      }
+      .gold-line {
+        position: absolute;
+        z-index: 7;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ebb55e, transparent);
+        box-shadow: 0 0 20px rgba(235, 181, 94, 0.6);
+      }
+      .transition-wipe {
+        position: absolute;
+        inset: 0;
+        z-index: 30;
+        opacity: 0;
+        background:
+          radial-gradient(circle at 50% 50%, rgba(235, 181, 94, 0.8), transparent 18%),
+          rgba(7, 12, 24, 0.74);
+      }
+      .account-layout {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 54px;
+        align-items: center;
+      }
+      .panel {
+        border: 1px solid rgba(212, 148, 58, 0.36);
+        border-radius: 18px;
+        background: rgba(13, 22, 41, 0.92);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+          0 30px 90px -50px rgba(0, 0, 0, 0.8);
+      }
+      .account-card {
+        padding: 52px;
+        min-height: 560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 26px;
+      }
+      .section-title {
+        margin: 0;
+        font-size: 68px;
+        line-height: 1.04;
+        font-weight: 800;
+      }
+      .rating {
+        color: #ebb55e;
+        font-size: 34px;
+        font-weight: 800;
+      }
+      .checks {
+        display: grid;
+        gap: 18px;
+        color: #d1d5dc;
+        font-size: 26px;
+      }
+      .check {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .check-mark {
+        color: #22c55e;
+        font-weight: 800;
+      }
+      .module-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .module {
+        min-height: 230px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .module-icon {
+        color: #d4943a;
+        font-size: 54px;
+        line-height: 1;
+      }
+      .module h3,
+      .product-card h3,
+      .step h3,
+      .badge h3 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.1;
+      }
+      .module p,
+      .step p,
+      .badge p {
+        margin: 0;
+        color: #94a3b8;
+        font: 400 22px/1.45 "Be Vietnam Pro", Arial, sans-serif;
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 18px;
+      }
+      .product-card {
+        min-height: 430px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        filter: brightness(0.82) saturate(1.08);
+      }
+      .product-copy {
+        padding: 24px;
+        display: grid;
+        gap: 14px;
+      }
+      .product-copy p {
+        margin: 0;
+        min-height: 58px;
+        color: #94a3b8;
+        font-size: 20px;
+        line-height: 1.35;
+      }
+      .product-copy span {
+        color: #d4943a;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .big-stat-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .big-stat {
+        padding: 34px 42px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+      .big-stat strong {
+        color: #d4943a;
+        font-size: 88px;
+        line-height: 1;
+      }
+      .big-stat span {
+        max-width: 310px;
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .payout-layout {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 42px;
+        align-items: center;
+      }
+      .steps {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .rail {
+        position: absolute;
+        left: 70px;
+        right: 70px;
+        top: 62px;
+        height: 4px;
+        background: linear-gradient(90deg, #d4943a, #ebb55e, #22c55e);
+        box-shadow: 0 0 22px rgba(235, 181, 94, 0.55);
+      }
+      .step {
+        position: relative;
+        min-height: 360px;
+        padding: 42px 30px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .num {
+        width: 58px;
+        height: 58px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #d4943a;
+        color: #070c18;
+        font-size: 26px;
+        font-weight: 800;
+      }
+      .time-pill {
+        width: max-content;
+        border-radius: 999px;
+        padding: 10px 18px;
+        color: #22c55e;
+        background: rgba(34, 197, 94, 0.11);
+        font: 400 18px/1 "JetBrains Mono", monospace;
+      }
+      .badges {
+        display: grid;
+        gap: 20px;
+      }
+      .badge {
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+      .badge-icon {
+        color: #d4943a;
+        font-size: 48px;
+      }
+      .final-card {
+        width: 100%;
+        min-height: 560px;
+        padding: 74px 86px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 34px;
+      }
+      .final-title {
+        max-width: 1200px;
+        margin: 0;
+        font-size: 76px;
+        line-height: 1.05;
+        font-weight: 800;
+      }
+      .final-copy {
+        max-width: 920px;
+        margin: 0;
+        color: #94a3b8;
+        font: 400 30px/1.45 "Be Vietnam Pro", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="32.2"
+      data-width="1920"
+      data-height="1080"
+    >
+      <audio
+        id="narration"
+        src="narration.wav"
+        data-start="0"
+        data-duration="31.72"
+        data-track-index="0"
+        data-volume="1"
+      ></audio>
+
+      <section id="scene-1" class="scene clip" data-start="0" data-duration="3.05" data-track-index="1">
+        <img class="bg-img s1-bg" src="capture/assets/site/casino-premium-hero.png" alt="" />
+        <div class="navy-veil"></div>
+        <div class="top-right pill s1-pill"><span class="pill-dot"></span>19+ Play Responsibly</div>
+        <div class="gold-line s1-line" style="left: 990px; top: 768px; width: 520px"></div>
+        <div class="scene-content">
+          <img class="logo s1-logo" src="capture/assets/site/logo-scene-1.png" alt="247iBET" />
+          <div class="kicker s1-kicker">Canada's trusted betting destination</div>
+          <h1 class="hero-title">
+            <span class="s1-word">Canada's</span><br />
+            <span class="s1-word">betting night</span><br />
+            <span class="gold s1-fast">moves fast.</span>
+          </h1>
+        </div>
+      </section>
+
+      <section id="scene-2" class="scene clip" data-start="3.05" data-duration="7.05" data-track-index="1">
+        <img class="bg-shot s2-shot" src="capture/screenshots/scroll-023.png" alt="" />
+        <div class="navy-veil"></div>
+        <div class="scene-content account-layout">
+          <div class="panel account-card s2-account">
+            <img class="logo s2-logo" src="capture/assets/site/logo-scene-2.png" alt="247iBET" />
+            <div class="kicker">One premium account</div>
+            <h2 class="section-title">Casino, sportsbook, fast payouts.</h2>
+            <div class="rating"><span id="rating-counter">4.8</span>/5 ★★★★★</div>
+            <div class="checks">
+              <div class="check"><span class="check-mark">✓</span> Instant deposits and fast withdrawals</div>
+              <div class="check"><span class="check-mark">✓</span> Competitive odds and top betting markets</div>
+              <div class="check"><span class="check-mark">✓</span> Huge casino library and live dealers</div>
+            </div>
+          </div>
+          <div class="module-grid">
+            <article class="panel module s2-module">
+              <div class="module-icon">♠</div>
+              <h3>Casino</h3>
+              <p>Slots, live casino, and table games under one login.</p>
+            </article>
+            <article class="panel module s2-module">
+              <div class="module-icon">◆</div>
+              <h3>Sportsbook</h3>
+              <p>Pre-match and live markets across major sports.</p>
+            </article>
+            <article class="panel module s2-module">
+              <div class="module-icon">⚡</div>
+              <h3>Fast Payouts</h3>
+              <p>Secure withdrawal flow built for Canadian players.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-3" class="scene clip" data-start="10.1" data-duration="4.8" data-track-index="1">
+        <div class="navy-veil"></div>
+        <div class="scene-content">
+          <div class="big-stat-row">
+            <div class="panel big-stat s3-stat"><strong id="casino-counter">1000+</strong><span>Casino Games</span></div>
+            <div class="panel big-stat s3-stat"><strong id="sports-counter">30+</strong><span>Sports Covered</span></div>
+          </div>
+          <div class="product-grid">
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/casino-slots-hero.png" alt="" />
+              <div class="product-copy"><h3>Slots</h3><p>New releases and classics.</p><span>Play Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/casino-live-hero.png" alt="" />
+              <div class="product-copy"><h3>Live Casino</h3><p>Real dealers, real action.</p><span>Play Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/casino-blackjack-hero.png" alt="" />
+              <div class="product-copy"><h3>Table Games</h3><p>Blackjack, roulette and more.</p><span>Play Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/sportsbook-premium-hero.png" alt="" />
+              <div class="product-copy"><h3>Sports Betting</h3><p>Pre-match and live markets.</p><span>Bet Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/sportsbook-live-betting-hero.png" alt="" />
+              <div class="product-copy"><h3>Live Betting</h3><p>Bet while it happens.</p><span>Bet Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/sportsbook-nhl-hero.png" alt="" />
+              <div class="product-copy"><h3>Hockey</h3><p>NHL and more.</p><span>Bet Now</span></div>
+            </article>
+            <article class="panel product-card s3-card">
+              <img src="capture/assets/site/sportsbook-nba-hero.png" alt="" />
+              <div class="product-copy"><h3>Basketball</h3><p>NBA and more.</p><span>Bet Now</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-4" class="scene clip" data-start="14.9" data-duration="9.9" data-track-index="1">
+        <img class="bg-shot s4-shot" src="capture/screenshots/scroll-046.png" alt="" />
+        <div class="navy-veil"></div>
+        <div class="scene-content payout-layout">
+          <div>
+            <div class="kicker s4-kicker">Deposit and withdraw</div>
+            <h2 class="section-title s4-title">Fast payouts, visible proof.</h2>
+            <div class="steps">
+              <div class="rail s4-rail"></div>
+              <article class="panel step s4-step"><div class="num">1</div><h3>Deposit</h3><p>Choose e-Transfer and fund securely.</p><span class="time-pill">Instant</span></article>
+              <article class="panel step s4-step"><div class="num">2</div><h3>Play</h3><p>Your balance is credited right away.</p><span class="time-pill">Instant</span></article>
+              <article class="panel step s4-step"><div class="num">3</div><h3>Withdraw</h3><p>Request payout after review.</p><span class="time-pill">2-15 mins</span></article>
+              <article class="panel step s4-step"><div class="num">4</div><h3>Enjoy</h3><p>Receive winnings after approval.</p><span class="time-pill">Up to 15 mins</span></article>
+            </div>
+          </div>
+          <div class="badges">
+            <article class="panel badge s4-badge"><div class="badge-icon">☎</div><div><h3>24/7 Support</h3><p>Real people, anytime you need help.</p></div></article>
+            <article class="panel badge s4-badge"><div class="badge-icon">▣</div><div><h3>Bank-grade Security</h3><p>KYC checks and Canadian player standards.</p></div></article>
+            <article class="panel badge s4-badge"><div class="badge-icon">✓</div><div><h3>Responsible Play</h3><p>Tools to help you play safely.</p></div></article>
+            <img class="panel s4-image" src="capture/assets/site/fast-payouts-hero.png" alt="" style="width: 100%; height: 210px; object-fit: cover; border-radius: 18px" />
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-5" class="scene clip" data-start="24.8" data-duration="7.4" data-track-index="1">
+        <img class="bg-shot s5-shot" src="capture/screenshots/scroll-100.png" alt="" />
+        <div class="navy-veil"></div>
+        <div class="scene-content">
+          <div class="panel final-card">
+            <img class="logo s5-logo" src="capture/assets/site/logo-scene-5.png" alt="247iBET" />
+            <div class="pill s5-pill"><span class="pill-dot"></span>19+ Play Responsibly</div>
+            <h2 class="final-title">Ready to Open Your <span class="gold">247iBET</span> Account?</h2>
+            <p class="final-copy">Canadian players get fast payouts, top odds, and confidence before the first click.</p>
+            <div class="cta s5-cta">Join 247iBET Now <span class="arrow">→</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="transition-wipe clip wipe-1" data-start="2.82" data-duration="0.36" data-track-index="2"></div>
+      <div class="transition-wipe clip wipe-2" data-start="9.84" data-duration="0.38" data-track-index="2"></div>
+      <div class="transition-wipe clip wipe-3" data-start="14.67" data-duration="0.38" data-track-index="2"></div>
+      <div class="transition-wipe clip wipe-4" data-start="24.55" data-duration="0.38" data-track-index="2"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.set("#scene-1", { opacity: 1 }, 0);
+      tl.set("#scene-1", { opacity: 0 }, 3.05);
+      tl.set("#scene-2", { opacity: 1 }, 3.05);
+      tl.set("#scene-2", { opacity: 0 }, 10.1);
+      tl.set("#scene-3", { opacity: 1 }, 10.1);
+      tl.set("#scene-3", { opacity: 0 }, 14.9);
+      tl.set("#scene-4", { opacity: 1 }, 14.9);
+      tl.set("#scene-4", { opacity: 0 }, 24.8);
+      tl.set("#scene-5", { opacity: 1 }, 24.8);
+
+      function countText(selector, from, to, suffix, start, duration) {
+        const obj = { value: from };
+        tl.to(obj, {
+          value: to,
+          duration,
+          ease: "power2.out",
+          onUpdate: () => {
+            const value = to < 10 ? obj.value.toFixed(1) : Math.round(obj.value);
+            document.querySelector(selector).textContent = value + suffix;
+          },
+        }, start);
+      }
+
+      tl.fromTo(".s1-bg", { scale: 1 }, { scale: 1.035, duration: 3.05, ease: "none" }, 0);
+      tl.fromTo(".s1-logo", { opacity: 0, y: 28, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "power3.out" }, 0.16);
+      tl.fromTo(".s1-kicker", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.38);
+      tl.fromTo(".s1-word", { opacity: 0, y: 52 }, { opacity: 1, y: 0, duration: 0.55, stagger: 0.15, ease: "expo.out" }, 0.58);
+      tl.fromTo(".s1-fast", { opacity: 0, y: 46, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.4)" }, 1.38);
+      tl.fromTo(".s1-pill", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.42);
+      tl.fromTo(".s1-line", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.7, ease: "power2.out" }, 1.7);
+
+      tl.fromTo(".s2-shot", { x: -90, scale: 1.03 }, { x: 40, scale: 1.07, duration: 7.05, ease: "none" }, 3.05);
+      tl.fromTo(".s2-account", { opacity: 0, y: 52, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "expo.out" }, 3.28);
+      tl.fromTo(".s2-module", { opacity: 0, y: 70, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.18, ease: "back.out(1.35)" }, 3.9);
+      tl.fromTo(".check", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.42, stagger: 0.13, ease: "power2.out" }, 4.55);
+      countText("#rating-counter", 0, 4.8, "", 4.1, 1.4);
+
+      tl.fromTo(".s3-stat", { opacity: 0, y: 52, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, stagger: 0.14, ease: "expo.out" }, 10.22);
+      tl.fromTo(".s3-card", { opacity: 0, y: 90, rotation: -2 }, { opacity: 1, y: 0, rotation: 0, duration: 0.65, stagger: 0.08, ease: "power3.out" }, 10.75);
+      tl.to(".s3-card img", { scale: 1.045, duration: 4.1, ease: "none" }, 10.65);
+      countText("#casino-counter", 0, 1000, "+", 10.35, 1.3);
+      countText("#sports-counter", 0, 30, "+", 10.55, 1.1);
+
+      tl.fromTo(".s4-shot", { x: 80, scale: 1.02 }, { x: -70, scale: 1.06, duration: 9.9, ease: "none" }, 14.9);
+      tl.fromTo(".s4-kicker", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 15.08);
+      tl.fromTo(".s4-title", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 15.28);
+      tl.fromTo(".s4-rail", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 1.0, ease: "power2.out" }, 15.75);
+      tl.fromTo(".s4-step", { opacity: 0, y: 62 }, { opacity: 1, y: 0, duration: 0.68, stagger: 0.22, ease: "back.out(1.2)" }, 15.92);
+      tl.fromTo(".time-pill", { opacity: 0, scale: 0.84 }, { opacity: 1, scale: 1, duration: 0.36, stagger: 0.2, ease: "back.out(1.5)" }, 17.15);
+      tl.fromTo(".s4-badge", { opacity: 0, x: 62 }, { opacity: 1, x: 0, duration: 0.55, stagger: 0.22, ease: "power3.out" }, 18.35);
+      tl.fromTo(".s4-image", { opacity: 0, y: 40, scale: 0.95 }, { opacity: 1, y: 0, scale: 1.03, duration: 3.2, ease: "power1.out" }, 19.35);
+
+      tl.fromTo(".s5-shot", { y: -70, scale: 1.04 }, { y: 20, scale: 1.07, duration: 7.4, ease: "none" }, 24.8);
+      tl.fromTo(".final-card", { opacity: 0, y: 56, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.78, ease: "expo.out" }, 25.0);
+      tl.fromTo(".s5-logo", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 25.35);
+      tl.fromTo(".s5-pill", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }, 25.68);
+      tl.fromTo(".final-title", { opacity: 0, y: 42 }, { opacity: 1, y: 0, duration: 0.62, ease: "power3.out" }, 25.98);
+      tl.fromTo(".final-copy", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.48, ease: "power2.out" }, 26.55);
+      tl.fromTo(".s5-cta", { opacity: 0, y: 34, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.62, ease: "back.out(1.45)" }, 28.95);
+      tl.to(".s5-cta", { scale: 1.045, duration: 0.25, yoyo: true, repeat: 1, ease: "power2.inOut" }, 31.1);
+      tl.to("#scene-5", { opacity: 0, duration: 0.55, ease: "power2.in" }, 31.65);
+
+      tl.fromTo(".wipe-1", { opacity: 0, scale: 0.86 }, { opacity: 0.8, scale: 1.08, duration: 0.18, ease: "power2.out" }, 2.82);
+      tl.to(".wipe-1", { opacity: 0, duration: 0.18, ease: "power2.in" }, 3.0);
+      tl.fromTo(".wipe-2", { opacity: 0, scale: 0.86 }, { opacity: 0.8, scale: 1.08, duration: 0.18, ease: "power2.out" }, 9.84);
+      tl.to(".wipe-2", { opacity: 0, duration: 0.18, ease: "power2.in" }, 10.02);
+      tl.fromTo(".wipe-3", { opacity: 0, scale: 0.86 }, { opacity: 0.8, scale: 1.08, duration: 0.18, ease: "power2.out" }, 14.67);
+      tl.to(".wipe-3", { opacity: 0, duration: 0.18, ease: "power2.in" }, 14.85);
+      tl.fromTo(".wipe-4", { opacity: 0, scale: 0.86 }, { opacity: 0.8, scale: 1.08, duration: 0.18, ease: "power2.out" }, 24.55);
+      tl.to(".wipe-4", { opacity: 0, duration: 0.18, ease: "power2.in" }, 24.73);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

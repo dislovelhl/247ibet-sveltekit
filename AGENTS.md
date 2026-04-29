@@ -9,6 +9,7 @@ tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
 The skill has specialized workflows that produce better results than ad-hoc answers.
 
 Key routing rules:
+
 - Product ideas, "is this worth building", brainstorming → invoke office-hours
 - Bugs, errors, "why is this broken", 500 errors → invoke investigate
 - Ship, deploy, push, create PR → invoke ship
@@ -30,9 +31,10 @@ pnpm build        # production build
 pnpm preview      # preview production build locally
 pnpm check        # type-check via svelte-check (run before committing)
 pnpm lint         # ESLint
+pnpm test         # run vitest test suite (77 tests)
 ```
 
-No test suite exists yet. The three gates before pushing are: `pnpm check && pnpm lint && pnpm build`.
+Test suite added in April 2026 — 77 tests across 8 files covering lib modules. The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.
 
 ## Architecture
 
@@ -40,11 +42,11 @@ No test suite exists yet. The three gates before pushing are: `pnpm check && pnp
 
 ### Key lib files
 
-| File | Purpose |
-|------|---------|
-| `src/lib/site.ts` | Single source of truth — `SITE`, `SEO`, `TRACKING`, `PARTNER` constants. All canonical URLs and brand strings come from here. |
-| `src/lib/ibet-brand.ts` | 247iBET product data — `IBET_PROFILE`, `IBET_URLS`, `IBET_CTA`, `IBET_DISCLAIMER`. Derives URLs from `$lib/site`. |
-| `src/lib/age-gate-client.ts` | Age verification backed by `localStorage` (v1). Session API stubs are no-ops — wired up in v2. |
+| File                         | Purpose                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `src/lib/site.ts`            | Single source of truth — `SITE`, `SEO`, `TRACKING`, `PARTNER` constants. All canonical URLs and brand strings come from here. |
+| `src/lib/ibet-brand.ts`      | 247iBET product data — `IBET_PROFILE`, `IBET_URLS`, `IBET_CTA`, `IBET_DISCLAIMER`. Derives URLs from `$lib/site`.             |
+| `src/lib/age-gate-client.ts` | Age verification backed by `localStorage` (v1). Session API stubs are no-ops — wired up in v2.                                |
 
 ### Layout shell (`src/routes/+layout.svelte`)
 
@@ -66,13 +68,13 @@ All pages are currently client-rendered (no `+page.server.ts` or `+layout.server
 
 `src/app.css` is the single entry point — it imports Tailwind v4 then six modular files:
 
-| File | Contains |
-|------|---------|
-| `styles/theme.css` | `@theme` block — all design tokens (colors, fonts, spacing, shadows) |
-| `styles/base.css` | Global resets and body defaults |
-| `styles/animations.css` | Keyframe animations |
-| `styles/glass.css` | `.glass-thin/regular/thick/shimmer` glassmorphism utilities |
-| `styles/components.css` | Reusable component classes (`.navy-card`, CTA buttons, etc.) |
+| File                       | Contains                                                                                                                    |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `styles/theme.css`         | `@theme` block — all design tokens (colors, fonts, spacing, shadows)                                                        |
+| `styles/base.css`          | Global resets and body defaults                                                                                             |
+| `styles/animations.css`    | Keyframe animations                                                                                                         |
+| `styles/glass.css`         | `.glass-thin/regular/thick/shimmer` glassmorphism utilities                                                                 |
+| `styles/components.css`    | Reusable component classes (`.navy-card`, CTA buttons, etc.)                                                                |
 | `styles/design-system.css` | Page-level typography utilities and iGaming-specific UI (`.page-hero-title`, `.odds`, `.live-dot`, `.jackpot-ticker`, etc.) |
 
 **Tailwind v4 note**: tokens are declared in `@theme {}` inside `styles/theme.css`, not in a `tailwind.config.js`. Use Tailwind class names that map to those tokens (e.g. `text-prestige-gold`, `bg-navy-card`).

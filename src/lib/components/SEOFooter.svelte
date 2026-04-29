@@ -51,18 +51,23 @@
 >
   <div class="container mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-7xl">
-
       <!-- Main 3-col grid -->
-      <div class="grid grid-cols-1 gap-12 border-b border-white/5 py-14 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-16">
-
+      <div
+        class="grid grid-cols-1 gap-12 border-b border-white/5 py-14 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-16"
+      >
         <!-- Brand column -->
         <section aria-labelledby="footer-brand-heading">
           <div class="mb-5 flex items-center gap-3">
-            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-navy-black">
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-navy-black"
+            >
               <span class="font-mono text-xs font-black">iB</span>
             </div>
             <div>
-              <h2 id="footer-brand-heading" class="text-sm font-black uppercase tracking-[0.12em] text-white">
+              <h2
+                id="footer-brand-heading"
+                class="text-sm font-black uppercase tracking-[0.12em] text-white"
+              >
                 {SITE.name}
               </h2>
               <p class="text-[11px] text-text-body">{SITE.tagline}</p>
@@ -70,7 +75,8 @@
           </div>
 
           <p class="max-w-sm text-sm leading-relaxed text-gray-400">
-            Canadian iGaming coverage — casino, sportsbook, live dealer, and payment guides for players in Ontario and Alberta. Must be 19+ to play.
+            Canadian iGaming coverage — casino, sportsbook, live dealer, and payment guides for
+            players in Ontario and Alberta. Must be 19+ to play.
           </p>
 
           <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-gray-600">
@@ -85,9 +91,18 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
               >
-                <svg aria-hidden="true" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  aria-hidden="true"
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   {@html s.icon}
                 </svg>
               </a>
@@ -96,7 +111,7 @@
               href="https://t.me/247iBET"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Join {SITE.name} on Telegram"
+              aria-label={`Join ${SITE.name} on Telegram`}
               class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
             >
               <Send class="h-3.5 w-3.5" aria-hidden="true" />
@@ -105,7 +120,7 @@
               href="https://www.tiktok.com/@247ibet"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow {SITE.name} on TikTok"
+              aria-label={`Follow ${SITE.name} on TikTok`}
               class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
             >
               <Music2 class="h-3.5 w-3.5" aria-hidden="true" />
@@ -115,7 +130,10 @@
 
         <!-- Play links -->
         <nav aria-labelledby="footer-play-heading">
-          <h2 id="footer-play-heading" class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300">
+          <h2
+            id="footer-play-heading"
+            class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
+          >
             Play
           </h2>
           <ul class="space-y-0.5">
@@ -123,7 +141,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="block py-1.5 text-sm text-gray-500 transition-colors hover:text-gray-200"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -134,7 +152,10 @@
 
         <!-- Info + Safety -->
         <section aria-labelledby="footer-info-heading">
-          <h2 id="footer-info-heading" class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300">
+          <h2
+            id="footer-info-heading"
+            class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
+          >
             Info
           </h2>
           <ul class="space-y-0.5">
@@ -142,7 +163,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="block py-1.5 text-sm text-gray-500 transition-colors hover:text-gray-200"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -153,14 +174,21 @@
           <div class="mt-8 border-t border-white/5 pt-6">
             <p class="text-xs leading-relaxed text-gray-600">
               Problem gambling helplines:
-              <a href="tel:18663322322" class="text-gray-400 hover:text-gray-200">1-866-332-2322</a>
+              <a
+                href="tel:18663322322"
+                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                >1-866-332-2322</a
+              >
               (Alberta) ·
-              <a href="tel:18665312600" class="text-gray-400 hover:text-gray-200">1-866-531-2600</a>
+              <a
+                href="tel:18665312600"
+                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                >1-866-531-2600</a
+              >
               (Ontario).
             </p>
           </div>
         </section>
-
       </div>
 
       <!-- Affiliate disclosure -->
@@ -169,15 +197,20 @@
       </div>
 
       <!-- Legal bar -->
-      <div class="flex flex-col gap-3 py-6 font-mono text-[11px] text-gray-600 md:flex-row md:items-center md:justify-between">
+      <div
+        class="flex flex-col gap-3 py-6 font-mono text-[11px] text-gray-600 md:flex-row md:items-center md:justify-between"
+      >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">
           {#each legalLinks as link}
-            <a href={link.href} class="transition-colors hover:text-gray-400">{link.label}</a>
+            <a
+              href={link.href}
+              class="rounded-sm transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+              >{link.label}</a
+            >
           {/each}
         </nav>
       </div>
-
     </div>
   </div>
 </footer>

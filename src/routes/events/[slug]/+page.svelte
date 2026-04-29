@@ -1,12 +1,16 @@
 <script lang="ts">
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { page } from '$app/stores';
+  import { canonicalUrl } from '$lib/site';
 </script>
 
 <svelte:head>
   <title>Sports Betting Event | 247iBET Canada</title>
-  <meta name="description" content="Sports betting event guide for Canadian players — odds, markets, and betting tips from 247iBET." />
-  <link rel="canonical" href="https://247ibet.ca/events/{$page.params.slug}" />
+  <meta
+    name="description"
+    content="Sports betting event guide for Canadian players — odds, markets, and betting tips from 247iBET."
+  />
+  <link rel="canonical" href={canonicalUrl(`/events/${$page.params.slug}`)} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
@@ -26,14 +30,25 @@
   </p>
 
   <div class="navy-card rounded-2xl p-8 text-center">
-    <p class="text-text-tertiary text-sm">Event content loaded from WordPress CMS. Wire up <code class="text-prestige-gold">+page.ts</code> to fetch event data.</p>
+    <p class="text-text-tertiary text-sm">
+      Event content loaded from WordPress CMS. Wire up <code class="text-prestige-gold"
+        >+page.ts</code
+      > to fetch event data.
+    </p>
   </div>
 
   <div class="mt-12">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel="Live betting · Fast payouts · 19+" />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Bet Now"
+      contextLabel="Live betting · Fast payouts · 19+"
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Responsible gambling resources</a>.
+    Play responsibly. 19+ only. <a
+      href="/responsible-gambling"
+      class="text-slate-blue hover:underline">Responsible gambling resources</a
+    >.
   </div>
 </div>

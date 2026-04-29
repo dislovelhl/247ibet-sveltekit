@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { page } from '$app/state';
   import { slide } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -77,7 +76,7 @@
   // Scroll + global keyboard listeners
   // ---------------------------------------------------------------------------
 
-  onMount(() => {
+  $effect(() => {
     const handleScroll = () => {
       scrolled = window.scrollY > 20;
     };
@@ -188,8 +187,7 @@
       class="hidden h-8 items-center justify-between border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
     >
       <div class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"
-        ></span>
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"></span>
         <span class="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-400"
           >19+ · Play Responsibly</span
         >
@@ -199,8 +197,8 @@
           href="https://x.com/247ibet"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on X"
-          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+          aria-label={`Follow ${SITE.name} on X`}
+          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <svg
             aria-hidden="true"
@@ -219,8 +217,8 @@
           href="https://www.instagram.com/247ibet/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on Instagram"
-          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+          aria-label={`Follow ${SITE.name} on Instagram`}
+          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <svg
             aria-hidden="true"
@@ -241,8 +239,8 @@
           href="https://t.me/247iBET"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Join {SITE.name} on Telegram"
-          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+          aria-label={`Join ${SITE.name} on Telegram`}
+          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Send class="h-3 w-3" aria-hidden="true" />
         </a>
@@ -250,8 +248,8 @@
           href="https://www.tiktok.com/@247ibet"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Follow {SITE.name} on TikTok"
-          class="flex h-6 w-6 items-center justify-center text-gray-500 transition-colors hover:text-white"
+          aria-label={`Follow ${SITE.name} on TikTok`}
+          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Music2 class="h-3 w-3" aria-hidden="true" />
         </a>
@@ -260,9 +258,7 @@
   </div>
 
   <!-- Tier 2: Main bar (always visible) -->
-  <div
-    class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
-  >
+  <div class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-5 lg:gap-8">
       <a
@@ -272,7 +268,7 @@
       >
         <img
           src={LOGO_SRC}
-          alt="{SITE.name} Logo"
+          alt={`${SITE.name} Logo`}
           width="140"
           height="40"
           fetchpriority="high"
@@ -288,7 +284,7 @@
           <li>
             <a
               href={item.href}
-              class="relative inline-flex min-h-[40px] items-center rounded-full px-4 text-text-body transition-colors hover:text-white {pathname ===
+              class="relative inline-flex min-h-[40px] items-center rounded-full px-4 text-text-body transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black {pathname ===
               item.href
                 ? 'bg-prestige-gold/12 text-prestige-gold shadow-[0_0_0_1px_rgba(212,148,58,0.18)_inset]'
                 : ''}"
@@ -315,7 +311,7 @@
         <a
           href="/search"
           aria-label="Search"
-          class="flex min-h-[44px] min-w-[132px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-text-body transition-all hover:border-prestige-gold/30 hover:bg-white/8 hover:text-white"
+          class="flex min-h-[44px] min-w-[132px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-text-body transition-all hover:border-prestige-gold/30 hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
           <span class="hidden md:inline">Search...</span>
@@ -327,7 +323,7 @@
         <a
           href="/search"
           aria-label="Search"
-          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
         </a>
@@ -353,7 +349,7 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Sign in to your 247iBET account"
-        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
       >
         <User class="w-4 h-4" aria-hidden="true" />
       </a>
@@ -362,9 +358,9 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold md:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black md:hidden"
         onclick={toggleMobileMenu}
-        aria-label="Toggle mobile menu"
+        aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
         aria-haspopup="menu"
         aria-expanded={isMobileMenuOpen}
         aria-controls={MOBILE_MENU_ID}
@@ -392,7 +388,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="flex h-full shrink-0 items-center border-r border-white/5 px-4 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold {pathname ===
+                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
                     : 'text-gray-500'}"
@@ -408,6 +404,17 @@
     </div>
   </div>
 
+  <!-- Mobile menu backdrop (tap to close) -->
+  {#if isMobileMenuOpen}
+    <button
+      type="button"
+      aria-label="Close mobile menu"
+      tabindex="-1"
+      class="fixed inset-0 top-16 z-40 cursor-default bg-navy-black/40 backdrop-blur-sm md:hidden"
+      onclick={closeMobileMenu}
+    ></button>
+  {/if}
+
   <!-- Mobile menu panel -->
   {#if isMobileMenuOpen}
     <div
@@ -417,14 +424,14 @@
       aria-modal="true"
       aria-label="Mobile navigation"
       tabindex="-1"
-      class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
+      class="relative z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
       transition:slide={{ duration: 300, easing: cubicOut }}
     >
       <div class="space-y-6 px-4 py-6">
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
           <a
             href="/"
-            class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold {pathname ===
+            class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
             '/'
               ? 'bg-prestige-gold/12 text-prestige-gold'
               : ''}"
@@ -437,7 +444,7 @@
           {#each mainLinks as item (item.href)}
             <a
               href={item.href}
-              class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold {pathname ===
+              class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
               item.href
                 ? 'bg-prestige-gold/12 text-prestige-gold'
                 : ''}"
@@ -458,7 +465,7 @@
               {@const ItemIcon = item.icon}
               <a
                 href={item.href}
-                class="flex min-h-[48px] items-center justify-between rounded-xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm font-semibold text-text-body transition-colors hover:border-prestige-gold/30 hover:text-white"
+                class="flex min-h-[48px] items-center justify-between rounded-xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm font-semibold text-text-body transition-colors hover:border-prestige-gold/30 hover:text-white focus-visible:border-prestige-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/40"
                 onclick={closeMobileMenu}
               >
                 <span class="inline-flex items-center gap-2">
@@ -487,7 +494,7 @@
             href={IBET_URLS.login}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex min-h-[48px] items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white transition-colors hover:border-prestige-gold/30 hover:bg-white/[0.07]"
+            class="flex min-h-[48px] items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white transition-colors hover:border-prestige-gold/30 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
             onclick={closeMobileMenu}
           >
             <div class="flex items-center gap-2">
