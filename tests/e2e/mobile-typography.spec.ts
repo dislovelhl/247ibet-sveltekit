@@ -54,7 +54,9 @@ test.describe('mobile typography visual QA', () => {
 
   for (const pageTarget of pages) {
     for (const viewport of mobileViewports) {
-      test(`${pageTarget.label} typography remains readable at ${viewport.label}`, async ({ page }) => {
+      test(`${pageTarget.label} typography remains readable at ${viewport.label}`, async ({
+        page,
+      }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         await page.goto(pageTarget.url, { waitUntil: 'networkidle' });
         await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -85,10 +87,13 @@ test.describe('mobile typography visual QA', () => {
               );
             };
 
-            const textFor = (element: Element) => (element.textContent ?? '').replace(/\s+/g, ' ').trim();
+            const textFor = (element: Element) =>
+              (element.textContent ?? '').replace(/\s+/g, ' ').trim();
 
             const typographyElements = Array.from(
-              document.querySelectorAll('main h1, main h2, main h3, main p, main li, main a, main button'),
+              document.querySelectorAll(
+                'main h1, main h2, main h3, main p, main li, main a, main button',
+              ),
             ).filter((element) => isVisible(element) && textFor(element).length > 0);
 
             const issues = typographyElements.flatMap((element) => {
@@ -96,7 +101,8 @@ test.describe('mobile typography visual QA', () => {
               const rect = element.getBoundingClientRect();
               const selector = element.tagName.toLowerCase();
               const fontSize = Number.parseFloat(style.fontSize);
-              const lineHeight = style.lineHeight === 'normal' ? null : Number.parseFloat(style.lineHeight);
+              const lineHeight =
+                style.lineHeight === 'normal' ? null : Number.parseFloat(style.lineHeight);
               const text = textFor(element).slice(0, 96);
               const found: TypographyIssue[] = [];
               const isBodyCopy = ['p', 'li'].includes(selector);
@@ -160,21 +166,36 @@ test.describe('mobile typography visual QA', () => {
               screenshot: screenshotFile,
             } satisfies TypographySnapshot;
           },
-          { pageLabel: pageTarget.label, viewportLabel: viewport.label, screenshotFile: screenshotName },
+          {
+            pageLabel: pageTarget.label,
+            viewportLabel: viewport.label,
+            screenshotFile: screenshotName,
+          },
         );
 
         snapshots.push(audit);
 
-        expect(audit.headingCount, 'page should expose headings for visual typography review').toBeGreaterThan(0);
-        expect(audit.horizontalOverflow, 'mobile page should not create horizontal scroll').toBeLessThanOrEqual(2);
+        expect(
+          audit.headingCount,
+          'page should expose headings for visual typography review',
+        ).toBeGreaterThan(0);
+        expect(
+          audit.horizontalOverflow,
+          'mobile page should not create horizontal scroll',
+        ).toBeLessThanOrEqual(2);
         expect(audit.issues, JSON.stringify(audit.issues, null, 2)).toEqual([]);
       });
     }
   }
 
   test.afterAll(async () => {
-    const sortedSnapshots = snapshots.sort((a, b) => `${a.page}-${a.viewport}`.localeCompare(`${b.page}-${b.viewport}`));
-    const issueCount = sortedSnapshots.reduce((count, snapshot) => count + snapshot.issues.length, 0);
+    const sortedSnapshots = snapshots.sort((a, b) =>
+      `${a.page}-${a.viewport}`.localeCompare(`${b.page}-${b.viewport}`),
+    );
+    const issueCount = sortedSnapshots.reduce(
+      (count, snapshot) => count + snapshot.issues.length,
+      0,
+    );
     const generatedAt = new Date().toISOString();
 
     await mkdir(reportRoot, { recursive: true });
