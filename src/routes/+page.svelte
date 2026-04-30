@@ -336,7 +336,9 @@
     <div
       class="relative mx-auto grid min-h-[520px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[580px] sm:px-6 sm:py-16 lg:min-h-[620px] lg:grid-cols-[0.92fr_1.08fr] lg:px-10 xl:px-16"
     >
-      <div class="max-w-4xl rounded-2xl border border-white/10 bg-navy-black/55 p-4 shadow-2xl backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0">
+      <div
+        class="max-w-4xl rounded-2xl border border-white/10 bg-navy-black/55 p-4 shadow-2xl backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0"
+      >
         <p
           class="mb-4 animate-fade-in-up text-[11px] font-black uppercase tracking-[0.18em] text-prestige-gold sm:mb-5 sm:text-xs sm:tracking-[0.24em]"
         >
@@ -349,7 +351,9 @@
             >Interac Payouts</span
           >
         </h1>
-        <p class="mt-4 max-w-2xl animate-fade-in-up-delay-2 text-base leading-7 text-text-body sm:mt-6 sm:text-lg sm:leading-relaxed">
+        <p
+          class="mt-4 max-w-2xl animate-fade-in-up-delay-2 text-base leading-7 text-text-body sm:mt-6 sm:text-lg sm:leading-relaxed"
+        >
           Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
           bonuses, support, and responsible-gaming tools before you visit a partner site.
         </p>
@@ -357,7 +361,9 @@
           <span class="inline-block h-1.5 w-1.5 rounded-full bg-prestige-gold-500"></span>
           Last updated: {LAST_UPDATED}
         </div>
-        <div class="mt-6 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+        <div
+          class="mt-6 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
+        >
           <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
             Visit Partner Site
             <ArrowRight class="h-5 w-5" aria-hidden="true" />
@@ -375,7 +381,9 @@
     </div>
   </section>
 
-  <div class="mx-auto max-w-[1720px] space-y-5 px-4 py-5 sm:space-y-7 sm:px-6 sm:py-7 lg:px-10 xl:px-16">
+  <div
+    class="mx-auto max-w-[1720px] space-y-5 px-4 py-5 sm:space-y-7 sm:px-6 sm:py-7 lg:px-10 xl:px-16"
+  >
     <section
       class="grid rounded-xl border border-white/5 bg-navy-card/95 shadow-2xl backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-4"
     >
@@ -384,7 +392,9 @@
         <div
           class="group flex items-start gap-3 border-b border-white/5 p-4 transition-colors hover:bg-white/[0.02] last:border-b-0 sm:items-center sm:gap-4 sm:p-5 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
         >
-          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-blue-900/40 text-slate-blue-400 ring-1 ring-slate-blue-500/20 transition-transform group-hover:scale-110 group-hover:bg-slate-blue-900/60 group-hover:text-slate-blue-300 sm:h-12 sm:w-12">
+          <div
+            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-blue-900/40 text-slate-blue-400 ring-1 ring-slate-blue-500/20 transition-transform group-hover:scale-110 group-hover:bg-slate-blue-900/60 group-hover:text-slate-blue-300 sm:h-12 sm:w-12"
+          >
             <Icon class="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
           </div>
           <div>
@@ -441,8 +451,12 @@
         <p class="mb-3 text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
           Trust & verification
         </p>
-        <h2 class="font-display text-3xl font-black sm:text-4xl">Is 247iBET safe for Canadian players?</h2>
-        <p class="mt-4 font-mono text-sm font-black uppercase tracking-[0.16em] text-slate-blue-400">
+        <h2 class="font-display text-3xl font-black sm:text-4xl">
+          Is 247iBET safe for Canadian players?
+        </h2>
+        <p
+          class="mt-4 font-mono text-sm font-black uppercase tracking-[0.16em] text-slate-blue-400"
+        >
           Editorial rating: <span class="text-white">4.6</span> / 5
         </p>
         <p class="mt-5 max-w-md text-sm leading-6 text-text-body">
@@ -478,12 +492,18 @@
         <div class="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
           {#each whyCards as card}
             {@const Icon = card.icon}
-            <article class="group rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-prestige-gold-500/30 hover:bg-white/[0.04] sm:p-5">
-              <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-prestige-gold-900/30 text-prestige-gold-400 ring-1 ring-prestige-gold-500/20 group-hover:scale-110 group-hover:bg-prestige-gold-900/50 group-hover:text-prestige-gold-300">
+            <article
+              class="group rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-prestige-gold-500/30 hover:bg-white/[0.04] sm:p-5"
+            >
+              <div
+                class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-prestige-gold-900/30 text-prestige-gold-400 ring-1 ring-prestige-gold-500/20 group-hover:scale-110 group-hover:bg-prestige-gold-900/50 group-hover:text-prestige-gold-300"
+              >
                 <Icon class="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 class="font-black text-white">{card.title}</h3>
-              <p class="mt-1 font-mono text-sm font-black text-prestige-gold-400">{card.score} / 5</p>
+              <p class="mt-1 font-mono text-sm font-black text-prestige-gold-400">
+                {card.score} / 5
+              </p>
               <p class="mt-2 text-xs leading-relaxed text-text-body">{card.body}</p>
             </article>
           {/each}
@@ -494,7 +514,9 @@
             <article class="rounded-xl border border-white/10 bg-black/20 p-4">
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.feature}</h3>
-                <span class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold">
+                <span
+                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold"
+                >
                   {row.value}
                 </span>
               </div>
@@ -503,7 +525,9 @@
           {/each}
         </div>
 
-        <div class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 md:block">
+        <div
+          class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 md:block"
+        >
           <table class="w-full min-w-[760px] text-left text-sm">
             <thead
               class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
@@ -559,7 +583,9 @@
     </section>
 
     <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
-      <div class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-[1.5fr_repeat(5,1fr)]">
+      <div
+        class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-[1.5fr_repeat(5,1fr)]"
+      >
         <div>
           <h2 class="text-3xl font-black md:text-4xl">Why 247iBET Stands Out</h2>
           <p class="mt-3 text-sm leading-6 text-text-body">
@@ -664,7 +690,9 @@
             <article class="rounded-xl border border-white/10 bg-black/20 p-4">
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.type}</h3>
-                <span class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold">
+                <span
+                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold"
+                >
                   {row.goodFor}
                 </span>
               </div>
@@ -672,7 +700,9 @@
             </article>
           {/each}
         </div>
-        <div class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 md:block">
+        <div
+          class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 md:block"
+        >
           <table class="w-full min-w-[720px] text-left text-sm">
             <thead
               class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
