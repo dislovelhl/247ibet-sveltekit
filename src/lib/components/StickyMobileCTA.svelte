@@ -12,7 +12,7 @@
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import { Trophy, Star, X, Download } from 'lucide-svelte';
-  import { IBET_URLS, IBET_CTA } from '$lib/ibet-brand';
+  import { IBET_URLS } from '$lib/ibet-brand';
 
   interface BeforeInstallPromptEvent extends Event {
     prompt(): Promise<void>;
@@ -116,7 +116,7 @@
     aria-label="Quick actions"
   >
     <div
-      class="rounded-2xl border border-navy-border bg-navy-raised/96 px-2 py-2 backdrop-blur-md shadow-[0_18px_54px_-20px_rgba(0,0,0,0.9)]"
+      class="rounded-2xl border border-navy-border bg-navy-raised/95 px-2 py-2 backdrop-blur-md shadow-[0_18px_54px_-20px_rgba(0,0,0,0.9)]"
     >
       <div class="flex items-center gap-1.5">
         {#if installPrompt}

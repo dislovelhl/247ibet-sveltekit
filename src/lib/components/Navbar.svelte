@@ -52,6 +52,7 @@
   ];
 
   const quickLinks = [
+    { href: '/search', label: 'Search guides', icon: Search },
     { href: '/fast-payouts', label: 'Fast payouts', icon: CreditCard },
     { href: '/legal-online-gambling-canada', label: 'Legal guide', icon: ShieldCheck },
     { href: '/responsible-gambling', label: 'Responsible gaming', icon: Headphones },
@@ -258,7 +259,9 @@
   </div>
 
   <!-- Tier 2: Main bar (always visible) -->
-  <div class="container mx-auto flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-6 lg:px-8">
+  <div
+    class="container mx-auto flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-6 lg:px-8"
+  >
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-3 lg:gap-8">
       <a
@@ -427,8 +430,12 @@
     >
       <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
-          <div class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2">
-            <span class="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-success">
+          <div
+            class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2"
+          >
+            <span
+              class="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-success"
+            >
               <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
               19+ guide
             </span>
@@ -466,9 +473,9 @@
 
         <div>
           <p class="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
-            Popular routes
+            Quick actions
           </p>
-          <div class="grid gap-2">
+          <div class="grid gap-2 sm:grid-cols-2">
             {#each quickLinks as item}
               {@const ItemIcon = item.icon}
               <a
