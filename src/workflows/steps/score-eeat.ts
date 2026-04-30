@@ -23,7 +23,12 @@ export async function scoreEEAT(path: string, html: string): Promise<EEATScore> 
   const hasRichType = /"@type"\s*:\s*["'](Article|FAQPage|Review|HowTo)["']/i.test(html);
   const structuredData = hasRichType ? 25 : hasJsonLd ? 12 : 0;
 
-  const total = author + date + citations + structuredData;
+  const directAnswer = /<h[12][^>]*>.*?<\/h[12]>\s*<p[^>]*>.{40,}<\/p>/is.test(html) ? 25 : 0;
+  const tableData = /<table[^>]*>/i.test(html) ? 25 : 0;
+  const summaryBox = /(class=["'][^"']*(summary|takeaway|standOut|whyCards|hero-cta)[^"']*["'])|(<aside[^>]*>)/i.test(html) ? 25 : 0;
+  const faq = /(id=["']home-faq|class=["'][^"']*faq[^"']*["']|<details[^>]*>|FAQPage)/i.test(html) ? 25 : 0;
 
-  return { path, author, date, citations, structuredData, total };
+  const total = author + date + citations + structuredData + directAnswer + tableData + summaryBox + faq;
+
+  return { path, author, date, citations, structuredData, directAnswer, tableData, summaryBox, faq, total };
 }

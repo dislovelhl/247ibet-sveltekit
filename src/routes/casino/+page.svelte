@@ -400,12 +400,10 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     </section>
 
     <section class="mt-10">
-      <div class="mb-6 flex items-center justify-center gap-6">
-        <div class="h-px w-32 bg-gradient-to-r from-transparent to-prestige-gold/60"></div>
-        <h2 class="text-center text-3xl font-black text-prestige-gold">
+      <div class="mb-6">
+        <h2 class="text-3xl font-black">
           Why Play Casino at 247iBET?
         </h2>
-        <div class="h-px w-32 bg-gradient-to-l from-transparent to-prestige-gold/60"></div>
       </div>
       <div class="grid gap-5 md:grid-cols-3">
         {#each whyCards as card}

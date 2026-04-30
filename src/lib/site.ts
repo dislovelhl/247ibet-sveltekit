@@ -21,7 +21,7 @@ function resolveSiteUrl(): string {
 export const SITE = {
   url: resolveSiteUrl(),
   name: '247iBET',
-  tagline: "Canada's trusted online casino and sports betting guide",
+  tagline: 'Independent Canadian casino and sportsbook guide',
   legalName: '247iBET Media Inc.',
   locale: 'en-CA',
   ogImage: '/og-image.png',
@@ -33,9 +33,9 @@ export const SITE = {
 } as const;
 
 export const SEO = {
-  defaultTitle: "247iBET — Fast Payouts & 5,000+ Casino Games",
+  defaultTitle: '247iBET Review Canada: Casino, Sportsbook, Interac Payouts & Bonuses',
   defaultDescription:
-    "Canada's trusted online casino with fast Interac payouts, 5,000+ games, live sports betting, and clear bonus terms.",
+    'Independent 247iBET review for Canadian players covering casino games, sportsbook markets, Interac payout timing, bonuses, safety tools, and affiliate disclosure.',
   defaultKeywords:
     'online casino canada, fast payouts casino, interac casino, ontario casino, sports betting canada',
   titleTemplate: '%s | 247iBET',

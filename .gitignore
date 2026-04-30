@@ -42,3 +42,8 @@ dist/
 
 # npm
 *.tgz
+
+# Pre-prod v0.3 exclusions
+apps/chatgpt-app/
+videos/
+**/capture/screenshots/

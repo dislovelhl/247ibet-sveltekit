@@ -39,6 +39,14 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     if (score.date === 0) recommendations.push(`Add <time datetime="..."> to ${page.path}`);
     if (score.structuredData === 0)
       recommendations.push(`Add JSON-LD structured data to ${page.path}`);
+    if (score.directAnswer === 0)
+      recommendations.push(`Add a direct answer (<p>) immediately following the main heading on ${page.path}`);
+    if (score.tableData === 0)
+      recommendations.push(`Add a data table to summarize structured information on ${page.path}`);
+    if (score.summaryBox === 0)
+      recommendations.push(`Add a Key Takeaways or Summary box to ${page.path}`);
+    if (score.faq === 0 && page.hasFaq)
+      recommendations.push(`Add an FAQ section with Q&A pairs to ${page.path}`);
   }
 
   const avgScore =
@@ -63,6 +71,10 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     failures,
     llmsTxtProposed: lines.join('\n'),
   };
+
+  const { writeFile } = await import('fs/promises');
+  const { resolve } = await import('path');
+  await writeFile(resolve('static/llms.txt'), result.llmsTxtProposed, 'utf-8');
 
   await writeReport('geo', `geo-${generatedAt.slice(0, 10)}.json`, result);
   return result;

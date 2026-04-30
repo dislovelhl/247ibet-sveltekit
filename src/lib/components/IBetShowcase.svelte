@@ -113,13 +113,13 @@
             {ctaText ?? IBET_CTA.primary}
             <ExternalLink class="w-3 h-3" aria-hidden="true" />
           </SafeExternalLink>
-          <p class="text-[11px] text-text-body font-sans">{IBET_DISCLAIMER.slice(0, 50)}…</p>
+          <p class="text-[11px] text-text-body font-sans leading-snug">{IBET_DISCLAIMER}</p>
         </div>
       </div>
       <div class="grid grid-cols-2 gap-2 text-[11px]">
         <div class="rounded-xl border border-white/8 bg-black/20 p-3">
           <div class="mb-1 font-mono uppercase tracking-wider text-text-body">Licence</div>
-          <div class="font-semibold text-white">Kahnawake Licensed</div>
+          <div class="font-semibold text-white">Verify before playing</div>
         </div>
         <div class="rounded-xl border border-white/8 bg-black/20 p-3">
           <div class="mb-1 font-mono uppercase tracking-wider text-text-body">Payments</div>
@@ -147,7 +147,7 @@
             <div class="flex flex-wrap items-center gap-3 mb-2">
               {#if isPrimaryHero}
                 <h1 class="page-hero-title text-3xl md:text-5xl uppercase">
-                  {IBET_PROFILE.name}<span class="sr-only"> Regulated Canadian Online Casino</span>
+                  {IBET_PROFILE.name}<span class="sr-only"> Canadian iGaming Guide</span>
                 </h1>
               {:else}
                 <h2 class="page-hub-title text-3xl md:text-5xl uppercase">{IBET_PROFILE.name}</h2>

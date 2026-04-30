@@ -11,58 +11,58 @@ export const IBET_URLS = {
 
 export const IBET_PROFILE = {
   name: '247iBET',
-  tagline: 'Canada’s trusted online casino. Fast Interac payouts and 5,000+ games.',
+  tagline: 'Independent Canadian iGaming review covering casino, sportsbook, and Interac payouts.',
   rating: null,
   logo: '/images/brand/logo.png',
   established: 2020,
   licences: [],
   agcoLicensed: false,
   minAge: 18,
-  withdrawalSpeed: 'Fast Interac e-Transfer',
+  withdrawalSpeed: 'Interac payouts typically 15-30 minutes after approval',
   paymentMethods: ['Interac'],
   provinces: ['ON', 'AB', 'BC', 'MB', 'SK', 'QC', 'NS', 'NB', 'PE', 'NL'],
   features: [
     {
       icon: 'Zap',
-      label: 'Instant Interac Payouts',
-      detail: 'Secure Interac e-Transfer for Canadian players.',
+      label: 'Interac timing review',
+      detail: 'Published timing should be checked against the operator cashier before depositing.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
     {
       icon: 'Gamepad2',
-      label: '5,000+ Casino Games',
-      detail: 'Premium slots, live dealer, blackjack, and roulette — certified RNG.',
+      label: 'Casino catalogue review',
+      detail: 'Verify the current game count, providers, and live dealer availability.',
       accent: 'text-yellow-400',
       bg: 'bg-yellow-500/8 border-yellow-500/20',
     },
     {
       icon: 'Trophy',
-      label: 'NHL · CFL · NBA · UFC',
-      detail: 'Deep Canadian sports coverage with in-play betting and parlays.',
+      label: 'Sportsbook market review',
+      detail: 'Compare odds, limits, market depth, parlays, and live betting rules.',
       accent: 'text-green-400',
       bg: 'bg-green-500/8 border-green-500/20',
     },
     {
       icon: 'MonitorPlay',
-      label: 'Live Dealer Tables',
-      detail: '24/7 live blackjack, roulette, baccarat streamed in HD.',
+      label: 'Live dealer checks',
+      detail: 'Confirm live table availability, limits, providers, and mobile performance.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
   ],
   trustSignals: [
-    'Trusted by Canadian players',
-    'Fully regulated in Ontario (iGO)',
-    'Secure, fast Interac e-Transfer',
-    'Clear, fair bonus terms',
-    '24/7 Canadian support',
+    'Independent Canadian iGaming guide',
+    'Licensing status should be confirmed with the operator and provincial regulator',
+    'Interac payout timing explained with approval caveats',
+    'Bonus terms reviewed for wagering, expiry, and limits',
+    'Responsible-gaming resources highlighted',
   ],
   trustPanel: [
     {
       label: 'Licence',
-      value: 'Compliance-First Approach',
-      detail: 'Committed to responsible gaming and transparent operations.',
+      value: 'Verify before playing',
+      detail: 'Confirm operator availability and licensing with your provincial regulator.',
     },
     {
       label: 'Payments',
@@ -81,25 +81,26 @@ export const IBET_PROFILE = {
     },
   ],
   pros: [
-    'Lightning-fast Interac withdrawals',
+    'Interac payout timing explained clearly',
     'Clear, transparent bonus terms',
-    'Fully regulated and secure in Canada',
-    '5,000+ casino and live dealer games',
-    'Premier sports betting for big events (NHL, NBA)',
+    'Responsible-gaming tools surfaced before signup',
+    'Game catalogue and live dealer checks',
+    'Sportsbook market checks for major events',
   ],
-  cons: ['Bonus details available on site only (AGCO compliance)'],
+  cons: ['Licensing and bonus details must be confirmed with the operator before depositing'],
 } as const;
 
 export const IBET_CTA = {
-  primary: 'Play Now',
-  casino: 'Enter Casino',
-  sports: 'Enter Lobby',
-  bonus: 'Enter Site',
-  deposit: 'Interac Gateway',
-  register: 'Play Now',
-  fastPayout: 'Confirm Payout Speed',
+  primary: 'Visit Partner Site',
+  casino: 'Explore Casino',
+  sports: 'Explore Sportsbook',
+  bonus: 'Check Bonus Terms',
+  deposit: 'Compare Payouts',
+  register: 'Visit Partner Site',
+  fastPayout: 'See Payout Details',
 } as const;
 
 export const IBET_DISCLAIMER =
   '18+/19+ depending on province. Play responsibly. T&Cs apply. ' +
-  'Please check localized regulations for features and availability.';
+  '247iBET is an independent guide and may earn commission from partner links. ' +
+  'Confirm eligibility and licensing before depositing.';

@@ -5,6 +5,23 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   kit: {
+    csp: {
+      mode: 'auto',
+      reportOnly: {
+        'default-src': ["'none'"],
+        'img-src': ["'self'", 'data:', 'https:'],
+        'script-src': ["'self'", "'strict-dynamic'"],
+        'style-src': ["'self'", "'unsafe-inline'"],
+        'font-src': ["'self'", 'data:', 'https:'],
+        'connect-src': ["'self'", 'https://vitals.vercel-insights.com', 'https://*.sentry.io'],
+        'frame-src': ["'none'"],
+        'object-src': ["'none'"],
+        'base-uri': ["'none'"],
+        'form-action': ["'self'"],
+        'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : [],
+        'report-to': ['csp-endpoint']
+      }
+    },
     adapter: adapter({
       runtime: 'nodejs24.x',
       images: {
@@ -15,15 +32,6 @@ const config = {
       },
     }),
     alias: {},
-    csp: {
-      mode: 'hash',
-      directives: {
-        'script-src': ['self'],
-        'style-src': ['self', 'unsafe-inline'],
-        'img-src': ['self', 'data:', 'https:'],
-        'connect-src': ['self', 'https://vitals.vercel-insights.com'],
-      },
-    },
   },
 };
 

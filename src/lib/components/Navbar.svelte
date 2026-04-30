@@ -11,11 +11,9 @@
     Search,
     Send,
     ShieldCheck,
-    User,
     X,
   } from 'lucide-svelte';
   import { SITE, PARTNER } from '$lib/site';
-  import { IBET_URLS } from '$lib/ibet-brand';
 
   // ---------------------------------------------------------------------------
   // Constants
@@ -34,8 +32,10 @@
   const mainLinks: NavItem[] = [
     { href: '/casino', label: 'Casino' },
     { href: '/sportsbook', label: 'Sportsbook' },
-    { href: '/deposit', label: 'Interac' },
-    { href: '/responsible-gambling', label: 'Help' },
+    { href: '/deposit', label: 'Interac Payouts' },
+    { href: '/casino-bonuses-canada', label: 'Bonuses' },
+    { href: '/responsible-gambling', label: 'Safety' },
+    { href: '/faq', label: 'FAQ' },
   ];
 
   const subLinks: NavItem[] = [
@@ -54,7 +54,7 @@
   const quickLinks = [
     { href: '/fast-payouts', label: 'Fast payouts', icon: CreditCard },
     { href: '/legal-online-gambling-canada', label: 'Legal guide', icon: ShieldCheck },
-    { href: '/contact', label: 'Support', icon: Headphones },
+    { href: '/responsible-gambling', label: 'Responsible gaming', icon: Headphones },
   ] as const;
 
   // ---------------------------------------------------------------------------
@@ -187,7 +187,7 @@
       class="hidden h-8 items-center justify-between border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
     >
       <div class="flex items-center gap-2">
-        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" aria-hidden="true"></span>
+        <span class="live-dot" aria-hidden="true"></span>
         <span class="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-400"
           >19+ · Play Responsibly</span
         >
@@ -329,29 +329,27 @@
         </a>
       </div>
 
-      <!-- Play Now CTA -->
+      <!-- Partner CTA -->
       <div class="hidden sm:block">
         <a
           href={PARTNER.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
           class="page-cta-primary-sm"
-          aria-label="Open game lobby"
+          aria-label="Visit partner site"
         >
-          Play Now
+          Visit Partner Site
           <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
         </a>
       </div>
 
-      <!-- User profile / login -->
+      <!-- Safety shortcut -->
       <a
-        href={IBET_URLS.login}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Sign in to your 247iBET account"
+        href="/responsible-gambling"
+        aria-label="Responsible gaming tools"
         class="flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
       >
-        <User class="w-4 h-4" aria-hidden="true" />
+        <ShieldCheck class="w-4 h-4" aria-hidden="true" />
       </a>
 
       <!-- Mobile menu toggle -->
@@ -482,24 +480,22 @@
           <a
             href={PARTNER.url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow sponsored noopener noreferrer"
             class="page-cta-primary w-full"
             onclick={closeMobileMenu}
           >
-            Play Now
+            Visit Partner Site
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </a>
 
           <a
-            href={IBET_URLS.login}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/responsible-gambling"
             class="flex min-h-[48px] items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white transition-colors hover:border-prestige-gold/30 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
             onclick={closeMobileMenu}
           >
             <div class="flex items-center gap-2">
-              <User class="w-5 h-5 text-gray-300" aria-hidden="true" />
-              <span class="text-sm font-medium text-gray-300">Sign in</span>
+              <ShieldCheck class="w-5 h-5 text-gray-300" aria-hidden="true" />
+              <span class="text-sm font-medium text-gray-300">Responsible gaming tools</span>
             </div>
           </a>
         </div>
