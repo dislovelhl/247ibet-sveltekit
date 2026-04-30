@@ -326,7 +326,7 @@
         <a
           href="/search"
           aria-label="Search"
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black sm:h-11 sm:w-11"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
         </a>
@@ -350,7 +350,7 @@
       <a
         href="/responsible-gambling"
         aria-label="Responsible gaming tools"
-        class="hidden h-10 w-10 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black min-[360px]:flex sm:h-11 sm:w-11"
+        class="hidden h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black min-[360px]:flex"
       >
         <ShieldCheck class="w-4 h-4" aria-hidden="true" />
       </a>
@@ -359,7 +359,7 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="flex h-10 w-10 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black sm:h-11 sm:w-11 md:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black md:hidden"
         onclick={toggleMobileMenu}
         aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
         aria-haspopup="menu"
