@@ -241,7 +241,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
 
       <div class="relative max-w-4xl">
         <div class="mb-5 flex flex-wrap items-center gap-3">
-          <p class="text-xs font-black uppercase tracking-[0.24em] text-prestige-gold">
+          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
             Canada&apos;s trusted online casino
           </p>
           <span class="live-tag"><span class="live-dot"></span> Live tables open</span>
@@ -253,7 +253,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           Exclusive access to thousands of slots, live dealer games, and classic table games. Secure
           your play with Interac e-Transfers and experience fast, reliable withdrawals.
         </p>
-        <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+        <p class="mt-2 text-xs leading-5 text-text-tertiary">Last updated: {LAST_UPDATED}</p>
         <AuthorByline authorId="editorial" date={LAST_UPDATED} />
         <div class="mt-8 flex flex-wrap gap-5">
           {#each trustItems as item}
@@ -330,7 +330,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           <h2 class="mt-8 text-xl font-black">{card.title}</h2>
           <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{card.body}</p>
           <span
-            class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold"
+            class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
           >
             {card.cta}
             <ArrowRight
@@ -353,7 +353,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
             <h3 class="text-sm font-black">{item.title}</h3>
-            <p class="mt-1 text-xs leading-5 text-text-body">{item.body}</p>
+            <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
           </div>
         </article>
       {/each}
@@ -388,7 +388,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
               <h3 class="text-lg font-black">{card.title}</h3>
               <p class="mt-2 min-h-[48px] text-sm leading-6 text-text-body">{card.body}</p>
               <span
-                class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold"
+                class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
               >
                 Explore {card.title.replace('Online', '').trim()}
                 <ArrowRight class="h-4 w-4" aria-hidden="true" />
@@ -459,7 +459,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
         <div
           class="border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
         >
-          <p class="text-xs uppercase tracking-[0.16em] text-text-tertiary">{item.label}</p>
+          <p class="text-xs uppercase tracking-[0.12em] text-text-tertiary">{item.label}</p>
           <p class="stat mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
         </div>
       {/each}
@@ -470,7 +470,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     >
       <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
         <div>
-          <p class="mb-3 text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
+          <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
             Canada&apos;s go-to online casino
           </p>
           <h2 class="text-4xl font-black md:text-5xl">

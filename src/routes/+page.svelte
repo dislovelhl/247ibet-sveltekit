@@ -340,7 +340,7 @@
         class="max-w-4xl rounded-2xl border border-white/10 bg-navy-black/55 p-4 shadow-2xl backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0"
       >
         <p
-          class="mb-4 animate-fade-in-up text-[11px] font-black uppercase tracking-[0.18em] text-prestige-gold sm:mb-5 sm:text-xs sm:tracking-[0.24em]"
+          class="mb-4 animate-fade-in-up text-xs font-black uppercase tracking-[0.12em] text-prestige-gold sm:mb-5"
         >
           Canadian iGaming Guide
         </p>
@@ -357,7 +357,7 @@
           Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
           bonuses, support, and responsible-gaming tools before you visit a partner site.
         </p>
-        <div class="mt-4 flex items-center gap-2 text-xs text-text-tertiary">
+        <div class="mt-4 flex items-center gap-2 text-xs leading-5 text-text-tertiary">
           <span class="inline-block h-1.5 w-1.5 rounded-full bg-prestige-gold-500"></span>
           Last updated: {LAST_UPDATED}
         </div>
@@ -371,7 +371,7 @@
           <a href="/deposit" class="hero-cta-secondary"> See Payout Details </a>
         </div>
         <p
-          class="mt-4 max-w-2xl rounded-lg border border-white/10 bg-navy-black/70 px-3 py-3 text-[11px] leading-5 text-text-body sm:px-4 sm:text-xs"
+          class="mt-4 max-w-2xl rounded-lg border border-white/10 bg-navy-black/70 px-3 py-3 text-sm leading-6 text-text-body sm:px-4"
         >
           247iBET is an independent Canadian iGaming guide. We review casino and sportsbook options
           and may earn a commission when you click partner links. Ratings are editorial and based on
@@ -399,7 +399,7 @@
           </div>
           <div>
             <p class="text-sm font-black tracking-wide text-white">{item.label}</p>
-            <p class="mt-1 text-xs leading-relaxed text-text-body">{item.body}</p>
+            <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
           </div>
         </div>
       {/each}
@@ -410,7 +410,7 @@
       aria-labelledby="home-promo-video-title"
     >
       <div class="flex flex-col justify-center">
-        <p class="text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
+        <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
           Watch the overview
         </p>
         <h2 id="home-promo-video-title" class="mt-3 text-3xl font-black md:text-4xl">
@@ -448,7 +448,7 @@
       class="grid overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 lg:grid-cols-[0.42fr_0.58fr]"
     >
       <aside class="border-b border-prestige-gold/20 p-5 sm:p-7 lg:border-b-0 lg:border-r">
-        <p class="mb-3 text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
+        <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
           Trust & verification
         </p>
         <h2 class="font-display text-3xl font-black sm:text-4xl">
@@ -504,7 +504,7 @@
               <p class="mt-1 font-mono text-sm font-black text-prestige-gold-400">
                 {card.score} / 5
               </p>
-              <p class="mt-2 text-xs leading-relaxed text-text-body">{card.body}</p>
+              <p class="mt-2 text-sm leading-6 text-text-body">{card.body}</p>
             </article>
           {/each}
         </div>
@@ -515,12 +515,12 @@
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.feature}</h3>
                 <span
-                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold"
+                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-xs font-black text-prestige-gold"
                 >
                   {row.value}
                 </span>
               </div>
-              <p class="mt-3 text-xs leading-5 text-text-body">{row.check}</p>
+              <p class="mt-3 text-sm leading-6 text-text-body">{row.check}</p>
             </article>
           {/each}
         </div>
@@ -530,7 +530,7 @@
         >
           <table class="w-full min-w-[760px] text-left text-sm">
             <thead
-              class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+              class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
             >
               <tr>
                 <th class="px-4 py-3">Feature</th>
@@ -572,7 +572,7 @@
               {index + 1}
             </div>
             <h3 class="font-black text-prestige-gold">{step.title}</h3>
-            <p class="mt-3 text-xs leading-5 text-text-body sm:min-h-[72px]">{step.body}</p>
+            <p class="mt-3 text-sm leading-6 text-text-body sm:min-h-[72px]">{step.body}</p>
             <span
               class="mt-4 inline-flex rounded-full bg-success/10 px-3 py-1 text-xs font-black text-success"
               >{step.status}</span
@@ -599,7 +599,7 @@
             <Icon class="h-7 w-7 shrink-0 text-prestige-gold" aria-hidden="true" />
             <div>
               <h3 class="font-black">{item.title}</h3>
-              <p class="mt-2 text-xs leading-5 text-text-body">{item.body}</p>
+              <p class="mt-2 text-sm leading-6 text-text-body">{item.body}</p>
             </div>
           </article>
         {/each}
@@ -612,7 +612,7 @@
           <h2 class="text-3xl font-black">Casino</h2>
           <a
             href="/casino"
-            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
+            class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
             >Explore Casino</a
           >
         </div>
@@ -629,7 +629,7 @@
               />
               <div class="p-4">
                 <h3 class="font-black">{card.title}</h3>
-                <p class="mt-1 text-xs text-text-body">{card.body}</p>
+                <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
                 <span class="mt-3 inline-flex text-xs font-black text-prestige-gold"
                   >Explore Casino</span
                 >
@@ -644,7 +644,7 @@
           <h2 class="text-3xl font-black">Sportsbook</h2>
           <a
             href="/sportsbook"
-            class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
+            class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
             >Explore Sportsbook</a
           >
         </div>
@@ -661,7 +661,7 @@
               />
               <div class="p-4">
                 <h3 class="font-black">{card.title}</h3>
-                <p class="mt-1 text-xs text-text-body">{card.body}</p>
+                <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
                 <span class="mt-3 inline-flex text-xs font-black text-prestige-gold"
                   >Explore Sportsbook</span
                 >
@@ -675,7 +675,7 @@
     <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
       <div class="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
         <div>
-          <p class="text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">Bonuses</p>
+          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">Bonuses</p>
           <h2 class="mt-3 text-3xl font-black">Check the terms before claiming</h2>
           <p class="mt-3 text-sm leading-6 text-text-body">
             Promotions can add value only when the rules are clear. Review wagering, expiry, max
@@ -691,12 +691,12 @@
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.type}</h3>
                 <span
-                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-[11px] font-black text-prestige-gold"
+                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-xs font-black text-prestige-gold"
                 >
                   {row.goodFor}
                 </span>
               </div>
-              <p class="mt-3 text-xs leading-5 text-text-body">{row.check}</p>
+              <p class="mt-3 text-sm leading-6 text-text-body">{row.check}</p>
             </article>
           {/each}
         </div>
@@ -705,7 +705,7 @@
         >
           <table class="w-full min-w-[720px] text-left text-sm">
             <thead
-              class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+              class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
             >
               <tr>
                 <th class="px-4 py-3">Bonus type</th>
@@ -732,7 +732,7 @@
         <h2 class="text-3xl font-black">Expert Guides</h2>
         <a
           href="/guides"
-          class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
+          class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
           >View All Guides</a
         >
       </div>
@@ -745,7 +745,7 @@
             <img src={card.image} alt="" class="h-24 w-full rounded-lg object-cover md:w-[116px]" />
             <div>
               <h3 class="font-black group-hover:text-prestige-gold">{card.title}</h3>
-              <p class="mt-1 text-xs leading-5 text-text-body">{card.body}</p>
+              <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
               <span class="mt-2 inline-flex text-xs font-black text-prestige-gold">Read Guide</span>
             </div>
           </a>
@@ -758,7 +758,7 @@
         <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
         <a
           href="/faq"
-          class="text-xs font-black uppercase tracking-[0.18em] text-prestige-gold transition-colors hover:text-white"
+          class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
           >View All FAQs</a
         >
       </div>
@@ -802,7 +802,7 @@
     <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/80 p-6">
       <div class="grid items-center gap-6 lg:grid-cols-[0.7fr_0.3fr]">
         <div>
-          <p class="text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
+          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
             Responsible gaming
           </p>
           <h2 class="mt-3 text-3xl font-black">Gambling should be entertainment</h2>

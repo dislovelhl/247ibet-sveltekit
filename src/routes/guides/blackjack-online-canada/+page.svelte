@@ -167,7 +167,7 @@ const LAST_UPDATED = '2026-04-29';
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
-      class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-widest"
+      class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-[0.12em]"
     >
       <BookOpen class="w-3.5 h-3.5" aria-hidden="true" />
       Casino Games Guide · Canada
@@ -179,7 +179,7 @@ const LAST_UPDATED = '2026-04-29';
       Rules, variants, basic strategy, and RTP rates for Canadian players. Includes live dealer
       options available at AGCO-licensed platforms.
     </p>
-    <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · Play responsibly</p>
+    <p class="text-xs leading-5 text-[#8492A6]">Updated March 2026 · 18+/19+ · Play responsibly</p>
   </header>
 
   <AffiliateDisclosure />
@@ -201,7 +201,7 @@ const LAST_UPDATED = '2026-04-29';
           </div>
           <div>
             <div class="font-semibold text-[#F1F5F9] text-sm mb-1">{v.name}</div>
-            <p class="text-xs text-[#94A3B8] leading-relaxed">{v.desc}</p>
+            <p class="text-sm leading-6 text-[#94A3B8]">{v.desc}</p>
           </div>
         </div>
       {/each}
@@ -221,15 +221,15 @@ const LAST_UPDATED = '2026-04-29';
         <thead>
           <tr class="border-b border-white/10">
             <th
-              class="text-left py-2 pr-4 font-semibold text-[#F1F5F9] text-xs uppercase tracking-wide"
+              class="text-left py-2 pr-4 font-semibold text-[#F1F5F9] text-xs uppercase tracking-[0.12em]"
               >Situation</th
             >
             <th
-              class="text-left py-2 pr-4 font-semibold text-[#D4943A] text-xs uppercase tracking-wide"
+              class="text-left py-2 pr-4 font-semibold text-[#D4943A] text-xs uppercase tracking-[0.12em]"
               >Action</th
             >
             <th
-              class="text-left py-2 font-semibold text-[#94A3B8] text-xs uppercase tracking-wide hidden sm:table-cell"
+              class="text-left py-2 font-semibold text-[#94A3B8] text-xs uppercase tracking-[0.12em] hidden sm:table-cell"
               >Why</th
             >
           </tr>
@@ -247,7 +247,7 @@ const LAST_UPDATED = '2026-04-29';
         </tbody>
       </table>
     </div>
-    <p class="text-[10px] text-[#8492A6] mt-3">
+    <p class="text-xs leading-5 text-[#8492A6] mt-3">
       Full basic strategy charts vary slightly by game rules (H17 vs S17, number of decks). For a
       full chart,
       <a href="/tools/odds-calculator" class="text-[#4A9EBF] underline decoration-dotted"
@@ -308,31 +308,31 @@ const LAST_UPDATED = '2026-04-29';
   />
 
   <nav aria-label="Related pages" class="border-t border-white/10 pt-6">
-    <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-widest font-medium">Related guides</p>
+    <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-[0.12em] font-medium">Related guides</p>
     <div class="flex flex-wrap gap-3">
       <a
         href="/best-online-casinos-canada"
-        class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        class="inline-flex min-h-[44px] items-center text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-2 rounded-md"
         >Best Online Casinos Canada 2026</a
       >
       <a
         href="/guides/live-dealer-casino-canada"
-        class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        class="inline-flex min-h-[44px] items-center text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-2 rounded-md"
         >Live Dealer Casino Canada Guide</a
       >
       <a
         href="/guides/how-to-choose-online-casino"
-        class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        class="inline-flex min-h-[44px] items-center text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-2 rounded-md"
         >How to Choose an Online Casino in Canada</a
       >
       <a
         href="/guides/legal-online-casino-canada"
-        class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        class="inline-flex min-h-[44px] items-center text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-2 rounded-md"
         >Online Casino Canada Legal Guide</a
       >
       <a
         href="/tools/odds-calculator"
-        class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+        class="inline-flex min-h-[44px] items-center text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-2 rounded-md"
         >Odds Calculator for Blackjack Strategy</a
       >
     </div>
@@ -340,7 +340,7 @@ const LAST_UPDATED = '2026-04-29';
 
   <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
+  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary">
     Play responsibly. 19+ only. <a
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a

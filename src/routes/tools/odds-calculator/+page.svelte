@@ -72,7 +72,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
+    <ol class="flex items-center gap-2 text-xs leading-5 text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
       <li>/</li>
       <li class="text-white font-medium">Odds Calculator</li>
@@ -102,7 +102,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </p>
     <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
       <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.25em] mb-1">
+        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.12em] mb-1">
           Break-even
         </div>
         <div class="text-white font-bold stat">-110 = 52.4%</div>
@@ -111,7 +111,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         </div>
       </div>
       <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.25em] mb-1">
+        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.12em] mb-1">
           Underdog
         </div>
         <div class="text-white font-bold stat">+200 = 33.3%</div>
@@ -179,7 +179,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       >
         <div>
           <div class="font-bold text-sm text-white">Parlay Calculator</div>
-          <div class="text-xs text-gray-500">Multi-leg bet payout estimator</div>
+          <div class="text-sm leading-6 text-gray-500">Multi-leg bet payout estimator</div>
         </div>
         <span class="text-slate-blue" aria-hidden="true">→</span>
       </a>
@@ -189,7 +189,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       >
         <div>
           <div class="font-bold text-sm text-white">Best Sportsbooks</div>
-          <div class="text-xs text-gray-500">Compare top Canadian sportsbooks</div>
+          <div class="text-sm leading-6 text-gray-500">Compare top Canadian sportsbooks</div>
         </div>
         <span class="text-slate-blue" aria-hidden="true">→</span>
       </a>
@@ -223,9 +223,9 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-white/10 bg-white/[0.03]">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Odds</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Example on $100</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">What it means</th>
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Odds</th>
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Example on $100</th>
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">What it means</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-white/5">

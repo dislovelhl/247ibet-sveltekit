@@ -342,7 +342,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </nav>
           <div class="border-t border-white/8 pt-3">
             <p
-              class="px-3 pb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary"
+              class="px-3 pb-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary"
             >
               Sports
             </p>
@@ -392,20 +392,20 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
               <div class="mt-6 flex flex-col gap-3 sm:flex-row">
                 <SafeExternalLink
                   href={IBET_URLS.register}
-                  class="hero-cta-primary w-full max-w-full px-4 text-[11px] tracking-[0.16em] sm:w-auto sm:px-10 sm:text-sm sm:tracking-[0.26em]"
+                  class="hero-cta-primary w-full max-w-full px-4 text-xs tracking-[0.12em] sm:w-auto sm:px-10"
                 >
                   Enter sportsbook
                   <ArrowRight class="h-4 w-4" aria-hidden="true" />
                 </SafeExternalLink>
                 <a
                   href="#odds"
-                  class="hero-cta-secondary w-full max-w-full px-4 text-[11px] tracking-[0.16em] sm:w-auto sm:px-10 sm:text-sm sm:tracking-[0.26em]"
+                  class="hero-cta-secondary w-full max-w-full px-4 text-xs tracking-[0.12em] sm:w-auto sm:px-10"
                 >
                   View odds
                   <BarChart3 class="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
-              <p class="mt-4 max-w-2xl text-xs leading-relaxed text-text-tertiary">
+              <p class="mt-4 max-w-2xl text-sm leading-6 text-text-tertiary">
                 {IBET_DISCLAIMER}
               </p>
             </div>
@@ -415,7 +415,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
                 <article
                   class="group rounded-lg border border-white/12 bg-white/[0.045] p-4 transition-colors hover:border-prestige-gold/35"
                 >
-                  <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+                  <p class="font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
                     {offer.eyebrow}
                   </p>
                   <h2 class="mt-2 text-xl font-black uppercase leading-tight text-white">
@@ -426,7 +426,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
                   </p>
                   <SafeExternalLink
                     href={IBET_URLS.register}
-                    class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold"
+                    class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
                   >
                     {offer.cta}
                     <ArrowRight
@@ -467,14 +467,14 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             </div>
             <a
               href="/best-sports-betting-sites-canada"
-              class="text-xs font-bold uppercase tracking-[0.22em] text-prestige-gold hover:text-prestige-gold-light"
+              class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
               >View full review</a
             >
           </div>
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead
-                class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
               >
                 <tr>
                   <th class="px-4 py-3">Bookmaker</th>
@@ -542,7 +542,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead
-                class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
               >
                 <tr>
                   <th class="px-4 py-3">Match</th>
@@ -576,14 +576,14 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             </div>
             <a
               href="/sportsbook/live-betting"
-              class="text-xs font-bold uppercase tracking-[0.22em] text-prestige-gold hover:text-prestige-gold-light"
+              class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
               >View live guide</a
             >
           </div>
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead
-                class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
               >
                 <tr>
                   <th class="px-4 py-3">Event</th>
@@ -617,7 +617,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
                 <article class="rounded-lg border border-white/10 bg-white/[0.03] p-4">
                   <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
                   <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
-                  <p class="mt-1 min-h-[38px] text-xs leading-relaxed text-text-tertiary">
+                  <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
                     {offer.detail}
                   </p>
                   <SafeExternalLink
@@ -637,7 +637,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
               <table class="min-w-[620px] w-full text-left text-sm">
                 <thead
-                  class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
                 >
                   <tr>
                     <th class="px-4 py-3">Boost</th>
@@ -677,11 +677,11 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
               >
                 <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
                 <h3 class="mt-3 text-base font-bold text-white">{guide.title}</h3>
-                <p class="mt-2 min-h-[58px] text-xs leading-relaxed text-text-tertiary">
+                <p class="mt-2 min-h-[58px] text-sm leading-6 text-text-tertiary">
                   {guide.body}
                 </p>
                 <span
-                  class="mt-3 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold"
+                  class="mt-3 inline-flex items-center gap-1 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
                 >
                   Read more
                   <ArrowRight
@@ -703,7 +703,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
               <table class="min-w-[700px] w-full text-left text-sm">
                 <thead
-                  class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
                 >
                   <tr>
                     <th class="px-4 py-3">Sport</th>
@@ -738,7 +738,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
                 <div class="rounded-lg border border-white/10 bg-white/[0.03] p-4 text-center">
                   <WalletCards class="mx-auto mb-2 h-5 w-5 text-text-body" aria-hidden="true" />
                   <p class="text-sm font-bold text-white">{method}</p>
-                  <p class="mt-1 text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                  <p class="mt-1 text-xs uppercase tracking-[0.12em] text-text-tertiary">
                     Payment option
                   </p>
                 </div>
@@ -768,9 +768,9 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
                     <h3 class="font-bold text-white group-hover:text-prestige-gold">
                       {news.title}
                     </h3>
-                    <p class="mt-1 text-xs leading-relaxed text-text-tertiary">{news.body}</p>
+                    <p class="mt-1 text-sm leading-6 text-text-tertiary">{news.body}</p>
                     <p
-                      class="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                      class="mt-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary"
                     >
                       {news.meta}
                     </p>
@@ -788,7 +788,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
               <table class="min-w-[680px] w-full text-left text-sm">
                 <thead
-                  class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
                 >
                   <tr>
                     <th class="px-4 py-3">League</th>
@@ -828,7 +828,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
               >
                 <ToolIcon class="h-6 w-6 text-slate-blue" aria-hidden="true" />
                 <h3 class="mt-3 text-sm font-bold text-white">{tool.label}</h3>
-                <p class="mt-2 text-xs leading-relaxed text-text-tertiary">{tool.body}</p>
+                <p class="mt-2 text-sm leading-6 text-text-tertiary">{tool.body}</p>
               </a>
             {/each}
           </div>
@@ -848,9 +848,9 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
               >
                 <SupportIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
                 <h3 class="mt-3 text-sm font-bold text-white">{card.title}</h3>
-                <p class="mt-2 text-xs leading-relaxed text-text-tertiary">{card.body}</p>
+                <p class="mt-2 text-sm leading-6 text-text-tertiary">{card.body}</p>
                 <span
-                  class="mt-3 inline-block text-[10px] font-black uppercase tracking-[0.2em] text-text-body"
+                  class="mt-3 inline-block text-xs font-black uppercase tracking-[0.12em] text-text-body"
                   >Read more</span
                 >
               </a>
