@@ -25,7 +25,7 @@
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
   <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
+    <ol class="flex items-center gap-2 text-xs leading-5 text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
       <li>/</li>
       <li class="text-white font-medium">Search</li>
@@ -33,7 +33,7 @@
   </nav>
 
   <header class="mb-8">
-    <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
+    <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.12em] mb-3">
       Full-Text Search
     </div>
     <h1 class="text-3xl md:text-4xl font-black text-white mb-3">Search 247iBET</h1>
@@ -43,7 +43,7 @@
   </header>
 
   <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
+    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs leading-5 text-text-tertiary"
   >
     Affiliate disclosure · Last updated: 2026-03-30 · Reviewed by: 247iBET Editorial Team
   </div>
@@ -86,7 +86,7 @@
                   {item.title}
                 </h3>
                 <span
-                  class="shrink-0 rounded border border-white/10 px-2 py-1 font-mono text-[10px] uppercase text-prestige-gold"
+                  class="shrink-0 rounded border border-white/10 px-2 py-1 font-mono text-xs uppercase tracking-[0.12em] text-prestige-gold"
                 >
                   {item.category}
                 </span>

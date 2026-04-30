@@ -211,7 +211,7 @@
 <div class="min-h-screen bg-navy-black pt-6 text-white">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-10">
-      <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
+      <ol class="flex items-center gap-3 text-xs leading-5 font-semibold text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
         <li aria-hidden="true">›</li>
         <li><a href="/responsible-gambling" class="hover:text-white">Responsible Gaming</a></li>
@@ -251,7 +251,7 @@
                 <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
                 <div>
                   <p class="text-sm font-black">{item.title}</p>
-                  <p class="mt-1 text-xs text-text-body">{item.body}</p>
+                  <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
                 </div>
               </div>
             {/each}
@@ -262,7 +262,7 @@
           class="mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-xl border border-white/15 bg-black/35 shadow-2xl backdrop-blur-sm"
         >
           <ShieldCheck class="h-28 w-28 text-prestige-gold" strokeWidth={1.3} aria-hidden="true" />
-          <p class="mt-6 text-xs font-black uppercase tracking-[0.22em] text-prestige-gold">
+          <p class="mt-6 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
             Committed to you
           </p>
           <p class="mt-4 max-w-xs text-center text-sm leading-6 text-text-body">
@@ -341,7 +341,7 @@
           </p>
         </div>
         <span
-          class="inline-flex w-fit rounded-full border border-prestige-gold/35 bg-prestige-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-prestige-gold"
+          class="inline-flex w-fit rounded-full border border-prestige-gold/35 bg-prestige-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
         >
           Confidential · takes 60 seconds
         </span>
@@ -448,7 +448,7 @@
       </p>
       <div class="mt-6 overflow-x-auto rounded-xl border border-white/10">
         <table class="w-full min-w-[760px] text-left text-sm">
-          <thead class="bg-white/[0.04] text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+          <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
             <tr>
               <th class="px-5 py-4">Tool</th>
               <th class="px-5 py-4">Best For</th>
