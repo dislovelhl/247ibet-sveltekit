@@ -22,9 +22,9 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 500;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-prestige-gold);
   }
@@ -32,7 +32,7 @@
   .page-hero-kicker,
   .page-hub-kicker,
   .page-detail-kicker {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-prestige-gold;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold;
   }
   .page-hero-title {
     @apply font-display font-light leading-[0.98] text-white;
@@ -101,11 +101,11 @@
     align-items: center;
     gap: 7px;
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color: #22c55e;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
   }
 
   .jackpot-ticker {
@@ -146,7 +146,7 @@
   }
 
   /* Repeating "View all" CTA pattern used across home, hubs, and category sections.
-     Replaces the ad-hoc text-xs font-black uppercase tracking-[0.18em] text-prestige-gold combo. */
+     Replaces the ad-hoc text-xs font-black uppercase tracking-[0.12em] text-prestige-gold combo. */
   .view-all-link {
     display: inline-flex;
     align-items: center;
@@ -155,7 +155,7 @@
     font-weight: 900;
     font-size: 0.75rem;
     line-height: 1;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-prestige-gold);
     transition: color 180ms ease;

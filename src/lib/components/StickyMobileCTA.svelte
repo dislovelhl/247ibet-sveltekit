@@ -163,7 +163,7 @@
     </div>
 
     <div class="px-2 pt-1 text-center">
-      <span class="text-[10px] leading-tight text-text-tertiary">
+      <span class="text-xs leading-tight text-text-tertiary">
         18+/19+ by province · Gamble responsibly · Terms apply
       </span>
     </div>

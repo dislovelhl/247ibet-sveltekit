@@ -189,7 +189,7 @@
     >
       <div class="flex items-center gap-2">
         <span class="live-dot" aria-hidden="true"></span>
-        <span class="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-400"
+        <span class="font-mono text-xs uppercase tracking-[0.12em] text-gray-400"
           >19+ · Play Responsibly</span
         >
       </div>
@@ -303,7 +303,7 @@
     <!-- Right-side actions -->
     <div class="flex shrink-0 items-center gap-1.5 sm:gap-3">
       <div
-        class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-success lg:flex"
+        class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-success lg:flex"
       >
         <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
         19+ Play responsibly
@@ -389,7 +389,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
+                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
                     : 'text-gray-500'}"
@@ -434,12 +434,12 @@
             class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2"
           >
             <span
-              class="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-success"
+              class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-success"
             >
               <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
               19+ guide
             </span>
-            <span class="text-[11px] font-semibold text-text-tertiary">Play responsibly</span>
+            <span class="text-xs font-semibold text-text-tertiary">Play responsibly</span>
           </div>
 
           <div class="grid grid-cols-2 gap-2">
@@ -472,7 +472,7 @@
         </div>
 
         <div>
-          <p class="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+          <p class="mb-3 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
             Quick actions
           </p>
           <div class="grid gap-2 sm:grid-cols-2">

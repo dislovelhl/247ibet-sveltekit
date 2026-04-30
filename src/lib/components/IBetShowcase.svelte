@@ -76,7 +76,7 @@
     <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary whitespace-nowrap shrink-0">
       {ctaText ?? IBET_CTA.primary} →
     </SafeExternalLink>
-    <p class="text-[11px] text-text-body sm:hidden font-sans w-full">{IBET_DISCLAIMER}</p>
+    <p class="text-xs text-text-body sm:hidden font-sans w-full">{IBET_DISCLAIMER}</p>
   </div>
 {:else if variant === 'compact'}
   <div class="navy-card rounded-xl p-5 md:p-6">
@@ -96,7 +96,7 @@
             <span class="page-hub-title text-lg">{IBET_PROFILE.name}</span>
             {#if IBET_PROFILE.agcoLicensed}
               <span
-                class="flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20"
+                class="flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 border border-green-500/20"
               >
                 <CheckCircle class="w-3 h-3" aria-hidden="true" /> Ontario Compliant
               </span>
@@ -113,10 +113,10 @@
             {ctaText ?? IBET_CTA.primary}
             <ExternalLink class="w-3 h-3" aria-hidden="true" />
           </SafeExternalLink>
-          <p class="text-[11px] text-text-body font-sans leading-snug">{IBET_DISCLAIMER}</p>
+          <p class="text-xs text-text-body font-sans leading-snug">{IBET_DISCLAIMER}</p>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-2 text-[11px]">
+      <div class="grid grid-cols-2 gap-2 text-xs">
         <div class="rounded-xl border border-white/8 bg-black/20 p-3">
           <div class="mb-1 font-mono uppercase tracking-wider text-text-body">Licence</div>
           <div class="font-semibold text-white">Verify before playing</div>
@@ -154,7 +154,7 @@
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
                 <span
-                  class="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest"
+                  class="flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-[0.12em]"
                 >
                   <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Registry Status: Verified
                 </span>
@@ -162,7 +162,7 @@
             </div>
             {#if IBET_PROFILE.rating !== null}
               <div class="flex items-center gap-2">
-                <span class="text-xs font-bold text-text-tertiary uppercase tracking-widest"
+                <span class="text-xs font-bold text-text-tertiary uppercase tracking-[0.12em]"
                   >Performance Rating:</span
                 >
                 {@render starRating(IBET_PROFILE.rating)}
@@ -181,7 +181,7 @@
               <span class="hidden sm:inline text-text-tertiary" aria-hidden="true">·</span>
               {#each IBET_PROFILE.paymentMethods.slice(0, 4) as pm}
                 <span
-                  class="text-[11px] px-2 py-0.5 rounded-full bg-white/5 border border-navy-border text-text-body whitespace-nowrap"
+                  class="text-xs px-2 py-0.5 rounded-full bg-white/5 border border-navy-border text-text-body whitespace-nowrap"
                   >{pm}</span
                 >
               {/each}
@@ -193,7 +193,7 @@
               {ctaText ?? IBET_CTA.primary}
               <ExternalLink class="w-4 h-4" aria-hidden="true" />
             </SafeExternalLink>
-            <p class="text-[11px] text-text-body font-sans leading-tight">{IBET_DISCLAIMER}</p>
+            <p class="text-xs text-text-body font-sans leading-tight">{IBET_DISCLAIMER}</p>
           </div>
         </div>
 
@@ -229,7 +229,7 @@
           {#each IBET_PROFILE.trustPanel as item}
             <div class="sm:px-6 sm:first:pl-0 sm:last:pr-0">
               <dt
-                class="mb-1.5 flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.18em] text-text-body"
+                class="mb-1.5 flex items-center gap-1.5 text-xs font-mono uppercase tracking-[0.12em] text-text-body"
               >
                 {#if item.label === 'Licence'}
                   <ShieldCheck class="w-3.5 h-3.5 text-green-400" aria-hidden="true" />
@@ -266,7 +266,7 @@
 
         <div class="flex flex-wrap gap-x-4 gap-y-1 mt-4 pt-4 border-t border-white/8">
           {#each IBET_PROFILE.trustSignals as signal}
-            <span class="flex items-center gap-1.5 text-[11px] text-text-body font-sans">
+            <span class="flex items-center gap-1.5 text-xs text-text-body font-sans">
               <CheckCircle class="w-3 h-3 text-green-500/60 shrink-0" aria-hidden="true" />
               {signal}
             </span>

@@ -97,7 +97,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <div class="page-hero-kicker">
             <span
-              class="text-[9px] font-mono font-black uppercase tracking-[0.16em] text-prestige-gold sm:text-[10px] sm:tracking-[0.2em]"
+              class="text-xs font-mono font-black uppercase tracking-[0.12em] text-prestige-gold sm:text-xs sm:tracking-[0.12em]"
               >247iBET CANADA</span
             >
           </div>
@@ -157,7 +157,7 @@
     >
       <span class="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" aria-hidden="true"></span>
       <span
-        class="text-[10px] font-mono font-bold text-success uppercase tracking-[0.18em] whitespace-nowrap"
+        class="text-xs font-mono font-bold text-success uppercase tracking-[0.12em] whitespace-nowrap"
         >Live Odds</span
       >
     </div>
@@ -166,9 +166,9 @@
     <div class="overflow-hidden pl-[96px]">
       <div class="odds-marquee flex gap-0 whitespace-nowrap py-2.5" aria-hidden="true">
         {#each oddsDoubled as game, i (i)}
-          <span class="inline-flex items-center gap-3 px-5 border-r border-white/5 text-[11px]">
+          <span class="inline-flex items-center gap-3 px-5 border-r border-white/5 text-xs">
             <span
-              class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-[10px]"
+              class="font-mono font-bold text-prestige-gold uppercase tracking-[0.12em] text-xs"
               >{game.sport}</span
             >
             <span class="text-text-body">{game.home}</span>
@@ -176,7 +176,7 @@
             <span class="text-text-body">vs</span>
             <span class="text-text-body">{game.away}</span>
             <span class="font-mono font-bold text-white">{game.awayOdds}</span>
-            <span class="font-mono text-text-body text-[10px]">{game.total}</span>
+            <span class="font-mono text-text-body text-xs">{game.total}</span>
           </span>
         {/each}
       </div>

@@ -44,7 +44,7 @@
   <div class="flex items-baseline gap-4 mb-8">
     <h2
       id="intent-hubs-heading"
-      class="page-hub-title text-xl md:text-2xl text-gradient-slate uppercase tracking-[0.18em]"
+      class="page-hub-title text-xl md:text-2xl text-gradient-slate uppercase tracking-[0.12em]"
     >
       Casino &amp; Sports Betting
     </h2>
@@ -72,7 +72,7 @@
             <div class="flex items-center gap-2">
               {#if hub.featured}
                 <span
-                  class="px-2.5 py-1 rounded bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-[9px] font-bold tracking-widest uppercase"
+                  class="px-2.5 py-1 rounded bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold tracking-[0.12em] uppercase"
                 >
                   Featured
                 </span>
@@ -121,7 +121,7 @@
   </div>
 
   <nav aria-label="Quick destinations" class="mt-10 border-t border-white/5 pt-6">
-    <p class="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+    <p class="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
       Quick destinations
     </p>
     <ul class="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-4">
@@ -133,7 +133,7 @@
           >
             <span class="flex items-baseline gap-2">
               <span class="font-medium">{hub.label}</span>
-              <span class="font-mono text-[10px] uppercase tracking-wider text-text-tertiary"
+              <span class="font-mono text-xs uppercase tracking-wider text-text-tertiary"
                 >{hub.stat}</span
               >
             </span>
