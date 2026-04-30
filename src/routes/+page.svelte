@@ -340,7 +340,7 @@
         class="max-w-4xl rounded-2xl border border-white/10 bg-navy-black/55 p-4 shadow-2xl backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0"
       >
         <p
-          class="mb-4 animate-fade-in-up text-xs font-black uppercase tracking-[0.12em] text-prestige-gold sm:mb-5"
+          class="mb-4 animate-fade-in-up text-[12px] font-black uppercase tracking-[0.12em] text-prestige-gold sm:mb-5"
         >
           Canadian iGaming Guide
         </p>
@@ -371,7 +371,7 @@
           <a href="/deposit" class="hero-cta-secondary"> See Payout Details </a>
         </div>
         <p
-          class="mt-4 max-w-2xl rounded-lg border border-white/10 bg-navy-black/70 px-3 py-3 text-sm leading-6 text-text-body sm:px-4"
+          class="mt-4 max-w-2xl rounded-lg border border-white/10 bg-navy-black/70 px-3 py-3 text-[12px] leading-6 text-text-body sm:px-4 sm:text-sm"
         >
           247iBET is an independent Canadian iGaming guide. We review casino and sportsbook options
           and may earn a commission when you click partner links. Ratings are editorial and based on
@@ -489,7 +489,7 @@
           operator terms. They are not guarantees of licensing status, payout speed, bonus
           eligibility, or account approval.
         </p>
-        <div class="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+        <div class="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
           {#each whyCards as card}
             {@const Icon = card.icon}
             <article
@@ -509,7 +509,7 @@
           {/each}
         </div>
 
-        <div class="mt-6 grid gap-3 md:hidden">
+        <div class="mt-6 grid gap-3 lg:hidden">
           {#each comparisonRows as row}
             <article class="rounded-xl border border-white/10 bg-black/20 p-4">
               <div class="flex items-start justify-between gap-3">
@@ -526,7 +526,7 @@
         </div>
 
         <div
-          class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 md:block"
+          class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 lg:block"
         >
           <table class="w-full min-w-[760px] text-left text-sm">
             <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
@@ -561,7 +561,7 @@
         </p>
         <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex">Compare Payouts</a>
       </div>
-      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {#each processSteps as step, index}
           <article class="rounded-xl border border-white/10 bg-black/20 p-5">
             <div
@@ -614,7 +614,7 @@
             >Explore Casino</a
           >
         </div>
-        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
           {#each casinoCards as card}
             <a
               href={card.href}
@@ -646,7 +646,7 @@
             >Explore Sportsbook</a
           >
         </div>
-        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
           {#each sportsCards as card}
             <a
               href={card.href}
@@ -683,7 +683,7 @@
             >Check Bonus Terms</a
           >
         </div>
-        <div class="grid gap-3 md:hidden">
+        <div class="grid gap-3 lg:hidden">
           {#each bonusRows as row}
             <article class="rounded-xl border border-white/10 bg-black/20 p-4">
               <div class="flex items-start justify-between gap-3">
@@ -699,7 +699,7 @@
           {/each}
         </div>
         <div
-          class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 md:block"
+          class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 lg:block"
         >
           <table class="w-full min-w-[720px] text-left text-sm">
             <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
@@ -732,13 +732,17 @@
           >View All Guides</a
         >
       </div>
-      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {#each guideCards as card}
           <a
             href={card.href}
-            class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 transition-colors hover:border-prestige-gold/50 md:grid-cols-[116px_1fr]"
+            class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 transition-colors hover:border-prestige-gold/50 lg:grid-cols-[116px_1fr]"
           >
-            <img src={card.image} alt="" class="h-24 w-full rounded-lg object-cover md:w-[116px]" />
+            <img
+              src={card.image}
+              alt=""
+              class="h-24 w-full rounded-lg object-cover lg:w-[116px]"
+            />
             <div>
               <h3 class="font-black group-hover:text-prestige-gold">{card.title}</h3>
               <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>

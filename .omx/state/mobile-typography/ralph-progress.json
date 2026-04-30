@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-30T04:56:59.273Z",
-  "state": "partial-pass-with-documented-gaps",
+  "updatedAt": "2026-04-30T05:22:51.469Z",
+  "state": "pass",
   "sourceArtifacts": [
     ".omx/reports/mobile-typography-audit.json",
     ".omx/reports/mobile-typography-audit.md",
@@ -8,11 +8,8 @@
     ".omx/reports/mobile-typography-playwright.json"
   ],
   "coverageArtifact": ".omx/reports/mobile-typography-coverage.md",
-  "capturedResultCount": 8,
+  "capturedResultCount": 44,
   "issueCount": 0,
-  "verificationSummary": ".omx/reports/mobile-typography-verification/summary.md",
-  "blockers": [
-    "Approved test spec asks for 360x740, 390x844, 768x1024, 1440x900; source audit captured iphone-se 375x667 and pixel-5 393x851 only.",
-    "Approved test spec asks for broader representative routes; source audit captured /, /casino, /sportsbook, /search only."
-  ]
+  "skippedCount": 0,
+  "blockers": []
 }
