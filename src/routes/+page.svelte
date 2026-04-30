@@ -345,7 +345,7 @@
           Canadian iGaming Guide
         </p>
         <h1
-          class="animate-fade-in-up-delay-1 font-display text-[clamp(2.5rem,10vw,4.5rem)] font-light leading-[0.95] tracking-tighter text-white lg:text-[clamp(4.2rem,6vw,5.5rem)]"
+          class="page-hero-title animate-fade-in-up-delay-1"
         >
           247iBET Review: Casino, Sportsbook & <span class="text-prestige-gold-400"
             >Interac Payouts</span

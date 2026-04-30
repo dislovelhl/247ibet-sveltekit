@@ -81,7 +81,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
       Payments Guide
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">PayPal Casino Canada</h1>
+    <h1 class="page-hero-title mb-4">PayPal Casino Canada</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Casinos accepting PayPal in Canada, how PayPal protocols track against Interac, and how to
       deposit and withdraw using your PayPal account.

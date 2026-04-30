@@ -183,7 +183,7 @@ const LAST_UPDATED = '2026-04-29';
       >
         Institutional Protocol: Security &amp; Compliance
       </div>
-      <h1 class="text-[clamp(2rem,4.2vw,3.1rem)] font-bold text-white mb-4">
+      <h1 class="page-hero-title mb-4">
         Casino KYC Verification Explained
       </h1>
       <p class="text-base md:text-lg max-w-3xl text-text-body">

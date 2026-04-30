@@ -137,7 +137,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">
+    <h1 class="page-hero-title mb-4">
       Play Casino in Canadian Dollars
     </h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">

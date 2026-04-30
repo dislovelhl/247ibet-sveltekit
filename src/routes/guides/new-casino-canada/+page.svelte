@@ -71,7 +71,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">New Casino Canada 2026</h1>
+    <h1 class="page-hero-title mb-4">New Casino Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       As the online gambling landscape evolves, new casinos in Canada are emerging, offering players
       exciting opportunities and experiences. In 2026, Canadian players have access to a growing

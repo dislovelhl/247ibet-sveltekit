@@ -232,9 +232,7 @@
 
       <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
         <div>
-          <h1
-            class="text-[clamp(2.85rem,12vw,7.5rem)] font-black uppercase leading-[0.95] tracking-normal"
-          >
+          <h1 class="page-hero-title">
             Safe Play <br />
             <span class="text-prestige-gold">Protocols</span>
           </h1>

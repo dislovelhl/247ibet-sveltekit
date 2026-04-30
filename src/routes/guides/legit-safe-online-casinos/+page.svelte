@@ -95,7 +95,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     >
       Risk Intelligence
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <h1 class="page-hero-title mb-4">
       Legit &amp; Safe Online Casinos Canada 2026
     </h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">

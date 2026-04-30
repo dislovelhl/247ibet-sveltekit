@@ -146,7 +146,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Online Slots in Canada</h1>
+    <h1 class="page-hero-title mb-4">Play Online Slots in Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Online slots give Canadian players the widest game variety, from simple three-reel formats to
       feature-heavy video slots and progressive jackpots. At 247iBET, the key is matching RTP,

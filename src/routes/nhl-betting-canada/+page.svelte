@@ -88,7 +88,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">NHL Betting</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">NHL Betting Canada 2026</h1>
+    <h1 class="page-hero-title mb-4">NHL Betting Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       The best Canadian sportsbooks for NHL betting — ranked by market depth, puck-line
       availability, in-play quality, and live streaming. Plus: how to read hockey odds and bet

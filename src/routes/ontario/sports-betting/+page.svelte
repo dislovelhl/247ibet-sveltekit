@@ -70,7 +70,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">Sports Betting</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Ontario Sports Betting</h1>
+    <h1 class="page-hero-title mb-4">Ontario Sports Betting</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Bet on sports in Ontario with live odds, deep NHL and NBA markets, and Interac-friendly
       payment paths. Use this page to check age rules, account access, and payout expectations.

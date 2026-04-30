@@ -49,7 +49,7 @@
       >
         iGaming Intelligence Hub
       </div>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+      <h1 class="page-hero-title mb-6">
         247iBET iGaming Intelligence
       </h1>
       <p class="text-gray-300 text-lg md:text-xl font-sans leading-relaxed max-w-3xl mx-auto">

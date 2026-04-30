@@ -57,7 +57,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </div>
         </div>
 
-        <h1 class="font-display text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.92] tracking-tighter text-white">
+        <h1 class="page-hero-title">
           About <br />
           <span class="text-prestige-gold">247iBET</span>
         </h1>

@@ -74,7 +74,7 @@
         >
         Market Intelligence Hub v4.2
       </div>
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter italic leading-tight">
+      <h1 class="page-hero-title italic">
         Latest <span class="text-slate-blue">Intelligence</span>
       </h1>
       <p class="text-gray-400 text-xl font-sans leading-relaxed">

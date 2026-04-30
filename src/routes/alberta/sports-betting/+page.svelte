@@ -97,7 +97,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">Sports Betting</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Sports Betting in Alberta</h1>
+    <h1 class="page-hero-title mb-4">Sports Betting in Alberta</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Prepare for Alberta sports betting launch before July 13, 2026. Use this page to follow AGLC
       launch context, expected NHL and CFL coverage, and Interac readiness before sportsbook access

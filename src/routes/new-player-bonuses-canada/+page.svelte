@@ -99,7 +99,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Bonuses · Canada · 2026
     </div>
-    <h1 class="font-display font-light text-4xl leading-tight text-[#F1F5F9]">
+    <h1 class="page-hero-title">
       New Player Welcome Offers Canada
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">

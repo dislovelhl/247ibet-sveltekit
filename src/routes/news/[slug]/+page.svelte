@@ -24,7 +24,7 @@
   </nav>
 
   <article class="navy-card rounded-2xl p-8">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">News Article</h1>
+    <h1 class="page-hero-title mb-4">News Article</h1>
     <div class="navy-card rounded-xl p-6 text-center mt-6">
       <p class="text-text-tertiary text-sm">
         Article content loaded from WordPress CMS. Wire up <code class="text-prestige-gold"

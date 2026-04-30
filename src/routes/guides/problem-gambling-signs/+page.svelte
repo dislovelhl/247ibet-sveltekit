@@ -166,7 +166,7 @@
     >
       Responsible Gambling · Help Resources
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Signs of Problem Gambling</h1>
+    <h1 class="page-hero-title mb-4">Signs of Problem Gambling</h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
       Gambling is entertainment. But for some people, it becomes a problem. Here are the warning
       signs, and the Canadian resources that can help — free and confidential.

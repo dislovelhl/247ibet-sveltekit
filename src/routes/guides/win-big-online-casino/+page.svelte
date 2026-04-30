@@ -71,7 +71,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           Elite Strategy
         </div>
-        <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+        <h1 class="page-hero-title mb-4">
           High Stakes: Win Big Online Casino Canada
         </h1>
         <p class="text-xl text-gray-400 leading-relaxed">

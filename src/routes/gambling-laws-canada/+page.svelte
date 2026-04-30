@@ -78,7 +78,7 @@ const LAST_UPDATED = '2026-04-29';
       >
       Legal &amp; Compliance
     </div>
-    <h1 class="font-display font-light text-4xl leading-tight text-[#F1F5F9]">
+    <h1 class="page-hero-title">
       Canada Gambling Laws 2026
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed">

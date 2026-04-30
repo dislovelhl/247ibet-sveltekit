@@ -248,7 +248,7 @@
         </div>
         <div class="mb-8 flex flex-col gap-6">
           <AuthorByline date={LAST_UPDATED} />
-          <h1 class="font-display text-[clamp(2.5rem,8vw,5.5rem)] font-black leading-[0.92] tracking-tighter text-white">
+          <h1 class="page-hero-title">
           The Future of <br />
           <span class="text-prestige-gold">Canadian Casino</span>
         </h1>

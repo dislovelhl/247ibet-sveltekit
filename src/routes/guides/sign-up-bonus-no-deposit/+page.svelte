@@ -67,7 +67,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
       Casino Bonuses Guide
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <h1 class="page-hero-title mb-4">
       Sign Up Bonus No Deposit Canada
     </h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">

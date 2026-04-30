@@ -67,7 +67,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
       Betting Education
     </div>
-    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Sports Betting Odds Explained</h1>
+    <h1 class="page-hero-title mb-4">Sports Betting Odds Explained</h1>
     <p class="text-gray-300 text-lg max-w-xl leading-relaxed">
       American, decimal, and fractional odds demystified — with payout examples for NHL, CFL, and
       NBA betting in Canada.

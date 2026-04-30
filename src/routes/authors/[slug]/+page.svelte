@@ -19,7 +19,7 @@
   </nav>
 
   <div class="navy-card rounded-2xl p-8">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Author Profile</h1>
+    <h1 class="page-hero-title mb-4">Author Profile</h1>
     <p class="text-[#94A3B8] text-base leading-relaxed">
       Expert iGaming analyst and writer covering Canadian online casino and sports betting markets.
     </p>

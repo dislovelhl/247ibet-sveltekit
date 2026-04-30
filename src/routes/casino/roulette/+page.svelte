@@ -146,7 +146,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Roulette Online in Canada</h1>
+    <h1 class="page-hero-title mb-4">Play Roulette Online in Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Roulette is easy to enter because the betting map is simple, the pace is readable, and the
       rule differences are clear once you know how many zero pockets are on the wheel. For Canadian

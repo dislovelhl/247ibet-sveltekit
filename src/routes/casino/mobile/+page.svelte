@@ -131,7 +131,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Mobile Casino in Canada</h1>
+    <h1 class="page-hero-title mb-4">Play Mobile Casino in Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Mobile casino in Canada is no longer just a scaled-down desktop lobby. The real benchmark is
       whether the site feels native on modern phones, keeps payments simple, and lets you move

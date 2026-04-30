@@ -130,7 +130,7 @@ const LAST_UPDATED = '2026-04-29';
       <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
         Legal Reference
       </div>
-      <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Legal Gambling Age in Canada</h1>
+      <h1 class="page-hero-title mb-4">Legal Gambling Age in Canada</h1>
       <p class="text-gray-300 font-sans text-lg max-w-xl leading-relaxed">
         The minimum gambling age in Canada is <strong class="text-white"
           >18 in Alberta, Manitoba, and Quebec</strong

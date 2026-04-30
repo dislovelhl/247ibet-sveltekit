@@ -142,7 +142,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
         <li class="text-white">Interac Casinos</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <h1 class="page-hero-title mb-4">
       Interac Casino Canada: e-Transfer Deposits, Withdrawals, Limits
     </h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">

@@ -141,7 +141,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="text-[1.875rem] font-bold text-text-primary mb-2">Play Live Casino in Canada</h1>
+    <h1 class="page-hero-title mb-4">Play Live Casino in Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Live casino blends the convenience of online play with real dealers, real tables, and HD
       studio streams. For Canadian players, the experience comes down to table variety, streaming

@@ -182,9 +182,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
 
     <header class="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
       <div>
-        <h1
-          class="max-w-4xl text-[clamp(2.75rem,6.5vw,5.75rem)] font-black leading-[1.02] tracking-normal text-white"
-        >
+        <h1 class="page-hero-title">
           Deposit &amp; Withdraw <br />
           with <span class="text-prestige-gold">Interac</span> in Canada
         </h1>

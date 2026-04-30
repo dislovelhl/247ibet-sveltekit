@@ -71,7 +71,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           Elite Strategy Series
         </div>
-        <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+        <h1 class="page-hero-title mb-4">
           Mastering the Meta: Strategies for Elite Level Play
         </h1>
         <p class="text-xl text-gray-300 leading-relaxed">

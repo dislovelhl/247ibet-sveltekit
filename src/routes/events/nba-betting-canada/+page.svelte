@@ -128,7 +128,7 @@
       </ol>
     </nav>
     <div class="text-xs font-mono text-text-tertiary mb-1">Last updated: 2026-03-01</div>
-    <h1 class="text-3xl md:text-4xl font-bold text-[#F1F5F9] mb-3">
+    <h1 class="page-hero-title mb-4">
       NBA Betting Canada {CURRENT_YEAR}
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">

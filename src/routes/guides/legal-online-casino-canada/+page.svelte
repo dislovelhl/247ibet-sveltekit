@@ -214,7 +214,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     >
       Institutional Audit: Canada 2026
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">
+    <h1 class="page-hero-title mb-4">
       Online Casino Canada: Registry &amp; Verification Guide
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-3xl mb-4">

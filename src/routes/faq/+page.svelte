@@ -1,395 +1,295 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
-  import type { FAQPageSchema } from '$lib/workflows/types.js';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  import {
+    Search,
+    ChevronDown,
+    UserPlus,
+    Wallet,
+    Banknote,
+    ShieldCheck,
+    Gift,
+    HelpCircle,
+    ArrowRight,
+    ExternalLink
+  } from 'lucide-svelte';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
-const LAST_UPDATED = '2026-04-29';
+  const LAST_UPDATED = '2026-04-30';
 
-  const faqSchema: FAQPageSchema = {
+  const faqData = [
+    {
+      id: 'getting-started',
+      title: 'Getting Started',
+      icon: UserPlus,
+      questions: [
+        {
+          q: 'How do I open a 247iBET account?',
+          a: 'Opening an account takes about two minutes. Choose **Sign Up**, enter your details (name, email, mobile), verify your identity via SMS link (AGCO requirement), and set your credentials.'
+        },
+        {
+          q: 'What games can Canadians play?',
+          a: 'Regulated operators offer **Sports Betting** (NHL, NFL, UFC), **Online Slots**, **Live Casino** (Blackjack, Roulette), and **Virtual Sports**. Availability varies by province; Ontario has the full catalogue.'
+        },
+        {
+          q: 'How to register as a new player in Canada?',
+          a: '1. Click **Sign Up**. 2. **Verification**: Follow the SMS link to upload ID and a selfie. 3. **Final Steps**: Confirm username/password and legal requirements.'
+        }
+      ]
+    },
+    {
+      id: 'deposits',
+      title: 'Deposits & Funding',
+      icon: Wallet,
+      questions: [
+        {
+          q: 'How do I make a deposit with Interac?',
+          a: 'Log in, go to the **Cashier**, select **Interac**, enter the amount and your registered email/mobile, then complete the bank transfer flow.'
+        },
+        {
+          q: 'Why was my deposit declined?',
+          a: 'Common reasons include mismatched emails, reaching daily bank limits, or bank-side blocks. Verify your Interac details and contact your bank if issues persist.'
+        },
+        {
+          q: 'What are the deposit timelines?',
+          a: 'Interac e-Transfers are typically processed in **under 10 minutes**. In rare cases, bank delays can extend this to 24 hours.'
+        }
+      ]
+    },
+    {
+      id: 'withdrawals',
+      title: 'Withdrawals & Payouts',
+      icon: Banknote,
+      questions: [
+        {
+          q: 'How do I withdraw with Interac?',
+          a: 'Log in, open the **Withdraw** tab in your cashier, verify your email if it&apos;s new, select **Interac**, and enter your withdrawal amount.'
+        },
+        {
+          q: 'Why is my withdrawal pending?',
+          a: 'All requests undergo a standard security and KYC review. While top-tier operators process within hours, payment method timing and verification status can affect speed.'
+        },
+        {
+          q: 'What are the payout timelines?',
+          a: 'Interac payouts typically land **within 15-30 minutes** after operator approval. Unverified accounts may take up to 24 hours for review.'
+        }
+      ]
+    },
+    {
+      id: 'verification',
+      title: 'Account & Verification',
+      icon: ShieldCheck,
+      questions: [
+        {
+          q: 'What is the KYC process?',
+          a: 'Per AGCO/AGLC rules, you must confirm your **Legal Name, DOB**, and **Residential Address** (via utility bill) and perform a facial verification match.'
+        },
+        {
+          q: 'What documents are required for ID?',
+          a: 'A valid passport, provincial ID card, or driver&apos;s license is required for identity verification.'
+        },
+        {
+          q: 'How do I verify my source of funds?',
+          a: 'Operators may request bank statements or payslips to ensure the integrity of funds used for gaming activities.'
+        }
+      ]
+    },
+    {
+      id: 'bonuses',
+      title: 'Bonuses & Promotions',
+      icon: Gift,
+      questions: [
+        {
+          q: 'Does 247iBET have a welcome bonus?',
+          a: 'Yes, new players are eligible for a welcome match on their first deposit. Check the **Promotions** page for current offers and wagering requirements.'
+        },
+        {
+          q: 'How do I get Free Spins?',
+          a: 'Free spins are awarded through welcome packages, weekly reload offers, loyalty rewards, or specific game launch promotions.'
+        },
+        {
+          q: 'What are wagering requirements?',
+          a: 'This is the number of times you must play through bonus funds before they convert to withdrawable cash. Always check the fine print on any offer.'
+        }
+      ]
+    }
+  ];
+
+  let searchQuery = $state('');
+  let openIndex = $state<string | null>(null);
+
+  const filteredFaqs = $derived(
+    faqData.map(cat => ({
+      ...cat,
+      questions: cat.questions.filter(q => 
+        q.q.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        q.a.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    })).filter(cat => cat.questions.length > 0)
+  );
+
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How do I open a 247iBET account?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Opening an account takes about two minutes. Choose Sign Up, enter your details, verify your identity, and set your login credentials before depositing.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What games can Canadians play at regulated online casinos?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Regulated Canadian operators may offer sports betting, slots, live casino games, virtual sports, and table games, with availability varying by province.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How do I make a deposit with Interac?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Log in, open the cashier, choose Interac, enter the deposit amount, and complete the bank transfer flow from the registered email or mobile number.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why is my withdrawal pending?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Withdrawals can remain pending during standard security, payment, or KYC checks. Receipt timing depends on the operator and payment method.',
-        },
-      },
-    ],
+    mainEntity: faqData.flatMap(cat => cat.questions.map(q => ({
+      '@type': 'Question',
+      name: q.q,
+      acceptedAnswer: { '@type': 'Answer', text: q.a.replace(/\*\*/g, '') }
+    })))
   };
+
+  function toggleFaq(id: string) {
+    openIndex = openIndex === id ? null : id;
+  }
 </script>
 
-<JsonLd schema={faqSchema} />
-
 <svelte:head>
-  <title>247iBET FAQ: Your Guide to Deposits, Withdrawals &amp; Support</title>
-  <meta
-    name="description"
-    content="FAQ covering account opening, available games, deposits, withdrawals, KYC verification, payment methods, and support for Canadian players. Play responsibly. 19+ only."
-  />
-  <meta
-    property="og:title"
-    content="247iBET FAQ: Your Guide to Deposits, Withdrawals &amp; Support"
-  />
-  <meta
-    property="og:description"
-    content="Answers to common questions about Interac deposits, withdrawals, account verification, and technical issues. Play responsibly. 19+ only."
-  />
-  <meta
-    name="twitter:title"
-    content="247iBET FAQ: Your Guide to Deposits, Withdrawals &amp; Support"
-  />
-  <meta
-    name="twitter:description"
-    content="Quick answers for Canadian players about Interac deposits, withdrawals, and KYC verification. Play responsibly. 19+ only."
-  />
+  <title>247iBET FAQ | Help Center & Canadian iGaming Guide</title>
+  <meta name="description" content="Answers to common questions about Interac deposits, withdrawals, account verification, and technical issues for Canadian players." />
   <link rel="canonical" href={canonicalUrl('/faq')} />
-  <JsonLd
-    schema={{
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
-        { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://247ibet.ca/faq' },
-      ],
-    }}
-  />
+  <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
-  <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-      <li><a href="/" class="hover:text-white">Home</a></li>
-      <li>/</li>
-      <li class="text-white font-medium">FAQ</li>
-    </ol>
-  </nav>
+<div class="min-h-screen bg-navy-black pt-6 pb-20">
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+    <nav aria-label="Breadcrumb" class="mb-10">
+      <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">FAQ</li>
+      </ol>
+    </nav>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-8">
-    <h2 class="text-2xl font-bold mb-4">FAQ Topics at a Glance</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b border-white/10 bg-white/3">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Topic</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">What it covers</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Use it for</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-white/5">
-          <tr>
-            <td class="p-4 text-white font-bold">Getting Started</td>
-            <td class="p-4 text-gray-300">Account opening, registration, available games</td>
-            <td class="p-4 text-gray-300">New players learning how to join and what to play.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">Deposits</td>
-            <td class="p-4 text-gray-300">Interac e-Transfer and cashier flows</td>
-            <td class="p-4 text-gray-300">Funding your account quickly and safely.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">Withdrawals</td>
-            <td class="p-4 text-gray-300">Pending times and Interac withdrawal timing</td>
-            <td class="p-4 text-gray-300">Understanding when cashouts should land.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">Verification</td>
-            <td class="p-4 text-gray-300">KYC, identity, and proof-of-funds checks</td>
-            <td class="p-4 text-gray-300">Getting ahead of approval delays.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">Bonuses &amp; Promotions</td>
-            <td class="p-4 text-gray-300">Welcome bonus, free spins, wagering terms</td>
-            <td class="p-4 text-gray-300">Claiming offers and understanding the fine print.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <header class="relative mb-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.1),transparent_50%)]"></div>
+      <div class="relative z-10 p-8 md:p-14 text-center md:text-left">
+        <h1 class="page-hero-title mb-6">
+          Frequently Asked <span class="text-prestige-gold">Questions</span>
+        </h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          Everything you need to know about Canadian iGaming — from Interac deposits to account verification and bonus rules.
+        </p>
 
-  <article class="navy-card rounded-3xl p-8 md:p-12">
-    <header class="mb-12 border-b border-white/10 pb-8">
-      <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-4">
-        Frequently Asked <span class="text-prestige-gold">Questions</span>
-      </h1>
-      <p class="text-gray-400 font-sans">
-        Your comprehensive guide to <a href="/deposit" class="text-slate-blue hover:underline"
-          >deposits</a
-        >, withdrawals, verification, and gameplay mechanics. If you still have questions, please
-        reach out to us via our
-        <a href="/contact" class="text-slate-blue hover:underline">Contact page</a>.
-      </p>
+        <div class="mt-10 relative max-w-xl">
+          <Search class="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-text-tertiary" />
+          <input
+            type="text"
+            bind:value={searchQuery}
+            placeholder="Search questions or keywords..."
+            class="w-full bg-navy-raised/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-prestige-gold/50 focus:ring-1 focus:ring-prestige-gold/50 transition-all placeholder:text-text-tertiary"
+          />
+        </div>
+      </div>
     </header>
 
-    <div
-      class="prose prose-invert max-w-none prose-headings:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-4 prose-h3:text-xl prose-h3:text-slate-blue prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-white marker:text-slate-blue"
-    >
-      <h2>Getting Started at 247iBET</h2>
+    {#if filteredFaqs.length > 0}
+      <div class="grid gap-12 lg:grid-cols-[300px_1fr]">
+        <!-- Category Sidebar -->
+        <aside class="hidden lg:block space-y-2 sticky top-24 h-fit">
+          <h2 class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary mb-6 px-4">Categories</h2>
+          {#each faqData as cat}
+            {@const Icon = cat.icon}
+            <a
+              href="#{cat.id}"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all hover:bg-white/5 text-text-body hover:text-white group"
+            >
+              <Icon class="h-4 w-4 text-text-tertiary group-hover:text-prestige-gold transition-colors" />
+              <span class="text-sm font-bold">{cat.title}</span>
+            </a>
+          {/each}
+        </aside>
 
-      <h3>How do I open a 247iBET account?</h3>
-      <p>
-        Opening an account takes about two minutes. Click the <strong>Sign Up</strong> button on any page
-        and complete three quick steps:
-      </p>
-      <ol>
-        <li>
-          <strong>Enter your details</strong> — first name, last name, email address, and mobile number.
-        </li>
-        <li>
-          <strong>Verify your identity</strong> — an SMS link guides you through a photo ID upload and
-          a selfie. This satisfies Ontario's AGCO-mandated KYC requirement.
-        </li>
-        <li>
-          <strong>Set your credentials</strong> — create a username and password, confirm you are 19 or
-          older, and accept the terms.
-        </li>
-      </ol>
-      <p>
-        Once your registration at a chosen casino is complete, your account will be active and you
-        can make your first deposit.
-      </p>
+        <div class="space-y-16">
+          {#each filteredFaqs as cat}
+            {@const CatIcon = cat.icon}
+            <section id={cat.id} class="scroll-mt-24">
+              <div class="flex items-center gap-4 mb-8">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20">
+                  <CatIcon class="h-6 w-6" />
+                </div>
+                <h2 class="font-display text-3xl font-black uppercase tracking-tight text-white">{cat.title}</h2>
+              </div>
 
-      <h3>What games can Canadians play at regulated online casinos?</h3>
-      <p>Regulated Canadian operators offer a full range of iGaming options:</p>
-      <ul>
-        <li>
-          <strong>Sports betting</strong> — single-game and parlay wagers on NHL, NFL, NBA, UFC, Premier
-          League, and more.
-        </li>
-        <li>
-          <strong>Online slots</strong> — hundreds of titles from top providers with varying RTP and volatility
-          profiles.
-        </li>
-        <li>
-          <strong>Live casino</strong> — real-time blackjack, roulette, baccarat, and game-show tables
-          streamed in HD.
-        </li>
-        <li><strong>Virtual sports</strong> — simulated events available around the clock.</li>
-      </ul>
-      <p>
-        Game availability may vary by province. Ontario players have access to the full catalogue.
-      </p>
+              <div class="grid gap-4">
+                {#each cat.questions as q, i}
+                  {@const qId = `${cat.id}-${i}`}
+                  <div class="glass-thin rounded-2xl overflow-hidden border border-white/5 transition-all hover:border-white/10">
+                    <button
+                      class="w-full flex items-center justify-between p-6 text-left hover:bg-white/[0.02] transition-colors"
+                      onclick={() => toggleFaq(qId)}
+                      aria-expanded={openIndex === qId}
+                    >
+                      <span class="text-lg font-bold text-white pr-8">{q.q}</span>
+                      <ChevronDown class="h-5 w-5 text-text-tertiary transition-transform duration-300 {openIndex === qId ? 'rotate-180 text-prestige-gold' : ''}" />
+                    </button>
+                    
+                    {#if openIndex === qId}
+                      <div class="px-6 pb-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                        <div class="prose prose-invert prose-p:text-text-body prose-strong:text-white prose-p:leading-relaxed text-sm">
+                          {@html q.a.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')}
+                        </div>
+                      </div>
+                    {/if}
+                  </div>
+                {/each}
+              </div>
+            </section>
+          {/each}
+        </div>
+      </div>
+    {:else}
+      <div class="text-center py-20 navy-card rounded-3xl border border-dashed border-white/10">
+        <HelpCircle class="h-16 w-16 text-text-tertiary mx-auto mb-4 opacity-50" />
+        <h2 class="text-2xl font-bold text-white mb-2">No results found</h2>
+        <p class="text-text-body">Try searching for something else or browse categories.</p>
+        <button 
+          onclick={() => searchQuery = ''}
+          class="mt-6 text-prestige-gold font-bold hover:underline"
+        >
+          Clear search
+        </button>
+      </div>
+    {/if}
 
-      <h2>Deposits &amp; Funding</h2>
+    <footer class="mt-24 grid gap-8 md:grid-cols-2">
+      <div class="navy-card p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">Still have questions?</h2>
+          <p class="text-text-body mb-8">Our support team is available 24/7 to help with account, deposit, or technical issues.</p>
+        </div>
+        <a href="/contact" class="inline-flex items-center gap-2 text-prestige-gold font-bold hover:gap-3 transition-all">
+          Contact Support <ArrowRight class="h-5 w-5" />
+        </a>
+      </div>
 
-      <h3>How do I make a deposit with Interac?</h3>
-      <ol>
-        <li>Log in to your chosen operator's account.</li>
-        <li>Click on "My Account" at the top and select the "Deposit" tab.</li>
-        <li>Choose the "Interac" option from the list of deposit methods.</li>
-        <li>Enter the amount you want to deposit.</li>
-        <li>Enter the email or mobile number you have registered with Interac.</li>
-        <li>Click "Next". You will be redirected to a page with transaction details.</li>
-        <li>Check your email to receive the message and complete the deposit procedure.</li>
-        <li>After the deposit is successful, your game wallet balance will be updated.</li>
-      </ol>
+      <div class="navy-card p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">Responsible Gambling</h2>
+          <p class="text-text-body mb-8">Learn how to set deposit limits, take breaks, and access support resources in your province.</p>
+        </div>
+        <a href="/responsible-gambling" class="inline-flex items-center gap-2 text-slate-blue font-bold hover:gap-3 transition-all">
+          View Player Protection <ExternalLink class="h-4 w-4" />
+        </a>
+      </div>
+    </footer>
 
-      <h3>Why Was My Deposit Declined?</h3>
-      <p>
-        If your Interac deposit is declined, confirm that your registered email matches your Interac
-        account and that daily transfer limits have not been reached. Contact your bank if the issue
-        persists.
-      </p>
-
-      <h3>Deposit Processing Timelines at 247iBET Canada</h3>
-      <p>
-        e-Transfer: Up to 10 minutes. Please note that this is an estimate. In most cases, your
-        deposit may be processed in a significantly shorter period of time. In certain unusual
-        cases, your deposit could take up to 24 hours to process.
-      </p>
-
-      <h2>Withdrawals &amp; Payouts</h2>
-
-      <h3>How do I withdraw with Interac?</h3>
-      <ol>
-        <li>Log in to your chosen operator's account.</li>
-        <li>Click on the "My Account" button at the top and select the "Withdraw" tab.</li>
-        <li>
-          When adding a new linked email, you will need to verify the email. All fields must be
-          completed.
-        </li>
-        <li>Choose the "Interac" option from the list of withdrawal methods.</li>
-        <li>Enter the amount you wish to withdraw and submit.</li>
-      </ol>
-
-      <h3>Why is my withdrawal pending?</h3>
-      <p>
-        At most regulated Canadian operators, withdrawals undergo a standard security review.
-        Top-tier sportsbooks and casinos process withdrawal requests within hours. However, exact
-        receipt of funds depends on your chosen payment method.
-      </p>
-
-      <h3>Withdrawal Payment Processing Timelines</h3>
-      <p>e-Transfer: Typically under 1 hour (up to 24 hours for unverified accounts).</p>
-      <p>
-        All time frames are generally calculated in business days (Monday through Friday). Operators
-        endeavor to process all withdrawals quickly, however there may be delays due to initial KYC
-        verification procedures or bank processing times.
-      </p>
-
-      <h3>Understanding Bonus Withdrawal Limits</h3>
-      <p>
-        If you place a wager using bonus funds and win, the maximum payout you can receive is
-        dictated by the specific terms and conditions of that operator's offer. Always read the
-        terms carefully.
-      </p>
-
-      <h2>Account &amp; Verification</h2>
-
-      <h3>Standard KYC Account Verification Process</h3>
-      <p>
-        Under AGCO and Canadian regulatory requirements, identity verification (KYC) is a
-        prerequisite before initiating your first deposit or withdrawal. The verification process
-        typically entails two straightforward steps:
-      </p>
-      <p><strong>Step 1</strong> – Confirming your full legal name and date of birth.</p>
-      <p>
-        <strong>Step 2</strong> – Validating your residential address and conducting a facial verification
-        match.
-      </p>
-
-      <h3>What Documents Are Needed to Verify Your Identity?</h3>
-      <p>
-        To assist operators in verifying your identity, you will be requested to provide a
-        photographic ID, such as a passport, provincial ID card, or driver's license. Additionally,
-        a document confirming your residential address, like a recent utility bill, is usually
-        required.
-      </p>
-
-      <h3>What Documents Are Used to Verify Your Funds?</h3>
-      <p>
-        To ensure the integrity of the funds used in your gaming activities, operators may request
-        additional documentation confirming that you have the necessary financial resources. This
-        could involve sharing details about your occupation and salary, along with supporting
-        documents such as a bank statement or a recent payslip.
-      </p>
-
-      <h3>How to Register as a New Player in Canada</h3>
-      <ol>
-        <li>
-          <strong>Sign Up:</strong> Click on the "Sign Up" button. Manually enter your First Name, Last
-          Name, Email Address, and Mobile Telephone Number.
-        </li>
-        <li>
-          <strong>Verification:</strong> An SMS will be sent to your mobile phone with a link to verify
-          your identity. Follow the link to upload a photo of your legal ID and a selfie.
-        </li>
-        <li>
-          <strong>Final Steps:</strong> Create your username and password (this information is auto-populated
-          from the legal ID verification). Confirm that you meet the legal requirements.
-        </li>
-      </ol>
-
-      <h3>Age Restrictions for Canadian iGaming (19+)</h3>
-      <p>
-        You must be <strong>19 years of age or older</strong> to participate in gaming on the
-        247iBET website. Please refer to Section 5.1 of the
-        <a href="/terms-of-service" class="text-slate-blue hover:underline">Terms and Conditions</a
-        >.
-      </p>
-
-      <h3>Troubleshooting: Can't Log In to My Account</h3>
-      <p>Login problems could be due to:</p>
-      <ul>
-        <li>The account or password entered does not exist.</li>
-        <li>You are already logged in on another device/session.</li>
-        <li>Establishing connection to the server failed.</li>
-      </ul>
-
-      <h3>How to Change Your Casino Account Password</h3>
-      <p>
-        Log in to the official website, click on "My Account" section at the top, select "Change
-        Password", and enter your current and new password.
-      </p>
-
-      <h2>Bonuses &amp; Promotions</h2>
-
-      <h3>Does 247iBET have a welcome bonus?</h3>
-      <p>
-        Yes. New players are eligible for a welcome bonus on their first deposit. The exact offer
-        and percentage match are displayed on the promotions page at the time of registration —
-        amounts and terms are updated periodically in line with regulatory requirements.
-      </p>
-      <p>Key things to check before claiming any bonus:</p>
-      <ul>
-        <li>
-          <strong>Wagering requirement</strong> — how many times the bonus must be played through before
-          withdrawal.
-        </li>
-        <li>
-          <strong>Eligible games</strong> — some bonuses apply only to slots, others include live tables
-          or sports.
-        </li>
-        <li><strong>Expiry</strong> — bonus funds typically expire within 7–30 days of issue.</li>
-        <li>
-          <strong>Max bet rule</strong> — most operators cap individual bets while bonus funds are active.
-        </li>
-      </ul>
-      <p>Always read the full bonus terms before opting in.</p>
-
-      <h3>How do I get Free Spins at 247iBET?</h3>
-      <p>Free spins are awarded through several channels:</p>
-      <ul>
-        <li>
-          <strong>Welcome package</strong> — new accounts may receive free spins as part of the sign-up
-          offer, often tied to a specific featured slot.
-        </li>
-        <li>
-          <strong>Reload promotions</strong> — weekly or weekend deposit offers sometimes include free
-          spins on qualifying deposits.
-        </li>
-        <li>
-          <strong>Loyalty rewards</strong> — active players can receive free spin drops through the VIP
-          or loyalty programme.
-        </li>
-        <li>
-          <strong>Game-specific promotions</strong> — slot providers occasionally sponsor free-spin events
-          tied to new game launches.
-        </li>
-      </ul>
-      <p>
-        Free spins are credited to your account automatically once the qualifying condition is met.
-        Check the promotions page or your account notifications for current offers.
-      </p>
+    <div class="mt-20 pt-10 border-t border-white/5">
+      <AuthorByline authorId="editorial" date={LAST_UPDATED} />
     </div>
-  </article>
-
-  <section class="sr-only" aria-label="Related FAQ resources">
-    <h2>Related Resources</h2>
-    <ul>
-      <li><a href="/contact">Contact and Support</a></li>
-      <li><a href="/deposit">Deposit and Payment Information</a></li>
-      <li><a href="/terms-of-service">Terms of Service</a></li>
-      <li><a href="/responsible-gambling">Responsible Gambling Support</a></li>
-    </ul>
-  </section>
-
-<AuthorByline authorId="editorial" date={LAST_UPDATED} />
+  </div>
 </div>
+
+<style>
+  :global(.animate-in) {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-in-from-top-2 {
+    from { transform: translateY(-0.5rem); }
+    to { transform: translateY(0); }
+  }
+</style>

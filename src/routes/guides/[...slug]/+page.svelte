@@ -18,7 +18,7 @@
     </ol>
   </nav>
 
-  <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">iGaming Guide</h1>
+  <h1 class="page-hero-title mb-4">iGaming Guide</h1>
   <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8] mb-8">
     Expert guidance for Canadian online casino and sports betting players.
   </p>

@@ -70,7 +70,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Online Gambling in Canada</h1>
+    <h1 class="page-hero-title mb-4">Online Gambling in Canada</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Discover legal online gambling options in Canada. Provincial rules for Ontario and Alberta,
       top Interac casinos, bonuses, and responsible play guidance.

@@ -157,7 +157,7 @@ const LAST_UPDATED = '2026-04-29';
           Verification Methodology
         </div>
       </div>
-      <h1 class="text-3xl md:text-4xl font-black text-white mb-4">How We Verify Operators</h1>
+      <h1 class="page-hero-title mb-4">How We Verify Operators</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
         Every featured page on 247iBET follows a documented, repeatable verification process. We
         open real accounts, make real deposits, and test real withdrawals. No pay-to-place. No

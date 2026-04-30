@@ -47,7 +47,7 @@
           </div>
         </div>
 
-        <h1 class="font-display text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.92] tracking-tighter text-white">
+        <h1 class="page-hero-title">
           Our Editorial <br />
           <span class="text-prestige-gold">Independence</span>
         </h1>

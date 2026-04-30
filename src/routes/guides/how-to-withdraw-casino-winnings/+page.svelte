@@ -230,7 +230,7 @@ const LAST_UPDATED = '2026-04-29';
       >
         Institutional Protocol: Settlement &amp; Payouts
       </div>
-      <h1 class="text-3xl md:text-5xl font-black text-white mb-4">
+      <h1 class="page-hero-title mb-4">
         How to Withdraw Casino Winnings in Canada
       </h1>
       <p class="text-gray-300 text-lg max-w-3xl leading-relaxed">

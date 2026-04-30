@@ -63,7 +63,7 @@ const LAST_UPDATED = '2026-04-29';
           Transparency Notice
         </div>
       </div>
-      <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Disclosure</h1>
+      <h1 class="page-hero-title mb-4">Disclosure</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
         247iBET.ca is the official website of the 247iBET betting platform. Our guides, tools, and
         support content are built to help Canadian players move from browsing to play, and all CTAs

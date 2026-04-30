@@ -35,19 +35,13 @@
   .page-detail-kicker {
     @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-prestige-gold;
   }
-  .page-hero-title {
-    @apply font-display font-light leading-[0.98] text-white;
-    letter-spacing: 0;
-    text-wrap: balance;
-  }
-  .page-hub-title {
-    @apply font-display font-normal leading-[1.05] text-white;
-    letter-spacing: 0;
-    text-wrap: balance;
-  }
+  .page-hero-title,
+  .page-hub-title,
   .page-detail-title {
-    @apply font-display font-semibold leading-[1.08] text-white;
-    letter-spacing: 0;
+    @apply font-display font-semibold text-white;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
   .page-hero-subtitle,

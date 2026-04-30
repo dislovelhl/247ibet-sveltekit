@@ -55,7 +55,7 @@
 
   <article class="navy-card rounded-3xl p-8 md:p-12">
     <header class="mb-12 border-b border-white/10 pb-8">
-      <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-4">
+      <h1 class="page-hero-title mb-4">
         Terms of <span class="text-slate-blue">Service</span>
       </h1>
       <p class="text-sm text-text-tertiary">Last reviewed: 2026-04-08</p>

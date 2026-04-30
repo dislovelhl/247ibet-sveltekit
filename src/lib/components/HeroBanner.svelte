@@ -103,7 +103,7 @@
           </div>
         </div>
 
-        <h1 class="page-hero-title mb-4 text-[clamp(2rem,8vw,4rem)] sm:mb-5">
+        <h1 class="page-hero-title mb-4 sm:mb-5">
           Online Casino &amp; Sportsbook —
           <span class="text-transparent bg-clip-text text-gradient-gold">Fast Interac Payouts</span>
           <span class="sr-only"> — 247iBET Canada Online Casino &amp; Sports Betting</span>

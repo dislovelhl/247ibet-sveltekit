@@ -47,7 +47,7 @@ const LAST_UPDATED = '2026-04-29';
 
   <article class="navy-card rounded-3xl p-8 md:p-12">
     <header class="mb-12 border-b border-white/10 pb-8">
-      <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase mb-4">
+      <h1 class="page-hero-title mb-4">
         Contact <span class="text-slate-blue">Us</span>
       </h1>
       <p class="text-gray-400 font-sans">

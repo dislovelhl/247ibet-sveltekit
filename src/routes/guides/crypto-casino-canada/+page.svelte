@@ -81,7 +81,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-[10px] font-mono text-orange-400 uppercase tracking-[0.3em] mb-3">
       Payments Guide
     </div>
-    <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Crypto Casino Canada</h1>
+    <h1 class="page-hero-title mb-4">Crypto Casino Canada</h1>
     <p class="text-gray-300 font-sans text-lg max-w-xl">
       Bitcoin and Ethereum gambling sites available to Canadian players — including
       instant-withdrawal advantages, AGCO licensing status, and Canadian tax considerations for

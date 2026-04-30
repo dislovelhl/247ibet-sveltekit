@@ -97,7 +97,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">Online Casino</li>
       </ol>
     </nav>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Online Casino in Alberta</h1>
+    <h1 class="page-hero-title mb-4">Online Casino in Alberta</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Prepare for Alberta online casino launch before July 13, 2026. Use this page to check
       availability, review AGLC context, and get your Interac and KYC setup ready before operators

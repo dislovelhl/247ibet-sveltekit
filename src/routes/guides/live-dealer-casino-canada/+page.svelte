@@ -119,7 +119,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
       Casino Guide
     </div>
-    <h1 class="font-display text-4xl font-normal text-[#F1F5F9] mb-4">Live Dealer Casino Canada</h1>
+    <h1 class="page-hero-title mb-4">Live Dealer Casino Canada</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Best live casino tables at Canadian AGCO-licensed sites — Evolution Gaming, Pragmatic Play
       Live, and more. What to look for and our top-rated picks.
