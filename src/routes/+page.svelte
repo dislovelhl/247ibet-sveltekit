@@ -334,44 +334,44 @@
     </div>
 
     <div
-      class="relative mx-auto grid min-h-[520px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[580px] sm:px-6 sm:py-16 lg:min-h-[620px] lg:grid-cols-[0.92fr_1.08fr] lg:px-10 xl:px-16"
+      class="relative mx-auto grid min-h-[560px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-16"
     >
       <div
-        class="max-w-4xl rounded-2xl border border-white/10 bg-navy-black/55 p-4 shadow-2xl backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0"
+        class="glass-regular max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
       >
         <p
-          class="mb-4 animate-fade-in-up text-[12px] font-black uppercase tracking-[0.12em] text-prestige-gold sm:mb-5"
+          class="mb-5 animate-fade-in-up text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold"
         >
           Canadian iGaming Guide
         </p>
         <h1
-          class="animate-fade-in-up-delay-1 font-display text-[clamp(2.35rem,11vw,4.85rem)] font-light leading-[1.02] tracking-tight text-white sm:leading-[0.98] lg:text-[clamp(4.1rem,5.4vw,5.2rem)]"
+          class="animate-fade-in-up-delay-1 font-display text-[clamp(2.5rem,10vw,4.5rem)] font-light leading-[0.95] tracking-tighter text-white lg:text-[clamp(4.2rem,6vw,5.5rem)]"
         >
           247iBET Review: Casino, Sportsbook & <span class="text-prestige-gold-400"
             >Interac Payouts</span
           >
         </h1>
         <p
-          class="mt-4 max-w-2xl animate-fade-in-up-delay-2 text-base leading-7 text-text-body sm:mt-6 sm:text-lg sm:leading-relaxed"
+          class="mt-6 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
         >
           Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
           bonuses, support, and responsible-gaming tools before you visit a partner site.
         </p>
-        <div class="mt-4 flex items-center gap-2 text-xs leading-5 text-text-tertiary">
-          <span class="inline-block h-1.5 w-1.5 rounded-full bg-prestige-gold-500"></span>
+        <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
+          <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
           Last updated: {LAST_UPDATED}
         </div>
         <div
-          class="mt-6 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
+          class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row"
         >
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group">
             Visit Partner Site
-            <ArrowRight class="h-5 w-5" aria-hidden="true" />
+            <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
           <a href="/deposit" class="hero-cta-secondary"> See Payout Details </a>
         </div>
         <p
-          class="mt-4 max-w-2xl rounded-lg border border-white/10 bg-navy-black/70 px-3 py-3 text-[12px] leading-6 text-text-body sm:px-4 sm:text-sm"
+          class="mt-8 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
         >
           247iBET is an independent Canadian iGaming guide. We review casino and sportsbook options
           and may earn a commission when you click partner links. Ratings are editorial and based on
@@ -385,22 +385,23 @@
     class="mx-auto max-w-[1720px] space-y-5 px-4 py-5 sm:space-y-7 sm:px-6 sm:py-7 lg:px-10 xl:px-16"
   >
     <section
-      class="grid rounded-xl border border-white/5 bg-navy-card/95 shadow-2xl backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-4"
+      class="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 shadow-2xl sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each heroTrust as item}
         {@const Icon = item.icon}
         <div
-          class="group flex items-start gap-3 border-b border-white/5 p-4 transition-colors hover:bg-white/[0.02] last:border-b-0 sm:items-center sm:gap-4 sm:p-5 sm:[&:nth-last-child(-n+2)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
+          class="group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised sm:p-6"
         >
           <div
-            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-blue-900/40 text-slate-blue-400 ring-1 ring-slate-blue-500/20 transition-transform group-hover:scale-110 group-hover:bg-slate-blue-900/60 group-hover:text-slate-blue-300 sm:h-12 sm:w-12"
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.3)]"
           >
-            <Icon class="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
+            <Icon class="h-6 w-6" aria-hidden="true" />
           </div>
           <div>
-            <p class="text-sm font-black tracking-wide text-white">{item.label}</p>
-            <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
+            <p class="text-xs font-black uppercase tracking-widest text-prestige-gold/80">{item.label}</p>
+            <p class="mt-1.5 text-sm font-medium leading-relaxed text-text-primary">{item.body}</p>
           </div>
+          <div class="absolute inset-0 border border-white/0 transition-colors group-hover:border-white/5"></div>
         </div>
       {/each}
     </section>
@@ -489,22 +490,27 @@
           operator terms. They are not guarantees of licensing status, payout speed, bonus
           eligibility, or account approval.
         </p>
-        <div class="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {#each whyCards as card}
             {@const Icon = card.icon}
             <article
-              class="group rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-prestige-gold-500/30 hover:bg-white/[0.04] sm:p-5"
+              class="glass-thin group relative rounded-2xl p-5 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-prestige-gold/5"
             >
               <div
-                class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-prestige-gold-900/30 text-prestige-gold-400 ring-1 ring-prestige-gold-500/20 group-hover:scale-110 group-hover:bg-prestige-gold-900/50 group-hover:text-prestige-gold-300"
+                class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:bg-prestige-gold group-hover:text-navy-black"
               >
-                <Icon class="h-5 w-5" aria-hidden="true" />
+                <Icon class="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 class="font-black text-white">{card.title}</h3>
-              <p class="mt-1 font-mono text-sm font-black text-prestige-gold-400">
-                {card.score} / 5
-              </p>
-              <p class="mt-2 text-sm leading-6 text-text-body">{card.body}</p>
+              <h3 class="font-display text-lg font-black text-white">{card.title}</h3>
+              <div class="mt-2 flex items-center gap-2">
+                <div class="flex gap-0.5">
+                  {#each Array(5) as _, i}
+                    <span class="h-1 w-4 rounded-full {i < Math.floor(Number(card.score)) ? 'bg-prestige-gold' : 'bg-white/10'}"></span>
+                  {/each}
+                </div>
+                <span class="font-mono text-sm font-black text-prestige-gold">{card.score}</span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-text-body">{card.body}</p>
             </article>
           {/each}
         </div>
@@ -580,25 +586,34 @@
       </div>
     </section>
 
-    <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
-      <div
-        class="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-[1.5fr_repeat(5,1fr)]"
-      >
-        <div>
-          <h2 class="text-3xl font-black md:text-4xl">Why 247iBET Stands Out</h2>
-          <p class="mt-3 text-sm leading-6 text-text-body">
+    <section class="rounded-2xl border border-white/5 bg-navy-card/50 p-4 sm:p-8">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+        <div class="flex flex-col justify-center rounded-2xl bg-gradient-to-br from-navy-raised to-navy-card p-6 shadow-xl sm:col-span-2 sm:row-span-2 lg:p-10">
+          <h2 class="font-display text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
+            Why 247iBET <span class="text-prestige-gold">Stands Out</span>
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed text-text-body">
             A clearer review surface for players comparing safety, payments, games, bonuses, and
-            support before signup.
+            support before signup. We prioritize transparency and speed.
           </p>
+          <div class="mt-8">
+             <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm">
+                Get Started
+             </SafeExternalLink>
+          </div>
         </div>
-        {#each standOut as item}
+
+        {#each standOut as item, i}
           {@const Icon = item.icon}
-          <article class="flex gap-3">
-            <Icon class="h-7 w-7 shrink-0 text-prestige-gold" aria-hidden="true" />
-            <div>
-              <h3 class="font-black">{item.title}</h3>
-              <p class="mt-2 text-sm leading-6 text-text-body">{item.body}</p>
+          <article 
+            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl {i === 0 || i === 3 ? 'lg:col-span-1' : 'lg:col-span-1'}"
+          >
+            <div class="relative z-10">
+              <Icon class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110" aria-hidden="true" />
+              <h3 class="mt-4 font-display text-xl font-black text-white">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-text-body">{item.body}</p>
             </div>
+            <div class="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-prestige-gold/5 blur-2xl transition-all group-hover:bg-prestige-gold/10"></div>
           </article>
         {/each}
       </div>
@@ -614,23 +629,32 @@
             >Explore Casino</a
           >
         </div>
-        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {#each casinoCards as card}
             <a
               href={card.href}
-              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20 transition-colors hover:border-prestige-gold/60"
+              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
             >
-              <img
-                src={card.image}
-                alt=""
-                class="h-32 w-full object-cover transition-transform group-hover:scale-105 sm:h-28"
-              />
-              <div class="p-4">
-                <h3 class="font-black">{card.title}</h3>
-                <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
-                <span class="mt-3 inline-flex text-xs font-black text-prestige-gold"
-                  >Explore Casino</span
-                >
+              <div class="relative h-36 w-full overflow-hidden sm:h-32">
+                <img
+                  src={card.image}
+                  alt=""
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+                />
+                {#if card.title.includes('Live')}
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
+                    <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+                    Live Now
+                  </div>
+                {/if}
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 transition-colors group-hover:text-prestige-gold">
+                  Explore
+                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </a>
           {/each}
@@ -646,23 +670,32 @@
             >Explore Sportsbook</a
           >
         </div>
-        <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {#each sportsCards as card}
             <a
               href={card.href}
-              class="group overflow-hidden rounded-xl border border-prestige-gold/25 bg-black/20 transition-colors hover:border-prestige-gold/60"
+              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
             >
-              <img
-                src={card.image}
-                alt=""
-                class="h-32 w-full object-cover transition-transform group-hover:scale-105 sm:h-28"
-              />
-              <div class="p-4">
-                <h3 class="font-black">{card.title}</h3>
-                <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
-                <span class="mt-3 inline-flex text-xs font-black text-prestige-gold"
-                  >Explore Sportsbook</span
-                >
+              <div class="relative h-36 w-full overflow-hidden sm:h-32">
+                <img
+                  src={card.image}
+                  alt=""
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+                />
+                {#if card.title.includes('Live')}
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
+                    <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+                    Live Odds
+                  </div>
+                {/if}
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 transition-colors group-hover:text-prestige-gold">
+                  Explore
+                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </a>
           {/each}
@@ -732,25 +765,33 @@
           >View All Guides</a
         >
       </div>
-      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-        {#each guideCards as card}
-          <a
-            href={card.href}
-            class="group grid gap-4 rounded-xl border border-white/10 bg-black/20 p-3 transition-colors hover:border-prestige-gold/50 lg:grid-cols-[116px_1fr]"
-          >
-            <img
-              src={card.image}
-              alt=""
-              class="h-24 w-full rounded-lg object-cover lg:w-[116px]"
-            />
-            <div>
-              <h3 class="font-black group-hover:text-prestige-gold">{card.title}</h3>
-              <p class="mt-1 text-sm leading-6 text-text-body">{card.body}</p>
-              <span class="mt-2 inline-flex text-xs font-black text-prestige-gold">Read Guide</span>
-            </div>
-          </a>
-        {/each}
-      </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {#each guideCards as card}
+            <a
+              href={card.href}
+              class="glass-thin group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl"
+            >
+              <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32">
+                <img
+                  src={card.image}
+                  alt=""
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>
+              </div>
+              <div class="flex flex-col justify-between px-2 pb-2">
+                <div>
+                  <h3 class="font-display text-base font-black leading-snug text-white group-hover:text-prestige-gold transition-colors">{card.title}</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold transition-colors">
+                  Read Guide
+                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </a>
+          {/each}
+        </div>
     </section>
 
     <section class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
@@ -762,37 +803,33 @@
           >View All FAQs</a
         >
       </div>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-3">
         {#each faqs as faq, i}
-          <div class="rounded-lg border border-white/10">
+          <div class="group overflow-hidden rounded-xl border border-white/5 bg-navy-card/50 transition-all hover:border-white/10">
             <button
               id="home-faq-btn-{i}"
               type="button"
-              class="flex w-full items-center justify-between bg-black/20 px-4 py-4 text-left text-sm font-black text-white transition-colors hover:border-prestige-gold/50 hover:bg-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold {homeFaqOpenIndex ===
-              i
-                ? 'rounded-t-lg'
-                : 'rounded-lg'}"
+              class="flex w-full items-center justify-between px-5 py-5 text-left text-base font-black text-white transition-colors hover:bg-white/[0.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
               aria-expanded={homeFaqOpenIndex === i}
               aria-controls="home-faq-panel-{i}"
               onclick={() => (homeFaqOpenIndex = homeFaqOpenIndex === i ? null : i)}
             >
-              {faq.q}
-              <ChevronDown
-                class="h-4 w-4 text-prestige-gold transition-transform duration-200 {homeFaqOpenIndex ===
-                i
-                  ? 'rotate-180'
-                  : ''}"
-                aria-hidden="true"
-              />
+              <span class="max-w-[90%]">{faq.q}</span>
+              <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black {homeFaqOpenIndex === i ? 'rotate-180 bg-prestige-gold text-navy-black' : ''}">
+                <ChevronDown
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                />
+              </div>
             </button>
             <div
               id="home-faq-panel-{i}"
               role="region"
               aria-labelledby="home-faq-btn-{i}"
               hidden={homeFaqOpenIndex !== i}
-              class="rounded-b-lg border-t border-white/10 bg-black/10 px-4 py-3"
+              class="bg-black/20 px-5 py-5 border-t border-white/5"
             >
-              <p class="text-sm leading-6 text-text-body">{faq.a}</p>
+              <p class="text-sm leading-relaxed text-text-body">{faq.a}</p>
             </div>
           </div>
         {/each}

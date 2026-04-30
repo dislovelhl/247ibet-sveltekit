@@ -174,9 +174,9 @@
 
 <nav
   aria-label="Main navigation"
-  class="fixed top-0 left-0 right-0 z-50 border-b transition-[border-color,background-color,box-shadow] duration-200 ease-out animate-fade-down {scrolled
-    ? 'border-white/10 bg-navy-black/92 shadow-[0_18px_42px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl'
-    : 'border-white/5 bg-navy-black/82 backdrop-blur-md'}"
+  class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out animate-fade-down {scrolled
+    ? 'glass-thick border-white/10 shadow-[0_18px_64px_-24px_rgba(0,0,0,0.9)]'
+    : 'border-white/5 bg-navy-black/60 backdrop-blur-md'}"
 >
   <!-- Tier 1: Utility bar — desktop only, collapses on scroll -->
   <div

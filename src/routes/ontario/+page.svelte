@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import { ArrowRight } from 'lucide-svelte';
 
   const sourceCards = [
     {
@@ -152,46 +153,53 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-      <li><a href="/" class="hover:text-white">Home</a></li>
-      <li>/</li>
-      <li class="text-white font-medium">Ontario</li>
-    </ol>
-  </nav>
+<div class="min-h-screen bg-navy-black pt-6 pb-20">
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+    <nav aria-label="Breadcrumb" class="mb-10">
+      <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">Ontario</li>
+      </ol>
+    </nav>
 
-  <div class="mb-5 flex flex-wrap items-center gap-2">
-    <span class="page-hero-kicker">Ontario regulated market</span>
-    <span class="live-tag"><span class="live-dot"></span> Active</span>
-    <span class="status-badge status-badge--licensed">AGCO · 19+</span>
-  </div>
+    <header class="relative mb-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+      <img
+        src="/images/generated/canada-market-hero.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-50"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
+      
+      <div class="relative z-10 p-8 md:p-14">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
+            <span class="live-dot" aria-hidden="true"></span>
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+              Market Active
+            </p>
+          </div>
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              AGCO Licensed · 19+
+            </p>
+          </div>
+        </div>
 
-  <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
-    <img src="/images/generated/canada-market-hero.png" alt="Ontario iGaming market overview" class="h-full w-full object-cover" />
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"
-    ></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
-    <div class="absolute bottom-5 left-6 md:left-8">
-      <div
-        class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
-      >
-        Ontario Access · Interac · 19+
+        <h1 class="font-display text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.92] tracking-tighter text-white">
+          Ontario <br />
+          <span class="text-prestige-gold">iGaming Hub</span>
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          Your authoritative guide to the Ontario regulated market. Compare licensed operators, verify Interac payout expectations, and access responsible gambling resources.
+        </p>
+
+        <div class="mt-10">
+          <AuthorByline authorId="editorial" date={LAST_UPDATED} />
+        </div>
       </div>
-      <p class="text-lg md:text-xl font-bold text-white">Ontario iGaming Market</p>
-    </div>
-  </div>
-
-  <header class="mt-4 mb-10">
-    <h1 class="page-hero-title text-4xl md:text-5xl mb-4">
-      Play in Ontario with 247iBET
-    </h1>
-    <p class="page-hero-subtitle mt-4 max-w-3xl text-base sm:text-lg">
-      Casino games, sports betting, and Interac-friendly payments for players in Ontario. Use this
-      page to check age rules, payout expectations, and the right route into the platform.
-    </p>
-  </header>
+    </header>
 
   <AffiliateDisclosure />
 
@@ -219,66 +227,49 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     </div>
   </section>
 
-  <section class="mb-10">
-    <h2 class="text-2xl font-bold mb-5">Explore Ontario Gaming</h2>
-    <div class="grid gap-6 md:grid-cols-2">
+    <section class="mb-16 grid gap-6 md:grid-cols-2">
       <a
         href="/ontario/online-casino"
-        class="navy-card rounded-xl p-6 hover:border-white/20 transition-colors flex flex-col justify-between"
+        class="glass-thin group flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl"
       >
         <div>
-          <svg
-            class="w-5 h-5 text-slate-blue mb-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            /></svg
-          >
-          <h3 class="text-xl font-bold text-[#F1F5F9] mb-2">Ontario Casino</h3>
-          <p class="text-sm text-[#94A3B8] leading-relaxed">
-            Move straight into slots, live dealer games, and table games with the Ontario route
-            already in mind.
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue ring-1 ring-slate-blue/20 transition-transform group-hover:scale-110">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors">Ontario Casino</h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body">
+            Move straight into slots, live dealer games, and table games with the Ontario route already in mind.
           </p>
         </div>
-        <span class="text-slate-blue text-sm font-bold mt-4">Explore →</span>
+        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold">
+          Explore Casino
+          <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+        </div>
       </a>
+
       <a
         href="/ontario/sports-betting"
-        class="navy-card rounded-xl p-6 hover:border-white/20 transition-colors flex flex-col justify-between"
+        class="glass-thin group flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl"
       >
         <div>
-          <svg
-            class="w-5 h-5 text-slate-blue mb-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-            /></svg
-          >
-          <h3 class="text-xl font-bold text-[#F1F5F9] mb-2">Ontario Sports Betting</h3>
-          <p class="text-sm text-[#94A3B8] leading-relaxed">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue ring-1 ring-slate-blue/20 transition-transform group-hover:scale-110">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors">Ontario Sports</h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body">
             Bet on NHL, NBA, and more with an Ontario-focused route into the sportsbook.
           </p>
         </div>
-        <span class="text-slate-blue text-sm font-bold mt-4">Explore →</span>
+        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold">
+          Explore Sportsbook
+          <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+        </div>
       </a>
-    </div>
-    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-6">
-      <a href="/interac" class="view-all-link">Ontario Interac payments →</a>
-      <a href="/fast-payouts" class="view-all-link">Fast Ontario payouts →</a>
-    </div>
-  </section>
+    </section>
 
   <div class="mb-10">
     <IBetShowcase variant="banner" ctaText="Play in Ontario" />
@@ -423,5 +414,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a
     >.
+  </div>
   </div>
 </div>

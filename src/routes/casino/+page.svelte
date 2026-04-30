@@ -230,59 +230,54 @@
 <div class="min-h-screen bg-navy-black pt-6 text-white">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section
-      class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(120deg,#080d18,#101827)] p-7 shadow-2xl md:p-12"
+      class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-card shadow-2xl"
     >
       <div
-        class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_52%_35%,rgba(212,148,58,0.32),transparent_30%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-75 lg:block"
+        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-60"
       ></div>
       <div
-        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/78 to-transparent"
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
 
-      <div class="relative max-w-4xl">
-        <div class="mb-5 flex flex-wrap items-center gap-3">
-          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
-            Canada&apos;s trusted online casino
+      <div class="relative z-10 px-7 py-12 md:px-16 md:py-20">
+        <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10">
+          <span class="live-dot" aria-hidden="true"></span>
+          <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            Canada's #1 Rated Online Casino
           </p>
-          <span class="live-tag"><span class="live-dot"></span> Live tables open</span>
         </div>
-        <h1 class="text-[clamp(2rem,6.5vw,6.6rem)] font-black leading-[0.98] tracking-normal">
-          Play Online <br />Casino in <span class="text-prestige-gold">Canada</span>
+        <div class="mb-8 flex flex-col gap-6">
+          <AuthorByline date={LAST_UPDATED} />
+          <h1 class="font-display text-[clamp(2.5rem,8vw,5.5rem)] font-black leading-[0.92] tracking-tighter text-white">
+          The Future of <br />
+          <span class="text-prestige-gold">Canadian Casino</span>
         </h1>
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
-          Exclusive access to thousands of slots, live dealer games, and classic table games. Secure
-          your play with Interac e-Transfers and experience fast, reliable withdrawals.
+      </div>
+        
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          A high-performance gaming ecosystem. Experience 500+ premium slots, live dealer immersion, and lightning-fast CAD payouts.
         </p>
-        <p class="mt-2 text-xs leading-5 text-text-tertiary">Last updated: {LAST_UPDATED}</p>
-        <AuthorByline authorId="editorial" date={LAST_UPDATED} />
-        <div class="mt-8 flex flex-wrap gap-5">
-          {#each trustItems as item}
-            {@const Icon = item.icon}
-            <div class="flex items-center gap-2 text-sm font-black text-text-body">
-              <Icon class="h-5 w-5 text-prestige-gold" aria-hidden="true" />
-              {item.title}
-            </div>
-          {/each}
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px]">
+            Access Casino
+            <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </SafeExternalLink>
+          <a href="/casino/slots" class="hero-cta-secondary min-w-[200px]">
+            Explore Library
+          </a>
         </div>
 
-        <div
-          class="mt-9 max-w-3xl rounded-xl border border-white/12 bg-navy-card/85 p-5 shadow-2xl"
-        >
-          <div class="flex gap-4">
-            <div
-              class="flex h-16 w-24 shrink-0 items-center justify-center rounded-lg bg-prestige-gold px-2 text-center text-sm font-black leading-tight text-navy-black sm:w-28 sm:text-base"
-            >
-              e-Transfer
+        <div class="mt-12 flex flex-wrap gap-8 border-t border-white/5 pt-8">
+          {#each trustItems as item}
+            {@const Icon = item.icon}
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-prestige-gold">
+                <Icon class="h-5 w-5" />
+              </div>
+              <span class="text-xs font-black uppercase tracking-widest text-white/80">{item.title}</span>
             </div>
-            <div>
-              <p class="text-lg font-black">
-                Deposits are instant. Withdrawals are typically processed within 24 hours.
-              </p>
-              <p class="mt-2 text-sm text-text-body">
-                Regulated, safe, and trusted by players across Canada.
-              </p>
-            </div>
-          </div>
+          {/each}
         </div>
       </div>
     </section>
@@ -315,29 +310,28 @@
       </SafeExternalLink>
     </section>
 
-    <section class="mt-7 grid gap-5 lg:grid-cols-4">
+    <section class="mt-8 grid gap-4 lg:grid-cols-4">
       {#each featureCards as card}
         {@const Icon = card.icon}
         <a
           href={card.href}
-          class="group rounded-xl border border-prestige-gold/25 bg-navy-card/80 p-6 transition-transform hover:-translate-y-1"
+          class="glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl"
         >
           <div
-            class="flex h-12 w-12 items-center justify-center rounded-lg border border-prestige-gold/25 bg-prestige-gold/10"
+            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-transform group-hover:scale-110"
           >
-            <Icon class="h-7 w-7 text-prestige-gold" aria-hidden="true" />
+            <Icon class="h-8 w-8" aria-hidden="true" />
           </div>
-          <h2 class="mt-8 text-xl font-black">{card.title}</h2>
-          <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{card.body}</p>
-          <span
-            class="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
+          <div>
+            <h2 class="font-display text-xl font-black text-white">{card.title}</h2>
+            <p class="mt-3 text-sm leading-relaxed text-text-body/80">{card.body}</p>
+          </div>
+          <div
+            class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold"
           >
             {card.cta}
-            <ArrowRight
-              class="h-4 w-4 transition-transform group-hover:translate-x-1"
-              aria-hidden="true"
-            />
-          </span>
+            <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+          </div>
         </a>
       {/each}
     </section>
@@ -359,40 +353,43 @@
       {/each}
     </section>
 
-    <section class="mt-10">
-      <div class="mb-7 flex items-center justify-center gap-6">
-        <div class="h-px w-36 bg-gradient-to-r from-transparent to-prestige-gold/60"></div>
-        <h2 class="text-center text-3xl font-black text-prestige-gold">
-          Explore Top Casino Categories
+    <section class="mt-16">
+      <div class="mb-10 text-center">
+        <h2 class="font-display text-3xl font-black md:text-4xl text-white">
+          Premium <span class="text-prestige-gold">Game Hubs</span>
         </h2>
-        <div class="h-px w-36 bg-gradient-to-l from-transparent to-prestige-gold/60"></div>
+        <p class="mt-4 text-text-body italic">Explore hundreds of vetted titles across all categories</p>
       </div>
-      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {#each categoryCards as card}
           {@const Icon = card.icon}
           <a
             href={card.href}
-            class="group grid gap-5 rounded-xl border border-white/10 bg-navy-card/80 p-5 transition-colors hover:border-prestige-gold/35 sm:grid-cols-[86px_1fr]"
+            class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised"
           >
-            <div
-              class="relative h-24 overflow-hidden rounded-lg border border-prestige-gold/25 bg-black/25"
-            >
+            <div class="absolute inset-0 z-0">
               <img
                 src={card.image}
-                alt={card.title + ' casino games'}
-                class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105"
+                alt=""
+                class="h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-60"
               />
-              <Icon class="absolute left-3 top-3 h-7 w-7 text-prestige-gold" aria-hidden="true" />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/40 to-transparent"></div>
             </div>
-            <div>
-              <h3 class="text-lg font-black">{card.title}</h3>
-              <p class="mt-2 min-h-[48px] text-sm leading-6 text-text-body">{card.body}</p>
-              <span
-                class="mt-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
-              >
-                Explore {card.title.replace('Online', '').trim()}
-                <ArrowRight class="h-4 w-4" aria-hidden="true" />
-              </span>
+            
+            <div class="relative z-10 flex h-full flex-col justify-between">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20">
+                <Icon class="h-6 w-6 text-prestige-gold" />
+              </div>
+              
+              <div>
+                <h3 class="font-display text-2xl font-black text-white">{card.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold">
+                  Enter Lobby
+                  <ArrowRight class="h-3 w-3" />
+                </div>
+              </div>
             </div>
           </a>
         {/each}

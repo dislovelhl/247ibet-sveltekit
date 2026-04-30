@@ -92,99 +92,99 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-      <li><a href="/" class="hover:text-white">Home</a></li>
-      <li>/</li>
-      <li class="text-white font-medium">Alberta</li>
-    </ol>
-  </nav>
+<div class="min-h-screen bg-navy-black pt-6 pb-20">
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+    <nav aria-label="Breadcrumb" class="mb-10">
+      <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">Alberta</li>
+      </ol>
+    </nav>
 
-  <div class="mb-5 flex flex-wrap items-center gap-2">
-    <span class="page-hero-kicker">Alberta launch watch</span>
-    <span class="status-badge status-badge--soon">Pending 2026</span>
-    <span class="status-badge status-badge--licensed">AGLC · 18+</span>
-  </div>
+    <header class="relative mb-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+      <img
+        src="/images/generated/canada-market-hero.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-50"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
+      
+      <div class="relative z-10 p-8 md:p-14">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
+            <span class="live-dot" aria-hidden="true"></span>
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+              Launch Watch
+            </p>
+          </div>
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              AGLC · 18+ · Pending 2026
+            </p>
+          </div>
+        </div>
 
-  <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden my-6">
-    <img src="/images/generated/canada-market-hero.png" alt="Alberta online gambling market overview" class="h-full w-full object-cover" />
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"
-    ></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-navy-black/70 to-transparent"></div>
-    <div class="absolute bottom-5 left-6 md:left-8">
-      <div
-        class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
-      >
-        AGLC · 18+ · Launch Watch
+        <h1 class="font-display text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.92] tracking-tighter text-white">
+          Alberta <br />
+          <span class="text-prestige-gold">Market Tracker</span>
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          Tracking the Alberta regulated iGaming launch. Verified guidance on legal age, AGLC licensing, and upcoming casino operators for Alberta players.
+        </p>
       </div>
-      <p class="text-lg md:text-xl font-bold text-white">Alberta Online Gambling</p>
-    </div>
-  </div>
-
-  <header class="mt-4 mb-10">
-    <h1 class="page-hero-title text-4xl md:text-5xl mb-4">Alberta Online Gambling</h1>
-    <p class="page-hero-subtitle mt-4 max-w-3xl text-base sm:text-lg">
-      Alberta launch-status hub covering legal age, payment checks, and safer signup guidance.
-      Verify current official operator availability before registering.
-    </p>
-  </header>
+    </header>
 
   <AffiliateDisclosure />
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
-    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
-      <svg
-        class="w-5 h-5 text-yellow-400"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-        aria-hidden="true"
-        ><path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-        /></svg
-      >
-      Alberta launch-aware guidance
-    </h2>
-    <p class="text-sm leading-relaxed text-gray-300 mb-4">
-      Alberta is treated here as a launch-status market ahead of the July 13, 2026 go-live marker.
-      Availability wording, operator lists, and payment expectations should be checked against
-      current official information before any signup decision.
-    </p>
-    <div class="grid gap-4 md:grid-cols-3">
-      <a
-        href="/legal-online-gambling-canada"
-        class="navy-card rounded-xl p-4 transition-colors hover:border-yellow-500/30"
-      >
-        <div class="font-bold text-white mb-2">Legal framework</div>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          Review Canada and Alberta legal context before registration.
-        </p>
-      </a>
-      <a
-        href="/interac-casino-canada"
-        class="navy-card rounded-xl p-4 transition-colors hover:border-yellow-500/30"
-      >
-        <div class="font-bold text-white mb-2">Payment rails</div>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          Check Interac support, withdrawal handling, and cashier friction before funding.
-        </p>
-      </a>
-      <a
-        href="/responsible-gambling"
-        class="navy-card rounded-xl p-4 transition-colors hover:border-yellow-500/30"
-      >
-        <div class="font-bold text-white mb-2">Safer play tools</div>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          Keep age, deposit limits, and support tools visible before you play.
-        </p>
-      </a>
-    </div>
-  </section>
+    <section class="glass-thin mb-16 rounded-[2rem] p-8 md:p-12">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="font-display text-2xl font-black uppercase text-white">Alberta Launch Guidance</h2>
+          <p class="text-sm text-text-tertiary">Important markers for the 2026 go-live</p>
+        </div>
+      </div>
+      
+      <p class="text-lg leading-relaxed text-text-body/90 mb-10 max-w-4xl">
+        Alberta is a launch-status market ahead of the July 13, 2026 go-live marker. Availability wording, operator lists, and payment expectations should be checked against current official information.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <a
+          href="/legal-online-gambling-canada"
+          class="navy-card group rounded-2xl p-6 transition-all hover:bg-navy-raised hover:border-prestige-gold/30"
+        >
+          <h3 class="font-bold text-white group-hover:text-prestige-gold transition-colors mb-3">Legal Framework</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            Review Canada and Alberta legal context before registration.
+          </p>
+        </a>
+        <a
+          href="/interac-casino-canada"
+          class="navy-card group rounded-2xl p-6 transition-all hover:bg-navy-raised hover:border-prestige-gold/30"
+        >
+          <h3 class="font-bold text-white group-hover:text-prestige-gold transition-colors mb-3">Payment Rails</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            Check Interac support, withdrawal handling, and cashier friction.
+          </p>
+        </a>
+        <a
+          href="/responsible-gambling"
+          class="navy-card group rounded-2xl p-6 transition-all hover:bg-navy-raised hover:border-prestige-gold/30"
+        >
+          <h3 class="font-bold text-white group-hover:text-prestige-gold transition-colors mb-3">Safer Play</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            Keep age, deposit limits, and support tools visible.
+          </p>
+        </a>
+      </div>
+    </section>
 
   <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
     <h2 class="text-2xl font-bold mb-4">Alberta supporting guides</h2>
@@ -253,5 +253,6 @@
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a
     >.
+  </div>
   </div>
 </div>

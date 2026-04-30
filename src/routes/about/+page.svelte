@@ -35,55 +35,89 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
-  <section class="mx-auto max-w-5xl mt-8">
-    <p class="text-xs text-text-tertiary mb-4">Last updated: {LAST_UPDATED}</p>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
-    <h2 class="text-2xl font-bold text-white mb-4">What 247iBET Offers</h2>
-    <div class="navy-card overflow-x-auto rounded-2xl">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b border-white/10 bg-white/3">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Feature</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Details</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Player benefit</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-white/5">
-          <tr>
-            <td class="p-4 text-white font-bold">Fast Interac Payouts</td>
-            <td class="p-4 text-gray-300"
-              >Interac e-Transfer withdrawals processed within 1–3 business hours after KYC.</td
-            >
-            <td class="p-4 text-gray-300">Get your winnings the same day.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">500+ Casino Games</td>
-            <td class="p-4 text-gray-300"
-              >Slots, live dealer tables, jackpots, and classic table games built for desktop and
-              mobile play.</td
-            >
-            <td class="p-4 text-gray-300">Always something new to play.</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-white font-bold">Live Sports Betting</td>
-            <td class="p-4 text-gray-300"
-              >NHL, NBA, CFL, UFC, Premier League, and more with in-play odds and same-game parlays.</td
-            >
-            <td class="p-4 text-gray-300">Bet on your favourite teams in real time.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+<div class="min-h-screen bg-navy-black pt-6 pb-20">
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+    <nav aria-label="Breadcrumb" class="mb-10">
+      <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">About Us</li>
+      </ol>
+    </nav>
 
-  <section class="sr-only" aria-label="Related credibility and compliance resources">
-    <h2>Related Resources</h2>
-    <ul>
-      <li><a href="/security">Security Standards</a></li>
-      <li><a href="/responsible-gambling">Responsible Gambling Support</a></li>
-      <li><a href="/guides/regulated-vs-offshore">Regulated vs Offshore Betting</a></li>
-      <li><a href="/guides/interac-e-transfer-casino">Interac Payments Guide</a></li>
-    </ul>
-  </section>
+    <header class="relative mb-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.1),transparent_50%)]"></div>
+      <div class="relative z-10 p-8 md:p-14 text-center md:text-left">
+        <div class="mb-8 flex justify-center md:justify-start">
+          <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10">
+            <span class="live-dot" aria-hidden="true"></span>
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+              Established 2024
+            </p>
+          </div>
+        </div>
+
+        <h1 class="font-display text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.92] tracking-tighter text-white">
+          About <br />
+          <span class="text-prestige-gold">247iBET</span>
+        </h1>
+
+        <p class="mt-8 mx-auto md:mx-0 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          Canada's authoritative source for online casino games and sports betting. We specialize in fast Interac payouts, verified operator reviews, and responsible gambling advocacy.
+        </p>
+
+        <div class="mt-10">
+          <AuthorByline authorId="editorial" date={LAST_UPDATED} />
+        </div>
+      </div>
+    </header>
+
+    <section class="mb-16">
+      <h2 class="font-display text-3xl font-black uppercase tracking-tight text-white mb-8">What 247iBET Offers</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="glass-thin group rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20 transition-transform group-hover:scale-110">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors">Fast Payouts</h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body">
+            Interac e-Transfer withdrawals processed within 1–3 business hours after KYC. Get your winnings the same day.
+          </p>
+        </article>
+
+        <article class="glass-thin group rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20 transition-transform group-hover:scale-110">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors">500+ Games</h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body">
+            Slots, live dealer tables, jackpots, and classic table games built for desktop and mobile play.
+          </p>
+        </article>
+
+        <article class="glass-thin group rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20 transition-transform group-hover:scale-110">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors">Live Sports</h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body">
+            NHL, NBA, CFL, UFC, and more with in-play odds and same-game parlays. Bet on your favorite teams.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <nav class="flex flex-wrap gap-x-8 gap-y-4" aria-label="Related pages">
+      <a href="/security" class="text-xs font-bold uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Security Standards</a>
+      <a href="/responsible-gambling" class="text-xs font-bold uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Responsible Gambling</a>
+      <a href="/guides/regulated-vs-offshore" class="text-xs font-bold uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Regulated vs Offshore</a>
+      <a href="/guides/interac-e-transfer-casino" class="text-xs font-bold uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Interac Guide</a>
+    </nav>
+  </div>
 </div>
