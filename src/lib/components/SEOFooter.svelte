@@ -70,7 +70,7 @@
               >
                 {SITE.name}
               </h2>
-              <p class="text-[11px] text-text-body">{SITE.tagline}</p>
+              <p class="text-xs text-text-body">{SITE.tagline}</p>
             </div>
           </div>
 
@@ -79,7 +79,7 @@
             responsible-gaming guides. Legal age varies by province.
           </p>
 
-          <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-gray-600">
+          <p class="mt-4 font-mono text-xs uppercase tracking-[0.14em] text-gray-600">
             Independent guide · 18+/19+ by province · Verify licensing before depositing
           </p>
 
@@ -198,7 +198,7 @@
 
       <!-- Legal bar -->
       <div
-        class="flex flex-col gap-3 py-6 font-mono text-[11px] text-gray-600 md:flex-row md:items-center md:justify-between"
+        class="flex flex-col gap-3 py-6 font-mono text-xs text-gray-600 md:flex-row md:items-center md:justify-between"
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">

@@ -110,7 +110,7 @@
         </div>
 
         <p
-          class="mt-5 text-[10px] font-mono leading-relaxed uppercase tracking-tighter text-text-tertiary opacity-80 sm:mt-6"
+          class="mt-5 text-xs font-mono leading-relaxed uppercase tracking-tighter text-text-tertiary opacity-80 sm:mt-6"
         >
           STRICTLY 19+ · TERMS APPLY · PLAY RESPONSIBLY
         </p>

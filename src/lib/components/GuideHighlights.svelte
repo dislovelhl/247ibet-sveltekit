@@ -67,7 +67,7 @@
   <div class="flex items-baseline gap-4 mb-8">
     <h2
       id="guides-heading"
-      class="page-hub-title text-xl md:text-2xl text-gradient-slate uppercase tracking-[0.18em]"
+      class="page-hub-title text-xl md:text-2xl text-gradient-slate uppercase tracking-[0.12em]"
     >
       Expert Guides
     </h2>
@@ -101,7 +101,7 @@
               <svelte:component this={icon} class="w-5 h-5 {iconColor}" aria-hidden="true" />
             </div>
             <span
-              class="badge-glossy text-[10px] font-bold text-prestige-gold px-2.5 py-1 uppercase tracking-wider"
+              class="badge-glossy text-xs font-bold text-prestige-gold px-2.5 py-1 uppercase tracking-wider"
             >
               {category}
             </span>
@@ -117,7 +117,7 @@
           </div>
 
           <div
-            class="flex items-center gap-1 text-[11px] text-prestige-gold font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.22em]"
+            class="flex items-center gap-1 text-xs text-prestige-gold font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.12em]"
           >
             {cta}
             <ArrowRight
@@ -142,7 +142,7 @@
             aria-hidden="true"
           />
         </div>
-        <span class="text-xs font-bold text-prestige-gold uppercase tracking-widest leading-tight">
+        <span class="text-xs font-bold text-prestige-gold uppercase tracking-[0.12em] leading-tight">
           View All<br />Guides
         </span>
       </a>
