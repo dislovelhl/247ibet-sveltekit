@@ -172,9 +172,7 @@
               {IBET_PROFILE.tagline}
             </p>
             <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-3">
-              <span
-                class="flex items-center gap-1 text-xs text-success font-bold"
-              >
+              <span class="flex items-center gap-1 text-xs text-success font-bold">
                 <Zap class="w-3 h-3" aria-hidden="true" />
                 {IBET_PROFILE.withdrawalSpeed}
               </span>

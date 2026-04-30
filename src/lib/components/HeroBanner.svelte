@@ -167,8 +167,7 @@
       <div class="odds-marquee flex gap-0 whitespace-nowrap py-2.5" aria-hidden="true">
         {#each oddsDoubled as game, i (i)}
           <span class="inline-flex items-center gap-3 px-5 border-r border-white/5 text-xs">
-            <span
-              class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-xs"
+            <span class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-xs"
               >{game.sport}</span
             >
             <span class="text-text-body">{game.home}</span>
