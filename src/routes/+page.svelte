@@ -492,10 +492,10 @@
     </section>
 
     <section
-      class="grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-6 lg:grid-cols-[0.24fr_0.76fr]"
+      class="grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
-        <h2 class="text-3xl font-black">Interac deposits and withdrawals</h2>
+        <h2 class="text-3xl font-black md:text-4xl">Interac deposits and withdrawals</h2>
         <p class="mt-3 text-sm leading-6 text-text-body">
           Deposits are usually quick, while withdrawals depend on approval, verification, bonus
           terms, and bank processing.
@@ -522,9 +522,9 @@
     </section>
 
     <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-6">
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-[0.25fr_repeat(5,1fr)]">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.5fr_repeat(5,1fr)]">
         <div>
-          <h2 class="text-3xl font-black">Why 247iBET Stands Out</h2>
+          <h2 class="text-3xl font-black md:text-4xl">Why 247iBET Stands Out</h2>
           <p class="mt-3 text-sm leading-6 text-text-body">
             A clearer review surface for players comparing safety, payments, games, bonuses, and
             support before signup.

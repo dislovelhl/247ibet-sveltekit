@@ -143,7 +143,7 @@
             />
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 w-full min-w-0">
             <div class="flex flex-wrap items-center gap-3 mb-2">
               {#if isPrimaryHero}
                 <h1 class="page-hero-title text-3xl md:text-5xl uppercase">
@@ -173,7 +173,7 @@
             </p>
             <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 mt-3">
               <span
-                class="flex items-center gap-1 text-xs text-success font-bold whitespace-nowrap"
+                class="flex items-center gap-1 text-xs text-success font-bold"
               >
                 <Zap class="w-3 h-3" aria-hidden="true" />
                 {IBET_PROFILE.withdrawalSpeed}
@@ -188,7 +188,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-2.5 shrink-0 w-full md:w-auto min-w-[180px]">
+          <div class="flex flex-col gap-2.5 shrink-0 w-full md:w-[220px] min-w-[180px]">
             <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full">
               {ctaText ?? IBET_CTA.primary}
               <ExternalLink class="w-4 h-4" aria-hidden="true" />
