@@ -258,9 +258,9 @@
   </div>
 
   <!-- Tier 2: Main bar (always visible) -->
-  <div class="container mx-auto flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+  <div class="container mx-auto flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-6 lg:px-8">
     <!-- Logo + desktop nav links -->
-    <div class="flex min-w-0 items-center gap-5 lg:gap-8">
+    <div class="flex min-w-0 items-center gap-3 lg:gap-8">
       <a
         href="/"
         class="flex min-h-[44px] shrink-0 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
@@ -272,7 +272,7 @@
           width="140"
           height="40"
           fetchpriority="high"
-          class="h-10 w-[132px] object-contain sm:w-[140px]"
+          class="h-9 w-[116px] object-contain sm:h-10 sm:w-[140px]"
         />
         <span class="sr-only">{SITE.name} Home</span>
       </a>
@@ -298,7 +298,7 @@
     </div>
 
     <!-- Right-side actions -->
-    <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+    <div class="flex shrink-0 items-center gap-1.5 sm:gap-3">
       <div
         class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-success lg:flex"
       >
@@ -323,7 +323,7 @@
         <a
           href="/search"
           aria-label="Search"
-          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black sm:h-11 sm:w-11"
         >
           <Search class="w-4 h-4" aria-hidden="true" />
         </a>
@@ -347,7 +347,7 @@
       <a
         href="/responsible-gambling"
         aria-label="Responsible gaming tools"
-        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+        class="hidden h-10 w-10 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black min-[360px]:flex sm:h-11 sm:w-11"
       >
         <ShieldCheck class="w-4 h-4" aria-hidden="true" />
       </a>
@@ -356,7 +356,7 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black md:hidden"
+        class="flex h-10 w-10 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black sm:h-11 sm:w-11 md:hidden"
         onclick={toggleMobileMenu}
         aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
         aria-haspopup="menu"
@@ -408,7 +408,7 @@
       type="button"
       aria-label="Close mobile menu"
       tabindex="-1"
-      class="fixed inset-0 top-16 z-40 cursor-default bg-navy-black/40 backdrop-blur-sm md:hidden"
+      class="fixed inset-0 top-14 z-40 cursor-default bg-navy-black/40 backdrop-blur-sm sm:top-16 md:hidden"
       onclick={closeMobileMenu}
     ></button>
   {/if}
@@ -422,36 +422,46 @@
       aria-modal="true"
       aria-label="Mobile navigation"
       tabindex="-1"
-      class="relative z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
+      class="relative z-50 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:max-h-[calc(100dvh-4rem)] md:hidden"
       transition:slide={{ duration: 300, easing: cubicOut }}
     >
-      <div class="space-y-6 px-4 py-6">
+      <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
-          <a
-            href="/"
-            class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
-            '/'
-              ? 'bg-prestige-gold/12 text-prestige-gold'
-              : ''}"
-            aria-current={pathname === '/' ? 'page' : undefined}
-            onclick={closeMobileMenu}
-          >
-            Home
-          </a>
+          <div class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2">
+            <span class="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-success">
+              <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
+              19+ guide
+            </span>
+            <span class="text-[11px] font-semibold text-text-tertiary">Play responsibly</span>
+          </div>
 
-          {#each mainLinks as item (item.href)}
+          <div class="grid grid-cols-2 gap-2">
             <a
-              href={item.href}
-              class="flex min-h-[48px] items-center rounded-xl px-4 text-base font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
-              item.href
+              href="/"
+              class="col-span-2 flex min-h-[46px] items-center justify-center rounded-xl px-4 text-sm font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
+              '/'
                 ? 'bg-prestige-gold/12 text-prestige-gold'
-                : ''}"
-              aria-current={pathname === item.href ? 'page' : undefined}
+                : 'bg-white/[0.025]'}"
+              aria-current={pathname === '/' ? 'page' : undefined}
               onclick={closeMobileMenu}
             >
-              {item.label}
+              Home
             </a>
-          {/each}
+
+            {#each mainLinks as item (item.href)}
+              <a
+                href={item.href}
+                class="flex min-h-[46px] items-center justify-center rounded-xl px-3 text-center text-sm font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
+                item.href
+                  ? 'bg-prestige-gold/12 text-prestige-gold'
+                  : 'bg-white/[0.025]'}"
+                aria-current={pathname === item.href ? 'page' : undefined}
+                onclick={closeMobileMenu}
+              >
+                {item.label}
+              </a>
+            {/each}
+          </div>
         </div>
 
         <div>
