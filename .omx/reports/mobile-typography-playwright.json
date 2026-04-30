@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-04-30T04:56:59.273Z",
+  "sourceArtifact": ".omx/reports/mobile-typography-audit.json",
+  "status": "partial-pass",
+  "note": "Compatibility artifact normalized from worker-3 audit output. It preserves required field names but documents that the approved test-spec viewport/URL matrix is not fully covered by the source audit.",
+  "requiredViewports": [
+    "360x740",
+    "390x844",
+    "768x1024",
+    "1440x900"
+  ],
+  "capturedViewports": [
+    "375x667",
+    "393x851"
+  ],
+  "capturedResultCount": 8,
+  "missingMatrixCoverage": [
+    "Approved test spec asks for 360x740, 390x844, 768x1024, 1440x900; source audit captured iphone-se 375x667 and pixel-5 393x851 only.",
+    "Approved test spec asks for broader representative routes; source audit captured /, /casino, /sportsbook, /search only."
+  ],
+  "results": [
+    {
+      "url": "/casino",
+      "slug": "casino",
+      "viewport": "iphone-se",
+      "viewportWidth": 375,
+      "viewportHeight": 667,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/iphone-se/casino.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-casino-iphone-se.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 25,
+        "paragraphCount": 47,
+        "ctaCount": 18,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/casino",
+      "slug": "casino",
+      "viewport": "pixel-5",
+      "viewportWidth": 393,
+      "viewportHeight": 851,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/pixel-5/casino.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-casino-pixel-5.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 25,
+        "paragraphCount": 47,
+        "ctaCount": 18,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/",
+      "slug": "home",
+      "viewport": "iphone-se",
+      "viewportWidth": 375,
+      "viewportHeight": 667,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/iphone-se/home.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-home-iphone-se.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 47,
+        "paragraphCount": 74,
+        "ctaCount": 30,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/",
+      "slug": "home",
+      "viewport": "pixel-5",
+      "viewportWidth": 393,
+      "viewportHeight": 851,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/pixel-5/home.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-home-pixel-5.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 47,
+        "paragraphCount": 74,
+        "ctaCount": 30,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/search",
+      "slug": "search",
+      "viewport": "iphone-se",
+      "viewportWidth": 375,
+      "viewportHeight": 667,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/iphone-se/search.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-search-iphone-se.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 8,
+        "paragraphCount": 10,
+        "ctaCount": 7,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/search",
+      "slug": "search",
+      "viewport": "pixel-5",
+      "viewportWidth": 393,
+      "viewportHeight": 851,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/pixel-5/search.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-search-pixel-5.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 8,
+        "paragraphCount": 10,
+        "ctaCount": 7,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/sportsbook",
+      "slug": "sportsbook",
+      "viewport": "iphone-se",
+      "viewportWidth": 375,
+      "viewportHeight": 667,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/iphone-se/sportsbook.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-sportsbook-iphone-se.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 32,
+        "paragraphCount": 70,
+        "ctaCount": 41,
+        "issueCount": 0
+      }
+    },
+    {
+      "url": "/sportsbook",
+      "slug": "sportsbook",
+      "viewport": "pixel-5",
+      "viewportWidth": 393,
+      "viewportHeight": 851,
+      "horizontalOverflow": 0,
+      "clippedTextCandidateCount": 0,
+      "stickyOverlap": false,
+      "ctaTextFits": true,
+      "navMenuScrollableAndFocusable": true,
+      "minTouchTargetFailures": 0,
+      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/pixel-5/sportsbook.png",
+      "sourceScreenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/.omx/reports/mobile-typography-screenshots/mobile-typography-sportsbook-pixel-5.png",
+      "status": "pass",
+      "sourceAuditFields": {
+        "headingCount": 32,
+        "paragraphCount": 70,
+        "ctaCount": 41,
+        "issueCount": 0
+      }
+    }
+  ]
+}
