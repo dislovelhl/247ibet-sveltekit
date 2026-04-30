@@ -31,7 +31,7 @@ pnpm build        # production build
 pnpm preview      # preview production build locally
 pnpm check        # type-check via svelte-check (run before committing)
 pnpm lint         # ESLint
-pnpm test         # run vitest test suite (77 tests)
+pnpm test         # run vitest test suite (113 tests)
 ```
 
 The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.

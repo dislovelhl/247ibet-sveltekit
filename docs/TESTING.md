@@ -4,9 +4,8 @@
 
 | Layer | Runner | Location | Count |
 |---|---|---|---|
-| Unit | vitest | `tests/*.test.ts` | ~102 tests (existing) |
-| Component | vitest + @testing-library/svelte | `tests/components/**/*.test.ts` | Placeholders (NEW) |
-| E2E | Playwright | `tests/e2e/**/*.spec.ts` | Scaffold (NEW) |
+| Unit | vitest | `tests/*.test.ts` | 113 tests (14 files) |
+| E2E | Playwright | `tests/e2e/**/*.spec.ts` | Scaffold (1 spec file, skipped) |
 
 ---
 

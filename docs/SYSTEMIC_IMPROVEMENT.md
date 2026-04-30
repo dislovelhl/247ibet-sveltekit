@@ -52,9 +52,9 @@
 
 ```
 pnpm check  ✅ 0 errors, 0 warnings
-pnpm lint    ✅ 0 errors, 57 warnings (pre-existing unused vars)
+pnpm lint    ✅ 0 errors, 0 warnings
 pnpm build   ✅ Success
-pnpm test    ✅ 22 tests pass
+pnpm test    ✅ 113 tests pass (14 test files)
 ```
 
 ## Remaining Items (Future Work)
@@ -63,5 +63,5 @@ pnpm test    ✅ 22 tests pass
 - [ ] Update undici/workflow dependencies (10 vulnerabilities)
 - [ ] Implement real admin auth (currently returns 401)
 - [ ] Implement server-side age verification
-- [x] Migrate Svelte 4 patterns to Svelte 5 (3 files)
+- [x] Migrate Svelte 4 patterns to Svelte 5 (GuideHighlights, IntentHubs, how-we-test)
 - [ ] Move generated hero images to CDN (183MB .git)

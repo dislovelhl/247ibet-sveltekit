@@ -7,16 +7,22 @@ defined in `.github/workflows/ci.yml`. All four gates must pass before a PR can 
 
 ## The 4 Gates
 
-| Step | Command | What it checks |
-|------|---------|----------------|
-| Type check | `pnpm check` | SvelteKit + TypeScript types via `svelte-check` |
-| Lint | `pnpm lint` | ESLint rules across `.svelte`, `.ts`, `.js` files |
-| Unit + integration tests | `pnpm test` | Vitest test suite (`tests/*.test.ts`) |
-| Build | `pnpm build` | Full production build via Vite / `@sveltejs/adapter-auto` |
+|| Step | Command | What it checks |
+||------|---------|----------------|
+|| Type check | `pnpm check` | SvelteKit + TypeScript types via `svelte-check` |
+|| Lint | `pnpm lint` | ESLint rules across `.svelte`, `.ts`, `.js` files |
+|| Unit + integration tests | `pnpm test` | Vitest test suite (113 tests across 14 files) |
+|| Build | `pnpm build` | Full production build via Vite / `@sveltejs/adapter-auto` |
 
 ## Running Locally
 
 Run all four gates in order before pushing:
+
+```bash
+pnpm check && pnpm lint && pnpm build && pnpm test
+```
+
+Or the short form (test before build is also acceptable for quick iteration):
 
 ```bash
 pnpm check && pnpm lint && pnpm test && pnpm build
