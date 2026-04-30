@@ -260,7 +260,7 @@
 
   <!-- Tier 2: Main bar (always visible) -->
   <div
-    class="container mx-auto flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-6 lg:px-8"
+    class="mx-auto flex h-14 w-full max-w-[1720px] items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-6 lg:px-8"
   >
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-3 lg:gap-8">

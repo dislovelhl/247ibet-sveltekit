@@ -218,6 +218,24 @@
       0 0 0 4px #d4943a;
   }
 
+  .btn-glossy-gold {
+    @apply relative overflow-hidden rounded-xl border border-prestige-gold/50 bg-gradient-to-br from-prestige-gold/20 to-prestige-gold/10 text-white shadow-[0_0_15px_-3px_rgba(212,148,58,0.3)];
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-glossy-gold::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-tr from-white/10 via-white/5 to-transparent opacity-0 transition-opacity;
+  }
+  .btn-glossy-gold:hover {
+    @apply border-prestige-gold/80 bg-prestige-gold/20 shadow-[0_0_20px_-3px_rgba(212,148,58,0.4)];
+  }
+  .btn-glossy-gold:hover::before {
+    @apply opacity-100;
+  }
+  .btn-glossy-gold:active {
+    @apply scale-[0.98] brightness-90;
+  }
+
   /* — Secondary: glass ghost — */
   .page-cta-secondary {
     @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.11em] text-white;

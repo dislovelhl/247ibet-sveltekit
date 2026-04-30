@@ -212,7 +212,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       </div>
 
       <div
-        class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl"
+        class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl aspect-[5/6] sm:aspect-auto"
       >
         <img
           src="/images/generated/interac-payment-hero.png"
@@ -348,7 +348,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
 
     <section class="mt-12 navy-card overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black text-white">Timing &amp; Expectation Limits</h2>
-      <div class="mt-7 overflow-x-auto">
+      <div class="table-scroll-wrap mt-7">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
             <tr

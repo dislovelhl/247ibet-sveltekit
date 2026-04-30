@@ -121,10 +121,10 @@
     { stat: '16%', label: 'Requested secondary KYC on first-time Interac withdrawals.' },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
-const LAST_UPDATED = '2026-04-29';
+  const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -180,12 +180,12 @@ const LAST_UPDATED = '2026-04-29';
       <li>/</li>
       <li><a href="/guides" class="hover:text-white">Guides</a></li>
       <li>/</li>
-      <li class="text-white font-medium">Interac e-Transfer Casino Guide</li>
+      <li class="text-white font-medium">Interac e-Transfer</li>
     </ol>
   </nav>
 
   <div
-    class="navy-card rounded-3xl border border-white/10 p-8 md:p-12 mb-10 relative overflow-hidden"
+    class="navy-card rounded-3xl border border-white/10 p-6 md:p-12 mb-10 relative overflow-hidden"
   >
     <div
       aria-hidden="true"
@@ -244,7 +244,7 @@ const LAST_UPDATED = '2026-04-29';
 
   <section class="mb-12">
     <h2 class="text-3xl font-bold text-white mb-6">Interac casino payment snapshot</h2>
-    <div class="overflow-hidden rounded-3xl border border-white/5 bg-black/40">
+    <div class="table-scroll-wrap rounded-3xl border border-white/5 bg-black/40">
       <table class="w-full border-collapse">
         <thead class="bg-white/[0.03]">
           <tr>
@@ -285,7 +285,7 @@ const LAST_UPDATED = '2026-04-29';
       This is the comparison that most players miss. Interac can be fast and safe, but the operator
       still controls payout approval and account checks.
     </p>
-    <div class="overflow-hidden rounded-2xl border border-white/5 bg-black/40">
+    <div class="table-scroll-wrap rounded-2xl border border-white/5 bg-black/40">
       <table class="w-full border-collapse">
         <thead class="bg-white/[0.03]">
           <tr>

@@ -315,11 +315,13 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-6 text-white">
-  <section class="relative overflow-hidden border-b border-prestige-gold/30">
+  <section class="relative aspect-[5/6] overflow-hidden border-b border-prestige-gold/30 sm:aspect-auto">
     <div class="absolute inset-0">
       <img
         src="/images/generated/casino-premium-hero.png"
         alt=""
+        width="1920"
+        height="1080"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -436,6 +438,8 @@
           controls
           playsinline
           preload="metadata"
+          width="1280"
+          height="720"
           poster="/images/generated/casino-premium-hero.png"
           aria-label="247iBET casino, sportsbook, and fast payouts overview video"
         >
@@ -639,6 +643,10 @@
                 <img
                   src={card.image}
                   alt=""
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -680,6 +688,10 @@
                 <img
                   src={card.image}
                   alt=""
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -775,6 +787,10 @@
                 <img
                   src={card.image}
                   alt=""
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>
