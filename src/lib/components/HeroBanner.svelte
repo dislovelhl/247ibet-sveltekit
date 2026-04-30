@@ -97,7 +97,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <div class="page-hero-kicker">
             <span
-              class="text-xs font-mono font-black uppercase tracking-[0.12em] text-prestige-gold sm:text-xs sm:tracking-[0.12em]"
+              class="text-xs font-mono font-black uppercase tracking-[0.12em] text-prestige-gold sm:text-xs sm:tracking-[0.14em]"
               >247iBET CANADA</span
             >
           </div>
@@ -168,7 +168,7 @@
         {#each oddsDoubled as game, i (i)}
           <span class="inline-flex items-center gap-3 px-5 border-r border-white/5 text-xs">
             <span
-              class="font-mono font-bold text-prestige-gold uppercase tracking-[0.12em] text-xs"
+              class="font-mono font-bold text-prestige-gold uppercase tracking-widest text-xs"
               >{game.sport}</span
             >
             <span class="text-text-body">{game.home}</span>

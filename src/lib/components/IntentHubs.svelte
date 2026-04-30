@@ -72,7 +72,7 @@
             <div class="flex items-center gap-2">
               {#if hub.featured}
                 <span
-                  class="px-2.5 py-1 rounded bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold tracking-[0.12em] uppercase"
+                  class="px-2.5 py-1 rounded bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold tracking-widest uppercase"
                 >
                   Featured
                 </span>
@@ -121,7 +121,7 @@
   </div>
 
   <nav aria-label="Quick destinations" class="mt-10 border-t border-white/5 pt-6">
-    <p class="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
+    <p class="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-text-tertiary">
       Quick destinations
     </p>
     <ul class="grid grid-cols-2 gap-x-8 gap-y-3 md:grid-cols-4">

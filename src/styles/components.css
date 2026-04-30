@@ -384,6 +384,7 @@
     min-height: 44px;
     padding: 0.625rem 0.875rem;
     font-size: 0.75rem;
+    line-height: 1.15;
     letter-spacing: 0.1em;
   }
 
@@ -429,6 +430,7 @@
     min-height: 44px;
     padding: 0.625rem 0.875rem;
     font-size: 0.75rem;
+    line-height: 1.15;
     letter-spacing: 0.1em;
   }
 
@@ -443,7 +445,8 @@
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
   .status-badge--live {

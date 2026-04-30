@@ -117,7 +117,7 @@
           </div>
 
           <div
-            class="flex items-center gap-1 text-xs text-prestige-gold font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.12em]"
+            class="flex items-center gap-1 text-xs text-prestige-gold font-bold mt-auto pt-2 relative z-10 uppercase tracking-[0.14em]"
           >
             {cta}
             <ArrowRight

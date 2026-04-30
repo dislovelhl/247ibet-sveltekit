@@ -154,7 +154,7 @@
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
                 <span
-                  class="flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-[0.12em]"
+                  class="flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-success/10 text-success border border-success/20 uppercase tracking-widest"
                 >
                   <ShieldCheck class="w-4 h-4" aria-hidden="true" /> Registry Status: Verified
                 </span>

@@ -189,7 +189,7 @@
     >
       <div class="flex items-center gap-2">
         <span class="live-dot" aria-hidden="true"></span>
-        <span class="font-mono text-xs uppercase tracking-[0.12em] text-gray-400"
+        <span class="font-mono text-xs uppercase tracking-[0.14em] text-gray-400"
           >19+ · Play Responsibly</span
         >
       </div>
@@ -389,7 +389,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="flex h-full min-h-[44px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
+                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
                     : 'text-gray-500'}"
