@@ -182,14 +182,14 @@ const LAST_UPDATED = '2026-04-29';
   <!-- Scoring criteria -->
   <section class="space-y-6 mb-10">
     <h2 class="text-2xl font-bold">Scoring Criteria (100 Points Total)</h2>
-    {#each CRITERIA as criterion}
-      <div class="navy-card rounded-2xl p-5 {criterion.bg}">
-        <h3 class="text-lg font-bold mb-3 flex items-center gap-2 {criterion.color}">
-          <svelte:component this={criterion.icon} class="w-5 h-5" aria-hidden="true" />
-          {criterion.title}
+    {#each CRITERIA as { icon: Icon, title, color, bg, steps }}
+      <div class="navy-card rounded-2xl p-5 {bg}">
+        <h3 class="text-lg font-bold mb-3 flex items-center gap-2 {color}">
+          <Icon class="w-5 h-5" aria-hidden="true" />
+          {title}
         </h3>
         <ul class="space-y-1.5">
-          {#each criterion.steps as step}
+          {#each steps as step}
             <li class="flex items-start gap-2 text-sm text-gray-400 font-sans">
               <span class="text-gray-600 shrink-0 mt-0.5">→</span>
               {step}

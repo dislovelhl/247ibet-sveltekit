@@ -88,7 +88,7 @@
     class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 pr-10 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0 lg:pr-0 [scroll-padding-inline-start:1rem] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-2rem),transparent)] lg:[mask-image:none]"
     style="scrollbar-width: none"
   >
-    {#each highlights as { href, icon, iconColor, title, description, category, cta }}
+    {#each highlights as { href, icon: Icon, iconColor, title, description, category, cta }}
       <div class="flex flex-none w-[280px] snap-start lg:w-auto lg:flex-none">
         <a
           {href}
@@ -98,7 +98,7 @@
             <div
               class="w-10 h-10 rounded-xl bg-navy-raised border border-white/5 flex items-center justify-center shrink-0 shadow-lg"
             >
-              <svelte:component this={icon} class="w-5 h-5 {iconColor}" aria-hidden="true" />
+              <Icon class="w-5 h-5 {iconColor}" aria-hidden="true" />
             </div>
             <span
               class="badge-glossy text-xs font-bold text-prestige-gold px-2.5 py-1 uppercase tracking-wider"

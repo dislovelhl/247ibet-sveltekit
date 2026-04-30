@@ -59,9 +59,9 @@ pnpm test    ✅ 22 tests pass
 
 ## Remaining Items (Future Work)
 
-- [ ] Fix 57 unused variable warnings (pre-existing)
+- [x] Fix unused variable warnings (cleared in v0.3.1)
 - [ ] Update undici/workflow dependencies (10 vulnerabilities)
 - [ ] Implement real admin auth (currently returns 401)
 - [ ] Implement server-side age verification
-- [ ] Migrate Svelte 4 patterns to Svelte 5 (3 files)
+- [x] Migrate Svelte 4 patterns to Svelte 5 (3 files)
 - [ ] Move generated hero images to CDN (183MB .git)

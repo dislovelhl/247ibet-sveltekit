@@ -63,8 +63,7 @@
             <div
               class="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 {hub.iconBg} border border-white/10 shadow-lg"
             >
-              <svelte:component
-                this={hub.icon}
+              <hub.icon
                 class="w-7 h-7 {hub.iconColor}"
                 aria-hidden="true"
               />
