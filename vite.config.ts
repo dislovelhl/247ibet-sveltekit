@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, type PluginOption } from 'vite';
-import { tailwindcss } from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import { vitePlugin } from 'braintrust/vite';
 
