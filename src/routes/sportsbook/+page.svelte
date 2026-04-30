@@ -301,8 +301,8 @@
     ],
   };
 
-const LAST_UPDATED = '2026-04-29';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  const LAST_UPDATED = '2026-04-29';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -341,9 +341,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             {/each}
           </nav>
           <div class="border-t border-white/8 pt-3">
-            <p
-              class="px-3 pb-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary"
-            >
+            <p class="px-3 pb-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
               Sports
             </p>
             <div class="space-y-1">
@@ -473,9 +471,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </div>
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
-              <thead
-                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-              >
+              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
                   <th class="px-4 py-3">Bookmaker</th>
                   <th class="px-4 py-3">Welcome</th>
@@ -541,9 +537,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </div>
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
-              <thead
-                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-              >
+              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
                   <th class="px-4 py-3">Match</th>
                   <th class="px-4 py-3">Market</th>
@@ -582,9 +576,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </div>
           <div class="overflow-x-auto rounded-lg border border-white/8">
             <table class="min-w-[760px] w-full text-left text-sm">
-              <thead
-                class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-              >
+              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
                   <th class="px-4 py-3">Event</th>
                   <th class="px-4 py-3">Score</th>
@@ -878,6 +870,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       </main>
     </div>
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </div>
 </div>

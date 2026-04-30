@@ -204,7 +204,7 @@
       ],
     },
   ];
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -377,11 +377,11 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
             <div
               class="relative h-24 overflow-hidden rounded-lg border border-prestige-gold/25 bg-black/25"
             >
-<img
-                 src={card.image}
-                 alt={card.title + ' casino games'}
-                 class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105"
-               />
+              <img
+                src={card.image}
+                alt={card.title + ' casino games'}
+                class="h-full w-full object-cover opacity-75 transition-transform group-hover:scale-105"
+              />
               <Icon class="absolute left-3 top-3 h-7 w-7 text-prestige-gold" aria-hidden="true" />
             </div>
             <div>
@@ -401,9 +401,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
 
     <section class="mt-10">
       <div class="mb-6">
-        <h2 class="text-3xl font-black">
-          Why Play Casino at 247iBET?
-        </h2>
+        <h2 class="text-3xl font-black">Why Play Casino at 247iBET?</h2>
       </div>
       <div class="grid gap-5 md:grid-cols-3">
         {#each whyCards as card}

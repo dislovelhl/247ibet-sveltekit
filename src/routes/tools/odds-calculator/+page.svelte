@@ -52,7 +52,7 @@
     })),
   };
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -223,9 +223,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-white/10 bg-white/[0.03]">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Odds</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Example on $100</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">What it means</th>
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >Odds</th
+            >
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >Example on $100</th
+            >
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >What it means</th
+            >
           </tr>
         </thead>
         <tbody class="divide-y divide-white/5">

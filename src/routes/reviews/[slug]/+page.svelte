@@ -46,7 +46,9 @@
     />
   </div>
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary">
+  <div
+    class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary"
+  >
     Play responsibly. 19+ only. <a
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a

@@ -39,9 +39,15 @@
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-white/10 bg-white/3">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Category</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">Example guides</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs">What you get</th>
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >Category</th
+            >
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >Example guides</th
+            >
+            <th class="text-left p-4 text-gray-400 font-mono uppercase tracking-[0.12em] text-xs"
+              >What you get</th
+            >
           </tr>
         </thead>
         <tbody class="divide-y divide-white/5">

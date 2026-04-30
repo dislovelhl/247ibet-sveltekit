@@ -529,9 +529,7 @@
           class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 md:block"
         >
           <table class="w-full min-w-[760px] text-left text-sm">
-            <thead
-              class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-            >
+            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
               <tr>
                 <th class="px-4 py-3">Feature</th>
                 <th class="px-4 py-3">Review note</th>
@@ -704,9 +702,7 @@
           class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 md:block"
         >
           <table class="w-full min-w-[720px] text-left text-sm">
-            <thead
-              class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-            >
+            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
               <tr>
                 <th class="px-4 py-3">Bonus type</th>
                 <th class="px-4 py-3">Good for</th>

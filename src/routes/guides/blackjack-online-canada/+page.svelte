@@ -106,10 +106,10 @@
 
   const liveFeatures = ['24/7 Available', 'HD Streaming', 'Multiple Limits', 'Interac Deposits'];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
-const LAST_UPDATED = '2026-04-29';
+  const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -308,7 +308,9 @@ const LAST_UPDATED = '2026-04-29';
   />
 
   <nav aria-label="Related pages" class="border-t border-white/10 pt-6">
-    <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-[0.12em] font-medium">Related guides</p>
+    <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-[0.12em] font-medium">
+      Related guides
+    </p>
     <div class="flex flex-wrap gap-3">
       <a
         href="/best-online-casinos-canada"
@@ -340,7 +342,9 @@ const LAST_UPDATED = '2026-04-29';
 
   <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary">
+  <div
+    class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary"
+  >
     Play responsibly. 19+ only. <a
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a
