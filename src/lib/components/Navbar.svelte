@@ -287,7 +287,7 @@
           <li>
             <a
               href={item.href}
-              class="relative inline-flex min-h-[40px] items-center rounded-full px-4 text-text-body transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black {pathname ===
+              class="relative inline-flex min-h-[44px] items-center rounded-full px-4 text-text-body transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black {pathname ===
               item.href
                 ? 'bg-prestige-gold/12 text-prestige-gold shadow-[0_0_0_1px_rgba(212,148,58,0.18)_inset]'
                 : ''}"
@@ -379,17 +379,17 @@
   <div
     class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
       ? 'max-h-0 opacity-0'
-      : 'max-h-10 opacity-100'}"
+      : 'max-h-11 opacity-100'}"
   >
     <div class="hidden border-t border-white/5 lg:block">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Quick category navigation">
-          <ul class="flex h-10 items-center overflow-x-auto [scrollbar-width:none]">
+          <ul class="flex min-h-11 items-center overflow-x-auto [scrollbar-width:none]">
             {#each subLinks as link (link.href)}
               <li>
                 <a
                   href={link.href}
-                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
+                  class="flex h-full min-h-[44px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
                     : 'text-gray-500'}"
