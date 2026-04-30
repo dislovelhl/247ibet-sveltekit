@@ -1,0 +1,5 @@
+coverage_path=/home/martin/Downloads/247ibet-sveltekit/.omx/reports/mobile-typography-coverage.md
+coverage_exists=True
+inventory_count=141
+missing_count=0
+all_inventory_files_present=true

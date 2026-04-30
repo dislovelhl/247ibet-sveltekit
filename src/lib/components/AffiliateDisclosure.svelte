@@ -6,7 +6,8 @@
 </script>
 
 <div
-  class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary leading-relaxed {variant === 'footer'
+  class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs leading-relaxed text-text-tertiary {variant ===
+  'footer'
     ? 'mt-4'
     : ''}"
 >

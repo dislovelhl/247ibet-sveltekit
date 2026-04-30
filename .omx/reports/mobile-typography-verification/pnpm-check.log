@@ -1,0 +1,8 @@
+
+> 247ibet-sveltekit@0.2.0 check /home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

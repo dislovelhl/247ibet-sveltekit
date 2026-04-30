@@ -1,0 +1,10 @@
+
+> 247ibet-sveltekit@0.2.0 lint /home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5
+> eslint .
+
+
+/home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5/vite.config.ts
+  44:5  warning  'workflowPlugins' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+

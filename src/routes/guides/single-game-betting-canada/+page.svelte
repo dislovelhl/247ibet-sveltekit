@@ -146,7 +146,9 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       How single-game sports betting became legal in Canada under Bill C-218, what bet types are
       available, and where to bet legally in 2026.
     </p>
-    <p class="text-[10px] text-[#8492A6]">Updated March 2026 · Interac deposits · 18+/19+</p>
+    <p class="text-[12px] leading-5 text-[#8492A6]">
+      Updated March 2026 · Interac deposits · 18+/19+
+    </p>
   </header>
 
   <AffiliateDisclosure />

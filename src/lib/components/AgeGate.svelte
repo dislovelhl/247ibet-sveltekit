@@ -117,7 +117,7 @@
       <!-- Badge -->
       <div class="flex justify-center mb-6">
         <div
-          class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-error"
+          class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-error"
         >
           <ShieldAlert class="w-3.5 h-3.5" aria-hidden="true" />
           Age Verification Required

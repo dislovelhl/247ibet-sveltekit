@@ -12,7 +12,7 @@
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import { Trophy, Star, X, Download } from 'lucide-svelte';
-  import { IBET_URLS, IBET_CTA } from '$lib/ibet-brand';
+  import { IBET_URLS } from '$lib/ibet-brand';
 
   interface BeforeInstallPromptEvent extends Event {
     prompt(): Promise<void>;
@@ -110,19 +110,19 @@
 {#if visible && !dismissed && !isStandalone}
   <div
     transition:fly={{ y: 100, duration: 350, easing: cubicOut }}
-    class="fixed bottom-0 left-0 right-0 z-40 md:hidden"
-    style="padding-bottom: env(safe-area-inset-bottom, 0px)"
+    class="fixed left-3 right-3 z-40 md:hidden"
+    style="bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px))"
     role="navigation"
     aria-label="Quick actions"
   >
     <div
-      class="border-t border-navy-border bg-navy-raised/95 px-3 py-2.5 backdrop-blur-md shadow-2xl"
+      class="rounded-2xl border border-navy-border bg-navy-raised/95 px-2 py-2 backdrop-blur-md shadow-[0_18px_54px_-20px_rgba(0,0,0,0.9)]"
     >
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1.5">
         {#if installPrompt}
           <button
             onclick={handleInstall}
-            class="flex min-h-12 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-3 py-3 text-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised"
+            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
           >
             <Download class="h-4 w-4 shrink-0" aria-hidden="true" />
             Install App
@@ -132,7 +132,7 @@
             href={IBET_URLS.casino}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex min-h-12 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-3 py-3 text-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised"
+            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
             aria-label="Open 247iBET Casino"
           >
             <Trophy class="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -144,17 +144,17 @@
           href={IBET_URLS.register}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex min-h-12 flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/8 px-3 py-3 text-sm font-bold text-white transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised"
+          class="flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/8 px-2 py-2.5 text-xs font-bold text-white transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
           aria-label="Open 247iBET Sports Betting"
         >
           <Star class="h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
-          {IBET_CTA.sports}
+          Sports
         </a>
 
         <button
           type="button"
           onclick={dismiss}
-          class="flex h-12 w-12 items-center justify-center rounded-lg text-text-body transition-colors hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised"
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-text-body transition-colors hover:bg-white/5 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised"
           aria-label="Dismiss quick actions (ESC)"
         >
           <X class="h-4 w-4" aria-hidden="true" />
@@ -162,9 +162,9 @@
       </div>
     </div>
 
-    <div class="bg-navy-black/95 px-3 py-1 text-center">
-      <span class="text-xs text-text-body">
-        18+/19+ depending on province · Gamble responsibly · Terms apply
+    <div class="px-2 pt-1 text-center">
+      <span class="text-xs leading-snug text-text-tertiary">
+        18+/19+ by province · Gamble responsibly · Terms apply
       </span>
     </div>
   </div>

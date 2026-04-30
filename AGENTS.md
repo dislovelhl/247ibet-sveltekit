@@ -83,7 +83,7 @@ Every page is wrapped by: `AgeGate` modal → `Navbar` → `<main>` (fade transi
 
 - **Surfaces**: `navy-black` (#070C18), `navy-card` (#0D1629), `navy-raised` (#142038)
 - **Accents**: `prestige-gold` (#D4943A), `slate-blue` (#4A9EBF)
-- **Fonts**: Plus Jakarta Sans (body/heading), Playfair Display (display/serif), JetBrains Mono (numbers/odds)
+- **Fonts**: Plus Jakarta Sans (body/heading), Be Vietnam Pro (display/sans), JetBrains Mono (numbers/odds)
 
 ### Svelte 5 patterns
 

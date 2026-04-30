@@ -133,7 +133,12 @@
   /* — Primary: gold filled — */
   .page-cta-primary {
     @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[13px] font-black uppercase tracking-[0.12em] text-navy-black;
-    background: linear-gradient(160deg, var(--color-prestige-gold-400) 0%, var(--color-prestige-gold) 52%, var(--color-prestige-gold-600) 100%);
+    background: linear-gradient(
+      160deg,
+      var(--color-prestige-gold-400) 0%,
+      var(--color-prestige-gold) 52%,
+      var(--color-prestige-gold-600) 100%
+    );
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.26) inset,
       0 -1px 0 0 rgba(0, 0, 0, 0.14) inset,
@@ -157,8 +162,13 @@
   }
 
   .page-cta-primary-sm {
-    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[10px] font-black uppercase tracking-[0.11em] text-navy-black;
-    background: linear-gradient(160deg, var(--color-prestige-gold-400) 0%, var(--color-prestige-gold) 52%, var(--color-prestige-gold-600) 100%);
+    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[12px] font-black uppercase tracking-[0.11em] text-navy-black;
+    background: linear-gradient(
+      160deg,
+      var(--color-prestige-gold-400) 0%,
+      var(--color-prestige-gold) 52%,
+      var(--color-prestige-gold-600) 100%
+    );
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.26) inset,
       0 -1px 0 0 rgba(0, 0, 0, 0.14) inset,
@@ -181,7 +191,12 @@
 
   .hero-cta-primary {
     @apply min-h-[52px] inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-sm font-black uppercase tracking-[0.12em] text-navy-black;
-    background: linear-gradient(160deg, var(--color-prestige-gold-400) 0%, var(--color-prestige-gold) 52%, var(--color-prestige-gold-600) 100%);
+    background: linear-gradient(
+      160deg,
+      var(--color-prestige-gold-400) 0%,
+      var(--color-prestige-gold) 52%,
+      var(--color-prestige-gold-600) 100%
+    );
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.26) inset,
       0 -1px 0 0 rgba(0, 0, 0, 0.14) inset,
@@ -230,7 +245,7 @@
   }
 
   .page-cta-secondary-sm {
-    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[11px] font-bold uppercase tracking-[0.11em] text-white;
+    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[12px] font-bold uppercase tracking-[0.11em] text-white;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow:
@@ -300,7 +315,7 @@
   }
 
   .page-cta-outline-sm {
-    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.11em] text-prestige-gold;
+    @apply min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.11em] text-prestige-gold;
     background: rgba(212, 148, 58, 0.05);
     border: 1px solid rgba(212, 148, 58, 0.38);
     box-shadow: 0 1px 0 0 rgba(212, 148, 58, 0.1) inset;
@@ -347,7 +362,12 @@
     min-height: 44px;
     padding: 0.875rem 1.75rem;
     border-radius: 9999px;
-    background: linear-gradient(160deg, var(--color-prestige-gold-400) 0%, var(--color-prestige-gold) 52%, var(--color-prestige-gold-600) 100%);
+    background: linear-gradient(
+      160deg,
+      var(--color-prestige-gold-400) 0%,
+      var(--color-prestige-gold) 52%,
+      var(--color-prestige-gold-600) 100%
+    );
     color: #070c18;
     font-family: var(--font-sans);
     font-weight: 800;
@@ -383,7 +403,8 @@
   .btn-gold--sm {
     min-height: 44px;
     padding: 0.625rem 0.875rem;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
+    line-height: 1.15;
     letter-spacing: 0.1em;
   }
 
@@ -428,7 +449,8 @@
   .btn-ghost--sm {
     min-height: 44px;
     padding: 0.625rem 0.875rem;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
+    line-height: 1.15;
     letter-spacing: 0.1em;
   }
 
@@ -441,9 +463,10 @@
     border-radius: 9999px;
     background: #142038;
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
   .status-badge--live {
