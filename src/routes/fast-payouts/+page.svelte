@@ -64,6 +64,11 @@
       },
     ],
   };
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -102,7 +107,7 @@
 
   <!-- Editorial image callout -->
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
-    <img src="/images/generated/fast-payouts-hero.png" alt="" class="h-full w-full object-cover" />
+    <img src="/images/generated/fast-payouts-hero.png" alt="Fast Interac e-Transfer casino payouts in Canada" class="h-full w-full object-cover" />
     <div
       class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"
     ></div>
@@ -128,11 +133,7 @@
     </p>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="mt-16 grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
     <div>
@@ -303,6 +304,8 @@
       contextLabel="Fast CAD payouts · Verified withdrawals · Interac-friendly banking"
     />
   </div>
+
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

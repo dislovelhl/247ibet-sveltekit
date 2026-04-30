@@ -2,6 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { AlertTriangle, Info, CheckCircle } from 'lucide-svelte';
 
   const LAST_UPDATED = '2026-03-01';
@@ -58,6 +59,7 @@
         'Free spins winnings are typically converted to bonus credits, which then need to meet wagering requirements before becoming real withdrawable funds. The maximum withdrawal from free spin winnings is usually capped (e.g., CAD $100). Check the specific bonus terms.',
     },
   ];
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -130,13 +132,10 @@
       work, Ontario compliance restrictions, and where to find legitimate offers.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card mb-8 rounded-2xl p-5 md:p-6">
     <h2 class="text-lg font-bold text-yellow-400 mb-3 flex items-center gap-2">

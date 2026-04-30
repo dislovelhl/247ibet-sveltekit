@@ -65,6 +65,11 @@
       why: 'Very short windows to clear wagering are designed to be difficult — especially for casual players',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -163,11 +168,7 @@
     </div>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-2xl border border-white/10 p-6 md:p-8 mb-6">
     <h2 class="text-[clamp(1.45rem,2vw,1.9rem)] font-bold text-white mb-4">
@@ -393,6 +394,8 @@
       >Cashier Verification Flows</a
     >
   </div>
+
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

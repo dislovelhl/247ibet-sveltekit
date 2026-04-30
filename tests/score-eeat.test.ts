@@ -10,6 +10,10 @@ describe('scoreEEAT', () => {
       date: 0,
       citations: 0,
       structuredData: 0,
+      directAnswer: 0,
+      tableData: 0,
+      summaryBox: 0,
+      faq: 0,
       total: 0,
     });
   });
@@ -72,8 +76,32 @@ describe('scoreEEAT', () => {
       <script type="application/ld+json">{"@type":"Article"}</script>
     `;
     const r = await scoreEEAT('/p', html);
-    expect(r.total).toBe(r.author + r.date + r.citations + r.structuredData);
+    expect(r.total).toBe(r.author + r.date + r.citations + r.structuredData + r.directAnswer + r.tableData + r.summaryBox + r.faq);
     expect(r.total).toBe(25 + 25 + 5 + 25);
+  });
+
+  it('awards 25 for a direct answer following a heading', async () => {
+    const html = '<h1>Title</h1><p>This is a direct answer of sufficient length to be captured by the regex.</p>';
+    const r = await scoreEEAT('/x', html);
+    expect(r.directAnswer).toBe(25);
+  });
+
+  it('awards 25 for a table element', async () => {
+    const html = '<table><tr><td>Data</td></tr></table>';
+    const r = await scoreEEAT('/x', html);
+    expect(r.tableData).toBe(25);
+  });
+
+  it('awards 25 for a summary box element', async () => {
+    const html = '<div class="summary">Key takeaways here</div>';
+    const r = await scoreEEAT('/x', html);
+    expect(r.summaryBox).toBe(25);
+  });
+
+  it('awards 25 for an FAQ section', async () => {
+    const html = '<div id="home-faq-panel-1">Answer</div>';
+    const r = await scoreEEAT('/x', html);
+    expect(r.faq).toBe(25);
   });
 
   it('threads the path through unchanged', async () => {

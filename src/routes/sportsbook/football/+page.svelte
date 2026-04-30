@@ -106,6 +106,24 @@
           'Review how same-game and multi-game parlays fit into football bet-slip building.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare top-rated Canadian sports betting sites side by side.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert odds and calculate payouts for football markets.',
+        accent: 'blue',
+      },
+      {
+        href: '/guides/sports-betting-odds-explained',
+        label: 'Odds Explained',
+        description: 'Learn decimal, American, and fractional odds formats.',
+        accent: 'neutral',
+      },
     ],
     ctaContextLabel: 'Football · NFL · Super Bowl futures · 19+',
   };
@@ -165,7 +183,7 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt="" class="h-full w-full object-cover opacity-80" />
+      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>

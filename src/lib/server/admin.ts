@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit';
-import { env } from '$env/dynamic/public';
+import { env } from '$env/dynamic/private';
 
 export function requireAdminEnabled(): never {
-  if (env.PUBLIC_ADMIN_ENABLED !== 'true') {
+  if (env.ADMIN_ENABLED !== 'true') {
     error(404, 'Not Found');
   }
   error(401, 'Unauthorized — admin access requires authentication');

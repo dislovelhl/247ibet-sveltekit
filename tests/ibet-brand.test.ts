@@ -72,4 +72,31 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
     expect(IBET_DISCLAIMER.toLowerCase()).toContain('responsibly');
     expect(IBET_DISCLAIMER).toContain('T&Cs');
   });
+
+  it('uses affiliate-guide CTAs instead of operator-style CTAs', () => {
+    expect(IBET_CTA.primary).toBe('Visit Partner Site');
+    expect(IBET_CTA.register).toBe('Visit Partner Site');
+    expect(IBET_CTA.deposit).toBe('Compare Payouts');
+    expect(Object.values(IBET_CTA)).not.toContain('Play Now');
+  });
+
+  it('keeps the trust copy cautious about licensing and commissions', () => {
+    const profileText = [
+      IBET_PROFILE.tagline,
+      IBET_PROFILE.withdrawalSpeed,
+      ...IBET_PROFILE.features.flatMap((feature) => [feature.label, feature.detail]),
+      ...IBET_PROFILE.trustSignals,
+      ...IBET_PROFILE.pros,
+      ...IBET_PROFILE.cons,
+      IBET_DISCLAIMER,
+    ].join(' ');
+
+    expect(profileText).toContain('15-30 minutes after approval');
+    expect(profileText).toContain('independent guide');
+    expect(profileText).toContain('may earn commission');
+    expect(profileText).toContain('Confirm eligibility and licensing');
+    expect(profileText).not.toMatch(
+      /5,000\+|Play Now|Fully regulated|Kahnawake Licensed|AGCO compliance/,
+    );
+  });
 });

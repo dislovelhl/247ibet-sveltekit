@@ -62,7 +62,7 @@ Every page is wrapped by: `AgeGate` modal → `Navbar` → `<main>` (fade transi
 - `/admin/*` — internal affiliate/analytics dashboards
 - `/design-system`, `/lab/design-exploration` — design reference pages (not production content)
 
-All pages are currently client-rendered (no `+page.server.ts` or `+layout.server.ts` files; `hooks.server.ts` was removed).
+- Most pages are client-rendered, but global routing intercepts are handled server-side via `src/routes/+layout.server.ts` (age gate and cache control) and `src/routes/admin/+layout.server.ts` (admin access checks).
 
 ### CSS architecture
 

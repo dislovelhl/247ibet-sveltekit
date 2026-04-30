@@ -10,7 +10,28 @@
   /* Accents */
   --color-prestige-gold: #d4943a;
   --color-prestige-gold-light: #e8ac52;
+  --color-prestige-gold-50: #f2d9b6;
+  --color-prestige-gold-100: #f2d6af;
+  --color-prestige-gold-200: #f2d0a2;
+  --color-prestige-gold-300: #f2cb94;
+  --color-prestige-gold-400: #f2c586;
+  --color-prestige-gold-500: #d4a769;
+  --color-prestige-gold-600: #a9824b;
+  --color-prestige-gold-700: #7f5e31;
+  --color-prestige-gold-800: #543d1b;
+  --color-prestige-gold-900: #2a1d0b;
+
   --color-slate-blue: #4a9ebf;
+  --color-slate-blue-50: #bfe4f2;
+  --color-slate-blue-100: #bae2f2;
+  --color-slate-blue-200: #aedff2;
+  --color-slate-blue-300: #a3dbf2;
+  --color-slate-blue-400: #97d8f2;
+  --color-slate-blue-500: #6ea8bf;
+  --color-slate-blue-600: #518498;
+  --color-slate-blue-700: #376172;
+  --color-slate-blue-800: #21404c;
+  --color-slate-blue-900: #0e1f26;
 
   /* Semantic */
   --color-success: #22c55e;

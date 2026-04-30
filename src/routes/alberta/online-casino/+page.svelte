@@ -47,6 +47,8 @@
     'Keep Interac, ID, and proof-of-address documents ready so KYC does not slow down first access.',
     'Use deposit limits and other safer-play controls from the start instead of waiting until after launch.',
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -104,11 +106,7 @@
     <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-04-02</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="mb-10 navy-card rounded-3xl border border-white/10 p-6 md:p-8">
     <h2 class="mb-4 text-2xl font-bold text-white">Alberta online casino launch watch</h2>

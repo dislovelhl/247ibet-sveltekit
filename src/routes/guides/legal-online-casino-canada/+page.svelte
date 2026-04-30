@@ -125,6 +125,8 @@
         'Once the safety and payment basics are clear, audit game depth, live dealer selection, loyalty value, app experience, and customer support.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -244,11 +246,7 @@
     </p>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="mb-12">
     <h2 class="text-2xl font-bold text-white mb-5">Canadian online casino market snapshot</h2>

@@ -61,7 +61,7 @@ Every page is wrapped by: `AgeGate` modal → `Navbar` → `<main>` (fade transi
 - `/admin/*` — internal affiliate/analytics dashboards
 - `/design-system`, `/lab/design-exploration` — design reference pages (not production content)
 
-All pages are currently client-rendered (no `+page.server.ts` or `+layout.server.ts` files; `hooks.server.ts` was removed).
+- Most pages are client-rendered, but global routing intercepts are handled server-side via `src/routes/+layout.server.ts` (age gate and cache control) and `src/routes/admin/+layout.server.ts` (admin access checks).
 
 ### CSS architecture
 
@@ -82,7 +82,7 @@ All pages are currently client-rendered (no `+page.server.ts` or `+layout.server
 
 - **Surfaces**: `navy-black` (#070C18), `navy-card` (#0D1629), `navy-raised` (#142038)
 - **Accents**: `prestige-gold` (#D4943A), `slate-blue` (#4A9EBF)
-- **Fonts**: Plus Jakarta Sans (body/heading), Playfair Display (display/serif), JetBrains Mono (numbers/odds)
+- **Fonts**: Plus Jakarta Sans (body/heading), Be Vietnam Pro (display/sans), JetBrains Mono (numbers/odds)
 
 ### Svelte 5 patterns
 

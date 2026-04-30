@@ -75,12 +75,12 @@
           </div>
 
           <p class="max-w-sm text-sm leading-relaxed text-gray-400">
-            Canadian iGaming coverage — casino, sportsbook, live dealer, and payment guides for
-            players in Ontario and Alberta. Must be 19+ to play.
+            Independent Canadian iGaming coverage — casino, sportsbook, live dealer, payment, and
+            responsible-gaming guides. Legal age varies by province.
           </p>
 
           <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-gray-600">
-            Ontario &amp; Alberta Licensed · 19+ Only · Fast Payouts
+            Independent guide · 18+/19+ by province · Verify licensing before depositing
           </p>
 
           <!-- Social icons -->

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   const PROVINCE_STATUS = [
     {
       province: 'Ontario',
@@ -81,6 +82,9 @@
       a: "Alberta's iGaming market is being developed by the Alberta iGaming Corporation (AiGC). Commercial launch is targeted for 2026. Our Alberta tracker page has the latest status on operator licensing approvals.",
     },
   ];
+
+const LAST_UPDATED = '2026-04-29';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -134,11 +138,7 @@
     <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-03-01</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section
     class="navy-card rounded-3xl border border-white/5 p-6 md:p-10 mb-10 relative overflow-hidden"
@@ -382,6 +382,13 @@
       </details>
     {/each}
   </section>
+
+  <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
+    <a href="/gambling-laws-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Gambling Laws by Province</a>
+    <a href="/gambling-age-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Gambling Age in Canada</a>
+  </nav>
+
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

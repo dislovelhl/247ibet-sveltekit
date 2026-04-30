@@ -103,6 +103,9 @@
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
   };
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -147,6 +150,7 @@
       bank account holders.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
   <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
@@ -160,11 +164,7 @@
     </p>
   </div>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures showPros />
 

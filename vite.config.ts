@@ -47,9 +47,9 @@ export default defineConfig(async ({ command }) => {
     plugins: [
       enhancedImages(),
       tailwindcss(),
-      ...workflowPlugins,
-      ...braintrustBuildPlugin(command),
       sveltekit(),
+      // ...workflowPlugins,
+      ...braintrustBuildPlugin(command),
       cssInlineSSRFix,
     ],
   };

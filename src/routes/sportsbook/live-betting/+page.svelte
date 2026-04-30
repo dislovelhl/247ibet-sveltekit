@@ -106,6 +106,18 @@
           'Learn how live pricing translates into implied probability before comparing in-play numbers.',
         accent: 'neutral',
       },
+      {
+        href: '/best-sports-betting-sites-canada',
+        label: 'Best Sportsbooks',
+        description: 'Compare platforms with the best live betting interfaces.',
+        accent: 'gold',
+      },
+      {
+        href: '/tools/odds-calculator',
+        label: 'Odds Calculator',
+        description: 'Convert live odds and calculate cash-out values.',
+        accent: 'blue',
+      },
     ],
     ctaContextLabel: 'Live in-play · cash-out · mobile flow · 19+',
   };
@@ -165,7 +177,7 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt="" class="h-full w-full object-cover opacity-80" />
+      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>

@@ -72,6 +72,8 @@
         'Most modern live casino studios do. Stream quality still depends on the provider, your device, and your network conditions, so the best setup is the one that stays stable during longer sessions.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -147,11 +149,7 @@
     </p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
     <div
@@ -210,6 +208,21 @@
       href="/interac"
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
       >Deposit with Interac</a
+    >
+    <a
+      href="/best-online-casinos-canada"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Best Online Casinos</a
+    >
+    <a
+      href="/guides/how-to-choose-online-casino"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >How to Choose a Casino</a
+    >
+    <a
+      href="/fast-payouts"
+      class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+      >Fast Payouts</a
     >
   </nav>
 

@@ -35,6 +35,8 @@
       desc: 'Bet while the game is in progress. Odds shift in real time. Major sportsbooks offer the deepest in-play NHL markets.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -95,11 +97,7 @@
     <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-03-01</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 

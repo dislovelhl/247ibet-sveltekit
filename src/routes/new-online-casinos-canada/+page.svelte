@@ -27,6 +27,9 @@
         'AGCO licensing only covers Ontario. Players in BC, Alberta, Manitoba, and other provinces may access new offshore-licensed operators that legally serve Canadians, though without provincial oversight. Alberta is actively developing its own iGaming framework for 2026–2027.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -87,13 +90,10 @@
       payment localized support.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
+    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 

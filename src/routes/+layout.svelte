@@ -9,7 +9,6 @@
   import { SITE, ogImageUrl } from '$lib/site';
   import Navbar from '$lib/components/Navbar.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
-  import AgeGate from '$lib/components/AgeGate.svelte';
   import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
 
   onMount(() => {
@@ -31,8 +30,6 @@
   <link rel="preconnect" href="https://boapi.ibet247.ca" />
   <link rel="dns-prefetch" href="https://boapi.ibet247.ca" />
 </svelte:head>
-
-<AgeGate />
 
 <a
   href="#main-content"

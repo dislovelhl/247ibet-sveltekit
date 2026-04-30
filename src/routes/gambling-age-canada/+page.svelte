@@ -86,6 +86,11 @@
     'Sometimes: proof of address (utility bill, bank statement)',
     'Sometimes: selfie photo with ID for enhanced verification',
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -135,11 +140,7 @@
     </div>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-2xl overflow-hidden mb-8">
     <table class="w-full text-sm">
@@ -229,6 +230,8 @@
       >KYC verification guide</a
     >
   </div>
+
+<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

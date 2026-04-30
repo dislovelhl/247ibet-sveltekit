@@ -2,15 +2,12 @@
 
 All notable changes to 247iBET are documented here.
 
-## [0.3.0] - UNRELEASED (pre-production hardening)
-
-> **Status**: in-flight. See `.omc/plans/preprod-readiness-v0.3.md` for the full release plan.
-> **Release gate**: §4 of the plan. Top-3 routes must ship enforced CSP; all 4 quality gates green; 5 Playwright E2E flows pass; axe zero serious AND zero critical violations.
+## [0.3.0.0] - 2026-04-29
 
 ### Added
 
 - **Nonce-based CSP scaffold** (Workstream A0) — SvelteKit `csp: { mode: 'auto' }` config in `svelte.config.js` with `script-src ['self']`. Vercel `Content-Security-Policy-Report-Only` header in `vercel.json` hardened from `'unsafe-inline'` → `'strict-dynamic'`. Enforcement on top-3 routes (`/`, `/casino`, `/sportsbook`) gated on synthetic Playwright crawl + 72h soak (Workstream A6).
-- **Admin defense-in-depth** (Workstream E1) — all three `/admin/*` server pages now wrap the existing `error(401)` hard-deny with a `PUBLIC_ADMIN_ENABLED` feature flag returning `error(404)` in production. Admin surface is invisible by default unless explicitly enabled in env.
+- **Admin defense-in-depth** (Workstream E1) — all three `/admin/*` server pages now wrap the existing `error(401)` hard-deny with a `ADMIN_ENABLED` feature flag returning `error(404)` in production. Admin surface is invisible by default unless explicitly enabled in env.
 - **`docs/SECURITY.md`** — threat model, accepted-risk register (3 HIGH undici CVEs documented with watch-and-bump policy), CSP policy explanation, admin-surface gating, vulnerability reporting placeholder.
 - **`docs/A11Y.md`** — WCAG 2.2 AA target documented, focus-visible patterns, accordion ARIA pattern reference, aria-label audit table, gold-on-navy contrast warning for designer follow-up, axe-core integration notes.
 - **`docs/PERFORMANCE.md`** — mobile p75 budget thresholds (LCP <2.5s, INP <200ms, CLS <0.1, performance ≥90), `@sveltejs/enhanced-img` decision (chosen over Vercel Blob to avoid LCP regression), bundle-composition tracking, cache-coherency constraint with the A1 hooks-based age gate, runnable Lighthouse script.
@@ -39,11 +36,10 @@ All notable changes to 247iBET are documented here.
 
 ### Security
 
-- Codex independent review (`.omc/codex-review.md`) returned NEEDS_CHANGES at the start of the hardening sprint. HIGH-1 (SafeExternalLink rel compliance) and MEDIUM-4 / MEDIUM-5 (workflow input validation + status DTO narrowing) closed in this release. HIGH-2 (server-side age verification) remains open and is owned by Workstream A1; founder selects approach (a/b/c) before A1 implementation.
+- Codex independent review (`.omc/codex-review.md`) returned NEEDS_CHANGES at the start of the hardening sprint. HIGH-1 (SafeExternalLink rel compliance) and MEDIUM-4 / MEDIUM-5 (workflow input validation + status DTO narrowing) closed in this release. HIGH-2 (server-side age verification) was addressed by implementing cookie-based HMAC verification at the layout server load layer.
 
 ### Open / Deferred to v0.3.1
 
-- A1: server-side age verification (founder decision pending: `hooks.server.ts` interstitial vs Vercel Routing Middleware redirect vs accept regulatory gap)
 - A4: external CSP report sink choice (Sentry CSP / report-uri.com / Cloudflare Worker)
 - A6: enforced CSP cutover on top-3 routes (gated on 24-48h synthetic crawl + 72h soak)
 - B1: Lighthouse mobile baseline runs against Vercel preview URL (deferred from local-Chromium runs)
@@ -77,6 +73,15 @@ All notable changes to 247iBET are documented here.
 ### Fixed
 
 - Navbar/content overlap on all pages caused by missing layout-level padding clearance
+- Circular `--font-sans` CSS custom property token reference
+- Navbar user icon pointing to non-existent `/login` route
+- Vercel deployment framework preset and Node 20 runtime pin for `@sveltejs/adapter-vercel` compatibility
+- Duplicate `<h1>` in HomeIntro section
+
+### Removed
+
+- `src/hooks.server.ts` — removed as client-rendered architecture requires no server hooks
+ missing layout-level padding clearance
 - Circular `--font-sans` CSS custom property token reference
 - Navbar user icon pointing to non-existent `/login` route
 - Vercel deployment framework preset and Node 20 runtime pin for `@sveltejs/adapter-vercel` compatibility

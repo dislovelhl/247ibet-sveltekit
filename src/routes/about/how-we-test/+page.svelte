@@ -10,6 +10,9 @@
     Scale,
     BookOpen,
   } from 'lucide-svelte';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 
   const CRITERIA = [
     {
@@ -221,4 +224,6 @@
       >Affiliate Disclosure</a
     >.
   </div>
+
+<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 </div>

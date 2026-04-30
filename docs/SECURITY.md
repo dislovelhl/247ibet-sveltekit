@@ -50,17 +50,17 @@ The Vercel `Content-Security-Policy-Report-Only` header in `vercel.json` mirrors
 
 All routes under `/admin/*` are protected by two independent layers:
 
-**Gate 1 — Feature flag** (`PUBLIC_ADMIN_ENABLED` env var):
+**Gate 1 — Feature flag** (`ADMIN_ENABLED` env var):
 
 ```ts
-if (env.PUBLIC_ADMIN_ENABLED !== 'true') {
+if (env.ADMIN_ENABLED !== 'true') {
   error(404, 'Not Found');
 }
 ```
 
 The env var defaults to absent/unset on all Vercel deployments (preview and production). An absent var evaluates as `undefined !== 'true'`, so the 404 fires. Returning 404 rather than 401 or 403 minimizes information disclosure — an attacker scanning routes gets no confirmation that an admin surface exists.
 
-To enable the admin surface on a specific deployment, set `PUBLIC_ADMIN_ENABLED=true` in the Vercel project environment variables for that environment only.
+To enable the admin surface on a specific deployment, set `ADMIN_ENABLED=true` in the Vercel project environment variables for that environment only.
 
 **Gate 2 — Hard-deny** (`error(401)` upstream):
 

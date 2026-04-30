@@ -2,6 +2,9 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import type { FAQPageSchema } from '$lib/workflows/types.js';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+const LAST_UPDATED = '2026-04-29';
 
   const faqSchema: FAQPageSchema = {
     '@context': 'https://schema.org',
@@ -387,4 +390,6 @@
       <li><a href="/responsible-gambling">Responsible Gambling Support</a></li>
     </ul>
   </section>
+
+<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 </div>

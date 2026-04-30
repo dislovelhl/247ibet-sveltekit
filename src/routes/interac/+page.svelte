@@ -88,12 +88,32 @@
   ];
 
   const faqItems = [
-    'How long does an Interac withdrawal take?',
-    'Are there fees for using Interac?',
-    'What is the minimum Interac deposit?',
-    'Is Interac safer than cards?',
-    'Why was my Interac transfer declined?',
+    {
+      q: 'How long does an Interac withdrawal take?',
+      a: 'Once the operator approves your withdrawal, Interac e-Transfer typically arrives within 15–30 minutes. First withdrawals may take longer due to initial KYC checks.',
+    },
+    {
+      q: 'Are there fees for using Interac?',
+      a: '247iBET does not charge fees for Interac e-Transfer deposits or withdrawals. Your bank may charge a nominal fee for sending e-Transfers — check with your financial institution.',
+    },
+    {
+      q: 'What is the minimum Interac deposit?',
+      a: 'The minimum Interac e-Transfer deposit at 247iBET is CAD $10. Maximum deposits vary by account verification level and banking partner.',
+    },
+    {
+      q: 'Is Interac safer than cards?',
+      a: 'Interac e-Transfer uses bank-level encryption and does not share your banking details with the casino — you send funds directly from your bank. This makes it as safe or safer than card payments for online gambling transactions.',
+    },
+    {
+      q: 'Why was my Interac transfer declined?',
+      a: 'Common reasons: daily transfer limit reached at your bank, incorrect security question/answer, or your financial institution blocks gambling-related transfers. Contact your bank to confirm their policy on e-Transfers to casino operators.',
+    },
   ];
+
+  let faqOpenIndex = $state<number | null>(null);
+
+const LAST_UPDATED = '2026-04-29';
+import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -338,14 +358,34 @@
     <section class="mt-12 navy-card p-6 md:p-8">
       <h2 class="text-3xl font-black text-white">Interac FAQ</h2>
       <div class="mt-6 divide-y divide-white/8">
-        {#each faqItems as item}
-          <button
-            type="button"
-            class="flex w-full items-center justify-between gap-6 py-5 text-left"
-          >
-            <span class="text-base font-black text-white">{item}</span>
-            <ChevronDown class="h-5 w-5 shrink-0 text-text-body" aria-hidden="true" />
-          </button>
+        {#each faqItems as item, i}
+          <div>
+            <button
+              id="interac-faq-btn-{i}"
+              type="button"
+              class="flex w-full items-center justify-between gap-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
+              aria-expanded={faqOpenIndex === i}
+              aria-controls="interac-faq-panel-{i}"
+              onclick={() => (faqOpenIndex = faqOpenIndex === i ? null : i)}
+            >
+              <span class="text-base font-black text-white">{item.q}</span>
+              <ChevronDown
+                class="h-5 w-5 shrink-0 text-text-body transition-transform duration-200 {faqOpenIndex ===
+                i
+                  ? 'rotate-180'
+                  : ''}"
+                aria-hidden="true"
+              />
+            </button>
+            <div
+              id="interac-faq-panel-{i}"
+              role="region"
+              aria-labelledby="interac-faq-btn-{i}"
+              hidden={faqOpenIndex !== i}
+            >
+              <p class="pb-5 text-sm leading-6 text-text-body">{item.a}</p>
+            </div>
+          </div>
         {/each}
       </div>
       <p class="mt-6 text-center text-sm text-text-body">
@@ -394,5 +434,6 @@
         </a>
       </div>
     </section>
+  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </main>
 </div>

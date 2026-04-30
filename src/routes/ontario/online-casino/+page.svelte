@@ -20,6 +20,8 @@
         'Yes. Interac e-Transfer is one of the most reliable and widely used payment methods for Ontario players, supporting both CAD deposits and withdrawals.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -78,11 +80,7 @@
     <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-04-02</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="mt-12 navy-card rounded-2xl border border-white/10 p-8 mb-10">
     <h2 class="text-2xl font-bold text-white mb-6">Ontario Casino Setup</h2>

@@ -71,6 +71,10 @@ export type EEATScore = {
   date: number;
   citations: number;
   structuredData: number;
+  directAnswer: number;
+  tableData: number;
+  summaryBox: number;
+  faq: number;
   total: number;
 };
 

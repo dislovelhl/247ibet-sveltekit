@@ -64,6 +64,8 @@
       description: 'Analyze Alberta launch context against Ontario and other provinces.',
     },
   ];
+
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -155,11 +157,7 @@
     <p class="mt-3 text-xs text-text-tertiary">Last updated: April 2, 2026</p>
   </header>
 
-  <div
-    class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs text-text-tertiary"
-  >
-    Affiliate disclosure: This page may contain affiliate links.
-  </div>
+  <AffiliateDisclosure />
 
   <section class="navy-card rounded-2xl border border-yellow-500/20 p-6 md:p-8 mb-10">
     <h2 class="text-2xl font-bold text-white mb-4">How to use this watchlist</h2>
