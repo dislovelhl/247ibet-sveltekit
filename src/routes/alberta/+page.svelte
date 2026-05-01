@@ -61,6 +61,19 @@
         'Use the age grid when you need Alberta-specific guidance alongside Ontario and Quebec.',
     },
   ];
+
+  const LAST_UPDATED = '2026-04-29';
+  import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function handleMouseMove(e: MouseEvent) {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    mouseX = (clientX / innerWidth - 0.5) * 20;
+    mouseY = (clientY / innerHeight - 0.5) * 20;
+  }
 </script>
 
 <svelte:head>
@@ -92,11 +105,11 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 pb-20">
+<div class="min-h-screen bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
     <nav aria-label="Breadcrumb" class="mb-10">
-      <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
-        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary">
+        <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
         <li class="text-prestige-gold">Alberta</li>
       </ol>
@@ -106,11 +119,13 @@
       <img
         src="/images/generated/canada-market-hero.png"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover opacity-50"
+        class="absolute inset-0 h-full w-full object-cover opacity-40"
+        style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
       
-      <div class="relative z-10 p-8 md:p-14">
+      <div class="relative z-10 p-8 md:p-14 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
+           style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
@@ -118,19 +133,19 @@
               Launch Watch
             </p>
           </div>
-          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5">
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
               AGLC · 18+ · Pending 2026
             </p>
           </div>
         </div>
 
-        <h1 class="page-hero-title">
+        <h1 class="page-hero-title !tracking-tighter">
           Alberta <br />
-          <span class="text-prestige-gold">Market Tracker</span>
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Market Tracker</span>
         </h1>
 
-        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
           Tracking the Alberta regulated iGaming launch. Verified guidance on legal age, AGLC licensing, and upcoming casino operators for Alberta players.
         </p>
       </div>
@@ -138,16 +153,17 @@
 
   <AffiliateDisclosure />
 
-    <section class="glass-thin mb-16 rounded-[2rem] p-8 md:p-12">
+    <section class="glass-premium mb-16 rounded-[2rem] p-8 md:p-12 border border-white/10 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20 shimmer-effect pointer-events-none"></div>
       <div class="flex items-center gap-4 mb-8">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold ring-1 ring-prestige-gold/20">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 shadow-lg group-hover:scale-110 transition-transform">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
         </div>
         <div>
-          <h2 class="font-display text-2xl font-black uppercase text-white">Alberta Launch Guidance</h2>
-          <p class="text-sm text-text-tertiary">Important markers for the 2026 go-live</p>
+          <h2 class="font-display text-2xl font-black uppercase text-white !tracking-tighter">Alberta Launch Guidance</h2>
+          <p class="text-[10px] font-black uppercase tracking-widest text-prestige-gold">Important markers for the 2026 go-live</p>
         </div>
       </div>
       

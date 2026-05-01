@@ -175,7 +175,7 @@
 <nav
   aria-label="Main navigation"
   class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out animate-fade-down {scrolled
-    ? 'glass-thick border-white/10 shadow-[0_18px_64px_-24px_rgba(0,0,0,0.9)]'
+    ? 'glass-premium border-white/15 shadow-[0_20px_70px_-20px_rgba(0,0,0,0.9)]'
     : 'border-white/5 bg-navy-black/60 backdrop-blur-md'}"
 >
   <!-- Tier 1: Utility bar — desktop only, collapses on scroll -->
@@ -189,7 +189,7 @@
     >
       <div class="flex items-center gap-2">
         <span class="live-dot" aria-hidden="true"></span>
-        <span class="font-mono text-xs uppercase tracking-[0.14em] text-gray-400"
+        <span class="font-mono text-xs uppercase tracking-[0.14em] text-text-tertiary"
           >19+ · Play Responsibly</span
         >
       </div>
@@ -250,7 +250,7 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Follow ${SITE.name} on TikTok`}
-          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-6 w-6 items-center justify-center rounded-sm text-text-tertiary transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <Music2 class="h-3 w-3" aria-hidden="true" />
         </a>
@@ -338,7 +338,7 @@
           href={PARTNER.url}
           target="_blank"
           rel="nofollow sponsored noopener noreferrer"
-          class="page-cta-primary-sm"
+          class="page-cta-primary-sm shimmer-effect"
           aria-label="Visit partner site"
         >
           Visit Partner Site
@@ -350,7 +350,7 @@
       <a
         href="/responsible-gambling"
         aria-label="Responsible gaming tools"
-        class="hidden h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-gray-300 transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black min-[360px]:flex"
+        class="hidden h-11 w-11 items-center justify-center rounded-full border border-white/8 bg-white/8 text-text-body transition-colors hover:border-white/16 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black min-[360px]:flex"
       >
         <ShieldCheck class="w-4 h-4" aria-hidden="true" />
       </a>
@@ -359,7 +359,7 @@
       <button
         type="button"
         bind:this={mobileMenuButtonRef}
-        class="flex h-11 w-11 items-center justify-center rounded-full text-gray-300 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black md:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-full text-text-body transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black md:hidden"
         onclick={toggleMobileMenu}
         aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
         aria-haspopup="menu"
@@ -392,7 +392,7 @@
                   class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
-                    : 'text-gray-500'}"
+                    : 'text-text-body'}"
                   aria-current={pathname === link.href ? 'page' : undefined}
                 >
                   {link.label}

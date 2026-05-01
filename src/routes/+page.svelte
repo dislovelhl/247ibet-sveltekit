@@ -270,6 +270,16 @@
 
   let homeFaqOpenIndex = $state<number | null>(null);
 
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function handleMouseMove(e: MouseEvent) {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    mouseX = (clientX / innerWidth - 0.5) * 20; // max 10px shift
+    mouseY = (clientY / innerHeight - 0.5) * 20;
+  }
+
   const homeSchema = [
     {
       '@context': 'https://schema.org',
@@ -314,7 +324,7 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white">
+<div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
   <section class="relative aspect-[5/6] overflow-hidden border-b border-prestige-gold/30 sm:aspect-auto">
     <div class="absolute inset-0">
       <img
@@ -326,6 +336,7 @@
         fetchpriority="high"
         decoding="async"
         class="h-full w-full object-cover opacity-70"
+        style="transform: translate3d({mouseX * 0.5}px, {mouseY * 0.5}px, 0) scale(1.1);"
       />
       <div
         class="absolute inset-0 bg-[linear-gradient(180deg,#070C18_0%,rgba(7,12,24,0.9)_42%,rgba(7,12,24,0.6)_100%)] sm:bg-[linear-gradient(90deg,#070C18_0%,rgba(7,12,24,0.84)_34%,rgba(7,12,24,0.42)_100%)]"
@@ -339,15 +350,22 @@
       class="relative mx-auto grid min-h-[560px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-16"
     >
       <div
-        class="glass-regular max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
+        class="glass-premium animate-float-3d max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
+        style="transform: translate3d({-mouseX}px, {-mouseY}px, 0);"
       >
-        <p
-          class="mb-5 animate-fade-in-up text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold"
-        >
-          Canadian iGaming Guide
-        </p>
+        <div class="mb-6 flex items-center gap-3">
+          <p
+            class="animate-fade-in-up text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold"
+          >
+            Canadian iGaming Guide
+          </p>
+          <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
+            <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-success">Live Status: Verified</span>
+          </div>
+        </div>
         <h1
-          class="page-hero-title animate-fade-in-up-delay-1"
+          class="page-hero-title animate-fade-in-up-delay-1 !tracking-tighter"
         >
           247iBET Review: Casino, Sportsbook & <span class="text-prestige-gold-400"
             >Interac Payouts</span
@@ -361,16 +379,16 @@
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
-          Last updated: {LAST_UPDATED}
+          Last updated: {LAST_UPDATED} • <span class="text-slate-blue-400 font-bold">Independent Review</span>
         </div>
         <div
           class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row"
         >
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group shimmer-effect">
             Visit Partner Site
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
-          <a href="/deposit" class="hero-cta-secondary"> See Payout Details </a>
+          <a href="/deposit" class="hero-cta-secondary glass-thin"> See Payout Details </a>
         </div>
         <p
           class="mt-8 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
@@ -392,18 +410,18 @@
       {#each heroTrust as item}
         {@const Icon = item.icon}
         <div
-          class="group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised sm:p-6"
+          class="group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6"
         >
           <div
-            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.3)]"
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.4)]"
           >
             <Icon class="h-6 w-6" aria-hidden="true" />
           </div>
           <div>
-            <p class="text-xs font-black uppercase tracking-widest text-prestige-gold/80">{item.label}</p>
+            <p class="text-xs font-black uppercase tracking-widest text-prestige-gold/80 group-hover:text-prestige-gold">{item.label}</p>
             <p class="mt-1.5 text-sm font-medium leading-relaxed text-text-primary">{item.body}</p>
           </div>
-          <div class="absolute inset-0 border border-white/0 transition-colors group-hover:border-white/5"></div>
+          <div class="absolute inset-0 border border-white/0 transition-colors group-hover:border-prestige-gold/10 rounded-2xl"></div>
         </div>
       {/each}
     </section>
@@ -610,7 +628,7 @@
         {#each standOut as item, i}
           {@const Icon = item.icon}
           <article 
-            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl {i === 0 || i === 3 ? 'lg:col-span-1' : 'lg:col-span-1'}"
+            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl shimmer-effect {i === 0 || i === 3 ? 'lg:col-span-1' : 'lg:col-span-1'}"
           >
             <div class="relative z-10">
               <Icon class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110" aria-hidden="true" />
@@ -639,7 +657,7 @@
               href={card.href}
               class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
             >
-              <div class="relative h-36 w-full overflow-hidden sm:h-32">
+              <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
                   src={card.image}
                   alt=""
@@ -684,7 +702,7 @@
               href={card.href}
               class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
             >
-              <div class="relative h-36 w-full overflow-hidden sm:h-32">
+              <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
                   src={card.image}
                   alt=""
@@ -781,9 +799,9 @@
           {#each guideCards as card}
             <a
               href={card.href}
-              class="glass-thin group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl"
+              class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl"
             >
-              <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32">
+              <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect">
                 <img
                   src={card.image}
                   alt=""

@@ -116,13 +116,13 @@
     aria-label="Quick actions"
   >
     <div
-      class="rounded-2xl border border-navy-border bg-navy-raised/95 px-2 py-2 backdrop-blur-md shadow-[0_18px_54px_-20px_rgba(0,0,0,0.9)]"
+      class="glass-premium rounded-2xl border border-white/20 px-2 py-2 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)]"
     >
       <div class="flex items-center gap-1.5">
         {#if installPrompt}
           <button
             onclick={handleInstall}
-            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
+            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold shimmer-effect px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
           >
             <Download class="h-4 w-4 shrink-0" aria-hidden="true" />
             Install App
@@ -132,7 +132,7 @@
             href={IBET_URLS.casino}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
+            class="flex min-h-11 flex-1 items-center justify-center gap-1.5 btn-glossy-gold shimmer-effect px-2 py-2.5 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
             aria-label="Open 247iBET Casino"
           >
             <Trophy class="h-4 w-4 shrink-0" aria-hidden="true" />

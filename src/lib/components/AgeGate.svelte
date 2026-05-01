@@ -111,7 +111,7 @@
     transition:fade={{ duration: 400 }}
   >
     <div
-      class="relative w-full max-w-sm navy-card rounded-2xl border border-navy-border p-6 md:p-8 overflow-hidden text-center"
+      class="relative w-full max-w-sm glass-premium shimmer-effect rounded-3xl border border-white/20 p-6 md:p-8 overflow-hidden text-center shadow-[0_32px_120px_-20px_rgba(0,0,0,0.8)]"
       transition:fly={{ y: 28, duration: 450, easing: cubicOut }}
     >
       <!-- Badge -->
@@ -163,7 +163,7 @@
           bind:this={acceptButtonRef}
           type="button"
           onclick={handleAccept}
-          class="page-cta-primary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
+          class="page-cta-primary-sm flex-1 shimmer-effect transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           I Am 19+&nbsp;— Enter
         </button>

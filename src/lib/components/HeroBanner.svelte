@@ -59,10 +59,22 @@
 
   const odds = getDailyOdds();
   const oddsDoubled = [...odds, ...odds];
+
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function handleMouseMove(e: MouseEvent) {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    mouseX = (clientX / innerWidth - 0.5) * 20;
+    mouseY = (clientY / innerHeight - 0.5) * 20;
+  }
 </script>
 
 <section
   class="relative mb-10 w-full overflow-hidden rounded-[1.75rem] bg-navy-black shadow-2xl group sm:mb-12 sm:rounded-3xl"
+  onmousemove={handleMouseMove}
+  role="presentation"
 >
   <!-- Hero image -->
   <div
@@ -78,6 +90,7 @@
       width="1280"
       height="549"
       class="absolute inset-0 w-full h-full object-cover"
+      style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
     />
 
     <!-- Dark overlay -->
@@ -92,7 +105,10 @@
 
     <!-- Content overlay -->
     <div class="absolute inset-0 z-20 flex flex-col justify-end p-5 sm:p-6 md:p-10 lg:p-16">
-      <div class="max-w-3xl">
+      <div 
+        class="max-w-3xl glass-premium p-6 sm:p-8 rounded-3xl animate-float-3d"
+        style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);"
+      >
         <!-- Kicker + trust badge row -->
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <div class="page-hero-kicker">
@@ -101,9 +117,13 @@
               >247iBET CANADA</span
             >
           </div>
+          <div class="flex items-center gap-2 rounded-full bg-success/10 px-3 py-1 ring-1 ring-success/20">
+            <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-success">Verified Platform</span>
+          </div>
         </div>
 
-        <h1 class="page-hero-title mb-4 sm:mb-5">
+        <h1 class="page-hero-title mb-4 sm:mb-5 !tracking-tighter">
           Online Casino &amp; Sportsbook —
           <span class="text-transparent bg-clip-text text-gradient-gold">Fast Interac Payouts</span>
           <span class="sr-only"> — 247iBET Canada Online Casino &amp; Sports Betting</span>
@@ -119,7 +139,7 @@
         <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:gap-4">
           <SafeExternalLink
             href={IBET_URLS.register}
-            class="hero-cta-primary group w-full sm:w-auto"
+            class="hero-cta-primary group w-full sm:w-auto shimmer-effect"
           >
             Play Now
             <ChevronRight

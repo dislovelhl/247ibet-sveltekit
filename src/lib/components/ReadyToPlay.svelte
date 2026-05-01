@@ -12,7 +12,7 @@
 
 <section class="my-12 sm:my-16" aria-labelledby="ready-to-play-heading">
   <div
-    class="relative overflow-hidden rounded-[1.75rem] border border-navy-border luxury-card p-6 sm:rounded-3xl sm:p-8 md:p-12"
+    class="relative overflow-hidden rounded-[1.75rem] border border-white/20 glass-premium shimmer-effect p-6 sm:rounded-3xl sm:p-8 md:p-12 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
   >
     <div class="relative z-10 grid gap-6 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
       <div>
@@ -37,7 +37,7 @@
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
+          <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary shimmer-effect w-full sm:w-auto">
             CREATE ACCOUNT
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </SafeExternalLink>

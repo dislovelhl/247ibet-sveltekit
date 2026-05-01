@@ -205,6 +205,16 @@
     },
   ];
   import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function handleMouseMove(e: MouseEvent) {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    mouseX = (clientX / innerWidth - 0.5) * 20;
+    mouseY = (clientY / innerHeight - 0.5) * 20;
+  }
 </script>
 
 <svelte:head>
@@ -227,20 +237,22 @@
   <JsonLd schema={casinoSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white">
+<div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section
       class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-card shadow-2xl"
     >
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-60"
+        style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
       ></div>
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
 
-      <div class="relative z-10 px-7 py-12 md:px-16 md:py-20">
-        <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10">
+      <div class="relative z-10 px-7 py-12 md:px-16 md:py-20 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20"
+           style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
+        <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10 shadow-[0_0_15px_rgba(212,148,58,0.2)]">
           <span class="live-dot" aria-hidden="true"></span>
           <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
             Canada's #1 Rated Online Casino
@@ -248,34 +260,34 @@
         </div>
         <div class="mb-8 flex flex-col gap-6">
           <AuthorByline date={LAST_UPDATED} />
-          <h1 class="page-hero-title">
-          The Future of <br />
-          <span class="text-prestige-gold">Canadian Casino</span>
-        </h1>
-      </div>
+          <h1 class="page-hero-title !tracking-tighter">
+            The Future of <br />
+            <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Canadian Casino</span>
+          </h1>
+        </div>
         
-      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
           A high-performance gaming ecosystem. Experience 500+ premium slots, live dealer immersion, and lightning-fast CAD payouts.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px]">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px] shimmer-effect">
             Access Casino
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </SafeExternalLink>
-          <a href="/casino/slots" class="hero-cta-secondary min-w-[200px]">
+          <a href="/casino/slots" class="hero-cta-secondary min-w-[200px] glass-thin">
             Explore Library
           </a>
         </div>
 
-        <div class="mt-12 flex flex-wrap gap-8 border-t border-white/5 pt-8">
+        <div class="mt-12 flex flex-wrap gap-8 border-t border-white/10 pt-8">
           {#each trustItems as item}
             {@const Icon = item.icon}
-            <div class="flex items-center gap-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-prestige-gold">
+            <div class="flex items-center gap-3 group/trust cursor-default">
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-prestige-gold border border-white/10 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all">
                 <Icon class="h-5 w-5" />
               </div>
-              <span class="text-xs font-black uppercase tracking-widest text-white/80">{item.title}</span>
+              <span class="text-xs font-black uppercase tracking-widest text-white/80 group-hover:text-prestige-gold transition-colors">{item.title}</span>
             </div>
           {/each}
         </div>
@@ -366,28 +378,29 @@
           {@const Icon = card.icon}
           <a
             href={card.href}
-            class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised"
+            class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
           >
             <div class="absolute inset-0 z-0">
               <img
                 src={card.image}
                 alt=""
-                class="h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-60"
+                class="h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/40 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent"></div>
+              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
             </div>
             
             <div class="relative z-10 flex h-full flex-col justify-between">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20">
-                <Icon class="h-6 w-6 text-prestige-gold" />
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all group-hover:scale-110">
+                <Icon class="h-6 w-6 group-hover:text-navy-black transition-colors" />
               </div>
               
               <div>
-                <h3 class="font-display text-2xl font-black text-white">{card.title}</h3>
-                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
-                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold">
+                <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
                   Enter Lobby
-                  <ArrowRight class="h-3 w-3" />
+                  <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </div>

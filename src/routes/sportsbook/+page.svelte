@@ -303,6 +303,16 @@
 
   const LAST_UPDATED = '2026-04-29';
   import AuthorByline from '$lib/components/AuthorByline.svelte';
+
+  let mouseX = $state(0);
+  let mouseY = $state(0);
+
+  function handleMouseMove(e: MouseEvent) {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    mouseX = (clientX / innerWidth - 0.5) * 20;
+    mouseY = (clientY / innerHeight - 0.5) * 20;
+  }
 </script>
 
 <svelte:head>
@@ -318,31 +328,31 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 pb-20">
+<div class="min-h-screen bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
-        <div class="sticky top-28 space-y-6 rounded-[2rem] border border-white/5 bg-navy-card/40 p-5 backdrop-blur-xl">
+        <div class="sticky top-28 space-y-6 rounded-[2rem] border border-white/10 glass-premium p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]">
           <a
             href="/"
             class="group flex items-center gap-3 rounded-2xl px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white/5"
           >
-            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold transition-transform group-hover:scale-110">
+            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
               <Landmark class="h-4 w-4" aria-hidden="true" />
             </div>
             Home
           </a>
-          <nav aria-label="Sportsbook page sections" class="space-y-1.5 border-t border-white/5 pt-6">
+          <nav aria-label="Sportsbook page sections" class="space-y-1.5 border-t border-white/10 pt-6">
             {#each sideNav as item}
               <a
                 href={item.href}
-                class="flex items-center rounded-xl px-4 py-2.5 text-xs font-bold text-text-body transition-all hover:bg-white/5 hover:text-white"
+                class="flex items-center rounded-xl px-4 py-2.5 text-xs font-black text-text-body transition-all hover:bg-white/5 hover:text-white hover:text-prestige-gold"
               >
                 {item.label}
               </a>
             {/each}
           </nav>
-          <div class="border-t border-white/5 pt-6">
+          <div class="border-t border-white/10 pt-6">
             <p class="px-4 pb-3 font-display text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold">
               Popular Sports
             </p>
@@ -352,7 +362,7 @@
                   href={sport.href}
                   class="group flex items-center gap-3 rounded-xl px-4 py-2.5 text-xs font-bold text-text-body transition-all hover:bg-white/5 hover:text-white"
                 >
-                  <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-slate-blue/10 text-slate-blue transition-transform group-hover:scale-110">
+                  <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110">
                     <Dumbbell class="h-3 w-3" aria-hidden="true" />
                   </div>
                   {sport.label}
@@ -370,13 +380,15 @@
           <img
             src="/images/generated/sportsbook-premium-hero.png"
             alt=""
-            class="absolute inset-0 h-full w-full object-cover opacity-50"
+            class="absolute inset-0 h-full w-full object-cover opacity-40"
+            style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
           />
           <div
             class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
           ></div>
           
-          <div class="relative z-10 p-8 md:p-14">
+          <div class="relative z-10 p-8 md:p-14 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
+               style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
             <div class="flex flex-wrap items-center gap-3 mb-8">
               <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
                 <span class="live-dot" aria-hidden="true"></span>
@@ -389,31 +401,31 @@
               </p>
             </div>
             
-            <h1 class="page-hero-title">
+            <h1 class="page-hero-title !tracking-tighter">
               The Arena of <br />
-              <span class="text-prestige-gold">Performance</span>
+              <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Performance</span>
             </h1>
             
-            <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+            <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
               Real-time odds. Deep Canadian markets. Lightning-fast Interac funding. Your strategic edge in the betting landscape starts here.
             </p>
 
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
               <SafeExternalLink
                 href={IBET_URLS.register}
-                class="hero-cta-primary group min-w-[220px]"
+                class="hero-cta-primary group min-w-[220px] shimmer-effect"
               >
                 Access Sportsbook
                 <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </SafeExternalLink>
               <a
                 href="#odds"
-                class="hero-cta-secondary min-w-[220px]"
+                class="hero-cta-secondary min-w-[220px] glass-thin"
               >
                 Compare Odds
               </a>
             </div>
-            <p class="mt-6 max-w-2xl text-xs leading-relaxed text-text-tertiary">
+            <p class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60">
               {IBET_DISCLAIMER}
             </p>
           </div>
@@ -422,25 +434,26 @@
         <div id="offers" class="grid gap-4 sm:grid-cols-3">
           {#each heroOffers as offer}
             <article
-              class="glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl"
+              class="glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
             >
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-transform group-hover:scale-110">
+              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
                 <Flame class="h-6 w-6" />
               </div>
               <div>
                 <p class="text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
                   {offer.eyebrow}
                 </p>
-                <h2 class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors">
+                <h2 class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">
                   {offer.headline}
                 </h2>
-                <p class="mt-4 text-sm leading-relaxed text-text-body/80">
+                <p class="mt-4 text-sm leading-relaxed text-text-body/80 font-light">
                   {offer.body}
                 </p>
               </div>
               <SafeExternalLink
                 href={IBET_URLS.register}
-                class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold"
+                class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
               >
                 {offer.cta}
                 <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />

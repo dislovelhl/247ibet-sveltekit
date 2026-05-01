@@ -74,12 +74,12 @@
             </div>
           </div>
 
-          <p class="max-w-sm text-sm leading-relaxed text-gray-400">
+          <p class="max-w-sm text-sm leading-relaxed text-text-body">
             Independent Canadian iGaming coverage — casino, sportsbook, live dealer, payment, and
             responsible-gaming guides. Legal age varies by province.
           </p>
 
-          <p class="mt-4 font-mono text-xs uppercase tracking-[0.14em] text-gray-600">
+          <p class="mt-4 font-mono text-xs uppercase tracking-[0.14em] text-text-tertiary">
             Independent guide · 18+/19+ by province · Verify licensing before depositing
           </p>
 
@@ -121,7 +121,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Follow ${SITE.name} on TikTok`}
-              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-text-body transition-colors hover:border-white/25 hover:text-white"
             >
               <Music2 class="h-3.5 w-3.5" aria-hidden="true" />
             </a>
@@ -141,7 +141,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -163,7 +163,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-gray-500 transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -172,17 +172,17 @@
           </ul>
 
           <div class="mt-8 border-t border-white/5 pt-6">
-            <p class="text-xs leading-relaxed text-gray-600">
+            <p class="text-xs leading-relaxed text-text-tertiary">
               Problem gambling helplines:
               <a
                 href="tel:18663322322"
-                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                class="rounded-sm text-text-body underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >1-866-332-2322</a
               >
               (Alberta) ·
               <a
                 href="tel:18665312600"
-                class="rounded-sm text-gray-400 underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                class="rounded-sm text-text-body underline-offset-2 transition-colors hover:text-prestige-gold hover:underline focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >1-866-531-2600</a
               >
               (Ontario).
@@ -198,7 +198,7 @@
 
       <!-- Legal bar -->
       <div
-        class="flex flex-col gap-3 py-6 font-mono text-xs text-gray-600 md:flex-row md:items-center md:justify-between"
+        class="flex flex-col gap-3 py-6 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between"
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">

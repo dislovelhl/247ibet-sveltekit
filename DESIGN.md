@@ -87,7 +87,10 @@ Defined in `src/styles/glass.css`:
 - `.glass-thin`: Subtle blur (8px)
 - `.glass-regular`: Standard blur (16px)
 - `.glass-thick`: Deep blur (32px)
+- `.glass-premium`: Ultra-premium liquid glass (48px blur, gold inner glow)
 - `.glass-shimmer`: Animated light sweep
+- `.shimmer-effect`: Utility for adding periodic light sweeps to any surface
+- `.float-3d`: CSS-based 3D floating animation
 
 ---
 
