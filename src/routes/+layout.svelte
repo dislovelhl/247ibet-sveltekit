@@ -5,7 +5,6 @@
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
   import { inject } from '@vercel/analytics';
-  import { injectSpeedInsights } from '@vercel/speed-insights';
   import { SITE, ogImageUrl } from '$lib/site';
   import Navbar from '$lib/components/Navbar.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
@@ -13,7 +12,6 @@
 
   onMount(() => {
     inject({ mode: dev ? 'development' : 'production' });
-    injectSpeedInsights();
   });
 
   let { children } = $props();
