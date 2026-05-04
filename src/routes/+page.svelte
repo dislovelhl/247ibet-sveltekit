@@ -428,7 +428,7 @@
         <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
           Watch the overview
         </p>
-        <h2 id="home-promo-video-title" class="mt-3 text-3xl font-black md:text-4xl">
+        <h2 id="home-promo-video-title" class="mt-3 text-4xl font-black md:text-5xl">
           Review the 247iBET experience in 30 seconds
         </h2>
         <p class="mt-4 text-sm leading-6 text-text-body">
@@ -468,7 +468,7 @@
         <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
           Trust & verification
         </p>
-        <h2 class="font-display text-3xl font-black sm:text-4xl">
+        <h2 class="font-display text-4xl font-black sm:text-5xl">
           Is 247iBET safe for Canadian players?
         </h2>
         <p
@@ -576,7 +576,7 @@
       class="grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
-        <h2 class="text-3xl font-black md:text-4xl">Interac deposits and withdrawals</h2>
+        <h2 class="text-4xl font-black md:text-5xl">Interac deposits and withdrawals</h2>
         <p class="mt-3 text-sm leading-6 text-text-body">
           Deposits are usually quick, while withdrawals depend on approval, verification, bonus
           terms, and bank processing.
