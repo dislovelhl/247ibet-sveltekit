@@ -223,6 +223,8 @@
   .view-all-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    min-height: 44px;
     gap: 0.375rem;
     font-family: var(--font-sans);
     font-weight: 900;
