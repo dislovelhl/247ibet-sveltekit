@@ -319,7 +319,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
-  <section class="relative aspect-[5/6] overflow-hidden border-b border-prestige-gold/30 sm:aspect-auto">
+  <section class="relative overflow-hidden border-b border-prestige-gold/30">
     <div class="absolute inset-0">
       <img
         src="/images/generated/casino-premium-hero.png"
