@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { slide } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import {
     ArrowRight,

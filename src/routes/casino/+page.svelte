@@ -4,7 +4,6 @@
   import {
     ArrowRight,
     BadgeCheck,
-    ChevronDown,
     CircleDollarSign,
     CreditCard,
     Gamepad2,
