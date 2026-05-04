@@ -3,6 +3,7 @@ import { defineConfig, type PluginOption } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import { vitePlugin } from 'braintrust/vite';
+import { fileURLToPath } from 'node:url';
 
 /**
  * Fix for a Vite 6 bug where ?inline CSS modules lack export default in SSR.
@@ -43,6 +44,13 @@ export default defineConfig(async ({ command }) => {
       ...workflowPlugins,
       ...braintrustBuildPlugin(command),
       cssInlineSSRFix
-    ]
+    ],
+    resolve: {
+      alias: {
+        '@vercel/speed-insights/sveltekit': fileURLToPath(
+          new URL('./node_modules/@vercel/speed-insights/dist/sveltekit/index.mjs', import.meta.url)
+        )
+      }
+    }
   };
 });
