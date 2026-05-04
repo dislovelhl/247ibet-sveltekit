@@ -208,15 +208,13 @@
   <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white">
+<div class="min-h-screen bg-navy-black pt-10 text-white">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
-    <nav aria-label="Breadcrumb" class="mb-10">
-      <ol class="flex items-center gap-3 text-xs leading-5 font-semibold text-text-tertiary">
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
-        <li aria-hidden="true">›</li>
-        <li><a href="/responsible-gambling" class="hover:text-white">Responsible Gaming</a></li>
-        <li aria-hidden="true">›</li>
-        <li class="text-white">Safe Play Protocols</li>
+        <li>/</li>
+        <li class="text-white font-medium">Responsible Gambling</li>
       </ol>
     </nav>
 

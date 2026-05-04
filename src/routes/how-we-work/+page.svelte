@@ -23,9 +23,9 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 pb-20">
+<div class="min-h-screen bg-navy-black pt-10 pb-20">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
-    <nav aria-label="Breadcrumb" class="mb-10">
+    <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>

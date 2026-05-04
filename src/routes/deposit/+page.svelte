@@ -173,9 +173,9 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     <nav aria-label="Breadcrumb" class="mb-12">
       <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
         <li><a href="/" class="transition-colors hover:text-white">Home</a></li>
-        <li aria-hidden="true">›</li>
+        <li aria-hidden="true">/</li>
         <li><a href="/interac" class="transition-colors hover:text-white">Interac</a></li>
-        <li aria-hidden="true">›</li>
+        <li aria-hidden="true">/</li>
         <li class="text-white">Deposit &amp; Withdraw</li>
       </ol>
     </nav>

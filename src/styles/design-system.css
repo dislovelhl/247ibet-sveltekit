@@ -176,36 +176,36 @@
     text-wrap: balance;
   }
 
-  main :where(nav[aria-label='Breadcrumb']) {
+  :where(nav[aria-label='Breadcrumb']) {
     margin-bottom: 1.5rem !important;
   }
 
-  main :where(nav[aria-label='Breadcrumb'] ol) {
+  :where(nav[aria-label='Breadcrumb'] ol) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 800;
-    line-height: 1.25rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-tertiary);
+    gap: 0.5rem !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: var(--color-text-tertiary) !important;
   }
 
-  main :where(nav[aria-label='Breadcrumb'] li) {
+  :where(nav[aria-label='Breadcrumb'] li) {
     display: inline-flex;
     min-height: 44px;
     align-items: center;
     color: var(--color-text-tertiary) !important;
   }
 
-  main :where(nav[aria-label='Breadcrumb'] li:last-child) {
+  :where(nav[aria-label='Breadcrumb'] li:last-child) {
     color: var(--color-prestige-gold) !important;
   }
 
-  main :where(nav[aria-label='Breadcrumb']) a {
+  :where(nav[aria-label='Breadcrumb']) a {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -213,8 +213,8 @@
     transition: color 180ms ease;
   }
 
-  main :where(nav[aria-label='Breadcrumb']) a:hover,
-  main :where(nav[aria-label='Breadcrumb']) a:focus-visible {
+  :where(nav[aria-label='Breadcrumb']) a:hover,
+  :where(nav[aria-label='Breadcrumb']) a:focus-visible {
     color: #fff !important;
   }
 

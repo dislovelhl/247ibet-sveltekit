@@ -163,9 +163,9 @@ function handleMouseMove(e: MouseEvent) {
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pt-10 pb-20" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
-    <nav aria-label="Breadcrumb" class="mb-10">
+    <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
