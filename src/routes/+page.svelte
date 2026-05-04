@@ -368,8 +368,9 @@
         <p
           class="mt-6 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
         >
-          Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
-          bonuses, support, and responsible-gaming tools before you visit a partner site.
+          <span class="hidden sm:inline">Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
+          bonuses, support, and responsible-gaming tools before you visit a partner site.</span>
+          <span class="sm:hidden">Expert Canadian review of casino categories, sportsbook markets, and Interac payout timing.</span>
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
