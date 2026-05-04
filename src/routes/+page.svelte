@@ -641,8 +641,8 @@
           <h2 class="text-3xl font-black">Casino</h2>
           <a
             href="/casino"
-            class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
-            >Explore Casino</a
+            class="view-all-link"
+            >Explore Casino <ArrowRight class="h-3 w-3" /></a
           >
         </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -686,8 +686,8 @@
           <h2 class="text-3xl font-black">Sportsbook</h2>
           <a
             href="/sportsbook"
-            class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
-            >Explore Sportsbook</a
+            class="view-all-link"
+            >Explore Sportsbook <ArrowRight class="h-3 w-3" /></a
           >
         </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -785,8 +785,8 @@
         <h2 class="text-3xl font-black">Expert Guides</h2>
         <a
           href="/guides"
-          class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
-          >View All Guides</a
+          class="view-all-link"
+          >View All Guides <ArrowRight class="h-3 w-3" /></a
         >
       </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -827,8 +827,8 @@
         <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
         <a
           href="/faq"
-          class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold transition-colors hover:text-white"
-          >View All FAQs</a
+          class="view-all-link"
+          >View All FAQs <ArrowRight class="h-3 w-3" /></a
         >
       </div>
       <div class="flex flex-col gap-3">
