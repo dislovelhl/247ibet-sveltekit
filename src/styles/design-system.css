@@ -126,6 +126,83 @@
     background-clip: text;
   }
 
+  /* ── Public route coordinate contract ──
+     Most public pages render either a top-level `.container` shell or a
+     `.min-h-screen.bg-navy-black` shell below the global navbar. Keep those
+     common shell starts aligned so breadcrumbs, page headers, and first content
+     sections land at the same X/Y coordinates across comparable pages. */
+  main {
+    --route-shell-top: var(--spacing-10);
+    --route-shell-bottom: var(--spacing-20);
+    --route-shell-pad-x: var(--spacing-4);
+    --route-shell-pad-x-sm: var(--spacing-6);
+    --route-shell-pad-x-lg: var(--spacing-10);
+    --route-shell-max: var(--container-xl);
+  }
+
+  main > div > .container.mx-auto {
+    width: 100%;
+    max-width: var(--route-shell-max) !important;
+    padding-top: var(--route-shell-top) !important;
+    padding-bottom: var(--route-shell-bottom);
+    padding-left: var(--route-shell-pad-x) !important;
+    padding-right: var(--route-shell-pad-x) !important;
+  }
+
+  main > div > .min-h-screen.bg-navy-black {
+    padding-top: var(--route-shell-top) !important;
+  }
+
+  main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']) {
+    max-width: var(--route-shell-max) !important;
+    padding-left: var(--route-shell-pad-x) !important;
+    padding-right: var(--route-shell-pad-x) !important;
+  }
+
+  main
+    > div
+    > .min-h-screen.bg-navy-black
+    > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
+    max-width: var(--route-shell-max) !important;
+    padding-left: var(--route-shell-pad-x) !important;
+    padding-right: var(--route-shell-pad-x) !important;
+  }
+
+  main > div > .container.mx-auto > :first-child,
+  main > div > .min-h-screen.bg-navy-black > .mx-auto > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > div > .container.mx-auto > :first-child.mx-auto {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  @media (min-width: 640px) {
+    main > div > .container.mx-auto,
+    main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
+    main
+      > div
+      > .min-h-screen.bg-navy-black
+      > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
+      padding-left: var(--route-shell-pad-x-sm) !important;
+      padding-right: var(--route-shell-pad-x-sm) !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main > div > .container.mx-auto,
+    main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
+    main
+      > div
+      > .min-h-screen.bg-navy-black
+      > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
+      padding-left: var(--route-shell-pad-x-lg) !important;
+      padding-right: var(--route-shell-pad-x-lg) !important;
+    }
+  }
+
   main :where(.container) {
     scroll-margin-top: 6rem;
   }
