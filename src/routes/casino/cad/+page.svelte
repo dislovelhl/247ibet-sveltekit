@@ -32,14 +32,14 @@
     items: [
       'A Canadian-dollar balance makes bankroll planning simpler because your deposit amount, game stakes, and withdrawal request all stay in the same currency.',
       'You avoid extra ambiguity around exchange-rate movement, especially if you deposit and cash out at different times.',
-      'CAD support pairs naturally with payment methods Canadian players already trust, especially Interac e-Transfer.',
+      'CAD support pairs naturally with Interac e-Transfer, the Canadian payment rail highlighted on 247iBET.',
     ],
   };
 
   const rightRail = {
     title: 'What to verify before you deposit',
     items: [
-      'Check the cashier minimums, maximums, and any verification steps before assuming a payment method will stay fast in every case.',
+      'Check Interac cashier minimums, maximums, and any verification steps before assuming a transfer will stay fast in every case.',
       'Use banking details that match your verified account name to avoid avoidable review delays when you request a withdrawal.',
       'Quick withdrawals depend on completed KYC, payment-method fit, and operator approval, not on marketing language alone.',
     ],
@@ -58,7 +58,7 @@
     {
       question: 'Does CAD support mean withdrawals are guaranteed to be instant?',
       answer:
-        'No. CAD support removes currency friction, but withdrawal timing still depends on account verification, payment method, and operator approval. It is better to think in terms of smoother banking rather than guaranteed speed.',
+        'No. CAD support removes currency friction, but withdrawal timing still depends on account verification, Interac handling, and operator approval. It is better to think in terms of smoother banking rather than guaranteed speed.',
     },
     {
       question: 'Is Interac the best fit for a CAD casino account?',

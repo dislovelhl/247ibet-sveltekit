@@ -197,11 +197,11 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Follow ${SITE.name} on X`}
-          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-11 w-11 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <svg
             aria-hidden="true"
-            class="h-3 w-3"
+            class="h-3.5 w-3.5"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -217,11 +217,11 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Follow ${SITE.name} on Instagram`}
-          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-11 w-11 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
           <svg
             aria-hidden="true"
-            class="h-3 w-3"
+            class="h-3.5 w-3.5"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -239,18 +239,18 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Join ${SITE.name} on Telegram`}
-          class="flex h-6 w-6 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-11 w-11 items-center justify-center rounded-sm text-gray-500 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
-          <Send class="h-3 w-3" aria-hidden="true" />
+          <Send class="h-3.5 w-3.5" aria-hidden="true" />
         </a>
         <a
           href="https://www.tiktok.com/@247ibet"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Follow ${SITE.name} on TikTok`}
-          class="flex h-6 w-6 items-center justify-center rounded-sm text-text-tertiary transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+          class="flex h-11 w-11 items-center justify-center rounded-sm text-text-tertiary transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
         >
-          <Music2 class="h-3 w-3" aria-hidden="true" />
+          <Music2 class="h-3.5 w-3.5" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -354,17 +354,17 @@
   <div
     class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
       ? 'max-h-0 opacity-0'
-      : 'max-h-11 opacity-100'}"
+      : 'max-h-12 opacity-100'}"
   >
     <div class="hidden border-t border-white/5 lg:block">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Quick category navigation">
-          <ul class="flex min-h-11 items-center overflow-x-auto [scrollbar-width:none]">
+          <ul class="flex min-h-[44px] items-center overflow-x-auto [scrollbar-width:none]">
             {#each subLinks as link (link.href)}
               <li>
                 <a
                   href={link.href}
-                  class="flex h-full min-h-[40px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
+                  class="flex h-full min-h-[44px] shrink-0 items-center border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
                   link.href
                     ? 'text-prestige-gold'
                     : 'text-text-body'}"

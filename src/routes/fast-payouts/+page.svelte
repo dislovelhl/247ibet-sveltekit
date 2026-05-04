@@ -124,8 +124,8 @@ const LAST_UPDATED = '2026-04-29';
 
   <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
     <p class="font-bold text-white text-sm">
-      The fastest withdrawal methods in Canada are Interac and Crypto, with average arrival times
-      under 1 hour.
+      The fastest withdrawal method shown for Canadian players is Interac e-Transfer, with faster
+      arrival possible after operator approval and KYC completion.
     </p>
     <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
       247iBET prioritizes same-day processing for all verified accounts to ensure players receive

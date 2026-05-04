@@ -3,6 +3,10 @@ import { IBET_URLS, IBET_PROFILE, IBET_CTA, IBET_DISCLAIMER } from '../src/lib/i
 import { SITE, PARTNER } from '../src/lib/site';
 
 describe('IBET_URLS (real module)', () => {
+  it('matches snapshot', () => {
+    expect(IBET_URLS).toMatchSnapshot();
+  });
+
   it('register equals partner.url', () => {
     expect(IBET_URLS.register).toBe(PARTNER.url);
   });
@@ -15,9 +19,12 @@ describe('IBET_URLS (real module)', () => {
     expect(IBET_URLS.deposit).toBe(`${SITE.url}/deposit`);
   });
 
-  it('login strips /home from partner url', () => {
+  it('login strips /home from partner url and adds /login', () => {
+    // Robust check for the fragile derivation:
+    // url: https://partner.com/home
+    // login: https://partner.com/login
     expect(IBET_URLS.login).not.toContain('/home');
-    expect(IBET_URLS.login.endsWith('/login')).toBe(true);
+    expect(IBET_URLS.login).toBe(`${PARTNER.url.replace('/home', '')}/login`);
   });
 
   it('rg points to /responsible-gambling on SITE.url', () => {

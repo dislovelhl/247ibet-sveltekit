@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import OddsCalculator from '$lib/components/OddsCalculator.svelte';
   const faqItems = [
     {
       question: 'What do American odds mean?',
@@ -122,13 +123,7 @@
     </div>
   </section>
 
-  <!-- Interactive Calculator Placeholder -->
-  <div class="navy-card rounded-2xl p-8 text-center mb-8">
-    <div class="text-slate-blue text-4xl mb-4">🧮</div>
-    <p class="text-gray-400 font-sans text-sm">
-      Interactive odds calculator — implement as Svelte component in Phase 2.
-    </p>
-  </div>
+  <OddsCalculator />
 
   <section class="navy-card mt-10 rounded-2xl border border-white/10 p-6 md:p-8">
     <h2 class="text-xl font-bold mb-4">How to Read American Odds</h2>

@@ -158,7 +158,7 @@
     },
     {
       q: 'What payment methods are available for deposits and withdrawals?',
-      a: 'Interac e-Transfer is the primary banking method — deposits are instant and widely supported. Additional options include major credit cards and other popular e-wallets. All transactions are processed securely with advanced encryption to protect your financial data.',
+      a: 'Interac e-Transfer is the supported banking method shown for Canadian players — deposits are fast and CAD-native, while withdrawals depend on operator approval, KYC, bonus review, and bank-side processing.',
     },
     {
       q: 'How fast are casino payouts at 247iBET?',
@@ -398,7 +398,7 @@
               <div>
                 <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
                 <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
-                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
+                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
                   Enter Lobby
                   <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                 </div>

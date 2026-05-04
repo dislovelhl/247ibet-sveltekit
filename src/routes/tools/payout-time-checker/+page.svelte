@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import PayoutTimeChecker from '$lib/components/PayoutTimeChecker.svelte';
   const faqItems = [
     {
       question: 'What does the payout time checker measure?',
@@ -163,17 +164,7 @@
     {/each}
   </div>
 
-  <!-- Payout Table Placeholder -->
-  <div class="navy-card rounded-2xl p-8 text-center mb-8">
-    <div class="text-slate-blue text-4xl mb-4">⚡</div>
-    <p class="text-gray-400 font-sans text-sm">
-      Interactive payout time checker — wire to operator data in Phase 2.
-    </p>
-    <p class="text-gray-600 font-sans text-xs mt-2">
-      Will display all Canadian operators sorted by withdrawal score with Interac e-Transfer
-      benchmark.
-    </p>
-  </div>
+  <PayoutTimeChecker />
 
   <section class="navy-card rounded-2xl border border-white/10 p-5 mb-8">
     <h2 class="text-lg font-bold mb-3 flex items-center gap-2">

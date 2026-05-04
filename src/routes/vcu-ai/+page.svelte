@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import VcuAiDashboard from '$lib/components/VcuAiDashboard.svelte';
   const orgSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -59,17 +60,7 @@
       </p>
     </header>
 
-    <!-- VcuAiClient interactive component placeholder -->
-    <div class="navy-card rounded-2xl p-8 text-center max-w-3xl mx-auto mb-16">
-      <div class="text-prestige-gold text-4xl mb-4">🤖</div>
-      <p class="text-gray-400 font-sans text-sm">
-        Interactive iGaming intelligence dashboard — implement as Svelte component in Phase 2.
-      </p>
-      <p class="text-gray-600 font-sans text-xs mt-2">
-        Will display real-time operator data, AGCO/AGLC compliance signals, and market intelligence
-        for Ontario and Alberta players.
-      </p>
-    </div>
+    <VcuAiDashboard />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       <div class="navy-card rounded-2xl p-6">

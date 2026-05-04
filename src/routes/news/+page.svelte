@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import NewsFeed from '$lib/components/NewsFeed.svelte';
   const coverageAreas = [
     {
       topic: 'Regulation',
@@ -110,15 +111,6 @@
       </div>
     </div>
 
-    <!-- Game Lobby placeholder — wire to Svelte component in Phase 2 -->
-    <div class="navy-card rounded-2xl p-8 text-center">
-      <div class="text-slate-blue text-4xl mb-4">📰</div>
-      <p class="text-gray-400 font-sans text-sm">
-        News article feed — implement as Svelte component in Phase 2.
-      </p>
-      <p class="text-gray-600 font-sans text-xs mt-2">
-        Will display latest iGaming news articles with filtering by category.
-      </p>
-    </div>
+    <NewsFeed />
   </div>
 </div>

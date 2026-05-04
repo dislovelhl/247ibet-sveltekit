@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import ParlayCalculator from '$lib/components/ParlayCalculator.svelte';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -65,13 +66,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <AffiliateDisclosure />
 
-  <!-- Interactive Parlay Builder Placeholder -->
-  <div class="navy-card rounded-2xl p-8 text-center mb-8">
-    <div class="text-prestige-gold text-4xl mb-4">🎯</div>
-    <p class="text-gray-400 font-sans text-sm">
-      Interactive parlay calculator — implement as Svelte component in Phase 2.
-    </p>
-  </div>
+  <ParlayCalculator />
 
   <section class="navy-card mt-10 rounded-2xl border border-white/10 p-6 md:p-8">
     <h2 class="text-xl font-bold mb-4">Parlay Betting Explained for Canadians</h2>

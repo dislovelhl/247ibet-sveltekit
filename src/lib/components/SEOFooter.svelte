@@ -91,11 +91,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
               >
                 <svg
                   aria-hidden="true"
-                  class="h-3.5 w-3.5"
+                  class="h-4 w-4"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -112,18 +112,18 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Join ${SITE.name} on Telegram`}
-              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
             >
-              <Send class="h-3.5 w-3.5" aria-hidden="true" />
+              <Send class="h-4 w-4" aria-hidden="true" />
             </a>
             <a
               href="https://www.tiktok.com/@247ibet"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Follow ${SITE.name} on TikTok`}
-              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-text-body transition-colors hover:border-white/25 hover:text-white"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-text-body transition-colors hover:border-white/25 hover:text-white"
             >
-              <Music2 class="h-3.5 w-3.5" aria-hidden="true" />
+              <Music2 class="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
         </section>
@@ -141,7 +141,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -163,7 +163,7 @@
               <li>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[32px] items-center rounded-sm py-1.5 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>

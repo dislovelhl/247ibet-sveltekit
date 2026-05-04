@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Design exploration lab — internal tool
+  import DesignLabClient from '$lib/components/DesignLabClient.svelte';
 </script>
 
 <svelte:head>
@@ -12,10 +12,5 @@
   <p class="text-[#94A3B8] mb-8">
     Internal design system exploration and component testing environment.
   </p>
-  <div class="navy-card rounded-2xl p-8 text-center">
-    <p class="text-text-tertiary text-sm">
-      Client-side lab component — port <code class="text-prestige-gold">LabClient</code> to a Svelte component
-      in Phase 2.
-    </p>
-  </div>
+  <DesignLabClient />
 </div>

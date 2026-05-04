@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`IBET_URLS (real module) > matches snapshot 1`] = `
+{
+  "casino": "https://247ibet.ca/casino",
+  "deposit": "http://localhost:5173/deposit",
+  "login": "https://247ibet.ca/login",
+  "register": "https://247ibet.ca/home",
+  "rg": "http://localhost:5173/responsible-gambling",
+}
+`;

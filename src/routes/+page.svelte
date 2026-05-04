@@ -671,7 +671,7 @@
               <div class="p-5">
                 <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
-                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 transition-colors group-hover:text-prestige-gold">
+                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white">
                   Explore
                   <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -716,7 +716,7 @@
               <div class="p-5">
                 <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
                 <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
-                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 transition-colors group-hover:text-prestige-gold">
+                <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white">
                   Explore
                   <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </div>
