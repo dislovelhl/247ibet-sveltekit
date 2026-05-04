@@ -31,10 +31,10 @@
 
   const featureCards = [
     {
-      title: 'Instant Payouts',
-      body: 'Quick deposits. Fast withdrawals. Secure and simple.',
+      title: 'Interac Payouts',
+      body: 'Deposits typically fast. Withdrawals depend on operator approval, KYC, and bank processing.',
       href: '/deposit',
-      cta: 'Deposit & Withdraw',
+      cta: 'Review Payout Details',
       icon: Zap,
     },
     {
@@ -61,15 +61,15 @@
   ];
 
   const safetyStrip = [
-    { title: 'Canadian Licensed', body: 'Operated with player protection', icon: BadgeCheck },
+    { title: 'Verify Licensing', body: 'Confirm operator and provincial eligibility before depositing', icon: BadgeCheck },
     {
       title: 'Secure & Private',
       body: 'Advanced encryption and data protection',
       icon: LockKeyhole,
     },
-    { title: '24/7 Support', body: 'Our team is here when you need us', icon: Headphones },
+    { title: '24/7 Support', body: 'Check support availability with the operator', icon: Headphones },
     { title: 'Responsible Gaming', body: 'Tools and resources to play safely', icon: ShieldCheck },
-    { title: 'Fast & Reliable', body: 'Quick deposits and fast withdrawals', icon: Zap },
+    { title: 'Interac Banking', body: 'Deposits and withdrawals — timing varies by operator', icon: Zap },
   ];
 
   const categoryCards = [
@@ -131,8 +131,8 @@
       icon: CreditCard,
     },
     {
-      title: 'Fast Withdrawals',
-      body: 'We understand you want your winnings quickly. Most withdrawals process within 24 hours.',
+      title: 'Interac Banking',
+      body: 'CAD-native deposits via Interac. Withdrawal timing depends on approval, KYC, bonus review, and bank-side processing.',
       icon: Zap,
     },
     {
@@ -155,19 +155,19 @@
   const faqItems = [
     {
       q: 'Are online casinos legal in Canada?',
-      a: 'Online casino gaming is available to Canadians through licensed offshore operators. While each province regulates gambling differently, millions of Canadians play safely at trusted online casinos every day. 247iBET operates with player protection standards and responsible gambling tools built in.',
+      a: 'Online casino access depends on your province. This guide is an independent editorial review, not a licensed operator. Confirm the operator\'s legal availability and your eligibility with your provincial regulator before depositing.',
     },
     {
       q: 'What payment methods are available for deposits and withdrawals?',
-      a: 'Interac e-Transfer is the supported banking method shown for Canadian players — deposits are fast and CAD-native, while withdrawals depend on operator approval, KYC, bonus review, and bank-side processing.',
+      a: 'Interac e-Transfer is the featured banking method for Canadian players — deposits are fast and CAD-native, while withdrawals depend on operator approval, identity verification, bonus review, and bank-side processing.',
     },
     {
-      q: 'How fast are casino payouts at 247iBET?',
-      a: 'Most withdrawal requests are processed within 24 hours. Interac e-Transfer payouts are among the fastest available to Canadian players, with many completing within 15–30 minutes once approved. There are no FX fees when playing in CAD.',
+      q: 'How fast are casino payouts?',
+      a: 'Withdrawal timing varies by operator, account status, identity verification (KYC), bonus activity, and banking rails. Interac payouts may complete within 15–30 minutes after operator approval for verified accounts, but first withdrawals or additional review may take longer. Check operator terms before depositing.',
     },
     {
       q: 'What types of games are available?',
-      a: '247iBET offers 500+ casino games including online slots, live dealer tables (roulette, blackjack, baccarat), classic table games, and exclusive originals. The full library is available on desktop and mobile, optimized for on-the-go play.',
+      a: 'The platform is reported to offer 500+ casino games including online slots, live dealer tables (roulette, blackjack, baccarat), classic table games, and mobile-compatible options. Verify the current catalogue with the operator before registering.',
     },
   ];
 
@@ -244,7 +244,7 @@
         <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10 shadow-[0_0_15px_rgba(212,148,58,0.2)]">
           <span class="live-dot" aria-hidden="true"></span>
           <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
-            Canada's #1 Rated Online Casino
+            Independent Canadian iGaming Review
           </p>
         </div>
         <div class="mb-8 flex flex-col gap-6">
@@ -256,7 +256,7 @@
         </div>
         
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          A high-performance gaming ecosystem. Experience 500+ premium slots, live dealer immersion, and lightning-fast CAD payouts.
+          An independent review of 500+ casino games, live dealer tables, Interac payments, and responsible gambling tools. Compare before you deposit.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">

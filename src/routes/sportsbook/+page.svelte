@@ -26,9 +26,9 @@
   import { SITE, canonicalUrl } from '$lib/site';
 
   const page = {
-    title: 'Sportsbook Canada - Live Odds, Parlays & Betting Hub | 247iBET',
+    title: 'Canadian Sportsbook Guide — Odds, Parlays & Betting Hub | 247iBET',
     description:
-      'A premium Canadian sportsbook landing page for NHL, CFL, NBA, UFC, soccer, live odds, odds boosts, Interac funding, and responsible betting resources.',
+      'Independent Canadian sportsbook guide for NHL, CFL, NBA, UFC, soccer, live odds, Interac funding, and responsible betting resources. Compare markets before you bet.',
     canonical: canonicalUrl('/sportsbook'),
   };
 
@@ -53,30 +53,30 @@
 
   const heroOffers = [
     {
-      eyebrow: 'New customer offer',
-      headline: 'Sports welcome bonus',
-      body: 'Start with Canadian-focused markets, live odds, and Interac-ready account funding.',
-      cta: 'Claim now',
+      eyebrow: 'New player',
+      headline: 'Review account terms',
+      body: 'Compare Canadian-focused markets, live odds, and Interac account funding before registering.',
+      cta: 'Review terms',
     },
     {
-      eyebrow: 'Odds boost',
+      eyebrow: 'Odds comparison',
       headline: 'Enhanced prices',
-      body: 'Find boosted prices on marquee NHL, NBA, soccer, UFC, and football events.',
-      cta: 'View boosts',
+      body: 'Compare boosted prices on marquee NHL, NBA, soccer, UFC, and football events before betting.',
+      cta: 'Compare odds',
     },
     {
-      eyebrow: 'Bet club',
-      headline: 'Weekly bet perks',
-      body: 'Track weekly sports promotions, parlay specials, and featured event markets.',
-      cta: 'Join club',
+      eyebrow: 'Promotions guide',
+      headline: 'Understand promotions',
+      body: 'Learn how weekly sports promotions, parlay specials, and featured markets work before opting in.',
+      cta: 'Read terms',
     },
   ];
 
   const trustStrip = [
-    { label: 'Best odds guarantee', detail: 'Compare top markets', icon: BadgeCheck },
+    { label: 'Compare markets', detail: 'Review odds across sports', icon: BadgeCheck },
     { label: 'Trusted and secure', detail: 'Encrypted account flow', icon: LockKeyhole },
-    { label: 'Exclusive bonuses', detail: 'Canadian-focused offers', icon: Sparkles },
-    { label: 'Fast payouts', detail: 'Interac-first banking', icon: Zap },
+    { label: 'Promotions guide', detail: 'Understand terms before opting in', icon: Sparkles },
+    { label: 'Interac payments', detail: 'Confirm payout timing with operator', icon: Zap },
   ];
 
   const sportsbookRows = [
@@ -320,7 +320,7 @@
   <meta name="description" content={page.description} />
   <meta
     name="keywords"
-    content="sports betting Canada, Canadian sportsbook, live betting Canada, NHL odds, CFL betting, UFC betting, Interac sportsbook, sportsbook bonuses Canada"
+    content="sports betting Canada, Canadian sportsbook, live betting Canada, NHL odds, CFL betting, UFC betting, Interac sportsbook, betting guide Canada"
   />
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.description} />

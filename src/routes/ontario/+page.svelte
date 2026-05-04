@@ -1,7 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
-  import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { ArrowRight } from 'lucide-svelte';
   import { useMouseParallax } from '$lib/runes.svelte';
@@ -187,7 +186,7 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
           </div>
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
-              AGCO Licensed · 19+
+              19+ · Independent Guide · Verify Licensing
             </p>
           </div>
         </div>
@@ -280,7 +279,10 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     </section>
 
   <div class="mb-10">
-    <IBetShowcase variant="banner" ctaText="Play in Ontario" />
+    <AffiliateDisclosure />
+    <p class="mt-3 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
+      Visit the <a href="https://www.igamingontario.ca/en" target="_blank" rel="noopener noreferrer" class="text-slate-blue hover:underline">iGaming Ontario operator directory</a> to verify current licensing status before registering or depositing.
+    </p>
   </div>
 
   <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
