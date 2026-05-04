@@ -28,8 +28,8 @@
     sections = [],
   }: Props = $props();
 
-  const fullOgTitle = ogTitle || `${title} | ${SITE.name}`;
-  const fullOgDescription = ogDescription || description;
+  const fullOgTitle = $derived(ogTitle || `${title} | ${SITE.name}`);
+  const fullOgDescription = $derived(ogDescription || description);
 </script>
 
 <svelte:head>
@@ -175,25 +175,49 @@
 <style>
   /* Custom prose styling to match Prestige system */
   :global(.prose h2) {
-    @apply border-b border-white/10 pb-4 mt-16 mb-8 text-2xl;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   :global(.prose h3) {
-    @apply mt-10 mb-4 text-xl text-prestige-gold;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-prestige-gold);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
   :global(.prose p) {
-    @apply leading-relaxed mb-6;
+    margin-bottom: 1.5rem;
+    line-height: 1.625;
   }
   :global(.prose ul) {
-    @apply list-none pl-0 mb-8 space-y-3;
+    margin-bottom: 2rem;
+    list-style: none;
+    padding-left: 0;
   }
   :global(.prose li) {
-    @apply relative pl-6;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  :global(.prose li + li) {
+    margin-top: 0.75rem;
   }
   :global(.prose li::before) {
     content: "/";
-    @apply absolute left-0 text-prestige-gold font-bold;
+    position: absolute;
+    left: 0;
+    color: var(--color-prestige-gold);
+    font-weight: 700;
   }
   :global(.prose a) {
-    @apply text-slate-blue no-underline hover:underline decoration-prestige-gold/50;
+    color: var(--color-slate-blue);
+    text-decoration-line: none;
+    text-decoration-color: color-mix(in srgb, var(--color-prestige-gold) 50%, transparent);
+  }
+  :global(.prose a:hover) {
+    text-decoration-line: underline;
   }
 </style>

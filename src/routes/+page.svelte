@@ -9,7 +9,6 @@
     ShieldCheck,
     Sparkles,
     Trophy,
-    Users,
     Zap,
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
@@ -152,11 +151,6 @@
       title: 'Bonus terms',
       body: 'Check wagering, max bet, win caps, eligible markets, and expiry before opting in.',
       icon: Sparkles,
-    },
-    {
-      title: 'Responsible play',
-      body: 'Set limits, take breaks, and use provincial support resources when needed.',
-      icon: Users,
     },
   ];
 
@@ -625,10 +619,10 @@
           </div>
         </div>
 
-        {#each standOut as item, i}
+        {#each standOut as item}
           {@const Icon = item.icon}
-          <article 
-            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl shimmer-effect {i === 0 || i === 3 ? 'lg:col-span-1' : 'lg:col-span-1'}"
+          <article
+            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl shimmer-effect"
           >
             <div class="relative z-10">
               <Icon class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110" aria-hidden="true" />

@@ -176,10 +176,46 @@
     text-wrap: balance;
   }
 
+  main :where(nav[aria-label='Breadcrumb']) {
+    margin-bottom: 1.5rem !important;
+  }
+
+  main :where(nav[aria-label='Breadcrumb'] ol) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.25rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+  }
+
+  main :where(nav[aria-label='Breadcrumb'] li) {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--color-text-tertiary) !important;
+  }
+
+  main :where(nav[aria-label='Breadcrumb'] li:last-child) {
+    color: var(--color-prestige-gold) !important;
+  }
+
   main :where(nav[aria-label='Breadcrumb']) a {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    color: var(--color-text-tertiary) !important;
+    transition: color 180ms ease;
+  }
+
+  main :where(nav[aria-label='Breadcrumb']) a:hover,
+  main :where(nav[aria-label='Breadcrumb']) a:focus-visible {
+    color: #fff !important;
   }
 
   main :where(details.navy-card) {

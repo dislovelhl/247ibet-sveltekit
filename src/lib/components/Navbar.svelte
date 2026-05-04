@@ -8,7 +8,6 @@
     Headphones,
     Menu,
     Music2,
-    Search,
     Send,
     ShieldCheck,
     X,
@@ -52,7 +51,6 @@
   ];
 
   const quickLinks = [
-    { href: '/search', label: 'Search guides', icon: Search },
     { href: '/fast-payouts', label: 'Fast payouts', icon: CreditCard },
     { href: '/legal-online-gambling-canada', label: 'Legal guide', icon: ShieldCheck },
     { href: '/responsible-gambling', label: 'Responsible gaming', icon: Headphones },
@@ -307,29 +305,6 @@
       >
         <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
         19+ Play responsibly
-      </div>
-
-      <!-- Search (desktop) -->
-      <div class="hidden xl:block">
-        <a
-          href="/search"
-          aria-label="Search"
-          class="flex min-h-[44px] min-w-[132px] items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-text-body transition-all hover:border-prestige-gold/30 hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
-        >
-          <Search class="w-4 h-4" aria-hidden="true" />
-          <span class="hidden md:inline">Search...</span>
-        </a>
-      </div>
-
-      <!-- Search (mobile compact) -->
-      <div class="md:hidden">
-        <a
-          href="/search"
-          aria-label="Search"
-          class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-body transition-all hover:border-prestige-gold/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
-        >
-          <Search class="w-4 h-4" aria-hidden="true" />
-        </a>
       </div>
 
       <!-- Partner CTA -->
