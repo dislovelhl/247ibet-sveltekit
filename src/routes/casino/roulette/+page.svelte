@@ -113,6 +113,16 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+  <nav aria-label="Breadcrumb" class="mb-6">
+    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
+      <li><a href="/" class="hover:text-white">Home</a></li>
+      <li>/</li>
+      <li><a href="/casino" class="hover:text-white">Casino</a></li>
+      <li>/</li>
+      <li class="text-white font-medium">{pageName}</li>
+    </ol>
+  </nav>
+
   <div class="relative h-48 md:h-60 rounded-2xl overflow-hidden mb-8">
     <img
       src={heroImage}
@@ -134,16 +144,6 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
     </div>
   </div>
-
-  <nav aria-label="Breadcrumb" class="mb-6">
-    <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-      <li><a href="/" class="hover:text-white">Home</a></li>
-      <li>/</li>
-      <li><a href="/casino" class="hover:text-white">Casino</a></li>
-      <li>/</li>
-      <li class="text-white font-medium">{pageName}</li>
-    </ol>
-  </nav>
 
   <header class="mb-10">
     <h1 class="page-hero-title mb-4">Play Roulette Online in Canada</h1>

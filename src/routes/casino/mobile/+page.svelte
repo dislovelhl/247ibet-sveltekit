@@ -111,15 +111,6 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-  <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
-    <div
-      class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
-    >
-      {intro.eyebrow}
-    </div>
-    <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
-  </div>
-
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -129,6 +120,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <li class="text-white font-medium">{pageName}</li>
     </ol>
   </nav>
+
+  <div class="rounded-2xl overflow-hidden mb-8 bg-navy-card border border-white/10 px-6 py-5">
+    <div
+      class="text-[9px] font-mono font-bold text-prestige-gold tracking-[0.22em] uppercase mb-1.5"
+    >
+      {intro.eyebrow}
+    </div>
+    <p class="text-xl md:text-2xl font-bold text-white">{pageName}</p>
+  </div>
 
   <header class="mb-10">
     <h1 class="page-hero-title mb-4">Play Mobile Casino in Canada</h1>
