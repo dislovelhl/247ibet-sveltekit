@@ -506,26 +506,28 @@
           operator terms. They are not guarantees of licensing status, payout speed, bonus
           eligibility, or account approval.
         </p>
-        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {#each whyCards as card}
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {#each whyCards as card, i}
             {@const Icon = card.icon}
             <article
-              class="glass-thin group relative rounded-2xl p-5 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-prestige-gold/5"
+              class="luxury-card group relative rounded-2xl p-6 transition-all hover:-translate-y-1 {i === 0 ? 'lg:col-span-2' : ''}"
             >
-              <div
-                class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:bg-prestige-gold group-hover:text-navy-black"
-              >
-                <Icon class="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 class="font-display text-lg font-black text-white">{card.title}</h3>
-              <div class="mt-2 flex items-center gap-2">
-                <div class="flex gap-0.5">
-                  {#each Array(5) as _, i}
-                    <span class="h-1 w-4 rounded-full {i < Math.floor(Number(card.score)) ? 'bg-prestige-gold' : 'bg-white/10'}"></span>
-                  {/each}
+              <div class="flex items-start justify-between gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:bg-prestige-gold group-hover:text-navy-black"
+                >
+                  <Icon class="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span class="font-mono text-sm font-black text-prestige-gold">{card.score}</span>
+                <div class="text-right">
+                   <span class="font-mono text-2xl font-black text-prestige-gold leading-none">{card.score}</span>
+                   <div class="mt-1 flex justify-end gap-0.5">
+                    {#each Array(5) as _, starIdx}
+                      <span class="h-1 w-3 rounded-full {starIdx < Math.floor(Number(card.score)) ? 'bg-prestige-gold' : 'bg-white/10'}"></span>
+                    {/each}
+                  </div>
+                </div>
               </div>
+              <h3 class="mt-6 font-display text-xl font-black text-white">{card.title}</h3>
               <p class="mt-3 text-sm leading-relaxed text-text-body">{card.body}</p>
             </article>
           {/each}
