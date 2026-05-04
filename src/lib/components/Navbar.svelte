@@ -191,7 +191,7 @@
           >19+ · Play Responsibly</span
         >
       </div>
-      <div class="flex items-center gap-1" aria-label="Social media links">
+      <div class="flex items-center gap-1">
         <a
           href="https://x.com/247ibet"
           target="_blank"
@@ -401,9 +401,21 @@
       aria-label="Mobile navigation"
       tabindex="-1"
       class="relative z-50 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b border-navy-border bg-navy-black/98 shadow-[0_24px_70px_-34px_rgba(0,0,0,0.95)] backdrop-blur-xl sm:max-h-[calc(100dvh-4rem)] md:hidden"
-      transition:slide={{ duration: 300, easing: cubicOut }}
+      transition:fly={{ y: -20, duration: 300, easing: cubicOut }}
     >
       <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
+        <div class="flex items-center justify-between mb-4">
+          <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
+          <button 
+            type="button" 
+            onclick={closeMobileMenu}
+            class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
+          >
+            Close
+            <X class="h-4 w-4" />
+          </button>
+        </div>
+
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
           <div
             class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2"

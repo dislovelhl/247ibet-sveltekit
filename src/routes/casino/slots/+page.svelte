@@ -4,6 +4,7 @@
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
   import { CheckCircle2 } from 'lucide-svelte';
+  import FAQ from '$lib/components/FAQ.svelte';
 
   const pageName = 'Online Slots';
   const heroImage = '/images/generated/casino-slots-hero.png';
@@ -233,27 +234,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <IBetShowcase variant="banner" ctaText={heroCtaText} contextLabel={bannerContextLabel} />
   </section>
 
-  <section class="mt-16 space-y-4">
-    <h2 class="text-2xl font-bold text-white">{faqTitle}</h2>
-    {#each faqItems as faq}
-      <details class="navy-card group cursor-pointer rounded-xl border border-white/10 p-4">
-        <summary class="list-none flex items-center justify-between gap-2 font-bold text-white">
-          {faq.question}
-          <svg
-            class="h-4 w-4 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </summary>
-        <p class="mt-3 text-sm leading-relaxed text-gray-400">{faq.answer}</p>
-      </details>
-    {/each}
-  </section>
+  <FAQ items={faqItems.map(f => ({ q: f.question, a: f.answer }))} title={faqTitle} />
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

@@ -38,8 +38,9 @@
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-text-primary: #f1f5f9;
-  --color-text-body: #94a3b8; /* ~5.7:1 contrast on navy-black */
-  --color-text-tertiary: #8293a9; /* ~4.7:1 contrast on navy-black, meets AA */
+  --color-text-body: #94a3b8; /* ~5.7:1 contrast on navy-black, ~4.6:1 on navy-raised */
+  --color-text-tertiary: #a0aec0; /* ~6.5:1 contrast on navy-black, ~5.2:1 on navy-raised (Meets AA) */
+  --color-prestige-gold-text: #e2a859; /* Optimized for small text and icons on dark surfaces (~5.2:1) */
   --color-navy-border: rgba(255, 255, 255, 0.07);
   --color-navy-border-active: rgba(255, 255, 255, 0.16);
 

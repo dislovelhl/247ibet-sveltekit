@@ -11,6 +11,9 @@
     persistAgeGateVerificationToSession,
   } from '$lib/age-gate-client';
 
+  const FOCUSABLE_SELECTOR =
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
   let visible = $state(false);
   let acceptButtonRef: HTMLButtonElement | undefined = $state();
 
@@ -66,13 +69,25 @@
     if (!browser) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleDecline();
+        return;
+      }
+
       if (event.key === 'Tab') {
+        if (!visible) return;
+        const modal = document.querySelector('[role="dialog"]');
+        if (!modal) return;
+
         const focusable = Array.from(
-          document.querySelectorAll<HTMLElement>('#age-gate-accept, #age-gate-decline'),
-        );
-        if (focusable.length !== 2) return;
-        const [first, last] = focusable;
+          modal.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
+        ).filter((el) => el.offsetParent !== null);
+
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
         const active = document.activeElement;
+
         if (event.shiftKey && active === first) {
           event.preventDefault();
           last.focus();
@@ -163,7 +178,7 @@
           bind:this={acceptButtonRef}
           type="button"
           onclick={handleAccept}
-          class="page-cta-primary-sm flex-1 shimmer-effect transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
+          class="page-cta-primary flex-1 shimmer-effect transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           I Am 19+&nbsp;— Enter
         </button>
@@ -171,7 +186,7 @@
           id="age-gate-decline"
           type="button"
           onclick={handleDecline}
-          class="page-cta-secondary-sm flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
+          class="page-cta-secondary flex-1 transition-transform hover:scale-[1.03] active:scale-[0.97] motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
         >
           Exit
         </button>

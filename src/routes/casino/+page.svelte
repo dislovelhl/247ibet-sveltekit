@@ -19,6 +19,8 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
+  import { useMouseParallax } from '$lib/runes.svelte';
+  import FAQ from '$lib/components/FAQ.svelte';
 
   const LAST_UPDATED = '2026-04-28';
 
@@ -170,11 +172,7 @@
     },
   ];
 
-  let openFaqIndex = $state<number | null>(null);
-
-  function toggleFaq(i: number) {
-    openFaqIndex = openFaqIndex === i ? null : i;
-  }
+  // FAQ logic removed and handled by component
 
   const casinoSchema = [
     {
@@ -206,15 +204,7 @@
   ];
   import AuthorByline from '$lib/components/AuthorByline.svelte';
 
-  let mouseX = $state(0);
-  let mouseY = $state(0);
-
-  function handleMouseMove(e: MouseEvent) {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX = (clientX / innerWidth - 0.5) * 20;
-    mouseY = (clientY / innerHeight - 0.5) * 20;
-  }
+  const parallax = useMouseParallax(20);
 </script>
 
 <svelte:head>
@@ -237,21 +227,21 @@
   <JsonLd schema={casinoSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={parallax.handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section
       class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-card shadow-2xl"
     >
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-60"
-        style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
       ></div>
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
 
       <div class="relative z-10 px-7 py-12 md:px-16 md:py-20 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20"
-           style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
+           style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);">
         <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10 shadow-[0_0_15px_rgba(212,148,58,0.2)]">
           <span class="live-dot" aria-hidden="true"></span>
           <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
@@ -425,40 +415,7 @@
       </div>
     </section>
 
-    <section class="mt-10 rounded-xl border border-white/10 bg-navy-card/80 p-6">
-      <h2 class="text-2xl font-black">Casino FAQ</h2>
-      <div class="mt-5 divide-y divide-white/8">
-        {#each faqItems as item, i}
-          <div>
-            <button
-              id="faq-btn-{i}"
-              type="button"
-              class="flex w-full items-center justify-between gap-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
-              aria-expanded={openFaqIndex === i}
-              aria-controls="faq-panel-{i}"
-              onclick={() => toggleFaq(i)}
-            >
-              <span class="text-base font-black text-white">{item.q}</span>
-              <ChevronDown
-                class="h-5 w-5 shrink-0 text-prestige-gold transition-transform duration-200 {openFaqIndex ===
-                i
-                  ? 'rotate-180'
-                  : ''}"
-                aria-hidden="true"
-              />
-            </button>
-            <div
-              id="faq-panel-{i}"
-              role="region"
-              aria-labelledby="faq-btn-{i}"
-              hidden={openFaqIndex !== i}
-            >
-              <p class="pb-5 text-sm leading-6 text-text-body">{item.a}</p>
-            </div>
-          </div>
-        {/each}
-      </div>
-    </section>
+    <FAQ items={faqItems} title="Casino FAQ" />
 
     <section
       class="mt-7 grid rounded-xl border border-prestige-gold/35 bg-navy-card/80 sm:grid-cols-2 lg:grid-cols-7"

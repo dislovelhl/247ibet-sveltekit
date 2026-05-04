@@ -2,6 +2,8 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import { useMouseParallax } from '$lib/runes.svelte';
+  import FAQ from '$lib/components/FAQ.svelte';
   const faqItems = [
     {
       question: 'Is Alberta already fully live for private iGaming operators?',
@@ -62,15 +64,7 @@
     },
   ];
 
-  let mouseX = $state(0);
-  let mouseY = $state(0);
-
-  function handleMouseMove(e: MouseEvent) {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX = (clientX / innerWidth - 0.5) * 20;
-    mouseY = (clientY / innerHeight - 0.5) * 20;
-  }
+  const parallax = useMouseParallax(20);
 </script>
 
 <svelte:head>
@@ -102,7 +96,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-10 pb-20" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pt-10 pb-20" onmousemove={parallax.handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary">
@@ -117,12 +111,12 @@
         src="/images/generated/canada-market-hero.png"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
-        style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
       
       <div class="relative z-10 p-8 md:p-14 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
-           style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
+           style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);">
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
@@ -233,27 +227,7 @@
     </div>
   </section>
 
-  <section class="space-y-4 mb-10">
-    <h2 class="text-2xl font-bold">Alberta FAQ</h2>
-    {#each faqItems as faq}
-      <details class="navy-card rounded-xl p-4 group cursor-pointer">
-        <summary class="flex list-none items-center justify-between gap-2 font-bold text-[#F1F5F9]">
-          {faq.question}
-          <svg
-            class="h-4 w-4 shrink-0 text-text-tertiary"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </summary>
-        <p class="mt-3 text-sm leading-relaxed text-[#94A3B8]">{faq.answer}</p>
-      </details>
-    {/each}
-  </section>
+    <FAQ items={faqItems.map(f => ({ q: f.question, a: f.answer }))} title="Alberta FAQ" />
 
   <nav class="mt-12 flex flex-wrap gap-x-6 gap-y-3 mb-10" aria-label="Related pages">
     <a href="/casino" class="view-all-link">Explore casino games →</a>
