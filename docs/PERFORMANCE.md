@@ -129,3 +129,9 @@ If any route fails, ship is blocked until either the regression is fixed or the 
 - Bulk migration of `<img>` → `<enhanced:img>` once per-route audits show consistent LCP wins.
 - Consider Vercel Image Optimization on top of `enhanced-img` for query-string-based size negotiation.
 - Per-route SSR migration (Workstream F2) with `+page.server.ts` and edge HTML caching, gated on cache-coherency analysis with the A1 age gate.
+
+## Related documentation
+
+- [CI quality gates](CI.md) — baseline commands that should remain green before performance profiling.
+- [Testing guide](TESTING.md) — Playwright setup and E2E notes for browser-based performance runs.
+- [Design system](../DESIGN.md) — token and typography constraints that affect layout stability.

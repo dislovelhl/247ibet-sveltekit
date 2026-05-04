@@ -83,7 +83,7 @@ test: {
 
 ### 3. Playwright browser install in CI
 
-The CI pipeline (`docs/CI.md`) should add a step before `pnpm test:e2e`:
+The [CI pipeline](CI.md) should add a step before `pnpm test:e2e`:
 
 ```yaml
 - run: npx playwright install chromium --with-deps
@@ -102,3 +102,10 @@ pnpm install --strict-peer-dependencies=false
 ```
 
 Document any pinned versions here if the constraint is applied.
+
+## Related documentation
+
+- [CI quality gates](CI.md) — required check order and branch-protection setup.
+- [Accessibility guide](A11Y.md) — axe-core and WCAG coverage targets for future Playwright tests.
+- [Performance budget](PERFORMANCE.md) — Lighthouse and Core Web Vitals checks that complement the test suite.
+- [Security policy](SECURITY.md) — CSP and admin-surface behavior that should stay covered by tests.

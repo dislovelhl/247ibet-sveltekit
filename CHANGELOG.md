@@ -8,12 +8,12 @@ All notable changes to 247iBET are documented here.
 
 - **Nonce-based CSP scaffold** (Workstream A0) — SvelteKit `csp: { mode: 'auto' }` config in `svelte.config.js` with `script-src ['self']`. Vercel `Content-Security-Policy-Report-Only` header in `vercel.json` hardened from `'unsafe-inline'` → `'strict-dynamic'`. Enforcement on top-3 routes (`/`, `/casino`, `/sportsbook`) gated on synthetic Playwright crawl + 72h soak (Workstream A6).
 - **Admin defense-in-depth** (Workstream E1) — all three `/admin/*` server pages now wrap the existing `error(401)` hard-deny with a `ADMIN_ENABLED` feature flag returning `error(404)` in production. Admin surface is invisible by default unless explicitly enabled in env.
-- **`docs/SECURITY.md`** — threat model, accepted-risk register (3 HIGH undici CVEs documented with watch-and-bump policy), CSP policy explanation, admin-surface gating, vulnerability reporting placeholder.
-- **`docs/A11Y.md`** — WCAG 2.2 AA target documented, focus-visible patterns, accordion ARIA pattern reference, aria-label audit table, gold-on-navy contrast warning for designer follow-up, axe-core integration notes.
-- **`docs/PERFORMANCE.md`** — mobile p75 budget thresholds (LCP <2.5s, INP <200ms, CLS <0.1, performance ≥90), `@sveltejs/enhanced-img` decision (chosen over Vercel Blob to avoid LCP regression), bundle-composition tracking, cache-coherency constraint with the A1 hooks-based age gate, runnable Lighthouse script.
-- **`docs/CI.md`** — 4-gate quality-gates job documentation, branch-protection setup, local re-run guide, PR recovery procedure.
-- **`docs/TESTING.md`** — test-layer tabulation, run scripts per layer, one-time `npx playwright install chromium` setup, jsdom environment configuration note for component tests.
-- **`docs/COMPLIANCE_AUDIT_v0.3.md`** — read-only audit of affiliate disclosure visibility (A2), responsible-gambling link presence (A3), and bonus-terms / editorial-policy accuracy (A5).
+- **[Security docs](docs/SECURITY.md)** — threat model, accepted-risk register (3 HIGH undici CVEs documented with watch-and-bump policy), CSP policy explanation, admin-surface gating, vulnerability reporting placeholder.
+- **[Accessibility docs](docs/A11Y.md)** — WCAG 2.2 AA target documented, focus-visible patterns, accordion ARIA pattern reference, aria-label audit table, gold-on-navy contrast warning for designer follow-up, axe-core integration notes.
+- **[Performance docs](docs/PERFORMANCE.md)** — mobile p75 budget thresholds (LCP <2.5s, INP <200ms, CLS <0.1, performance ≥90), `@sveltejs/enhanced-img` decision (chosen over Vercel Blob to avoid LCP regression), bundle-composition tracking, cache-coherency constraint with the A1 hooks-based age gate, runnable Lighthouse script.
+- **[CI docs](docs/CI.md)** — 4-gate quality-gates job documentation, branch-protection setup, local re-run guide, PR recovery procedure.
+- **[Testing docs](docs/TESTING.md)** — test-layer tabulation, run scripts per layer, one-time `npx playwright install chromium` setup, jsdom environment configuration note for component tests.
+- **[Compliance audit](docs/COMPLIANCE_AUDIT_v0.3.md)** — read-only audit of affiliate disclosure visibility (A2), responsible-gambling link presence (A3), and bonus-terms / editorial-policy accuracy (A5).
 - **GitHub Actions CI** (Workstream D4) — `.github/workflows/ci.yml` runs `pnpm check && pnpm lint && pnpm test && pnpm build` on every PR and push to `main`. Branch protection on `main` requires the `quality-gates` check (one-time founder UI step, screenshot artifact in `static/reports/branch-protection-v0.3.png` after configuration).
 - **Playwright + component test scaffolds** (Workstream D2/D3/D5/D6) — `playwright.config.ts` with chromium-mobile (Pixel 5) + chromium-desktop projects, sample smoke test, CSP synthetic-crawl skeleton (`test.skip` until A4 sink lands), `tests/components/` placeholder tests using `@testing-library/svelte`, `@axe-core/playwright` installed.
 - **`@sveltejs/enhanced-img`** dev dependency wired in `vite.config.ts` for build-time AVIF/WebP transcoding + responsive `srcset`. Per-route migration of `<img>` → `<enhanced:img>` deferred to v0.3.1 (per-route audit gate).
@@ -45,7 +45,7 @@ All notable changes to 247iBET are documented here.
 - B1: Lighthouse mobile baseline runs against Vercel preview URL (deferred from local-Chromium runs)
 - C1: Design-review pass on the 42 modified routes/components
 - C2: WCAG 2.2 AA axe-core audit run against the 5 audited routes
-- F2: SSR evaluation document (`docs/SSR_EVALUATION.md`) for `/`, `/casino`, `/sportsbook` hot paths
+- F2: SSR evaluation follow-up for `/`, `/casino`, `/sportsbook` hot paths (tracked from [Performance docs](docs/PERFORMANCE.md#follow-ups-for-v031))
 - G1: Atomic-commit reorg of the dirty tree (per-hunk policy for `+layout.svelte`, `vercel.json`, `package.json`, `+page.svelte`; target 8-12 commits with workstream-ID prefixes)
 - BFG-purge of 183MB hero image history (clone-time, not runtime)
 - Real admin auth (token + rate-limit + audit log + MFA)

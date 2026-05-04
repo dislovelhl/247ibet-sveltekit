@@ -65,3 +65,9 @@ pnpm test    ✅ 113 tests pass (14 test files)
 - [ ] Implement server-side age verification
 - [x] Migrate Svelte 4 patterns to Svelte 5 (GuideHighlights, IntentHubs, how-we-test)
 - [ ] Move generated hero images to CDN (183MB .git)
+
+## Related documentation
+
+- [Security policy](SECURITY.md) — details for the CSP, HSTS, and admin-surface changes summarized here.
+- [Testing guide](TESTING.md) — test-suite structure behind the verification summary.
+- [CI quality gates](CI.md) — automation expectations for keeping the systemic improvements green.

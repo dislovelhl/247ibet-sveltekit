@@ -51,3 +51,9 @@ Navigate to **Settings → Branches → Branch protection rules** and configure:
 
 The `tests/e2e/` directory is reserved for Playwright end-to-end tests (Team E, future workstream).
 Once scaffolded, a second CI job `e2e` will be added to the workflow.
+
+## Related documentation
+
+- [Testing guide](TESTING.md) — local unit, component, and E2E test commands used by the CI gates.
+- [Security policy](SECURITY.md) — CSP, admin-surface, and vulnerability-reporting checks that CI protects.
+- [Performance budget](PERFORMANCE.md) — Lighthouse and Core Web Vitals thresholds for release readiness.

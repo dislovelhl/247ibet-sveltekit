@@ -187,3 +187,9 @@ The site has a sound structural foundation for compliance: `AffiliateDisclosure`
 The responsible-gambling page gaps (missing Gamblers Anonymous, no external self-exclusion registry link, missing AGLC canonical link) are material for AGCO/AGLC editorial review but are secondary to the three systemic findings above.
 
 All HIGH items must be resolved before production launch. MEDIUM items should be addressed before first AGCO/ASC editorial review submission.
+
+## Related documentation
+
+- [Security policy](SECURITY.md) — CSP, admin-surface, and disclosure-process context for compliance fixes.
+- [Accessibility guide](A11Y.md) — keyboard, landmark, and ARIA guidance for remediation work.
+- [Testing guide](TESTING.md) — verification commands for route, disclosure, and Playwright coverage.

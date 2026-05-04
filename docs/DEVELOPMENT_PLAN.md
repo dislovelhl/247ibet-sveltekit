@@ -246,3 +246,10 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 ---
 
 *Next review: 2026-05-06*
+
+## Related documentation
+
+- [Systemic improvement report](SYSTEMIC_IMPROVEMENT.md) — completed audit, cleanup, and verification work.
+- [Testing guide](TESTING.md) — current test layers and local commands for the plan's testing goals.
+- [CI quality gates](CI.md) — branch-protection and gate expectations for plan completion.
+- [Security policy](SECURITY.md) — threat-model and CSP context for security roadmap items.

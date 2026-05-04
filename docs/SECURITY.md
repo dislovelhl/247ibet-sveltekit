@@ -83,3 +83,9 @@ To report a security vulnerability in this project:
 4. We follow responsible disclosure: we ask for 90 days to remediate before public disclosure.
 
 For urgent/critical issues affecting live user data, include "URGENT" in the subject line.
+
+## Related documentation
+
+- [Compliance audit](COMPLIANCE_AUDIT_v0.3.md) — affiliate, responsible-gambling, and terms findings that intersect with security posture.
+- [CI quality gates](CI.md) — required checks before pushing security-sensitive changes.
+- [Testing guide](TESTING.md) — unit and E2E test commands for validating security fixes.
