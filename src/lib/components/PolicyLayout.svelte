@@ -128,7 +128,7 @@
             </button>
           </div>
         </article>
-      </main>
+      </div>
 
       <!-- Sidebar / TOC -->
       <aside class="hidden lg:block">

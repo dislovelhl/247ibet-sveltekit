@@ -214,6 +214,7 @@
             </section>
           {/each}
         </div>
+      </div>
     {/if}
 
     <footer class="mt-24 grid gap-8 md:grid-cols-2">
