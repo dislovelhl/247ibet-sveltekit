@@ -2,7 +2,6 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
-    Search,
     ChevronDown,
     UserPlus,
     Wallet,
@@ -115,18 +114,7 @@
     }
   ];
 
-  let searchQuery = $state('');
   let openIndex = $state<string | null>(null);
-
-  const filteredFaqs = $derived(
-    faqData.map(cat => ({
-      ...cat,
-      questions: cat.questions.filter(q => 
-        q.q.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        q.a.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    })).filter(cat => cat.questions.length > 0)
-  );
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -169,20 +157,10 @@
         <p class="max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
           Everything you need to know about Canadian iGaming — from Interac deposits to account verification and bonus rules.
         </p>
-
-        <div class="mt-10 relative max-w-xl">
-          <Search class="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-text-tertiary" />
-          <input
-            type="text"
-            bind:value={searchQuery}
-            placeholder="Search questions or keywords..."
-            class="w-full bg-navy-raised/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-prestige-gold/50 focus:ring-1 focus:ring-prestige-gold/50 transition-all placeholder:text-text-tertiary"
-          />
-        </div>
       </div>
     </header>
 
-    {#if filteredFaqs.length > 0}
+    {#if faqData.length > 0}
       <div class="grid gap-12 lg:grid-cols-[300px_1fr]">
         <!-- Category Sidebar -->
         <aside class="hidden lg:block space-y-2 sticky top-24 h-fit">
@@ -200,7 +178,7 @@
         </aside>
 
         <div class="space-y-16">
-          {#each filteredFaqs as cat}
+          {#each faqData as cat}
             {@const CatIcon = cat.icon}
             <section id={cat.id} class="scroll-mt-24">
               <div class="flex items-center gap-4 mb-8">
@@ -236,19 +214,6 @@
             </section>
           {/each}
         </div>
-      </div>
-    {:else}
-      <div class="text-center py-20 navy-card rounded-3xl border border-dashed border-white/10">
-        <HelpCircle class="h-16 w-16 text-text-tertiary mx-auto mb-4 opacity-50" />
-        <h2 class="text-2xl font-bold text-white mb-2">No results found</h2>
-        <p class="text-text-body">Try searching for something else or browse categories.</p>
-        <button 
-          onclick={() => searchQuery = ''}
-          class="mt-6 text-prestige-gold font-bold hover:underline"
-        >
-          Clear search
-        </button>
-      </div>
     {/if}
 
     <footer class="mt-24 grid gap-8 md:grid-cols-2">
@@ -272,10 +237,6 @@
         </a>
       </div>
     </footer>
-
-    <div class="mt-20 pt-10 border-t border-white/5">
-      <AuthorByline authorId="editorial" date={LAST_UPDATED} />
-    </div>
   </div>
 </div>
 

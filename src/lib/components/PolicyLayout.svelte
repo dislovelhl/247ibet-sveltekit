@@ -101,7 +101,7 @@
 
     <div class="grid lg:grid-cols-[1fr_300px] gap-12">
       <!-- Main Content -->
-      <main class="z-10">
+      <div class="z-10">
         <article class="glass-thin rounded-[2rem] p-8 md:p-12 lg:p-16 border border-white/5 relative overflow-hidden">
            <!-- Subtle shimmer background -->
           <div class="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>

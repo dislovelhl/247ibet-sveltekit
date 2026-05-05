@@ -36,9 +36,13 @@ export const load: LayoutServerLoad = async ({ url, cookies, getClientAddress, r
 
   // EW1: Cache-bypass for gambling content
   if (url.pathname !== '/age-gate' && !isBot) {
-    setHeaders({
-      'Cache-Control': 'private, no-store'
-    });
+    try {
+      setHeaders({
+        'Cache-Control': 'private, no-store'
+      });
+    } catch (e) {
+      // Ignore if headers are already sent or set
+    }
   }
 
   return {

@@ -16,7 +16,9 @@
 </script>
 
 {#if isLoginPage}
-  {@render children()}
+  <main>
+    {@render children()}
+  </main>
 {:else}
   <div class="min-h-screen bg-navy-black text-white">
     <!-- Admin Header -->
