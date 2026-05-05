@@ -10,6 +10,7 @@ const config = {
       directives: {
         'default-src': ["'none'"],
         'img-src': ["'self'", 'data:', 'https:'],
+        'media-src': ["'self'"],
         'script-src': ["'self'", "'strict-dynamic'", 'https://va.vercel-scripts.com'],
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:', 'https:'],
