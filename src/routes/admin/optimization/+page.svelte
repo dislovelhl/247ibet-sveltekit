@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Protected admin route — requires Stack Auth session
+  // Protected admin route — requires valid ADMIN_TOKEN session
 </script>
 
 <svelte:head>
@@ -11,9 +11,9 @@
   <h1 class="font-display text-3xl font-normal text-[#F1F5F9] mb-4">Optimization Dashboard</h1>
   <div class="navy-card rounded-2xl p-8 text-center">
     <p class="text-text-tertiary text-sm">
-      Protected admin dashboard. Requires Stack Auth session wired via <code
-        class="text-prestige-gold">+page.ts</code
-      > server-side auth check.
+      Protected admin dashboard. Requires active session verified via <code
+        class="text-prestige-gold">+page.server.ts</code
+      > session check.
     </p>
   </div>
 </div>

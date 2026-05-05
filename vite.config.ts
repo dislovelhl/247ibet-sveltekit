@@ -28,23 +28,22 @@ function braintrustBuildPlugin(command: string): PluginOption[] {
 }
 
 export default defineConfig(async ({ command }) => {
-  // Workflow plugin only runs in build. In dev it watches files it generates
-  // itself, triggering a rebuild loop that prevents Vite from settling and
-  // breaks CSS injection.
-  let workflowPlugins: PluginOption[] = [];
-  if (command === 'build') {
-    const { workflowPlugin } = await import('workflow/sveltekit');
-    workflowPlugins = workflowPlugin();
-  }
+  const { workflowPlugin } = await import('workflow/sveltekit');
+
   return {
     plugins: [
       enhancedImages(),
       tailwindcss(),
       sveltekit(),
-      ...workflowPlugins,
+      workflowPlugin(),
       ...braintrustBuildPlugin(command),
       cssInlineSSRFix
     ],
+    server: {
+      watch: {
+        ignored: ['**/src/routes/.well-known/workflow/**']
+      }
+    },
     resolve: {
       alias: {
         '@vercel/speed-insights/sveltekit': fileURLToPath(

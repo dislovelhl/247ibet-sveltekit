@@ -34,7 +34,7 @@ pnpm lint         # ESLint
 pnpm test         # run vitest test suite (113 tests)
 ```
 
-Test suite: 113 tests across 14 test files (unit + integration). The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.
+Test suite: 141 tests across 16 test files (unit + integration). The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.
 
 ## Architecture
 

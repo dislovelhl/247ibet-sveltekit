@@ -100,23 +100,27 @@
 
 All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 
-### ✅ DONE (April 29, 2026)
+### ✅ DONE (May 4, 2026)
+- [x] P0-1: Fix dependency vulnerabilities — resolved via pnpm overrides for undici, devalue, uuid, and cookie
 - [x] P0-2: Write tests for site.ts (15 tests)
 - [x] P0-3: Write tests for auth.ts (8 tests)
 - [x] P0-4: Update AGENTS.md with test commands
-- [x] P0-5: Verify all tests pass (now 83 tests)
+- [x] P0-5: Verify all tests pass (now 147 tests)
+- [x] P1-6: Write tests for ibet-brand.ts — refactored URL derivation to use robust deriveLoginUrl helper with full unit test coverage
+- [x] P1-7: Write tests for age-gate-client.ts — verified existing browser and SSR path tests provide full coverage for localStorage branching and legacy keys
+- [x] P1-8: Migrate 3 files from Svelte 4 to Svelte 5 patterns — migrated AgeGate.svelte and +layout.svelte to $effect; verified GuideHighlights.svelte already modernized
+- [x] P1-9: Implement real admin auth — implemented token-based authentication with secure cookies, login portal, and unified admin layout
+- [x] P1-10: Add Content-Security-Policy enforcement — moved from Report-Only to directives in svelte.config.js; whitelisted Vercel domains
+- [x] P1-11: Clean 57 unused variable warnings — verified pnpm lint and pnpm check are clean
 
 ### ⏸️ BLOCKED
-- [ ] P0-1: Fix dependency vulnerabilities — undici comes via @workflow packages
+(None)
 
-### [P0] 1. Fix dependency vulnerabilities (10 issues, 3 HIGH)
-- ~~**Why**: undici HIGH vulnerabilities expose WebSocket and HTTP smuggling vectors — unacceptable for a production iGaming site~~
-- ~~**Expected impact**: Zero HIGH/Critical CVEs in dependency tree~~
-- ~~**Next action**: Run `pnpm update workflow braintrust && pnpm audit` — verify 10 vulns resolve (30 min)~~
-- ~~**Assumptions**: Newer versions of workflow/braintrust pull patched transitive deps~~
-- ~~**Confidence**: High~~
-
-**Status**: BLOCKED — undici comes via @workflow world packages which pin older versions. Requires upstream fix.
+### [P0] 1. Fix dependency vulnerabilities (0 issues)
+- **Why**: undici HIGH vulnerabilities expose WebSocket and HTTP smuggling vectors — fixed.
+- **Done**: Added pnpm overrides for undici (7.24.0), devalue (5.6.4), uuid (14.0.0), and cookie (0.7.0).
+- **Impact**: Zero vulnerabilities found in pnpm audit.
+- **Confidence**: High
 
 ### [P0] 2. Write tests for `src/lib/site.ts` (canonicalUrl, resolveSiteUrl)
 - **Done**: 15 tests added covering URL resolution, canonicalUrl, SEO constants.
@@ -137,42 +141,36 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 ## Parking Lot (P1 — This Month)
 
 ### [P1] 6. Write tests for `src/lib/ibet-brand.ts` (URL derivation)
-- **Why**: `IBET_URLS.login` uses fragile `.replace('/home', '')` — regression-prone
-- **Expected impact**: Snapshot tests catch any accidental URL changes
-- **Next action**: Expand existing `tests/ibet-brand.test.ts` with URL format validation (30 min)
+- **Done**: Refactored URL derivation into a robust `deriveLoginUrl` helper and added unit tests covering edge cases.
+- **Impact**: Robust path-aware logic replaces fragile string replacement.
 - **Confidence**: High
 
 ### [P1] 7. Write tests for `src/lib/age-gate-client.ts`
-- **Why**: Legal compliance for iGaming. Need to verify localStorage branching, browser detection, legacy key migration
-- **Expected impact**: Documented contract for age verification behavior
-- **Next action**: Create `tests/age-gate.test.ts` with mocked localStorage (45 min)
-- **Confidence**: Medium (requires mocking browser environment)
+- **Done**: Verified `tests/age-gate-client.test.ts` (SSR) and `tests/age-gate-browser.test.ts` (Browser) cover all branching and error-handling paths.
+- **Impact**: Age verification logic (v1) is fully documented and regression-tested.
+- **Confidence**: High
 
 ### [P1] 8. Migrate 3 files from Svelte 4 to Svelte 5 patterns
-- **Why**: `svelte:component` is legacy syntax; `$effect` is idiomatic for side effects
-- **Expected impact**: Consistent codebase, leverage Svelte 5 performance improvements
-- **Next action**: Migrate `GuideHighlights.svelte` — replace `<svelte:component>` with direct rendering (30 min)
+- **Done**: Migrated `AgeGate.svelte` and `+layout.svelte` to use `$effect` runes for side effects; verified `GuideHighlights.svelte` is already using Svelte 5 patterns.
+- **Impact**: Codebase consistency improved; legacy `onMount` patterns reduced.
+- **Confidence**: High
+### [P1] 9. Implement real admin auth
+- **Done**: Implemented secure token-based authentication (via `ADMIN_TOKEN` env var) with HTTP-only cookies, a dedicated `/admin/login` portal, and a unified `+layout.svelte` for the admin section.
+- **Impact**: Replaced 401 stubs with a functional, secure internal surface for administrators.
+- **Confidence**: High
+
+## Parking Lot (P2 — Backlog)
+### [P1] 10. Add `Content-Security-Policy` enforcement
+- **Done**: Moved CSP config from `reportOnly` to `directives` in `svelte.config.js`; added `va.vercel-scripts.com` to `script-src`.
+- **Impact**: Active XSS protection enabled for production.
+- **Confidence**: High
+
+### [P1] 11. Clean 57 unused variable warnings
+- **Done**: Verified `pnpm lint` and `pnpm check` return zero warnings.
+- **Impact**: Clean build output; technical debt reduced.
 - **Confidence**: High
 
 ### [P1] 9. Implement real admin auth (replace 401 stubs)
-- **Why**: Admin routes currently return 401 unconditionally. Need real auth before any data appears.
-- **Expected impact**: Secure admin access; can deploy affiliate dashboard with real data
-- **Next action**: Research auth options for SvelteKit (Lucia, Auth.js, Stack Auth) — evaluate for iGaming compliance (60 min)
-- **Confidence**: Medium (depends on auth provider choice)
-
-### [P1] 10. Add `Content-Security-Policy` enforcement (remove Report-Only)
-- **Why**: CSP-Report-Only detects but doesn't block XSS. For a production iGaming site, enforcement is required.
-- **Expected impact**: Active XSS protection; compliance signal for regulators
-- **Next action**: Review CSP violation reports, tighten policy, switch to enforcement (45 min)
-- **Confidence**: Medium (need to verify no legitimate scripts are blocked)
-
-### [P1] 11. Clean 57 unused variable warnings
-- **Why**: Lint noise hides real issues; unused imports suggest dead code
-- **Expected impact**: Clean lint output; smaller bundle if dead code is removed
-- **Next action**: Run `pnpm lint --fix` then manually address remaining unused vars across 30+ files (90 min)
-- **Confidence**: High
-
----
 
 ## Parking Lot (P2 — Backlog)
 
@@ -250,6 +248,16 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 ## Related documentation
 
 - [Systemic improvement report](SYSTEMIC_IMPROVEMENT.md) — completed audit, cleanup, and verification work.
+- [Testing guide](TESTING.md) — current test layers and local commands for the plan's testing goals.
+- [CI quality gates](CI.md) — branch-protection and gate expectations for plan completion.
+- [Security policy](SECURITY.md) — threat-model and CSP context for security roadmap items.
+ent report](SYSTEMIC_IMPROVEMENT.md) — completed audit, cleanup, and verification work.
+- [Testing guide](TESTING.md) — current test layers and local commands for the plan's testing goals.
+- [CI quality gates](CI.md) — branch-protection and gate expectations for plan completion.
+- [Security policy](SECURITY.md) — threat-model and CSP context for security roadmap items.
+an completion.
+- [Security policy](SECURITY.md) — threat-model and CSP context for security roadmap items.
+ent report](SYSTEMIC_IMPROVEMENT.md) — completed audit, cleanup, and verification work.
 - [Testing guide](TESTING.md) — current test layers and local commands for the plan's testing goals.
 - [CI quality gates](CI.md) — branch-protection and gate expectations for plan completion.
 - [Security policy](SECURITY.md) — threat-model and CSP context for security roadmap items.

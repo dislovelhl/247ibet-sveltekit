@@ -1,6 +1,40 @@
 import { describe, it, expect } from 'vitest';
-import { IBET_URLS, IBET_PROFILE, IBET_CTA, IBET_DISCLAIMER } from '../src/lib/ibet-brand';
+import {
+  IBET_URLS,
+  IBET_PROFILE,
+  IBET_CTA,
+  IBET_DISCLAIMER,
+  deriveLoginUrl,
+} from '../src/lib/ibet-brand';
 import { SITE, PARTNER } from '../src/lib/site';
+
+describe('deriveLoginUrl', () => {
+  it('correctly handles trailing /home', () => {
+    expect(deriveLoginUrl('https://partner.ca/home')).toBe('https://partner.ca/login');
+  });
+
+  it('correctly handles trailing slash', () => {
+    expect(deriveLoginUrl('https://partner.ca/')).toBe('https://partner.ca/login');
+  });
+
+  it('correctly handles URL without special suffix', () => {
+    expect(deriveLoginUrl('https://partner.ca')).toBe('https://partner.ca/login');
+  });
+
+  it('trims whitespace', () => {
+    expect(deriveLoginUrl('  https://partner.ca/home  ')).toBe('https://partner.ca/login');
+  });
+
+  it('does not replace /home if it is part of the domain', () => {
+    expect(deriveLoginUrl('https://home-partner.ca/home')).toBe('https://home-partner.ca/login');
+  });
+
+  it('does not replace /home if it is in the middle of the path', () => {
+    expect(deriveLoginUrl('https://partner.ca/home/index')).toBe(
+      'https://partner.ca/home/index/login',
+    );
+  });
+});
 
 describe('IBET_URLS (real module)', () => {
   it('matches snapshot', () => {
@@ -19,12 +53,8 @@ describe('IBET_URLS (real module)', () => {
     expect(IBET_URLS.deposit).toBe(`${SITE.url}/deposit`);
   });
 
-  it('login strips /home from partner url and adds /login', () => {
-    // Robust check for the fragile derivation:
-    // url: https://partner.com/home
-    // login: https://partner.com/login
-    expect(IBET_URLS.login).not.toContain('/home');
-    expect(IBET_URLS.login).toBe(`${PARTNER.url.replace('/home', '')}/login`);
+  it('login is derived using deriveLoginUrl helper', () => {
+    expect(IBET_URLS.login).toBe(deriveLoginUrl(PARTNER.url));
   });
 
   it('rg points to /responsible-gambling on SITE.url', () => {

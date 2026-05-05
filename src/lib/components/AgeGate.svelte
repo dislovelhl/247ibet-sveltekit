@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { fade, fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -17,7 +16,8 @@
   let visible = $state(false);
   let acceptButtonRef: HTMLButtonElement | undefined = $state();
 
-  onMount(() => {
+  $effect(() => {
+    if (!browser) return;
     let cancelled = false;
     let timerId: ReturnType<typeof setTimeout> | null = null;
 

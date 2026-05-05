@@ -1,23 +1,11 @@
 import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
 import { safeEq } from '$lib/server/auth.js';
+import { start } from 'workflow/api';
 import type { RequestHandler } from './$types';
 import { geoOptimizerWorkflow } from '../../../../workflows/geo-optimizer.js';
 
 export const config = { runtime: 'nodejs24.x', maxDuration: 60 };
-
-async function runWorkflow(): Promise<{ runId: string; async: boolean }> {
-  let runId: string = crypto.randomUUID();
-  try {
-    const { start } = await import('workflow/api');
-    const run = await start(geoOptimizerWorkflow);
-    runId = run.runId ?? runId;
-    return { runId, async: true };
-  } catch {
-    await geoOptimizerWorkflow();
-    return { runId, async: false };
-  }
-}
 
 export const POST: RequestHandler = async ({ request }) => {
   const secret = request.headers.get('x-workflow-secret') ?? '';
@@ -26,11 +14,8 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const { runId, async: isAsync } = await runWorkflow();
-  if (isAsync) {
-    return json({ runId, status: 'started' }, { status: 202 });
-  }
-  return json({ runId, status: 'completed-sync' }, { status: 200 });
+  const { runId } = await start(geoOptimizerWorkflow);
+  return json({ runId, status: 'started' }, { status: 202 });
 };
 
 // Vercel Cron calls GET with Authorization: Bearer <CRON_SECRET>
@@ -41,9 +26,6 @@ export const GET: RequestHandler = async ({ request }) => {
     return json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const { runId, async: isAsync } = await runWorkflow();
-  if (isAsync) {
-    return json({ runId, status: 'started' }, { status: 202 });
-  }
-  return json({ runId, status: 'completed-sync' }, { status: 200 });
+  const { runId } = await start(geoOptimizerWorkflow);
+  return json({ runId, status: 'started' }, { status: 202 });
 };

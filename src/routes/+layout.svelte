@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../app.css';
   import { dev } from '$app/environment';
-  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
   import { inject } from '@vercel/analytics';
@@ -10,7 +9,7 @@
   import SEOFooter from '$lib/components/SEOFooter.svelte';
   import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
 
-  onMount(() => {
+  $effect(() => {
     inject({ mode: dev ? 'development' : 'production' });
   });
 

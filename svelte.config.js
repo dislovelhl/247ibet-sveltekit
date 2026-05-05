@@ -7,10 +7,10 @@ const config = {
   kit: {
     csp: {
       mode: 'auto',
-      reportOnly: {
+      directives: {
         'default-src': ["'none'"],
         'img-src': ["'self'", 'data:', 'https:'],
-        'script-src': ["'self'", "'strict-dynamic'"],
+        'script-src': ["'self'", "'strict-dynamic'", 'https://va.vercel-scripts.com'],
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:', 'https:'],
         'connect-src': ["'self'", 'https://vitals.vercel-insights.com', 'https://*.sentry.io'],
@@ -18,8 +18,7 @@ const config = {
         'object-src': ["'none'"],
         'base-uri': ["'none'"],
         'form-action': ["'self'"],
-        'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : [],
-        'report-to': ['csp-endpoint']
+        'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : []
       }
     },
     adapter: adapter({

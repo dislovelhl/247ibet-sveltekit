@@ -1,11 +1,25 @@
 // Ported from lib/ibet-brand.ts — @/ → $lib/
 import { PARTNER, SITE } from '$lib/site';
 
+/**
+ * Robustly derives the login URL from a partner home URL.
+ * It handles trailing '/home' or trailing slashes to ensure a clean '/login' path.
+ */
+export function deriveLoginUrl(partnerUrl: string): string {
+  const url = partnerUrl.trim();
+  const base = url.endsWith('/home')
+    ? url.slice(0, -5)
+    : url.endsWith('/')
+      ? url.slice(0, -1)
+      : url;
+  return `${base}/login`;
+}
+
 export const IBET_URLS = {
   register: PARTNER.url,
   casino: PARTNER.casinoUrl,
   deposit: `${SITE.url}/deposit`,
-  login: `${PARTNER.url.replace('/home', '')}/login`,
+  login: deriveLoginUrl(PARTNER.url),
   rg: `${SITE.url}/responsible-gambling`,
 } as const;
 

@@ -1,6 +1,7 @@
 import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
 import { safeEq } from '$lib/server/auth.js';
+import { start } from 'workflow/api';
 import type { RequestHandler } from './$types';
 import { aeoSchemaWorkflow } from '../../../../workflows/aeo-schema.js';
 import type { AeoSchemaInput } from '$lib/workflows/types.js';
@@ -40,19 +41,6 @@ function validateInput(
   return { ok: true, value };
 }
 
-async function runWorkflow(input: AeoSchemaInput): Promise<{ runId: string; async: boolean }> {
-  let runId: string = crypto.randomUUID();
-  try {
-    const { start } = await import('workflow/api');
-    const run = await start(aeoSchemaWorkflow, [input]);
-    runId = run.runId ?? runId;
-    return { runId, async: true };
-  } catch {
-    await aeoSchemaWorkflow(input);
-    return { runId, async: false };
-  }
-}
-
 export const POST: RequestHandler = async ({ request }) => {
   const secret = request.headers.get('x-workflow-secret') ?? '';
   const expected = env.WORKFLOW_SECRET ?? '';
@@ -79,11 +67,8 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'invalid input', detail: v.reason }, { status: 400 });
   }
 
-  const { runId, async: isAsync } = await runWorkflow(v.value);
-  if (isAsync) {
-    return json({ runId, status: 'started' }, { status: 202 });
-  }
-  return json({ runId, status: 'completed-sync' }, { status: 200 });
+  const { runId } = await start(aeoSchemaWorkflow, [v.value]);
+  return json({ runId, status: 'started' }, { status: 202 });
 };
 
 // Vercel Cron calls GET with Authorization: Bearer <CRON_SECRET>
@@ -94,9 +79,6 @@ export const GET: RequestHandler = async ({ request }) => {
     return json({ error: 'unauthorized' }, { status: 401 });
   }
 
-  const { runId, async: isAsync } = await runWorkflow({});
-  if (isAsync) {
-    return json({ runId, status: 'started' }, { status: 202 });
-  }
-  return json({ runId, status: 'completed-sync' }, { status: 200 });
+  const { runId } = await start(aeoSchemaWorkflow, [{}]);
+  return json({ runId, status: 'started' }, { status: 202 });
 };

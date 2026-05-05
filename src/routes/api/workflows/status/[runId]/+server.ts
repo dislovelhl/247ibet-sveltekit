@@ -1,6 +1,7 @@
 import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
 import { safeEq } from '$lib/server/auth.js';
+import { getRun } from 'workflow/api';
 import type { RequestHandler } from './$types';
 
 export const config = { runtime: 'nodejs24.x', maxDuration: 30 };
@@ -43,11 +44,8 @@ export const GET: RequestHandler = async ({ request, params }) => {
     return json({ error: 'invalid runId' }, { status: 400 });
   }
 
-  try {
-    const { getRun } = await import('workflow/api');
-    const run = getRun(runId);
-    return json(projectRun(runId, run));
-  } catch {
+  const run = getRun(runId);
+  if (!run) {
     return json({
       runId,
       status: 'unknown',
@@ -56,4 +54,6 @@ export const GET: RequestHandler = async ({ request, params }) => {
       durationMs: null,
     } satisfies RunStatusDTO);
   }
+
+  return json(projectRun(runId, run));
 };
