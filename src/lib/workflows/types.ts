@@ -36,7 +36,8 @@ export type SeoIssue = {
     | 'missing-jsonld'
     | 'multiple-h1'
     | 'short-title'
-    | 'fetch-failed';
+    | 'fetch-failed'
+    | 'audit-failed';
   severity: 'error' | 'warn';
   detail?: string;
 };

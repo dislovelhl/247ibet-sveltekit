@@ -64,22 +64,37 @@ export async function seoAuditWorkflow(): Promise<SeoAuditResult> {
   const baseUrl = await getBaseUrl();
   const commit = (typeof process !== 'undefined' && process.env.VERCEL_GIT_COMMIT_SHA) || undefined;
 
-  const results = await Promise.allSettled(PAGE_REGISTRY.map((page) => auditPage(page, baseUrl)));
+  // Robustness: Use batching to avoid overwhelming the site or local resources
+  const batchSize = 5;
+  const pages: SeoPageReport[] = [];
+  
+  for (let i = 0; i < PAGE_REGISTRY.length; i += batchSize) {
+    const batch = PAGE_REGISTRY.slice(i, i + batchSize);
+    const results = await Promise.allSettled(batch.map((page) => auditPage(page, baseUrl)));
 
-  const pages: SeoPageReport[] = results.map((result, i) => {
-    if (result.status === 'rejected') {
-      return {
-        path: PAGE_REGISTRY[i].path,
-        title: undefined,
-        description: undefined,
-        canonical: undefined,
-        h1Count: 0,
-        jsonLdCount: 0,
-        issues: [{ rule: 'fetch-failed', severity: 'error', detail: 'page audit failed' }],
-      };
+    for (let j = 0; j < results.length; j++) {
+      const result = results[j];
+      const originalPage = batch[j];
+      
+      if (result.status === 'rejected') {
+        pages.push({
+          path: originalPage.path,
+          title: undefined,
+          description: undefined,
+          canonical: undefined,
+          h1Count: 0,
+          jsonLdCount: 0,
+          issues: [{ 
+            rule: 'audit-failed', 
+            severity: 'error', 
+            detail: result.reason instanceof Error ? result.reason.message : 'page audit failed' 
+          }],
+        });
+      } else {
+        pages.push(result.value);
+      }
     }
-    return result.value;
-  });
+  }
 
   const summary = {
     totalPages: pages.length,

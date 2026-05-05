@@ -4,6 +4,7 @@ import { getBaseUrl } from './steps/get-base-url.js';
 import { fetchPageHtml } from './steps/fetch-page-html.js';
 import { scoreEEAT } from './steps/score-eeat.js';
 import { writeReport } from './steps/write-report.js';
+import { updateSitemap } from './steps/update-sitemap.js';
 
 export async function geoOptimizerWorkflow(): Promise<GeoResult> {
   'use workflow';
@@ -11,13 +12,21 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
   const baseUrl = await getBaseUrl();
   const commit = (typeof process !== 'undefined' && process.env.VERCEL_GIT_COMMIT_SHA) || undefined;
 
-  const results = await Promise.allSettled(
-    PAGE_REGISTRY.map(async (page) => {
-      const html = await fetchPageHtml(page.path, baseUrl);
-      const score = await scoreEEAT(page.path, html);
-      return { page, score };
-    }),
-  );
+  // Robustness: Use a batch size to avoid hitting rate limits or consuming too much memory
+  const batchSize = 5;
+  const results: Array<PromiseSettledResult<{ page: typeof PAGE_REGISTRY[0], score: EEATScore }>> = [];
+  
+  for (let i = 0; i < PAGE_REGISTRY.length; i += batchSize) {
+    const batch = PAGE_REGISTRY.slice(i, i + batchSize);
+    const batchResults = await Promise.allSettled(
+      batch.map(async (page) => {
+        const html = await fetchPageHtml(page.path, baseUrl);
+        const score = await scoreEEAT(page.path, html);
+        return { page, score };
+      }),
+    );
+    results.push(...batchResults);
+  }
 
   const scores: EEATScore[] = [];
   const recommendations: string[] = [];
@@ -29,7 +38,7 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     if (result.status === 'rejected') {
       failures.push({
         path: page.path,
-        reason: 'page fetch failed',
+        reason: result.reason instanceof Error ? result.reason.message : 'page fetch failed',
       });
       continue;
     }
@@ -72,9 +81,8 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     llmsTxtProposed: lines.join('\n'),
   };
 
-  const { writeFile } = await import('fs/promises');
-  const { resolve } = await import('path');
-  await writeFile(resolve('static/llms.txt'), result.llmsTxtProposed, 'utf-8');
+  // Move side effect into a step
+  await updateSitemap(result.llmsTxtProposed);
 
   await writeReport('geo', `geo-${generatedAt.slice(0, 10)}.json`, result);
   return result;

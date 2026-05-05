@@ -28,9 +28,19 @@ async function sendWelcomeEmail(user: { id: string; email: string; }) {
 
   console.log(`Sending welcome email to user: ${user.id}`);
 
+  // Robustness: Add a timeout to simulate a slow external service
+  await new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error("Timeout sending welcome email")), 10000);
+    // Simulate network delay
+    setTimeout(() => {
+      clearTimeout(timeout);
+      resolve(null);
+    }, Math.random() * 2000);
+  });
+
   if (Math.random() < 0.3) {
   // By default, steps will be retried for unhandled errors
-   throw new Error("Retryable!");
+   throw new Error("Temporary network failure - will retry");
   }
 }
 
