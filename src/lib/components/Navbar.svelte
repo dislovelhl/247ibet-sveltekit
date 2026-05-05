@@ -172,7 +172,7 @@
 
 <nav
   aria-label="Main navigation"
-  class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out animate-fade-down {scrolled
+  class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out {scrolled
     ? 'glass-premium border-white/15 shadow-[0_20px_70px_-20px_rgba(0,0,0,0.9)]'
     : 'border-white/5 bg-navy-black/60 backdrop-blur-md'}"
 >
@@ -183,14 +183,8 @@
       : 'max-h-8 opacity-100'}"
   >
     <div
-      class="hidden h-8 items-center justify-between border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
+      class="hidden h-8 items-center justify-end border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
     >
-      <div class="flex items-center gap-2">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span class="font-mono text-xs uppercase tracking-[0.14em] text-text-tertiary"
-          >19+ · Play Responsibly</span
-        >
-      </div>
       <div class="flex items-center gap-1">
         <a
           href="https://x.com/247ibet"
@@ -300,13 +294,6 @@
 
     <!-- Right-side actions -->
     <div class="flex shrink-0 items-center gap-1.5 sm:gap-3">
-      <div
-        class="hidden items-center gap-2 rounded-full border border-success/20 bg-success/8 px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-success lg:flex"
-      >
-        <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
-        19+ Play responsibly
-      </div>
-
       <!-- Partner CTA -->
       <div class="hidden sm:block">
         <a
@@ -417,18 +404,6 @@
         </div>
 
         <div class="rounded-2xl border border-white/8 bg-white/[0.035] p-2">
-          <div
-            class="mb-2 flex items-center justify-between rounded-xl border border-success/15 bg-success/8 px-3 py-2"
-          >
-            <span
-              class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.12em] text-success"
-            >
-              <span class="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true"></span>
-              19+ guide
-            </span>
-            <span class="text-xs font-semibold text-text-tertiary">Play responsibly</span>
-          </div>
-
           <div class="grid grid-cols-2 gap-2">
             <a
               href="/"
