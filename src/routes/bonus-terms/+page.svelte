@@ -2,9 +2,6 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   // page
-import AuthorByline from '$lib/components/AuthorByline.svelte';
-
-const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
@@ -65,29 +62,7 @@ const LAST_UPDATED = '2026-04-29';
       <p class="text-gray-400 font-sans">Last updated: August 2024</p>
     </header>
 
-    <aside
-      class="mb-10 rounded-2xl border border-prestige-gold/40 bg-prestige-gold/10 p-5 text-sm text-prestige-gold"
-      role="note"
-      aria-label="Age and responsible gambling notice"
-    >
-      <p class="font-semibold uppercase tracking-wide">19+ · Play Responsibly</p>
-      <p class="mt-1 text-gray-200">
-        You must be of legal gambling age in your province (19+ in Ontario, Alberta, and most of
-        Canada; 18+ in Alberta, Manitoba, and Quebec for some products) to participate in any
-        promotion or wagering activity referenced on this page. If you or someone you know has a
-        gambling problem, free, confidential help is available 24/7 from
-        <a
-          class="underline hover:text-white"
-          href="https://www.connexontario.ca/"
-          target="_blank"
-          rel="noopener noreferrer">ConnexOntario</a
-        >
-        (Ontario · 1-866-531-2600) or
-        <a class="underline hover:text-white" href="/responsible-gambling"
-          >our responsible gambling resources</a
-        >.
-      </p>
-    </aside>
+
 
     <div
       class="prose prose-invert max-w-none prose-headings:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-6 prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-slate-blue marker:text-prestige-gold"
@@ -185,5 +160,5 @@ const LAST_UPDATED = '2026-04-29';
     </ul>
   </section>
 
-<AuthorByline authorId="editorial" date={LAST_UPDATED} />
+
 </div>

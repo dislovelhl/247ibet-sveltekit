@@ -150,7 +150,6 @@
   };
 
 const LAST_UPDATED = '2026-04-29';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -459,6 +458,5 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       </div>
     </section>
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </div>
 </div>

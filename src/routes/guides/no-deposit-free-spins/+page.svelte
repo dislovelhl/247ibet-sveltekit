@@ -153,18 +153,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       specific bonus amounts on non-educational sites. We recommend visiting each operator's
       official promo page to view their current compliant inventory.
     </p>
-    <div class="flex justify-center gap-4">
-      <div
-        class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-[10px] uppercase font-bold text-gray-500"
-      >
-        19+ Ontario Only
-      </div>
-      <div
-        class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-[10px] uppercase font-bold text-gray-500"
-      >
-        Play Responsibly
-      </div>
-    </div>
+
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

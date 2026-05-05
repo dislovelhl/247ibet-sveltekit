@@ -13,7 +13,7 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
+
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -374,7 +374,7 @@
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
-          Last updated: {LAST_UPDATED} • <span class="text-slate-blue-400 font-bold">Independent Review</span>
+          Last updated: {LAST_UPDATED}
         </div>
         <div
           class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row"
@@ -886,7 +886,7 @@
       </div>
     </section>
 
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
+
 
     <section
       class="overflow-hidden rounded-xl border border-prestige-gold/40 bg-[linear-gradient(100deg,#101827,#080d18)] p-5 shadow-2xl sm:p-8 md:p-12"

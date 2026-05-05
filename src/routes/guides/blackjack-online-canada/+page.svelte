@@ -107,7 +107,6 @@
   const liveFeatures = ['24/7 Available', 'HD Streaming', 'Multiple Limits', 'Interac Deposits'];
 
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   const LAST_UPDATED = '2026-04-29';
 </script>
@@ -340,7 +339,6 @@
     </div>
   </nav>
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div
     class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary"

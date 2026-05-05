@@ -2,7 +2,6 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { Info, ShieldCheck, Scale } from 'lucide-svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 
 const LAST_UPDATED = '2026-04-29';
 </script>
@@ -215,5 +214,4 @@ const LAST_UPDATED = '2026-04-29';
     <a href="/editorial-policy" class="text-slate-blue hover:underline">Editorial Policy    </a>.
   </div>
 
-<AuthorByline authorId="editorial" date={LAST_UPDATED} />
 </div>

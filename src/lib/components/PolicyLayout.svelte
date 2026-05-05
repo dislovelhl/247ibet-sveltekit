@@ -1,7 +1,6 @@
 <script lang="ts">
   import { SITE, canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
   import { fade } from 'svelte/transition';
 
   interface Props {
@@ -90,7 +89,6 @@
         {/if}
 
         <div class="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6">
-          <AuthorByline authorId="editorial" date={lastUpdated} />
           <div class="h-4 w-px bg-white/10 hidden sm:block"></div>
           <span class="text-xs font-bold uppercase tracking-widest text-text-tertiary">
             Effective: {lastUpdated}

@@ -8,13 +8,10 @@
     Banknote,
     ShieldCheck,
     Gift,
-    HelpCircle,
     ArrowRight,
     ExternalLink
   } from 'lucide-svelte';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
-  const LAST_UPDATED = '2026-04-30';
 
   const faqData = [
     {

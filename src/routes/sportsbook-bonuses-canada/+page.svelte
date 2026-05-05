@@ -44,7 +44,6 @@
   ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -106,7 +105,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       requirements and break down which promotions actually benefit recreational bettors.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
   <AffiliateDisclosure />

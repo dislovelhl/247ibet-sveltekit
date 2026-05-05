@@ -3,7 +3,6 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -173,7 +172,6 @@
         class="text-slate-blue hover:underline">Responsible gambling resources</a
       >.
     </div>
-      <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
       <nav class="mt-8 flex flex-wrap gap-6" aria-label="Related pages">
         <a href="/sportsbook-bonuses-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Sportsbook Bonuses</a>

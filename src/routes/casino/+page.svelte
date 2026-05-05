@@ -21,7 +21,7 @@
   import { useMouseParallax } from '$lib/runes.svelte';
   import FAQ from '$lib/components/FAQ.svelte';
 
-  const LAST_UPDATED = '2026-04-28';
+
 
   const trustItems = [
     { title: '100% Canadian Focused', icon: ShieldCheck },
@@ -201,7 +201,7 @@
       ],
     },
   ];
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
+
 
   const parallax = useMouseParallax(20);
 </script>
@@ -241,14 +241,7 @@
 
       <div class="relative z-10 px-7 py-12 md:px-16 md:py-20 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20"
            style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);">
-        <div class="glass-regular mb-8 inline-flex items-center gap-3 rounded-full px-4 py-2 border border-white/10 shadow-[0_0_15px_rgba(212,148,58,0.2)]">
-          <span class="live-dot" aria-hidden="true"></span>
-          <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
-            Independent Canadian iGaming Review
-          </p>
-        </div>
         <div class="mb-8 flex flex-col gap-6">
-          <AuthorByline date={LAST_UPDATED} />
           <h1 class="page-hero-title !tracking-tighter">
             The Future of <br />
             <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Canadian Casino</span>

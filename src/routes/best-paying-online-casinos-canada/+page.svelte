@@ -29,7 +29,6 @@
   ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -93,7 +92,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       sites actually return value and cash out cleanly.
     </p>
     <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
   <AffiliateDisclosure />

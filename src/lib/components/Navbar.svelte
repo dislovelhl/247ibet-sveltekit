@@ -172,15 +172,14 @@
 
 <nav
   aria-label="Main navigation"
+  style="transform: translateZ(0); will-change: transform;"
   class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out {scrolled
     ? 'glass-premium border-white/15 shadow-[0_20px_70px_-20px_rgba(0,0,0,0.9)]'
     : 'border-white/5 bg-navy-black/60 backdrop-blur-md'}"
 >
-  <!-- Tier 1: Utility bar — desktop only, collapses on scroll -->
+  <!-- Tier 1: Utility bar — desktop only, remains visible on scroll -->
   <div
-    class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
-      ? 'max-h-0 opacity-0'
-      : 'max-h-8 opacity-100'}"
+    class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100"
   >
     <div
       class="hidden h-8 items-center justify-end border-b border-white/5 px-4 sm:px-6 lg:flex lg:px-8"
@@ -337,11 +336,9 @@
     </div>
   </div>
 
-  <!-- Tier 3: Sub-nav — desktop only, collapses on scroll -->
+  <!-- Tier 3: Sub-nav — desktop only, remains visible on scroll -->
   <div
-    class="overflow-hidden transition-[max-height,opacity] duration-200 ease-out {scrolled
-      ? 'max-h-0 opacity-0'
-      : 'max-h-12 opacity-100'}"
+    class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100"
   >
     <div class="hidden border-t border-white/5 lg:block">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">

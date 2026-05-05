@@ -105,7 +105,6 @@
   };
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -150,7 +149,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       bank account holders.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
   <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">

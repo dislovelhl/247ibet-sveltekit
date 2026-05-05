@@ -29,7 +29,6 @@
   ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -90,7 +89,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
       payment localized support.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </header>
 
   <AffiliateDisclosure />

@@ -74,14 +74,7 @@
             </div>
           </div>
 
-          <p class="max-w-sm text-sm leading-relaxed text-text-body">
-            Independent Canadian iGaming coverage — casino, sportsbook, live dealer, payment, and
-            responsible-gaming guides. Legal age varies by province.
-          </p>
 
-          <p class="mt-4 font-mono text-xs uppercase tracking-[0.14em] text-text-tertiary">
-            Independent guide · 18+/19+ by province · Verify licensing before depositing
-          </p>
 
           <!-- Social icons -->
           <div class="mt-6 flex items-center gap-2">

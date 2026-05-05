@@ -302,7 +302,6 @@
   };
 
   const LAST_UPDATED = '2026-04-29';
-  import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   let mouseX = $state(0);
   let mouseY = $state(0);
@@ -894,6 +893,5 @@
       </main>
     </div>
 
-    <AuthorByline authorId="editorial" date={LAST_UPDATED} />
   </div>
 </div>

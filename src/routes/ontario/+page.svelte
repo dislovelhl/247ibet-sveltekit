@@ -122,7 +122,6 @@
   ];
 
 const LAST_UPDATED = '2026-04-29';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 
   const parallax = useMouseParallax(20);
 </script>
@@ -201,7 +200,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
         </p>
 
         <div class="mt-10 flex items-center justify-between border-t border-white/10 pt-8">
-          <AuthorByline authorId="editorial" date={LAST_UPDATED} />
         </div>
       </div>
     </header>
@@ -397,7 +395,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
 
     <FAQ items={faqItems.map(f => ({ q: f.question, a: f.answer }))} title="Ontario FAQ" />
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

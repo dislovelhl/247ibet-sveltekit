@@ -84,7 +84,6 @@
   ];
 
 const LAST_UPDATED = '2026-04-29';
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -388,7 +387,6 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     <a href="/gambling-age-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Gambling Age in Canada</a>
   </nav>
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

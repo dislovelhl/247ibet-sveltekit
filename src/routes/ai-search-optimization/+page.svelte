@@ -79,7 +79,6 @@
       },
     ],
   };
-import AuthorByline from '$lib/components/AuthorByline.svelte';
 </script>
 
 <svelte:head>
@@ -312,5 +311,4 @@ import AuthorByline from '$lib/components/AuthorByline.svelte';
     </nav>
   </div>
 
-  <AuthorByline authorId="editorial" date={LAST_UPDATED} />
 </div>
