@@ -9,16 +9,16 @@
 </script>
 
 <svelte:head>
-  <title>Current Promotional Snapshot at 247iBET Canada</title>
+  <title>Bonus Terms Creative Snapshot | 247iBET Canada</title>
   <meta
     name="description"
-    content="Current promotional snapshot page summarizing the latest reviewed 247iBET bonus creative, with reminders to verify wagering, expiry, and eligibility in the cashier before claiming."
+    content="Reviewed bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders to verify wagering, expiry, eligibility, and cashier rules before claiming."
   />
   <meta name="robots" content="noindex, nofollow" />
-  <meta property="og:title" content="Current Promotional Snapshot at 247iBET Canada" />
+  <meta property="og:title" content="Bonus Terms Creative Snapshot | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Current promotional snapshot page summarizing the latest reviewed 247iBET bonus creative, with reminders to verify wagering, expiry, and eligibility in the cashier before claiming."
+    content="Reviewed bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders to verify wagering, expiry, eligibility, and cashier rules before claiming."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/bonus-terms" />
@@ -28,7 +28,7 @@
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Current Promotional Snapshot',
+        name: 'Bonus Terms Creative Snapshot',
         description: 'Latest reviewed bonus creative summarized for transparency.',
         url: 'https://247ibet.ca/bonus-terms',
       },
@@ -40,7 +40,7 @@
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Current Promotional Snapshot',
+            name: 'Bonus Terms Creative Snapshot',
             item: 'https://247ibet.ca/bonus-terms',
           },
         ],
@@ -59,11 +59,20 @@
   </nav>
 
   <article class="navy-card rounded-3xl p-8 md:p-12">
+    <nav aria-label="Bonus terms table of contents" class="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+      <p class="text-xs font-black uppercase tracking-[0.14em] text-slate-blue">On this page</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a href="#observed-bonus-offers" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Observed bonus offers</a>
+        <a href="#sportsbook-tie-ins" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Sportsbook tie-ins</a>
+        <a href="#event-creatives" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Event creatives</a>
+        <a href="#needs-verification" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Needs verification</a>
+      </div>
+    </nav>
     <header class="mb-12 border-b border-white/10 pb-8">
       <h1 class="page-hero-title mb-4">
         Current <span class="text-slate-blue">Bonus Snapshot</span>
       </h1>
-      <p class="text-gray-400 font-sans">Last updated: May 2026</p>
+      <p class="text-gray-400 font-sans">Last updated: <time datetime="2026-05-06">May 2026</time></p>
     </header>
 
     <div
@@ -76,7 +85,7 @@
         depositing.
       </p>
 
-      <h2>Observed bonus offers</h2>
+      <h2 id="observed-bonus-offers">Observed bonus offers</h2>
       <div class="not-prose grid gap-6">
         {#each IBET_PROMO_SNAPSHOT as promo}
           <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
@@ -96,7 +105,7 @@
         {/each}
       </div>
 
-      <h2>Sportsbook and combat-sports tie-ins</h2>
+      <h2 id="sportsbook-tie-ins">Sportsbook and combat-sports tie-ins</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
           <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
@@ -111,7 +120,7 @@
         {/each}
       </div>
 
-      <h2>Event-style creatives included for completeness</h2>
+      <h2 id="event-creatives">Event-style creatives included for completeness</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
           <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
@@ -126,7 +135,7 @@
         {/each}
       </div>
 
-      <h2>What still needs verification</h2>
+      <h2 id="needs-verification">What still needs verification</h2>
       <ul>
         <li>Minimum deposit required to unlock each offer.</li>
         <li>Wagering or playthrough multipliers applied to bonus funds or free-spin winnings.</li>

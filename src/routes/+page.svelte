@@ -160,24 +160,28 @@
       body: 'Slots, live dealer, blackjack, roulette, baccarat, and jackpots',
       href: '/casino/slots',
       image: '/images/generated/casino-slots-hero.png',
+      alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
     {
       title: 'Live Casino',
       body: 'Best for live dealer tables and streamed casino play',
       href: '/casino/live-casino',
       image: '/images/generated/casino-live-hero.png',
+      alt: 'Live dealer casino table with cards, chips, and premium studio lighting.',
     },
     {
       title: 'Table Games',
       body: 'Best for classic casino rules and mobile table games',
       href: '/casino/blackjack',
       image: '/images/generated/casino-blackjack-hero.png',
+      alt: 'Classic blackjack table on a dark felt surface with polished chips.',
     },
     {
       title: 'Jackpots',
       body: 'Check terms, RTP information, and provider availability',
       href: '/casino',
       image: '/images/generated/casino-slots-hero.png',
+      alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
   ];
 
@@ -187,24 +191,28 @@
       body: 'NHL, NBA, NFL, UFC, soccer, tennis, parlays, and futures',
       href: '/sportsbook',
       image: '/images/generated/sportsbook-premium-hero.png',
+      alt: 'Premium sportsbook dashboard showing major leagues, odds, and betting markets.',
     },
     {
       title: 'Live Betting',
       body: 'Confirm live market rules, accepted price, and settlement terms',
       href: '/sportsbook/live-betting',
       image: '/images/generated/sportsbook-live-betting-hero.png',
+      alt: 'Live betting interface with rapidly updating odds and match coverage.',
     },
     {
       title: 'Hockey',
       body: 'Hockey markets for Canadian bettors',
       href: '/sportsbook/nhl',
       image: '/images/generated/sportsbook-nhl-hero.png',
+      alt: 'Hockey betting card with rink-inspired visuals and Canadian sports context.',
     },
     {
       title: 'Basketball',
       body: 'Basketball markets, props, and parlays',
       href: '/sportsbook/nba',
       image: '/images/generated/sportsbook-nba-hero.png',
+      alt: 'Basketball betting card with props, parlays, and game-time odds.',
     },
   ];
 
@@ -214,24 +222,28 @@
       body: 'A beginner guide to sports betting.',
       href: '/guides/single-game-betting-canada',
       image: '/images/generated/sportsbook-parlay-hero.png',
+      alt: 'Canadian sports betting guide card with parlays and strategy visuals.',
     },
     {
       title: 'Best Casino Games for Real Money',
       body: 'Top picks for the best real-money games.',
       href: '/casino',
       image: '/images/generated/casino-premium-hero.png',
+      alt: 'Premium casino guide card with a refined dark-luxury atmosphere.',
     },
     {
       title: 'Fast Withdrawals Explained',
       body: 'Approval, KYC, and Interac timing explained.',
       href: '/deposit',
       image: '/images/generated/fast-payouts-hero.png',
+      alt: 'Fast payout guide card highlighting Interac timing and approval flow.',
     },
     {
       title: 'Bankroll Management 101',
       body: 'Set budgets and limits before playing.',
       href: '/guides/strategy',
       image: '/images/generated/bonus-wagering-hero.png',
+      alt: 'Bonus wagering guide card with casino terms and playthrough context.',
     },
   ];
 
@@ -261,6 +273,28 @@
       a: 'Use deposit, loss, wager, session, cooling-off, and self-exclusion tools where available. Support is also available through provincial responsible-gaming resources.',
     },
   ];
+
+  const jumpLinks = [
+    { href: '#why-it-stands-out', label: 'Why it stands out' },
+    { href: '#interac-flow', label: 'Interac flow' },
+    { href: '#casino-section', label: 'Casino' },
+    { href: '#sportsbook-section', label: 'Sportsbook' },
+    { href: '#bonus-terms', label: 'Bonus terms' },
+    { href: '#faq-section', label: 'FAQ' },
+  ];
+
+  const homeFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
 
   let homeFaqOpenIndex = $state<number | null>(null);
 
@@ -295,6 +329,7 @@
       url: 'https://247ibet.ca',
       logo: 'https://247ibet.ca/images/brand/logo.png',
     },
+    homeFaqSchema,
   ];
 </script>
 
@@ -323,7 +358,7 @@
     <div class="absolute inset-0">
       <img
         src="/images/generated/casino-premium-hero.png"
-        alt=""
+        alt="247iBET casino and sportsbook overview background"
         width="1920"
         height="1080"
         loading="eager"
@@ -374,7 +409,7 @@
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
-          Last updated: {LAST_UPDATED}
+          Last updated: <time datetime={LAST_UPDATED}>{LAST_UPDATED}</time>
         </div>
         <div
           class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row"
@@ -396,10 +431,27 @@
     </div>
   </section>
 
+  <nav
+    class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16"
+    aria-label="Jump links"
+  >
+    <div class="flex gap-2 overflow-x-auto rounded-2xl border border-white/5 bg-navy-card/80 p-2 shadow-2xl">
+      {#each jumpLinks as link}
+        <a
+          href={link.href}
+          class="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-text-body transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold"
+        >
+          {link.label}
+        </a>
+      {/each}
+    </div>
+  </nav>
+
   <div
     class="mx-auto max-w-[1720px] space-y-5 px-4 py-5 sm:space-y-7 sm:px-6 sm:py-7 lg:px-10 xl:px-16"
   >
     <section
+      id="trust-verification"
       class="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 shadow-2xl sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each heroTrust as item}
@@ -422,6 +474,7 @@
     </section>
 
     <section
+      id="promo-video"
       class="grid gap-5 overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-4 shadow-2xl sm:p-5 lg:grid-cols-[0.38fr_0.62fr] lg:gap-6 lg:p-7"
       aria-labelledby="home-promo-video-title"
     >
@@ -463,6 +516,7 @@
     </section>
 
     <section
+      id="why-it-stands-out"
       class="grid overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 lg:grid-cols-[0.42fr_0.58fr]"
     >
       <aside class="border-b border-prestige-gold/20 p-5 sm:p-7 lg:border-b-0 lg:border-r">
@@ -576,6 +630,7 @@
     </section>
 
     <section
+      id="interac-flow"
       class="grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
@@ -657,7 +712,7 @@
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
                   src={card.image}
-                  alt=""
+                  alt={card.alt}
                   width="600"
                   height="400"
                   loading="lazy"
@@ -702,7 +757,7 @@
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
                   src={card.image}
-                  alt=""
+                  alt={card.alt}
                   width="600"
                   height="400"
                   loading="lazy"
@@ -730,7 +785,7 @@
       </div>
     </section>
 
-    <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
+    <section id="bonus-terms" class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
       <div class="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
         <div>
           <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">Bonuses</p>
@@ -801,7 +856,7 @@
               <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect">
                 <img
                   src={card.image}
-                  alt=""
+                  alt={card.alt}
                   width="600"
                   height="400"
                   loading="lazy"
@@ -825,7 +880,7 @@
         </div>
     </section>
 
-    <section class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
+    <section id="faq-section" class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
       <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
         <a
