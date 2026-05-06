@@ -104,6 +104,30 @@ export const IBET_PROFILE = {
   cons: ['Licensing and bonus details must be confirmed with the operator before depositing'],
 } as const;
 
+export const IBET_PROMO_SNAPSHOT = [
+  {
+    title: 'Welcome Bonus',
+    headline: 'Up to C$2000 + 10 Free Spins',
+    period: 'Observed on promo creative through May 31, 2026',
+    summary:
+      'Image-hosted bonus creative showed a welcome offer capped at C$2000 plus 10 free spins. Verify deposit minimums, wagering, game eligibility, and expiry inside the cashier before opting in.',
+  },
+  {
+    title: 'Every Deposit Bonus',
+    headline: 'Up to C$1000 on qualifying deposits',
+    period: 'Observed on promo creative through July 31, 2026',
+    summary:
+      'The visible promo creative referenced a recurring every-deposit bonus up to C$1000. Confirm whether the cap applies per deposit, per day, or per campaign period before you deposit.',
+  },
+  {
+    title: 'Mother’s Day Double Rewards',
+    headline: 'Seasonal reward event',
+    period: 'Observed on promo creative May 1–31, 2026',
+    summary:
+      'A seasonal Mother’s Day Double Rewards banner appeared in the same bonus creative. Terms were not fully legible in the image, so treat the artwork as a prompt to verify eligibility and payout rules directly with the operator.',
+  },
+] as const;
+
 export const IBET_CTA = {
   primary: 'Visit Partner Site',
   casino: 'Explore Casino',

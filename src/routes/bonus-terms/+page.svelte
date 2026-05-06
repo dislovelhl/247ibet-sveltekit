@@ -1,20 +1,20 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
-  // page
+  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
 </script>
 
 <svelte:head>
-  <title>Archived Promotional Terms at 247iBET Canada</title>
+  <title>Current Promotional Snapshot at 247iBET Canada</title>
   <meta
     name="description"
-    content="Archived promotional-terms reference page retained for transparency and historical documentation."
+    content="Current promotional snapshot page summarizing the latest reviewed 247iBET bonus creative, with reminders to verify wagering, expiry, and eligibility in the cashier before claiming."
   />
   <meta name="robots" content="noindex, nofollow" />
-  <meta property="og:title" content="Archived Promotional Terms at 247iBET Canada" />
+  <meta property="og:title" content="Current Promotional Snapshot at 247iBET Canada" />
   <meta
     property="og:description"
-    content="Archived promotional-terms reference page retained for transparency and historical documentation."
+    content="Current promotional snapshot page summarizing the latest reviewed 247iBET bonus creative, with reminders to verify wagering, expiry, and eligibility in the cashier before claiming."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/bonus-terms" />
@@ -24,8 +24,8 @@
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Archived Promotional Terms',
-        description: 'Historical promotional terms retained for transparency.',
+        name: 'Current Promotional Snapshot',
+        description: 'Latest reviewed bonus creative summarized for transparency.',
         url: 'https://247ibet.ca/bonus-terms',
       },
       {
@@ -36,7 +36,7 @@
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Archived Promotional Terms',
+            name: 'Current Promotional Snapshot',
             item: 'https://247ibet.ca/bonus-terms',
           },
         ],
@@ -57,95 +57,45 @@
   <article class="navy-card rounded-3xl p-8 md:p-12">
     <header class="mb-12 border-b border-white/10 pb-8">
       <h1 class="page-hero-title mb-4">
-        Bonus Terms of <span class="text-slate-blue">Use &amp; Rules</span>
+        Current <span class="text-slate-blue">Bonus Snapshot</span>
       </h1>
-      <p class="text-gray-400 font-sans">Last updated: August 2024</p>
+      <p class="text-gray-400 font-sans">Last updated: May 2026</p>
     </header>
-
-
 
     <div
       class="prose prose-invert max-w-none prose-headings:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-6 prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-slate-blue marker:text-prestige-gold"
     >
       <p>
-        For general bonus-related terms, please refer to <strong>Section 14</strong> of our
-        <a href="/terms-of-service" class="text-slate-blue hover:underline">Terms of Service</a>.
+        This noindex page summarizes the latest 247iBET bonus creative we reviewed. It is published
+        for transparency, not as a guaranteed inducement. Always confirm the operative rules inside
+        the cashier before depositing.
       </p>
 
-      <h2>Archived New Member Welcome Offer Terms</h2>
-      <p>
-        This section records previously published promotional terms for transparency. It is not a
-        public inducement, advertisement, or current offer.
-      </p>
+      <h2>Observed bonus offers</h2>
+      <div class="not-prose grid gap-4 md:grid-cols-3">
+        {#each IBET_PROMO_SNAPSHOT as promo}
+          <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+            <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
+            <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-300">{promo.summary}</p>
+            <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
+          </article>
+        {/each}
+      </div>
 
-      <h3>How it works:</h3>
-      <ol>
-        <li>Deposit a minimum of <strong>$10</strong>, and then claim this offer.</li>
-        <li>
-          Once the first deposit is made and cleared, you shall receive up to <strong>200%</strong> of
-          your deposit amount as a bonus to play.
-        </li>
-        <li>To activate the Welcome Bonus offer, simply select "ACCEPT".</li>
-      </ol>
-
-      <h2>New Member Welcome Offer Terms of Use</h2>
+      <h2>What still needs verification</h2>
       <ul>
-        <li>
-          The New Member Welcome Offer is available only to new members on 247ibet.ca who have not
-          yet funded their accounts, are physically located in Canada, and register an account at
-          247ibet.ca from <strong>27th of August, 2024</strong>, until further notice. Eligibility
-          is limited to those who select and accept the Welcome Offer on their first cleared
-          deposit, which must be verified and reconciled by their financial institution before the
-          actual transfer of funds.
-        </li>
-        <li>
-          Members have <strong>seven (7) days</strong> from registration to make a deposit and activate
-          their Welcome Offer.
-        </li>
-        <li>Welcome Offer funds will be credited to the Member's Bonus Account for use.</li>
-        <li>Funds in the Bonus Account are non-withdrawable and must be used for play.</li>
-        <li>
-          Winnings from games played using Bonus Account funds will be credited to the Member's Main
-          Account, with withdrawals permitted in accordance with Section-10 of the Terms and
-          Conditions.
-        </li>
-        <li>
-          Upon receipt of the Welcome Offer, Members are required to place wagers totaling <strong
-            >forty (40) times</strong
-          > the combined amount of the initial deposit and the Welcome Bonus. Once the Member has satisfied
-          this wagering requirement, they are eligible to withdraw the Welcome Offer funds along with
-          any associated winnings.
-        </li>
-        <li>All gameplay on 247ibet.ca is subject to the Terms and Conditions.</li>
-        <li>
-          247ibet.ca reserves the right, at its discretion, to cancel or modify promotions or bonus
-          offers at any time without notice or cause.
-        </li>
-        <li>247ibet.ca is not liable for any program malfunctions resulting in invalid value.</li>
-        <li>
-          247ibet.ca reserves the right to void bonuses or rewards for any individual who violates
-          any Terms and Conditions or these Welcome Offer Rules.
-        </li>
-        <li>
-          By participating in 247iBET promotions or bonus offers, you consent to the collection and
-          use of your personal information in accordance with these Rules and our <a
-            href="/privacy-policy"
-            class="text-slate-blue hover:underline">Privacy Policy</a
-          >.
-        </li>
-        <li>
-          Any applicable taxes, tax liabilities, fees, or other charges resulting from the
-          accumulation or use of rewards, bonus funds, and benefits are the responsibility of the
-          qualifying Members.
-        </li>
+        <li>Minimum deposit required to unlock each offer.</li>
+        <li>Wagering or playthrough multipliers applied to bonus funds or free-spin winnings.</li>
+        <li>Game and market eligibility, including whether free spins are tied to one slot title.</li>
+        <li>Maximum cashout, max-bet, or bonus-abuse restrictions.</li>
+        <li>Whether the every-deposit cap applies per deposit, per day, or across the campaign.</li>
       </ul>
 
-      <h2>Bonus Validity</h2>
+      <h2>How to use this page</h2>
       <p>
-        After the bonus is issued, the system will consider it forfeited and automatically revoke
-        the bonus if the wagering requirements are not completed within <strong>14 days</strong> from
-        the time of claim according to the backend. The company reserves all rights regarding the issuance,
-        withdrawal, and other actions related to the bonus.
+        Treat the image-visible amounts as a current snapshot only. If the cashier shows different
+        terms after registration, the cashier rules should be treated as authoritative.
       </p>
     </div>
   </article>

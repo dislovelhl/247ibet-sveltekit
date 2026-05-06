@@ -2,13 +2,14 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
   import { Shield, CheckCircle } from 'lucide-svelte';
 
   const bonusTypes = [
     {
-      name: 'Deposit Match Bonus',
-      desc: 'The platform matches your first deposit by a percentage (e.g. 100% up to a cap). Wagering requirements apply to the bonus amount before withdrawal.',
-      riskLevel: 'Medium',
+      name: 'Welcome Bonus Snapshot',
+      desc: 'The latest promo creative reviewed by our team showed a welcome offer up to C$2000 plus 10 free spins. Treat that as an observed bonus snapshot and confirm deposit minimums, wagering, and eligible games inside the cashier before opting in.',
+      riskLevel: 'Terms heavy',
     },
     {
       name: 'Free Bet Welcome Offer',
@@ -57,7 +58,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>New Player Welcome Offers Canada 2026 | Welcome Offers | 247iBET</title>
   <meta
     name="description"
-    content="New player welcome offers at Canadian sportsbooks and online casinos, plus Ontario advertising restrictions and terms to check before claiming."
+    content="New player welcome offers at Canadian sportsbooks and online casinos, including the latest image-observed 247iBET welcome bonus snapshot of up to C$2000 plus 10 free spins and the terms to verify before claiming."
   />
   <meta property="og:title" content="New Player Welcome Offers Canada 2026 | Welcome Offers" />
   <meta
@@ -103,8 +104,9 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       New Player Welcome Offers Canada
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
-      Welcome offers explained for Canadian players — how deposit matches, sportsbook credits, and
-      casino offers work, and what terms to read before claiming.
+      Welcome offers explained for Canadian players — including the latest 247iBET promo image we
+      reviewed, which showed a welcome bonus up to C$2000 plus 10 free spins. Use the screenshot as
+      a starting point, then verify the cashier terms before claiming.
     </p>
     <div class="relative my-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card">
       <img
@@ -138,6 +140,30 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       </div>
     </div>
   </aside>
+
+  <section class="navy-card rounded-lg p-5" aria-labelledby="snapshot-heading">
+    <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
+      <div>
+        <p class="text-[10px] font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
+          Promo snapshot
+        </p>
+        <h2 id="snapshot-heading" class="text-xl font-bold text-[#F1F5F9]">
+          Image-observed welcome offer details
+        </h2>
+      </div>
+      <span class="text-xs text-[#94A3B8]">Observed creative, terms must be verified on-site</span>
+    </div>
+    <div class="mt-4 grid gap-4 sm:grid-cols-3">
+      {#each IBET_PROMO_SNAPSHOT as promo}
+        <article class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+          <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
+          <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>
+          <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{promo.summary}</p>
+          <p class="mt-3 text-[11px] text-[#CBD5E1]">{promo.period}</p>
+        </article>
+      {/each}
+    </div>
+  </section>
 
   <section aria-labelledby="types-heading">
     <h2 id="types-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
@@ -187,7 +213,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <IBetShowcase
     variant="hero"
     ctaText="See Welcome Offer at 247iBET"
-    contextLabel="Offer details available after free registration"
+    contextLabel="Latest reviewed creative showed up to C$2000 + 10 free spins; verify terms after registration"
   />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">

@@ -12,7 +12,7 @@
     Zap,
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
-  import { IBET_URLS } from '$lib/ibet-brand';
+  import { IBET_PROMO_SNAPSHOT, IBET_URLS } from '$lib/ibet-brand';
 
 
   const LAST_UPDATED = '2026-04-29';
@@ -110,24 +110,24 @@
 
   const bonusRows = [
     {
-      type: 'Welcome bonus',
+      type: `${IBET_PROMO_SNAPSHOT[0].title}: ${IBET_PROMO_SNAPSHOT[0].headline}`,
       goodFor: 'New players',
-      check: 'Wagering requirement, max bet, and expiry',
+      check: 'Confirm minimum deposit, wagering, eligible games, and when the 10 free spins expire.',
     },
     {
-      type: 'Free spins',
+      type: `${IBET_PROMO_SNAPSHOT[1].title}: ${IBET_PROMO_SNAPSHOT[1].headline}`,
+      goodFor: 'Returning depositors',
+      check: 'Check whether the C$1000 cap is per deposit, per day, or limited to a campaign window.',
+    },
+    {
+      type: IBET_PROMO_SNAPSHOT[2].title,
+      goodFor: 'Seasonal campaign players',
+      check: 'Verify qualification dates, eligible products, and any extra opt-in steps before playing.',
+    },
+    {
+      type: 'Free spins terms',
       goodFor: 'Slot players',
-      check: 'Eligible games, spin value, and win cap',
-    },
-    {
-      type: 'Odds boost',
-      goodFor: 'Sports bettors',
-      check: 'Max stake, market eligibility, and settlement rules',
-    },
-    {
-      type: 'Reload bonus',
-      goodFor: 'Returning players',
-      check: 'Deposit minimum, wagering, and expiry',
+      check: 'Review spin value, eligible games, win caps, and whether bonus funds stay non-withdrawable until playthrough is complete.',
     },
   ];
 

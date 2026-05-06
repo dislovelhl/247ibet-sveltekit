@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
 
 const LAST_UPDATED = '2026-04-29';
 
@@ -91,9 +92,10 @@ const LAST_UPDATED = '2026-04-29';
       Casino Promotions Canada 2026
     </h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Online casino promotions for Canadians compared by real value — not headline numbers. We
-      calculate effective offer worth after wagering requirements, game restrictions, and expiry
-      terms, so you claim offers that actually pay out.
+      Online casino promotions for Canadians compared by real value — not headline numbers. Our
+      latest reviewed 247iBET promo creative showed a welcome bonus up to C$2000 plus 10 free
+      spins, an every-deposit bonus up to C$1000, and a Mother’s Day Double Rewards campaign. We
+      still recommend checking wagering, expiry, and cashier rules before opting in.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {lastUpdated}</p>
   </header>
@@ -101,6 +103,29 @@ const LAST_UPDATED = '2026-04-29';
   <AffiliateDisclosure />
 
   <IBetShowcase variant="hero" showFeatures showPros />
+
+  <section class="navy-card mt-8 rounded-2xl p-6 md:p-8">
+    <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Promo snapshot</p>
+        <h2 class="mt-2 text-2xl font-bold">Latest image-observed 247iBET offers</h2>
+      </div>
+      <p class="max-w-xl text-xs text-text-tertiary">
+        These amounts came from a reviewed bonus creative rather than a fully legible cashier terms
+        page. Treat them as a current snapshot and confirm the operative rules before claiming.
+      </p>
+    </div>
+    <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+      {#each IBET_PROMO_SNAPSHOT as promo}
+        <article class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+          <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
+          <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-400">{promo.summary}</p>
+          <p class="mt-4 text-xs text-text-tertiary">{promo.period}</p>
+        </article>
+      {/each}
+    </div>
+  </section>
 
   <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
     <h2 class="text-2xl font-bold mb-6">Types of Casino Offers in Canada</h2>
