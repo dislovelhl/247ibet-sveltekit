@@ -2,7 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
+  import { IBET_PROMO_SNAPSHOT, IBET_SPORTSBOOK_CREATIVE_SNAPSHOT } from '$lib/ibet-brand';
   import { Shield, CheckCircle } from 'lucide-svelte';
 
   const bonusTypes = [
@@ -155,11 +155,41 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 sm:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-          <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
-          <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>
-          <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{promo.summary}</p>
-          <p class="mt-3 text-[11px] text-[#CBD5E1]">{promo.period}</p>
+        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <div class="p-4">
+            <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
+            <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>
+            <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{promo.summary}</p>
+            <p class="mt-3 text-[11px] text-[#CBD5E1]">{promo.period}</p>
+          </div>
+        </article>
+      {/each}
+    </div>
+  </section>
+
+  <section class="navy-card rounded-lg p-5" aria-labelledby="sports-tieins-heading">
+    <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
+      <div>
+        <p class="text-[10px] font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
+          Brand and event context
+        </p>
+        <h2 id="sports-tieins-heading" class="text-xl font-bold text-[#F1F5F9]">
+          Sportsbook-adjacent creatives tied to the same campaign set
+        </h2>
+      </div>
+      <span class="text-xs text-[#94A3B8]">Useful context, but not claimable welcome-offer rules</span>
+    </div>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
+        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <div class="p-4">
+            <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
+            <h3 class="mt-2 text-sm font-bold text-white">{creative.headline}</h3>
+            <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{creative.summary}</p>
+            <p class="mt-3 text-[11px] text-[#CBD5E1]">{creative.period}</p>
+          </div>
         </article>
       {/each}
     </div>

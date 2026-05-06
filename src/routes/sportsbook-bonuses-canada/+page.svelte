@@ -2,6 +2,10 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+  import {
+    IBET_EVENT_CREATIVE_SNAPSHOT,
+    IBET_SPORTSBOOK_CREATIVE_SNAPSHOT,
+  } from '$lib/ibet-brand';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -119,6 +123,60 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           <div class="text-base font-bold mb-1">{label}</div>
           <p class="text-gray-400 font-sans text-xs leading-relaxed">{desc}</p>
         </div>
+      {/each}
+    </div>
+  </section>
+
+  <section class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+    <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Observed creative set</p>
+        <h2 class="mt-2 text-2xl font-bold">Sportsbook-adjacent 247iBET creatives</h2>
+      </div>
+      <p class="max-w-xl text-xs text-text-tertiary">
+        These assets use 247iBET, Unified MMA, and athlete tie-ins, but only one clearly says Live
+        Bonus and none disclose a claimable amount. Treat them as campaign context rather than as
+        final sportsbook offer rules.
+      </p>
+    </div>
+    <div class="mt-6 grid gap-4 lg:grid-cols-3">
+      {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
+        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <div class="p-5">
+            <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
+            <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">{creative.summary}</p>
+            <p class="mt-4 text-xs text-text-tertiary">{creative.period}</p>
+          </div>
+        </article>
+      {/each}
+    </div>
+  </section>
+
+  <section class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+    <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Event collateral</p>
+        <h2 class="mt-2 text-2xl font-bold">Related event creatives we are not treating as sportsbook terms</h2>
+      </div>
+      <p class="max-w-xl text-xs text-text-tertiary">
+        These additional event graphics were included in the same source set. They mention Toronto,
+        Edmonton, and TABOO-style event branding, but do not provide sportsbook mechanics or bonus
+        terms.
+      </p>
+    </div>
+    <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
+        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <div class="p-5">
+            <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
+            <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">{creative.summary}</p>
+            <p class="mt-4 text-xs text-text-tertiary">{creative.period}</p>
+          </div>
+        </article>
       {/each}
     </div>
   </section>

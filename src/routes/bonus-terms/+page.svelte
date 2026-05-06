@@ -1,7 +1,11 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
-  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
+  import {
+    IBET_EVENT_CREATIVE_SNAPSHOT,
+    IBET_PROMO_SNAPSHOT,
+    IBET_SPORTSBOOK_CREATIVE_SNAPSHOT,
+  } from '$lib/ibet-brand';
 </script>
 
 <svelte:head>
@@ -66,19 +70,58 @@
       class="prose prose-invert max-w-none prose-headings:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-6 prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-slate-blue marker:text-prestige-gold"
     >
       <p>
-        This noindex page summarizes the latest 247iBET bonus creative we reviewed. It is published
-        for transparency, not as a guaranteed inducement. Always confirm the operative rules inside
-        the cashier before depositing.
+        This noindex page archives all reviewed 247iBET-related creatives we were given: direct bonus
+        images, combat-sports tie-ins, and event-style artwork. It is published for transparency, not
+        as a guaranteed inducement. Always confirm the operative rules inside the cashier before
+        depositing.
       </p>
 
       <h2>Observed bonus offers</h2>
-      <div class="not-prose grid gap-4 md:grid-cols-3">
+      <div class="not-prose grid gap-6">
         {#each IBET_PROMO_SNAPSHOT as promo}
-          <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-            <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
-            <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-gray-300">{promo.summary}</p>
-            <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <div class="p-5">
+              <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
+              <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gray-300">{promo.summary}</p>
+              <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {#each promo.observedText as line}
+                  <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-gray-300">{line}</span>
+                {/each}
+              </div>
+            </div>
+          </article>
+        {/each}
+      </div>
+
+      <h2>Sportsbook and combat-sports tie-ins</h2>
+      <div class="not-prose grid gap-6 md:grid-cols-2">
+        {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <div class="p-5">
+              <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
+              <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gray-300">{creative.summary}</p>
+              <p class="mt-4 text-xs text-gray-400">{creative.period}</p>
+            </div>
+          </article>
+        {/each}
+      </div>
+
+      <h2>Event-style creatives included for completeness</h2>
+      <div class="not-prose grid gap-6 md:grid-cols-2">
+        {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <div class="p-5">
+              <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
+              <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gray-300">{creative.summary}</p>
+              <p class="mt-4 text-xs text-gray-400">{creative.period}</p>
+            </div>
           </article>
         {/each}
       </div>

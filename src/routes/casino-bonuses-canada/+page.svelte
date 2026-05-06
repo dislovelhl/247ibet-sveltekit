@@ -117,11 +117,14 @@ const LAST_UPDATED = '2026-04-29';
     </div>
     <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-          <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
-          <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-400">{promo.summary}</p>
-          <p class="mt-4 text-xs text-text-tertiary">{promo.period}</p>
+        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <div class="p-5">
+            <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
+            <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">{promo.summary}</p>
+            <p class="mt-4 text-xs text-text-tertiary">{promo.period}</p>
+          </div>
         </article>
       {/each}
     </div>
