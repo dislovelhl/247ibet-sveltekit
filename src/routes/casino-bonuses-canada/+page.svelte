@@ -5,7 +5,6 @@
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
 
-const LAST_UPDATED = '2026-04-29';
 
   const lastUpdated = '2026-03-30';
 

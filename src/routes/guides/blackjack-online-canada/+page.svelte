@@ -108,8 +108,7 @@
 
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
-  const LAST_UPDATED = '2026-04-29';
-</script>
+  </script>
 
 <svelte:head>
   <title>Online Blackjack Canada 2026 — Rules, Strategy &amp; Where to Play | 247iBET</title>

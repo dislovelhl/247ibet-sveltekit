@@ -47,7 +47,7 @@
 
 <footer
   aria-label="Site footer"
-  class="mt-16 border-t border-white/5 bg-navy-black pb-[calc(env(safe-area-inset-bottom,0px)+7rem)] sm:mt-20 md:pb-0"
+  class="mt-16 border-t border-white/5 bg-navy-black pb-[calc(env(safe-area-inset-bottom,0px)+5rem)] sm:mt-20 md:pb-0"
 >
   <div class="container mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-7xl">

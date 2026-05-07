@@ -149,7 +149,6 @@
     })),
   };
 
-const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>

@@ -3,7 +3,6 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { Info, ShieldCheck, Scale } from 'lucide-svelte';
 
-const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>
