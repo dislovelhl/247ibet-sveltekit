@@ -1,4 +1,5 @@
 import type { RequestHandler } from './$types';
+import { SITE } from '$lib/site';
 
 const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/', priority: 1.0, changefreq: 'daily' },
@@ -106,6 +107,16 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/privacy-policy', priority: 0.3, changefreq: 'yearly' },
   { path: '/cookie-policy', priority: 0.3, changefreq: 'yearly' },
   { path: '/responsible-gambling', priority: 0.5, changefreq: 'monthly' },
+  { path: '/editorial-policy', priority: 0.5, changefreq: 'monthly' },
+
+  // Newer pages added after initial sitemap build
+  { path: '/vcu-ai', priority: 0.7, changefreq: 'weekly' },
+  { path: '/ai-search-optimization', priority: 0.6, changefreq: 'weekly' },
+  { path: '/news', priority: 0.6, changefreq: 'weekly' },
+  { path: '/news/vcu-ai-launch-2026', priority: 0.5, changefreq: 'monthly' },
+  { path: '/events/nba-betting-canada', priority: 0.6, changefreq: 'weekly' },
+  { path: '/events/ufc-betting-canada', priority: 0.6, changefreq: 'weekly' },
+  { path: '/events/world-cup-betting-canada', priority: 0.6, changefreq: 'weekly' },
 ];
 
 const EXCLUDED_PREFIXES = [
@@ -122,19 +133,17 @@ function isExcluded(path: string): boolean {
 }
 
 export const GET: RequestHandler = async () => {
-  const baseUrl = 'https://247ibet.ca';
+  const baseUrl = SITE.url;
+  const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
   const urls = STATIC_PAGES.filter((p) => !isExcluded(p.path))
     .map((p) => {
       const loc = `${baseUrl}${p.path}`;
-      return `  <url>\n    <loc>${loc}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority.toFixed(1)}</priority>\n  </url>`;
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority.toFixed(1)}</priority>\n  </url>`;
     })
     .join('\n');
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
 
   return new Response(xml, {
     headers: {

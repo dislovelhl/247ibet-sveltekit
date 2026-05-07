@@ -1,9 +1,10 @@
 import { redirect } from '@sveltejs/kit';
+import { getClientAddressOrFallback } from '$lib/server/client-address';
 import { generateHmac } from '$lib/server/hmac';
 import type { LayoutServerLoad } from './$types';
 
-function isValidAgeCookie(cookieVal: string | undefined, ip: string, ua: string): boolean {
-  if (!cookieVal) return false;
+function isValidAgeCookie(cookieVal: string | undefined, ip: string | null, ua: string): boolean {
+  if (!cookieVal || !ip) return false;
   const parts = cookieVal.split('.');
   if (parts.length !== 2) return false;
   const [version, signature] = parts;
@@ -24,7 +25,7 @@ export const load: LayoutServerLoad = async ({ url, cookies, getClientAddress, r
   const isStatic = url.pathname.startsWith('/images/') || url.pathname.startsWith('/videos/') || url.pathname === '/favicon.png';
 
   const ua = request.headers.get('user-agent') || '';
-  const ip = getClientAddress();
+  const ip = getClientAddressOrFallback(request, getClientAddress);
   
   const isBot = await isVerifiedBot(ua);
   const ageCookie = cookies.get('agegate');
@@ -40,7 +41,7 @@ export const load: LayoutServerLoad = async ({ url, cookies, getClientAddress, r
       setHeaders({
         'Cache-Control': 'private, no-store'
       });
-    } catch (e) {
+    } catch {
       // Ignore if headers are already sent or set
     }
   }

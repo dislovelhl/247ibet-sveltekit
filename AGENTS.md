@@ -23,6 +23,27 @@ Key routing rules:
 - Save progress, checkpoint, resume → invoke checkpoint
 - Code quality, health check → invoke health
 
+## Voice & Tone
+
+This site speaks as **247iBET itself** — a first-party brand, NOT a third-party reviewer or "independent guide."
+
+**First-party positioning:**
+- "Our casino", "our sportsbook", "our bonuses", "our Interac payouts" — not "they offer" or "we reviewed"
+- CTA buttons: "Play Now", "Claim Bonus", "Sign Up" — not "Visit Partner Site"
+- No "independent guide", "editorial team", "we review", "editorial stance" language
+- No "may earn commission" disclaimers in body copy (keep only where legally required in footer)
+
+**Tone:**
+- Confident, direct, brand-own voice
+- Bonus pages: present offers as *our offers*, not "image-observed creatives"
+- Trust signals: speak as the operator, not as someone evaluating the operator
+
+**Pages to review for tone alignment:**
+- Bonuses / new-player-bonuses-canada
+- Homepage hero and trust sections
+- Footer disclaimer
+- All CTA labels (`IBET_CTA`)
+
 ## Commands
 
 ```bash
