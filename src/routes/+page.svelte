@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { canonicalUrl } from '$lib/site';
+  import { SITE, canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     ArrowRight,
@@ -312,22 +312,29 @@
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: '247iBET',
-      url: 'https://247ibet.ca',
+      name: SITE.name,
+      url: SITE.url,
       description:
         'Independent Canadian iGaming guide covering 247iBET casino games, sportsbook markets, Interac payout timing, bonuses, safety tools, and responsible play.',
       publisher: {
         '@type': 'Organization',
-        name: '247iBET',
-        url: 'https://247ibet.ca',
+        name: SITE.name,
+        url: SITE.url,
       },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: '247iBET',
-      url: 'https://247ibet.ca',
-      logo: 'https://247ibet.ca/images/brand/logo.png',
+      name: SITE.name,
+      url: SITE.url,
+      logo: `${SITE.url}/images/brand/logo.png`,
+      sameAs: [
+        `https://x.com/${SITE.handles.x.slice(1)}`,
+        `https://www.instagram.com/${SITE.handles.instagram.slice(1)}/`,
+        `https://www.facebook.com/${SITE.handles.facebook}`,
+        'https://t.me/247iBET',
+        'https://www.tiktok.com/@247ibet',
+      ],
     },
     homeFaqSchema,
   ];
@@ -348,7 +355,7 @@
     content="Compare 247iBET casino games, sportsbook markets, Interac payout timing, bonuses, support, and responsible-gaming tools before creating an account."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://247ibet.ca" />
+  <meta property="og:url" content={SITE.url} />
   <link rel="canonical" href={canonicalUrl('/')} />
   <JsonLd schema={homeSchema} />
 </svelte:head>

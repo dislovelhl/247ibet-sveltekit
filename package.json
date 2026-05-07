@@ -67,6 +67,13 @@
       "devalue": ">=5.6.4",
       "uuid": ">=14.0.0",
       "cookie": ">=0.7.0"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@swc/core",
+      "cbor-extract",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
