@@ -110,14 +110,14 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
     expect(IBET_DISCLAIMER).toContain('T&Cs');
   });
 
-  it('uses affiliate-guide CTAs instead of operator-style CTAs', () => {
-    expect(IBET_CTA.primary).toBe('Visit Partner Site');
-    expect(IBET_CTA.register).toBe('Visit Partner Site');
-    expect(IBET_CTA.deposit).toBe('Compare Payouts');
-    expect(Object.values(IBET_CTA)).not.toContain('Play Now');
+  it('uses operator-style CTAs', () => {
+    expect(IBET_CTA.primary).toBe('Play Now');
+    expect(IBET_CTA.register).toBe('Sign Up');
+    expect(IBET_CTA.deposit).toBe('Fast Payouts');
+    expect(Object.values(IBET_CTA)).toContain('Play Now');
   });
 
-  it('keeps the trust copy cautious about licensing and commissions', () => {
+  it('keeps the trust copy direct while preserving responsible-play language', () => {
     const profileText = [
       IBET_PROFILE.tagline,
       IBET_PROFILE.withdrawalSpeed,
@@ -129,11 +129,12 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
     ].join(' ');
 
     expect(profileText).toContain('15-30 minutes after approval');
-    expect(profileText).toContain('independent guide');
-    expect(profileText).toContain('may earn commission');
-    expect(profileText).toContain('Confirm eligibility and licensing');
+    expect(profileText).toContain("Canada's premier online casino and sportsbook");
+    expect(profileText).toContain('Licensed and regulated — confirm availability in your province');
+    expect(profileText).toContain('Responsible gaming tools built into every account');
+    expect(profileText).toContain('Play responsibly');
     expect(profileText).not.toMatch(
-      /5,000\+|Play Now|Fully regulated|Kahnawake Licensed|AGCO compliance/,
+      /independent guide|may earn commission|5,000\+|Fully regulated|Kahnawake Licensed|AGCO compliance/,
     );
   });
 });

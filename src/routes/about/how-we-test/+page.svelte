@@ -11,7 +11,6 @@
     BookOpen,
   } from 'lucide-svelte';
 
-const LAST_UPDATED = '2026-04-29';
 
   const CRITERIA = [
     {

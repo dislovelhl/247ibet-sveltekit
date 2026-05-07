@@ -23,7 +23,7 @@
 
         <h2
           id="ready-to-play-heading"
-          class="page-hero-title max-w-3xl text-2xl leading-tight sm:text-3xl md:text-5xl uppercase"
+          class="page-hero-title max-w-3xl text-2xl leading-tight sm:text-3xl md:text-5xl"
         >
           Ready to open your <span class="text-prestige-gold">247iBET account?</span>
         </h2>
@@ -37,7 +37,7 @@
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary shimmer-effect w-full sm:w-auto">
+          <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
             CREATE ACCOUNT
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </SafeExternalLink>

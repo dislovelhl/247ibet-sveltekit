@@ -301,8 +301,6 @@
     ],
   };
 
-  const LAST_UPDATED = '2026-04-29';
-
   let mouseX = $state(0);
   let mouseY = $state(0);
 

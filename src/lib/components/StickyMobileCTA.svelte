@@ -110,13 +110,13 @@
 {#if visible && !dismissed && !isStandalone}
   <div
     transition:fly={{ y: 100, duration: 350, easing: cubicOut }}
-    class="fixed left-3 right-3 z-40 md:hidden"
-    style="bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px))"
+    class="fixed inset-x-0 z-40 mx-auto w-[calc(100%_-_1rem)] max-w-md md:hidden"
+    style="bottom: calc(1rem + env(safe-area-inset-bottom, 0px))"
     role="navigation"
     aria-label="Quick actions"
   >
     <div
-      class="glass-premium rounded-2xl border border-white/20 px-2 py-2 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)]"
+      class="glass-premium rounded-2xl border border-white/20 p-2.5 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.8)]"
     >
       <div class="flex items-center gap-2">
         {#if installPrompt}

@@ -47,7 +47,6 @@
     { href: '/sportsbook/nba', label: 'NBA' },
     { href: '/sportsbook/ufc', label: 'UFC' },
     { href: '/fast-payouts', label: 'Fast Payouts' },
-    { href: '/casino-bonuses-canada', label: 'Bonuses' },
   ];
 
   const quickLinks = [

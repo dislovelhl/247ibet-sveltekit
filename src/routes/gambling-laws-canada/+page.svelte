@@ -29,7 +29,6 @@
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
-const LAST_UPDATED = '2026-04-29';
 </script>
 
 <svelte:head>

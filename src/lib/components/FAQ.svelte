@@ -20,7 +20,7 @@
   }
 </script>
 
-<section class="mt-10 rounded-xl border border-white/10 bg-navy-card/80 p-6">
+<section class="mt-10 rounded-xl border border-white/15 bg-navy-card/80 p-6 shadow-[0_18px_60px_-40px_rgba(0,0,0,0.85)] ring-1 ring-white/[0.03]">
   {#if title}
     <h2 class="text-2xl font-black mb-5">{title}</h2>
   {/if}

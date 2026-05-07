@@ -12,8 +12,7 @@
     Zap,
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
-  import { IBET_PROMO_SNAPSHOT, IBET_URLS } from '$lib/ibet-brand';
-
+  import { IBET_CTA, IBET_PROMO_SNAPSHOT, IBET_URLS } from '$lib/ibet-brand';
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -250,7 +249,7 @@
   const faqs = [
     {
       q: 'Is 247iBET licensed in my province?',
-      a: '247iBET is presented here as an independent guide. Confirm the legal operator, registration status, and provincial eligibility with the operator and your provincial regulator before depositing.',
+      a: '247iBET is our casino and sportsbook for eligible Canadian players. Confirm the legal operator, registration status, and provincial eligibility through our current terms and your provincial regulator before depositing.',
     },
     {
       q: 'How fast are Interac withdrawals?',
@@ -386,14 +385,14 @@
       class="relative mx-auto grid min-h-[560px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-16"
     >
       <div
-        class="glass-premium animate-float-3d max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
+        class="glass-premium animate-float-3d max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-10"
         style="transform: translate3d({-mouseX}px, {-mouseY}px, 0);"
       >
-        <div class="mb-6 flex items-center gap-3">
+        <div class="mb-4 flex flex-wrap items-center gap-3 sm:mb-5">
           <p
             class="animate-fade-in-up text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold"
           >
-            Canadian iGaming Guide
+            247iBET Canada
           </p>
           <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
             <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
@@ -403,36 +402,40 @@
         <h1
           class="page-hero-title animate-fade-in-up-delay-1 !tracking-tighter"
         >
-          247iBET Review: Casino, Sportsbook & <span class="text-prestige-gold-400"
+          247iBET Casino, Sportsbook & <span class="text-prestige-gold-400"
             >Interac Payouts</span
           >
         </h1>
         <p
-          class="mt-6 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
+          class="mt-5 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
         >
-          <span class="hidden sm:inline">Compare 247iBET&apos;s casino categories, sportsbook markets, Interac payment flow,
-          bonuses, support, and responsible-gaming tools before you visit a partner site.</span>
-          <span class="sm:hidden">Expert Canadian review of casino categories, sportsbook markets, and Interac payout timing.</span>
+          <span class="hidden sm:inline"
+            >Play casino games, bet on sports, check Interac payout timing, and review our latest
+            bonus terms before you sign up.</span
+          >
+          <span class="sm:hidden"
+            >Play casino, bet sports, and check Interac payout timing before you sign up.</span
+          >
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
           Last updated: <time datetime={LAST_UPDATED}>{LAST_UPDATED}</time>
         </div>
         <div
-          class="mt-8 flex animate-fade-in-up-delay-3 flex-col gap-4 sm:flex-row"
+          class="mt-7 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:flex-row"
         >
           <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group shimmer-effect">
-            Visit Partner Site
+            {IBET_CTA.register}
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
-          <a href="/deposit" class="hero-cta-secondary glass-thin"> See Payout Details </a>
+          <a href="/deposit" class="hero-cta-secondary glass-thin">{IBET_CTA.fastPayout}</a>
         </div>
         <p
-          class="mt-8 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
+          class="mt-6 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
         >
-          247iBET is an independent Canadian iGaming guide. We review casino and sportsbook options
-          and may earn a commission when you click partner links. Ratings are editorial and based on
-          payout speed, game selection, support, safety tools, and payment options.
+          247iBET brings casino games, sportsbook markets, Interac payment notes, bonuses, and
+          responsible-gaming tools into one Canadian player experience. Terms, eligibility, and
+          verification requirements apply.
         </p>
       </div>
     </div>
@@ -724,6 +727,7 @@
                   height="400"
                   loading="lazy"
                   decoding="async"
+                  sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -769,6 +773,7 @@
                   height="400"
                   loading="lazy"
                   decoding="async"
+                  sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -868,6 +873,7 @@
                   height="400"
                   loading="lazy"
                   decoding="async"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>

@@ -123,8 +123,7 @@
 
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
-  const LAST_UPDATED = '2026-04-29';
-</script>
+  </script>
 
 <svelte:head>
   <title>Interac Casino Guide Canada 2026 | 247iBET</title>

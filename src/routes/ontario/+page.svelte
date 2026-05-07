@@ -121,7 +121,6 @@
     },
   ];
 
-const LAST_UPDATED = '2026-04-29';
 
   const parallax = useMouseParallax(20);
 </script>
