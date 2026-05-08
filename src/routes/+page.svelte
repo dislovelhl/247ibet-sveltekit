@@ -328,6 +328,15 @@
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
       sameAs: SITE.sameAs,
+      knowsAbout: [
+        'Online Casino Canada',
+        'Sports Betting Canada',
+        'Interac Casino Payouts',
+        'Live Dealer Casino',
+        'Casino Bonuses Canada',
+        'Sports Betting Odds',
+        'Responsible Gambling',
+      ],
     },
     homeFaqSchema,
   ];
