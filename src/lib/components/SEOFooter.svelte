@@ -2,6 +2,7 @@
   import { Music2, Send } from 'lucide-svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { SITE } from '$lib/site';
+  import { reveal } from '$lib/animations';
 
   const SOCIAL = [
     {
@@ -56,7 +57,7 @@
         class="grid grid-cols-1 gap-12 border-b border-white/5 py-14 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-16"
       >
         <!-- Brand column -->
-        <section aria-labelledby="footer-brand-heading">
+        <section aria-labelledby="footer-brand-heading" use:reveal class="reveal-fade-up">
           <div class="mb-5 flex items-center gap-3">
             <div
               class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-navy-black"
@@ -122,16 +123,16 @@
         </section>
 
         <!-- Play links -->
-        <nav aria-labelledby="footer-play-heading">
+        <nav aria-labelledby="footer-play-heading" use:reveal class="reveal-fade-up">
           <h2
             id="footer-play-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
           >
             Play
           </h2>
-          <ul class="space-y-0.5">
+          <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each playLinks as link}
-              <li>
+              <li class="reveal-fade-up">
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -144,16 +145,16 @@
         </nav>
 
         <!-- Info + Safety -->
-        <section aria-labelledby="footer-info-heading">
+        <section aria-labelledby="footer-info-heading" use:reveal class="reveal-fade-up">
           <h2
             id="footer-info-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
           >
             Info
           </h2>
-          <ul class="space-y-0.5">
+          <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each infoLinks as link}
-              <li>
+              <li class="reveal-fade-up">
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -185,13 +186,13 @@
       </div>
 
       <!-- Affiliate disclosure -->
-      <div class="py-6 border-b border-white/5">
+      <div class="py-6 border-b border-white/5" use:reveal>
         <AffiliateDisclosure variant="footer" />
       </div>
 
       <!-- Legal bar -->
       <div
-        class="flex flex-col gap-3 py-6 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between"
+        class="flex flex-col gap-3 py-6 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between reveal-fade-up"
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">
