@@ -238,11 +238,11 @@
               <dt
                 class="mb-1.5 flex items-center gap-1.5 text-xs font-mono uppercase tracking-[0.12em] text-text-body"
               >
-                {#if item.label === 'Licence'}
+                {#if item.label === 'Security'}
                   <ShieldCheck class="w-3.5 h-3.5 text-green-400" aria-hidden="true" />
                 {:else if item.label === 'Payments'}
                   <CreditCard class="w-3.5 h-3.5 text-text-body" aria-hidden="true" />
-                {:else if item.label === 'Security'}
+                {:else if item.label === 'Fair Play'}
                   <LockKeyhole class="w-3.5 h-3.5 text-text-body" aria-hidden="true" />
                 {:else}
                   <Star

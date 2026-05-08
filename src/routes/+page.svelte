@@ -360,20 +360,25 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-16 text-white" onmousemove={handleMouseMove} role="presentation">
-  <section class="relative overflow-hidden border-b border-prestige-gold/30">
+  <section class="relative flex min-h-[92vh] items-center overflow-hidden border-b border-prestige-gold/30">
     <BackgroundAtmosphere src="/images/frozen-edge-hero.webp" />
 
+    <!-- Gold radial glow behind the content -->
+    <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+      <div class="absolute top-1/3 left-1/2 h-[80vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-prestige-gold/4 blur-[120px]"></div>
+      <div class="absolute top-0 left-0 h-[40vh] w-[40vw] rounded-full bg-slate-blue/3 blur-[100px]"></div>
+    </div>
+
     <div
-      class="relative mx-auto grid min-h-[560px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-16"
+      class="relative z-10 mx-auto w-full max-w-[1720px] px-4 py-16 sm:px-6 sm:py-20 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:py-24 xl:px-16"
     >
+      <!-- Left: Typography block -->
       <div
-        class="glass-premium animate-float-3d max-w-3xl rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-10"
+        class="glass-premium animate-float-3d rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
         style="transform: translate3d({-mouseX}px, {-mouseY}px, 0);"
       >
-        <div class="mb-4 flex flex-wrap items-center gap-3 sm:mb-5">
-          <p
-            class="animate-fade-in-up text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold"
-          >
+        <div class="mb-5 flex flex-wrap items-center gap-3">
+          <p class="text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold">
             247iBET Canada
           </p>
           <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
@@ -383,47 +388,59 @@
             </span>
           </div>
         </div>
-        <h1
-          class="page-hero-title animate-fade-in-up-delay-1 !tracking-tighter font-luxury"
-        >
-          247iBET Casino, Sportsbook & <span class="text-prestige-gold-400 text-gold-gradient"
-            >Interac Payouts</span
-          >
+
+        <h1 class="text-[clamp(2.8rem,7vw,6rem)] font-black leading-[0.92] tracking-tight text-white">
+          Canada's Elite<br />
+          <span class="text-gold-gradient">Casino & Sportsbook</span>
         </h1>
-        <p
-          class="mt-5 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
-        >
-          <span class="hidden sm:inline"
-            >Play premium casino games, bet on your favorite sports, and enjoy lightning-fast Interac payouts. Elite gaming designed for Canadian players.</span
-          >
-          <span class="sm:hidden"
-            >Play premium casino, bet sports, and enjoy lightning-fast Interac payouts.</span
-          >
+
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-text-body sm:text-lg">
+          Premium casino games, live sports betting, and lightning-fast Interac payouts — built for players who expect more.
         </p>
+
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
           <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-prestige-gold-500 shadow-[0_0_8px_rgba(212,148,58,0.6)]"></span>
           Last updated: <time datetime={LAST_UPDATED}>{LAST_UPDATED}</time>
         </div>
-        <div
-          class="mt-7 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:flex-row"
-        >
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group shimmer-effect btn-magnetic">
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group btn-magnetic">
             {IBET_CTA.register}
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
-          <a href="/deposit" class="hero-cta-secondary glass-thin btn-magnetic">{IBET_CTA.fastPayout}</a>
+          <a href="/deposit" class="hero-cta-secondary btn-magnetic">{IBET_CTA.fastPayout}</a>
         </div>
-        <p
-          class="mt-6 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
-        >
-          247iBET delivers an elite casino and sportsbook experience with rapid Interac payments, 
-          premium game selection, and advanced responsible-gaming tools built for Canadians.
-        </p>
+
+        <!-- Hero stat strip inside glass card -->
+        <div class="mt-8 grid grid-cols-2 gap-3 border-t border-white/10 pt-6 sm:grid-cols-4">
+          <div class="text-center">
+            <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">500+</p>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Casino Games</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">15-30<span class="text-sm">min</span></p>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Interac Payouts</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">24/7</p>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Player Support</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-prestige-gold">50K+</p>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Canadian Players</p>
+          </div>
+        </div>
       </div>
-      
-      <div class="hidden lg:block lg:pl-10">
+
+      <!-- Right: Payout Progress (desktop only) -->
+      <div class="hidden lg:flex lg:items-center lg:pl-10">
         <PayoutProgress activeStep={2} />
       </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 animate-bounce md:block">
+      <ChevronDown class="h-6 w-6 text-prestige-gold/50" aria-hidden="true" />
     </div>
   </section>
 
@@ -947,22 +964,23 @@
 
 
 
+    <!-- Gold moment: full-bleed CTA -->
     <section
-      class="overflow-hidden rounded-xl border border-prestige-gold/40 bg-[linear-gradient(100deg,#101827,#080d18)] p-5 shadow-2xl sm:p-8 md:p-12"
+      class="overflow-hidden rounded-2xl bg-gradient-to-br from-prestige-gold-400 via-prestige-gold to-prestige-gold-600 p-8 shadow-[0_0_60px_-10px_rgba(212,148,58,0.35)] sm:p-12 md:p-16"
     >
-      <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
+      <div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
         <div>
-          <h2 class="text-3xl font-black sm:text-4xl md:text-5xl">
-            Ready to join <span class="text-prestige-gold">247iBET</span>?
+          <h2 class="text-3xl font-black text-navy-black sm:text-5xl md:text-6xl">
+            Ready to join <span class="text-navy-black/80">247iBET</span>?
           </h2>
-          <p class="mt-4 max-w-2xl text-base leading-7 text-text-body sm:text-lg sm:leading-8">
+          <p class="mt-4 max-w-2xl text-base leading-7 text-navy-black/80 sm:text-lg sm:leading-8">
             Fast payouts, premium games, and secure sports betting are just a click away.
             Join thousands of Canadian players today.
           </p>
         </div>
         <SafeExternalLink
           href={IBET_URLS.register}
-          class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72"
+          class="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full bg-navy-black px-12 py-5 text-base font-black uppercase tracking-[0.12em] text-prestige-gold shadow-2xl transition-all hover:scale-105 hover:bg-navy-black/90 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] active:scale-100 w-full justify-center sm:w-auto sm:min-w-72"
         >
           {IBET_CTA.register}
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
