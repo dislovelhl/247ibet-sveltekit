@@ -5,6 +5,7 @@
   import { ArrowRight } from 'lucide-svelte';
   import { useMouseParallax } from '$lib/runes.svelte';
   import FAQ from '$lib/components/FAQ.svelte';
+  import { reveal } from '$lib/animations';
 
   const sourceCards = [
     {
@@ -205,7 +206,7 @@
 
   <AffiliateDisclosure />
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Ontario Availability &amp; Setup</h2>
     <p class="text-sm text-gray-300 leading-relaxed mb-6">
       Ontario players should confirm age eligibility, current account access, payment support, and
@@ -282,7 +283,7 @@
     </p>
   </div>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Ontario supporting guides</h2>
     <div class="grid gap-4 md:grid-cols-2">
       {#each guideItems as item}
@@ -297,7 +298,7 @@
     </div>
   </section>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Ontario operator review entry points</h2>
     <p class="text-sm text-gray-400 leading-relaxed mb-5">
       Use these review pages to compare cashier flow, mobile experience, and product fit before you
@@ -316,7 +317,7 @@
     </div>
   </section>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Primary Ontario checks before signup</h2>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
@@ -360,7 +361,7 @@
     </div>
   </section>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Source references</h2>
     <div class="grid gap-4 md:grid-cols-3">
       {#each sourceCards as source}
@@ -377,7 +378,7 @@
     </div>
   </section>
 
-  <section class="mb-10">
+  <section class="mb-10" use:reveal>
     <h2 class="text-2xl font-bold mb-5">Cross-province context</h2>
     <div class="grid gap-4 md:grid-cols-2">
       {#each crossProvinceItems as item}

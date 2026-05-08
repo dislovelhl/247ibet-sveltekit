@@ -4,6 +4,7 @@
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { useMouseParallax } from '$lib/runes.svelte';
   import FAQ from '$lib/components/FAQ.svelte';
+  import { reveal } from '$lib/animations';
   const faqItems = [
     {
       question: 'Is Alberta already fully live for private iGaming operators?',
@@ -144,7 +145,7 @@
 
   <AffiliateDisclosure />
 
-    <section class="glass-premium mb-16 rounded-[2rem] p-8 md:p-12 border border-white/10 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] relative overflow-hidden">
+    <section class="glass-premium mb-16 rounded-[2rem] p-8 md:p-12 border border-white/10 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] relative overflow-hidden" use:reveal>
       <div class="absolute inset-0 opacity-20 shimmer-effect pointer-events-none"></div>
       <div class="flex items-center gap-4 mb-8">
         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 shadow-lg group-hover:scale-110 transition-transform">
@@ -193,7 +194,7 @@
       </div>
     </section>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Alberta supporting guides</h2>
     <div class="grid gap-4 md:grid-cols-2">
       {#each guideItems as item}
@@ -208,7 +209,7 @@
     </div>
   </section>
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10">
+  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
     <h2 class="text-2xl font-bold mb-4">Operator review benchmarks</h2>
     <p class="text-sm text-gray-400 leading-relaxed mb-5">
       These review pages help compare likely Alberta-relevant brands or current multi-province
