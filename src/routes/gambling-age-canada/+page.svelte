@@ -88,6 +88,7 @@
   ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import JsonLd from '$lib/components/JsonLd.svelte';
 
 </script>
 
@@ -108,6 +109,32 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Minimum gambling age in Canada by province and territory, with age-verification context."
   />
   <link rel="canonical" href={canonicalUrl('/gambling-age-canada')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Legal Gambling Age Canada 2026 —',
+      description: 'Legal gambling age in all Canadian provinces and territories. 18+ in Alberta, Manitoba, and Quebec. 19+ in all other provinces. Applies to casinos, sportsbooks, poker, and online gambling.',
+      url: canonicalUrl('/gambling-age-canada'),
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Gambling Age Canada', item: canonicalUrl('/gambling-age-canada') },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl">

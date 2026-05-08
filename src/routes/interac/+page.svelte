@@ -14,6 +14,7 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
+import JsonLd from '$lib/components/JsonLd.svelte';
 
   const trustItems = [
     {
@@ -121,6 +122,32 @@
     content="Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance."
   />
   <link rel="canonical" href={canonicalUrl('/interac')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Interac Casino Canada: Fast Deposits & Withdrawals at 247iBET',
+      description: 'Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance.',
+      url: canonicalUrl('/interac'),
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Interac', item: canonicalUrl('/interac') },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-10 text-white">

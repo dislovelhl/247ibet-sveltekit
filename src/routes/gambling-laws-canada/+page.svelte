@@ -28,6 +28,7 @@
   ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import JsonLd from '$lib/components/JsonLd.svelte';
 
 </script>
 
@@ -54,6 +55,32 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Federal law, provincial licensing, legal betting age, and player protections across Canada."
   />
   <link rel="canonical" href={canonicalUrl('/gambling-laws-canada')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Canada Gambling Laws 2026: Your Guide to Provincial Rules',
+      description: 'Canada gambling laws explained: federal Criminal Code rules, provincial licensing, legal betting age, and player protections.',
+      url: canonicalUrl('/gambling-laws-canada'),
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Gambling Laws', item: canonicalUrl('/gambling-laws-canada') },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">

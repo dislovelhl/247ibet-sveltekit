@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SITE } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import PolicyLayout from '$lib/components/PolicyLayout.svelte';
 
   const LAST_REVIEWED = '2026-04-08';
@@ -19,6 +20,35 @@
     { id: 'changes', title: '12. Changes to This Policy' },
   ];
 </script>
+
+<svelte:head>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Privacy Policy',
+      description: 'Understand how 247iBET handles your personal data. Our privacy practices comply with PIPEDA and other Canadian privacy laws.',
+      url: 'https://247ibet.ca/privacy-policy',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://247ibet.ca/privacy-policy' },
+      ],
+    }}
+  />
+</svelte:head>
 
 <PolicyLayout
   title="Privacy Policy"

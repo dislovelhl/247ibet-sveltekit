@@ -1,6 +1,7 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import JsonLd from '$lib/components/JsonLd.svelte';
   const PROVINCE_STATUS = [
     {
       province: 'Ontario',
@@ -102,6 +103,32 @@
     content="Learn how province-specific rules affect online casino and sportsbook access across Canada."
   />
   <link rel="canonical" href={canonicalUrl('/legal-online-gambling-canada')} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Online Gambling Access in Canada: 2026 Guide',
+      description: 'See how online gambling access works across Canada, how province rules differ, and what changes for casino, sportsbook, and payment flows.',
+      url: canonicalUrl('/legal-online-gambling-canada'),
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Legal Online Gambling', item: canonicalUrl('/legal-online-gambling-canada') },
+      ],
+    }}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">

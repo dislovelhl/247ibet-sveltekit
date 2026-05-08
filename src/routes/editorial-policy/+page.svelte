@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SITE } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import PolicyLayout from '$lib/components/PolicyLayout.svelte';
 
   const LAST_UPDATED = '2026-04-29';
@@ -8,6 +9,35 @@
     { id: 'principles', title: 'Policy Principles' },
   ];
 </script>
+
+<svelte:head>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Editorial Standards',
+      description: "247iBET's editorial independence policy. How we evaluate operators, maintain impartial recommendations, and ensure compliance.",
+      url: 'https://247ibet.ca/editorial-policy',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Editorial Standards', item: 'https://247ibet.ca/editorial-policy' },
+      ],
+    }}
+  />
+</svelte:head>
 
 <PolicyLayout
   title="Editorial Standards"

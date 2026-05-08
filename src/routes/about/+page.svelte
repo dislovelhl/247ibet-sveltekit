@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SITE } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import PolicyLayout from '$lib/components/PolicyLayout.svelte';
 
   const LAST_UPDATED = '2026-04-28';
@@ -10,6 +11,35 @@
     { id: 'responsibility', title: 'Responsible Gambling' },
   ];
 </script>
+
+<svelte:head>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'About 247iBET',
+      description: 'Learn about 247iBET — a leading Canadian online casino and sportsbook with fast Interac payouts, live dealer games, and elite sports betting.',
+      url: 'https://247ibet.ca/about',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'About', item: 'https://247ibet.ca/about' },
+      ],
+    }}
+  />
+</svelte:head>
 
 <PolicyLayout
   title="About {SITE.name}"

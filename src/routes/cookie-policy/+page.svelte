@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SITE } from '$lib/site';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   import PolicyLayout from '$lib/components/PolicyLayout.svelte';
 
   const LAST_REVIEWED = '2026-04-08';
@@ -13,6 +14,35 @@
     { id: 'updates', title: '6. Updates' },
   ];
 </script>
+
+<svelte:head>
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Cookie Policy',
+      description: 'Transparent disclosure of the tracking technologies used on 247iBET. Understand what cookies we use and how to manage them.',
+      url: 'https://247ibet.ca/cookie-policy',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
+        { '@type': 'ListItem', position: 2, name: 'Cookie Policy', item: 'https://247ibet.ca/cookie-policy' },
+      ],
+    }}
+  />
+</svelte:head>
 
 <PolicyLayout
   title="Cookie Policy"
