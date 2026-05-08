@@ -15,6 +15,7 @@
   import { IBET_CTA, IBET_PROMO_SNAPSHOT, IBET_URLS } from '$lib/ibet-brand';
   import { reveal, counter } from '$lib/animations';
   import OddsTicker from '$lib/components/OddsTicker.svelte';
+  import PayoutProgress from '$lib/components/PayoutProgress.svelte';
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -441,6 +442,10 @@
           responsible-gaming tools into one Canadian player experience. Terms, eligibility, and
           verification requirements apply.
         </p>
+      </div>
+      
+      <div class="hidden lg:block lg:pl-10">
+        <PayoutProgress activeStep={2} />
       </div>
     </div>
   </section>

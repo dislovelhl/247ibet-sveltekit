@@ -21,6 +21,44 @@
     }
   }
 
+  /* Atmospheric Noise & Grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Ambient Glows */
+  .glow-gold {
+    position: relative;
+  }
+  .glow-gold::after {
+    content: '';
+    position: absolute;
+    inset: -20% -10%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 148, 58, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(40px);
+  }
+
+  .glow-navy {
+    position: relative;
+  }
+  .glow-navy::after {
+    content: '';
+    position: absolute;
+    inset: -20% -10%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(74, 158, 191, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(40px);
+  }
+
   body::after {
     content: '';
     position: fixed;

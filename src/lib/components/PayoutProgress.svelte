@@ -1,0 +1,63 @@
+<script lang="ts">
+  import { Zap, ShieldCheck, BadgeCheck, CheckCircle2 } from 'lucide-svelte';
+  import { reveal } from '$lib/animations';
+
+  let { activeStep = 1 } = $props<{ activeStep?: number }>();
+
+  const steps = [
+    { label: 'Approval', icon: ShieldCheck, detail: 'Operator review' },
+    { label: 'Processing', icon: Zap, detail: 'Network routing' },
+    { label: 'Funds Sent', icon: BadgeCheck, detail: 'In your account' },
+  ];
+</script>
+
+<div class="glow-gold relative overflow-hidden rounded-2xl border border-white/10 bg-navy-card/50 p-6 backdrop-blur-sm" use:reveal>
+  <div class="mb-8 flex items-center justify-between">
+    <h3 class="text-sm font-bold uppercase tracking-widest text-prestige-gold">
+      Interac Payout Speed
+    </h3>
+    <span class="rounded-full bg-success/10 px-3 py-1 text-[10px] font-bold text-success border border-success/20">
+      LIVE NETWORK STATUS
+    </span>
+  </div>
+
+  <div class="relative flex justify-between">
+    <!-- Connecting Line -->
+    <div class="absolute top-5 left-0 h-0.5 w-full bg-white/5"></div>
+    <div 
+      class="absolute top-5 left-0 h-0.5 bg-prestige-gold transition-all duration-1000 ease-out"
+      style="width: {((activeStep - 1) / (steps.length - 1)) * 100}%"
+    ></div>
+
+    {#each steps as step, i}
+      <div class="relative z-10 flex flex-col items-center gap-3">
+        <div 
+          class="flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-500
+          {i + 1 < activeStep ? 'bg-prestige-gold border-prestige-gold text-navy-black shadow-gold-glow' : 
+           i + 1 === activeStep ? 'bg-navy-raised border-prestige-gold text-prestige-gold shadow-gold-glow animate-pulse' : 
+           'bg-navy-black border-white/10 text-text-tertiary'}"
+        >
+          {#if i + 1 < activeStep}
+            <CheckCircle2 size={20} />
+          {:else}
+            <step.icon size={20} />
+          {/if}
+        </div>
+        <div class="text-center">
+          <p class="text-xs font-bold {i + 1 <= activeStep ? 'text-white' : 'text-text-tertiary'}">
+            {step.label}
+          </p>
+          <p class="text-[10px] text-text-tertiary">
+            {step.detail}
+          </p>
+        </div>
+      </div>
+    {/each}
+  </div>
+
+  <div class="mt-8 rounded-lg bg-navy-black/40 p-3 border border-white/5">
+    <p class="text-[11px] leading-relaxed text-text-body">
+      <span class="font-bold text-prestige-gold">Award-Winning Speed:</span> 247iBET Interac payouts typically hit your account <span class="text-white font-bold">15-30 minutes</span> after operator approval.
+    </p>
+  </div>
+</div>

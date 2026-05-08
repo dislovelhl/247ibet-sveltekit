@@ -97,7 +97,9 @@
 
   /* ── Shadows ── */
   --shadow-navy: 0 30px 45px -30px rgba(7, 12, 24, 0.5);
+  --shadow-navy-deep: 0 40px 60px -20px rgba(0, 0, 0, 0.7);
   --shadow-gold-accent: 0 18px 36px -18px rgba(212, 148, 58, 0.06);
+  --shadow-gold-glow: 0 0 30px -5px rgba(212, 148, 58, 0.25);
 }
 
 :root {
