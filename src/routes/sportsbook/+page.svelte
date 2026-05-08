@@ -53,9 +53,9 @@
   const heroOffers = [
     {
       eyebrow: 'New Player Offer',
-      headline: 'Elite Welcome Bonus',
+      headline: 'Elite Starter Offer',
       body: 'Get started with our premium sports welcome package. Access Canadian-focused markets and live odds instantly.',
-      cta: 'Claim Now',
+      cta: 'Review Offer',
     },
     {
       eyebrow: 'Odds Boost',
@@ -430,9 +430,9 @@
         <div id="offers" use:reveal data-reveal-stagger="true" class="grid gap-4 sm:grid-cols-3">
           {#each heroOffers as offer}
             <article
+              use:reveal
               class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift"
-            >
-              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
+            >              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
                 <Flame class="h-6 w-6" />
               </div>
@@ -626,7 +626,7 @@
             </p>
             <div class="mt-4 grid gap-3 sm:grid-cols-2">
               {#each offerCards as offer}
-                <article class="rounded-lg border border-white/10 bg-white/[0.03] p-4 reveal-fade-up card-hover-lift">
+                <article use:reveal class="rounded-lg border border-white/10 bg-white/[0.03] p-4 reveal-fade-up card-hover-lift">
                   <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
                   <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
                   <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
@@ -685,6 +685,7 @@
               {@const GuideIcon = guide.icon}
               <a
                 href={guide.href}
+                use:reveal
                 class="reveal-fade-up group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
               >
                 <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />

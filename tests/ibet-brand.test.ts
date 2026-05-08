@@ -130,8 +130,8 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
 
     expect(profileText).toContain('15-30 minutes after approval');
     expect(profileText).toContain("Canada's premier online casino and sportsbook");
-    expect(profileText).toContain('Licensed and regulated — confirm availability in your province');
-    expect(profileText).toContain('Responsible gaming tools built into every account');
+    expect(profileText).toContain('Certified and secure gaming environment for all Canadian players');
+    expect(profileText).toContain('Responsible gaming tools built into every 247iBET account');
     expect(profileText).toContain('Play responsibly');
     expect(profileText).not.toMatch(
       /independent guide|may earn commission|5,000\+|Fully regulated|Kahnawake Licensed|AGCO compliance/,

@@ -208,6 +208,7 @@
               {#each visibleFeatures as feat}
                 {@const FeatureIcon = featureIconMap[feat.icon]}
                 <div
+                  use:reveal
                   class="reveal-fade-up rounded-xl border p-3.5 material-inset {feat.bg} transition-shadow card-hover-lift"
                 >
                   {#if FeatureIcon}

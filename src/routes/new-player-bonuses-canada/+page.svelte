@@ -5,6 +5,7 @@
   import { IBET_PROMO_SNAPSHOT, IBET_SPORTSBOOK_CREATIVE_SNAPSHOT } from '$lib/ibet-brand';
   import { reveal } from '$lib/animations';
   import { Shield, CheckCircle } from 'lucide-svelte';
+  import ReadyToPlay from '$lib/components/ReadyToPlay.svelte';
 
   const bonusTypes = [
     {
@@ -97,7 +98,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
-  <header class="space-y-4 reveal-fade-up">
+  <header class="space-y-4 reveal-fade-up" use:reveal>
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Bonuses · Canada · 2026
     </div>
@@ -157,7 +158,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 sm:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-4">
             <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
@@ -185,7 +186,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 md:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-4">
             <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
@@ -204,7 +205,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </h2>
     <div class="space-y-3">
       {#each bonusTypes as b}
-        <div class="reveal-fade-up navy-card rounded-lg p-4 flex flex-col gap-1.5 card-hover-lift">
+        <div use:reveal class="reveal-fade-up navy-card rounded-lg p-4 flex flex-col gap-1.5 card-hover-lift">
           <div class="flex items-center justify-between gap-4">
             <span class="font-semibold text-[#F1F5F9] text-sm">{b.name}</span>
             <span
@@ -248,6 +249,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     ctaText="See Welcome Offer at 247iBET"
     contextLabel="Latest reviewed creative showed up to C$2000 + 10 free spins; verify terms after registration"
   />
+
+  <ReadyToPlay />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">
     <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-widest font-medium">Related</p>

@@ -316,6 +316,7 @@
         {@const Icon = card.icon}
         <a
           href={card.href}
+          use:reveal
           class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
         >
           <div
@@ -369,11 +370,12 @@
       >
         {#each categoryCards as card}
           {@const Icon = card.icon}
-          <TiltCard class="reveal-fade-up">
-            <a
-              href={card.href}
-              class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift block h-full"
-            >
+          <div class="reveal-fade-up h-full" use:reveal>
+            <TiltCard>
+              <a
+                href={card.href}
+                class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift block h-full"
+              >
               <div class="absolute inset-0 z-0">
                 <img
                   src={card.image}
@@ -400,8 +402,8 @@
               </div>
             </a>
           </TiltCard>
-        {/each}
-      </div>
+          </div>
+          {/each}      </div>
     </section>
 
     <section class="mt-10">

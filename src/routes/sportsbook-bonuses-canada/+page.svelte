@@ -7,6 +7,8 @@
     IBET_SPORTSBOOK_CREATIVE_SNAPSHOT,
   } from '$lib/ibet-brand';
   import { reveal } from '$lib/animations';
+  import ReadyToPlay from '$lib/components/ReadyToPlay.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -47,8 +49,6 @@
         'Ontario-licensed operators only serve Ontario residents and cannot offer promotions cross-provincially. Bettors in BC, Alberta, and other provinces may access offshore sportsbooks that operate under Kahnawake licensing and offer their own promotions.',
     },
   ];
-
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -93,7 +93,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <header class="mb-10 reveal-fade-up">
+  <header class="mb-10 reveal-fade-up" use:reveal>
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -120,7 +120,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <h2 class="text-2xl font-bold mb-6">Types of Sportsbook Offers in Canada</h2>
     <div use:reveal data-reveal-stagger="true" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
       {#each offerTypes as { label, desc }}
-        <div class="reveal-fade-up p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] card-hover-lift">
+        <div use:reveal class="reveal-fade-up p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] card-hover-lift">
           <div class="text-base font-bold mb-1">{label}</div>
           <p class="text-gray-400 font-sans text-xs leading-relaxed">{desc}</p>
         </div>
@@ -142,7 +142,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-6 grid gap-4 lg:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
@@ -169,7 +169,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
@@ -205,7 +205,32 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     {/each}
   </section>
 
-  <div class="mt-16">
+  <ReadyToPlay />
+
+  <div class="mt-8">
+    <nav class="flex flex-wrap gap-6" aria-label="Related pages">
+      <a
+        href="/new-online-casinos-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >New Online Casinos</a
+      >
+      <a
+        href="/casino-bonuses-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Casino Bonuses</a
+      >
+      <a
+        href="/best-online-casinos-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Best Online Casinos</a
+      >
+      <a
+        href="/fast-payouts"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Fast Payout Casinos</a
+      >
+    </nav>
+
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a
         href="/responsible-gambling"

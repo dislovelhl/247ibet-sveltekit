@@ -132,7 +132,7 @@
           </h2>
           <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each playLinks as link}
-              <li class="reveal-fade-up">
+              <li class="reveal-fade-up" use:reveal>
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -154,7 +154,7 @@
           </h2>
           <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each infoLinks as link}
-              <li class="reveal-fade-up">
+              <li class="reveal-fade-up" use:reveal>
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -193,6 +193,7 @@
       <!-- Legal bar -->
       <div
         class="flex flex-col gap-3 py-6 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between reveal-fade-up"
+        use:reveal
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">

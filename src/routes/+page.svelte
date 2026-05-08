@@ -474,6 +474,7 @@
       {#each heroTrust as item}
         {@const Icon = item.icon}
         <div
+          use:reveal
           class="reveal-fade-up group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6 card-hover-lift"
         >
           <div
@@ -580,6 +581,7 @@
           {#each whyCards as card, i}
             {@const Icon = card.icon}
             <article
+              use:reveal
               class="reveal-fade-up luxury-card group relative rounded-2xl p-6 transition-all hover:-translate-y-1 {i === 0 ? 'lg:col-span-2' : ''} card-hover-lift"
             >
               <div class="flex items-start justify-between gap-4">
@@ -655,7 +657,7 @@
         class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4"
       >
         {#each processSteps as step, index}
-          <article class="reveal-fade-up rounded-xl border border-white/10 bg-black/20 p-5 card-hover-lift">
+          <article use:reveal class="reveal-fade-up rounded-xl border border-white/10 bg-black/20 p-5 card-hover-lift">
             <div
               class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
             >
@@ -698,6 +700,7 @@
         {#each standOut as item}
           {@const Icon = item.icon}
           <article
+            use:reveal
             class="reveal-fade-up group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
           >
             <div class="relative z-10">

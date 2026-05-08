@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import ReadyToPlay from '$lib/components/ReadyToPlay.svelte';
   import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
   import { reveal } from '$lib/animations';
 
@@ -80,7 +81,7 @@
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
-  <header class="mb-10 reveal-fade-up">
+  <header class="mb-10 reveal-fade-up" use:reveal>
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -117,7 +118,7 @@
     </div>
     <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift" use:reveal>
           <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
@@ -133,7 +134,7 @@
   <section use:reveal class="reveal-fade-up navy-card mt-16 rounded-2xl p-6 md:p-8">
     <h2 class="text-2xl font-bold mb-6">Types of Casino Offers in Canada</h2>
     <div use:reveal data-reveal-stagger="true" class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400 leading-relaxed">
-      <div class="reveal-fade-up">
+      <div class="reveal-fade-up" use:reveal>
         <h3 class="text-white font-bold mb-2">Deposit Match Bonuses</h3>
         <p>
           The operator matches your deposit by a percentage — typically 50%–100% — up to a maximum
@@ -142,7 +143,7 @@
           bonus can be declined.
         </p>
       </div>
-      <div class="reveal-fade-up">
+      <div class="reveal-fade-up" use:reveal>
         <h3 class="text-white font-bold mb-2">Free Spins</h3>
         <p>
           Free spins allow you to play eligible slot games without using your cash balance. Each
@@ -151,7 +152,7 @@
           modest and low up-front risk.
         </p>
       </div>
-      <div class="reveal-fade-up">
+      <div class="reveal-fade-up" use:reveal>
         <h3 class="text-white font-bold mb-2">Reload & Loyalty Bonuses</h3>
         <p>
           Ongoing promotions reward continued play — weekly reload matches, cashback on losses, or
@@ -224,7 +225,31 @@
     {/each}
   </section>
 
-  <div class="mt-16">
+  <ReadyToPlay />
+
+  <div class="mt-8">
+    <nav class="flex flex-wrap gap-6" aria-label="Related pages">
+      <a
+        href="/new-online-casinos-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >New Online Casinos</a
+      >
+      <a
+        href="/best-online-casinos-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Best Online Casinos</a
+      >
+      <a
+        href="/low-wagering-casinos-canada"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Low Wagering Casinos</a
+      >
+      <a
+        href="/fast-payouts"
+        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        >Fast Payout Casinos</a
+      >
+    </nav>
 
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a
