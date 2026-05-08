@@ -27,18 +27,16 @@
   import { reveal } from '$lib/animations';
 
   const page = {
-    title: 'Canadian Sportsbook Guide — Odds, Parlays & Betting Hub | 247iBET',
+    title: 'Canadian Sportsbook: Odds, Parlays & Live Betting | 247iBET',
     description:
-      'Independent Canadian sportsbook guide for NHL, CFL, NBA, UFC, soccer, live odds, Interac funding, and responsible betting resources. Compare markets before you bet.',
+      'The premier Canadian sportsbook for NHL, CFL, NBA, UFC, and more. Enjoy live odds, fast Interac funding, same-game parlays, and elite betting tools.',
     canonical: canonicalUrl('/sportsbook'),
   };
 
   const sideNav = [
     { href: '#offers', label: 'Offers' },
-    { href: '#bookmakers', label: 'Best Sportsbook' },
-    { href: '#odds', label: 'Top Odds' },
     { href: '#live', label: 'Live Betting' },
-    { href: '#guides', label: 'Guides' },
+    { href: '#guides', label: 'Betting Guides' },
     { href: '#payments', label: 'Payments' },
     { href: '#support', label: 'Help Center' },
   ];
@@ -54,30 +52,30 @@
 
   const heroOffers = [
     {
-      eyebrow: 'New player',
-      headline: 'Review account terms',
-      body: 'Compare Canadian-focused markets, live odds, and Interac account funding before registering.',
-      cta: 'Review terms',
+      eyebrow: 'New Player Offer',
+      headline: 'Elite Welcome Bonus',
+      body: 'Get started with our premium sports welcome package. Access Canadian-focused markets and live odds instantly.',
+      cta: 'Claim Now',
     },
     {
-      eyebrow: 'Odds comparison',
-      headline: 'Enhanced prices',
-      body: 'Compare boosted prices on marquee NHL, NBA, soccer, UFC, and football events before betting.',
-      cta: 'Compare odds',
+      eyebrow: 'Odds Boost',
+      headline: 'Enhanced Prices',
+      body: 'Enjoy boosted prices on marquee NHL, NBA, soccer, UFC, and football events every single day.',
+      cta: 'Bet Now',
     },
     {
-      eyebrow: 'Promotions guide',
-      headline: 'Understand promotions',
-      body: 'Learn how weekly sports promotions, parlay specials, and featured markets work before opting in.',
-      cta: 'Read terms',
+      eyebrow: 'Parlay Specials',
+      headline: 'Same-Game Parlays',
+      body: 'Maximize your potential with our weekly sports promotions and featured parlay specials.',
+      cta: 'View Offers',
     },
   ];
 
   const trustStrip = [
-    { label: 'Compare markets', detail: 'Review odds across sports', icon: BadgeCheck },
-    { label: 'Trusted and secure', detail: 'Encrypted account flow', icon: LockKeyhole },
-    { label: 'Promotions guide', detail: 'Understand terms before opting in', icon: Sparkles },
-    { label: 'Interac payments', detail: 'Confirm payout timing with operator', icon: Zap },
+    { label: 'Elite Markets', detail: 'Best odds across all sports', icon: BadgeCheck },
+    { label: 'Trusted and Secure', detail: 'Encrypted account security', icon: LockKeyhole },
+    { label: 'Fair Promotions', detail: 'Transparent bonus terms', icon: Sparkles },
+    { label: 'Interac Payments', detail: 'Fast deposits and withdrawals', icon: Zap },
   ];
 
   const sportsbookRows = [

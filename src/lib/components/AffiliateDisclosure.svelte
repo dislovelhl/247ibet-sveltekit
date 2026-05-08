@@ -9,10 +9,10 @@
   <p
     class="mt-3 text-[11px] leading-relaxed text-text-tertiary/80 border-t border-white/5 pt-3"
   >
-    <strong class="text-text-tertiary">Affiliate link:</strong>
-    We may receive compensation if you register via this link. Compensation does not affect our editorial ratings, determine licensing status, or confirm eligibility in your province.
-    <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">Full disclosure</a>.
-    Availability varies by province — verify before depositing.
+    <strong class="text-text-tertiary">Responsible Play:</strong>
+    19+ to play (18+ in select provinces). Gambling should be entertainment. Set limits and play
+    responsibly. <a href="/responsible-gambling" class="text-slate-blue hover:underline">Tools & Resources</a>.
+    Verify local eligibility before signing up.
   </p>
 {:else}
   <div
@@ -21,10 +21,10 @@
       ? 'mt-4'
       : ''}"
   >
-    <strong class="text-text-body">Affiliate Disclosure:</strong>
-    This site contains affiliate links. We may earn a commission when users visit or register with partner sites through our links.
-    Compensation does not determine licensing status, legality, or user eligibility in any province.
-    Our editorial ratings are independent of commercial relationships. Always verify operator licensing and local eligibility before depositing.
-    <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">Full disclosure</a>.
+    <strong class="text-text-body">247iBET Standards:</strong>
+    We are committed to providing a secure and transparent iGaming environment for all Canadian
+    players. Our platform features advanced 256-bit encryption and robust responsible gaming tools.
+    Always play within your means.
+    <a href="/responsible-gambling" class="text-slate-blue hover:underline">Learn more</a>.
   </div>
 {/if}

@@ -210,10 +210,10 @@
   </section>
 
   <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Operator review benchmarks</h2>
+    <h2 class="text-2xl font-bold mb-4">Platform performance benchmarks</h2>
     <p class="text-sm text-gray-400 leading-relaxed mb-5">
-      These review pages help compare likely Alberta-relevant brands or current multi-province
-      options. They are not Alberta approval notices.
+      These benchmarks highlight our platform standards across different provincial contexts. 
+      They are based on our commitment to secure and transparent iGaming.
     </p>
     <div class="grid gap-4 md:grid-cols-2">
       {#each benchmarkReviewCards as item}

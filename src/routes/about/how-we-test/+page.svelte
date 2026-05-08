@@ -21,7 +21,7 @@
       steps: [
         'Verify active AGCO registration via iGaming Ontario public register',
         'Check MGA, UKGC, or other tier-1 licences for offshore operators',
-        'Review operator ownership structure (publicly traded vs private)',
+        'Verify operator ownership structure (publicly traded vs private)',
         'Audit responsible gambling tools: deposit limits, self-exclusion, reality checks',
         'Check AGCO enforcement history and any consumer protection violations',
       ],
@@ -152,10 +152,10 @@
           <BookOpen class="w-6 h-6 text-slate-blue" aria-hidden="true" />
         </div>
         <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em]">
-          Verification Methodology
+          Platform Standards
         </div>
       </div>
-      <h1 class="page-hero-title mb-4">How We Verify Operators</h1>
+      <h1 class="page-hero-title mb-4">How We Maintain Platform Standards</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
         Every featured page on 247iBET follows a documented, repeatable verification process. We
         open real accounts, make real deposits, and test real withdrawals. No pay-to-place. No
@@ -202,8 +202,8 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-3">Update Policy</h2>
     <p class="text-sm text-gray-400 font-sans mb-3">
-      All operator reviews display a "last reviewed" date. Full re-reviews happen quarterly.
-      Triggered re-reviews happen within 72 hours when:
+      All account verification checks display a "last checked" date. Full re-checks happen quarterly.
+      Triggered re-checks happen within 72 hours when:
     </p>
     <ul class="space-y-2 text-sm text-gray-400 font-sans">
       {#each ["An operator's AGCO/MGA licence status changes", 'A major withdrawal delay or payment issue is reported', 'Ownership or parent company changes', 'New payment methods are added or removed', 'An AGCO enforcement action is taken'] as item}

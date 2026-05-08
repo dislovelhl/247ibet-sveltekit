@@ -5,12 +5,12 @@
 </script>
 
 <svelte:head>
-  <title>Casino Review | 247iBET Canada</title>
+  <title>Elite Features & Platform Standards | 247iBET Canada</title>
   <meta
     name="description"
-    content="Expert casino and sportsbook operator review for Canadian players."
+    content="Explore the elite features of 247iBET: premium games, lightning-fast Interac payouts, and industry-leading security standards."
   />
-  <link rel="canonical" href={canonicalUrl(`/reviews/${$page.params.slug}`)} />
+  <link rel="canonical" href={canonicalUrl(`/features/${$page.params.slug}`)} />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
@@ -20,28 +20,28 @@
       <li>/</li>
       <li><a href="/casino" class="hover:text-white">Casino</a></li>
       <li>/</li>
-      <li class="text-white font-medium">Review</li>
+      <li class="text-white font-medium">Features</li>
     </ol>
   </nav>
 
-  <h1 class="page-hero-title mb-4">Operator Review</h1>
+  <h1 class="page-hero-title mb-4">Platform Standards & Features</h1>
   <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8] mb-8">
-    Detailed operator review for Canadian players — covering payout speed, Interac support, game
-    library, and compliance status.
+    Discover what makes 247iBET the premier choice for Canadian players — from our lightning-fast
+    payouts to our curated library of premium casino games.
   </p>
 
   <div class="navy-card rounded-2xl p-8 text-center">
     <p class="text-text-tertiary text-sm">
-      Full review content is loaded dynamically. Wire up <code class="text-prestige-gold"
+      Feature details are loaded dynamically. Wire up <code class="text-prestige-gold"
         >+page.ts</code
-      > to fetch operator data.
+      > to fetch platform data.
     </p>
   </div>
 
   <div class="mt-12">
     <IBetShowcase
       variant="banner"
-      ctaText="Play at 247iBET"
+      ctaText="Join 247iBET"
       contextLabel="Fast CAD payouts · Interac deposits · 19+"
     />
   </div>

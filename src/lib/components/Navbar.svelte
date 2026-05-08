@@ -13,6 +13,7 @@
     X,
   } from 'lucide-svelte';
   import { SITE, PARTNER } from '$lib/site';
+  import { IBET_CTA } from '$lib/ibet-brand';
 
   // ---------------------------------------------------------------------------
   // Constants
@@ -296,12 +297,10 @@
       <div class="hidden sm:block">
         <a
           href={PARTNER.url}
-          target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
           class="page-cta-primary-sm shimmer-effect"
-          aria-label="Visit partner site"
+          aria-label={IBET_CTA.primary}
         >
-          Visit Partner Site
+          {IBET_CTA.primary}
           <ArrowRight class="h-3.5 w-3.5" aria-hidden="true" />
         </a>
       </div>
@@ -454,12 +453,10 @@
         <div class="flex flex-col gap-3 border-t border-white/10 pt-6">
           <a
             href={PARTNER.url}
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
             class="page-cta-primary w-full"
             onclick={closeMobileMenu}
           >
-            Visit Partner Site
+            {IBET_CTA.primary}
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </a>
 

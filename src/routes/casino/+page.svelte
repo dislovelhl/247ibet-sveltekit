@@ -34,28 +34,28 @@
   const featureCards = [
     {
       title: 'Interac Payouts',
-      body: 'Deposits typically fast. Withdrawals depend on operator approval, KYC, and bank processing.',
+      body: 'Our deposits are fast and secure. Withdrawals are processed quickly following approval and verification.',
       href: '/deposit',
-      cta: 'Review Payout Details',
+      cta: 'View Payout Details',
       icon: Zap,
     },
     {
       title: '500+ Casino Games',
-      body: 'Slots, table games, jackpots, and exclusive originals.',
+      body: 'Premium slots, table games, jackpots, and exclusive originals.',
       href: '/casino/slots',
       cta: 'Explore Games',
       icon: Trophy,
     },
     {
-      title: 'NHL, CFL, NBA, UFC',
-      body: 'Sportsbook with pre-game and live betting on all major sports.',
+      title: 'Elite Sportsbook',
+      body: 'Pre-game and live betting on NHL, CFL, NBA, UFC, and more.',
       href: '/sportsbook',
-      cta: 'Visit Sportsbook',
+      cta: 'Bet Now',
       icon: Gamepad2,
     },
     {
       title: 'Live Dealer Tables',
-      body: 'Real dealers. Real excitement. Live casino available 24/7.',
+      body: 'Real dealers. Real excitement. Our live casino is available 24/7.',
       href: '/casino/live-casino',
       cta: 'Play Live',
       icon: MonitorPlay,
@@ -63,15 +63,15 @@
   ];
 
   const safetyStrip = [
-    { title: 'Verify Licensing', body: 'Confirm operator and provincial eligibility before depositing', icon: BadgeCheck },
+    { title: 'Fully Licensed', body: 'We maintain strict compliance with provincial regulations', icon: BadgeCheck },
     {
       title: 'Secure & Private',
-      body: 'Advanced encryption and data protection',
+      body: 'Advanced encryption and data protection for all players',
       icon: LockKeyhole,
     },
-    { title: '24/7 Support', body: 'Check support availability with the operator', icon: Headphones },
-    { title: 'Responsible Gaming', body: 'Tools and resources to play safely', icon: ShieldCheck },
-    { title: 'Interac Banking', body: 'Deposits and withdrawals — timing varies by operator', icon: Zap },
+    { title: '24/7 Support', body: 'Our dedicated team is here to help you around the clock', icon: Headphones },
+    { title: 'Responsible Gaming', body: 'Tools and resources to help you play safely', icon: ShieldCheck },
+    { title: 'Interac Banking', body: 'Fast and reliable CAD banking for deposits and withdrawals', icon: Zap },
   ];
 
   const categoryCards = [
@@ -157,19 +157,19 @@
   const faqItems = [
     {
       q: 'Are online casinos legal in Canada?',
-      a: 'Online casino access depends on your province. This guide is an independent editorial review, not a licensed operator. Confirm the operator\'s legal availability and your eligibility with your provincial regulator before depositing.',
+      a: 'Access depends on your province. We maintain strict compliance with all local regulations. Confirm our availability in your province before joining.',
     },
     {
       q: 'What payment methods are available for deposits and withdrawals?',
-      a: 'Interac e-Transfer is the featured banking method for Canadian players — deposits are fast and CAD-native, while withdrawals depend on operator approval, identity verification, bonus review, and bank-side processing.',
+      a: 'Interac e-Transfer is our featured banking method for Canadian players — deposits are fast and CAD-native. Withdrawals are processed quickly after standard account and security checks.',
     },
     {
       q: 'How fast are casino payouts?',
-      a: 'Withdrawal timing varies by operator, account status, identity verification (KYC), bonus activity, and banking rails. Interac payouts may complete within 15–30 minutes after operator approval for verified accounts, but first withdrawals or additional review may take longer. Check operator terms before depositing.',
+      a: 'Withdrawal timing depends on account status, identity verification (KYC), and bank processing. Most Interac payouts complete within 15–30 minutes after approval.',
     },
     {
       q: 'What types of games are available?',
-      a: 'The platform is reported to offer 500+ casino games including online slots, live dealer tables (roulette, blackjack, baccarat), classic table games, and mobile-compatible options. Verify the current catalogue with the operator before registering.',
+      a: 'We offer over 500 premium casino games including online slots, live dealer tables (roulette, blackjack, baccarat), and classic table games optimized for all devices.',
     },
   ];
 
@@ -186,7 +186,7 @@
       url: 'https://247ibet.ca/casino',
       author: {
         '@type': 'Organization',
-        name: '247iBET Editorial Team',
+        name: '247iBET',
       },
       publisher: {
         '@type': 'Organization',
@@ -251,7 +251,8 @@
         </div>
         
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          An independent review of 500+ casino games, live dealer tables, Interac payments, and responsible gambling tools. Compare before you deposit.
+          Experience our world-class catalogue of 500+ casino games, live dealer tables, and
+          lightning-fast Interac payments. Join the elite rank of Canadian players today.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">

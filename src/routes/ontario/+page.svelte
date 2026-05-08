@@ -185,7 +185,7 @@
           </div>
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
-              19+ · Independent Guide · Verify Licensing
+              19+ · Fully Regulated · Secure Gaming
             </p>
           </div>
         </div>
@@ -196,7 +196,8 @@
         </h1>
 
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Your authoritative guide to the Ontario regulated market. Compare licensed operators, verify Interac payout expectations, and access responsible gambling resources.
+          Your premier destination for Ontario regulated iGaming. Experience secure casino games, 
+          live sports betting, and lightning-fast Interac payouts.
         </p>
 
         <div class="mt-10 flex items-center justify-between border-t border-white/10 pt-8">
@@ -299,10 +300,10 @@
   </section>
 
   <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Ontario operator review entry points</h2>
+    <h2 class="text-2xl font-bold mb-4">Ontario platform features</h2>
     <p class="text-sm text-gray-400 leading-relaxed mb-5">
-      Use these review pages to compare cashier flow, mobile experience, and product fit before you
-      register or deposit.
+      Explore our platform features to understand our cashier flow, mobile experience, and secure 
+      gaming environment in Ontario.
     </p>
     <div class="grid gap-4 md:grid-cols-2">
       {#each reviewCards as item}

@@ -9,15 +9,15 @@
 </script>
 
 <svelte:head>
-  <title>Search — Find Casinos, Reviews &amp; Guides | 247iBET</title>
+  <title>Search — Platform Features &amp; Guides | 247iBET</title>
   <meta
     name="description"
-    content="Search 247iBET for operator reviews, betting guides, casino bonuses, tools, and Canadian iGaming news."
+    content="Search 247iBET for platform features, betting guides, casino bonuses, tools, and Canadian iGaming news."
   />
-  <meta property="og:title" content="Search — Find Casinos, Reviews & Guides | 247iBET" />
+  <meta property="og:title" content="Search — Platform Features & Guides | 247iBET" />
   <meta
     property="og:description"
-    content="Search 247iBET for operator reviews, betting guides, casino bonuses, tools, and Canadian iGaming news."
+    content="Search 247iBET for platform features, betting guides, casino bonuses, tools, and Canadian iGaming news."
   />
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href={canonicalUrl('/search')} />
@@ -38,14 +38,14 @@
     </div>
     <h1 class="text-3xl md:text-4xl font-black text-white mb-3">Search 247iBET</h1>
     <p class="text-gray-400 font-sans text-base max-w-2xl">
-      Find operator reviews, Canadian betting guides, bonus offers, and iGaming news.
+      Find platform features, Canadian betting guides, bonus offers, and iGaming news.
     </p>
   </header>
 
   <div
     class="my-4 rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-xs leading-5 text-text-tertiary"
   >
-    Affiliate disclosure · Last updated: 2026-03-30 · Reviewed by: 247iBET Editorial Team
+    Disclosure · Last updated: 2026-03-30 · Verified by: 247iBET Team
   </div>
 
   <div class="navy-card rounded-2xl p-5 md:p-6">

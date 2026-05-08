@@ -1,4 +1,4 @@
-export type SearchCategory = 'Guide' | 'Hub' | 'Review' | 'Tool' | 'News' | 'Policy';
+export type SearchCategory = 'Guide' | 'Hub' | 'Feature' | 'Tool' | 'News' | 'Policy';
 
 export type SearchItem = {
   title: string;
@@ -57,16 +57,16 @@ export const SEARCH_ITEMS: SearchItem[] = [
     featured: true,
   },
   {
-    title: 'Fast Payout Casinos Canada',
-    description: 'Review payout timing, withdrawal checks, and banking expectations.',
+    title: 'Fast Payouts at 247iBET',
+    description: 'Learn about our rapid Interac deposit and withdrawal processing.',
     href: '/fast-payouts',
     category: 'Guide',
     tags: ['payouts', 'withdrawals', 'banking', 'casino'],
     featured: true,
   },
   {
-    title: 'Casino Bonuses Canada',
-    description: 'Understand match bonuses, free spins, wagering requirements, and bonus terms.',
+    title: '247iBET Casino Bonuses',
+    description: 'Explore our welcome offers, free spins, and transparent wagering terms.',
     href: '/casino-bonuses-canada',
     category: 'Guide',
     tags: ['casino', 'bonuses', 'wagering', 'free spins'],
@@ -121,11 +121,11 @@ export const SEARCH_ITEMS: SearchItem[] = [
     tags: ['legal', 'gambling', 'canada', 'regulation'],
   },
   {
-    title: '247iBET Reviews',
-    description: 'Browse operator review pages and assessment criteria.',
-    href: '/reviews/247ibet',
-    category: 'Review',
-    tags: ['reviews', 'operator', '247ibet'],
+    title: '247iBET Features',
+    description: 'Explore our platform features and performance standards.',
+    href: '/features/247ibet',
+    category: 'Feature',
+    tags: ['features', 'platform', '247ibet'],
   },
   {
     title: 'Canadian iGaming News',

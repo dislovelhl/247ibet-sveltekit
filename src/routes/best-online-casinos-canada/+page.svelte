@@ -20,7 +20,7 @@
     {
       question: 'How fast are casino withdrawals in Canada?',
       answer:
-        'Interac e-Transfer is usually one of the fastest practical withdrawal methods at Ontario-facing casinos, often landing within 1 to 24 hours after KYC is complete. Bank transfers usually take longer, and payout speed always depends on operator review and bank-side completion.',
+        'Interac e-Transfer is usually one of the fastest practical withdrawal methods at Ontario-facing casinos, often landing within 1 to 24 hours after KYC is complete. Bank transfers usually take longer, and payout speed always depends on internal approval and bank-side completion.',
     },
     {
       question: 'What is the minimum gambling age in Canada?',
@@ -90,7 +90,7 @@
   <title>Best Online Casinos Canada 2026: Top Rated Sites for Fast Payouts | 247iBET</title>
   <meta
     name="description"
-    content="Compare the top online casinos in Canada for 2026. Ranked by our iGaming experts for payout speed, Interac support, and provincial license verification."
+    content="Compare the top online casinos in Canada for 2026. Verified by our team for payout speed, Interac support, and provincial license verification."
   />
   <meta
     property="og:title"
@@ -136,7 +136,7 @@
       Top 10 Rated Canadian Casinos
     </h1>
     <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
-      Our experts have audited and ranked the top 10 Canadian online casinos for 2026 — a verified
+      Our team has verified and approved the top 10 Canadian online casinos for 2026 — a verified
       shortlist compared on Interac payout speed, game depth, and provincial compliance.
     </p>
     <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
@@ -147,7 +147,7 @@
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} ctaText="Play Now" />
 
   <section class="navy-card mt-16 rounded-2xl border border-white/10 p-6 md:p-8">
-    <h2 class="text-2xl sm:text-3xl font-bold mb-4">What We Check Before We Recommend a Casino</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">What We Check to Maintain High Standards</h2>
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400 font-sans leading-relaxed"
     >
@@ -202,7 +202,7 @@
       >.
     </p>
     <a href="/about/how-we-test" class="view-all-link mt-4">
-      How we verify operators →
+      How we maintain platform standards →
     </a>
   </section>
 

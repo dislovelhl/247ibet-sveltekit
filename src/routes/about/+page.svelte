@@ -13,10 +13,10 @@
 
 <PolicyLayout
   title="About {SITE.name}"
-  subtitle="Canada's authoritative source for online casino games and sports betting. We specialize in fast Interac payouts, verified operator reviews, and responsible gambling advocacy."
+  subtitle="Canada's premier destination for online casino games and sports betting. We specialize in fast Interac payouts, elite gaming selection, and responsible gambling advocacy."
   lastUpdated={LAST_UPDATED}
   path="/about"
-  description="Learn about {SITE.name} — a Canadian online casino and sportsbook guide with fast Interac payouts and verified operator reviews."
+  description="Learn about {SITE.name} — a leading Canadian online casino and sportsbook with fast Interac payouts, live dealer games, and elite sports betting."
   {sections}
 >
   <h2 id="offers">What {SITE.name} Offers</h2>
@@ -60,12 +60,12 @@
 
   <h2 id="security">Security Standards</h2>
   <p>
-    We prioritize player security by reviewing operators for SSL encryption, data protection policies, and fair gaming certifications. Our own platform uses industry-standard security measures to protect your data.
+    We prioritize player security by maintaining industry-leading SSL encryption, robust data protection policies, and fair gaming certifications across our entire platform. Your safety and privacy are our top priorities.
   </p>
 
   <h2 id="responsibility">Responsible Gambling</h2>
   <p>
-    Gambling should always be a form of entertainment. We provide resources and guides to help you play responsibly, including links to provincial support services and information on self-exclusion tools.
+    At {SITE.name}, we believe gambling should always be a form of entertainment. We provide comprehensive resources and built-in tools to help you play responsibly, including deposit limits, session timers, and direct links to provincial support services.
   </p>
 </PolicyLayout>
 

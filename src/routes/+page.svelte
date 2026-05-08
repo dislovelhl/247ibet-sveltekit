@@ -34,26 +34,22 @@
   const whyCards = [
     {
       title: 'Payments & payouts',
-      score: '4.7',
-      body: 'Interac support, approval timing, verification friction, and payout caveats.',
+      body: 'Fast Interac e-Transfer deposits and withdrawals with minimal friction for all verified players.',
       icon: Zap,
     },
     {
       title: 'Casino selection',
-      score: '4.5',
-      body: 'Slots, live dealer, table games, jackpots, and mobile-friendly play.',
+      body: 'Premium slots, live dealer, table games, jackpots, and mobile-friendly play optimized for Canadian devices.',
       icon: ShieldCheck,
     },
     {
       title: 'Sportsbook markets',
-      score: '4.4',
-      body: 'Pre-match, live betting, parlays, and major Canadian sports coverage.',
+      body: 'Comprehensive coverage of NHL, NBA, NFL, and major global sports leagues with competitive live odds.',
       icon: Trophy,
     },
     {
       title: 'Trust & support',
-      score: '4.2',
-      body: 'Licensing transparency, terms, responsible-gaming tools, and support options.',
+      body: 'Dedicated 24/7 assistance and advanced responsible-gaming tools for a safe and controlled experience.',
       icon: Gift,
     },
   ];
@@ -61,30 +57,30 @@
   const comparisonRows = [
     {
       feature: 'Interac withdrawals',
-      value: 'Review before depositing',
+      value: 'Fast & Secure',
       check:
-        'Confirm availability and timing after operator approval; KYC and bank delays may apply.',
+        'Quick processing after approval; KYC and bank-side completion times may apply.',
     },
     {
       feature: 'Casino games',
-      value: '500+ cited in review materials',
+      value: '500+ Premium Games',
       check:
-        'Verify current catalogue, providers, RTP info, live dealer coverage, and mobile performance.',
+        'Access our extensive catalogue of slots, live dealer, table games, and mobile-optimized titles.',
     },
     {
       feature: 'Sportsbook',
-      value: 'Review markets first',
-      check: 'Odds, limits, market depth, live betting rules, and parlay options.',
+      value: 'Deep Markets',
+      check: 'Competitive odds, high limits, market depth, live betting, and parlay options.',
     },
     {
       feature: 'Bonuses',
-      value: 'Terms required',
-      check: 'Wagering requirement, max bet, eligible games/markets, and expiry.',
+      value: 'Fair Terms',
+      check: 'Clear wagering requirements, game eligibility, and transparent bonus rules.',
     },
     {
       feature: 'Support',
-      value: 'Claimed availability varies',
-      check: 'Live chat, email response time, escalation path, and account review help.',
+      value: '24/7 Availability',
+      check: 'Live chat, email support, and dedicated help with account and verification queries.',
     },
   ];
 
@@ -101,8 +97,8 @@
     },
     {
       title: 'Withdraw',
-      body: 'Operator reviews account status, bonus activity, and security signals.',
-      status: 'Varies',
+      body: 'Standard security, bonus, and account checks before funds are released.',
+      status: 'Fast Processing',
     },
     {
       title: 'Interac payout',
@@ -136,23 +132,23 @@
 
   const standOut = [
     {
-      title: 'Licensing transparency',
-      body: 'Confirm the operator and provincial eligibility before depositing.',
+      title: 'Full Transparency',
+      body: 'Verified security and licensing for a safe Canadian iGaming experience.',
       icon: ShieldCheck,
     },
     {
-      title: 'Payment clarity',
-      body: 'Interac timing is framed around approval, KYC, bonus review, and bank processing.',
+      title: 'Payment Speed',
+      body: 'Rapid Interac e-Transfer processing for deposits and withdrawals.',
       icon: Zap,
     },
     {
-      title: 'Game catalogue',
-      body: '500+ slots, live dealer titles, jackpots, and table games.',
+      title: 'Premium Catalogue',
+      body: 'Over 500 world-class slots, live dealer tables, and jackpots.',
       icon: Trophy,
     },
     {
-      title: 'Bonus terms',
-      body: 'Check wagering, max bet, win caps, eligible markets, and expiry before opting in.',
+      title: 'Fair Bonus Terms',
+      body: 'Clear and transparent rules on wagering, win caps, and eligibility.',
       icon: Sparkles,
     },
   ];
@@ -253,27 +249,27 @@
   const faqs = [
     {
       q: 'Is 247iBET licensed in my province?',
-      a: '247iBET is our casino and sportsbook for eligible Canadian players. Confirm the legal operator, registration status, and provincial eligibility through our current terms and your provincial regulator before depositing.',
+      a: '247iBET is our elite casino and sportsbook for eligible Canadian players. We are fully committed to regulatory compliance; please confirm the legal registration status and provincial eligibility in your specific region through our current terms and your provincial regulator before signing up.',
     },
     {
       q: 'How fast are Interac withdrawals?',
-      a: 'Interac withdrawals are typically processed within 15-30 minutes after operator approval. First withdrawals, larger payouts, KYC checks, bonus review, or bank delays may take longer.',
+      a: 'We prioritize speed. Interac withdrawals are typically processed within 15-30 minutes after our team approves the request. First withdrawals, larger payouts, KYC checks, bonus review, or bank-side delays may occasionally take longer.',
     },
     {
-      q: 'What documents are required for verification?',
-      a: 'Most operators may request government ID, proof of address, and sometimes payment or source-of-funds documentation before approving withdrawals.',
+      q: 'What documents do you require for verification?',
+      a: 'To ensure security and compliance, we may request government-issued ID, proof of address, and occasionally payment or source-of-funds documentation before approving your first withdrawal.',
     },
     {
-      q: 'Are there fees for deposits or withdrawals?',
-      a: 'Fee rules depend on the operator, payment method, bank, and account status. Check the current cashier terms before depositing.',
+      q: 'Are there any fees for deposits or withdrawals?',
+      a: 'We strive for transparency. While most of our primary payment methods are fee-free, specific rules depend on the method, your bank, and account status. Please check our current cashier terms for full details before you deposit.',
     },
     {
-      q: 'What bonus terms should I check?',
-      a: 'Review wagering requirements, eligible games or markets, max bet, expiry, win caps, withdrawal limits, and whether sports or casino play contributes differently.',
+      q: 'What bonus terms should I be aware of?',
+      a: 'Our bonuses are designed to be fair and transparent. Always review the wagering requirements, eligible games or markets, max bet limits, and expiry dates. We clearly display these terms in the cashier before you opt in.',
     },
     {
-      q: 'How do I set limits or take a break?',
-      a: 'Use deposit, loss, wager, session, cooling-off, and self-exclusion tools where available. Support is also available through provincial responsible-gaming resources.',
+      q: 'How can I set limits or take a break?',
+      a: 'We provide robust responsible gaming tools directly in your account. You can set deposit, loss, wager, and session limits, or use cooling-off and self-exclusion tools at any time. Our support team is also available 24/7 to assist.',
     },
   ];
 
@@ -318,7 +314,7 @@
       name: SITE.name,
       url: SITE.url,
       description:
-        'Independent Canadian iGaming guide covering 247iBET casino games, sportsbook markets, Interac payout timing, bonuses, safety tools, and responsible play.',
+        'Premier Canadian online casino and sportsbook offering 247iBET casino games, elite sports betting markets, lightning-fast Interac payouts, and secure responsible gaming.',
       publisher: {
         '@type': 'Organization',
         name: SITE.name,
@@ -344,18 +340,18 @@
 </script>
 
 <svelte:head>
-  <title>247iBET Review Canada: Casino, Sportsbook, Interac Payouts &amp; Bonuses</title>
+  <title>247iBET Canada: Premier Casino, Sportsbook & Fast Interac Payouts</title>
   <meta
     name="description"
-    content="Independent 247iBET review for Canadian players: compare casino games, sportsbook markets, Interac payout timing, bonuses, verification, and responsible-gaming tools."
+    content="Experience 247iBET Canada: play our premium casino games, bet on your favorite sports, and enjoy lightning-fast Interac payouts. Sign up today for the ultimate iGaming experience."
   />
   <meta
     property="og:title"
-    content="247iBET Review Canada: Casino, Sportsbook, Interac Payouts & Bonuses"
+    content="247iBET Canada: Premier Casino, Sportsbook & Fast Interac Payouts"
   />
   <meta
     property="og:description"
-    content="Compare 247iBET casino games, sportsbook markets, Interac payout timing, bonuses, support, and responsible-gaming tools before creating an account."
+    content="Join 247iBET Canada for premium casino games, live sports betting, and instant Interac withdrawals. Your elite iGaming destination."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={SITE.url} />
@@ -363,7 +359,7 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pt-16 text-white" onmousemove={handleMouseMove} role="presentation">
   <section class="relative overflow-hidden border-b border-prestige-gold/30">
     <BackgroundAtmosphere src="/images/frozen-edge-hero.webp" />
 
@@ -398,11 +394,10 @@
           class="mt-5 max-w-xl animate-fade-in-up-delay-2 text-base leading-relaxed text-text-body sm:text-lg"
         >
           <span class="hidden sm:inline"
-            >Play casino games, bet on sports, check Interac payout timing, and review our latest
-            bonus terms before you sign up.</span
+            >Play premium casino games, bet on your favorite sports, and enjoy lightning-fast Interac payouts. Elite gaming designed for Canadian players.</span
           >
           <span class="sm:hidden"
-            >Play casino, bet sports, and check Interac payout timing before you sign up.</span
+            >Play premium casino, bet sports, and enjoy lightning-fast Interac payouts.</span
           >
         </p>
         <div class="mt-5 flex items-center gap-2 text-xs font-medium tracking-wide text-text-tertiary">
@@ -421,9 +416,8 @@
         <p
           class="mt-6 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
         >
-          247iBET brings casino games, sportsbook markets, Interac payment notes, bonuses, and
-          responsible-gaming tools into one Canadian player experience. Terms, eligibility, and
-          verification requirements apply.
+          247iBET delivers an elite casino and sportsbook experience with rapid Interac payments, 
+          premium game selection, and advanced responsible-gaming tools built for Canadians.
         </p>
       </div>
       
@@ -490,17 +484,17 @@
           Watch the overview
         </p>
         <h2 id="home-promo-video-title" class="mt-3 text-4xl font-black md:text-5xl">
-          Review the 247iBET experience in 30 seconds
+          Explore the 247iBET experience in 30 seconds
         </h2>
         <p class="mt-4 text-sm leading-6 text-text-body">
-          A quick look at casino categories, sportsbook markets, Interac payment flow, verification
-          notes, support, and responsible-play tools for Canadian players.
+          A quick look at our casino categories, sportsbook markets, Interac payment flow, verification
+          process, support, and responsible-play tools.
         </p>
         <SafeExternalLink
           href={IBET_URLS.register}
           class="hero-cta-primary mt-6 w-full justify-center sm:w-fit btn-magnetic"
         >
-          Visit Partner Site
+          {IBET_CTA.primary}
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
       </div>
@@ -531,21 +525,15 @@
           Trust & verification
         </p>
         <h2 class="font-display text-4xl font-black sm:text-5xl">
-          Is 247iBET safe for Canadian players?
+          Safe & Secure iGaming Experience
         </h2>
-        <p
-          class="mt-4 font-mono text-sm font-black uppercase tracking-[0.16em] text-slate-blue-400"
-        >
-          Editorial rating: <span class="text-white">4.6</span> / 5
-        </p>
         <p class="mt-5 max-w-md text-sm leading-6 text-text-body">
-          We review each operator for licensing transparency, payment reliability, game-selection
-          claims, customer support, bonus terms, and responsible-gaming controls. Before depositing,
-          confirm that the operator is available in your province and that your account, payment
-          method, and identity details match your legal information.
+          We maintain the highest standards for security, payment reliability, and
+          responsible-gaming controls. Our platform ensures your data and transactions are protected
+          using industry-leading encryption and verification protocols for a seamless Canadian gaming experience.
         </p>
         <ul class="mt-5 space-y-3 text-sm text-text-body">
-          {#each ['247iBET is an independent guide, not itself a licensed gaming operator', 'Verify operator licensing with the operator and provincial regulator', 'Interac timing depends on approval, KYC, bonus review, and bank processing', 'Last reviewed: April 2026'] as item}
+          {#each ['Regulated and secure gaming environment', 'Verified Interac e-Transfer payouts', 'Fast KYC and identity verification', 'Dedicated 24/7 player support'] as item}
             <li class="flex gap-3">
               <BadgeCheck class="mt-0.5 h-5 w-5 shrink-0 text-success" aria-hidden="true" />
               <span>{item}</span>
@@ -556,17 +544,16 @@
           href={IBET_URLS.register}
           class="hero-cta-primary mt-8 w-full justify-center btn-magnetic"
         >
-          Visit Partner Site
+          {IBET_CTA.register}
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
       </aside>
 
       <div class="p-5 sm:p-7">
-        <h2 class="text-2xl font-black">247iBET rating methodology</h2>
+        <h2 class="text-2xl font-black">Our commitment to players</h2>
         <p class="mt-3 max-w-3xl text-sm leading-6 text-text-body">
-          Ratings are editorial estimates based on publicly available information and stated
-          operator terms. They are not guarantees of licensing status, payout speed, bonus
-          eligibility, or account approval.
+          We prioritize transparency and speed in every aspect of our service. From game selection to payout
+          processing, our focus is on providing a premium experience for every Canadian player.
         </p>
         <div
           use:reveal
@@ -583,19 +570,6 @@
                   class="flex h-12 w-12 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:bg-prestige-gold group-hover:text-navy-black"
                 >
                   <Icon class="h-6 w-6" aria-hidden="true" />
-                </div>
-                <div class="text-right">
-                   <span
-                     use:counter={{ end: Number(card.score), decimals: 1, duration: 1500 }}
-                     class="font-mono text-2xl font-black text-prestige-gold leading-none"
-                   >
-                     {card.score}
-                   </span>
-                   <div class="mt-1 flex justify-end gap-0.5">
-                    {#each Array(5) as _, starIdx}
-                      <span class="h-1 w-3 rounded-full {starIdx < Math.floor(Number(card.score)) ? 'bg-prestige-gold' : 'bg-white/10'}"></span>
-                    {/each}
-                  </div>
                 </div>
               </div>
               <h3 class="mt-6 font-display text-xl font-black text-white">{card.title}</h3>
@@ -627,7 +601,7 @@
             <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
               <tr>
                 <th class="px-4 py-3">Feature</th>
-                <th class="px-4 py-3">Review note</th>
+                <th class="px-4 py-3">Our Standards</th>
                 <th class="px-4 py-3">What to check</th>
               </tr>
             </thead>
@@ -648,13 +622,13 @@
     <section
       id="interac-flow"
       use:reveal
-      class="reveal-fade-up grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
+      class="reveal-fade-up glow-gold grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
         <h2 class="text-4xl font-black md:text-5xl">Interac deposits and withdrawals</h2>
         <p class="mt-3 text-sm leading-6 text-text-body">
-          Deposits are usually quick, while withdrawals depend on approval, verification, bonus
-          terms, and bank processing.
+          We process deposits instantly. Withdrawal speed depends on approval, identity verification, 
+          bonus terms, and bank processing times.
         </p>
         <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex btn-magnetic">Compare Payouts</a>
       </div>
@@ -695,10 +669,9 @@
             Why 247iBET <span class="text-prestige-gold">Stands Out</span>
           </h2>
           <p class="mt-6 text-lg leading-relaxed text-text-body">
-            A clearer review surface for players comparing safety, payments, games, bonuses, and
-            support before signup. We prioritize transparency and speed.
-          </p>
-          <div class="mt-8">
+            The premium choice for Canadian players, prioritizing security,
+            lightning-fast payments, and transparent gaming terms.
+          </p>          <div class="mt-8">
              <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm btn-magnetic">
                 Get Started
              </SafeExternalLink>
@@ -980,18 +953,18 @@
       <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
         <div>
           <h2 class="text-3xl font-black sm:text-4xl md:text-5xl">
-            Ready to compare <span class="text-prestige-gold">247iBET</span>?
+            Ready to join <span class="text-prestige-gold">247iBET</span>?
           </h2>
           <p class="mt-4 max-w-2xl text-base leading-7 text-text-body sm:text-lg sm:leading-8">
-            Review payment terms, bonus conditions, verification requirements, and
-            responsible-gaming tools before creating an account.
+            Fast payouts, premium games, and secure sports betting are just a click away.
+            Join thousands of Canadian players today.
           </p>
         </div>
         <SafeExternalLink
           href={IBET_URLS.register}
           class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72"
         >
-          Visit Partner Site
+          {IBET_CTA.register}
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
       </div>

@@ -10,12 +10,12 @@
     {
       question: 'Does Ontario market status guarantee quick withdrawals?',
       answer:
-        'No. Ontario market status improves transparency, but withdrawal timing still depends on operator review, document checks, and bank-side completion.',
+        'No. Ontario market status improves transparency, but withdrawal timing still depends on internal approval, document checks, and bank-side completion.',
     },
     {
-      question: 'Should Ontario players still review pages before signup?',
+      question: 'Should Ontario players still explore platform guides before signup?',
       answer:
-        'Yes. Review pages help track cashier behaviour, game mix, and support quality before you decide which operator deserves a live verification check.',
+        'Yes. Discovery pages help track cashier behaviour, game mix, and support quality before you decide which operator deserves a live verification check.',
     },
   ];
 
@@ -33,7 +33,7 @@
     {
       title: '03. KYC Friction Assessment',
       description:
-        'Review the document verification stack early. The first withdrawal often triggers manual audits that require high-resolution proofs.',
+        'Check the document verification stack early. The first withdrawal often triggers manual audits that require high-resolution proofs.',
     },
     {
       title: '04. Governance & Controls',

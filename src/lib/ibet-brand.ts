@@ -66,42 +66,42 @@ export const IBET_PROFILE = {
     },
   ],
   trustSignals: [
-    'Canada\'s trusted online casino and sportsbook',
-    'Licensed and regulated — confirm availability in your province',
-    'Fast Interac payouts, typically 15-30 minutes after approval',
+    'Our commitment to fast Interac payouts — typically 15-30 minutes after approval',
+    'Certified and secure gaming environment for all Canadian players',
     'Transparent bonus terms — wagering, expiry, and limits clearly shown',
-    'Responsible gaming tools built into every account',
+    'Responsible gaming tools built into every 247iBET account',
+    '500+ premium casino games and full sportsbook coverage',
   ],
   trustPanel: [
     {
-      label: 'Licence',
-      value: 'Licensed & Regulated',
-      detail: 'Confirm operator availability and licensing with your provincial regulator.',
+      label: 'Security',
+      value: '256-bit SSL encrypted',
+      detail: 'Our platform uses bank-grade encryption to protect your account, payments, and identity.',
     },
     {
       label: 'Payments',
       value: 'Fast Interac Payouts',
-      detail: 'Canadian-first banking. Most payouts complete in 15-30 minutes after approval.',
-    },
-    {
-      label: 'Security',
-      value: '256-bit SSL encrypted',
-      detail: 'Your account, payments, and identity are protected with bank-grade encryption.',
+      detail: 'We prioritize Canadian-first banking. Most payouts complete in 15-30 minutes after approval.',
     },
     {
       label: 'Fair Play',
       value: 'Certified RNG & Live Dealer',
-      detail: 'All games use certified random number generators. Live dealer tables streamed in real time.',
+      detail: 'All our games use certified random number generators, with live tables streamed in real time.',
+    },
+    {
+      label: 'Support',
+      value: '24/7 Dedicated Assistance',
+      detail: 'Our support team is available around the clock to help with any account or gaming queries.',
     },
   ],
   pros: [
-    'Fast Interac payouts — typically 15-30 minutes',
-    'Clear, upfront bonus terms',
-    'Responsible gaming tools built into every account',
-    '500+ casino games from top providers',
-    'Full sportsbook with NHL, NBA, NFL, UFC, and live betting',
+    'Lightning-fast Interac payouts (15-30 mins)',
+    'Elite casino catalogue with 500+ games',
+    'Full sportsbook with competitive live odds',
+    'Dedicated 24/7 Canadian-first support',
+    'Advanced responsible gaming tools',
   ],
-  cons: ['Must be 19+ (or 18+ in select provinces). See full T&Cs before playing.'],
+  cons: ['Must be 19+ (or 18+ in select provinces). Always play within your limits.'],
 } as const;
 
 export const IBET_CREATIVE_SNAPSHOTS = [
@@ -112,10 +112,10 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Get C$2000 bonus back + 10 free spins',
     period: 'Welcome offer — see cashier for full terms',
     summary:
-      'New players get up to C$2000 bonus back plus 10 free spins on sign-up. Check deposit minimums, wagering requirements, eligible games, and expiry in the cashier before opting in.',
+      'New players get up to C$2000 bonus back plus 10 free spins on sign-up. Check deposit minimums, wagering requirements, eligible games, and expiry in our cashier before opting in.',
     image: '/images/creatives/welcome-bonus-back.png',
-    alt: '247BET welcome bonus: Get $2000 bonus back plus 10 free spins.',
-    observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247BET.ca'],
+    alt: '247iBET welcome bonus: Get $2000 bonus back plus 10 free spins.',
+    observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247iBET.ca'],
   },
   {
     slug: 'every-deposit-bonus',
@@ -124,9 +124,9 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'C$1000 bonus every deposit',
     period: 'Ongoing — see cashier for full terms',
     summary:
-      'Get a C$1000 bonus on every deposit. Confirm whether the cap applies per deposit, per day, or over a campaign window in the cashier before depositing.',
+      'Enjoy a C$1000 bonus on every deposit you make. Confirm whether the cap applies per deposit, per day, or over a campaign window in our cashier.',
     image: '/images/creatives/every-deposit-bonus.png',
-    alt: '247BET: $1000 bonus every deposit.',
+    alt: '247iBET: $1000 bonus every deposit.',
     observedText: ['$1000 BONUS EVERY DEPOSIT'],
   },
   {
@@ -136,9 +136,9 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Deposit C$50, get C$50 bonus',
     period: 'May 1–10 — see cashier for full terms',
     summary:
-      'Deposit C$50 and get a C$50 bonus during our Mother\'s Day Double Rewards event (May 1–10). Confirm wagering, opt-in requirements, and eligible games in the cashier.',
+      'Celebrate with our Mother\'s Day Double Rewards event. Deposit C$50 and get a C$50 bonus. Check wagering and eligible games in our cashier.',
     image: '/images/creatives/mothers-day-double-rewards.png',
-    alt: 'Mother\'s Day Double Rewards: Deposit $50 Get $50 Bonus. May 1st – May 10.',
+    alt: '247iBET Mother\'s Day Double Rewards: Deposit $50 Get $50 Bonus.',
     observedText: ['Mother\'s Day Double Rewards', 'Deposit $50 Get $50 Bonus', 'May. 1st – May. 10'],
   },
   {
@@ -148,7 +148,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Live Bonus event for Unified MMA 63',
     period: 'Sep. 26 at Rebel, Toronto',
     summary:
-      'We sponsored Unified MMA 63 with a Live Bonus event at Rebel Toronto on Sep. 26. See the sportsbook for current fight-night promotions.',
+      'We were proud to sponsor Unified MMA 63 with a Live Bonus event at Rebel Toronto. Check our sportsbook for current fight-night promotions.',
     image: '/images/creatives/live-bonus-unified-mma.png',
     alt: '247iBET Unified MMA 63: Live Bonus. Sep. 26 Rebel Toronto.',
     observedText: ['LIVE BONUS', 'SEP.26', 'REBEL · TORONTO', '247iBET UNIFIED MMA 63'],
@@ -162,8 +162,8 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     summary:
       '247iBET is a proud sponsor of Unified MMA athlete Cody Chovancek. Follow his journey and bet on his fights in our sportsbook.',
     image: '/images/creatives/our-champ-cody-chovancek.jpg',
-    alt: '247BET Our Champ: Cody Chovancek and Unified MMA.',
-    observedText: ['OUR CHAMP', 'CODY CHOVANCEK', '247BET.ca', '247BET UNIFIED MMA'],
+    alt: '247iBET Our Champ: Cody Chovancek and Unified MMA.',
+    observedText: ['OUR CHAMP', 'CODY CHOVANCEK', '247iBET.ca', '247iBET UNIFIED MMA'],
   },
   {
     slug: 'unified-mma-sponsorship',
@@ -172,10 +172,10 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Official sponsor of Unified MMA',
     period: 'Ongoing sponsorship',
     summary:
-      '247iBET is an official sponsor of Unified MMA. Check our sportsbook for fight-night odds and promotions.',
+      '247iBET is an official sponsor of Unified MMA. Check our sportsbook for exclusive fight-night odds and promotions.',
     image: '/images/creatives/unified-mma-sponsorship.jpg',
-    alt: 'Unified MMA sponsorship: 247BET and partner logos.',
-    observedText: ['UNIFIED MMA SPONSORSHIP', '247BET'],
+    alt: 'Unified MMA sponsorship: 247iBET and partner logos.',
+    observedText: ['UNIFIED MMA SPONSORSHIP', '247iBET'],
   },
   {
     slug: 'chase-the-big-win',
@@ -184,7 +184,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Motorcycle supershow event',
     period: 'Jan. 9–11 at Toronto International Centre',
     summary:
-      '247iBET was at the Toronto International Centre Jan. 9–11 for the Chase the Big Win motorcycle supershow. Check our events page for upcoming appearances.',
+      'We were at the Toronto International Centre Jan. 9–11 for the Chase the Big Win motorcycle supershow. Join us at our next event appearance.',
     image: '/images/creatives/chase-the-big-win.png',
     alt: 'Chase the Big Win event: Jan. 9–11, Toronto International Centre.',
     observedText: ['CHASE THE BIG WIN', 'JAN. 9–11', 'TORONTO | INTERNATIONAL CENTRE'],
@@ -196,10 +196,10 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'TABOO event',
     period: 'Oct. 12–19 at Toronto International Centre',
     summary:
-      'We were at the TABOO Toronto event Oct. 12–19. Stay tuned for our next event appearance.',
+      'Our team was at the TABOO Toronto event Oct. 12–19. Stay tuned for our next event appearance.',
     image: '/images/creatives/play-for-pleasure.png',
     alt: 'TABOO event: Play for Pleasure. Oct. 12–19, Toronto International Centre.',
-    observedText: ['PLAY FOR PLEASURE', 'OCT. 12–19', 'TORONTO INTERNATIONAL CENTRE', '22BET TABOO'],
+    observedText: ['PLAY FOR PLEASURE', 'OCT. 12–19', 'TORONTO INTERNATIONAL CENTRE', '247iBET TABOO'],
   },
   {
     slug: 'spin-your-fantasy',
@@ -208,10 +208,10 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'TABOO Edmonton event',
     period: 'Nov. 14–16 at Edmonton Expo Centre',
     summary:
-      'We were at TABOO Edmonton Nov. 14–16. Check our events page for upcoming appearances near you.',
+      'We connected with players at TABOO Edmonton Nov. 14–16. Check our events page for upcoming appearances near you.',
     image: '/images/creatives/spin-your-fantasy.png',
     alt: 'TABOO Edmonton: Spin Your Fantasy. Nov. 14–16, Edmonton Expo Centre.',
-    observedText: ['SPIN YOUR FANTASY', 'NOV. 14–16', 'EDMONTON EXPO CENTRE', '20BET TABOO'],
+    observedText: ['SPIN YOUR FANTASY', 'NOV. 14–16', 'EDMONTON EXPO CENTRE', '247iBET TABOO'],
   },
 ] as const;
 

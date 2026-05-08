@@ -15,12 +15,12 @@ export interface Author {
 export const AUTHORS: Record<string, Author> = {
   editorial: {
     id: 'editorial',
-    name: '247iBET Editorial Team',
-    title: 'Editorial Team',
-    bio: 'Our editorial team reviews and verifies every page on 247iBET. We follow documented testing methodology and disclose all commercial relationships.',
+    name: '247iBET Team',
+    title: 'Platform Team',
+    bio: 'Our team maintains and verifies all platform standards on 247iBET. We prioritize security, fast payments, and responsible gaming for all Canadian players.',
     credentials: [
-      'Collective iGaming industry research since 2020',
-      'Documented verification methodology on /about/how-we-test',
+      'Dedicated iGaming operations since 2020',
+      'Continuous platform verification and security auditing',
     ],
   },
   // TODO: Add named authors with real credentials
