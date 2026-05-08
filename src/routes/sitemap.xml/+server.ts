@@ -91,11 +91,11 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/guides/uk-real-money-casinos', priority: 0.5, changefreq: 'monthly' },
   { path: '/guides/upcoming-alberta-sportsbooks', priority: 0.6, changefreq: 'weekly' },
 
-  { path: '/legal-online-gambling-canada', priority: 0.7, changefreq: 'monthly' },
-  { path: '/gambling-laws-canada', priority: 0.7, changefreq: 'monthly' },
-  { path: '/gambling-age-canada', priority: 0.7, changefreq: 'monthly' },
+  { path: '/legal-online-gambling-canada', priority: 0.6, changefreq: 'monthly' },
+  { path: '/gambling-laws-canada', priority: 0.6, changefreq: 'monthly' },
+  { path: '/gambling-age-canada', priority: 0.6, changefreq: 'monthly' },
 
-  { path: '/about', priority: 0.5, changefreq: 'monthly' },
+  { path: '/about', priority: 0.6, changefreq: 'monthly' },
   { path: '/about/how-we-test', priority: 0.5, changefreq: 'monthly' },
   { path: '/about/affiliate-disclosure', priority: 0.5, changefreq: 'monthly' },
   { path: '/faq', priority: 0.6, changefreq: 'weekly' },
@@ -107,7 +107,7 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/privacy-policy', priority: 0.3, changefreq: 'yearly' },
   { path: '/cookie-policy', priority: 0.3, changefreq: 'yearly' },
   { path: '/responsible-gambling', priority: 0.5, changefreq: 'monthly' },
-  { path: '/editorial-policy', priority: 0.5, changefreq: 'monthly' },
+  { path: '/editorial-policy', priority: 0.6, changefreq: 'monthly' },
 
   // Newer pages added after initial sitemap build
   { path: '/vcu-ai', priority: 0.7, changefreq: 'weekly' },
