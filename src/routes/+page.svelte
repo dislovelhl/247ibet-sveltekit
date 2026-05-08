@@ -327,13 +327,7 @@
       name: SITE.name,
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
-      sameAs: [
-        `https://x.com/${SITE.handles.x.slice(1)}`,
-        `https://www.instagram.com/${SITE.handles.instagram.slice(1)}/`,
-        `https://www.facebook.com/${SITE.handles.facebook}`,
-        'https://t.me/247iBET',
-        'https://www.tiktok.com/@247ibet',
-      ],
+      sameAs: SITE.sameAs,
     },
     homeFaqSchema,
   ];

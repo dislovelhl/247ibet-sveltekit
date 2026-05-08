@@ -29,7 +29,16 @@ export const SITE = {
     x: '@247ibet',
     instagram: '@247ibet',
     facebook: '247ibet',
+    telegram: '247iBET',
+    tiktok: '@247ibet',
   },
+  sameAs: [
+    'https://x.com/247ibet',
+    'https://www.instagram.com/247ibet/',
+    'https://www.facebook.com/247ibet',
+    'https://t.me/247iBET',
+    'https://www.tiktok.com/@247ibet',
+  ],
 } as const;
 
 export const SEO = {
