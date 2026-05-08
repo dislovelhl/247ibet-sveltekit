@@ -6,6 +6,7 @@
     IBET_EVENT_CREATIVE_SNAPSHOT,
     IBET_SPORTSBOOK_CREATIVE_SNAPSHOT,
   } from '$lib/ibet-brand';
+  import { reveal } from '$lib/animations';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -92,7 +93,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <header class="mb-10">
+  <header class="mb-10 reveal-fade-up">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -115,11 +116,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
-  <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
+  <section use:reveal class="reveal-fade-up navy-card mt-16 rounded-2xl p-6 md:p-8">
     <h2 class="text-2xl font-bold mb-6">Types of Sportsbook Offers in Canada</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+    <div use:reveal data-reveal-stagger="true" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
       {#each offerTypes as { label, desc }}
-        <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="reveal-fade-up p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] card-hover-lift">
           <div class="text-base font-bold mb-1">{label}</div>
           <p class="text-gray-400 font-sans text-xs leading-relaxed">{desc}</p>
         </div>
@@ -127,7 +128,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </section>
 
-  <section class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+  <section use:reveal data-reveal-stagger="true" class="navy-card mt-10 rounded-2xl p-6 md:p-8">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
       <div>
         <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Observed creative set</p>
@@ -141,7 +142,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-6 grid gap-4 lg:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
@@ -154,7 +155,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </section>
 
-  <section class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+  <section use:reveal data-reveal-stagger="true" class="navy-card mt-10 rounded-2xl p-6 md:p-8">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
       <div>
         <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Event collateral</p>
@@ -168,7 +169,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>

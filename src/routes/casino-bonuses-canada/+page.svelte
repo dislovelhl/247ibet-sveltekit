@@ -4,6 +4,7 @@
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
+  import { reveal } from '$lib/animations';
 
 
   const lastUpdated = '2026-03-30';
@@ -79,7 +80,7 @@
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
-  <header class="mb-10">
+  <header class="mb-10 reveal-fade-up">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -103,7 +104,7 @@
 
   <IBetShowcase variant="hero" showFeatures showPros />
 
-  <section class="navy-card mt-8 rounded-2xl p-6 md:p-8">
+  <section use:reveal data-reveal-stagger="true" class="navy-card mt-8 rounded-2xl p-6 md:p-8">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
       <div>
         <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Promo snapshot</p>
@@ -116,7 +117,7 @@
     </div>
     <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article class="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+        <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
@@ -129,10 +130,10 @@
     </div>
   </section>
 
-  <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
+  <section use:reveal class="reveal-fade-up navy-card mt-16 rounded-2xl p-6 md:p-8">
     <h2 class="text-2xl font-bold mb-6">Types of Casino Offers in Canada</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400 leading-relaxed">
-      <div>
+    <div use:reveal data-reveal-stagger="true" class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400 leading-relaxed">
+      <div class="reveal-fade-up">
         <h3 class="text-white font-bold mb-2">Deposit Match Bonuses</h3>
         <p>
           The operator matches your deposit by a percentage — typically 50%–100% — up to a maximum
@@ -141,7 +142,7 @@
           bonus can be declined.
         </p>
       </div>
-      <div>
+      <div class="reveal-fade-up">
         <h3 class="text-white font-bold mb-2">Free Spins</h3>
         <p>
           Free spins allow you to play eligible slot games without using your cash balance. Each
@@ -150,7 +151,7 @@
           modest and low up-front risk.
         </p>
       </div>
-      <div>
+      <div class="reveal-fade-up">
         <h3 class="text-white font-bold mb-2">Reload & Loyalty Bonuses</h3>
         <p>
           Ongoing promotions reward continued play — weekly reload matches, cashback on losses, or

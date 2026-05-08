@@ -24,6 +24,7 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_DISCLAIMER, IBET_URLS } from '$lib/ibet-brand';
   import { SITE, canonicalUrl } from '$lib/site';
+  import { reveal } from '$lib/animations';
 
   const page = {
     title: 'Canadian Sportsbook Guide — Odds, Parlays & Betting Hub | 247iBET',
@@ -410,7 +411,7 @@
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
               <SafeExternalLink
                 href={IBET_URLS.register}
-                class="hero-cta-primary group min-w-[220px] shimmer-effect"
+                class="hero-cta-primary group min-w-[220px] shimmer-effect btn-magnetic"
               >
                 Access Sportsbook
                 <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -428,10 +429,10 @@
           </div>
         </section>
 
-        <div id="offers" class="grid gap-4 sm:grid-cols-3">
+        <div id="offers" use:reveal data-reveal-stagger="true" class="grid gap-4 sm:grid-cols-3">
           {#each heroOffers as offer}
             <article
-              class="glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
+              class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift"
             >
               <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
@@ -627,7 +628,7 @@
             </p>
             <div class="mt-4 grid gap-3 sm:grid-cols-2">
               {#each offerCards as offer}
-                <article class="rounded-lg border border-white/10 bg-white/[0.03] p-4">
+                <article class="rounded-lg border border-white/10 bg-white/[0.03] p-4 reveal-fade-up card-hover-lift">
                   <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
                   <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
                   <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
@@ -681,12 +682,12 @@
           <p class="mt-1 text-sm text-text-tertiary">
             Expert guides and practical tools to help you understand each market before betting.
           </p>
-          <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4" use:reveal data-reveal-stagger="true">
             {#each guideCards as guide}
               {@const GuideIcon = guide.icon}
               <a
                 href={guide.href}
-                class="group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-prestige-gold/35"
+                class="reveal-fade-up group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
               >
                 <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
                 <h3 class="mt-3 text-base font-bold text-white">{guide.title}</h3>
@@ -882,7 +883,7 @@
           </p>
           <SafeExternalLink
             href={IBET_URLS.register}
-            class="hero-cta-primary mt-5 w-full justify-center sm:w-auto sm:min-w-72"
+            class="hero-cta-primary mt-5 w-full justify-center sm:w-auto sm:min-w-72 btn-magnetic"
           >
             Enter sportsbook
             <ArrowRight class="h-4 w-4" aria-hidden="true" />

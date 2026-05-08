@@ -8,6 +8,7 @@
   import Navbar from '$lib/components/Navbar.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
   import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
+  import Atmosphere from '$lib/components/Atmosphere.svelte';
 
   $effect(() => {
     inject({ mode: dev ? 'development' : 'production' });
@@ -36,6 +37,7 @@
 </a>
 
 <Navbar />
+<Atmosphere />
 <div
   class="relative flex min-h-screen flex-col overflow-x-hidden pb-[calc(7.5rem_+_env(safe-area-inset-bottom,0px))] md:pb-0"
 >

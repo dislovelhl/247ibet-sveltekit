@@ -13,6 +13,8 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_CTA, IBET_PROMO_SNAPSHOT, IBET_URLS } from '$lib/ibet-brand';
+  import { reveal, counter } from '$lib/animations';
+  import OddsTicker from '$lib/components/OddsTicker.svelte';
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -396,13 +398,15 @@
           </p>
           <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
             <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
-            <span class="text-[10px] font-black uppercase tracking-wider text-success">Live Status: Verified</span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-success">
+              <span use:counter={{ start: 1200, end: 1458, duration: 3000 }}>1,246</span> Players Online
+            </span>
           </div>
         </div>
         <h1
-          class="page-hero-title animate-fade-in-up-delay-1 !tracking-tighter"
+          class="page-hero-title animate-fade-in-up-delay-1 !tracking-tighter font-luxury"
         >
-          247iBET Casino, Sportsbook & <span class="text-prestige-gold-400"
+          247iBET Casino, Sportsbook & <span class="text-prestige-gold-400 text-gold-gradient"
             >Interac Payouts</span
           >
         </h1>
@@ -424,11 +428,11 @@
         <div
           class="mt-7 flex animate-fade-in-up-delay-3 flex-col gap-3 sm:flex-row"
         >
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group shimmer-effect">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group shimmer-effect btn-magnetic">
             {IBET_CTA.register}
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </SafeExternalLink>
-          <a href="/deposit" class="hero-cta-secondary glass-thin">{IBET_CTA.fastPayout}</a>
+          <a href="/deposit" class="hero-cta-secondary glass-thin btn-magnetic">{IBET_CTA.fastPayout}</a>
         </div>
         <p
           class="mt-6 max-w-2xl rounded-xl border border-white/5 bg-white/[0.03] px-4 py-4 text-[13px] leading-relaxed text-text-body/80"
@@ -441,15 +445,17 @@
     </div>
   </section>
 
+  <OddsTicker />
+
   <nav
     class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16"
     aria-label="Jump links"
   >
-    <div class="flex gap-2 overflow-x-auto rounded-2xl border border-white/5 bg-navy-card/80 p-2 shadow-2xl">
+    <div class="flex gap-2 overflow-x-auto rounded-2xl border border-white/5 bg-navy-card/80 p-2 shadow-2xl snap-x snap-mandatory scroll-smooth hide-scrollbar">
       {#each jumpLinks as link}
         <a
           href={link.href}
-          class="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-text-body transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold"
+          class="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-text-body transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold snap-start"
         >
           {link.label}
         </a>
@@ -462,12 +468,14 @@
   >
     <section
       id="trust-verification"
+      use:reveal
+      data-reveal-stagger="true"
       class="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 shadow-2xl sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each heroTrust as item}
         {@const Icon = item.icon}
         <div
-          class="group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6"
+          class="reveal-fade-up group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6 card-hover-lift"
         >
           <div
             class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.4)]"
@@ -485,7 +493,8 @@
 
     <section
       id="promo-video"
-      class="grid gap-5 overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-4 shadow-2xl sm:p-5 lg:grid-cols-[0.38fr_0.62fr] lg:gap-6 lg:p-7"
+      use:reveal
+      class="reveal-fade-up grid gap-5 overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-4 shadow-2xl sm:p-5 lg:grid-cols-[0.38fr_0.62fr] lg:gap-6 lg:p-7"
       aria-labelledby="home-promo-video-title"
     >
       <div class="flex flex-col justify-center">
@@ -501,7 +510,7 @@
         </p>
         <SafeExternalLink
           href={IBET_URLS.register}
-          class="hero-cta-primary mt-6 w-full justify-center sm:w-fit"
+          class="hero-cta-primary mt-6 w-full justify-center sm:w-fit btn-magnetic"
         >
           Visit Partner Site
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
@@ -557,7 +566,7 @@
         </ul>
         <SafeExternalLink
           href={IBET_URLS.register}
-          class="hero-cta-primary mt-8 w-full justify-center"
+          class="hero-cta-primary mt-8 w-full justify-center btn-magnetic"
         >
           Visit Partner Site
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
@@ -571,11 +580,15 @@
           operator terms. They are not guarantees of licensing status, payout speed, bonus
           eligibility, or account approval.
         </p>
-        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          use:reveal
+          data-reveal-stagger="true"
+          class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {#each whyCards as card, i}
             {@const Icon = card.icon}
             <article
-              class="luxury-card group relative rounded-2xl p-6 transition-all hover:-translate-y-1 {i === 0 ? 'lg:col-span-2' : ''}"
+              class="reveal-fade-up luxury-card group relative rounded-2xl p-6 transition-all hover:-translate-y-1 {i === 0 ? 'lg:col-span-2' : ''} card-hover-lift"
             >
               <div class="flex items-start justify-between gap-4">
                 <div
@@ -584,7 +597,12 @@
                   <Icon class="h-6 w-6" aria-hidden="true" />
                 </div>
                 <div class="text-right">
-                   <span class="font-mono text-2xl font-black text-prestige-gold leading-none">{card.score}</span>
+                   <span
+                     use:counter={{ end: Number(card.score), decimals: 1, duration: 1500 }}
+                     class="font-mono text-2xl font-black text-prestige-gold leading-none"
+                   >
+                     {card.score}
+                   </span>
                    <div class="mt-1 flex justify-end gap-0.5">
                     {#each Array(5) as _, starIdx}
                       <span class="h-1 w-3 rounded-full {starIdx < Math.floor(Number(card.score)) ? 'bg-prestige-gold' : 'bg-white/10'}"></span>
@@ -641,7 +659,8 @@
 
     <section
       id="interac-flow"
-      class="grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
+      use:reveal
+      class="reveal-fade-up grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
         <h2 class="text-4xl font-black md:text-5xl">Interac deposits and withdrawals</h2>
@@ -649,11 +668,15 @@
           Deposits are usually quick, while withdrawals depend on approval, verification, bonus
           terms, and bank processing.
         </p>
-        <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex">Compare Payouts</a>
+        <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex btn-magnetic">Compare Payouts</a>
       </div>
-      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+      <div
+        use:reveal
+        data-reveal-stagger="true"
+        class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4"
+      >
         {#each processSteps as step, index}
-          <article class="rounded-xl border border-white/10 bg-black/20 p-5">
+          <article class="reveal-fade-up rounded-xl border border-white/10 bg-black/20 p-5 card-hover-lift">
             <div
               class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
             >
@@ -670,8 +693,15 @@
       </div>
     </section>
 
-    <section class="rounded-2xl border border-white/5 bg-navy-card/50 p-4 sm:p-8">
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+    <section
+      use:reveal
+      class="reveal-fade-up rounded-2xl border border-white/5 bg-navy-card/50 p-4 sm:p-8"
+    >
+      <div
+        use:reveal
+        data-reveal-stagger="true"
+        class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
+      >
         <div class="flex flex-col justify-center rounded-2xl bg-gradient-to-br from-navy-raised to-navy-card p-6 shadow-xl sm:col-span-2 sm:row-span-2 lg:p-10">
           <h2 class="font-display text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
             Why 247iBET <span class="text-prestige-gold">Stands Out</span>
@@ -681,7 +711,7 @@
             support before signup. We prioritize transparency and speed.
           </p>
           <div class="mt-8">
-             <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm">
+             <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm btn-magnetic">
                 Get Started
              </SafeExternalLink>
           </div>
@@ -690,7 +720,7 @@
         {#each standOut as item}
           {@const Icon = item.icon}
           <article
-            class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl shimmer-effect"
+            class="reveal-fade-up group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
           >
             <div class="relative z-10">
               <Icon class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110" aria-hidden="true" />
@@ -717,7 +747,7 @@
           {#each casinoCards as card}
             <a
               href={card.href}
-              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
+              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
             >
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
@@ -763,7 +793,7 @@
           {#each sportsCards as card}
             <a
               href={card.href}
-              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl"
+              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
             >
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
@@ -863,7 +893,7 @@
           {#each guideCards as card}
             <a
               href={card.href}
-              class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl"
+              class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
             >
               <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect">
                 <img
