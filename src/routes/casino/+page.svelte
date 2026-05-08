@@ -19,7 +19,9 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
   import { useMouseParallax } from '$lib/runes.svelte';
+  import { reveal } from '$lib/animations';
   import FAQ from '$lib/components/FAQ.svelte';
+  import TiltCard from '$lib/components/TiltCard.svelte';
 
 
 
@@ -253,11 +255,11 @@
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px] shimmer-effect">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px] shimmer-effect btn-magnetic">
             Access Casino
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </SafeExternalLink>
-          <a href="/casino/slots" class="hero-cta-secondary min-w-[200px] glass-thin">
+          <a href="/casino/slots" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
             Explore Library
           </a>
         </div>
@@ -298,18 +300,22 @@
           {/each}
         </div>
       </div>
-      <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-64 justify-center">
+      <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-64 justify-center btn-magnetic">
         Play Now
         <ArrowRight class="h-5 w-5" aria-hidden="true" />
       </SafeExternalLink>
     </section>
 
-    <section class="mt-8 grid gap-4 lg:grid-cols-4">
+    <section
+      use:reveal
+      data-reveal-stagger="true"
+      class="mt-8 grid gap-4 lg:grid-cols-4"
+    >
       {#each featureCards as card}
         {@const Icon = card.icon}
         <a
           href={card.href}
-          class="glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl"
+          class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
         >
           <div
             class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-transform group-hover:scale-110"
@@ -355,38 +361,44 @@
         <p class="mt-4 text-text-body italic">Explore hundreds of vetted titles across all categories</p>
       </div>
       
-      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        use:reveal
+        data-reveal-stagger="true"
+        class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
         {#each categoryCards as card}
           {@const Icon = card.icon}
-          <a
-            href={card.href}
-            class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
-          >
-            <div class="absolute inset-0 z-0">
-              <img
-                src={card.image}
-                alt=""
-                class="h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent"></div>
-              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
-            </div>
-            
-            <div class="relative z-10 flex h-full flex-col justify-between">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all group-hover:scale-110">
-                <Icon class="h-6 w-6 group-hover:text-navy-black transition-colors" />
+          <TiltCard class="reveal-fade-up">
+            <a
+              href={card.href}
+              class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift block h-full"
+            >
+              <div class="absolute inset-0 z-0">
+                <img
+                  src={card.image}
+                  alt=""
+                  class="h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent"></div>
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
               </div>
               
-              <div>
-                <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
-                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
-                <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
-                  Enter Lobby
-                  <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all group-hover:scale-110">
+                  <Icon class="h-6 w-6 group-hover:text-navy-black transition-colors" />
+                </div>
+                
+                <div>
+                  <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
+                  <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
+                    Enter Lobby
+                    <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </TiltCard>
         {/each}
       </div>
     </section>
@@ -398,7 +410,7 @@
       <div class="grid gap-5 md:grid-cols-3">
         {#each whyCards as card}
           {@const Icon = card.icon}
-          <article class="rounded-xl border border-white/10 bg-navy-card/80 p-6">
+          <article class="rounded-xl border border-white/10 bg-navy-card/80 p-6 card-hover-lift">
             <Icon class="h-9 w-9 text-prestige-gold" aria-hidden="true" />
             <h3 class="mt-5 text-xl font-black">{card.title}</h3>
             <p class="mt-3 text-sm leading-6 text-text-body">{card.body}</p>
@@ -441,7 +453,7 @@
         <div class="flex flex-col gap-3">
           <SafeExternalLink
             href={IBET_URLS.register}
-            class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72"
+            class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72 btn-magnetic"
           >
             Start Playing
             <ArrowRight class="h-5 w-5" aria-hidden="true" />

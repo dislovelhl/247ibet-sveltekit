@@ -247,9 +247,25 @@
     .animate-jackpot-float,
     .animate-won-celebrate,
     .win-flash,
-    .skeleton {
+    .skeleton,
+    .animate-glow-pulse,
+    .animate-float,
+    .shimmer-effect::after {
       animation: none;
       box-shadow: none;
+    }
+    /* Reveal system: make all elements instantly visible */
+    .reveal-fade-up,
+    .reveal-scale-in,
+    .reveal-slide-left,
+    .reveal-slide-right {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: none;
+    }
+    .reveal-visible {
+      animation: none;
     }
     html {
       scroll-behavior: auto;
@@ -274,6 +290,188 @@
       animation: none;
       transform: translateX(0);
       will-change: auto;
+    }
+  }
+
+  /* Reveal System Keyframes */
+  @keyframes reveal-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes reveal-scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes reveal-slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes reveal-slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(212, 148, 58, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(212, 148, 58, 0.6);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Reveal System Classes */
+  .reveal-fade-up,
+  .reveal-scale-in,
+  .reveal-slide-left,
+  .reveal-slide-right {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 0.6s; /* prevent flash */
+  }
+
+  .reveal-fade-up { transform: translateY(30px); }
+  .reveal-scale-in { transform: scale(0.95); }
+  .reveal-slide-left { transform: translateX(-30px); }
+  .reveal-slide-right { transform: translateX(30px); }
+
+  .reveal-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-visible.reveal-fade-up { animation-name: reveal-fade-up; }
+  .reveal-visible.reveal-scale-in { animation-name: reveal-scale-in; }
+  .reveal-visible.reveal-slide-left { animation-name: reveal-slide-left; }
+  .reveal-visible.reveal-slide-right { animation-name: reveal-slide-right; }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s infinite;
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  /* ── Number roll animation (for counter digits) ── */
+  @keyframes number-roll {
+    0% {
+      transform: translateY(1em);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .number-animate {
+    display: inline-block;
+    animation: number-roll 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* ── Skeleton shimmer placeholder ── */
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #0d1629;
+    border-radius: 8px;
+  }
+  .skeleton-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  /* ── Button glow pulse ── */
+  .btn-glow {
+    animation: glow-pulse 2.5s ease-in-out infinite;
+  }
+
+  /* ── Ambient floating variants ── */
+  .ambient-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  .ambient-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+  .ambient-float-reverse {
+    animation: float 5s ease-in-out infinite reverse;
+  }
+
+  /* ── Reduced-motion: disable all animations ── */
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton-shimmer::after,
+    .btn-glow,
+    .ambient-float,
+    .ambient-float-slow,
+    .ambient-float-reverse,
+    .number-animate {
+      animation: none;
     }
   }
 }

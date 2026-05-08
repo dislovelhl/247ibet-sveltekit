@@ -637,4 +637,106 @@
       0 0 0 2px var(--color-navy-black),
       0 0 0 4px var(--color-prestige-gold);
   }
+
+  /* Interactive Polish & Micro-interactions */
+  .btn-magnetic {
+    transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .btn-magnetic:hover {
+    transform: scale(1.03);
+  }
+  .btn-magnetic:active {
+    transform: scale(0.97);
+  }
+
+  .card-hover-lift {
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .card-hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-link-animated {
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .nav-link-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-prestige-gold);
+    transition: width 0.3s ease;
+  }
+  .nav-link-animated:hover::after {
+    width: 100%;
+  }
+
+  .input-glow:focus-within {
+    box-shadow: 0 0 15px rgba(212, 148, 58, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #0d1629;
+    border-radius: 8px;
+  }
+  .skeleton-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, var(--color-prestige-gold-200) 0%, var(--color-prestige-gold) 50%, var(--color-prestige-gold-700) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Mobile Touch-Friendly Improvements ── */
+
+  /* Touch-friendly tap targets */
+  @media (pointer: coarse) {
+    .btn-magnetic {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    .card-hover-lift:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Active state replaces hover on touch */
+    .btn-magnetic:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease;
+    }
+  }
+
+  /* Safe area insets for mobile */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
 }

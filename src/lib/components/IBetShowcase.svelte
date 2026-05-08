@@ -13,6 +13,7 @@
   } from 'lucide-svelte';
   import { IBET_PROFILE, IBET_URLS, IBET_CTA, IBET_DISCLAIMER } from '$lib/ibet-brand';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
+  import { reveal, counter } from '$lib/animations';
 
   const featureIconMap: Partial<Record<string, typeof Zap>> = {
     Zap,
@@ -57,7 +58,9 @@
           aria-hidden="true"
         />
       {/each}
-      <span class="ml-1.5 text-sm font-bold text-white">{rating.toFixed(1)}/10</span>
+      <span class="ml-1.5 text-sm font-bold text-white">
+        <span use:counter={{ end: rating, decimals: 1 }}>{rating.toFixed(1)}</span>/10
+      </span>
     </div>
   {/if}
 {/snippet}
@@ -146,11 +149,11 @@
           <div class="flex-1 w-full min-w-0">
             <div class="flex flex-wrap items-center gap-3 mb-2">
               {#if isPrimaryHero}
-                <h1 class="page-hero-title text-3xl md:text-5xl uppercase">
+                <h1 class="page-hero-title text-3xl md:text-5xl uppercase font-luxury">
                   {IBET_PROFILE.name}<span class="sr-only"> Canadian iGaming Guide</span>
                 </h1>
               {:else}
-                <h2 class="page-hub-title text-3xl md:text-5xl uppercase">{IBET_PROFILE.name}</h2>
+                <h2 class="page-hub-title text-3xl md:text-5xl uppercase font-luxury">{IBET_PROFILE.name}</h2>
               {/if}
               {#if IBET_PROFILE.agcoLicensed}
                 <span
@@ -187,7 +190,7 @@
           </div>
 
           <div class="flex flex-col gap-2.5 shrink-0 w-full md:w-[220px] min-w-[180px]">
-            <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full">
+            <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary w-full btn-magnetic">
               {ctaText ?? IBET_CTA.primary}
               <ExternalLink class="w-4 h-4" aria-hidden="true" />
             </SafeExternalLink>
@@ -197,10 +200,16 @@
 
         {#if showFeatures}
           <div class="mb-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-2">
+            <div
+              use:reveal
+              data-reveal-stagger="true"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-2"
+            >
               {#each visibleFeatures as feat}
                 {@const FeatureIcon = featureIconMap[feat.icon]}
-                <div class="rounded-xl border p-3.5 material-inset {feat.bg} transition-shadow">
+                <div
+                  class="reveal-fade-up rounded-xl border p-3.5 material-inset {feat.bg} transition-shadow card-hover-lift"
+                >
                   {#if FeatureIcon}
                     <FeatureIcon class="w-5 h-5 mb-1.5 {feat.accent}" aria-hidden="true" />
                   {/if}

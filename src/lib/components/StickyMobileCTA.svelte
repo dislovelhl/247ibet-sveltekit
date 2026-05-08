@@ -110,7 +110,7 @@
 {#if visible && !dismissed && !isStandalone}
   <div
     transition:fly={{ y: 100, duration: 350, easing: cubicOut }}
-    class="fixed inset-x-0 z-40 mx-auto w-[calc(100%_-_1rem)] max-w-md md:hidden"
+    class="fixed inset-x-0 z-40 mx-auto w-[calc(100%_-_1rem)] max-w-md md:hidden safe-bottom"
     style="bottom: calc(1rem + env(safe-area-inset-bottom, 0px))"
     role="navigation"
     aria-label="Quick actions"
@@ -132,7 +132,7 @@
             href={IBET_URLS.casino}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex min-h-[48px] flex-1 items-center justify-center gap-2 btn-glossy-gold shimmer-effect px-2 py-3 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
+            class="flex min-h-[48px] flex-1 items-center justify-center gap-2 btn-glossy-gold btn-magnetic shimmer-effect px-2 py-3 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
             aria-label="Open 247iBET Casino"
           >
             <Trophy class="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -144,7 +144,7 @@
           href={IBET_URLS.register}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/8 px-2 py-3 text-xs font-bold text-white transition-transform active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
+          class="flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/8 px-2 py-3 text-xs font-bold text-white transition-transform active:scale-95 btn-magnetic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
           aria-label="Open 247iBET Sports Betting"
         >
           <Star class="h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />

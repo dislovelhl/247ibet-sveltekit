@@ -58,7 +58,7 @@
     </ol>
   </nav>
 
-  <article class="navy-card rounded-3xl p-8 md:p-12">
+  <article class="navy-card rounded-3xl p-8 md:p-12 reveal-fade-up">
     <nav aria-label="Bonus terms table of contents" class="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
       <p class="text-xs font-black uppercase tracking-[0.14em] text-slate-blue">On this page</p>
       <div class="mt-3 flex flex-wrap gap-2">
@@ -86,9 +86,9 @@
       </p>
 
       <h2 id="observed-bonus-offers">Observed bonus offers</h2>
-      <div class="not-prose grid gap-6">
+      <div class="not-prose grid gap-6" data-reveal-stagger="true">
         {#each IBET_PROMO_SNAPSHOT as promo}
-          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
             <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
@@ -108,7 +108,7 @@
       <h2 id="sportsbook-tie-ins">Sportsbook and combat-sports tie-ins</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
             <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
@@ -123,7 +123,7 @@
       <h2 id="event-creatives">Event-style creatives included for completeness</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+          <article class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
             <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
