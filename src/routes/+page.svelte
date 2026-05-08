@@ -1,6 +1,7 @@
 <script lang="ts">
   import { SITE, canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import {
     ArrowRight,
     BadgeCheck,
@@ -364,25 +365,7 @@
 
 <div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={handleMouseMove} role="presentation">
   <section class="relative overflow-hidden border-b border-prestige-gold/30">
-    <div class="absolute inset-0">
-      <img
-        src="/images/generated/casino-premium-hero.png"
-        alt="247iBET casino and sportsbook overview background"
-        width="1920"
-        height="1080"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        class="h-full w-full object-cover opacity-70"
-        style="transform: translate3d({mouseX * 0.5}px, {mouseY * 0.5}px, 0) scale(1.1);"
-      />
-      <div
-        class="absolute inset-0 bg-[linear-gradient(180deg,#070C18_0%,rgba(7,12,24,0.9)_42%,rgba(7,12,24,0.6)_100%)] sm:bg-[linear-gradient(90deg,#070C18_0%,rgba(7,12,24,0.84)_34%,rgba(7,12,24,0.42)_100%)]"
-      ></div>
-      <div
-        class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy-black to-transparent"
-      ></div>
-    </div>
+    <BackgroundAtmosphere src="/images/frozen-edge-hero.webp" />
 
     <div
       class="relative mx-auto grid min-h-[560px] max-w-[1720px] items-center px-4 py-12 pb-10 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-16"
