@@ -58,6 +58,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       description:
         "A comprehensive guide on identifying legitimate online casinos in Canada's regulated and gray markets, focusing on player protection and security protocols.",
       url: 'https://247ibet.ca/guides/legit-safe-online-casinos',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
   <JsonLd

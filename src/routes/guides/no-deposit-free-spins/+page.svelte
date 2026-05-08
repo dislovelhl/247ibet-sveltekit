@@ -30,6 +30,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       description:
         'Everything you need to know about claiming and winning from no deposit extra spins at regulated Canadian online casinos.',
       url: 'https://247ibet.ca/guides/no-deposit-free-spins',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
   <JsonLd

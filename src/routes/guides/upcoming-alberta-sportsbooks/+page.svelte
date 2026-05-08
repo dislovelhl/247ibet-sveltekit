@@ -98,6 +98,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       url: 'https://247ibet.ca/guides/upcoming-alberta-sportsbooks',
       datePublished: '2026-04-02',
       dateModified: '2026-04-02',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
   <JsonLd

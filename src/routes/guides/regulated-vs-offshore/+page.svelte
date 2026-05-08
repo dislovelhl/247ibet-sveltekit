@@ -35,6 +35,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       url: 'https://247ibet.ca/guides/regulated-vs-offshore',
       datePublished: '2026-03-01',
       dateModified: '2026-03-01',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
   <JsonLd

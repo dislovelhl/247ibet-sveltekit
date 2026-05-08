@@ -156,6 +156,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       url: 'https://247ibet.ca/guides/legal-online-casino-canada',
       datePublished: '2026-03-29',
       dateModified: '2026-03-30',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
   <JsonLd

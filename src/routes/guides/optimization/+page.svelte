@@ -18,6 +18,13 @@
       description:
         'Master performance, AI integration, and technical SEO for the Canadian iGaming market.',
       url: 'https://247ibet.ca/guides/optimization',
+      datePublished: '2026-05-09',
+      dateModified: '2026-05-09',
+      publisher: {
+        '@type': 'Organization',
+        name: '247iBET',
+        url: 'https://247ibet.ca',
+      },
     }}
   />
 </svelte:head>
