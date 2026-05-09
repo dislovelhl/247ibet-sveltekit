@@ -1,19 +1,113 @@
-# Domain Unification Plan (247ibet.ca Only)
+# Domain Unification Plan — jdzd.com → 247ibet.ca (v2)
+
+> **Reframe note (2026-05-09)**: rewritten after /autoplan eng review found that "zero codebase changes" understated the work. The redirect itself is straightforward, but path-preservation, versioned config, rollback, GSC change-of-address, and CORS coordination need to be addressed in code. v1 lives in git history if the original phrasing is needed.
 
 ## 1. Goal
-Per business direction, **247ibet.ca** is the sole surviving brand. The `jdzd.com` identity will be entirely sunset. Any traffic originating from `jdzd.com` will be mapped directly to `247ibet.ca` and will see the exact same 247ibet.ca logo, branding, and "Prestige Navy" UI. There will be no visual distinction or dynamic context switching.
 
-## 2. Technical Mapping (Vercel)
+`247ibet.ca` is the surviving brand. `jdzd.com` and `www.jdzd.com` are sunset. Traffic from jdzd is mapped to 247ibet.ca via path-preserving 301 redirects, configured in versioned infrastructure (`vercel.json`), with a coordinated SEO and analytics handoff.
 
-Because the brand is unified exclusively under `247ibet.ca`, absolutely **zero codebase changes** are required to handle brand context.
+## 2. Technical mapping (versioned, not Dashboard-only)
 
-The mapping will be handled 100% at the Vercel infrastructure level via a **301 Permanent Redirect**:
+The redirect lives in `vercel.json` so it ships and rolls back with the application code.
 
-1. Go to the **Vercel Dashboard** > **247ibet-sveltekit** > **Settings** > **Domains**.
-2. Add `jdzd.com` and `www.jdzd.com`.
-3. Set both `jdzd.com` domains to **Redirect to** `247ibet.ca` with a **301 Permanent** status code.
+```jsonc
+// vercel.json — additive block (this plan adds it; current file has only crons)
+"redirects": [
+  {
+    "source": "/:path*",
+    "destination": "https://247ibet.ca/:path*",
+    "permanent": true,
+    "has": [{ "type": "host", "value": "jdzd.com" }]
+  },
+  {
+    "source": "/:path*",
+    "destination": "https://247ibet.ca/:path*",
+    "permanent": true,
+    "has": [{ "type": "host", "value": "www.jdzd.com" }]
+  }
+]
+```
 
-## 3. Why this approach?
-- **SEO Benefits**: A 301 redirect securely passes any existing search authority and link equity from `jdzd.com` directly to `247ibet.ca`.
-- **Zero Tech Debt**: It keeps the SvelteKit codebase clean. The app doesn't need to know or care about `jdzd.com`; it only ever serves the premium `247ibet.ca` experience.
-- **Brand Consistency**: Users from old jdzd.com links immediately land on the polished, modern 247ibet.ca environment.
+**Why not dashboard-only**: a dashboard `Redirect to` is unversioned (invisible in PR review), can't be rolled back atomically with `git revert`, disappears if the project is re-created or transferred, and is apex-to-apex by default — meaning `jdzd.com/casino` would land on `247ibet.ca` (root) instead of `247ibet.ca/casino`, losing path equity.
+
+**Vercel domain attachment** (still required): add `jdzd.com` and `www.jdzd.com` to the project in Vercel Dashboard → Settings → Domains so the `has.host` matcher fires. Do not configure a "Redirect to" target in the dashboard; let the `vercel.json` block own the destination.
+
+## 3. Path-mapping table
+
+Before cutover, decide the disposition of any `jdzd.com` paths that don't have an exact equivalent on `247ibet.ca`. The catch-all 301 above handles the common case; this table covers exceptions.
+
+| jdzd path pattern | Disposition | Notes |
+|---|---|---|
+| `/` and any path with a 247ibet.ca equivalent | 301 (path-preserved) | default catch-all |
+| `/casino-fr/*` (if jdzd had French content) | TBD — confirm if French routes exist on 247ibet | If not, redirect to `/` with a translation flag, OR 410 |
+| `/legacy/*` or campaign-specific URLs | 410 Gone with logging | implemented via `routes/[...catchall]/+page.server.ts` (Sprint B.B2 in TECHNICAL_DESIGN_PLAN.md) |
+| Any path returning 404 on 247ibet.ca | 301 to `/` (homepage) with `?redirected=stale` query | safer than 404 for backlink equity |
+
+`migration-review-247ibet/REDIRECT_MAP_DRAFT.csv` is the source draft. Promote to `static/redirect-map.json` (or directly into `vercel.json`) before cutover.
+
+## 4. Compliance gate (blocks cutover)
+
+Per `migration-review-247ibet/CUTOVER_RUNBOOK.md` Phase 0 and `migration-review-247ibet/OPEN_QUESTIONS.md` #1, the cutover is gated on:
+
+- [ ] Legal/compliance signoff on the wording "AGCO" and "iGaming Ontario" on 247ibet.ca pages. `IBET_PROFILE.agcoLicensed = false` per `docs/COMPLIANCE_AUDIT_v0.3.md` — redirecting jdzd traffic into a site that asserts unverified AGCO regulation amplifies regulatory exposure for both brands.
+- [ ] Sprint A.A5 (regulatory-claim build gate) green: every `AGCO|iGaming Ontario` reference in `src/` is either paired with a verified licence or qualified as review/comparison context.
+- [ ] Sprint A.A4 (CSP `connect-src` includes `boapi.ibet247.ca`, OR partner calls proxied through `/api/*`) — otherwise users redirected from jdzd will see broken CTAs.
+
+Cutover does not start until all three boxes are checked.
+
+## 5. Pre-cutover checklist
+
+- [ ] Vercel project admin access confirmed
+- [ ] DNS access to `jdzd.com` registrar confirmed
+- [ ] Google Search Console properties exist for both `jdzd.com` and `247ibet.ca`
+- [ ] DNS TTL for `jdzd.com` lowered to 300s ≥ 24 hours before cutover (so a rollback propagates fast)
+- [ ] `pnpm test` green including new `tests/redirects.test.ts` snapshot
+- [ ] Backlink audit completed for `jdzd.com` (Ahrefs / GSC referring-domains export); top backlinks confirmed to land on a 200 path
+- [ ] Analytics dual-tagging in place (GA4 / PostHog) for the 30-day handoff window
+- [ ] Compliance gate (§4) green
+
+## 6. Cutover
+
+1. Merge the PR adding `redirects[]` to `vercel.json` to main; deployment goes green on Vercel.
+2. In Vercel Dashboard → Project → Settings → Domains: add `jdzd.com` and `www.jdzd.com`. Do NOT set a "Redirect to" target — leave the host attached so the `vercel.json` matcher fires.
+3. Update `jdzd.com` DNS records (A / CNAME) to point at Vercel as prompted.
+4. Verify with `curl -I https://jdzd.com/foo` from outside Vercel — expect `301 Moved Permanently`, `Location: https://247ibet.ca/foo`.
+5. Run `/canary` skill (or equivalent post-deploy assertion) — see Sprint B.B3 in `docs/TECHNICAL_DESIGN_PLAN.md`.
+6. In Google Search Console for `jdzd.com`, file the Change of Address request pointing to `247ibet.ca`.
+
+## 7. Post-cutover monitoring (30 / 60 / 90 days)
+
+| Cadence | Signal | Owner | Trigger threshold |
+|---|---|---|---|
+| Daily, first 72h | Vercel Edge Logs: 500s, redirect loops | Platform | any non-zero |
+| Daily, first 7 days | GSC `jdzd.com` coverage report; canonical mismatches on `247ibet.ca` | SEO | any new "duplicate without user-selected canonical" |
+| Weekly, 4 weeks | Vercel Analytics: did organic traffic absorb cleanly? | Marketing | -20% week-over-week vs combined baseline |
+| Weekly, 12 weeks | GSC Change of Address status | SEO | rejection or "not processed" status |
+| One-time, day 30 | Backlink-equity audit: are former jdzd backlinks now showing 247ibet authority? | SEO | any ≥5DR backlink still pointing at a 4xx |
+
+## 8. Rollback
+
+If the canary fails or any of these conditions are met inside the first 72h:
+
+- Severe drop in `247ibet.ca` conversion attributable to the redirect (≥30% W/W on bonus-CTA clicks)
+- Legal/compliance order to halt traffic mixing
+- Infinite redirect loops detected (canary or Vercel logs)
+- AGCO/AGLC enforcement notice received
+
+**Rollback is a single revert + a DNS revert:**
+
+1. `git revert <vercel.json redirects commit>` and merge — Vercel re-deploys without the 301 block (instant; no rebuild needed for vercel.json-only changes).
+2. In Vercel Dashboard → Domains: remove `jdzd.com` and `www.jdzd.com` from the project.
+3. Restore `jdzd.com` DNS to its prior provider (DNS TTL was lowered in §5; propagation should complete within 1 hour).
+4. In GSC: cancel the Change of Address request on `jdzd.com`.
+
+Recovery time objective: 15 min (revert + redeploy) + DNS propagation (≤1h with 300s TTL).
+
+## 9. Cross-references
+
+- `docs/TECHNICAL_DESIGN_PLAN.md` — engineering deltas (Sprint A, B, C) that this plan depends on.
+- `migration-review-247ibet/EXECUTIVE_SUMMARY.md` — original audit summary.
+- `migration-review-247ibet/CUTOVER_RUNBOOK.md` — original phase-by-phase runbook (this plan supersedes the Code Changes phase).
+- `migration-review-247ibet/REDIRECT_MAP_DRAFT.csv` — source for §3 path-mapping table.
+- `migration-review-247ibet/OPEN_QUESTIONS.md` — answers required before §4 compliance gate can be closed.
+- `migration-review-247ibet/SECURITY_AUDIT.md` and `PAYMENT_AUDIT.md` — partner-API and payment-CTA confirmations.
