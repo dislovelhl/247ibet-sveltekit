@@ -1,5 +1,19 @@
-// Ported from lib/age-gate-client.ts
-// v1: localStorage-only (no /api/session dependency)
+/**
+ * v1 client-side age-gate cache (UX layer, NOT a security boundary).
+ *
+ * The authoritative age gate is the server-side HMAC flow at
+ * `src/routes/+layout.server.ts` and `src/routes/age-gate/+page.server.ts`.
+ * This module only suppresses the in-page modal flicker on repeat visits
+ * within the same browser session by reading a localStorage flag.
+ *
+ * Real KYC + identity verification runs in the operator app at
+ * `boapi.ibet247.ca` (Vue 3 + Pinia + Element Plus). The SvelteKit gate
+ * is a compliance-UX surface for the marketing front only; this module
+ * never gates network requests or money flows.
+ *
+ * Do not delete: `AgeGate.svelte` consumes these helpers to avoid
+ * showing the modal to a user who already accepted in this browser.
+ */
 import { browser } from '$app/environment';
 import { TRACKING } from '$lib/site';
 
