@@ -1,0 +1,5 @@
+Old URL,New URL,Redirect Type,Notes
+http://jdzd.com/*,https://247ibet.ca/*,301,Wildcard root mapping
+http://www.jdzd.com/*,https://247ibet.ca/*,301,Wildcard www mapping
+https://jdzd.com/*,https://247ibet.ca/*,301,Wildcard root mapping
+https://www.jdzd.com/*,https://247ibet.ca/*,301,Wildcard www mapping

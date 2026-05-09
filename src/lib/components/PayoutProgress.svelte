@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Zap, ShieldCheck, BadgeCheck, CheckCircle2 } from 'lucide-svelte';
-  import { reveal } from '$lib/animations';
+// import { reveal } from '$lib/animations';
   import GlintCard from './GlintCard.svelte';
 
   let { activeStep = 1 } = $props<{ activeStep?: number }>();
