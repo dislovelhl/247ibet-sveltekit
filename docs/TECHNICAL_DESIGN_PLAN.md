@@ -2,6 +2,22 @@
 
 > **Reframe note (2026-05-09)**: this plan was rewritten after a /autoplan dual-voice review (CEO + Design + Eng) found that the v1 draft restated ~70% of v0.3.0 work that already shipped in PR #6. v2 scopes only genuine deltas, with concrete acceptance criteria. Full review at `~/.gstack/projects/247ibet-sveltekit/main-autoplan-review-20260509-060625.md`.
 
+## Repository scope (read this first)
+
+`247ibet-sveltekit` is **only the marketing / SEO / affiliate front** for 247ibet.ca. The operator product (real-money KYC, deposits, withdrawals, member dashboards, live odds) runs in a separate stack and a different repository:
+
+| Surface | Stack | Role |
+|---|---|---|
+| Marketing front (this repo) | SvelteKit 2 + Svelte 5 + Tailwind v4, deployed on Vercel | SEO content, bonus comparisons, affiliate CTAs, landing pages |
+| Admin backend (后台管理) | Vue 3 + Vite | Operator-internal admin dashboards |
+| Member end (会员端) | Vue 3 + Vite + PWA + Firebase push | The actual play surface — accounts, lobby, deposits, gameplay |
+| KYC pages | Vue 3 + TypeScript + Pinia + Element Plus | Onboarding + verification flow |
+| API + WebSocket backend | C# ASP.NET Core + SQL Server, hosted at `boapi.ibet247.ca` | Single source of truth for all real-money state, served to all four frontends |
+
+**How the seam works:** SvelteKit "Play Now" / "Sign Up" CTAs link out to the Vue member-end app. All real-money data (balances, payouts, KYC status, live odds) flows through `boapi.ibet247.ca`. The SvelteKit site never holds money, never runs KYC, never settles bets — it is content + funnel. Anything in this plan that talks to `boapi.ibet247.ca` (Sprint A.A4 CSP fix, Sprint C.C1 verified-payout ticker) is crossing that seam and needs ASP.NET-side coordination.
+
+**Compliance implication:** the AGCO/iGaming-Ontario claims this plan must reconcile (Sprint A.A5) are claims **the marketing front makes about the operator product it funnels to**. The operator product's own licensing posture is a separate question owned by whoever runs the ASP.NET stack — outside this repo.
+
 ## Premise (verified against the codebase)
 
 **Already shipped in v0.3.0** — do NOT re-implement:
@@ -56,11 +72,12 @@
   ```
 - Snapshot test: `tests/redirects.test.ts` (Playwright) asserts `curl -I jdzd.com/foo → 301 → 247ibet.ca/foo` (path preserved).
 
-### A4 — CSP fix for partner API
-- `boapi.ibet247.ca` (referenced as `PARTNER.apiBase` in `site.ts:64`) is currently absent from CSP `connect-src` (see `svelte.config.js`). Choose ONE:
-  - **(preferred)** proxy partner calls via `/api/*` SvelteKit endpoints — keeps CSP tight and adds rate-limit + observability hooks.
-  - **(alternative)** add `https://boapi.ibet247.ca` to `connect-src` and document required CORS headers on the API side.
-- Acceptance: a fetch from a homepage component to the partner API succeeds without a console CSP violation.
+### A4 — CSP + cross-stack seam to the ASP.NET API
+- `boapi.ibet247.ca` is the operator's **C# ASP.NET Core + SQL Server** backend (also serves the Vue admin / member-end / KYC apps). It's referenced as `PARTNER.apiBase` in `site.ts:64` and is currently absent from CSP `connect-src` (see `svelte.config.js`). Choose ONE:
+  - **(preferred)** proxy partner calls via `/api/*` SvelteKit endpoints — keeps CSP tight, isolates the marketing front from CORS configuration on the ASP.NET side, and adds a place for rate-limit + observability hooks. SvelteKit `+server.ts` handlers fetch `boapi.ibet247.ca` server-side, so the browser only ever talks to the same origin.
+  - **(alternative)** add `https://boapi.ibet247.ca` to `connect-src` and coordinate with the ASP.NET team to set `Access-Control-Allow-Origin: https://247ibet.ca` (and `Access-Control-Allow-Credentials` if cookies are needed). Note that cookies set by the ASP.NET app are scoped to the `ibet247.ca` registrable parent — not `247ibet.ca` — so client-side cross-origin cookie sharing won't work; the proxy approach side-steps this.
+- ASP.NET-side coordination needed regardless of choice: confirm the API handles the `247ibet.ca` `Origin` header (allowlist), confirm referer checks (if any) accept the marketing-front origin, confirm rate limits don't blacklist the SvelteKit Vercel egress IP range.
+- Acceptance: a fetch from a homepage component to the partner API succeeds without a console CSP violation; in the proxy variant, `curl -i https://247ibet.ca/api/healthz` returns the proxied response from `boapi.ibet247.ca/healthz` (or whatever endpoint is the smoke test).
 
 ### A5 — Regulatory-claim build gate
 - Add `tests/regulatory-claims.test.ts`: scan `src/` for `/AGCO|iGaming Ontario/` and assert each match either:
@@ -104,11 +121,12 @@ Only the items that don't already exist in the v0.3.0 design system.
 
 ### C1 — `HeroBanner.svelte` (the one truly new component)
 - Pick a single hero pattern (recommend: data-dense — a verified-payout ticker with timestamps from `boapi.ibet247.ca` once A4 lands).
+- **Data source for the ticker:** the ASP.NET API at `boapi.ibet247.ca`. Coordinate with the ASP.NET team for an endpoint shape; suggested contract: `GET /v1/public/payout-stats?window=30d` returning `{median_minutes:N, p95_minutes:N, sample_size:N, generated_at:ISO}`. Cache server-side in the SvelteKit `/api/*` proxy for 5 min to avoid hammering the operator backend. Fallback if the endpoint slips: a nightly prerendered snapshot in `static/data/payout-stats.json` regenerated by a Vercel cron (already-wired pattern in `vercel.json`).
 - Uses existing `--gradient-prestige-gold-foil`, `--font-luxury`, `.luxury-border`. Does NOT redefine tokens.
 - 3D parallax gated behind `@media (hover: hover) and (prefers-reduced-motion: no-preference)` AND viewport `IntersectionObserver` — disabled outside the visible region.
 - LCP candidate: above-the-fold hero image with `loading="eager" fetchpriority="high"` (per `docs/PERFORMANCE.md` §B5).
-- jdzd-redirect-aware variant: detect `?from=jdzd` query (set by Sprint A's redirect rule) and render a one-time welcome ribbon ("You've been redirected from jdzd.com — same operator, same accounts. [Dismiss]"). Cookie-stamp the dismissal.
-- Acceptance: Lighthouse mobile p75 LCP < 2.5s on `/` with HeroBanner visible; INP < 200ms; AA contrast on hero text against any 4-stop ramp position.
+- jdzd-redirect-aware variant: detect `?from=jdzd` query (set by Sprint A's redirect rule) and render a one-time welcome ribbon. Copy must NOT promise account portability ("same operator, same accounts") unless the ASP.NET team confirms account migration is done — otherwise users with jdzd-issued accounts will hit a "create new account" flow on the Vue member-end app and feel deceived. Default copy: "Welcome — you've been redirected from jdzd.com. Same brand, same Interac payouts. [Dismiss]". Cookie-stamp the dismissal.
+- Acceptance: Lighthouse mobile p75 LCP < 2.5s on `/` with HeroBanner visible; INP < 200ms; AA contrast on hero text against any 4-stop ramp position; if ticker uses live data, the API endpoint exists and the proxy cache is configured.
 
 ### C2 — Hover refinements
 - Add a `.hover-scale` utility to `components.css`: `transform: scale(1.02)` only inside `@media (hover: hover) and (pointer: fine)`.
@@ -137,10 +155,23 @@ Only the items that don't already exist in the v0.3.0 design system.
 ## What's explicitly NOT in this plan
 
 - Any "implement" for shipped utilities (`.glow-gold`, `.luxury-border`, gold ramp, Playfair, GlintCard, PayoutProgress, Atmosphere, safe-area, 48px targets) — these exist; treat as primitives.
+- Anything inside the operator product (Vue admin, member-end, KYC, ASP.NET API). Those repos have their own roadmaps; this plan only describes the marketing-front-side seam.
 - Operator-vs-affiliate identity reconciliation — separate workstream; gates Sprint C copy decisions but not engineering.
-- Server-side age gate v2 expansion (KYC integration) — see `docs/DEVELOPMENT_PLAN.md` P2-15.
+- Server-side age gate v2 expansion (KYC integration in this repo) — see `docs/DEVELOPMENT_PLAN.md` P2-15. The actual KYC product runs in the Vue + Pinia + Element Plus app, not here.
 - Lighthouse CI (`docs/DEVELOPMENT_PLAN.md` P2-13).
 - BFG history purge of 183MB hero images — clone-time concern, deferred to v0.3.1.
+
+## Cross-team coordination required
+
+These items can't be done by the SvelteKit team alone — they need ASP.NET-team buy-in:
+
+| Item | Sprint | What the ASP.NET team owns |
+|---|---|---|
+| CSP `connect-src` / proxy | A.A4 | Confirm CORS origin allowlist for `247ibet.ca`; confirm rate-limit doesn't block Vercel egress IPs; provide a smoke endpoint (e.g., `GET /healthz`) |
+| Verified-payout ticker | C.C1 | Build `GET /v1/public/payout-stats?window=30d` (or equivalent); document SLA + cache headers |
+| jdzd-redirect welcome copy | C.C1 | Confirm whether jdzd-issued accounts are migrated to the Vue member-end app, so the welcome-ribbon copy isn't deceptive |
+| AGCO/license claims | A.A5 | If 247iBET has obtained an Ontario licence, surface the licence number + AGCO operator-register URL so `IBET_PROFILE.licences[]` can cite it |
+| KYC/age-gate cookie semantics | A.A6 | If a future v3 wants SSO between the marketing front and the Vue member-end app, that's an ASP.NET-side session-bridge design |
 
 ## Sequencing & gates
 

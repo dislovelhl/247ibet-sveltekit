@@ -23,6 +23,8 @@ All notable changes to 247iBET are documented here.
 
 Full review artifact (CEO + Design + Eng with dual-voice consensus tables, 18-row failure modes registry, decision audit trail) saved at `~/.gstack/projects/247ibet-sveltekit/main-autoplan-review-20260509-060625.md` (661 lines).
 
+Both plans were further updated (commit on this branch) to clarify the multi-repo seam: this repo is the SvelteKit marketing/SEO/affiliate front; the operator product (admin / member-end / KYC) runs in separate Vue 3 + Vite repos with a unified C# ASP.NET Core + SQL Server backend at `boapi.ibet247.ca`. Sprint A.A4 (CSP) and Sprint C.C1 (verified-payout ticker) require ASP.NET-team coordination — added as a "Cross-team coordination required" section in `docs/TECHNICAL_DESIGN_PLAN.md`. The migration plan now explicitly scopes redirects to the marketing front and lists ASP.NET-side cutover gates in §4.
+
 ## [0.3.0.0] - 2026-04-29
 
 ### Added

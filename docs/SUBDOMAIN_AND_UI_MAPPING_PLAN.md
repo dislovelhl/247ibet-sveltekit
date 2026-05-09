@@ -2,9 +2,15 @@
 
 > **Reframe note (2026-05-09)**: rewritten after /autoplan eng review found that "zero codebase changes" understated the work. The redirect itself is straightforward, but path-preservation, versioned config, rollback, GSC change-of-address, and CORS coordination need to be addressed in code. v1 lives in git history if the original phrasing is needed.
 
+## 0. What this plan covers (and what it doesn't)
+
+This plan covers redirecting `jdzd.com` traffic to **the marketing front** at `247ibet.ca`, which is the SvelteKit app in this repo. The actual operator product — admin (Vue 3), member end (Vue 3 + PWA + Firebase push), KYC (Vue 3 + Pinia + Element Plus), and the C# ASP.NET Core + SQL Server backend at `boapi.ibet247.ca` — lives in **separate repositories** and is **not affected** by this redirect. Users redirected from `jdzd.com` land on the SvelteKit marketing front and click out to the Vue member-end app the same way any other inbound user does.
+
+What's in scope here: SvelteKit marketing front + Vercel infra + DNS + SEO. What's out of scope: anything inside `boapi.ibet247.ca`, the Vue member-end / admin / KYC apps, or jdzd.com's user-account database (if any) — those need their own migration plans owned by the ASP.NET team.
+
 ## 1. Goal
 
-`247ibet.ca` is the surviving brand. `jdzd.com` and `www.jdzd.com` are sunset. Traffic from jdzd is mapped to 247ibet.ca via path-preserving 301 redirects, configured in versioned infrastructure (`vercel.json`), with a coordinated SEO and analytics handoff.
+`247ibet.ca` is the surviving brand for the marketing front. `jdzd.com` and `www.jdzd.com` are sunset. Traffic from jdzd is mapped to 247ibet.ca via path-preserving 301 redirects, configured in versioned infrastructure (`vercel.json`), with a coordinated SEO and analytics handoff. Account / payment / live-data continuity (i.e., whether a jdzd account holder can log into the Vue member-end app post-cutover) is a separate concern owned by the ASP.NET team.
 
 ## 2. Technical mapping (versioned, not Dashboard-only)
 
@@ -45,13 +51,19 @@ Before cutover, decide the disposition of any `jdzd.com` paths that don't have a
 
 `migration-review-247ibet/REDIRECT_MAP_DRAFT.csv` is the source draft. Promote to `static/redirect-map.json` (or directly into `vercel.json`) before cutover.
 
-## 4. Compliance gate (blocks cutover)
+## 4. Compliance + cross-stack gate (blocks cutover)
 
-Per `migration-review-247ibet/CUTOVER_RUNBOOK.md` Phase 0 and `migration-review-247ibet/OPEN_QUESTIONS.md` #1, the cutover is gated on:
+Per `migration-review-247ibet/CUTOVER_RUNBOOK.md` Phase 0 and `migration-review-247ibet/OPEN_QUESTIONS.md` #1, the cutover is gated on the SvelteKit-side items below AND on confirmation from the ASP.NET-team (operator backend) that nothing breaks downstream.
 
+**SvelteKit / marketing front (this repo):**
 - [ ] Legal/compliance signoff on the wording "AGCO" and "iGaming Ontario" on 247ibet.ca pages. `IBET_PROFILE.agcoLicensed = false` per `docs/COMPLIANCE_AUDIT_v0.3.md` — redirecting jdzd traffic into a site that asserts unverified AGCO regulation amplifies regulatory exposure for both brands.
 - [ ] Sprint A.A5 (regulatory-claim build gate) green: every `AGCO|iGaming Ontario` reference in `src/` is either paired with a verified licence or qualified as review/comparison context.
 - [ ] Sprint A.A4 (CSP `connect-src` includes `boapi.ibet247.ca`, OR partner calls proxied through `/api/*`) — otherwise users redirected from jdzd will see broken CTAs.
+
+**Cross-stack (ASP.NET team owns these):**
+- [ ] `boapi.ibet247.ca` rate-limiter + CORS allowlist confirms `https://247ibet.ca` as a valid origin (proxy variant: confirm Vercel egress IP range isn't blocked).
+- [ ] Account-continuity decision documented: do jdzd-issued accounts exist in the operator DB? If yes, are they auto-migrated, manually re-verified, or required to re-register? This determines whether the marketing front can promise "same accounts" in jdzd-redirect copy (Sprint C.C1 in `docs/TECHNICAL_DESIGN_PLAN.md`).
+- [ ] Affiliate / `utmSource: '247ibet'` tracking continues to attribute correctly post-cutover (check with operator analytics owner).
 
 Cutover does not start until all three boxes are checked.
 
