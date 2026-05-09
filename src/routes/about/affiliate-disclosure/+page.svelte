@@ -1,3 +1,4 @@
+<!-- regulatory-claim:context: AGCO and iGaming Ontario references describe regulators or third-party operators, not 247iBET's own licensing posture. -->
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
@@ -169,7 +170,8 @@
         and directs players to operator sites to view current terms.
       </p>
       <p>
-        If you believe any content on 247iBET violates AGCO guidelines, please
+        If you believe any content on 247iBET is misleading or non-compliant with Canadian
+        gambling advertising standards, please
         <a href="/contact" class="text-slate-blue hover:underline">contact us immediately</a>.
       </p>
     </div>

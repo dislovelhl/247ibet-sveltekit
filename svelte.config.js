@@ -14,7 +14,7 @@ const config = {
         'script-src': ["'self'", "'strict-dynamic'", 'https://va.vercel-scripts.com'],
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:', 'https:'],
-        'connect-src': ["'self'", 'https://vitals.vercel-insights.com', 'https://*.sentry.io'],
+        'connect-src': ["'self'", 'https://vitals.vercel-insights.com', 'https://*.sentry.io', 'https://boapi.ibet247.ca'],
         'frame-src': ["'none'"],
         'object-src': ["'none'"],
         'base-uri': ["'none'"],

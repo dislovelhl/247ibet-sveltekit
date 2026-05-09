@@ -1,3 +1,4 @@
+<!-- regulatory-claim:context: AGCO and iGaming Ontario references describe regulators or third-party operators, not 247iBET's own licensing posture. -->
 <script lang="ts">
   // Design system showcase — static, no interactive state needed
   const sections = [
@@ -100,7 +101,7 @@
   <title>247iBET Design System — Prestige Navy</title>
   <meta
     name="description"
-    content="Living styleguide for the 247iBET Prestige Navy aesthetic. Tokens, components, and iGaming-native primitives built for AGCO-licensed Canadian betting."
+    content="Living styleguide for the 247iBET Prestige Navy aesthetic. Tokens, components, and iGaming-native primitives for Canadian betting surfaces."
   />
   <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
@@ -1337,7 +1338,7 @@
       <footer class="border-t border-white/5 pt-10">
         <hr class="seam-rule mb-8" aria-hidden="true" />
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-text-tertiary">
-          247iBET · Prestige Navy · Dark mode only · AGCO regulated
+          247iBET · Prestige Navy · Dark mode only
         </p>
         <p class="mt-2 max-w-xl text-[13px] text-text-body">
           Tokens live in <code class="text-prestige-gold">app/globals.css</code>. Component specs
