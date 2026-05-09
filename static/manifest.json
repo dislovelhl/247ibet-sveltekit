@@ -4,13 +4,18 @@
   "description": "Canada's regulated iGaming research and comparison platform.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050B14",
-  "theme_color": "#050B14",
+  "background_color": "#070C18",
+  "theme_color": "#070C18",
   "icons": [
     {
       "src": "/favicon.png",
       "sizes": "180x180",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "orientation": "portrait",

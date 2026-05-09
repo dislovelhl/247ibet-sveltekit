@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="128" fill="#070C18"/>
+  <defs>
+    <linearGradient id="gold_foil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D6AF" />
+      <stop offset="35%" stop-color="#D4943A" />
+      <stop offset="65%" stop-color="#A9824B" />
+      <stop offset="100%" stop-color="#F2C586" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Stylized "2" -->
+  <path d="M160 180C160 146.863 186.863 120 220 120H240C273.137 120 300 146.863 300 180V190C300 200 295 210 285 220L160 340H320V380H160V360L260 260C270 250 270 240 270 230V180C270 163.431 256.569 150 240 150H220C203.431 150 190 163.431 190 180V200H160V180Z" fill="url(#gold_foil)" filter="url(#glow)"/>
+  
+  <!-- Stylized "7" integrated -->
+  <path d="M340 120H230V150H320L220 380H260L350 160C355 145 355 135 340 120Z" fill="url(#gold_foil)" opacity="0.8"/>
+  
+  <!-- Decorative Luxury Accents -->
+  <rect x="251" y="80" width="10" height="40" rx="5" fill="url(#gold_foil)"/>
+  <rect x="251" y="392" width="10" height="40" rx="5" fill="url(#gold_foil)"/>
+</svg>
