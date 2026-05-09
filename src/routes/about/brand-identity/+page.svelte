@@ -202,9 +202,8 @@
           roulette, baccarat, and live dealer casino games alongside sports betting on NHL, CFL,
           NBA, UFC, soccer, and football. We specialize in fast Interac e-Transfer payouts (under
           24 hours for verified accounts), CAD banking, and player bonuses for Canadian players.
-          We operate within the iGaming Ontario regulated framework and follow AGCO standards for
-          responsible gambling, including deposit limits, session reminders, and self-exclusion
-          tools.
+          We follow industry-standard responsible gambling practices including deposit limits,
+          session reminders, and self-exclusion tools.
         </p>
       </div>
     </div>

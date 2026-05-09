@@ -1,3 +1,4 @@
+<!-- regulatory-claim:context: this page is review/guide content. AGCO and iGaming Ontario references describe regulators, not 247iBET licensing posture. -->
 <script lang="ts">
   // Design system showcase — static, no interactive state needed
   const sections = [
@@ -1337,7 +1338,7 @@
       <footer class="border-t border-white/5 pt-10">
         <hr class="seam-rule mb-8" aria-hidden="true" />
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-text-tertiary">
-          247iBET · Prestige Navy · Dark mode only · AGCO regulated
+          247iBET · Prestige Navy · Dark mode only
         </p>
         <p class="mt-2 max-w-xl text-[13px] text-text-body">
           Tokens live in <code class="text-prestige-gold">app/globals.css</code>. Component specs
