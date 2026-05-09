@@ -1,4 +1,4 @@
-<!-- regulatory-claim:context: this page is review/guide content. AGCO and iGaming Ontario references describe regulators, not 247iBET licensing posture. -->
+<!-- regulatory-claim:context: AGCO and iGaming Ontario references describe regulators or third-party operators, not 247iBET's own licensing posture. -->
 <script lang="ts">
   // Design system showcase — static, no interactive state needed
   const sections = [
@@ -101,7 +101,7 @@
   <title>247iBET Design System — Prestige Navy</title>
   <meta
     name="description"
-    content="Living styleguide for the 247iBET Prestige Navy aesthetic. Tokens, components, and iGaming-native primitives built for AGCO-licensed Canadian betting."
+    content="Living styleguide for the 247iBET Prestige Navy aesthetic. Tokens, components, and iGaming-native primitives for Canadian betting surfaces."
   />
   <meta name="robots" content="noindex, nofollow" />
 </svelte:head>

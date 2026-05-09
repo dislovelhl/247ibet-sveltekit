@@ -1,4 +1,4 @@
-<!-- regulatory-claim:context: this page is review/guide content. AGCO and iGaming Ontario references describe regulators, not 247iBET licensing posture. -->
+<!-- regulatory-claim:context: AGCO and iGaming Ontario references describe regulators or third-party operators, not 247iBET's own licensing posture. -->
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
   import { articleSchema, howToSchema } from '$lib/json-ld';
