@@ -7,7 +7,7 @@ import { articleSchema } from '$lib/json-ld';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Blackjack Online';
-  const heroImage = '/images/generated/casino-blackjack-hero.png';
+  const heroImage = '/images/generated/casino-blackjack-hero.webp';
 
   const intro = {
     eyebrow: 'Blackjack online Canada',

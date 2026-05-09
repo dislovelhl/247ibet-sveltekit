@@ -6,7 +6,7 @@
 import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'Live Casino';
-  const heroImage = '/images/generated/casino-live-hero.png';
+  const heroImage = '/images/generated/casino-live-hero.webp';
 
   const intro = {
     eyebrow: 'Live dealer Canada',

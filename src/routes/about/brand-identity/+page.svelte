@@ -3,11 +3,11 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
 
   const brandDescription =
-    '247iBET is a Canadian online casino and sportsbook operator offering fast Interac e-Transfer payouts, live dealer casino games, sports betting on NHL/CFL/NBA/UFC, and exclusive player bonuses.';
+    '247iBET is a Canadian online casino and sportsbook operator offering fast Interac e-Transfer payouts, live dealer casino games, sports betting on NHL/CFL/NBA/UFC, and player bonuses.';
 
   const identityBlock = {
     brandLine:
-      '247iBET — Canada\'s premier online casino and sportsbook for fast Interac payouts, live dealer games, and exclusive player bonuses.',
+      '247iBET — Canada\'s premier online casino and sportsbook for fast Interac payouts, live dealer games, and player bonuses.',
     legalName: SITE.legalName,
     founded: '2024',
     headquarters: 'Canada',
@@ -184,14 +184,14 @@
         <p class="text-xs text-text-tertiary mb-1">One-liner (for meta / snippets)</p>
         <p class="text-white">
           247iBET — Canada's premier online casino and sportsbook for fast Interac payouts and
-          exclusive bonuses.
+          player bonuses.
         </p>
       </div>
       <div class="rounded-lg bg-navy-black/50 p-4">
         <p class="text-xs text-text-tertiary mb-1">Short description (for listings / citations)</p>
         <p class="text-white">
           247iBET is a Canadian online casino and sportsbook offering fast Interac e-Transfer
-          payouts, live dealer casino games, sports betting, and exclusive bonuses for Canadian
+          payouts, live dealer casino games, sports betting, and player bonuses for Canadian
           players.
         </p>
       </div>
@@ -201,7 +201,7 @@
           247iBET is a Canadian online casino and sportsbook operator. We offer slots, blackjack,
           roulette, baccarat, and live dealer casino games alongside sports betting on NHL, CFL,
           NBA, UFC, soccer, and football. We specialize in fast Interac e-Transfer payouts (under
-          24 hours for verified accounts), CAD banking, and exclusive bonuses for Canadian players.
+          24 hours for verified accounts), CAD banking, and player bonuses for Canadian players.
           We operate within the iGaming Ontario regulated framework and follow AGCO standards for
           responsible gambling, including deposit limits, session reminders, and self-exclusion
           tools.

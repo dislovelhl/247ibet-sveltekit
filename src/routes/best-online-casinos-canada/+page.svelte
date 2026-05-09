@@ -129,7 +129,7 @@
       class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56"
     >
       <img
-        src="/images/generated/review-checklist-hero.png"
+        src="/images/generated/review-checklist-hero.webp"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />

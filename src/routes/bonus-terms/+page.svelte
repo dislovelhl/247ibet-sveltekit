@@ -90,7 +90,7 @@
       <div class="not-prose grid gap-6" data-reveal-stagger="true">
         {#each IBET_PROMO_SNAPSHOT as promo}
           <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
-            <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
@@ -110,7 +110,7 @@
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
           <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
-            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
@@ -125,7 +125,7 @@
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
           <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
-            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>

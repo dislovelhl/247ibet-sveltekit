@@ -80,49 +80,49 @@
       title: 'Online Slots',
       body: 'Thousands of top slot games from leading providers.',
       href: '/casino/slots',
-      image: '/images/generated/casino-slots-hero.png',
+      image: '/images/generated/casino-slots-hero.webp',
       icon: Sparkles,
     },
     {
       title: 'Live Casino',
       body: 'Live dealer roulette, blackjack and more. Real dealers. Real thrill.',
       href: '/casino/live-casino',
-      image: '/images/generated/casino-live-hero.png',
+      image: '/images/generated/casino-live-hero.webp',
       icon: MonitorPlay,
     },
     {
       title: 'Blackjack Online',
       body: 'Classic casino action with multiple blackjack variations to enjoy.',
       href: '/casino/blackjack',
-      image: '/images/generated/casino-blackjack-hero.png',
+      image: '/images/generated/casino-blackjack-hero.webp',
       icon: BadgeCheck,
     },
     {
       title: 'Roulette Online',
       body: 'European, American, French and more. All your favourite roulette tables.',
       href: '/casino/roulette',
-      image: '/images/generated/casino-roulette-hero.png',
+      image: '/images/generated/casino-roulette-hero.webp',
       icon: CircleDollarSign,
     },
     {
       title: 'Baccarat Online',
       body: 'Point Baccarat, no commission baccarat, and more strategic table games.',
       href: '/casino/baccarat',
-      image: '/images/generated/casino-baccarat-hero.png',
+      image: '/images/generated/casino-baccarat-hero.webp',
       icon: CreditCard,
     },
     {
       title: 'Mobile Casino',
       body: 'Optimized for mobile. Enjoy casino on the go anytime, anywhere.',
       href: '/casino/mobile',
-      image: '/images/generated/casino-premium-hero.png',
+      image: '/images/generated/casino-premium-hero.webp',
       icon: Smartphone,
     },
     {
       title: 'CAD Casino',
       body: 'Play in CAD with Canadian dollars. No FX fees, no hassle.',
       href: '/casino/cad',
-      image: '/images/generated/casino-premium-hero.png',
+      image: '/images/generated/casino-premium-hero.webp',
       icon: CircleDollarSign,
     },
   ];
@@ -255,7 +255,7 @@
       class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-card shadow-2xl"
     >
       <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-60"
+        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
         style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
       ></div>
       <div

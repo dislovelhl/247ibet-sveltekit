@@ -8,7 +8,7 @@ import { articleSchema } from '$lib/json-ld';
   import FAQ from '$lib/components/FAQ.svelte';
 
   const pageName = 'Online Slots';
-  const heroImage = '/images/generated/casino-slots-hero.png';
+  const heroImage = '/images/generated/casino-slots-hero.webp';
 
   const intro = {
     eyebrow: 'Online slots Canada',

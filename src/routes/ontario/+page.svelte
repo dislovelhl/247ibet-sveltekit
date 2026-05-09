@@ -188,7 +188,7 @@
 
     <header class="relative mb-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
       <img
-        src="/images/generated/canada-market-hero.png"
+        src="/images/generated/canada-market-hero.webp"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
         style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"

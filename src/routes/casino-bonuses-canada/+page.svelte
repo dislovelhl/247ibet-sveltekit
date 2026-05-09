@@ -130,7 +130,7 @@ import { articleSchema } from '$lib/json-ld';
     <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
         <article class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift" use:reveal>
-          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{promo.title}</p>
             <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>

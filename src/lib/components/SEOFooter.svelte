@@ -65,6 +65,7 @@
               width="140"
               height="40"
               class="h-10 w-auto shrink-0 object-contain"
+              loading="lazy"
             />
             <div class="sr-only">
               <h2

@@ -15,7 +15,7 @@
     keywords: 'parlay betting Canada, same game parlay Canada, parlay calculator',
     heroSubheading:
       'Understand how parlays stack multiple selections, how same-game parlays differ from multi-game tickets, and why risk rises with every added leg.',
-    heroImage: '/images/generated/sportsbook-parlay-hero.png',
+    heroImage: '/images/generated/sportsbook-parlay-hero.webp',
     overviewTitle: 'Parlay betting basics for Canadians',
     overviewIntro:
       'Parlays remain popular because they combine multiple prices into one ticket. That convenience comes with extra volatility, so the structure matters as much as the payout math.',

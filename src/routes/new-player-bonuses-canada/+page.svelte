@@ -112,7 +112,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </p>
     <div class="relative my-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card">
       <img
-        src="/images/generated/bonus-wagering-hero.png"
+        src="/images/generated/bonus-wagering-hero.webp"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />
@@ -159,7 +159,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="mt-4 grid gap-4 sm:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
         <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
-          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-4">
             <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
             <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>

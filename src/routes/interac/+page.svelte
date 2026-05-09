@@ -206,7 +206,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
         class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl aspect-[5/6] sm:aspect-auto"
       >
         <img
-          src="/images/generated/interac-payment-hero.png"
+          src="/images/generated/interac-payment-hero.webp"
           alt="Interac e-Transfer secure payment visual"
           class="h-full min-h-[340px] w-full object-cover"
         />

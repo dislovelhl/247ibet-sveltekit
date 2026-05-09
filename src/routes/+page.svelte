@@ -159,28 +159,28 @@
       title: 'Slots',
       body: 'Slots, live dealer, blackjack, roulette, baccarat, and jackpots',
       href: '/casino/slots',
-      image: '/images/generated/casino-slots-hero.png',
+      image: '/images/generated/casino-slots-hero.webp',
       alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
     {
       title: 'Live Casino',
       body: 'Best for live dealer tables and streamed casino play',
       href: '/casino/live-casino',
-      image: '/images/generated/casino-live-hero.png',
+      image: '/images/generated/casino-live-hero.webp',
       alt: 'Live dealer casino table with cards, chips, and premium studio lighting.',
     },
     {
       title: 'Table Games',
       body: 'Best for classic casino rules and mobile table games',
       href: '/casino/blackjack',
-      image: '/images/generated/casino-blackjack-hero.png',
+      image: '/images/generated/casino-blackjack-hero.webp',
       alt: 'Classic blackjack table on a dark felt surface with polished chips.',
     },
     {
       title: 'Jackpots',
       body: 'Check terms, RTP information, and provider availability',
       href: '/casino',
-      image: '/images/generated/casino-slots-hero.png',
+      image: '/images/generated/casino-slots-hero.webp',
       alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
   ];
@@ -190,28 +190,28 @@
       title: 'Sports Betting',
       body: 'NHL, NBA, NFL, UFC, soccer, tennis, parlays, and futures',
       href: '/sportsbook',
-      image: '/images/generated/sportsbook-premium-hero.png',
+      image: '/images/generated/sportsbook-premium-hero.webp',
       alt: 'Premium sportsbook dashboard showing major leagues, odds, and betting markets.',
     },
     {
       title: 'Live Betting',
       body: 'Confirm live market rules, accepted price, and settlement terms',
       href: '/sportsbook/live-betting',
-      image: '/images/generated/sportsbook-live-betting-hero.png',
+      image: '/images/generated/sportsbook-live-betting-hero.webp',
       alt: 'Live betting interface with rapidly updating odds and match coverage.',
     },
     {
       title: 'Hockey',
       body: 'Hockey markets for Canadian bettors',
       href: '/sportsbook/nhl',
-      image: '/images/generated/sportsbook-nhl-hero.png',
+      image: '/images/generated/sportsbook-nhl-hero.webp',
       alt: 'Hockey betting card with rink-inspired visuals and Canadian sports context.',
     },
     {
       title: 'Basketball',
       body: 'Basketball markets, props, and parlays',
       href: '/sportsbook/nba',
-      image: '/images/generated/sportsbook-nba-hero.png',
+      image: '/images/generated/sportsbook-nba-hero.webp',
       alt: 'Basketball betting card with props, parlays, and game-time odds.',
     },
   ];
@@ -221,28 +221,28 @@
       title: 'How to Start Betting in Canada',
       body: 'A beginner guide to sports betting.',
       href: '/guides/single-game-betting-canada',
-      image: '/images/generated/sportsbook-parlay-hero.png',
+      image: '/images/generated/sportsbook-parlay-hero.webp',
       alt: 'Canadian sports betting guide card with parlays and strategy visuals.',
     },
     {
       title: 'Best Casino Games for Real Money',
       body: 'Top picks for the best real-money games.',
       href: '/casino',
-      image: '/images/generated/casino-premium-hero.png',
+      image: '/images/generated/casino-premium-hero.webp',
       alt: 'Premium casino guide card with a refined dark-luxury atmosphere.',
     },
     {
       title: 'Fast Withdrawals Explained',
       body: 'Approval, KYC, and Interac timing explained.',
       href: '/deposit',
-      image: '/images/generated/fast-payouts-hero.png',
+      image: '/images/generated/fast-payouts-hero.webp',
       alt: 'Fast payout guide card highlighting Interac timing and approval flow.',
     },
     {
       title: 'Bankroll Management 101',
       body: 'Set budgets and limits before playing.',
       href: '/guides/strategy',
-      image: '/images/generated/bonus-wagering-hero.png',
+      image: '/images/generated/bonus-wagering-hero.webp',
       alt: 'Bonus wagering guide card with casino terms and playthrough context.',
     },
   ];
@@ -331,7 +331,7 @@
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
       description:
-        '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and exclusive bonuses for Canadian players.',
+        '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and player bonuses for Canadian players.',
       areaServed: {
         '@type': 'Country',
         name: 'Canada',
@@ -563,7 +563,7 @@
           preload="metadata"
           width="1280"
           height="720"
-          poster="/images/generated/casino-premium-hero.png"
+          poster="/images/generated/casino-premium-hero.webp"
           aria-label="247iBET casino, sportsbook, and fast payouts overview video"
         >
           <source src="/videos/247ibet-home-promo.mp4" type="video/mp4" />

@@ -235,7 +235,7 @@
         class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-35"
       ></div>
       <div
-        class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_72%_30%,rgba(212,148,58,0.24),transparent_34%),url('/images/generated/safe-play-shield-hero.png')] bg-cover bg-center opacity-70 md:block"
+        class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_72%_30%,rgba(212,148,58,0.24),transparent_34%),url('/images/generated/safe-play-shield-hero.webp')] bg-cover bg-center opacity-70 md:block"
       ></div>
 
       <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">

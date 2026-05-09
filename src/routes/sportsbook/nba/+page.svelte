@@ -15,7 +15,7 @@
     keywords: 'NBA betting Canada, basketball betting Canada, NBA odds Canada',
     heroSubheading:
       'Follow Raptors games, compare spread and total markets, and track live NBA odds through the regular season, playoffs, and championship futures cycle.',
-    heroImage: '/images/generated/sportsbook-nba-hero.png',
+    heroImage: '/images/generated/sportsbook-nba-hero.webp',
     overviewTitle: 'NBA markets Canadian bettors monitor',
     overviewIntro:
       'NBA betting menus are deep, especially on high-profile games. Spread, total, and player-prop pricing can all change quickly around injury news and rest patterns.',

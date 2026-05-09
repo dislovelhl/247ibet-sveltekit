@@ -15,7 +15,7 @@
     keywords: 'football betting Canada, NFL betting Canada, Super Bowl betting',
     heroSubheading:
       'Compare NFL spreads, totals, props, and futures, with live markets and Super Bowl betting tracked through the full football season in Canada.',
-    heroImage: '/images/generated/sportsbook-football-hero.png',
+    heroImage: '/images/generated/sportsbook-football-hero.webp',
     overviewTitle: 'Football betting coverage in Canada',
     overviewIntro:
       'For many Canadian bettors, football betting means the NFL first. Weekly menu depth, injury reporting, and futures markets all shape how the board behaves from September through the Super Bowl.',

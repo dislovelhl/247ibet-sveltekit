@@ -152,7 +152,7 @@
     <div class="mt-6 grid gap-4 lg:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
         <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
-          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+<img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
             <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
@@ -179,7 +179,7 @@
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
         <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
-          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+<img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
             <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>

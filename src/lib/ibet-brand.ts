@@ -113,7 +113,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Welcome offer — see cashier for full terms',
     summary:
       'New players get up to C$2000 bonus back plus 10 free spins on sign-up. Check deposit minimums, wagering requirements, eligible games, and expiry in our cashier before opting in.',
-    image: '/images/creatives/welcome-bonus-back.png',
+    image: '/images/creatives/welcome-bonus-back.webp',
     alt: '247iBET welcome bonus: Get $2000 bonus back plus 10 free spins.',
     observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247iBET.ca'],
   },
@@ -125,7 +125,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Ongoing — see cashier for full terms',
     summary:
       'Enjoy a C$1000 bonus on every deposit you make. Confirm whether the cap applies per deposit, per day, or over a campaign window in our cashier.',
-    image: '/images/creatives/every-deposit-bonus.png',
+    image: '/images/creatives/every-deposit-bonus.webp',
     alt: '247iBET: $1000 bonus every deposit.',
     observedText: ['$1000 BONUS EVERY DEPOSIT'],
   },
@@ -137,7 +137,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'May 1–10 — see cashier for full terms',
     summary:
       'Celebrate with our Mother\'s Day Double Rewards event. Deposit C$50 and get a C$50 bonus. Check wagering and eligible games in our cashier.',
-    image: '/images/creatives/mothers-day-double-rewards.png',
+    image: '/images/creatives/mothers-day-double-rewards.webp',
     alt: '247iBET Mother\'s Day Double Rewards: Deposit $50 Get $50 Bonus.',
     observedText: ['Mother\'s Day Double Rewards', 'Deposit $50 Get $50 Bonus', 'May. 1st – May. 10'],
   },
@@ -149,7 +149,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Sep. 26 at Rebel, Toronto',
     summary:
       'We were proud to sponsor Unified MMA 63 with a Live Bonus event at Rebel Toronto. Check our sportsbook for current fight-night promotions.',
-    image: '/images/creatives/live-bonus-unified-mma.png',
+    image: '/images/creatives/live-bonus-unified-mma.webp',
     alt: '247iBET Unified MMA 63: Live Bonus. Sep. 26 Rebel Toronto.',
     observedText: ['LIVE BONUS', 'SEP.26', 'REBEL · TORONTO', '247iBET UNIFIED MMA 63'],
   },
@@ -185,7 +185,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Jan. 9–11 at Toronto International Centre',
     summary:
       'We were at the Toronto International Centre Jan. 9–11 for the Chase the Big Win motorcycle supershow. Join us at our next event appearance.',
-    image: '/images/creatives/chase-the-big-win.png',
+    image: '/images/creatives/chase-the-big-win.webp',
     alt: 'Chase the Big Win event: Jan. 9–11, Toronto International Centre.',
     observedText: ['CHASE THE BIG WIN', 'JAN. 9–11', 'TORONTO | INTERNATIONAL CENTRE'],
   },
@@ -197,7 +197,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Oct. 12–19 at Toronto International Centre',
     summary:
       'Our team was at the TABOO Toronto event Oct. 12–19. Stay tuned for our next event appearance.',
-    image: '/images/creatives/play-for-pleasure.png',
+    image: '/images/creatives/play-for-pleasure.webp',
     alt: 'TABOO event: Play for Pleasure. Oct. 12–19, Toronto International Centre.',
     observedText: ['PLAY FOR PLEASURE', 'OCT. 12–19', 'TORONTO INTERNATIONAL CENTRE', '247iBET TABOO'],
   },
@@ -209,7 +209,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Nov. 14–16 at Edmonton Expo Centre',
     summary:
       'We connected with players at TABOO Edmonton Nov. 14–16. Check our events page for upcoming appearances near you.',
-    image: '/images/creatives/spin-your-fantasy.png',
+    image: '/images/creatives/spin-your-fantasy.webp',
     alt: 'TABOO Edmonton: Spin Your Fantasy. Nov. 14–16, Edmonton Expo Centre.',
     observedText: ['SPIN YOUR FANTASY', 'NOV. 14–16', 'EDMONTON EXPO CENTRE', '247iBET TABOO'],
   },

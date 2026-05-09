@@ -15,7 +15,7 @@
     keywords: 'soccer betting Canada, football betting Canada, Premier League betting',
     heroSubheading:
       'Follow Premier League, Champions League, MLS, and World Cup markets with match result, total, live, and selected team or player betting options.',
-    heroImage: '/images/generated/sportsbook-soccer-hero.png',
+    heroImage: '/images/generated/sportsbook-soccer-hero.webp',
     overviewTitle: 'Major soccer markets available to Canadians',
     overviewIntro:
       'Soccer betting spans domestic leagues, continental tournaments, and international competitions. Settlement rules can differ depending on whether the market is for 90 minutes or extra time.',

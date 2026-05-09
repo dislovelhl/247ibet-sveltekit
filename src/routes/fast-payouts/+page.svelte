@@ -115,7 +115,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <!-- Editorial image callout -->
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
-    <img src="/images/generated/fast-payouts-hero.png" alt="Fast Interac e-Transfer casino payouts in Canada" class="h-full w-full object-cover" />
+    <img src="/images/generated/fast-payouts-hero.webp" alt="Fast Interac e-Transfer casino payouts in Canada" class="h-full w-full object-cover" />
     <div
       class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/55 to-transparent"
     ></div>

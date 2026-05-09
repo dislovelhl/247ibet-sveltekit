@@ -383,7 +383,7 @@
           class="relative min-w-0 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl"
         >
           <img
-            src="/images/generated/sportsbook-premium-hero.png"
+            src="/images/generated/sportsbook-premium-hero.webp"
             alt=""
             class="absolute inset-0 h-full w-full object-cover opacity-40"
             style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"

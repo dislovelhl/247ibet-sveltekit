@@ -155,7 +155,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
       class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56"
     >
       <img
-        src="/images/generated/legal-compliance-hero.png"
+        src="/images/generated/legal-compliance-hero.webp"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />

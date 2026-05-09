@@ -7,7 +7,7 @@ import { articleSchema } from '$lib/json-ld';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Roulette Online';
-  const heroImage = '/images/generated/casino-roulette-hero.png';
+  const heroImage = '/images/generated/casino-roulette-hero.webp';
 
   const intro = {
     eyebrow: 'Roulette online Canada',
