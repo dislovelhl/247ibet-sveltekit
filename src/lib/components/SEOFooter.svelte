@@ -60,13 +60,13 @@
         <section aria-labelledby="footer-brand-heading" use:reveal class="reveal-fade-up">
           <div class="mb-5 flex items-center gap-4">
             <img
-              src="/favicon.svg"
+              src="/images/brand/logo.png"
               alt={SITE.name}
-              width="44"
-              height="44"
-              class="h-11 w-11 shrink-0 object-contain"
+              width="140"
+              height="40"
+              class="h-10 w-auto shrink-0 object-contain"
             />
-            <div>
+            <div class="sr-only">
               <h2
                 id="footer-brand-heading"
                 class="text-base font-black uppercase tracking-[0.14em] text-white"

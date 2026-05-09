@@ -19,7 +19,7 @@
   // Constants
   // ---------------------------------------------------------------------------
 
-  const LOGO_SRC = '/favicon.svg';
+  const LOGO_SRC = '/images/brand/logo.png';
   const MOBILE_MENU_ID = 'mobile-menu-panel';
   const FOCUSABLE_SELECTOR =
     'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';

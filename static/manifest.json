@@ -8,14 +8,9 @@
   "theme_color": "#070C18",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/images/brand/logo.png",
       "sizes": "180x180",
       "type": "image/png"
-    },
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
   ],
   "orientation": "portrait",
