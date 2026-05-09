@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import {
@@ -64,6 +65,14 @@
     content="Compare the best sportsbook promotions in Canada for 2026. We evaluate bet credits, price enhancements, parlay insurance, and reload offers from top Canadian sportsbooks. Updated monthly."
   />
   <link rel="canonical" href={canonicalUrl('/sportsbook-bonuses-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Sportsbook Promotions Canada 2026 — Offer Credits & Price Enhancements | 247iBET',
+      description: 'Compare the best sportsbook promotions in Canada for 2026. We evaluate bet credits, price enhancements, parlay insurance, and reload offers from top Canadian sportsbooks. Updated monthly.',
+      url: canonicalUrl('/sportsbook-bonuses-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

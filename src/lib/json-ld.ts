@@ -22,3 +22,68 @@ export function safeJsonLd(value: unknown): string {
 export function jsonLdScriptHtml(schema: unknown): string {
   return `<script type="application/ld+json">${safeJsonLd(schema)}${JSON_LD_SCRIPT_CLOSE}`;
 }
+
+// Reusable Article schema builder — use on any content page.
+// Pages with Article + BreadcrumbList + FAQPage are cited 2x more by AI engines.
+export interface ArticleSchemaOpts {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  imageUrl?: string;
+}
+
+export function articleSchema(opts: ArticleSchemaOpts): Record<string, unknown> {
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: opts.headline,
+    description: opts.description,
+    url: opts.url,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified ?? opts.datePublished,
+    publisher: {
+      '@type': 'Organization',
+      name: '247iBET',
+      url: 'https://247ibet.ca',
+    },
+  };
+  if (opts.imageUrl) schema.image = opts.imageUrl;
+  return schema;
+}
+
+// Reusable HowTo schema — triggers AI Overviews 73% of the time for "how to" queries.
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
+export interface HowToSchemaOpts {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+  estimatedCost?: { currency: string; value: string };
+  totalTime?: string;
+}
+
+export function howToSchema(opts: HowToSchemaOpts): Record<string, unknown> {
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: opts.name,
+    description: opts.description,
+    step: opts.steps.map((step, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: step.name,
+      itemListElement: {
+        '@type': 'HowToDirection',
+        text: step.text,
+      },
+    })),
+  };
+  if (opts.estimatedCost) schema.estimatedCost = opts.estimatedCost;
+  if (opts.totalTime) schema.totalTime = opts.totalTime;
+  return schema;
+}

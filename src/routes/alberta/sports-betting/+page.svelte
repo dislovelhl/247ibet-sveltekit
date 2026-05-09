@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -68,6 +69,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Prepare for Alberta sports betting launch with AGLC context, local market expectations, and Interac readiness."
   />
   <link rel="canonical" href={canonicalUrl('/alberta/sports-betting')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Alberta Sports Betting | 247iBET Availability',
+      description:
+        'Check Alberta sports betting availability ahead of the July 13, 2026 launch. Review AGLC context, expected NHL and CFL markets, Interac readiness, and preparation steps.',
+      url: canonicalUrl('/alberta/sports-betting'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

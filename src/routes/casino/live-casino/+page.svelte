@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'Live Casino';
   const heroImage = '/images/generated/casino-live-hero.png';
@@ -94,6 +95,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/live-casino')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Live Casino Canada | 247iBET Canada',
+      description:
+        'Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup.',
+      url: canonicalUrl('/casino/live-casino'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -107,6 +117,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/live-casino',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

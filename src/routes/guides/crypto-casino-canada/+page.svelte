@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -48,6 +49,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed."
   />
   <link rel="canonical" href={canonicalUrl('/guides/crypto-casino-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Crypto Casino Canada 2026 — Bitcoin & Ethereum Casino Sites | 247iBET',
+      description: 'Crypto casinos available to Canadian players. Bitcoin, Ethereum, and instant-withdrawal sites reviewed. Compliance and tax considerations for Canadian crypto gamblers.',
+      url: canonicalUrl('/guides/crypto-casino-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

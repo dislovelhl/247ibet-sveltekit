@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -28,6 +29,14 @@
     content="Deposit credits are a popular promotional tool used by online casinos to attract new players and retain existing ones."
   />
   <link rel="canonical" href={canonicalUrl('/guides/deposit-free-spins')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Deposit Credits: How to Claim and Maximize Casino Offers with Wagering Insights | 247iBET',
+      description: 'Deposit credits are a popular promotional tool used by online casinos to attract new players and retain existing ones. These offers allow players to spin the reels without financial risk.',
+      url: canonicalUrl('/guides/deposit-free-spins'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

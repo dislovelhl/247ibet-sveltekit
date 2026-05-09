@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -29,6 +30,14 @@
     content="Playing casino games for fun has become a popular pastime for many, offering an engaging way to enjoy gaming without the financial risks associated with real-money gambling."
   />
   <link rel="canonical" href={canonicalUrl('/guides/free-casino-games')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Play for Fun: Explore Free Casino Games Online for Entertainment and Skill Development | 247iBET',
+      description: 'Playing casino games for fun has become a popular pastime for many, offering an engaging way to enjoy gaming without the financial risks associated with real-money gambling.',
+      url: canonicalUrl('/guides/free-casino-games'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

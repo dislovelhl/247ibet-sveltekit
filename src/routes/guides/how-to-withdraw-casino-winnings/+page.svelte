@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { AlertTriangle, CheckCircle2, Clock3, Wallet } from 'lucide-svelte';
 
@@ -161,6 +162,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="How to withdraw casino winnings in Canada: step-by-step payout guide, Interac timing, KYC checklist, promotion restrictions, and the main reasons withdrawals get delayed."
   />
   <link rel="canonical" href={canonicalUrl('/guides/how-to-withdraw-casino-winnings')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'How to Withdraw Casino Winnings in Canada 2026 | 247iBET',
+      description: 'How to withdraw casino winnings in Canada: step-by-step payout guide, Interac timing, KYC checklist, promotion restrictions, and the main reasons withdrawals get delayed.',
+      url: canonicalUrl('/guides/how-to-withdraw-casino-winnings'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

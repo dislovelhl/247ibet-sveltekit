@@ -86,7 +86,7 @@
 
           <div class="flex-1">
             <h3
-              class="page-hub-title text-2xl text-text-primary mb-3 group-hover:text-gradient-gold transition-all duration-300 !tracking-tighter"
+              class="page-hub-title text-2xl text-text-primary mb-3 group-hover:text-gold-foil transition-all duration-300 !tracking-tighter"
             >
               {hub.label}
             </h3>

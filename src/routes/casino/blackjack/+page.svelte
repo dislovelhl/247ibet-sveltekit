@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
+import { articleSchema } from '$lib/json-ld';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Blackjack Online';
@@ -95,6 +96,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/blackjack')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Blackjack Online Canada | 247iBET Canada',
+      description:
+        'Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges.',
+      url: canonicalUrl('/casino/blackjack'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -108,6 +118,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/blackjack',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

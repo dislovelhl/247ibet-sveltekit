@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { CircleCheckBig, Gauge, MapPin, ShieldCheck } from 'lucide-svelte';
 
@@ -71,6 +72,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Editorial readiness index for operators targeting the Alberta iGaming market."
   />
   <link rel="canonical" href={canonicalUrl('/guides/alberta-operator-readiness-index')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Alberta Operator Readiness Index 2026: Your Guide to Safe iGaming | 247iBET',
+      description: 'Audit Alberta-facing operators with an editorial readiness model based on launch signals, market fit, and payment relevance.',
+      url: canonicalUrl('/guides/alberta-operator-readiness-index'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

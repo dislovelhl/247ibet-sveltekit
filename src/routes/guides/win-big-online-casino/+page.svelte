@@ -1,6 +1,13 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
+
+  const bankrollSteps = [
+    { n: 1, title: 'The "Stake %" Rule', desc: 'Never stake more than 1-2% of your session bankroll on a single high-volatility spin.' },
+    { n: 2, title: 'Loss Limit Caps', desc: 'Set a hard stop. If you lose 40% of your initial buy-in, terminate the session immediately.' },
+    { n: 3, title: 'Profit Locking', desc: 'Withdraw 50% of any win exceeding 10x your initial buy-in before continuing to play.' },
+  ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
@@ -54,6 +61,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         },
       ],
     }}
+  />
+  <JsonLd
+    schema={howToSchema({
+      name: 'Win Big Online Casino Canada',
+      description: 'A strategic guide for Canadian high-rollers. Explore the best high-limit slots, VIP programs, and bankroll management strategies for winning big at top casinos.',
+      steps: bankrollSteps.map((s) => ({ name: s.title, text: s.desc })),
+    })}
   />
 </svelte:head>
 
@@ -147,7 +161,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
             Bankroll Management for "Big Win" Hunters
           </h3>
           <ul class="space-y-5">
-            {#each [{ n: 1, title: 'The "Stake %" Rule', desc: 'Never stake more than 1-2% of your session bankroll on a single high-volatility spin.' }, { n: 2, title: 'Loss Limit Caps', desc: 'Set a hard stop. If you lose 40% of your initial buy-in, terminate the session immediately.' }, { n: 3, title: 'Profit Locking', desc: 'Withdraw 50% of any win exceeding 10x your initial buy-in before continuing to play.' }] as step}
+            {#each bankrollSteps as step}
               <li class="flex gap-4">
                 <div
                   class="w-6 h-6 rounded-full bg-prestige-gold text-navy-black flex items-center justify-center font-bold text-xs shrink-0"

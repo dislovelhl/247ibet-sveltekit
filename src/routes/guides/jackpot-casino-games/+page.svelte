@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -26,6 +27,14 @@
     content="Jackpot casinos offer an exhilarating gaming experience, combining the thrill of chance with the potential for substantial rewards."
   />
   <link rel="canonical" href={canonicalUrl('/guides/jackpot-casino-games')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Jackpot Casino Guide: How to Play, Win, and Maximize Bonuses | 247iBET',
+      description: 'Jackpot casinos offer an exhilarating gaming experience, combining the thrill of chance with the potential for substantial rewards. Learn about progressive jackpots, strategies, and bonuses.',
+      url: canonicalUrl('/guides/jackpot-casino-games'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -23,6 +23,14 @@
   --color-prestige-gold-800: #543d1b;
   --color-prestige-gold-900: #2a1d0b;
 
+  --gradient-prestige-gold-foil: linear-gradient(
+    135deg,
+    #f2d6af 0%,
+    #d4943a 35%,
+    #a9824b 65%,
+    #f2c586 100%
+  );
+
   --color-slate-blue: #4a9ebf;
   --color-slate-blue-50: #bfe4f2;
   --color-slate-blue-100: #bae2f2;

@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { optimizeSrcSet } from '$lib/image';
+import { articleSchema } from '$lib/json-ld';
   import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Roulette Online';
@@ -95,6 +96,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/roulette')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Roulette Online Canada | 247iBET Canada',
+      description:
+        'Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in.',
+      url: canonicalUrl('/casino/roulette'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -108,6 +118,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/roulette',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

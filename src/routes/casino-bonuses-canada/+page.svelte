@@ -2,10 +2,11 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-  import ReadyToPlay from '$lib/components/ReadyToPlay.svelte';
-  import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
-  import { reveal } from '$lib/animations';
+import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+import ReadyToPlay from '$lib/components/ReadyToPlay.svelte';
+import { IBET_PROMO_SNAPSHOT } from '$lib/ibet-brand';
+import { reveal } from '$lib/animations';
+import { articleSchema } from '$lib/json-ld';
 
 
   const lastUpdated = '2026-03-30';
@@ -53,6 +54,16 @@
     content="Online casino promotions for Canadians compared by real value after wagering requirements and expiry terms."
   />
   <link rel="canonical" href={canonicalUrl('/casino-bonuses-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline:
+        'Casino Bonuses Canada 2026: Compare Deposit Offers & Rewards | 247iBET',
+      description:
+        'Compare Canadian casino promotions by real value after wagering requirements. We compare deposit matches, play credits, and reload offers from top Canadian casinos.',
+      url: canonicalUrl('/casino-bonuses-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={[
       {

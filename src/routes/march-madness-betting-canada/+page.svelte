@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -56,6 +57,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites."
   />
   <link rel="canonical" href={canonicalUrl('/march-madness-betting-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'March Madness Betting Canada 2026 — NCAA Tournament Guide | 247iBET',
+      description: 'How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites.',
+      url: canonicalUrl('/march-madness-betting-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

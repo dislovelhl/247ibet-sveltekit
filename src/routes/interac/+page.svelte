@@ -148,6 +148,17 @@ import JsonLd from '$lib/components/JsonLd.svelte';
       ],
     }}
   />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }}
+  />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-10 text-white">

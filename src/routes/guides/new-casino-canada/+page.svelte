@@ -1,6 +1,15 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
+
+  const newCasinoChecks = [
+    { title: 'Verify Ontario or Alberta regulatory status', detail: 'Check the iGaming Ontario regulated market directory or AGCO registry before depositing at any new casino.' },
+    { title: 'Confirm Interac deposit and withdrawal support', detail: 'Interac is the most reliable payment method at AGCO-licensed sites. Ensure both deposits and withdrawals are supported.' },
+    { title: 'Review welcome bonus terms', detail: 'New casino bonuses often come with wagering requirements of 30x–50x. Check expiry dates and maximum withdrawal caps.' },
+    { title: 'Test customer support before depositing', detail: 'Contact support with a question before funding your account to gauge response quality and speed.' },
+    { title: 'Confirm responsible gambling tools are accessible', detail: 'Deposit limits, session reminders, and self-exclusion must be available. Ontario-licensed sites are required to offer these tools.' },
+  ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
@@ -62,6 +71,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       ],
     }}
   />
+<JsonLd
+    schema={howToSchema({
+      name: 'New Casino Canada 2026',
+      description: 'As the online gambling landscape evolves, new casinos in Canada are emerging, offering players exciting opportunities and experiences in 2026.',
+      steps: newCasinoChecks.map((s) => ({ name: s.title, text: s.detail })),
+    })}
+  />
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
@@ -101,7 +117,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       What to check before joining a new casino in Canada
     </h2>
     <ol class="space-y-4 mt-4">
-      {#each [{ title: 'Verify Ontario or Alberta regulatory status', detail: 'Check the iGaming Ontario regulated market directory or AGCO registry before depositing at any new casino.' }, { title: 'Confirm Interac deposit and withdrawal support', detail: 'Interac is the most reliable payment method at AGCO-licensed sites. Ensure both deposits and withdrawals are supported.' }, { title: 'Review welcome bonus terms', detail: 'New casino bonuses often come with wagering requirements of 30x–50x. Check expiry dates and maximum withdrawal caps.' }, { title: 'Test customer support before depositing', detail: 'Contact support with a question before funding your account to gauge response quality and speed.' }, { title: 'Confirm responsible gambling tools are accessible', detail: 'Deposit limits, session reminders, and self-exclusion must be available. Ontario-licensed sites are required to offer these tools.' }] as step, i}
+      {#each newCasinoChecks as step, i}
         <li class="flex gap-4">
           <span
             class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center"

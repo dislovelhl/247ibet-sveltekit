@@ -2,6 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -43,6 +44,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Find the best low wagering casinos in Canada by offer fairness. We compare wagering multiples, game restrictions, and withdrawal caps to show true value."
   />
   <link rel="canonical" href={canonicalUrl('/low-wagering-casinos-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Low Wagering Casinos in Canada | 247iBET',
+      description:
+        'Find the best low wagering casinos in Canada by offer fairness. We compare wagering multiples, game restrictions, and withdrawal caps to show true value.',
+      url: canonicalUrl('/low-wagering-casinos-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

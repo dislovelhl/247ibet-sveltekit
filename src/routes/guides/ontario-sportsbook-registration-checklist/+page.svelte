@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -146,6 +147,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
     }}
+  />
+<JsonLd
+    schema={howToSchema({
+      name: 'Ontario Sportsbook Registration Checklist',
+      description: 'Use this Ontario sportsbook checklist to verify market status, audit live-betting depth, and check Interac, KYC, and payout handling before signup.',
+      steps: auditItems.map((s) => ({ name: s.title, text: s.description })),
+    })}
   />
 </svelte:head>
 

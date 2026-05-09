@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema, howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { FileText, ShieldCheck, UserRoundCheck } from 'lucide-svelte';
 
@@ -129,6 +130,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/guides/kyc-verification-online-casino')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'KYC Verification Guide for Online Casinos in Canada | 247iBET',
+      description: 'Learn what casino KYC verification means, when casinos ask for documents, how to reduce delay before your first withdrawal, and Play responsibly.',
+      url: canonicalUrl('/guides/kyc-verification-online-casino'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -153,7 +162,19 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         name: f.question,
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
-    }}
+    }}/>
+  <JsonLd
+    schema={howToSchema({
+      name: 'KYC Verification Guide for Online Casinos in Canada',
+      description: 'Learn what casino KYC verification means, when casinos ask for documents, how to reduce delay before your first withdrawal, and Play responsibly.',
+      steps: [
+        { name: 'Understand what KYC checks', text: 'KYC verification confirms your identity, address, and payment ownership. The operator checks that the account belongs to a real person using valid government ID, confirms residential details, and verifies the withdrawal route belongs to the account holder.' },
+        { name: 'Prepare the required documents', text: 'Gather government-issued photo ID (passport, driver licence, provincial photo ID), proof of address (utility bill, bank statement, government mail), and payment-method evidence if requested (bank statement, deposit receipt).' },
+        { name: 'Submit clear and complete documents', text: 'Upload full images with all corners visible and matching account details. Make sure your casino profile, ID, and banking details use the same legal identity. Only send the requested documents, not a mixed batch of files.' },
+        { name: 'Avoid common KYC delays', text: 'Ensure documents are not blurry or cropped. Confirm your name and address match across all profiles. Expect extra scrutiny on the first withdrawal and complete verification before requesting it. Use the same banking route where possible.' },
+        { name: 'Complete KYC before your first withdrawal', text: 'Proactive verification is the most efficient path to predictable withdrawal timelines. Submit documents early rather than waiting until cash-out is requested. Respond quickly to any extra requests instead of submitting partial documents one at a time.' },
+      ],
+    })}
   />
 </svelte:head>
 

@@ -90,6 +90,7 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/guides/slots-no-deposit-bonuses', priority: 0.7, changefreq: 'weekly' },
   { path: '/guides/uk-real-money-casinos', priority: 0.5, changefreq: 'monthly' },
   { path: '/guides/upcoming-alberta-sportsbooks', priority: 0.6, changefreq: 'weekly' },
+  { path: '/guides/optimization', priority: 0.5, changefreq: 'monthly' },
 
   { path: '/legal-online-gambling-canada', priority: 0.6, changefreq: 'monthly' },
   { path: '/gambling-laws-canada', priority: 0.6, changefreq: 'monthly' },
@@ -98,6 +99,7 @@ const STATIC_PAGES: { path: string; priority: number; changefreq: string }[] = [
   { path: '/about', priority: 0.6, changefreq: 'monthly' },
   { path: '/about/how-we-test', priority: 0.5, changefreq: 'monthly' },
   { path: '/about/affiliate-disclosure', priority: 0.5, changefreq: 'monthly' },
+  { path: '/about/brand-identity', priority: 0.5, changefreq: 'monthly' },
   { path: '/faq', priority: 0.6, changefreq: 'weekly' },
   { path: '/contact', priority: 0.4, changefreq: 'monthly' },
   { path: '/security', priority: 0.5, changefreq: 'monthly' },

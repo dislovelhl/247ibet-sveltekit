@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     AlertTriangle,
@@ -205,6 +206,15 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/responsible-gambling" />
   <link rel="canonical" href={canonicalUrl('/responsible-gambling')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Safe Play Protocols | Responsible Gambling Canada | 247iBET',
+      description:
+        'Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts.',
+      url: canonicalUrl('/responsible-gambling'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 

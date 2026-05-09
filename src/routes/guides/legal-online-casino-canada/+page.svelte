@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   const faqItems = [
     {
@@ -188,7 +189,19 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         name: f.question,
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
-    }}
+    }}/>
+  <JsonLd
+    schema={howToSchema({
+      name: 'Legal Online Casinos in Canada 2026: Your Guide',
+      description: 'See when online casino play is legal in Canada, how Ontario and Alberta differ, and how to verify a regulated site before depositing.',
+      steps: [
+        { name: 'Verify the legal framework', text: 'Check whether the site clearly identifies its provincial framework and whether you can confirm that through an official Ontario or Alberta source.' },
+        { name: 'Review the cashier', text: 'Look for Interac, card, and wallet support, then confirm withdrawal review times, return-to-source rules, and identity-verification requirements.' },
+        { name: 'Read the bonus terms', text: 'Check wagering requirements, expiry dates, game contributions, and any cap on bonus-linked withdrawals before you opt in.' },
+        { name: 'Check responsible gambling controls', text: 'Make sure deposit limits, cooling-off tools, self-exclusion, and independent support links are easy to access.' },
+        { name: 'Only then track extras', text: 'Once the safety and payment basics are clear, audit game depth, live dealer selection, loyalty value, app experience, and customer support.' },
+      ],
+    })}
   />
 </svelte:head>
 

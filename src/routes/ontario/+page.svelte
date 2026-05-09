@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { ArrowRight } from 'lucide-svelte';
@@ -144,6 +145,15 @@
   />
   <link rel="canonical" href={canonicalUrl('/ontario')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Ontario Online Casino &amp; Sports Betting | 247iBET',
+      description:
+        'Ontario hub for casino games, sports betting, Interac guidance, age checks, and account setup context for players in the province.',
+      url: canonicalUrl('/ontario'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -151,6 +161,17 @@
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://247ibet.ca' },
         { '@type': 'ListItem', position: 2, name: 'Ontario', item: 'https://247ibet.ca/ontario' },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

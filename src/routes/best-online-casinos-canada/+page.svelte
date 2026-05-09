@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
@@ -101,6 +102,15 @@
     content="Verified top 10 Canadian online casinos compared by payout speed, Interac deposits, and regulatory compliance."
   />
   <link rel="canonical" href={canonicalUrl('/best-online-casinos-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Best Online Casinos Canada 2026: Top Rated Sites for Fast Payouts | 247iBET',
+      description:
+        'Compare the top online casinos in Canada for 2026. Verified by our team for payout speed, Interac support, and provincial license verification.',
+      url: canonicalUrl('/best-online-casinos-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
   <JsonLd schema={faqSchema} />
   <JsonLd schema={itemListSchema} />

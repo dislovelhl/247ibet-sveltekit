@@ -4,6 +4,7 @@
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { AlertTriangle, Info, CheckCircle } from 'lucide-svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-01';
 
@@ -73,6 +74,15 @@
     content="Understanding deposit-free offers in Canada. Ontario AGCO compliance explained. Compare casinos with play credit offers outside Ontario."
   />
   <link rel="canonical" href={canonicalUrl('/no-deposit-bonus-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'No Deposit Bonuses Canada 2026: Your Guide | 247iBET',
+      description:
+        'Guide to deposit-free offers at Canadian online casinos and sportsbooks. Ontario compliance explained. Where to find deposit-free offers legally outside Ontario.',
+      url: canonicalUrl('/no-deposit-bonus-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

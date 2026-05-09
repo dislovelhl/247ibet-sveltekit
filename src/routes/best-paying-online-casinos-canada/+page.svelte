@@ -2,6 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -43,6 +44,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Canadian online casinos ranked by payout percentage, Interac timelines, and withdrawal limits."
   />
   <link rel="canonical" href={canonicalUrl('/best-paying-online-casinos-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Best Paying Online Casinos Canada 2026 | RTP & Payouts',
+      description:
+        'Compare Canadian online casinos by verified RTP, Interac withdrawal speed, payout limits, and KYC timing.',
+      url: canonicalUrl('/best-paying-online-casinos-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

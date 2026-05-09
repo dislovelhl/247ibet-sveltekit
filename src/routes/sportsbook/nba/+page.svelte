@@ -1,5 +1,6 @@
 <script lang="ts">
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import { articleSchema } from '$lib/json-ld';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { canonicalUrl } from '$lib/site';
 
@@ -165,6 +166,14 @@
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.metaDescription} />
   <link rel="canonical" href={canonicalUrl(page.path)} />
+  <JsonLd
+    schema={articleSchema({
+      headline: page.title,
+      description: page.metaDescription,
+      url: canonicalUrl(page.path),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
   <JsonLd schema={faqSchema} />
 </svelte:head>

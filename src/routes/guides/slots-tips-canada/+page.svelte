@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -119,6 +120,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         },
       ],
     }}
+  />
+  <JsonLd
+    schema={howToSchema({
+      name: 'Online Slots Tips Canada',
+      description: 'Practical slots tips for Canadian players covering RTP, variance, bankroll control, and RNG certification.',
+      steps: tips.map((t) => ({ name: t.title, text: t.body.substring(0, 300) })),
+    })}
   />
 </svelte:head>
 

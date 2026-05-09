@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema, howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { BookOpen, Calculator, AlertTriangle, CheckCircle } from 'lucide-svelte';
@@ -94,6 +95,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/guides/wagering-requirements-explained')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Wagering Requirements Explained: Your Playthrough Guide | 247iBET',
+      description: 'Learn how wagering requirements work, how to calculate playthrough, and which offer terms reduce value most.',
+      url: canonicalUrl('/guides/wagering-requirements-explained'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -118,7 +127,19 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
-    }}
+    }}/>
+  <JsonLd
+    schema={howToSchema({
+      name: 'Wagering Requirements Explained: Your Playthrough Guide',
+      description: 'Learn how wagering requirements work, how to calculate playthrough, and which offer terms reduce value most.',
+      steps: [
+        { name: 'Understand the wagering formula', text: 'A wagering requirement is a condition that requires you to wager a specified multiple of the bonus amount before withdrawing bonus-linked winnings. The formula is: Gross Wager = Bonus × Multiplier. For a $100 bonus at 30×, you need to wager $3,000 total.' },
+        { name: 'Check the wagering multiplier before claiming', text: 'Anything below 20× is very player-friendly. The industry average in Canada is 25–40×. Requirements above 50× make it extremely difficult to generate withdrawable winnings. Also check if wagering applies to deposit + bonus, not just the bonus.' },
+        { name: 'Review game contribution rates', text: 'Not all games contribute equally. Slots typically contribute 100%, while video poker, blackjack, and roulette usually contribute only 10–20%. Live dealer games often contribute just 5–15%. Playing low-contribution games means you need to wager far more.' },
+        { name: 'Watch for warning signs in bonus terms', text: 'Check for wagering above 50×, missing withdrawal caps, all games excluded except slots, wagering applied to deposit+bonus, max bet restrictions (typically $5–$10), and expiry under 7 days. Any of these reduce the bonus value significantly.' },
+        { name: 'Calculate the effective cost of the bonus', text: 'If you prefer to play without restrictions, you can decline the bonus entirely. AGCO-licensed casinos offer a "Play without bonus" option. You can also forfeit a bonus after claiming — your deposited funds remain intact but bonus-linked winnings are removed.' },
+      ],
+    })}
   />
 </svelte:head>
 

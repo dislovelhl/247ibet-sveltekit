@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'CAD Casino';
 
@@ -99,6 +100,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/cad')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'CAD Casino Canada | Play in Canadian Dollars | 247iBET Canada',
+      description:
+        'Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup.',
+      url: canonicalUrl('/casino/cad'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -112,6 +122,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/cad',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

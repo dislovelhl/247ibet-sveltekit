@@ -24,6 +24,7 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_DISCLAIMER, IBET_URLS } from '$lib/ibet-brand';
   import { SITE, canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import { reveal } from '$lib/animations';
 
   const page = {
@@ -321,6 +322,14 @@
   <meta property="og:title" content={page.title} />
   <meta property="og:description" content={page.description} />
   <link rel="canonical" href={page.canonical} />
+  <JsonLd
+    schema={articleSchema({
+      headline: page.title,
+      description: page.description,
+      url: page.canonical,
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

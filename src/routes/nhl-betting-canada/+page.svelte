@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -62,6 +63,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="NHL betting guide for Canadian fans. Best sportsbooks for hockey, how to read puck lines, NHL odds explained, and live in-play betting tips for the 2025–26 season."
   />
   <link rel="canonical" href={canonicalUrl('/nhl-betting-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'NHL Betting Canada 2026 — Best Sites, Odds & Tips | 247iBET',
+      description: 'NHL betting guide for Canadian fans. Best sportsbooks for hockey, how to read puck lines, NHL odds explained, and live in-play betting tips for the 2025–26 season.',
+      url: canonicalUrl('/nhl-betting-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

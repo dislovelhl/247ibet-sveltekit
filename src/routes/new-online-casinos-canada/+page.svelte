@@ -2,6 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -43,6 +44,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Review the best new online casinos for Canadians in 2026 and compare recently launched operators."
   />
   <link rel="canonical" href={canonicalUrl('/new-online-casinos-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'New Online Casinos Canada 2026 | Best New Sites | 247iBET',
+      description:
+        'Review the best new online casinos for Canadians in 2026. We evaluate recently launched operators for licensing, game selection, Interac support, and RG tools.',
+      url: canonicalUrl('/new-online-casinos-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

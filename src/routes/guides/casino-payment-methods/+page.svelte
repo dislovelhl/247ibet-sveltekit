@@ -1,6 +1,14 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema, howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
+
+  const interacSteps = [
+    { name: 'Speed', text: 'Interac deposits are usually fast, while withdrawals still depend on operator approval.' },
+    { name: 'Fees', text: 'Interac fees depend on your banking package. Always check the casino cashier and your bank account plan.' },
+    { name: 'Limits', text: 'Confirm both your bank\'s transfer limits and the casino\'s minimum/maximum cashier amounts.' },
+    { name: 'Licensing', text: 'AGCO-licensed Ontario casinos have specific payment method requirements. Always verify the current cashier before sending funds.' },
+  ];
 </script>
 
 <svelte:head>
@@ -27,6 +35,14 @@
   />
   <link rel="canonical" href={canonicalUrl('/guides/casino-payment-methods')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Casino Payment Methods Canada: Interac e-Transfer Only | 247iBET',
+      description: 'Interac e-Transfer guide for Canadian casino deposits and withdrawals. Learn Interac speed, fees, limits, and safety checks without comparing unrelated payment rails.',
+      url: canonicalUrl('/guides/casino-payment-methods'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -41,6 +57,13 @@
         },
       ],
     }}
+  />
+<JsonLd
+    schema={howToSchema({
+      name: 'Casino Payment Methods Canada: Interac e-Transfer',
+      description: 'Interac e-Transfer guide for Canadian casino deposits and withdrawals. Learn Interac speed, fees, limits, and safety checks without comparing unrelated payment rails.',
+      steps: interacSteps,
+    })}
   />
 </svelte:head>
 

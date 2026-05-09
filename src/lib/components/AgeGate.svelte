@@ -143,7 +143,7 @@
       <div
         class="mx-auto mb-5 w-20 h-20 rounded-full bg-navy-raised border-2 border-prestige-gold flex items-center justify-center animate-pulse-19"
       >
-        <span class="text-3xl font-black text-gradient-gold" style="font-family: var(--font-sans);">
+        <span class="text-3xl font-black text-gold-foil" style="font-family: var(--font-sans);">
           19+
         </span>
       </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -68,6 +69,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Prepare for Alberta online casino launch with AGLC context, game expectations, and Interac readiness."
   />
   <link rel="canonical" href={canonicalUrl('/alberta/online-casino')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Alberta Online Casino | 247iBET Availability',
+      description:
+        'Check Alberta online casino availability ahead of the July 13, 2026 launch. Review AGLC context, game expectations, Interac readiness, and safer account prep.',
+      url: canonicalUrl('/alberta/online-casino'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

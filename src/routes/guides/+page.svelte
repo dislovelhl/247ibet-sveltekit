@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -20,6 +21,14 @@
     content="Browse 247iBET educational guides on legal betting in Canada."
   />
   <link rel="canonical" href={canonicalUrl('/guides')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Canadian Betting Guides & Resources | 247iBET',
+      description: 'Browse 247iBET guides on legal betting in Canada: Alberta and Ontario market explainers, strategy basics, payments, and responsible gambling.',
+      url: canonicalUrl('/guides'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

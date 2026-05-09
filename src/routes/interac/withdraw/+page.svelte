@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
@@ -60,6 +61,15 @@
     content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
   />
   <link rel="canonical" href={canonicalUrl('/interac/withdraw')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Interac Withdrawal Times at 247iBET Canada',
+      description:
+        'Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts.',
+      url: canonicalUrl('/interac/withdraw'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

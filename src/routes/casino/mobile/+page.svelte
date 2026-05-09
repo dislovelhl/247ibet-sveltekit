@@ -3,6 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
+import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'Mobile Casino';
 
@@ -93,6 +94,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/mobile')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Mobile Casino Canada | 247iBET Canada',
+      description:
+        'Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens.',
+      url: canonicalUrl('/casino/mobile'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -106,6 +116,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/mobile',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

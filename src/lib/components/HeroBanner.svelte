@@ -111,10 +111,14 @@
       >
         <!-- Kicker + trust badge row -->
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <div class="page-hero-kicker">
+          <div class="page-hero-kicker flex items-center gap-2">
             <span
-              class="text-xs font-mono font-black uppercase tracking-[0.12em] text-prestige-gold sm:text-xs sm:tracking-[0.14em]"
+              class="text-xs font-mono font-black uppercase tracking-[0.14em] text-prestige-gold"
               >247iBET CANADA</span
+            >
+            <span class="h-1 w-1 rounded-full bg-white/20"></span>
+            <span class="font-luxury text-[11px] text-prestige-gold-400 opacity-80"
+              >The expert's choice</span
             >
           </div>
           <div class="flex items-center gap-2 rounded-full bg-success/10 px-3 py-1 ring-1 ring-success/20">
@@ -125,7 +129,7 @@
 
         <h1 class="page-hero-title mb-4 sm:mb-5 !tracking-tighter">
           Online Casino &amp; Sportsbook —
-          <span class="text-transparent bg-clip-text text-gradient-gold">Fast Interac Payouts</span>
+          <span class="text-gold-foil">Fast Interac Payouts</span>
           <span class="sr-only"> — 247iBET Canada Online Casino &amp; Sports Betting</span>
         </h1>
 

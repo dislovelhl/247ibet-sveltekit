@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Zap, ShieldCheck, BadgeCheck, CheckCircle2 } from 'lucide-svelte';
   import { reveal } from '$lib/animations';
+  import GlintCard from './GlintCard.svelte';
 
   let { activeStep = 1 } = $props<{ activeStep?: number }>();
 
@@ -11,11 +12,14 @@
   ];
 </script>
 
-<div class="glow-gold relative overflow-hidden rounded-2xl border border-white/10 bg-navy-card/50 p-6 backdrop-blur-sm" use:reveal>
+<GlintCard class="luxury-border relative overflow-hidden rounded-2xl bg-navy-card/50 p-6 backdrop-blur-sm" useReveal={true}>
   <div class="mb-8 flex items-center justify-between">
-    <h3 class="text-sm font-bold uppercase tracking-widest text-prestige-gold">
-      Interac Payout Speed
-    </h3>
+    <div class="flex flex-col">
+      <h3 class="text-sm font-bold uppercase tracking-[0.14em] text-prestige-gold">
+        Interac Payout Speed
+      </h3>
+      <span class="font-luxury text-[10px] text-prestige-gold-400 opacity-70">Canadian Trusted Network</span>
+    </div>
     <span class="rounded-full bg-success/10 px-3 py-1 text-[10px] font-bold text-success border border-success/20">
       LIVE NETWORK STATUS
     </span>
@@ -60,4 +64,4 @@
       <span class="font-bold text-prestige-gold">Award-Winning Speed:</span> 247iBET Interac payouts typically hit your account <span class="text-white font-bold">15-30 minutes</span> after operator approval.
     </p>
   </div>
-</div>
+</GlintCard>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema, howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
 </script>
 
@@ -29,6 +30,14 @@
   />
   <link rel="canonical" href={canonicalUrl('/guides/casino-login')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Secure and Easy Casino Login: Your Guide to Online Casino Account Access and Recovery | 247iBET',
+      description: 'Navigating the world of online casinos can be daunting, especially when it comes to logging into your account securely. This guide aims to demystify the various methods available for casino login.',
+      url: canonicalUrl('/guides/casino-login'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -44,6 +53,20 @@
       ],
     }}
   />
+  <JsonLd
+    schema={howToSchema({
+      name: 'Secure and Easy Casino Login Guide',
+      description: 'Navigating online casinos securely. This guide explains the various methods available for casino login, account access, and recovery.',
+      steps: [
+        { name: 'Enable two-factor authentication', text: '2FA requires a second form of identification beyond your password, such as a one-time code via SMS or authenticator app. This significantly enhances login security.' },
+        { name: 'Use biometric or mobile login', text: 'Fingerprint scanning or facial recognition offers convenient and secure account access without remembering complex passwords. Mobile apps incorporate additional security protocols.' },
+        { name: 'Recover your account if locked out', text: 'Visit the login page and use the account recovery option. Follow the verification steps provided. Create new credentials and log in with your updated details.' },
+        { name: 'Follow secure mobile login practices', text: 'Avoid public Wi-Fi networks when logging in. Use strong credentials and biometric features on your device. Keep the casino app updated for the latest security features.' },
+        { name: 'Troubleshoot common login issues', text: 'Double-check your credentials. Clear browser cache and cookies. Try a different browser or device. Contact customer support via live chat if problems persist.' },
+      ],
+    })}
+  />
+
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
@@ -74,6 +75,14 @@
     content="Canadian sportsbooks for NHL, CFL, NBA, UFC, and more."
   />
   <link rel="canonical" href={canonicalUrl('/best-sports-betting-sites-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Best Sports Betting Sites Canada 2026: Features, Licensing & User Experience | 247iBET',
+      description: 'Compare Canadian sportsbooks by NHL, CFL, NBA, and UFC market depth, Interac funding, province availability, and live-betting quality.',
+      url: canonicalUrl('/best-sports-betting-sites-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

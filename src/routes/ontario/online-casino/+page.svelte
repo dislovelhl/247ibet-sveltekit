@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -41,6 +42,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Ontario online casino access with slots, live dealer games, and fast Interac CAD payouts."
   />
   <link rel="canonical" href={canonicalUrl('/ontario/online-casino')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Ontario Online Casino Games | 247ibet',
+      description:
+        'Ontario online casino page covering slots, live dealer games, Interac payments, and account-access checks for players in the province.',
+      url: canonicalUrl('/ontario/online-casino'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

@@ -2,8 +2,9 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-  import { optimizeSrcSet } from '$lib/image';
-  import { CheckCircle2 } from 'lucide-svelte';
+import { optimizeSrcSet } from '$lib/image';
+import { articleSchema } from '$lib/json-ld';
+import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Baccarat Online';
   const heroImage = '/images/generated/casino-baccarat-hero.png';
@@ -95,6 +96,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <link rel="canonical" href={canonicalUrl('/casino/baccarat')} />
   <JsonLd
+    schema={articleSchema({
+      headline: 'Baccarat Online Canada | 247iBET Canada',
+      description:
+        'Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics.',
+      url: canonicalUrl('/casino/baccarat'),
+      datePublished: '2026-04-27',
+    })}
+  />
+  <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -108,6 +118,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           item: 'https://247ibet.ca/casino/baccarat',
         },
       ],
+    }}
+  />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
     }}
   />
 </svelte:head>

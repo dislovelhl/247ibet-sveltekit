@@ -17,6 +17,7 @@
   import { reveal, counter } from '$lib/animations';
   import OddsTicker from '$lib/components/OddsTicker.svelte';
   import PayoutProgress from '$lib/components/PayoutProgress.svelte';
+  import GlintCard from '$lib/components/GlintCard.svelte';
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -317,6 +318,7 @@
         'Premier Canadian online casino and sportsbook offering 247iBET casino games, elite sports betting markets, lightning-fast Interac payouts, and secure responsible gaming.',
       publisher: {
         '@type': 'Organization',
+        '@id': `${SITE.url}/#org`,
         name: SITE.name,
         url: SITE.url,
       },
@@ -324,9 +326,16 @@
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
+      '@id': `${SITE.url}/#org`,
       name: SITE.name,
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
+      description:
+        '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and exclusive bonuses for Canadian players.',
+      areaServed: {
+        '@type': 'Country',
+        name: 'Canada',
+      },
       sameAs: SITE.sameAs,
       knowsAbout: [
         'Online Casino Canada',
@@ -336,6 +345,28 @@
         'Casino Bonuses Canada',
         'Sports Betting Odds',
         'Responsible Gambling',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        availableLanguage: ['English', 'French'],
+      },
+      mentions: [
+        {
+          '@type': 'Organization',
+          name: 'iGaming Ontario',
+          description: 'Ontario\'s regulated online gambling authority',
+        },
+        {
+          '@type': 'Organization',
+          name: 'Alcohol and Gaming Commission of Ontario',
+          description: 'AGCO — Ontario\'s gaming regulator',
+        },
+        {
+          '@type': 'Organization',
+          name: 'Interac',
+          description: 'Canada\'s leading e-Transfer payment network for fast casino payouts',
+        },
       ],
     },
     homeFaqSchema,
@@ -381,9 +412,15 @@
         style="transform: translate3d({-mouseX}px, {-mouseY}px, 0);"
       >
         <div class="mb-5 flex flex-wrap items-center gap-3">
-          <p class="text-[13px] font-black uppercase tracking-[0.2em] text-prestige-gold">
-            247iBET Canada
-          </p>
+          <div class="flex items-center gap-2">
+            <p class="text-[13px] font-black uppercase tracking-[0.22em] text-prestige-gold">
+              247iBET Canada
+            </p>
+            <span class="h-1 w-1 rounded-full bg-white/20"></span>
+            <span class="font-luxury text-[11px] text-prestige-gold-400 opacity-80"
+              >The expert's choice</span
+            >
+          </div>
           <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
             <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
             <span class="text-[10px] font-black uppercase tracking-wider text-success">
@@ -392,9 +429,9 @@
           </div>
         </div>
 
-        <h1 class="text-[clamp(2.8rem,7vw,6rem)] font-black leading-[0.92] tracking-tight text-white">
+        <h1 class="text-[clamp(2.8rem,7vw,6.5rem)] font-black leading-[0.88] tracking-tighter text-white">
           Canada's Elite<br />
-          <span class="text-gold-gradient">Casino & Sportsbook</span>
+          <span class="text-gold-foil">Casino & Sportsbook</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-base leading-relaxed text-text-body sm:text-lg">
@@ -470,14 +507,13 @@
   >
     <section
       id="trust-verification"
-      use:reveal
-      data-reveal-stagger="true"
       class="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 shadow-2xl sm:grid-cols-2 lg:grid-cols-4"
     >
-      {#each heroTrust as item}
+      {#each heroTrust as item, i}
         {@const Icon = item.icon}
-        <div
-          use:reveal
+        <GlintCard
+          useReveal={true}
+          style="--reveal-delay: {i * 100}ms"
           class="reveal-fade-up group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6 card-hover-lift"
         >
           <div
@@ -489,8 +525,7 @@
             <p class="text-xs font-black uppercase tracking-widest text-prestige-gold/80 group-hover:text-prestige-gold">{item.label}</p>
             <p class="mt-1.5 text-sm font-medium leading-relaxed text-text-primary">{item.body}</p>
           </div>
-          <div class="absolute inset-0 border border-white/0 transition-colors group-hover:border-prestige-gold/10 rounded-2xl"></div>
-        </div>
+        </GlintCard>
       {/each}
     </section>
 
@@ -577,14 +612,13 @@
           processing, our focus is on providing a premium experience for every Canadian player.
         </p>
         <div
-          use:reveal
-          data-reveal-stagger="true"
           class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {#each whyCards as card, i}
             {@const Icon = card.icon}
-            <article
-              use:reveal
+            <GlintCard
+              useReveal={true}
+              style="--reveal-delay: {i * 100}ms"
               class="reveal-fade-up luxury-card group relative rounded-2xl p-6 transition-all hover:-translate-y-1 {i === 0 ? 'lg:col-span-2' : ''} card-hover-lift"
             >
               <div class="flex items-start justify-between gap-4">
@@ -596,7 +630,7 @@
               </div>
               <h3 class="mt-6 font-display text-xl font-black text-white">{card.title}</h3>
               <p class="mt-3 text-sm leading-relaxed text-text-body">{card.body}</p>
-            </article>
+            </GlintCard>
           {/each}
         </div>
 
@@ -687,8 +721,9 @@
         class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
       >
         <div class="flex flex-col justify-center rounded-2xl bg-gradient-to-br from-navy-raised to-navy-card p-6 shadow-xl sm:col-span-2 sm:row-span-2 lg:p-10">
-          <h2 class="font-display text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
-            Why 247iBET <span class="text-prestige-gold">Stands Out</span>
+          <p class="font-luxury text-prestige-gold-400 mb-2 opacity-80">Unmatched Standards</p>
+          <h2 class="font-display text-3xl font-black leading-tight tracking-tighter text-white md:text-5xl">
+            Why 247iBET <span class="text-gold-foil">Stands Out</span>
           </h2>
           <p class="mt-6 text-lg leading-relaxed text-text-body">
             The premium choice for Canadian players, prioritizing security,
@@ -700,10 +735,11 @@
           </div>
         </div>
 
-        {#each standOut as item}
+        {#each standOut as item, i}
           {@const Icon = item.icon}
-          <article
-            use:reveal
+          <GlintCard
+            useReveal={true}
+            style="--reveal-delay: {(i + 2) * 100}ms"
             class="reveal-fade-up group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
           >
             <div class="relative z-10">
@@ -712,7 +748,7 @@
               <p class="mt-2 text-sm leading-relaxed text-text-body">{item.body}</p>
             </div>
             <div class="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-prestige-gold/5 blur-2xl transition-all group-hover:bg-prestige-gold/10"></div>
-          </article>
+          </GlintCard>
         {/each}
       </div>
     </section>
@@ -874,35 +910,41 @@
         >
       </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {#each guideCards as card}
-            <a
-              href={card.href}
-              class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+          {#each guideCards as card, i}
+            <GlintCard
+              useReveal={true}
+              style="--reveal-delay: {i * 100}ms"
+              class="reveal-fade-up luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
             >
-              <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect">
-                <img
-                  src={card.image}
-                  alt={card.alt}
-                  width="600"
-                  height="400"
-                  loading="lazy"
-                  decoding="async"
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>
-              </div>
-              <div class="flex flex-col justify-between px-2 pb-2">
-                <div>
-                  <h3 class="font-display text-base font-black leading-snug text-white group-hover:text-prestige-gold transition-colors">{card.title}</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+              <a
+                href={card.href}
+                class="contents"
+              >
+                <div class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect">
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>
                 </div>
-                <div class="mt-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold transition-colors">
-                  Read Guide
-                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                <div class="flex flex-col justify-between px-2 pb-2">
+                  <div>
+                    <h3 class="font-display text-base font-black leading-snug text-white group-hover:text-prestige-gold transition-colors">{card.title}</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                  </div>
+                  <div class="mt-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold transition-colors">
+                    Read Guide
+                    <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </GlintCard>
           {/each}
         </div>
     </section>

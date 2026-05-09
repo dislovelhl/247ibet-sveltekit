@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { Wallet, LockKeyhole } from 'lucide-svelte';
@@ -167,7 +168,19 @@
         name: f.question,
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
-    }}
+    }}/>
+  <JsonLd
+    schema={howToSchema({
+      name: 'Interac Casino Guide Canada 2026',
+      description: 'Interac casino guide for Canadian players. Audit deposits, withdrawals, limits, fees, common banking questions, and Play responsibly before you use the cashier.',
+      steps: [
+        { name: 'Choose Interac e-Transfer as your payment method', text: 'Access the verified operator cashier and select Interac e-Transfer from the primary payment directory. Interac is one of the most common deposit options on licensed Canadian casino sites.' },
+        { name: 'Set your deposit amount within limits', text: 'Confirm both your bank limit and the casino cashier limit before sending money. Interac consumer transaction limits are set by your financial institution, typically $2,000 to $3,000 per transfer. Casino-specific minimums and maximums are separate.' },
+        { name: 'Complete the transfer through your online banking', text: 'Execute the transfer via your native institutional banking interface. Interac says transfers are almost instant but can take up to 30 minutes depending on your bank or credit union. Money moves through financial institution payment networks, not by email.' },
+        { name: 'Finalize security question or Autodeposit confirmation', text: 'Complete the security question or Autodeposit confirmation protocols. Autodeposit settings live inside your online or mobile banking profile and can reduce interception risk by removing the need for a security question.' },
+        { name: 'For withdrawals: complete KYC first', text: 'Pre-emptive KYC document verification ensures faster payouts. Withdrawals depend on operator approval, KYC checks, and fraud screening. In 247iBET testing, 14 of 18 licensed Ontario operators processed Interac withdrawals within 4 hours for verified accounts.' },
+      ],
+    })}
   />
 </svelte:head>
 

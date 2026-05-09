@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
     ArrowRight,
@@ -225,7 +226,27 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://247ibet.ca/casino" />
   <link rel="canonical" href={canonicalUrl('/casino')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET',
+      description:
+        'Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts.',
+      url: canonicalUrl('/casino'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={casinoSchema} />
+  <JsonLd
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }}
+  />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pt-6 text-white" onmousemove={parallax.handleMouseMove} role="presentation">

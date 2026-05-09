@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import ParlayCalculator from '$lib/components/ParlayCalculator.svelte';
   const schema = {
@@ -40,6 +41,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Free Canadian parlay calculator. Calculate potential payouts for multi-leg parlays with American odds."
   />
   <link rel="canonical" href={canonicalUrl('/tools/parlay-calculator')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Parlay Calculator Canada: Estimate Your Payouts | 247iBET',
+      description:
+        'Free Canadian parlay calculator. Calculate potential payouts for multi-leg parlays with American odds. Supports NHL, CFL, NBA, NFL, UFC and more.',
+      url: canonicalUrl('/tools/parlay-calculator'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd {schema} />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>

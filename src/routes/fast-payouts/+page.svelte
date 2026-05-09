@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -81,6 +82,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Join 247iBET for the fastest practical Interac payouts in Canada. Secure, reliable, and built for Canadian players."
   />
   <link rel="canonical" href={canonicalUrl('/fast-payouts')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Fast Payouts: Interac e-Transfer Casino Withdrawals | 247iBET',
+      description:
+        'Experience lightning-fast Interac withdrawals at 247iBET. Understand our payout timing, KYC requirements, and bank-grade security protocols.',
+      url: canonicalUrl('/fast-payouts'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

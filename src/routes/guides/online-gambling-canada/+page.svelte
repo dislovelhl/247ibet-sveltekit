@@ -1,6 +1,14 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { howToSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
+
+  const depositChecks = [
+    { title: 'Confirm provincial registration', detail: 'Ontario: verify on the iGaming Ontario directory. Alberta: confirm PlayAlberta or licensed operator status via AGLC.' },
+    { title: 'Check Interac cashier support', detail: 'Interac deposits and withdrawals are standard at most AGCO-licensed sites. Confirm both directions before funding your account.' },
+    { title: 'Read bonus wagering terms', detail: 'Wagering requirements of 30x–50x are typical. Always check expiry dates and maximum withdrawal caps tied to bonuses.' },
+    { title: 'Verify responsible gambling tools', detail: 'Deposit limits, session reminders, cooling-off tools, and self-exclusion access are legally required at Ontario-licensed operators.' },
+  ];
 
 import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
@@ -60,6 +68,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         },
       ],
     }}
+  />
+  <JsonLd
+    schema={howToSchema({
+      name: 'Online Gambling in Canada',
+      description: 'Discover legal online gambling options in Canada. Provincial rules for Ontario and Alberta, top Interac casinos, bonuses, and responsible play guidance.',
+      steps: depositChecks.map((s) => ({ name: s.title, text: s.detail })),
+    })}
   />
 </svelte:head>
 
@@ -135,7 +150,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <section class="mb-10">
     <h2 class="text-2xl font-bold text-white mb-5">Key checks before depositing</h2>
     <ol class="space-y-4 mt-4">
-      {#each [{ title: 'Confirm provincial registration', detail: 'Ontario: verify on the iGaming Ontario directory. Alberta: confirm PlayAlberta or licensed operator status via AGLC.' }, { title: 'Check Interac cashier support', detail: 'Interac deposits and withdrawals are standard at most AGCO-licensed sites. Confirm both directions before funding your account.' }, { title: 'Read bonus wagering terms', detail: 'Wagering requirements of 30x–50x are typical. Always check expiry dates and maximum withdrawal caps tied to bonuses.' }, { title: 'Verify responsible gambling tools', detail: 'Deposit limits, session reminders, cooling-off tools, and self-exclusion access are legally required at Ontario-licensed operators.' }] as step, i}
+      {#each depositChecks as step, i}
         <li class="flex gap-4">
           <span
             class="flex-shrink-0 w-7 h-7 rounded-full bg-prestige-gold/15 border border-prestige-gold/30 text-prestige-gold text-xs font-bold flex items-center justify-center"

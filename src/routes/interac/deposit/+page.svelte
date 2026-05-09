@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle } from 'lucide-svelte';
@@ -63,6 +64,15 @@
     content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
   />
   <link rel="canonical" href={canonicalUrl('/interac/deposit')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'How to Deposit with Interac at 247iBET: A Step-by-Step Guide',
+      description:
+        'Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits.',
+      url: canonicalUrl('/interac/deposit'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 

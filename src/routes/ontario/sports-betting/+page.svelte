@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
@@ -41,6 +42,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     content="Ontario sports betting with live markets, Interac deposits, and secure CAD payouts."
   />
   <link rel="canonical" href={canonicalUrl('/ontario/sports-betting')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Ontario Sports Betting | 247ibet',
+      description:
+        'Ontario sports betting page covering NHL, NBA, UFC, live markets, Interac deposits, and account-access checks for players in the province.',
+      url: canonicalUrl('/ontario/sports-betting'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',

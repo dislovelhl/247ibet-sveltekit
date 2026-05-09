@@ -1,5 +1,6 @@
 <script lang="ts">
   import { canonicalUrl } from '$lib/site';
+  import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle, BookOpen } from 'lucide-svelte';
@@ -133,6 +134,14 @@
     content="Online blackjack for Canadian players: game rules, basic strategy, RTP rates, live dealer blackjack, and AGCO-licensed casinos. 18+/19+."
   />
   <link rel="canonical" href={canonicalUrl('/guides/blackjack-online-canada')} />
+  <JsonLd
+    schema={articleSchema({
+      headline: 'Online Blackjack Canada 2026 — Rules, Strategy & Where to Play | 247iBET',
+      description: 'Online blackjack for Canadian players: game rules, basic strategy, RTP rates, live dealer blackjack, and AGCO-licensed casinos. 18+/19+.',
+      url: canonicalUrl('/guides/blackjack-online-canada'),
+      datePublished: '2026-04-27',
+    })}
+  />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
