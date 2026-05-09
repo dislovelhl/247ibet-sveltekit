@@ -58,20 +58,22 @@
       >
         <!-- Brand column -->
         <section aria-labelledby="footer-brand-heading" use:reveal class="reveal-fade-up">
-          <div class="mb-5 flex items-center gap-3">
-            <div
-              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-prestige-gold text-navy-black"
-            >
-              <span class="font-mono text-xs font-black">iB</span>
-            </div>
+          <div class="mb-5 flex items-center gap-4">
+            <img
+              src="/favicon.svg"
+              alt={SITE.name}
+              width="44"
+              height="44"
+              class="h-11 w-11 shrink-0 object-contain"
+            />
             <div>
               <h2
                 id="footer-brand-heading"
-                class="text-sm font-black uppercase tracking-[0.12em] text-white"
+                class="text-base font-black uppercase tracking-[0.14em] text-white"
               >
                 {SITE.name}
               </h2>
-              <p class="text-xs text-text-body">{SITE.tagline}</p>
+              <p class="text-[10px] font-medium tracking-wide text-text-body opacity-80">{SITE.tagline}</p>
             </div>
           </div>
 
