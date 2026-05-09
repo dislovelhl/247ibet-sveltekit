@@ -2,6 +2,27 @@
 
 All notable changes to 247iBET are documented here.
 
+## [0.3.1.0] - 2026-05-09
+
+### Changed
+
+- **Reframed jdzd migration plans** after a /autoplan dual-voice review (CEO + Design + Eng with Codex + Claude subagent independence). The v1 plans committed in `eabacf6` proposed building primitives that already shipped in v0.3.0 — `GlintCard.svelte`, `PayoutProgress.svelte`, `.luxury-border`, `.glow-gold` / `.glow-navy`, `--gradient-prestige-gold-foil`, `--font-luxury`, `.navy-card`, `Atmosphere.svelte`'s particle canvas, `StickyMobileCTA`'s safe-area + 48px touch targets, and `prefers-reduced-motion` guards across `glass.css`, `animations.css`, `TiltCard.svelte`. v2 only describes genuine deltas.
+- **`docs/TECHNICAL_DESIGN_PLAN.md`** rewritten as Sprint A / B / C scoping (~2.5 weeks total vs v1's 4 sprints). Sprint A (1w): `pnpm add -D jsdom @testing-library/svelte`, component tests for shipped primitives, path-preserving redirects in `vercel.json`, CSP fix for `boapi.ibet247.ca`, regulatory-claim build gate, age-gate cleanup (HMAC IP rotation, bot UA spoof). Sprint B (1w): redirect map promotion, catch-all 410s, canary check. Sprint C (3-5d): `HeroBanner.svelte` (the one truly new component) with reduced-motion-aware parallax, hover refinements with `@media (hover: hover)` guard, additive shadow tokens, Live Now reduced-motion guard, pull-to-refresh overscroll color. Drops the v1 noise-grain SVG (would be a fourth atmospheric layer with iOS Safari scroll repaint cost).
+- **`docs/SUBDOMAIN_AND_UI_MAPPING_PLAN.md`** rewritten to move 301 redirects from the Vercel Dashboard into versioned `vercel.json` (atomic rollback, path-preserving via `:path*` capture instead of apex-to-apex). Adds path-mapping table, compliance gate referencing `IBET_PROFILE.agcoLicensed = false` and the existing `CUTOVER_RUNBOOK.md` Phase 0, pre-cutover checklist (DNS TTL, backlink audit, analytics dual-tagging), canary post-cutover assertions, 30/60/90-day monitoring thresholds, and a rollback procedure with a 15-minute RTO.
+
+### Added
+
+- **`migration-review-247ibet/`** (14 files) — pre-existing audit artifacts (`EXECUTIVE_SUMMARY`, `CODEBASE_MAP`, `DOMAIN_REFERENCES`, `REDIRECT_MAP_DRAFT.csv`, `COMPLIANCE_RISK_AUDIT`, `SECURITY_AUDIT`, `AUTH_USER_DATA_AUDIT`, `PAYMENT_AUDIT`, `ENV_DEPLOYMENT_AUDIT`, `SEO_MIGRATION_PLAN`, `CUTOVER_RUNBOOK`, `ROLLBACK_PLAN`, `TESTING_GAPS`, `OPEN_QUESTIONS`) committed so the reframed `SUBDOMAIN_AND_UI_MAPPING_PLAN.md` cross-references resolve from a fresh clone.
+
+### Fixed
+
+- **`Atmosphere.svelte`** typed the canvas particle pool with a `Particle` interface in place of `any[]` — type-safety, no runtime change.
+- **`PayoutProgress.svelte`** commented out an unused `reveal` import; the reveal effect is applied via `GlintCard`'s `useReveal={true}` prop, so the parent no longer needs the import directly.
+
+### Notes
+
+Full review artifact (CEO + Design + Eng with dual-voice consensus tables, 18-row failure modes registry, decision audit trail) saved at `~/.gstack/projects/247ibet-sveltekit/main-autoplan-review-20260509-060625.md` (661 lines).
+
 ## [0.3.0.0] - 2026-04-29
 
 ### Added
