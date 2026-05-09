@@ -12,7 +12,8 @@
     canvas.width = width;
     canvas.height = height;
 
-    const particles: any[] = [];
+    interface Particle { x: number; y: number; size: number; speedX: number; speedY: number; opacity: number; }
+  const particles: Particle[] = [];
     const particleCount = 35;
 
     for (let i = 0; i < particleCount; i++) {
