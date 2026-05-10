@@ -2,6 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, type PluginOption } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
+import { workflowPlugin } from 'workflow/sveltekit';
 import { vitePlugin } from 'braintrust/vite';
 import { fileURLToPath } from 'node:url';
 
@@ -29,9 +30,7 @@ function braintrustBuildPlugin(command: string): PluginOption[] {
   return Array.isArray(plugin) ? plugin : [plugin];
 }
 
-export default defineConfig(async ({ command }) => {
-  const { workflowPlugin } = await import('workflow/sveltekit');
-
+export default defineConfig(({ command }) => {
   return {
     plugins: [
       enhancedImages(),
