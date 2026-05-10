@@ -20,7 +20,7 @@
     {@render children()}
   </main>
 {:else}
-  <div class="min-h-screen bg-navy-black text-white">
+  <div class="min-h-dvh bg-navy-black text-white">
     <!-- Admin Header -->
     <header class="border-b border-white/5 bg-navy-black/60 backdrop-blur-md sticky top-0 z-50">
       <div class="container mx-auto px-4 h-16 flex items-center justify-between">

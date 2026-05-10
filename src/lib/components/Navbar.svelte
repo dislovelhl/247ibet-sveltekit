@@ -172,7 +172,7 @@
 
 <nav
   aria-label="Main navigation"
-  style="transform: translateZ(0); will-change: transform;"
+  style="transform: translateZ(0); will-change: transform; padding-top: env(safe-area-inset-top, 0px);"
   class="!fixed !overflow-visible top-0 left-0 right-0 z-50 border-b transition-all duration-300 ease-out {scrolled
     ? 'glass-premium border-white/15 shadow-[0_20px_70px_-20px_rgba(0,0,0,0.9)]'
     : 'border-white/5 bg-navy-black/60 backdrop-blur-md'}"

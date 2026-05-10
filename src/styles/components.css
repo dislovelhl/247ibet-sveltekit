@@ -658,12 +658,17 @@
       0 0 0 4px var(--color-prestige-gold);
   }
 
-  /* Interactive Polish & Micro-interactions */
+  /* Interactive Polish & Micro-interactions
+     Hover effects are gated to fine-pointer + hover-capable devices so touch
+     devices don't get sticky hover after a tap. Active-state feedback below
+     covers touch in the (pointer: coarse) block. */
   .btn-magnetic {
     transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
   }
-  .btn-magnetic:hover {
-    transform: scale(1.03);
+  @media (hover: hover) and (pointer: fine) {
+    .btn-magnetic:hover {
+      transform: scale(1.03);
+    }
   }
   .btn-magnetic:active {
     transform: scale(0.97);
@@ -672,9 +677,11 @@
   .card-hover-lift {
     transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
   }
-  .card-hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+  @media (hover: hover) and (pointer: fine) {
+    .card-hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+    }
   }
 
   .nav-link-animated {

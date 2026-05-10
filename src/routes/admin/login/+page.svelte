@@ -10,7 +10,7 @@
   <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
-<div class="min-h-[80vh] flex flex-col items-center justify-center px-4 py-12">
+<div class="min-h-[80dvh] flex flex-col items-center justify-center px-4 py-12">
   <div class="w-full max-w-md">
     <div class="text-center mb-8">
       <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold mb-4 ring-1 ring-prestige-gold/20">
