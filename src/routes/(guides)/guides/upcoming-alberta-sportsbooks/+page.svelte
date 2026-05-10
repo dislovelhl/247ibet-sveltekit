@@ -204,7 +204,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
               </p>
             </div>
             <span
-              class="rounded-full border px-3 py-1 text-[10px] font-mono uppercase tracking-wider {entry.statusColor}"
+              class="rounded-full border px-3 py-1 text-xs font-mono uppercase tracking-wider {entry.statusColor}"
               >{entry.registrationStatus}</span
             >
           </div>

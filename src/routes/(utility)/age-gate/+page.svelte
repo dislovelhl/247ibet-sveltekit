@@ -10,7 +10,7 @@
 <div class="min-h-dvh bg-navy-black flex items-center justify-center p-4">
   <div class="relative w-full max-w-sm navy-card rounded-2xl border border-navy-border p-7 text-center shadow-2xl md:p-9">
     <div class="flex justify-center mb-6">
-      <div class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-error">
+      <div class="inline-flex items-center gap-2 rounded-full border border-error/30 bg-error/10 px-3 py-1 text-xs font-black uppercase tracking-[0.24em] text-error">
         <ShieldAlert class="w-3.5 h-3.5" aria-hidden="true" />
         Age Verification Required
       </div>

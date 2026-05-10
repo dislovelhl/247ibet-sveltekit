@@ -154,7 +154,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <h2 class="text-2xl font-bold mb-4">Wagering Requirement Bands</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full text-left text-sm">
-        <thead class="text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/10">
+        <thead class="text-xs uppercase tracking-widest text-gray-500 border-b border-white/10">
           <tr>
             <th class="px-3 py-3">Band</th>
             <th class="px-3 py-3">Typical Range</th>

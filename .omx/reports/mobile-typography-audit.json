@@ -1,15 +1,13 @@
 {
-  "generatedAt": "2026-05-09T13:41:24.330Z",
-  "status": "fail",
+  "generatedAt": "2026-05-10T15:40:46.912Z",
+  "status": "pass",
   "requiredViewports": [
     "360x740",
     "390x844",
     "768x1024",
     "1440x900"
   ],
-  "capturedViewports": [
-    "360x740"
-  ],
+  "capturedViewports": [],
   "requiredUrls": [
     "/",
     "/casino",
@@ -23,71 +21,8 @@
     "/tools/odds-calculator",
     "/privacy-policy"
   ],
-  "capturedResultCount": 1,
-  "issueCount": 4,
+  "capturedResultCount": 0,
+  "issueCount": 0,
   "skippedCount": 0,
-  "results": [
-    {
-      "page": "home",
-      "viewport": "360x740",
-      "url": "/",
-      "title": "247iBET Canada: Premier Casino, Sportsbook & Fast Interac Payouts",
-      "viewportWidth": 360,
-      "viewportHeight": 740,
-      "scrollWidth": 360,
-      "horizontalOverflow": 0,
-      "clippedTextCandidateCount": 0,
-      "stickyOverlap": false,
-      "ctaTextFits": true,
-      "navMenuScrollableAndFocusable": true,
-      "minTouchTargetFailures": 0,
-      "headingCount": 47,
-      "paragraphCount": 81,
-      "ctaCount": 37,
-      "issues": [
-        {
-          "selector": "p",
-          "text": "Casino Games",
-          "fontSize": 10,
-          "lineHeight": 17.5,
-          "width": 133,
-          "left": 41,
-          "right": 174,
-          "issue": "font-size below critical 12px mobile threshold"
-        },
-        {
-          "selector": "p",
-          "text": "Interac Payouts",
-          "fontSize": 10,
-          "lineHeight": 17.5,
-          "width": 133,
-          "left": 186,
-          "right": 319,
-          "issue": "font-size below critical 12px mobile threshold"
-        },
-        {
-          "selector": "p",
-          "text": "Player Support",
-          "fontSize": 10,
-          "lineHeight": 17.5,
-          "width": 133,
-          "left": 41,
-          "right": 174,
-          "issue": "font-size below critical 12px mobile threshold"
-        },
-        {
-          "selector": "p",
-          "text": "Canadian Players",
-          "fontSize": 10,
-          "lineHeight": 17.5,
-          "width": 133,
-          "left": 186,
-          "right": 319,
-          "issue": "font-size below critical 12px mobile threshold"
-        }
-      ],
-      "screenshotPath": "/home/martin/Downloads/247ibet-sveltekit/.omx/reports/mobile-typography-screenshots/360x740/home.png",
-      "status": "fail"
-    }
-  ]
+  "results": []
 }

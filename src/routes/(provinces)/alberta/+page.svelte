@@ -142,12 +142,12 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
               Launch Watch
             </p>
           </div>
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               AGLC · 18+ · Pending 2026
             </p>
           </div>
@@ -176,7 +176,7 @@
         </div>
         <div>
           <h2 class="font-display text-2xl font-black uppercase text-white !tracking-tighter">Alberta Launch Guidance</h2>
-          <p class="text-[10px] font-black uppercase tracking-widest text-prestige-gold">Important markers for the 2026 go-live</p>
+          <p class="text-xs font-black uppercase tracking-widest text-prestige-gold">Important markers for the 2026 go-live</p>
         </div>
       </div>
       

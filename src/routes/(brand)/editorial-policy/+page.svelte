@@ -52,9 +52,9 @@
     <table class="w-full text-sm">
       <thead>
         <tr class="border-b border-white/10 bg-white/3">
-          <th class="text-left p-4 text-gray-400 font-mono uppercase text-[10px] tracking-widest">Principle</th>
-          <th class="text-left p-4 text-gray-400 font-mono uppercase text-[10px] tracking-widest">What it means</th>
-          <th class="text-left p-4 text-gray-400 font-mono uppercase text-[10px] tracking-widest">Why it matters</th>
+          <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs tracking-widest">Principle</th>
+          <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs tracking-widest">What it means</th>
+          <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs tracking-widest">Why it matters</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-white/5">

@@ -332,7 +332,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
             <tr
-              class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary"
+              class="border-b border-white/10 text-xs uppercase tracking-[0.16em] text-text-tertiary"
             >
               <th class="px-4 py-4 font-black">Service</th>
               <th class="px-4 py-4 font-black">Typical Time</th>

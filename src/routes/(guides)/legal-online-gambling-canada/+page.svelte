@@ -202,7 +202,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
           where you play.
         </p>
       </div>
-      <p class="text-[10px] text-gray-600 italic font-mono uppercase tracking-wider">
+      <p class="text-xs text-gray-600 italic font-mono uppercase tracking-wider">
         Note: This is general information, not legal advice. For legal interpretation, consult a
         Canadian gaming law specialist.
       </p>
@@ -211,7 +211,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
 
   <section class="mb-12">
     <div class="flex items-baseline gap-4 mb-8">
-      <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+      <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest">
         Province-by-Province Status
       </h2>
       <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
@@ -226,17 +226,17 @@ import JsonLd from '$lib/components/JsonLd.svelte';
             <div>
               <span class="font-bold text-[#F1F5F9] text-lg">{p.province}</span>
               <span
-                class="ml-2 text-[10px] font-mono text-gray-500 bg-[#142038] px-2 py-1 rounded-md border border-white/5"
+                class="ml-2 text-xs font-mono text-gray-500 bg-[#142038] px-2 py-1 rounded-md border border-white/5"
                 >{p.code}</span
               >
             </div>
             <span
-              class="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/5 border border-white/10 {p.color}"
+              class="text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/5 border border-white/10 {p.color}"
               >{p.status}</span
             >
           </div>
           <div
-            class="text-[11px] text-slate-blue/60 mb-3 font-mono font-bold uppercase tracking-tighter"
+            class="text-xs text-slate-blue/60 mb-3 font-mono font-bold uppercase tracking-tighter"
           >
             {p.regulator} · Min age: {p.minAge}+
           </div>
@@ -306,14 +306,14 @@ import JsonLd from '$lib/components/JsonLd.svelte';
   </section>
 
   <section class="navy-card rounded-3xl border border-white/5 p-6 md:p-10 mb-10 overflow-hidden">
-    <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-5">
+    <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-5">
       Province Snapshot
     </h2>
     <div class="overflow-x-auto">
       <table class="w-full text-sm text-left">
         <thead>
           <tr
-            class="border-b border-white/5 text-[10px] font-mono font-bold text-gray-500 uppercase tracking-[0.2em]"
+            class="border-b border-white/5 text-xs font-mono font-bold text-gray-500 uppercase tracking-[0.2em]"
           >
             <th class="p-4">Province</th>
             <th class="p-4">Status</th>
@@ -324,7 +324,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
           {#each PROVINCE_STATUS.slice(0, 4) as p}
             <tr class="hover:bg-white/[0.02] transition-colors">
               <td class="p-4 text-[#F1F5F9] font-bold">{p.province}</td>
-              <td class="p-4 font-mono text-[11px] uppercase tracking-tighter">{p.status}</td>
+              <td class="p-4 font-mono text-xs uppercase tracking-tighter">{p.status}</td>
               <td class="p-4 font-bold text-slate-blue">{p.minAge}+</td>
             </tr>
           {/each}
@@ -381,7 +381,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
 
   <section class="mt-12 space-y-4">
     <div class="flex items-baseline gap-4 mb-8">
-      <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+      <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest">
         Legal Online Gambling FAQ
       </h2>
       <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>

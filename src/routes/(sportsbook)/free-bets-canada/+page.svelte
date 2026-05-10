@@ -101,7 +101,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       How sportsbook welcome offers work, what the terms actually mean, and what to check before
       claiming at a Canadian sportsbook.
     </p>
-    <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
+    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
   </header>
 
   <AffiliateDisclosure />

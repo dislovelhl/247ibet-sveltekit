@@ -143,7 +143,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       RTP, variance, bankroll management, and the myths to ignore — a practical guide for Canadian
       players at certified online casinos.
     </p>
-    <p class="text-[10px] text-[#8492A6]">
+    <p class="text-xs text-[#8492A6]">
       Updated March 2026 · 18+/19+ · 247iBET requires 95.5%+ RTP certification
     </p>
   </header>

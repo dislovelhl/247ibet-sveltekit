@@ -167,7 +167,8 @@
           rel="noopener noreferrer"
           class="inline-flex items-center gap-0.5 rounded-sm font-bold text-slate-blue underline underline-offset-2 transition-colors hover:text-slate-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-blue/60"
         >
-          Get help <ExternalLink class="w-2.5 h-2.5" />
+          Get help <ExternalLink class="w-2.5 h-2.5" aria-hidden="true" />
+          <span class="sr-only">(opens in new tab)</span>
         </a>
       </div>
 

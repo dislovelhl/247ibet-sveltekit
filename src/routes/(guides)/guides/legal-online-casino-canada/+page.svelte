@@ -228,7 +228,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <header class="mb-12">
     <div
-      class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[11px] font-black tracking-[0.2em] uppercase mb-6"
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-black tracking-[0.2em] uppercase mb-6"
     >
       Institutional Audit: Canada 2026
     </div>

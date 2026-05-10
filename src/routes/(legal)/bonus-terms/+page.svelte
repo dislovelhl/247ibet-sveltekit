@@ -98,7 +98,7 @@
               <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 {#each promo.observedText as line}
-                  <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-gray-300">{line}</span>
+                  <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-gray-300">{line}</span>
                 {/each}
               </div>
             </div>

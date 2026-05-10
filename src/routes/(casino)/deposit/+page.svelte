@@ -166,15 +166,15 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-20">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
-    <nav aria-label="Breadcrumb" class="mb-12">
-      <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
+<div class="min-h-dvh bg-navy-black pt-spacing-10 pb-spacing-20">
+  <div class="mx-auto max-w-container-max px-spacing-4 sm:px-spacing-6 lg:px-spacing-10">
+    <nav aria-label="Breadcrumb" class="mb-spacing-12">
+      <ol class="flex items-center gap-spacing-3 text-xs font-semibold text-text-tertiary">
         <li><a href="/" class="transition-colors hover:text-white">Home</a></li>
-        <li aria-hidden="true">/</li>
+        <li aria-hidden="true" class="opacity-40">/</li>
         <li><a href="/interac" class="transition-colors hover:text-white">Interac</a></li>
-        <li aria-hidden="true">/</li>
-        <li class="text-white">Deposit &amp; Withdraw</li>
+        <li aria-hidden="true" class="opacity-40">/</li>
+        <li class="text-white" aria-current="page">Deposit &amp; Withdraw</li>
       </ol>
     </nav>
 
@@ -184,17 +184,17 @@
           Deposit &amp; Withdraw <br />
           with <span class="text-prestige-gold">Interac</span> in Canada
         </h1>
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
+        <p class="mt-spacing-7 max-w-2xl text-lg leading-8 text-text-body">
           Fast, secure, and trusted Interac e-Transfer deposits and withdrawals at 247iBET, built
           for Canadian players who want CAD-native banking.
         </p>
 
         <div
-          class="mt-10 grid gap-3 rounded-xl border border-white/10 bg-navy-card/70 p-4 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
+          class="mt-spacing-10 grid gap-spacing-3 rounded-xl border border-white/10 bg-navy-card/70 p-spacing-4 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
         >
           {#each trustItems as item}
             {@const Icon = item.icon}
-            <div class="flex gap-3 rounded-lg bg-black/14 p-3">
+            <div class="flex gap-spacing-3 rounded-lg bg-black/14 p-spacing-3">
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
               >
@@ -202,7 +202,7 @@
               </div>
               <div>
                 <p class="text-sm font-black text-white">{item.title}</p>
-                <p class="mt-1 text-xs leading-5 text-text-body">{item.body}</p>
+                <p class="mt-spacing-1 text-xs leading-5 text-text-body">{item.body}</p>
               </div>
             </div>
           {/each}
@@ -220,18 +220,18 @@
         <div
           class="absolute inset-0 bg-gradient-to-t from-navy-black/86 via-navy-black/15 to-transparent"
         ></div>
-        <div class="absolute inset-x-0 bottom-0 p-8">
+        <div class="absolute inset-x-0 bottom-0 p-spacing-8">
           <p class="text-base font-semibold text-white">Secure payments. Trusted by millions.</p>
-          <p class="mt-2 max-w-md text-sm leading-6 text-text-body">
+          <p class="mt-spacing-2 max-w-md text-sm leading-6 text-text-body">
             Interac keeps sensitive payment steps inside your bank flow while 247iBET records the
             cashier result.
           </p>
-          <div class="mt-8 rounded-xl border border-white/10 bg-black/24 p-4">
-            <div class="flex flex-wrap items-center gap-3">
+          <div class="mt-spacing-8 rounded-xl border border-white/10 bg-black/24 p-spacing-4">
+            <div class="flex flex-wrap items-center gap-spacing-3">
               {#each amountOptions as amount}
                 <button
                   type="button"
-                  class="rounded-full border px-4 py-2 text-xs font-black transition-colors {selectedAmount ===
+                  class="rounded-full border px-spacing-4 py-spacing-2 text-xs font-black transition-colors {selectedAmount ===
                   amount
                     ? 'border-prestige-gold bg-prestige-gold text-navy-black'
                     : 'border-white/10 bg-white/5 text-white hover:border-white/24'}"
@@ -241,31 +241,31 @@
                 </button>
               {/each}
             </div>
-            <div class="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+            <div class="mt-spacing-5 grid gap-spacing-3 text-sm sm:grid-cols-2">
               <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                <p class="font-mono text-xs uppercase tracking-[0.18em] text-text-tertiary">
                   Selected amount
                 </p>
-                <p class="mt-1 text-xl font-black text-white">CAD ${selectedAmount}</p>
+                <p class="mt-spacing-1 text-xl font-black text-white">CAD ${selectedAmount}</p>
               </div>
               <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                <p class="font-mono text-xs uppercase tracking-[0.18em] text-text-tertiary">
                   Estimated payout
                 </p>
-                <p class="mt-1 text-xl font-black text-prestige-gold">{estimatedWindow}</p>
+                <p class="mt-spacing-1 text-xl font-black text-prestige-gold">{estimatedWindow}</p>
               </div>
             </div>
-            <p class="mt-4 text-xs text-text-body">Status: {reviewWindow}</p>
+            <p class="mt-spacing-4 text-xs text-text-body">Status: {reviewWindow}</p>
           </div>
         </div>
       </div>
     </header>
 
     <section
-      class="mt-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
+      class="mt-spacing-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-spacing-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-spacing-6"
     >
-      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div class="flex gap-4">
+      <div class="flex flex-col gap-spacing-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex gap-spacing-4">
           <div
             class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
           >
@@ -276,7 +276,7 @@
               Interac e-Transfer payouts at 247iBET are typically processed within 15-30 minutes of
               approval.
             </p>
-            <p class="mt-2 max-w-3xl text-sm leading-6 text-text-body">
+            <p class="mt-spacing-2 max-w-3xl text-sm leading-6 text-text-body">
               This provides a fast Canadian withdrawal route, with direct bank integration and
               security review before release.
             </p>
@@ -284,7 +284,7 @@
         </div>
         <a
           href="/fast-payouts"
-          class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light"
+          class="inline-flex items-center gap-spacing-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light"
         >
           Learn more about timing
           <ArrowRight class="h-4 w-4" aria-hidden="true" />
@@ -292,9 +292,9 @@
       </div>
     </section>
 
-    <section class="mt-12 grid gap-6 lg:grid-cols-2">
-      <div class="navy-card p-6 md:p-8">
-        <div class="mb-8 flex items-center gap-4">
+    <section class="mt-spacing-12 grid gap-spacing-6 lg:grid-cols-2">
+      <div class="navy-card p-spacing-6 md:p-spacing-8">
+        <div class="mb-spacing-8 flex items-center gap-spacing-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
           >
@@ -302,24 +302,24 @@
           </div>
           <h2 class="text-3xl font-black text-white">How to Deposit</h2>
         </div>
-        <ol class="space-y-7">
+        <ol class="space-y-spacing-7">
           {#each depositSteps as step, index}
-            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+            <li class="grid grid-cols-[2.25rem_1fr] gap-spacing-4">
               <span
                 class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
                 >{index + 1}</span
               >
               <span>
                 <span class="block text-lg font-black text-white">{step.title}</span>
-                <span class="mt-2 block text-sm leading-6 text-text-body">{step.body}</span>
+                <span class="mt-spacing-2 block text-sm leading-6 text-text-body">{step.body}</span>
               </span>
             </li>
           {/each}
         </ol>
       </div>
 
-      <div class="navy-card p-6 md:p-8">
-        <div class="mb-8 flex items-center gap-4">
+      <div class="navy-card p-spacing-6 md:p-spacing-8">
+        <div class="mb-spacing-8 flex items-center gap-spacing-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
           >
@@ -327,16 +327,16 @@
           </div>
           <h2 class="text-3xl font-black text-white">How to Withdraw</h2>
         </div>
-        <ol class="space-y-7">
+        <ol class="space-y-spacing-7">
           {#each withdrawalSteps as step, index}
-            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+            <li class="grid grid-cols-[2.25rem_1fr] gap-spacing-4">
               <span
                 class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
                 >{index + 1}</span
               >
               <span>
                 <span class="block text-lg font-black text-white">{step.title}</span>
-                <span class="mt-2 block text-sm leading-6 text-text-body">{step.body}</span>
+                <span class="mt-spacing-2 block text-sm leading-6 text-text-body">{step.body}</span>
               </span>
             </li>
           {/each}
@@ -344,34 +344,34 @@
       </div>
     </section>
 
-    <section class="mt-12 navy-card overflow-hidden p-6 md:p-8">
+    <section class="mt-spacing-12 navy-card overflow-hidden p-spacing-6 md:p-spacing-8">
       <h2 class="text-3xl font-black text-white">Timing &amp; Expectation Limits</h2>
-      <div class="table-scroll-wrap mt-7">
+      <div class="table-scroll-wrap mt-spacing-7">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
             <tr
-              class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary"
+              class="border-b border-white/10 text-xs uppercase tracking-[0.16em] text-text-tertiary"
             >
-              <th class="px-4 py-4 font-black">Service</th>
-              <th class="px-4 py-4 font-black">Typical Time</th>
-              <th class="px-4 py-4 font-black">Limit</th>
-              <th class="px-4 py-4 font-black">Notes</th>
+              <th class="px-spacing-4 py-spacing-4 font-black">Service</th>
+              <th class="px-spacing-4 py-spacing-4 font-black">Typical Time</th>
+              <th class="px-spacing-4 py-spacing-4 font-black">Limit</th>
+              <th class="px-spacing-4 py-spacing-4 font-black">Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-white/6">
             {#each timingRows as row}
               <tr class="text-text-body">
-                <td class="px-4 py-5 font-black text-white">{row.service}</td>
-                <td class="px-4 py-5">{row.timing}</td>
-                <td class="px-4 py-5">{row.limit}</td>
-                <td class="px-4 py-5">{row.notes}</td>
+                <td class="px-spacing-4 py-spacing-5 font-black text-white">{row.service}</td>
+                <td class="px-spacing-4 py-spacing-5">{row.timing}</td>
+                <td class="px-spacing-4 py-spacing-5">{row.limit}</td>
+                <td class="px-spacing-4 py-spacing-5">{row.notes}</td>
               </tr>
             {/each}
           </tbody>
         </table>
       </div>
       <div
-        class="mt-7 flex gap-3 rounded-lg border border-white/10 bg-black/24 p-4 text-sm text-text-body"
+        class="mt-spacing-7 flex gap-spacing-3 rounded-lg border border-white/10 bg-black/24 p-spacing-4 text-sm text-text-body"
       >
         <ShieldCheck class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
         <p>
@@ -381,16 +381,16 @@
       </div>
     </section>
 
-    <section class="mt-12 grid gap-6 md:grid-cols-2">
+    <section class="mt-spacing-12 grid gap-spacing-6 md:grid-cols-2">
       {#each quickCards as card}
         {@const Icon = card.icon}
-        <a href={card.href} class="navy-card group p-7 transition-transform hover:-translate-y-0.5">
-          <div class="flex items-start justify-between gap-6">
+        <a href={card.href} class="navy-card group p-spacing-7 transition-transform hover:-translate-y-0.5">
+          <div class="flex items-start justify-between gap-spacing-6">
             <div>
               <h2 class="text-2xl font-black text-white">{card.title}</h2>
-              <p class="mt-3 max-w-md text-sm leading-6 text-text-body">{card.body}</p>
+              <p class="mt-spacing-3 max-w-md text-sm leading-6 text-text-body">{card.body}</p>
               <span
-                class="mt-6 inline-flex items-center gap-2 text-sm font-black text-prestige-gold group-hover:text-prestige-gold-light"
+                class="mt-spacing-6 inline-flex items-center gap-spacing-2 text-sm font-black text-prestige-gold group-hover:text-prestige-gold-light"
               >
                 {card.cta}
                 <ArrowRight
@@ -405,14 +405,14 @@
       {/each}
     </section>
 
-    <section class="mt-12 navy-card p-6 md:p-8">
+    <section class="mt-spacing-12 navy-card p-spacing-6 md:p-spacing-8">
       <h2 class="text-3xl font-black text-white">Interac FAQ</h2>
-      <div class="mt-6 divide-y divide-white/8">
+      <div class="mt-spacing-6 divide-y divide-white/8">
         {#each faqItems as item, index}
           <div>
             <button
               type="button"
-              class="flex w-full items-center justify-between gap-6 py-5 text-left"
+              class="flex w-full items-center justify-between gap-spacing-6 py-spacing-5 text-left"
               aria-expanded={openFaq === index}
               onclick={() => (openFaq = openFaq === index ? -1 : index)}
             >
@@ -425,7 +425,7 @@
               />
             </button>
             {#if openFaq === index}
-              <p class="pb-5 pr-10 text-sm leading-6 text-text-body">{item.answer}</p>
+              <p class="pb-spacing-5 pr-spacing-10 text-sm leading-6 text-text-body">{item.answer}</p>
             {/if}
           </div>
         {/each}
@@ -439,14 +439,14 @@
     </section>
 
     <section
-      class="mt-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-7 shadow-2xl md:p-10"
+      class="mt-spacing-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-spacing-7 shadow-2xl md:p-spacing-10"
     >
-      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+      <div class="grid items-center gap-spacing-6 md:grid-cols-[1fr_auto]">
         <div>
           <h2 class="text-3xl font-black text-white md:text-4xl">
             Ready to make a secure deposit?
           </h2>
-          <p class="mt-3 text-base text-text-body">
+          <p class="mt-spacing-3 text-base text-text-body">
             Join 247iBET today and use fast, trusted Interac payments.
           </p>
         </div>

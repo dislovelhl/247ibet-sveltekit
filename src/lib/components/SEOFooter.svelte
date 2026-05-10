@@ -74,7 +74,7 @@
               >
                 {SITE.name}
               </h2>
-              <p class="text-[10px] font-medium tracking-wide text-text-body opacity-80">{SITE.tagline}</p>
+              <p class="text-xs font-medium tracking-wide text-text-body opacity-80">{SITE.tagline}</p>
             </div>
           </div>
 

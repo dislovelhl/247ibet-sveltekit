@@ -122,7 +122,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
       Canada's gambling framework is provincial, not federal. Here is what you need to know as a
       Canadian player — by province, regulator, and legal age.
     </p>
-    <p class="text-[10px] text-[#8492A6]">
+    <p class="text-xs text-[#8492A6]">
       Updated March 2026 · This page provides general legal information, not legal advice. Laws
       change — verify with your provincial regulator.
     </p>

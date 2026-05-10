@@ -176,8 +176,8 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-20" onmousemove={parallax.handleMouseMove} role="presentation">
-  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+<div class="min-h-dvh bg-navy-black pb-20" onmousemove={parallax.handleMouseMove} role="presentation">
+  <div class="mx-auto max-w-[var(--route-shell-max)] px-[var(--route-shell-pad-x)] sm:px-[var(--route-shell-pad-x-sm)] lg:px-[var(--route-shell-pad-x-lg)]">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
@@ -200,12 +200,12 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
               Market Active
             </p>
           </div>
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               19+ · Fully Regulated · Secure Gaming
             </p>
           </div>
@@ -269,7 +269,7 @@
             Move straight into slots, live dealer games, and table games with the Ontario route already in mind.
           </p>
         </div>
-        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
+        <div class="mt-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
           Explore Casino
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
         </div>
@@ -291,7 +291,7 @@
             Bet on NHL, NBA, and more with an Ontario-focused route into the sportsbook.
           </p>
         </div>
-        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
+        <div class="mt-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
           Explore Sportsbook
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
         </div>

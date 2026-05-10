@@ -98,7 +98,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <header class="mb-10">
     <div
-      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest uppercase mb-6"
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-bold tracking-widest uppercase mb-6"
     >
       Risk Intelligence
     </div>
@@ -166,14 +166,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       </p>
       <div class="flex gap-3">
         <div
-          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-[10px] font-bold border border-prestige-gold/20"
+          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
-          iGO VERIFIED
+          iGO REGISTERED
         </div>
         <div
-          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-[10px] font-bold border border-prestige-gold/20"
+          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
-          AGCO LICENSED
+          AGCO REGISTRY
         </div>
       </div>
     </div>

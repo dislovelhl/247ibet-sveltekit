@@ -22,4 +22,5 @@
 
 <a {href} class={className} target="_blank" {rel} {...rest}>
   {@render children()}
+  <span class="sr-only">(opens in new tab)</span>
 </a>

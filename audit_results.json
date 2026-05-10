@@ -1,0 +1,3163 @@
+{
+  "config": {
+    "configFile": "/home/martin/Downloads/247ibet-sveltekit/playwright.config.ts",
+    "rootDir": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/martin/Downloads/247ibet-sveltekit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-mobile",
+        "name": "chromium-mobile",
+        "testDir": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/martin/Downloads/247ibet-sveltekit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 2,
+    "webServer": {
+      "command": "pnpm preview",
+      "port": 4173,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "mobile-typography.spec.ts",
+      "file": "mobile-typography.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "mobile typography visual QA",
+          "file": "mobile-typography.spec.ts",
+          "line": 70,
+          "column": 6,
+          "specs": [
+            {
+              "title": "home typography remains readable at 360x740",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3311,
+                      "error": {
+                        "message": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                        "stack": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts:290:69",
+                        "location": {
+                          "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                          "column": 69,
+                          "line": 290
+                        },
+                        "snippet": "  288 |         expect(audit.ctaTextFits, 'CTA and nav text should fit controls').toBe(true);\n  289 |         expect(audit.minTouchTargetFailures, 'interactive targets should be >= 44px').toBe(0);\n> 290 |         expect(audit.issues, JSON.stringify(audit.issues, null, 2)).toEqual([]);\n      |                                                                     ^\n  291 |       });\n  292 |     }\n  293 |   }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                            "column": 69,
+                            "line": 290
+                          },
+                          "message": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  288 |         expect(audit.ctaTextFits, 'CTA and nav text should fit controls').toBe(true);\n  289 |         expect(audit.minTouchTargetFailures, 'interactive targets should be >= 44px').toBe(0);\n> 290 |         expect(audit.issues, JSON.stringify(audit.issues, null, 2)).toEqual([]);\n      |                                                                     ^\n  291 |       });\n  292 |     }\n  293 |   }\n    at /home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts:290:69"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:18.582Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/martin/Downloads/247ibet-sveltekit/test-results/mobile-typography-mobile-t-40415-remains-readable-at-360x740-chromium-mobile/error-context.md"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/martin/Downloads/247ibet-sveltekit/test-results/mobile-typography-mobile-t-40415-remains-readable-at-360x740-chromium-mobile/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                        "column": 69,
+                        "line": 290
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "60abc435a134a048145e-76fac377c69dc07c22b7",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-06f78dc977067fd01e69",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-88e032005b899136e306",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-e28e17e57b427b22aa49",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-51a7da3b96d0c4720abd",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-06880fa3ca818e54a123",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-7583a2d344074ce798c8",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-19f79d000cd414eb470d",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.018Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-83b1c539a94edeaba688",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-56ac3a06a1c74f753bbf",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-0bf21a479fed8be709d1",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-e11031ff6654a28caf93",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-4113c83e31a930e8c2a2",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-67893e341640eea94e2e",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-c70f6fc23d20f5fb0390",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-0fb656e45cc863b67cf0",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-e34673b910bee666d970",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-18a1acdbb810db3f47aa",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-379b583b977701ab5a32",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-db0a29f3705e01cf5db4",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-0d595a191d95660f7edd",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-b36c94ab1bacdf75dfbf",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-8b986667e4b711189cab",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-69ef5541ece08de30d98",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-8d2fb3837604ac260038",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-d9ed9c2774d7d5343bfc",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-21eb5af0efc8f2fa9fd2",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-6f0809a6a4de47d01e89",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-c6d014dddd2522aa6e5a",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-89fde9b12e96e3025bdc",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-a1a936cb2459bdd42a98",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-c3c85ba6303cace994c7",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-51e66b00d53a444a96a3",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-1a9e52ce7fefbcee8600",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-44d657b93407aef0dcb9",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-e403e3030cf51967361c",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-dad10063feb86ffaa7dd",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-3b7b33f66e11df5ab7f2",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-244231068a0cb61272d6",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-691629a7134b61be9585",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-f211d97d9483943bc219",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-55d7fe80ed29435f528f",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-d079e6027b0a944dca07",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-mobile",
+                  "projectName": "chromium-mobile",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:22.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-1257545a507f0e675836",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 360x740",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 1467,
+                      "error": {
+                        "message": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                        "stack": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts:290:69",
+                        "location": {
+                          "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                          "column": 69,
+                          "line": 290
+                        },
+                        "snippet": "  288 |         expect(audit.ctaTextFits, 'CTA and nav text should fit controls').toBe(true);\n  289 |         expect(audit.minTouchTargetFailures, 'interactive targets should be >= 44px').toBe(0);\n> 290 |         expect(audit.issues, JSON.stringify(audit.issues, null, 2)).toEqual([]);\n      |                                                                     ^\n  291 |       });\n  292 |     }\n  293 |   }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                            "column": 69,
+                            "line": 290
+                          },
+                          "message": "Error: [\n  {\n    \"selector\": \"a\",\n    \"text\": \"Why it stands out\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 171,\n    \"left\": 17,\n    \"right\": 188,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Interac flow\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 139,\n    \"left\": 196,\n    \"right\": 335,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Casino\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 89,\n    \"left\": 343,\n    \"right\": 432,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Sportsbook\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 131,\n    \"left\": 440,\n    \"right\": 571,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Bonus terms\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 133,\n    \"left\": 579,\n    \"right\": 711,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"FAQ\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 63,\n    \"left\": 719,\n    \"right\": 782,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Trust & verification\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 286,\n    \"left\": 37,\n    \"right\": 323,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Casino\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"Explore Sportsbook\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Bonuses\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All Guides\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"a\",\n    \"text\": \"View All FAQs\",\n    \"fontSize\": 12,\n    \"lineHeight\": 12,\n    \"width\": 370,\n    \"left\": -5,\n    \"right\": 365,\n    \"issue\": \"visible text extends outside viewport\"\n  },\n  {\n    \"selector\": \"p\",\n    \"text\": \"Responsible gaming\",\n    \"fontSize\": 11.4,\n    \"lineHeight\": 15.2,\n    \"width\": 358,\n    \"left\": 1,\n    \"right\": 359,\n    \"issue\": \"font-size below critical 12px mobile threshold\"\n  }\n]\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -   1\u001b[39m\n\u001b[31m+ Received  + 132\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 17,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 188,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Why it stands out\",\u001b[39m\n\u001b[31m+     \"width\": 171,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 196,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 335,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Interac flow\",\u001b[39m\n\u001b[31m+     \"width\": 139,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 343,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 432,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Casino\",\u001b[39m\n\u001b[31m+     \"width\": 89,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 440,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 571,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 131,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 579,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 711,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonus terms\",\u001b[39m\n\u001b[31m+     \"width\": 133,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 719,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 782,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"FAQ\",\u001b[39m\n\u001b[31m+     \"width\": 63,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 37,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 323,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Trust & verification\",\u001b[39m\n\u001b[31m+     \"width\": 286,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Casino\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"Explore Sportsbook\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Bonuses\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All Guides\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 12,\u001b[39m\n\u001b[31m+     \"issue\": \"visible text extends outside viewport\",\u001b[39m\n\u001b[31m+     \"left\": -5,\u001b[39m\n\u001b[31m+     \"lineHeight\": 12,\u001b[39m\n\u001b[31m+     \"right\": 365,\u001b[39m\n\u001b[31m+     \"selector\": \"a\",\u001b[39m\n\u001b[31m+     \"text\": \"View All FAQs\",\u001b[39m\n\u001b[31m+     \"width\": 370,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"fontSize\": 11.4,\u001b[39m\n\u001b[31m+     \"issue\": \"font-size below critical 12px mobile threshold\",\u001b[39m\n\u001b[31m+     \"left\": 1,\u001b[39m\n\u001b[31m+     \"lineHeight\": 15.2,\u001b[39m\n\u001b[31m+     \"right\": 359,\u001b[39m\n\u001b[31m+     \"selector\": \"p\",\u001b[39m\n\u001b[31m+     \"text\": \"Responsible gaming\",\u001b[39m\n\u001b[31m+     \"width\": 358,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  288 |         expect(audit.ctaTextFits, 'CTA and nav text should fit controls').toBe(true);\n  289 |         expect(audit.minTouchTargetFailures, 'interactive targets should be >= 44px').toBe(0);\n> 290 |         expect(audit.issues, JSON.stringify(audit.issues, null, 2)).toEqual([]);\n      |                                                                     ^\n  291 |       });\n  292 |     }\n  293 |   }\n    at /home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts:290:69"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:18.581Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/martin/Downloads/247ibet-sveltekit/test-results/mobile-typography-mobile-t-40415-remains-readable-at-360x740-chromium-desktop/error-context.md"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/martin/Downloads/247ibet-sveltekit/test-results/mobile-typography-mobile-t-40415-remains-readable-at-360x740-chromium-desktop/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/martin/Downloads/247ibet-sveltekit/tests/e2e/mobile-typography.spec.ts",
+                        "column": 69,
+                        "line": 290
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "60abc435a134a048145e-ee957d1afb9a4952baa9",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-467a884156ff4ccbd701",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-9dff9bcecca4ec6f0beb",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "home typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-d65d63a048001815320d",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-eb8a585f9a2e96a94ba3",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-eb37bfcda2570d0d0f92",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-773b75d8571cc23be9e3",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "casino typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-fb5daf469d2e5e0e4f12",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-c77cec93c767259dbf8d",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-860485e6aef5b74aef6a",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-272783426f597ac61f3c",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "sportsbook typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-f066f2538bc6e148acfc",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-35969cab3de8bd5030fb",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-844717b9ef4c9af7c797",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-8571e69e41bd715f2e36",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "province-ontario typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-5361cbaea14056ea743f",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-09359c9c26d52c962bad",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-a41da25b0158a4781d9f",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-49479db0952701c8bb23",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guides-index typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-d189ffe3ef755b5e40a5",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-939ba694885c286539f5",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-9065fa3df7a76189bd14",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-94aa7c123664581d60fb",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-named typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-50786bb4ba3b253a472a",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-c80431b680a916035269",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-8f7447efa1f2b0f4748f",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-11c492e1dfd843c68886",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "guide-dynamic typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-2eb735e8988f216b9f4f",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-34c16a38887461dd7d84",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-363cb1b9cdb4e6f9eda5",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-95a62a4517cb79408583",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "review-detail typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-29fcd2a8db94127c2041",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-4e152dcb60da48f90b7d",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-6c2cbf6fac9bc3b94bde",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-b8276e5a20609a936340",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "search typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-036ff3c111de67a27288",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-e0846fbc341b8690edba",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-67b5dc9cf83e2fe23430",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-7b560b86afba984e4739",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "tool-odds-calculator typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-a78b5fa12f8c1e25d21c",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 360x740",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-66eb78ef2e6d3bb3b4d0",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 390x844",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-612e42feed5dc41ed200",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 768x1024",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-59812ba9b6f7320be2b9",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "legal-privacy typography remains readable at 1440x900",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-10T14:46:20.172Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "60abc435a134a048145e-88e8c834d105b62323a4",
+              "file": "mobile-typography.spec.ts",
+              "line": 85,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-10T14:46:15.933Z",
+    "duration": 6132.968000000001,
+    "expected": 0,
+    "skipped": 86,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

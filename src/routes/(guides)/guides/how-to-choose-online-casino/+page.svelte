@@ -164,7 +164,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           <ShieldCheck class="w-7 h-7 text-prestige-gold" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] font-black">
+        <div class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] font-black">
           Audit Protocol: 01-SELECT
         </div>
       </div>
@@ -220,7 +220,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <BookOpen class="w-4 h-4" aria-hidden="true" /> Platform Audit Checklist
     </h2>
     <div class="overflow-hidden rounded-2xl border border-white/5 bg-black/40">
-      <table class="w-full text-[11px] border-collapse uppercase tracking-widest">
+      <table class="w-full text-xs border-collapse uppercase tracking-widest">
         <thead>
           <tr class="bg-white/[0.03]">
             <th class="text-left px-5 py-4 text-slate-500 font-mono font-black">Audit Check</th>
@@ -255,7 +255,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </section>
 
   <div
-    class="text-[11px] text-slate-500 font-mono uppercase tracking-[0.2em] mb-12 border-t border-white/5 pt-12"
+    class="text-xs text-slate-500 font-mono uppercase tracking-[0.2em] mb-12 border-t border-white/5 pt-12"
   >
     Institutional Registry:
     <a

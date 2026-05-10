@@ -74,7 +74,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <header class="mb-10">
     <div
-      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest uppercase mb-6"
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-bold tracking-widest uppercase mb-6"
     >
       Consumer Protection
     </div>

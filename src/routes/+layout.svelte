@@ -6,8 +6,8 @@
   import { inject } from '@vercel/analytics';
   import { SITE, ogImageUrl } from '$lib/site';
   import Navbar from '$lib/components/Navbar.svelte';
+  import BottomNav from '$lib/components/BottomNav.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
-  import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
   import Atmosphere from '$lib/components/Atmosphere.svelte';
 
   $effect(() => {
@@ -39,7 +39,7 @@
 <Navbar />
 <Atmosphere />
 <div
-  class="relative flex min-h-dvh flex-col overflow-x-hidden pb-[calc(7.5rem_+_env(safe-area-inset-bottom,0px))] md:pb-0"
+  class="relative flex min-h-dvh flex-col overflow-x-hidden md:pb-0"
 >
   <main
     id="main-content"
@@ -54,4 +54,4 @@
   <SEOFooter />
 </div>
 
-<StickyMobileCTA />
+<BottomNav />

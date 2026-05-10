@@ -169,7 +169,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           <BookOpen class="w-7 h-7 text-prestige-gold" aria-hidden="true" />
         </div>
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-black tracking-[0.3em] uppercase font-mono"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-black tracking-[0.3em] uppercase font-mono"
         >
           Institutional Audit: Logic &amp; Probability
         </div>
@@ -227,19 +227,19 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <strong class="text-white">30× wagering requirement</strong>:
       </p>
       <div class="overflow-hidden rounded-2xl border border-white/5 bg-black/40">
-        <table class="w-full text-[11px] border-collapse uppercase tracking-widest">
+        <table class="w-full text-xs border-collapse uppercase tracking-widest">
           <thead>
             <tr class="bg-white/[0.03]">
               <th
-                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
                 >Audit Metric</th
               >
               <th
-                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
                 >Quantum</th
               >
               <th
-                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+                class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
                 >Institutional Context</th
               >
             </tr>
@@ -273,19 +273,19 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       100%-contribution slot.
     </p>
     <div class="overflow-hidden rounded-2xl border border-white/5 bg-black/40">
-      <table class="w-full text-[11px] border-collapse uppercase tracking-widest">
+      <table class="w-full text-xs border-collapse uppercase tracking-widest">
         <thead>
           <tr class="bg-white/[0.03]">
             <th
-              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
               >Asset Category</th
             >
             <th
-              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
               >Efficiency</th
             >
             <th
-              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-[10px] tracking-[0.16em]"
+              class="text-left px-4 py-4 text-slate-500 font-mono font-black text-xs tracking-[0.16em]"
               >Registry Note</th
             >
           </tr>
@@ -394,7 +394,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </ul>
   </nav>
 
-  <div class="text-[11px] text-slate-500 font-mono uppercase tracking-widest mb-12 mt-6">
+  <div class="text-xs text-slate-500 font-mono uppercase tracking-widest mb-12 mt-6">
     Institutional Registry:
     <a
       href="/no-deposit-bonus-canada"

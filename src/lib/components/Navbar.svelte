@@ -387,14 +387,15 @@
     >
       <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
         <div class="flex items-center justify-between mb-4">
-          <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
+          <p class="font-mono text-xs uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
           <button 
             type="button" 
             onclick={closeMobileMenu}
-            class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
+            aria-label="Close navigation menu"
+            class="flex items-center gap-2 rounded-sm text-xs font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
           >
             Close
-            <X class="h-4 w-4" />
+            <X class="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 

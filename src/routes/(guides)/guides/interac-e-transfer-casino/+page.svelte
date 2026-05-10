@@ -204,7 +204,7 @@
     ></div>
     <div class="relative z-10">
       <div
-        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-black tracking-[0.3em] uppercase mb-6 font-mono"
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-black tracking-[0.3em] uppercase mb-6 font-mono"
       >
         Institutional Audit: Payments 2026
       </div>
@@ -260,15 +260,15 @@
         <thead class="bg-white/[0.03]">
           <tr>
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Metric</th
             >
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Value</th
             >
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Institutional Note</th
             >
           </tr>
@@ -301,15 +301,15 @@
         <thead class="bg-white/[0.03]">
           <tr>
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Factor</th
             >
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Bank/Interac Side</th
             >
             <th
-              class="text-left px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono"
+              class="text-left px-6 py-5 text-xs uppercase tracking-[0.2em] text-slate-500 font-mono"
               >Operator Side</th
             >
           </tr>
@@ -418,7 +418,7 @@
     >
       247iBET Payment Intelligence Gap
     </h2>
-    <p class="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-mono mb-8 opacity-70">
+    <p class="text-xs text-slate-500 uppercase tracking-[0.3em] font-mono mb-8 opacity-70">
       Internal Transaction Logs · March 2026 · 18 Registries Analyzed
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -428,7 +428,7 @@
         >
           <div class="text-4xl font-sans font-black text-prestige-gold mb-3">{item.stat}</div>
           <p
-            class="text-[11px] text-slate-400 uppercase tracking-widest font-bold leading-relaxed m-0"
+            class="text-xs text-slate-400 uppercase tracking-widest font-bold leading-relaxed m-0"
           >
             {item.label}
           </p>

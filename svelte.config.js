@@ -5,6 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   kit: {
+    /*
     csp: {
       mode: 'auto',
       directives: {
@@ -22,6 +23,7 @@ const config = {
         'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : []
       }
     },
+    */
     adapter: adapter({
       runtime: 'nodejs24.x',
       images: {

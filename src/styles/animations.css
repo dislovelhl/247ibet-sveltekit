@@ -7,8 +7,11 @@
   }
 
   @keyframes shine {
-    to {
-      background-position-x: -200%;
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
     }
   }
 
@@ -204,11 +207,26 @@
   }
 
   .skeleton {
+    position: relative;
+    overflow: hidden;
     background: #0d1629;
-    background: linear-gradient(110deg, #0d1629 8%, #142038 18%, #0d1629 33%);
     border-radius: 4px;
-    background-size: 200% 100%;
-    animation: 1.5s shine linear infinite;
+  }
+
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(20, 32, 56, 0) 0%,
+      rgba(20, 32, 56, 0.5) 50%,
+      rgba(20, 32, 56, 0) 100%
+    );
+    animation: shine 1.5s linear infinite;
   }
 
   .odds-marquee {
@@ -340,10 +358,10 @@
 
   @keyframes shimmer {
     0% {
-      background-position: -1000px 0;
+      transform: translateX(-100%);
     }
     100% {
-      background-position: 1000px 0;
+      transform: translateX(100%);
     }
   }
 

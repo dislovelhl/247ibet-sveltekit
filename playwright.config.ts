@@ -9,11 +9,11 @@ export default defineConfig({
     ['html', { outputFolder: 'static/reports/playwright-report', open: 'never' }],
   ],
   use: {
-    baseURL: process.env.BASE_URL ?? 'http://localhost:4173',
+    baseURL: process.env.BASE_URL ?? 'http://localhost:5173',
   },
   webServer: {
-    command: 'pnpm preview',
-    port: 4173,
+    command: 'pnpm dev --port 5173',
+    port: 5173,
     reuseExistingServer: !process.env.CI,
   },
   projects: [

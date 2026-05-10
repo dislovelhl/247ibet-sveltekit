@@ -72,11 +72,11 @@ describe('PageEntry type structure', () => {
 describe('dynamic route metadata', () => {
   it('does not leave literal slug templates in canonical hrefs', () => {
     const dynamicRouteFiles = [
-      'src/routes/authors/[slug]/+page.svelte',
-      'src/routes/events/[slug]/+page.svelte',
-      'src/routes/news/[slug]/+page.svelte',
-      'src/routes/payments/[slug]/+page.svelte',
-      'src/routes/reviews/[slug]/+page.svelte',
+      'src/routes/(content)/authors/[slug]/+page.svelte',
+      'src/routes/(content)/events/[slug]/+page.svelte',
+      'src/routes/(content)/news/[slug]/+page.svelte',
+      'src/routes/(content)/payments/[slug]/+page.svelte',
+      'src/routes/(content)/reviews/[slug]/+page.svelte',
     ];
 
     for (const file of dynamicRouteFiles) {

@@ -1,7 +1,10 @@
 @layer base {
+  html {
+    font-size: 16px !important;
+  }
   body {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 16px !important;
     background-color: #070c18;
     background-image:
       radial-gradient(ellipse 80% 60% at 50% 0%, rgba(20, 32, 56, 0.45) 0%, transparent 70%),

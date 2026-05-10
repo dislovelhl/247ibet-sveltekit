@@ -1,5 +1,3 @@
-import type { FaqItem } from './faqs';
-import type { Casino } from './casinos';
 
 export interface PageData {
   slug: string;
@@ -28,10 +26,10 @@ export const pages: Record<string, PageData> = {
   'best-betting-apps-canada': {
     slug: 'best-betting-apps-canada',
     title: 'Best Betting Apps Canada 2026 | iOS & Android | 247iBET',
-    description: 'Compare Canadian sports betting apps for iPhone and Android. We rate live betting UX, Interac deposits, parlay builders, and AGCO licensing.',
+    description: 'Compare Canadian sports betting apps for iPhone and Android. We rate live betting UX, Interac deposits, parlay builders, and regulatory license verification.',
     lastUpdated: '2026-03-01',
     heroKicker: 'Mobile sportsbook rankings',
     heroTitle: 'Best Betting Apps Canada 2026',
-    heroSubtitle: 'Field-tested mobile rankings for iOS and Android sportsbooks in Canada — evaluated on biometric login security, SGP builder latency, and AGCO-compliant responsible gambling tools for on-the-go wagering.'
+    heroSubtitle: 'Field-tested mobile rankings for iOS and Android sportsbooks in Canada — evaluated on biometric login security, SGP builder latency, and verified responsible gambling tools for on-the-go wagering.'
   }
 };

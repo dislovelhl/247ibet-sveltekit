@@ -181,7 +181,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <section class="navy-card mt-12 rounded-2xl border border-white/10 p-6 md:p-8">
     <div
-      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-gold"
+      class="mb-4 inline-flex items-center rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-prestige-gold"
     >
       {intro.eyebrow}
     </div>

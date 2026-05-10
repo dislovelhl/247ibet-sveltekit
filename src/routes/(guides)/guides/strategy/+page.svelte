@@ -72,7 +72,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <article class="lg:col-span-2">
       <div class="mb-10">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-[10px] font-bold tracking-widest uppercase mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-xs font-bold tracking-widest uppercase mb-6"
         >
           Elite Strategy Series
         </div>
@@ -93,7 +93,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <div class="overflow-x-auto">
           <table class="min-w-full text-left text-sm">
             <thead
-              class="text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/10"
+              class="text-xs uppercase tracking-widest text-gray-500 border-b border-white/10"
             >
               <tr>
                 <th class="px-3 py-3">Principle</th>
@@ -181,7 +181,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <div class="flex flex-wrap gap-3 mt-8">
         {#each ['#Strategy', '#Esports', '#CompetitiveGaming', '#MetaAnalysis'] as tag}
           <span
-            class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-gray-500 uppercase tracking-widest"
+            class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-500 uppercase tracking-widest"
             >{tag}</span
           >
         {/each}

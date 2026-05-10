@@ -215,12 +215,13 @@ describe('Prohibited language gate — compliance', () => {
 
       for (const file of allSvelteFiles) {
         const rel = relative(ROUTES_DIR, file);
+        const strippedRel = rel.replace(/\([^)]+\)\//g, '');
 
         // Skip globally exempt routes
-        if (EXEMPT_ROUTE_PATTERNS.some((p) => p.test(rel))) continue;
+        if (EXEMPT_ROUTE_PATTERNS.some((p) => p.test(strippedRel))) continue;
 
         // Skip rule-specific exempt routes
-        if (rule.exempt && isExempt(rel, rule.exempt)) continue;
+        if (rule.exempt && isExempt(strippedRel, rule.exempt)) continue;
 
         const content = readFileSync(file, 'utf-8');
         if (rule.pattern.test(content)) {

@@ -151,7 +151,7 @@
         >
           <BookOpen class="w-6 h-6 text-slate-blue" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em]">
+        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.3em]">
           Platform Standards
         </div>
       </div>

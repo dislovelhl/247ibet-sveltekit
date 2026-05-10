@@ -122,7 +122,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       ></div>
       <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     </div>
-    <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
+    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
   </header>
 
   <AffiliateDisclosure />
@@ -148,7 +148,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
  aria-labelledby="snapshot-heading">
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
-        <p class="text-[10px] font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
+        <p class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
           Promo snapshot
         </p>
         <h2 id="snapshot-heading" class="text-xl font-bold text-[#F1F5F9]">
@@ -162,10 +162,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-4">
-            <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
+            <p class="text-xs uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
             <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>
             <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{promo.summary}</p>
-            <p class="mt-3 text-[11px] text-[#CBD5E1]">{promo.period}</p>
+            <p class="mt-3 text-xs text-[#CBD5E1]">{promo.period}</p>
           </div>
         </article>
       {/each}
@@ -176,7 +176,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
  aria-labelledby="sports-tieins-heading">
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
-        <p class="text-[10px] font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
+        <p class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
           Brand and event context
         </p>
         <h2 id="sports-tieins-heading" class="text-xl font-bold text-[#F1F5F9]">
@@ -190,10 +190,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-4">
-            <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
+            <p class="text-xs uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
             <h3 class="mt-2 text-sm font-bold text-white">{creative.headline}</h3>
             <p class="mt-2 text-xs text-[#94A3B8] leading-relaxed">{creative.summary}</p>
-            <p class="mt-3 text-[11px] text-[#CBD5E1]">{creative.period}</p>
+            <p class="mt-3 text-xs text-[#CBD5E1]">{creative.period}</p>
           </div>
         </article>
       {/each}
@@ -210,7 +210,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           <div class="flex items-center justify-between gap-4">
             <span class="font-semibold text-[#F1F5F9] text-sm">{b.name}</span>
             <span
-              class="text-[10px] font-medium text-[#94A3B8] bg-[#142038] px-2 py-0.5 rounded shrink-0"
+              class="text-xs font-medium text-[#94A3B8] bg-[#142038] px-2 py-0.5 rounded shrink-0"
             >
               Risk: {b.riskLevel}
             </span>

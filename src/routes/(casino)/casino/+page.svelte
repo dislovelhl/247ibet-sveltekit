@@ -350,7 +350,7 @@
             <p class="mt-3 text-sm leading-relaxed text-text-body/80">{card.body}</p>
           </div>
           <div
-            class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold"
+            class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold"
           >
             {card.cta}
             <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -419,7 +419,7 @@
                 <div>
                   <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
                   <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
-                  <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
+                  <div class="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
                     Enter Lobby
                     <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                   </div>

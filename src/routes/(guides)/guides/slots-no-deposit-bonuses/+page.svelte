@@ -68,7 +68,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-8">
-    <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
+    <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
       Slots Bonuses Guide
     </div>
     <h1 class="page-hero-title mb-4">

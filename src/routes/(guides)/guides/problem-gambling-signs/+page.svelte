@@ -271,7 +271,7 @@
         >
           <div class="shrink-0">
             <span
-              class="text-[10px] font-semibold text-[#8492A6] bg-[#142038] px-2 py-0.5 rounded uppercase tracking-wide"
+              class="text-xs font-semibold text-[#8492A6] bg-[#142038] px-2 py-0.5 rounded uppercase tracking-wide"
               >{r.type}</span
             >
           </div>

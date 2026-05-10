@@ -117,7 +117,7 @@
 
     <header class="max-w-4xl">
       <div
-        class="inline-flex items-center gap-2 rounded-full border border-slate-blue/20 bg-white/5 px-4 py-2 text-[11px] font-mono uppercase tracking-[0.24em] text-slate-blue"
+        class="inline-flex items-center gap-2 rounded-full border border-slate-blue/20 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.24em] text-slate-blue"
       >
         SEO / GEO / AI Search
       </div>

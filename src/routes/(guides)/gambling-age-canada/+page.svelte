@@ -163,7 +163,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
       class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-slate-blue/5 blur-3xl pointer-events-none"
     ></div>
     <div class="relative z-10">
-      <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
+      <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.3em] mb-3">
         Legal Reference
       </div>
       <h1 class="page-hero-title mb-4">Legal Gambling Age in Canada</h1>

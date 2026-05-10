@@ -87,7 +87,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <div class="navy-card rounded-3xl border border-white/10 p-6 md:p-10 mb-8">
-    <div class="text-[10px] font-mono text-orange-400 uppercase tracking-[0.3em] mb-3">
+    <div class="text-xs font-mono text-orange-400 uppercase tracking-[0.3em] mb-3">
       Payments Guide
     </div>
     <h1 class="page-hero-title mb-4">Crypto Casino Canada</h1>

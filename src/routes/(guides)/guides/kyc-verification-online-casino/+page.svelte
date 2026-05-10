@@ -198,7 +198,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     ></div>
     <div class="relative z-10">
       <div
-        class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
+        class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
       >
         Institutional Protocol: Security &amp; Compliance
       </div>
@@ -290,13 +290,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <table class="w-full border-collapse">
         <thead class="bg-white/5">
           <tr>
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Document type</th
             >
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Typical examples</th
             >
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Why it matters</th
             >
           </tr>

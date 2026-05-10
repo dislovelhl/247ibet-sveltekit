@@ -69,7 +69,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="navy-card rounded-3xl border border-white/10 p-6 md:p-10 mb-8">
-    <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
+    <div class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
       Betting Education
     </div>
     <h1 class="page-hero-title mb-4">Sports Betting Odds Explained</h1>
@@ -84,7 +84,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <div class="space-y-5 mb-10">
     <section class="navy-card rounded-2xl border border-white/10 p-5 md:p-6">
       <h2 class="text-xl font-bold text-white mb-1">American Odds</h2>
-      <div class="text-[11px] font-mono text-gray-500 mb-4 uppercase tracking-wider">
+      <div class="text-xs font-mono text-gray-500 mb-4 uppercase tracking-wider">
         Used by all Canadian sportsbooks
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-400">
@@ -107,7 +107,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
     <section class="navy-card rounded-2xl border border-white/10 p-5 md:p-6">
       <h2 class="text-xl font-bold text-white mb-1">Decimal Odds</h2>
-      <div class="text-[11px] font-mono text-gray-500 mb-4 uppercase tracking-wider">
+      <div class="text-xs font-mono text-gray-500 mb-4 uppercase tracking-wider">
         Popular in Europe, used on some Canadian sites
       </div>
       <p class="text-sm text-gray-400 leading-relaxed">
@@ -121,7 +121,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
     <section class="navy-card rounded-2xl border border-white/10 p-5 md:p-6">
       <h2 class="text-xl font-bold text-white mb-1">Fractional Odds</h2>
-      <div class="text-[11px] font-mono text-gray-500 mb-4 uppercase tracking-wider">
+      <div class="text-xs font-mono text-gray-500 mb-4 uppercase tracking-wider">
         Used in horse racing
       </div>
       <p class="text-sm text-gray-400 leading-relaxed">

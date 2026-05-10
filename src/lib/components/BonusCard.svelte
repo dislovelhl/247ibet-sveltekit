@@ -90,7 +90,7 @@
         />
         <div class="absolute inset-0 bg-gradient-to-t from-navy-card via-navy-card/40 to-transparent md:bg-gradient-to-r"></div>
         <span
-          class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-prestige-gold-50 backdrop-blur"
+          class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/55 px-2.5 py-1 font-mono text-xs uppercase tracking-[0.18em] text-prestige-gold-50 backdrop-blur"
         >
           <Sparkles class="h-3 w-3 text-prestige-gold" aria-hidden="true" />
           {tierLabel}
@@ -98,10 +98,10 @@
       </div>
     {/if}
 
-    <div class="relative flex flex-col gap-5 p-5 md:p-7">
+    <div class="relative flex flex-col gap-spacing-5 p-spacing-5 md:p-spacing-8">
       {#if !image}
         <span
-          class="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/10 bg-black/30 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-prestige-gold-50"
+          class="inline-flex w-fit items-center gap-1.5 rounded-full border border-white/10 bg-black/30 px-2.5 py-1 font-mono text-xs uppercase tracking-[0.18em] text-prestige-gold-50"
         >
           <Sparkles class="h-3 w-3 text-prestige-gold" aria-hidden="true" />
           {tierLabel}
@@ -109,12 +109,12 @@
       {/if}
 
       <header class="space-y-2">
-        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-text-tertiary">
+        <p class="font-mono text-xs uppercase tracking-[0.22em] text-text-tertiary">
           {eyebrow}
         </p>
         <h3
           id={headingId}
-          class="font-display text-2xl leading-[1.1] text-white md:text-[1.7rem] md:leading-[1.08]"
+          class="font-display text-2xl leading-[1.1] text-white md:text-3xl md:leading-[1.08]"
         >
           {headline}
         </h3>
@@ -129,14 +129,14 @@
 
       {#if termRows.length}
         <dl
-          class="grid grid-cols-1 gap-x-5 gap-y-3 border-y border-white/[0.06] py-4 sm:grid-cols-2"
+          class="grid grid-cols-1 gap-x-spacing-6 gap-y-spacing-3 border-y border-white/[0.06] py-spacing-4 sm:grid-cols-2"
         >
           {#each termRows as row}
             {@const RowIcon = row.icon}
             <div class="flex items-start gap-2.5">
               <RowIcon class="mt-0.5 h-3.5 w-3.5 shrink-0 text-prestige-gold-text" aria-hidden="true" />
               <div class="min-w-0">
-                <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
+                <dt class="font-mono text-xs uppercase tracking-[0.18em] text-text-tertiary">
                   {row.label}
                 </dt>
                 <dd class="text-sm font-semibold text-white tabular-nums">{row.value}</dd>
@@ -146,7 +146,7 @@
         </dl>
       {/if}
 
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex flex-col gap-spacing-4 sm:flex-row sm:items-center sm:justify-between">
         <SafeExternalLink
           href={ctaHref}
           class="page-cta-primary btn-magnetic w-full sm:w-auto"
@@ -175,7 +175,7 @@
       {#if termsOpen}
         <div
           id="{slug}-terms"
-          class="rounded-xl border border-white/[0.06] bg-black/20 p-4 text-xs leading-relaxed text-text-body"
+          class="rounded-xl border border-white/[0.06] bg-black/20 p-spacing-4 text-xs leading-relaxed text-text-body"
         >
           <p class="mb-2 font-semibold text-white">Bonus terms in plain English</p>
           <ul class="space-y-1.5">
@@ -203,7 +203,7 @@
         </div>
       {/if}
 
-      <p class="mt-auto text-[11px] leading-snug text-text-tertiary">
+      <p class="mt-auto text-xs leading-snug text-text-tertiary">
         {IBET_DISCLAIMER}
       </p>
     </div>

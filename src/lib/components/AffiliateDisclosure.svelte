@@ -7,7 +7,7 @@
 
 {#if variant === 'cta'}
   <p
-    class="mt-3 text-[11px] leading-relaxed text-text-tertiary/80 border-t border-white/5 pt-3"
+    class="mt-3 text-xs leading-relaxed text-text-tertiary/80 border-t border-white/5 pt-3"
   >
     <strong class="text-text-tertiary">Responsible Play:</strong>
     19+ to play (18+ in select provinces). Gambling should be entertainment. Set limits and play

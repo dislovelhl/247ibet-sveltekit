@@ -30,26 +30,46 @@
 
     return () => clearInterval(interval);
   });
+
+  const trendLabel = (trend: string): string => {
+    if (trend === 'up') return '(rising)';
+    if (trend === 'down') return '(falling)';
+    return '';
+  };
 </script>
 
-<div class="w-full bg-navy-black/40 border-y border-white/5 backdrop-blur-md overflow-hidden h-12 flex items-center">
+<div
+  class="w-full bg-navy-black/40 border-y border-white/5 backdrop-blur-md overflow-hidden h-12 flex items-center"
+  role="marquee"
+  aria-label="Live odds ticker"
+  aria-roledescription="live odds feed"
+>
   <div class="flex items-center px-4 border-r border-white/10 h-full bg-prestige-gold/5 shrink-0">
-    <Zap class="w-4 h-4 text-prestige-gold mr-2" />
-    <span class="text-[10px] font-black uppercase tracking-widest text-prestige-gold whitespace-nowrap">Live Odds Ticker</span>
+    <Zap class="w-4 h-4 text-prestige-gold mr-2" aria-hidden="true" />
+    <span class="text-xs font-black uppercase tracking-widest text-prestige-gold whitespace-nowrap">Live Odds Ticker</span>
   </div>
   
-  <div class="relative flex-1 overflow-hidden h-full">
+  <!-- Screen-reader accessible version (hidden visually, updated live) -->
+  <div class="sr-only" aria-live="polite" aria-atomic="true" role="status">
+    Live odds:
+    {#each odds as item}
+      {item.match}: {item.pick} at {item.odds} {trendLabel(item.trend)}.
+    {/each}
+  </div>
+
+  <!-- Visual marquee (hidden from assistive technology since sr-only region above provides the data) -->
+  <div class="relative flex-1 overflow-hidden h-full" aria-hidden="true">
     <div class="odds-marquee flex items-center gap-12 px-6 h-full whitespace-nowrap">
       {#each [...odds, ...odds] as item}
         <div class="flex items-center gap-3">
-          <span class="text-[11px] font-bold text-text-tertiary uppercase">{item.match}</span>
-          <span class="text-[11px] font-medium text-white/60">{item.pick}</span>
+          <span class="text-xs font-bold text-text-tertiary uppercase">{item.match}</span>
+          <span class="text-xs font-medium text-white/60">{item.pick}</span>
           <span class="font-mono text-sm font-black {item.trend === 'up' ? 'text-success' : item.trend === 'down' ? 'text-error' : 'text-prestige-gold'} transition-colors duration-500">
             {item.odds}
             {#if item.trend === 'up'}
-              <span class="text-[10px] ml-0.5">↑</span>
+              <span class="text-xs ml-0.5">↑</span>
             {:else if item.trend === 'down'}
-              <span class="text-[10px] ml-0.5">↓</span>
+              <span class="text-xs ml-0.5">↓</span>
             {/if}
           </span>
         </div>
@@ -72,5 +92,12 @@
 
   .odds-marquee:hover {
     animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .odds-marquee {
+      animation: none;
+      transform: translateX(0);
+    }
   }
 </style>

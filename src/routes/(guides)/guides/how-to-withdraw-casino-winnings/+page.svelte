@@ -233,7 +233,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     ></div>
     <div class="relative z-10">
       <div
-        class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
+        class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
       >
         Institutional Protocol: Settlement &amp; Payouts
       </div>

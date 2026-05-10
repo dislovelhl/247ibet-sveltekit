@@ -58,7 +58,7 @@
         >
           <Info class="w-6 h-6 text-yellow-400" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-yellow-400 uppercase tracking-[0.3em]">
+        <div class="text-xs font-mono text-yellow-400 uppercase tracking-[0.3em]">
           Transparency Notice
         </div>
       </div>

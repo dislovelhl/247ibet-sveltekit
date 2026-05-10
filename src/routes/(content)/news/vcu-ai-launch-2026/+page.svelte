@@ -84,7 +84,7 @@
 
     <div class="mb-6">
       <div
-        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-[10px] font-bold tracking-widest uppercase mb-4"
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-xs font-bold tracking-widest uppercase mb-4"
       >
         Press Release · April 5, 2026
       </div>

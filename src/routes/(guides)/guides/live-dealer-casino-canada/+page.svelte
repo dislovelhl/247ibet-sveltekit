@@ -122,7 +122,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-8">
-    <div class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
+    <div class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3">
       Casino Guide
     </div>
     <h1 class="page-hero-title mb-4">Live Dealer Casino Canada</h1>
@@ -149,7 +149,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       {#each games as g}
         <div class="p-3 rounded-xl bg-white/3 border border-white/8">
           <div class="font-bold text-white text-sm">{g.game}</div>
-          <div class="text-[10px] text-prestige-gold font-mono mt-0.5">{g.providers}</div>
+          <div class="text-xs text-prestige-gold font-mono mt-0.5">{g.providers}</div>
           <p class="text-xs mt-1 leading-relaxed">{g.note}</p>
         </div>
       {/each}

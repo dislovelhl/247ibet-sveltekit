@@ -66,7 +66,7 @@
         {@const Icon = link.icon}
         <a
           href={link.href}
-          class="flex flex-col items-center gap-1 px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all {pathname === link.href ? 'text-prestige-gold' : 'text-text-tertiary'}"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all {pathname === link.href ? 'text-prestige-gold' : 'text-text-tertiary'}"
         >
           <Icon class="h-4 w-4 mb-0.5" />
           {link.label}

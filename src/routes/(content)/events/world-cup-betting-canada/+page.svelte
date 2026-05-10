@@ -162,7 +162,7 @@
         </div>
       {/each}
     </div>
-    <p class="text-[10px] text-[#8492A6] mt-2">
+    <p class="text-xs text-[#8492A6] mt-2">
       Tournament schedule subject to FIFA confirmation. Last updated March 2026.
     </p>
   </section>

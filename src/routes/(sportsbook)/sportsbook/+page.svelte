@@ -358,7 +358,7 @@
             {/each}
           </nav>
           <div class="border-t border-white/10 pt-6">
-            <p class="px-4 pb-3 font-display text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold">
+            <p class="px-4 pb-3 font-display text-xs font-black uppercase tracking-[0.2em] text-prestige-gold">
               Popular Sports
             </p>
             <div class="space-y-1.5">
@@ -397,11 +397,11 @@
             <div class="flex flex-wrap items-center gap-3 mb-8">
               <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
                 <span class="live-dot" aria-hidden="true"></span>
-                <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+                <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
                   Live Markets Open
                 </p>
               </div>
-              <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
                 Canadian Sportsbook Hub
               </p>
             </div>
@@ -430,7 +430,7 @@
                 Compare Odds
               </a>
             </div>
-            <p class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60">
+            <p class="mt-6 max-w-2xl text-xs uppercase tracking-wider leading-relaxed text-text-tertiary/60">
               {IBET_DISCLAIMER}
             </p>
           </div>
@@ -446,7 +446,7 @@
                 <Flame class="h-6 w-6" />
               </div>
               <div>
-                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary">
                   {offer.eyebrow}
                 </p>
                 <h2 class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">
@@ -458,7 +458,7 @@
               </div>
               <SafeExternalLink
                 href={IBET_URLS.register}
-                class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+                class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
               >
                 {offer.cta}
                 <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />

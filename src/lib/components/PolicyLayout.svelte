@@ -55,9 +55,9 @@
     <!-- Breadcrumbs -->
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
-        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="/" class="rounded-sm hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
-        <li class="text-prestige-gold">{title}</li>
+        <li aria-current="page" class="text-prestige-gold">{title}</li>
       </ol>
     </nav>
 
@@ -72,7 +72,7 @@
         <div class="mb-8 flex justify-center md:justify-start">
           <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
               Official Document
             </p>
           </div>
@@ -110,17 +110,18 @@
 
           <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div class="flex flex-wrap gap-x-8 gap-y-4">
-              <a href="/security" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Security Standards</a>
-              <a href="/responsible-gambling" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Responsible Gambling</a>
-              <a href="/contact" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Contact Support</a>
+              <a href="/security" class="rounded-sm text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60">Security Standards</a>
+              <a href="/responsible-gambling" class="rounded-sm text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60">Responsible Gambling</a>
+              <a href="/contact" class="rounded-sm text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60">Contact Support</a>
             </div>
             
             <button 
+              type="button"
               onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
+              class="group flex items-center gap-2 rounded-sm text-xs font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
             >
               Back to Top
-              <svg class="h-4 w-4 transition-transform group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="h-4 w-4 transition-transform group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
               </svg>
             </button>
