@@ -393,8 +393,8 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-16 text-white" onmousemove={handleMouseMove} role="presentation">
-  <section class="relative flex min-h-[92vh] items-center overflow-hidden border-b border-prestige-gold/30">
+<div class="min-h-dvh bg-navy-black pt-16 text-white" onmousemove={handleMouseMove} role="presentation">
+  <section class="relative flex min-h-[92dvh] items-center overflow-hidden border-b border-prestige-gold/30">
     <BackgroundAtmosphere src="/images/frozen-edge-hero.webp" />
 
     <!-- Gold radial glow behind the content -->

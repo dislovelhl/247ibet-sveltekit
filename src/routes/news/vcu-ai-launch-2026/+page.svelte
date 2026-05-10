@@ -61,7 +61,7 @@
   />
 </svelte:head>
 
-<main class="min-h-screen bg-navy-black relative overflow-hidden">
+<main class="min-h-dvh bg-navy-black relative overflow-hidden">
   <div
     aria-hidden="true"
     class="absolute -top-32 -left-32 w-64 h-64 rounded-full bg-slate-blue/20 blur-[100px] opacity-50 pointer-events-none"

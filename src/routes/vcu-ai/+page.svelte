@@ -29,7 +29,7 @@
   <JsonLd schema={orgSchema} />
 </svelte:head>
 
-<main class="min-h-screen bg-navy-black relative overflow-hidden">
+<main class="min-h-dvh bg-navy-black relative overflow-hidden">
   <div aria-hidden="true" class="absolute inset-0 opacity-[0.08]"></div>
   <div
     aria-hidden="true"

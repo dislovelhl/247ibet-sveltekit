@@ -333,7 +333,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-dvh bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">

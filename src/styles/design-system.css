@@ -128,7 +128,7 @@
 
   /* ── Public route coordinate contract ──
      Most public pages render either a top-level `.container` shell or a
-     `.min-h-screen.bg-navy-black` shell below the global navbar. Keep those
+     `.min-h-dvh.bg-navy-black` shell below the global navbar. Keep those
      common shell starts aligned so breadcrumbs, page headers, and first content
      sections land at the same X/Y coordinates across comparable pages. */
   main {
@@ -149,11 +149,11 @@
     padding-right: var(--route-shell-pad-x) !important;
   }
 
-  main > div > .min-h-screen.bg-navy-black {
+  main > div > .min-h-dvh.bg-navy-black {
     padding-top: var(--route-shell-top) !important;
   }
 
-  main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']) {
+  main > div > .min-h-dvh.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']) {
     max-width: var(--route-shell-max) !important;
     padding-left: var(--route-shell-pad-x) !important;
     padding-right: var(--route-shell-pad-x) !important;
@@ -161,7 +161,7 @@
 
   main
     > div
-    > .min-h-screen.bg-navy-black
+    > .min-h-dvh.bg-navy-black
     > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
     max-width: var(--route-shell-max) !important;
     padding-left: var(--route-shell-pad-x) !important;
@@ -169,7 +169,7 @@
   }
 
   main > div > .container.mx-auto > :first-child,
-  main > div > .min-h-screen.bg-navy-black > .mx-auto > :first-child {
+  main > div > .min-h-dvh.bg-navy-black > .mx-auto > :first-child {
     margin-top: 0 !important;
   }
 
@@ -181,10 +181,10 @@
 
   @media (min-width: 640px) {
     main > div > .container.mx-auto,
-    main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
+    main > div > .min-h-dvh.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
     main
       > div
-      > .min-h-screen.bg-navy-black
+      > .min-h-dvh.bg-navy-black
       > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
       padding-left: var(--route-shell-pad-x-sm) !important;
       padding-right: var(--route-shell-pad-x-sm) !important;
@@ -193,10 +193,10 @@
 
   @media (min-width: 1024px) {
     main > div > .container.mx-auto,
-    main > div > .min-h-screen.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
+    main > div > .min-h-dvh.bg-navy-black > .mx-auto:not([class*='max-w-[1720px]']),
     main
       > div
-      > .min-h-screen.bg-navy-black
+      > .min-h-dvh.bg-navy-black
       > :is(main.mx-auto, div.mx-auto)[class*='max-w-[1720px]']:has(nav[aria-label='Breadcrumb']) {
       padding-left: var(--route-shell-pad-x-lg) !important;
       padding-right: var(--route-shell-pad-x-lg) !important;
