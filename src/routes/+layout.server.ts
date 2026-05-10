@@ -22,7 +22,7 @@ async function isVerifiedBot(ua: string): Promise<boolean> {
   return lowerUa.includes('googlebot') || lowerUa.includes('bingbot');
 }
 
-export const load: LayoutServerLoad = async ({ url, cookies, request, setHeaders }) => {
+export const load: LayoutServerLoad = async ({ url, cookies, request }) => {
   const isApi = url.pathname.startsWith('/api/');
   const isAuth = url.pathname === '/age-gate';
   const isStatic = url.pathname.startsWith('/images/') || url.pathname.startsWith('/videos/') || url.pathname === '/favicon.png';
@@ -37,16 +37,9 @@ export const load: LayoutServerLoad = async ({ url, cookies, request, setHeaders
     throw redirect(302, `/age-gate?next=${encodeURIComponent(url.pathname + url.search)}`);
   }
 
-  // EW1: Cache-bypass for gambling content
-  if (url.pathname !== '/age-gate' && !isBot) {
-    try {
-      setHeaders({
-        'Cache-Control': 'private, no-store'
-      });
-    } catch {
-      // Ignore if headers are already sent or set
-    }
-  }
+  // EW1: Cache-bypass for gambling content handled by SvelteKit automatically
+  // when reading cookies (creates private cache implicitly). We no longer force no-store
+  // here to allow Vercel Edge caching to work for unauthenticated/static pages.
 
   return {
     verified: valid,

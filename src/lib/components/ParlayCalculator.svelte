@@ -77,7 +77,7 @@
         </label>
         <button
           type="button"
-          class="rounded-lg border border-white/10 px-3 py-2 text-sm font-bold text-text-body transition hover:border-red-400/40 hover:text-red-300 disabled:cursor-not-allowed disabled:opacity-40"
+          class="rounded-lg border border-white/10 px-3 py-2 text-sm font-bold text-text-body transition hover:border-error/40 hover:text-error disabled:cursor-not-allowed disabled:opacity-40"
           disabled={legs.length <= 2}
           onclick={() => removeLeg(leg.id)}
           aria-label={`Remove leg ${index + 1}`}

@@ -4,10 +4,10 @@ vi.mock('$env/dynamic/private', () => ({
   env: {},
 }));
 
-let actions: (typeof import('../src/routes/age-gate/+page.server'))['actions'];
+let actions: (typeof import('../src/routes/(utility)/age-gate/+page.server'))['actions'];
 
 beforeAll(async () => {
-  ({ actions } = await import('../src/routes/age-gate/+page.server'));
+  ({ actions } = await import('../src/routes/(utility)/age-gate/+page.server'));
 });
 
 describe('age-gate +page.server actions', () => {

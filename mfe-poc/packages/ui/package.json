@@ -1,0 +1,8 @@
+{
+  "name": "@mfe-poc/ui",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "vue": "^3.5.0"
+  }
+}

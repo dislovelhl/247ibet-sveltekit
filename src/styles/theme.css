@@ -1,4 +1,10 @@
 @theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
   /* ── 247iBET Prestige Navy palette (2026) ── */
   /* See DESIGN.md for full token documentation */
 

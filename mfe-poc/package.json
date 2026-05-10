@@ -1,0 +1,11 @@
+{
+  "name": "mfe-poc",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build"
+  }
+}

@@ -567,6 +567,7 @@
           aria-label="247iBET casino, sportsbook, and fast payouts overview video"
         >
           <source src="/videos/247ibet-home-promo.mp4" type="video/mp4" />
+          <track kind="captions" src="/videos/captions.vtt" srclang="en" label="English" default />
           Your browser does not support embedded video. Open the 247iBET overview video at /videos/247ibet-home-promo.mp4.
         </video>
       </div>
@@ -777,7 +778,6 @@
                   height="400"
                   loading="lazy"
                   decoding="async"
-                  sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -823,7 +823,6 @@
                   height="400"
                   loading="lazy"
                   decoding="async"
-                  sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
@@ -928,7 +927,6 @@
                     height="400"
                     loading="lazy"
                     decoding="async"
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"></div>

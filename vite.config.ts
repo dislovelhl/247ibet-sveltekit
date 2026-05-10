@@ -12,11 +12,13 @@ import { fileURLToPath } from 'node:url';
 const cssInlineSSRFix: PluginOption = {
   name: 'css-inline-ssr-fix',
   transform(code, id) {
-    if (id.endsWith('.css?inline') && !code.includes('export default')) {
-      return {
-        code: `${code}\nexport default "";`,
-        map: null
-      };
+    if (id.includes('.css?inline')) {
+      if (!code.includes('export default')) {
+        return {
+          code: `${code}\nexport default "";`,
+          map: null
+        };
+      }
     }
   }
 };

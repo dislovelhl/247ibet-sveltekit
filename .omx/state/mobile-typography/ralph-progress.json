@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-01T07:37:08.173Z",
-  "state": "pass",
+  "updatedAt": "2026-05-09T13:41:24.330Z",
+  "state": "fail",
   "sourceArtifacts": [
     ".omx/reports/mobile-typography-audit.json",
     ".omx/reports/mobile-typography-audit.md",
@@ -8,8 +8,10 @@
     ".omx/reports/mobile-typography-playwright.json"
   ],
   "coverageArtifact": ".omx/reports/mobile-typography-coverage.md",
-  "capturedResultCount": 4,
-  "issueCount": 0,
+  "capturedResultCount": 1,
+  "issueCount": 4,
   "skippedCount": 0,
-  "blockers": []
+  "blockers": [
+    "One or more mobile typography checks failed."
+  ]
 }
