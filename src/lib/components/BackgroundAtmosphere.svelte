@@ -1,9 +1,23 @@
 <script lang="ts">
-  let { src, alt = "", intensity = 0.6 } = $props();
+  import { globalParallax } from '$lib/runes.svelte';
+
+  interface Props {
+    src: string;
+    alt?: string;
+    intensity?: number;
+    parallaxMultiplier?: number;
+  }
+
+  let { src, alt = "", intensity = 0.6, parallaxMultiplier = 0.4 }: Props = $props();
 </script>
 
 <div class="background-atmosphere" aria-hidden="true">
-  <div class="image-layer" style="background-image: url({src}); --intensity: {intensity};" role="img" aria-label={alt}></div>
+  <div 
+    class="image-layer" 
+    style="background-image: url({src}); --intensity: {intensity}; transform: translate3d({globalParallax.x * parallaxMultiplier}px, {globalParallax.y * parallaxMultiplier}px, 0) scale(1.1);" 
+    role="img" 
+    aria-label={alt}
+  ></div>
   <div class="mask-overlay"></div>
   <div class="grain-overlay"></div>
 </div>

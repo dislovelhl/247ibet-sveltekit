@@ -26,6 +26,7 @@
   import { SITE, canonicalUrl } from '$lib/site';
   import { articleSchema } from '$lib/json-ld';
   import { reveal } from '$lib/animations';
+  import { globalParallax } from '$lib/runes.svelte';
 
   const page = {
     title: 'Canadian Sportsbook: Odds, Parlays & Live Betting | 247iBET',
@@ -300,16 +301,6 @@
       { '@type': 'ListItem', position: 2, name: 'Sportsbook', item: page.canonical },
     ],
   };
-
-  let mouseX = $state(0);
-  let mouseY = $state(0);
-
-  function handleMouseMove(e: MouseEvent) {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX = (clientX / innerWidth - 0.5) * 20;
-    mouseY = (clientY / innerHeight - 0.5) * 20;
-  }
 </script>
 
 <svelte:head>
@@ -333,7 +324,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pb-20" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pb-20" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
@@ -397,7 +388,7 @@
             src="/images/generated/sportsbook-premium-hero.webp"
             alt=""
             class="absolute inset-0 h-full w-full object-cover opacity-40"
-            style="transform: translate3d({mouseX * 0.4}px, {mouseY * 0.4}px, 0) scale(1.1);"
+            style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
           />
           <div
             class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
@@ -405,7 +396,7 @@
 
           <div
             class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
-            style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);"
+            style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
           >
             <div class="flex flex-wrap items-center gap-3 mb-8">
               <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">

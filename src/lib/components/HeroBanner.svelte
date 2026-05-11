@@ -29,7 +29,7 @@
     <!-- Left: Typography block -->
     <div
       class="glass-liquid animate-float-3d rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
-      style="transform: translate3d({-globalParallax.x}px, {-globalParallax.y}px, 0);"
+      style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
     >
       <div class="mb-5 flex flex-wrap items-center gap-3">
         <div class="flex items-center gap-2">

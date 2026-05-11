@@ -263,7 +263,7 @@
 
 <div class="min-h-screen bg-navy-black pt-6 text-white" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
-    <section class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl">
+    <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
         style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
@@ -273,7 +273,7 @@
       ></div>
 
       <div
-        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl px-7 py-12 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:px-16 md:py-20"
+        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
         style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="mb-8 flex flex-col gap-6">

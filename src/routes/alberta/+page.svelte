@@ -141,7 +141,7 @@
       ></div>
 
       <div
-        class="material-panel relative z-10 p-8 md:p-14 animate-float-3d mx-6 my-8 rounded-3xl shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
+        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
         style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="flex flex-wrap items-center gap-3 mb-8">
