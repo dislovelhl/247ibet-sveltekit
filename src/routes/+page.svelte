@@ -297,16 +297,6 @@
 
   let homeFaqOpenIndex = $state<number | null>(null);
 
-  let mouseX = $state(0);
-  let mouseY = $state(0);
-
-  function handleMouseMove(e: MouseEvent) {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX = (clientX / innerWidth - 0.5) * 20; // max 10px shift
-    mouseY = (clientY / innerHeight - 0.5) * 20;
-  }
-
   const homeSchema = [
     {
       '@context': 'https://schema.org',
@@ -392,8 +382,8 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black text-white" onmousemove={handleMouseMove} role="presentation">
-  <HeroBanner {mouseX} {mouseY} lastUpdated={LAST_UPDATED} />
+<div class="min-h-screen bg-navy-black text-white" role="presentation">
+  <HeroBanner lastUpdated={LAST_UPDATED} />
 
   <OddsTicker />
 

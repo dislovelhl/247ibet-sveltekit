@@ -19,7 +19,7 @@
   } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
-  import { useMouseParallax } from '$lib/runes.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
   import { reveal } from '$lib/animations';
   import FAQ from '$lib/components/FAQ.svelte';
   import TiltCard from '$lib/components/TiltCard.svelte';
@@ -219,7 +219,6 @@
     },
   ];
 
-  const parallax = useMouseParallax(20);
 </script>
 
 <svelte:head>
@@ -262,16 +261,12 @@
   />
 </svelte:head>
 
-<div
-  class="min-h-screen bg-navy-black text-white"
-  onmousemove={parallax.handleMouseMove}
-  role="presentation"
->
+<div class="min-h-screen bg-navy-black pt-6 text-white" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
-        style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
       ></div>
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
@@ -279,7 +274,7 @@
 
       <div
         class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl px-7 py-12 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:px-16 md:py-20"
-        style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="mb-8 flex flex-col gap-6">
           <h1 class="page-hero-title !tracking-tighter">

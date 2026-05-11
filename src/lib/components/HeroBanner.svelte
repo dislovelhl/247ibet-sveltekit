@@ -5,14 +5,13 @@
   import { counter } from '$lib/animations';
   import PayoutProgress from '$lib/components/PayoutProgress.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   interface Props {
-    mouseX: number;
-    mouseY: number;
     lastUpdated: string;
   }
 
-  let { mouseX, mouseY, lastUpdated }: Props = $props();
+  let { lastUpdated }: Props = $props();
 </script>
 
 <section class="relative flex min-h-[92vh] items-center overflow-hidden border-b border-prestige-gold/30">
@@ -30,7 +29,7 @@
     <!-- Left: Typography block -->
     <div
       class="glass-liquid animate-float-3d rounded-3xl p-6 shadow-2xl sm:p-8 lg:p-12"
-      style="transform: translate3d({-mouseX}px, {-mouseY}px, 0);"
+      style="transform: translate3d({-globalParallax.x}px, {-globalParallax.y}px, 0);"
     >
       <div class="mb-5 flex flex-wrap items-center gap-3">
         <div class="flex items-center gap-2">

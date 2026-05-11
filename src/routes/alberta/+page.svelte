@@ -3,7 +3,7 @@
   import { articleSchema } from '$lib/json-ld';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-  import { useMouseParallax } from '$lib/runes.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
   import FAQ from '$lib/components/FAQ.svelte';
   import { reveal } from '$lib/animations';
   const faqItems = [
@@ -66,7 +66,6 @@
     },
   ];
 
-  const parallax = useMouseParallax(20);
 </script>
 
 <svelte:head>
@@ -118,11 +117,7 @@
   />
 </svelte:head>
 
-<div
-  class="min-h-screen bg-navy-black pb-20"
-  onmousemove={parallax.handleMouseMove}
-  role="presentation"
->
+<div class="min-h-screen bg-navy-black pb-20" role="presentation">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
@@ -139,7 +134,7 @@
         src="/images/generated/canada-market-hero.webp"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
-        style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
       />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
@@ -147,7 +142,7 @@
 
       <div
         class="material-panel relative z-10 p-8 md:p-14 animate-float-3d mx-6 my-8 rounded-3xl shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
-        style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
