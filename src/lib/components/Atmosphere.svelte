@@ -77,9 +77,10 @@
 ></canvas>
 
 <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-  <div class="absolute -top-[10%] -left-[10%] h-[40%] w-[40%] animate-pulse rounded-full bg-prestige-gold/5 blur-[120px]"></div>
-  <div class="absolute top-[40%] -right-[5%] h-[30%] w-[30%] animate-pulse rounded-full bg-slate-blue/5 blur-[100px]" style="animation-delay: 2s"></div>
-  <div class="absolute -bottom-[5%] left-[20%] h-[35%] w-[35%] animate-pulse rounded-full bg-prestige-gold/3 blur-[140px]" style="animation-delay: 4s"></div>
+  <!-- Saturated Light Leaks -->
+  <div class="absolute -top-[10%] -left-[10%] h-[50%] w-[50%] animate-pulse rounded-full bg-slate-blue/15 blur-[120px]" style="animation-duration: 8s"></div>
+  <div class="absolute top-[30%] -right-[5%] h-[40%] w-[40%] animate-pulse rounded-full bg-prestige-gold/10 blur-[100px]" style="animation-delay: 2s; animation-duration: 10s"></div>
+  <div class="absolute -bottom-[10%] left-[15%] h-[45%] w-[45%] animate-pulse rounded-full bg-slate-blue/8 blur-[140px]" style="animation-delay: 4s; animation-duration: 12s"></div>
 </div>
 
 <style>
