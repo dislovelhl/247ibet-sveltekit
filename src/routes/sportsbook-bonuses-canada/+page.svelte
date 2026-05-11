@@ -102,7 +102,7 @@
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <header class="mb-10 reveal-fade-up" use:reveal>
+  <header class="material-panel mb-10 reveal-fade-up p-6 md:p-8" use:reveal>
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -125,11 +125,11 @@
 
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
-  <section use:reveal class="reveal-fade-up navy-card mt-16 rounded-2xl p-6 md:p-8">
+  <section use:reveal class="material-panel reveal-fade-up mt-16 p-6 md:p-8">
     <h2 class="text-2xl font-bold mb-6">Types of Sportsbook Offers in Canada</h2>
     <div use:reveal data-reveal-stagger="true" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
       {#each offerTypes as { label, desc }}
-        <div use:reveal class="reveal-fade-up p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] card-hover-lift">
+         <div use:reveal class="material-cell reveal-fade-up p-4 rounded-2xl card-hover-lift">
           <div class="text-base font-bold mb-1">{label}</div>
           <p class="text-gray-400 font-sans text-xs leading-relaxed">{desc}</p>
         </div>
@@ -137,7 +137,7 @@
     </div>
   </section>
 
-  <section use:reveal data-reveal-stagger="true" class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+  <section use:reveal data-reveal-stagger="true" class="material-panel mt-10 p-6 md:p-8">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
       <div>
         <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Observed creative set</p>
@@ -151,7 +151,7 @@
     </div>
     <div class="mt-6 grid gap-4 lg:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
 <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
@@ -164,7 +164,7 @@
     </div>
   </section>
 
-  <section use:reveal data-reveal-stagger="true" class="navy-card mt-10 rounded-2xl p-6 md:p-8">
+  <section use:reveal data-reveal-stagger="true" class="material-panel mt-10 p-6 md:p-8">
     <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
       <div>
         <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Event collateral</p>
@@ -178,7 +178,7 @@
     </div>
     <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
 <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-5">
             <p class="text-xs font-mono uppercase tracking-[0.14em] text-[#4A9EBF]">{creative.title}</p>
@@ -194,7 +194,7 @@
   <section class="mt-10 space-y-4">
     <h2 class="text-2xl font-bold">Sportsbook Bonuses Canada FAQ</h2>
     {#each faqItems as faq}
-      <details class="navy-card rounded-xl p-4">
+       <details class="material-cell rounded-2xl p-4">
         <summary
           class="flex list-none items-center justify-between gap-2 font-bold text-[#F1F5F9] cursor-pointer"
         >
@@ -217,30 +217,30 @@
   <ReadyToPlay />
 
   <div class="mt-8">
-    <nav class="flex flex-wrap gap-6" aria-label="Related pages">
+    <nav class="flex flex-wrap gap-3" aria-label="Related pages">
       <a
         href="/new-online-casinos-canada"
-        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        class="floating-chrome px-4 py-2 text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
         >New Online Casinos</a
       >
       <a
         href="/casino-bonuses-canada"
-        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        class="floating-chrome px-4 py-2 text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
         >Casino Bonuses</a
       >
       <a
         href="/best-online-casinos-canada"
-        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        class="floating-chrome px-4 py-2 text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
         >Best Online Casinos</a
       >
       <a
         href="/fast-payouts"
-        class="text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
+        class="floating-chrome px-4 py-2 text-slate-blue text-sm font-bold uppercase tracking-wider hover:underline"
         >Fast Payout Casinos</a
       >
     </nav>
 
-    <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
+    <div class="material-panel mt-8 p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a
         href="/responsible-gambling"
         class="text-slate-blue hover:underline">Responsible gambling resources</a

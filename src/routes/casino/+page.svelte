@@ -24,8 +24,6 @@
   import FAQ from '$lib/components/FAQ.svelte';
   import TiltCard from '$lib/components/TiltCard.svelte';
 
-
-
   const trustItems = [
     { title: '100% Canadian Focused', icon: ShieldCheck },
     { title: 'Secure & Reliable', icon: LockKeyhole },
@@ -64,15 +62,31 @@
   ];
 
   const safetyStrip = [
-    { title: 'Fully Licensed', body: 'We maintain strict compliance with provincial regulations', icon: BadgeCheck },
+    {
+      title: 'Fully Licensed',
+      body: 'We maintain strict compliance with provincial regulations',
+      icon: BadgeCheck,
+    },
     {
       title: 'Secure & Private',
       body: 'Advanced encryption and data protection for all players',
       icon: LockKeyhole,
     },
-    { title: '24/7 Support', body: 'Our dedicated team is here to help you around the clock', icon: Headphones },
-    { title: 'Responsible Gaming', body: 'Tools and resources to help you play safely', icon: ShieldCheck },
-    { title: 'Interac Banking', body: 'Fast and reliable CAD banking for deposits and withdrawals', icon: Zap },
+    {
+      title: '24/7 Support',
+      body: 'Our dedicated team is here to help you around the clock',
+      icon: Headphones,
+    },
+    {
+      title: 'Responsible Gaming',
+      body: 'Tools and resources to help you play safely',
+      icon: ShieldCheck,
+    },
+    {
+      title: 'Interac Banking',
+      body: 'Fast and reliable CAD banking for deposits and withdrawals',
+      icon: Zap,
+    },
   ];
 
   const categoryCards = [
@@ -205,7 +219,6 @@
     },
   ];
 
-
   const parallax = useMouseParallax(20);
 </script>
 
@@ -249,11 +262,13 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-6 text-white" onmousemove={parallax.handleMouseMove} role="presentation">
+<div
+  class="min-h-screen bg-navy-black text-white"
+  onmousemove={parallax.handleMouseMove}
+  role="presentation"
+>
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
-    <section
-      class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy-card shadow-2xl"
-    >
+    <section class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
         style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
@@ -262,22 +277,29 @@
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
 
-      <div class="relative z-10 px-7 py-12 md:px-16 md:py-20 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20"
-           style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);">
+      <div
+        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl px-7 py-12 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:px-16 md:py-20"
+        style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);"
+      >
         <div class="mb-8 flex flex-col gap-6">
           <h1 class="page-hero-title !tracking-tighter">
             The Future of <br />
-            <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Canadian Casino</span>
+            <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+              >Canadian Casino</span
+            >
           </h1>
         </div>
-        
+
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
           Experience our world-class catalogue of 500+ casino games, live dealer tables, and
           lightning-fast Interac payments. Join the elite rank of Canadian players today.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary group min-w-[200px] shimmer-effect btn-magnetic">
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="hero-cta-primary group min-w-[200px] shimmer-effect btn-magnetic"
+          >
             Access Casino
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </SafeExternalLink>
@@ -286,14 +308,21 @@
           </a>
         </div>
 
-        <div class="mt-12 flex flex-wrap gap-8 border-t border-white/10 pt-8">
+        <div class="material-group mt-12 grid gap-2 p-2 sm:grid-cols-3">
           {#each trustItems as item}
             {@const Icon = item.icon}
-            <div class="flex items-center gap-3 group/trust cursor-default">
-              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-prestige-gold border border-white/10 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all">
+            <div
+              class="material-cell flex cursor-default items-center gap-3 rounded-2xl p-3 group/trust"
+            >
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-prestige-gold border border-white/10 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all"
+              >
                 <Icon class="h-5 w-5" />
               </div>
-              <span class="text-xs font-black uppercase tracking-widest text-white/80 group-hover:text-prestige-gold transition-colors">{item.title}</span>
+              <span
+                class="text-xs font-black uppercase tracking-widest text-white/80 group-hover:text-prestige-gold transition-colors"
+                >{item.title}</span
+              >
             </div>
           {/each}
         </div>
@@ -301,11 +330,9 @@
     </section>
 
     <section
-      class="mt-7 grid items-center gap-6 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-7 shadow-2xl lg:grid-cols-[160px_1fr_auto]"
+      class="material-panel mt-7 grid items-center gap-6 p-5 shadow-2xl sm:p-7 lg:grid-cols-[160px_1fr_auto]"
     >
-      <div
-        class="flex h-28 w-28 items-center justify-center rounded-2xl border border-white/15 bg-white/5"
-      >
+      <div class="material-cell flex h-28 w-28 items-center justify-center rounded-2xl">
         <img src="/images/brand/logo.png" alt="247iBET" class="h-16 w-24 object-contain" />
       </div>
       <div>
@@ -315,14 +342,14 @@
         </p>
         <div class="mt-5 flex flex-wrap gap-3">
           {#each ['Fast Deposits', 'Fair Gaming', 'Secure & Private'] as item}
-            <span
-              class="rounded-full border border-success/20 bg-success/8 px-3 py-1 text-xs font-black text-success"
-              >{item}</span
-            >
+            <span class="floating-chrome px-3 py-1 text-xs font-black text-success">{item}</span>
           {/each}
         </div>
       </div>
-      <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-64 justify-center btn-magnetic">
+      <SafeExternalLink
+        href={IBET_URLS.register}
+        class="hero-cta-primary min-w-64 justify-center btn-magnetic"
+      >
         Play Now
         <ArrowRight class="h-5 w-5" aria-hidden="true" />
       </SafeExternalLink>
@@ -331,14 +358,14 @@
     <section
       use:reveal
       data-reveal-stagger="true"
-      class="mt-8 grid gap-4 lg:grid-cols-4"
+      class="material-group mt-8 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each featureCards as card}
         {@const Icon = card.icon}
         <a
           href={card.href}
           use:reveal
-          class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+          class="material-cell reveal-fade-up group relative flex flex-col items-center gap-6 overflow-hidden rounded-[22px] p-8 text-center transition-all hover:shadow-2xl card-hover-lift"
         >
           <div
             class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-transform group-hover:scale-110"
@@ -359,14 +386,10 @@
       {/each}
     </section>
 
-    <section
-      class="mt-7 grid rounded-xl border border-white/10 bg-navy-card/75 sm:grid-cols-2 lg:grid-cols-5"
-    >
+    <section class="material-group mt-7 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-5">
       {#each safetyStrip as item}
         {@const Icon = item.icon}
-        <article
-          class="flex gap-3 border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
-        >
+        <article class="material-cell flex gap-3 rounded-[20px] p-5">
           <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
             <h3 class="text-sm font-black">{item.title}</h3>
@@ -381,9 +404,11 @@
         <h2 class="font-display text-3xl font-black md:text-4xl text-white">
           Premium <span class="text-prestige-gold">Game Hubs</span>
         </h2>
-        <p class="mt-4 text-text-body italic">Explore hundreds of vetted titles across all categories</p>
+        <p class="mt-4 text-text-body italic">
+          Explore hundreds of vetted titles across all categories
+        </p>
       </div>
-      
+
       <div
         use:reveal
         data-reveal-stagger="true"
@@ -395,46 +420,61 @@
             <TiltCard>
               <a
                 href={card.href}
-                class="glass-thin group relative aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift block h-full"
+                class="material-cell group relative block h-full aspect-[4/5] overflow-hidden rounded-[2.5rem] p-6 transition-all hover:border-prestige-gold/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] card-hover-lift"
               >
-              <div class="absolute inset-0 z-0">
-                <img
-                  src={card.image}
-                  alt=""
-                  class="h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent"></div>
-                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
-              </div>
-              
-              <div class="relative z-10 flex h-full flex-col justify-between">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all group-hover:scale-110">
-                  <Icon class="h-6 w-6 group-hover:text-navy-black transition-colors" />
+                <div class="absolute inset-0 z-0">
+                  <img
+                    src={card.image}
+                    alt=""
+                    class="h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/60 to-transparent"
+                  ></div>
+                  <div
+                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
+                  ></div>
                 </div>
-                
-                <div>
-                  <h3 class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">{card.title}</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">{card.body}</p>
-                  <div class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all">
-                    Enter Lobby
-                    <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+
+                <div class="relative z-10 flex h-full flex-col justify-between">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/20 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all group-hover:scale-110"
+                  >
+                    <Icon class="h-6 w-6 group-hover:text-navy-black transition-colors" />
+                  </div>
+
+                  <div>
+                    <h3
+                      class="font-display text-2xl font-black text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
+                    >
+                      {card.title}
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 font-light">
+                      {card.body}
+                    </p>
+                    <div
+                      class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all"
+                    >
+                      Enter Lobby
+                      <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </TiltCard>
+              </a>
+            </TiltCard>
           </div>
-          {/each}      </div>
+        {/each}
+      </div>
     </section>
 
     <section class="mt-10">
       <div class="mb-6">
         <h2 class="text-3xl font-black">Why Play Casino at 247iBET?</h2>
       </div>
-      <div class="grid gap-5 md:grid-cols-3">
+      <div class="material-group grid gap-2 p-2 md:grid-cols-3">
         {#each whyCards as card}
           {@const Icon = card.icon}
-          <article class="rounded-xl border border-white/10 bg-navy-card/80 p-6 card-hover-lift">
+          <article class="material-cell rounded-[20px] p-6 card-hover-lift">
             <Icon class="h-9 w-9 text-prestige-gold" aria-hidden="true" />
             <h3 class="mt-5 text-xl font-black">{card.title}</h3>
             <p class="mt-3 text-sm leading-6 text-text-body">{card.body}</p>
@@ -445,22 +485,16 @@
 
     <FAQ items={faqItems} title="Casino FAQ" />
 
-    <section
-      class="mt-7 grid rounded-xl border border-prestige-gold/35 bg-navy-card/80 sm:grid-cols-2 lg:grid-cols-7"
-    >
+    <section class="material-group mt-7 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-7">
       {#each platformStats as item}
-        <div
-          class="border-b border-white/8 p-5 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
-        >
+        <div class="material-cell rounded-[20px] p-5">
           <p class="text-xs uppercase tracking-[0.12em] text-text-tertiary">{item.label}</p>
           <p class="stat mt-1 text-2xl font-black text-prestige-gold">{item.value}</p>
         </div>
       {/each}
     </section>
 
-    <section
-      class="mt-7 overflow-hidden rounded-xl border border-prestige-gold/40 bg-[linear-gradient(100deg,#101827,#080d18)] p-8 shadow-2xl md:p-12"
-    >
+    <section class="material-panel mt-7 overflow-hidden p-8 shadow-2xl md:p-12">
       <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
         <div>
           <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">

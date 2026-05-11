@@ -393,8 +393,8 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-16 text-white" onmousemove={handleMouseMove} role="presentation">
-  <section class="relative flex min-h-[92dvh] items-center overflow-hidden border-b border-prestige-gold/30">
+<div class="min-h-screen bg-navy-black text-white" onmousemove={handleMouseMove} role="presentation">
+  <section class="relative flex min-h-[92vh] items-center overflow-hidden border-b border-prestige-gold/30">
     <BackgroundAtmosphere src="/images/frozen-edge-hero.webp" />
 
     <!-- Gold radial glow behind the content -->
@@ -490,11 +490,11 @@
     class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16"
     aria-label="Jump links"
   >
-    <div class="flex gap-2 overflow-x-auto rounded-2xl border border-white/5 bg-navy-card/80 p-2 shadow-2xl snap-x snap-mandatory scroll-smooth hide-scrollbar">
+    <div class="segmented-chrome flex gap-2 overflow-x-auto rounded-[24px] p-1.5 snap-x snap-mandatory scroll-smooth hide-scrollbar">
       {#each jumpLinks as link}
         <a
           href={link.href}
-          class="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-text-body transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold snap-start"
+          class="segmented-item shrink-0 rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-text-body transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60 snap-start"
         >
           {link.label}
         </a>
@@ -507,14 +507,14 @@
   >
     <section
       id="trust-verification"
-      class="grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 shadow-2xl sm:grid-cols-2 lg:grid-cols-4"
+      class="material-group grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each heroTrust as item, i}
         {@const Icon = item.icon}
         <GlintCard
           useReveal={true}
           style="--reveal-delay: {i * 100}ms"
-          class="reveal-fade-up group relative flex items-start gap-4 bg-navy-card/95 p-5 transition-all hover:bg-navy-raised hover:scale-[1.02] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:p-6 card-hover-lift"
+          class="material-cell reveal-fade-up group relative flex items-start gap-4 rounded-[22px] p-5 transition-all hover:scale-[1.01] hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] sm:p-6 card-hover-lift"
         >
           <div
             class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.4)]"
@@ -532,7 +532,7 @@
     <section
       id="promo-video"
       use:reveal
-      class="reveal-fade-up grid gap-5 overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-4 shadow-2xl sm:p-5 lg:grid-cols-[0.38fr_0.62fr] lg:gap-6 lg:p-7"
+      class="material-panel reveal-fade-up grid gap-5 overflow-hidden p-4 sm:p-5 lg:grid-cols-[0.38fr_0.62fr] lg:gap-6 lg:p-7"
       aria-labelledby="home-promo-video-title"
     >
       <div class="flex flex-col justify-center">
@@ -555,7 +555,7 @@
         </SafeExternalLink>
       </div>
 
-      <div class="overflow-hidden rounded-xl border border-white/10 bg-black/30">
+      <div class="material-cell overflow-hidden rounded-[22px] bg-black/30">
         <video
           class="aspect-video w-full bg-navy-black object-cover"
           controls
@@ -574,9 +574,9 @@
 
     <section
       id="why-it-stands-out"
-      class="grid overflow-hidden rounded-xl border border-prestige-gold/30 bg-navy-card/80 lg:grid-cols-[0.42fr_0.58fr]"
+      class="material-panel grid overflow-hidden lg:grid-cols-[0.42fr_0.58fr]"
     >
-      <aside class="border-b border-prestige-gold/20 p-5 sm:p-7 lg:border-b-0 lg:border-r">
+      <aside class="border-b soft-separator p-5 sm:p-7 lg:border-b-0 lg:border-r">
         <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
           Trust & verification
         </p>
@@ -636,7 +636,7 @@
 
         <div class="mt-6 grid gap-3 lg:hidden">
           {#each comparisonRows as row}
-            <article class="rounded-xl border border-white/10 bg-black/20 p-4">
+            <article class="material-cell rounded-2xl p-4">
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.feature}</h3>
                 <span
@@ -651,7 +651,7 @@
         </div>
 
         <div
-          class="table-scroll-wrap mt-6 hidden overflow-x-auto rounded-xl border border-white/10 lg:block"
+          class="material-cell table-scroll-wrap mt-6 hidden overflow-x-auto rounded-2xl lg:block"
         >
           <table class="w-full min-w-[760px] text-left text-sm">
             <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
@@ -678,7 +678,7 @@
     <section
       id="interac-flow"
       use:reveal
-      class="reveal-fade-up glow-gold grid gap-5 rounded-xl border border-prestige-gold/30 bg-navy-card/80 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
+      class="material-panel reveal-fade-up glow-gold grid gap-5 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
     >
       <div>
         <h2 class="text-4xl font-black md:text-5xl">Interac deposits and withdrawals</h2>
@@ -694,7 +694,7 @@
         class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4"
       >
         {#each processSteps as step, index}
-          <article use:reveal class="reveal-fade-up rounded-xl border border-white/10 bg-black/20 p-5 card-hover-lift">
+            <article use:reveal class="material-cell reveal-fade-up rounded-2xl p-5 card-hover-lift">
             <div
               class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
             >
@@ -713,14 +713,14 @@
 
     <section
       use:reveal
-      class="reveal-fade-up rounded-2xl border border-white/5 bg-navy-card/50 p-4 sm:p-8"
+      class="material-group reveal-fade-up p-4 sm:p-8"
     >
       <div
         use:reveal
         data-reveal-stagger="true"
         class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
       >
-        <div class="flex flex-col justify-center rounded-2xl bg-gradient-to-br from-navy-raised to-navy-card p-6 shadow-xl sm:col-span-2 sm:row-span-2 lg:p-10">
+        <div class="material-cell flex flex-col justify-center rounded-[22px] p-6 sm:col-span-2 sm:row-span-2 lg:p-10">
           <p class="font-luxury text-prestige-gold-400 mb-2 opacity-80">Unmatched Standards</p>
           <h2 class="font-display text-3xl font-black leading-tight tracking-tighter text-white md:text-5xl">
             Why 247iBET <span class="text-gold-foil">Stands Out</span>
@@ -740,7 +740,7 @@
           <GlintCard
             useReveal={true}
             style="--reveal-delay: {(i + 2) * 100}ms"
-            class="reveal-fade-up group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/80 p-6 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+            class="material-cell reveal-fade-up group relative overflow-hidden rounded-[22px] p-6 transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
           >
             <div class="relative z-10">
               <Icon class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110" aria-hidden="true" />
@@ -754,7 +754,7 @@
     </section>
 
     <section class="grid gap-6 xl:grid-cols-2">
-      <div class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
+      <div class="material-panel p-5">
         <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <h2 class="text-3xl font-black">Casino</h2>
           <a
@@ -767,7 +767,7 @@
           {#each casinoCards as card}
             <a
               href={card.href}
-              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+              class="material-cell group relative overflow-hidden rounded-[22px] transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
             >
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
@@ -800,7 +800,7 @@
         </div>
       </div>
 
-      <div class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
+      <div class="material-panel p-5">
         <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <h2 class="text-3xl font-black">Sportsbook</h2>
           <a
@@ -813,7 +813,7 @@
           {#each sportsCards as card}
             <a
               href={card.href}
-              class="group relative overflow-hidden rounded-2xl border border-white/5 bg-navy-card/50 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+              class="material-cell group relative overflow-hidden rounded-[22px] transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
             >
               <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
                 <img
@@ -847,7 +847,7 @@
       </div>
     </section>
 
-    <section id="bonus-terms" class="rounded-xl border border-prestige-gold/25 bg-navy-card/75 p-5 sm:p-6">
+    <section id="bonus-terms" class="material-panel p-5 sm:p-6">
       <div class="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
         <div>
           <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">Bonuses</p>
@@ -862,7 +862,7 @@
         </div>
         <div class="grid gap-3 lg:hidden">
           {#each bonusRows as row}
-            <article class="rounded-xl border border-white/10 bg-black/20 p-4">
+            <article class="material-cell rounded-2xl p-4">
               <div class="flex items-start justify-between gap-3">
                 <h3 class="font-black text-white">{row.type}</h3>
                 <span
@@ -876,7 +876,7 @@
           {/each}
         </div>
         <div
-          class="table-scroll-wrap hidden overflow-x-auto rounded-xl border border-white/10 lg:block"
+          class="material-cell table-scroll-wrap hidden overflow-x-auto rounded-2xl lg:block"
         >
           <table class="w-full min-w-[720px] text-left text-sm">
             <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
@@ -900,7 +900,7 @@
       </div>
     </section>
 
-    <section class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
+    <section class="material-panel p-5">
       <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <h2 class="text-3xl font-black">Expert Guides</h2>
         <a
@@ -949,7 +949,7 @@
         </div>
     </section>
 
-    <section id="faq-section" class="rounded-xl border border-white/10 bg-navy-card/80 p-5">
+    <section id="faq-section" class="material-panel p-5">
       <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
         <a
@@ -960,7 +960,7 @@
       </div>
       <div class="flex flex-col gap-3">
         {#each faqs as faq, i}
-          <div class="group overflow-hidden rounded-xl border border-white/5 bg-navy-card/50 transition-all hover:border-white/10">
+          <div class="material-cell group overflow-hidden rounded-2xl transition-all hover:border-white/15">
             <button
               id="home-faq-btn-{i}"
               type="button"
@@ -982,7 +982,7 @@
               role="region"
               aria-labelledby="home-faq-btn-{i}"
               hidden={homeFaqOpenIndex !== i}
-              class="bg-black/20 px-5 py-5 border-t border-white/5"
+              class="border-t soft-separator bg-black/[0.15] px-5 py-5"
             >
               <p class="text-sm leading-relaxed text-text-body">{faq.a}</p>
             </div>
@@ -991,7 +991,7 @@
       </div>
     </section>
 
-    <section class="rounded-xl border border-prestige-gold/25 bg-navy-card/80 p-6">
+    <section class="material-panel p-6">
       <div class="grid items-center gap-6 lg:grid-cols-[0.7fr_0.3fr]">
         <div>
           <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">

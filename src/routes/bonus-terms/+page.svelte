@@ -59,17 +59,17 @@
     </ol>
   </nav>
 
-  <article class="navy-card rounded-3xl p-8 md:p-12 reveal-fade-up" use:reveal>
-    <nav aria-label="Bonus terms table of contents" class="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+  <article class="material-panel rounded-3xl p-8 md:p-12 reveal-fade-up" use:reveal>
+    <nav aria-label="Bonus terms table of contents" class="segmented-chrome mb-8 rounded-2xl p-4">
       <p class="text-xs font-black uppercase tracking-[0.14em] text-slate-blue">On this page</p>
       <div class="mt-3 flex flex-wrap gap-2">
-        <a href="#observed-bonus-offers" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Observed bonus offers</a>
-        <a href="#sportsbook-tie-ins" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Sportsbook tie-ins</a>
-        <a href="#event-creatives" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Event creatives</a>
-        <a href="#needs-verification" class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300 hover:text-white">Needs verification</a>
+        <a href="#observed-bonus-offers" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Observed bonus offers</a>
+        <a href="#sportsbook-tie-ins" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Sportsbook tie-ins</a>
+        <a href="#event-creatives" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Event creatives</a>
+        <a href="#needs-verification" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Needs verification</a>
       </div>
     </nav>
-    <header class="mb-12 border-b border-white/10 pb-8">
+    <header class="mb-12 border-b soft-separator pb-8">
       <h1 class="page-hero-title mb-4">
         Current <span class="text-slate-blue">Bonus Snapshot</span>
       </h1>
@@ -89,7 +89,7 @@
       <h2 id="observed-bonus-offers">Observed bonus offers</h2>
       <div class="not-prose grid gap-6" data-reveal-stagger="true">
         {#each IBET_PROMO_SNAPSHOT as promo}
-          <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
+          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
             <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
@@ -98,7 +98,7 @@
               <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 {#each promo.observedText as line}
-                  <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-gray-300">{line}</span>
+                  <span class="segmented-chrome rounded-full px-2.5 py-1 text-[11px] text-gray-300">{line}</span>
                 {/each}
               </div>
             </div>
@@ -109,7 +109,7 @@
       <h2 id="sportsbook-tie-ins">Sportsbook and combat-sports tie-ins</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-          <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
+          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
             <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
@@ -124,7 +124,7 @@
       <h2 id="event-creatives">Event-style creatives included for completeness</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-          <article use:reveal class="overflow-hidden rounded-2xl border border-white/10 bg-black/20 reveal-scale-in card-hover-lift">
+          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
             <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>

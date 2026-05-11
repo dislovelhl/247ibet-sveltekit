@@ -333,41 +333,52 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-6 pb-20" onmousemove={handleMouseMove} role="presentation">
+<div class="min-h-screen bg-navy-black pb-20" onmousemove={handleMouseMove} role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
-        <div class="sticky top-28 space-y-6 rounded-[2rem] border border-white/10 glass-premium p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]">
+        <div
+          class="material-panel sticky top-28 space-y-6 rounded-[2rem] p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
+        >
           <a
             href="/"
-            class="group flex items-center gap-3 rounded-2xl px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white/5"
+            class="material-cell group flex items-center gap-3 rounded-2xl px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:border-prestige-gold/30"
           >
-            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110"
+            >
               <Landmark class="h-4 w-4" aria-hidden="true" />
             </div>
             Home
           </a>
-          <nav aria-label="Sportsbook page sections" class="space-y-1.5 border-t border-white/10 pt-6">
+          <nav
+            aria-label="Sportsbook page sections"
+            class="space-y-1.5 border-t soft-separator pt-6"
+          >
             {#each sideNav as item}
               <a
                 href={item.href}
-                class="flex items-center rounded-xl px-4 py-2.5 text-xs font-black text-text-body transition-all hover:bg-white/5 hover:text-white hover:text-prestige-gold"
+                class="flex items-center rounded-xl px-4 py-2.5 text-xs font-black text-text-body transition-all hover:bg-white/5 hover:text-prestige-gold"
               >
                 {item.label}
               </a>
             {/each}
           </nav>
-          <div class="border-t border-white/10 pt-6">
-            <p class="px-4 pb-3 font-display text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold">
+          <div class="border-t soft-separator pt-6">
+            <p
+              class="px-4 pb-3 font-display text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold"
+            >
               Popular Sports
             </p>
             <div class="space-y-1.5">
               {#each quickSports as sport}
                 <a
                   href={sport.href}
-                  class="group flex items-center gap-3 rounded-xl px-4 py-2.5 text-xs font-bold text-text-body transition-all hover:bg-white/5 hover:text-white"
+                  class="material-cell group flex items-center gap-3 rounded-xl px-4 py-2.5 text-xs font-bold text-text-body transition-all hover:border-slate-blue/30 hover:text-white"
                 >
-                  <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110">
+                  <div
+                    class="flex h-6 w-6 items-center justify-center rounded-lg bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110"
+                  >
                     <Dumbbell class="h-3 w-3" aria-hidden="true" />
                   </div>
                   {sport.label}
@@ -380,7 +391,7 @@
 
       <main class="min-w-0 space-y-5">
         <section
-          class="relative min-w-0 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl"
+          class="material-panel relative min-w-0 overflow-hidden rounded-[2.5rem] shadow-2xl"
         >
           <img
             src="/images/generated/sportsbook-premium-hero.webp"
@@ -391,11 +402,13 @@
           <div
             class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
           ></div>
-          
-          <div class="relative z-10 p-8 md:p-14 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
-               style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);">
+
+          <div
+            class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
+            style="transform: translate3d({-mouseX * 0.8}px, {-mouseY * 0.8}px, 0);"
+          >
             <div class="flex flex-wrap items-center gap-3 mb-8">
-              <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
+              <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
                 <span class="live-dot" aria-hidden="true"></span>
                 <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
                   Live Markets Open
@@ -405,14 +418,17 @@
                 Canadian Sportsbook Hub
               </p>
             </div>
-            
+
             <h1 class="page-hero-title !tracking-tighter">
               The Arena of <br />
-              <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Performance</span>
+              <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+                >Performance</span
+              >
             </h1>
-            
+
             <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-              Real-time odds. Deep Canadian markets. Lightning-fast Interac funding. Your strategic edge in the betting landscape starts here.
+              Real-time odds. Deep Canadian markets. Lightning-fast Interac funding. Your strategic
+              edge in the betting landscape starts here.
             </p>
 
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -423,33 +439,42 @@
                 Access Sportsbook
                 <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </SafeExternalLink>
-              <a
-                href="#odds"
-                class="hero-cta-secondary min-w-[220px] glass-thin"
-              >
-                Compare Odds
-              </a>
+              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin"> Compare Odds </a>
             </div>
-            <p class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60">
+            <p
+              class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60"
+            >
               {IBET_DISCLAIMER}
             </p>
           </div>
         </section>
 
-        <div id="offers" use:reveal data-reveal-stagger="true" class="grid gap-4 sm:grid-cols-3">
+        <div
+          id="offers"
+          use:reveal
+          data-reveal-stagger="true"
+          class="material-group grid gap-2 p-2 sm:grid-cols-3"
+        >
           {#each heroOffers as offer}
             <article
               use:reveal
-              class="reveal-fade-up glass-thin group relative flex flex-col items-center gap-6 overflow-hidden rounded-3xl p-8 text-center transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30 card-hover-lift"
-            >              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110">
+              class="material-cell reveal-fade-up group relative flex flex-col items-center gap-6 overflow-hidden rounded-[22px] p-8 text-center transition-all hover:border-prestige-gold/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] card-hover-lift"
+            >
+              <div
+                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
+              ></div>
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110"
+              >
                 <Flame class="h-6 w-6" />
               </div>
               <div>
                 <p class="text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
                   {offer.eyebrow}
                 </p>
-                <h2 class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">
+                <h2
+                  class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
+                >
                   {offer.headline}
                 </h2>
                 <p class="mt-4 text-sm leading-relaxed text-text-body/80 font-light">
@@ -467,24 +492,20 @@
           {/each}
         </div>
 
-          <div
-            class="mt-5 grid rounded-lg border border-white/8 bg-black/25 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {#each trustStrip as item}
-              {@const TrustIcon = item.icon}
-              <div
-                class="flex items-center gap-3 border-white/8 p-4 sm:border-r sm:last:border-r-0"
-              >
-                <TrustIcon class="h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
-                <div>
-                  <p class="text-sm font-bold text-white">{item.label}</p>
-                  <p class="text-xs text-text-tertiary">{item.detail}</p>
-                </div>
+        <div class="material-group mt-5 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4">
+          {#each trustStrip as item}
+            {@const TrustIcon = item.icon}
+            <div class="material-cell flex items-center gap-3 rounded-[20px] p-4">
+              <TrustIcon class="h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
+              <div>
+                <p class="text-sm font-bold text-white">{item.label}</p>
+                <p class="text-xs text-text-tertiary">{item.detail}</p>
               </div>
-            {/each}
-          </div>
+            </div>
+          {/each}
+        </div>
 
-        <section id="bookmakers" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section id="bookmakers" class="material-panel p-4 sm:p-5">
           <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 class="page-hub-title text-2xl">Best Sportsbooks</h2>
@@ -498,7 +519,7 @@
               >View full review</a
             >
           </div>
-          <div class="overflow-x-auto rounded-lg border border-white/8">
+          <div class="material-cell overflow-x-auto rounded-2xl">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
@@ -546,7 +567,7 @@
           </div>
         </section>
 
-        <section id="odds" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section id="odds" class="material-panel p-4 sm:p-5">
           <div class="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 class="page-hub-title text-2xl">Top Sports Betting Odds</h2>
@@ -554,17 +575,17 @@
                 Compare featured odds across popular pre-game markets.
               </p>
             </div>
-            <div class="flex flex-wrap gap-2">
+            <div class="segmented-chrome flex flex-wrap gap-1 rounded-2xl p-1">
               {#each ['Football', 'NHL', 'NBA', 'UFC / MMA'] as tab, index}
                 <span
-                  class="rounded-lg border px-3 py-2 text-xs font-bold {index === 0
-                    ? 'border-prestige-gold/40 bg-prestige-gold/10 text-prestige-gold'
-                    : 'border-white/10 bg-white/[0.03] text-text-body'}">{tab}</span
+                  class="segmented-item rounded-xl px-3 py-2 text-xs font-bold {index === 0
+                    ? 'bg-prestige-gold/10 text-prestige-gold'
+                    : 'text-text-body'}">{tab}</span
                 >
               {/each}
             </div>
           </div>
-          <div class="overflow-x-auto rounded-lg border border-white/8">
+          <div class="material-cell overflow-x-auto rounded-2xl">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
@@ -588,7 +609,7 @@
           </div>
         </section>
 
-        <section id="live" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section id="live" class="material-panel p-4 sm:p-5">
           <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span class="live-tag"><span class="live-dot"></span> Live betting</span>
@@ -603,7 +624,7 @@
               >View live guide</a
             >
           </div>
-          <div class="overflow-x-auto rounded-lg border border-white/8">
+          <div class="material-cell overflow-x-auto rounded-2xl">
             <table class="min-w-[760px] w-full text-left text-sm">
               <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
                 <tr>
@@ -628,14 +649,17 @@
         </section>
 
         <section class="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
-          <div class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Sportsbook Offers</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Compare featured promos and account-level value before choosing where to play.
             </p>
             <div class="mt-4 grid gap-3 sm:grid-cols-2">
               {#each offerCards as offer}
-                <article use:reveal class="rounded-lg border border-white/10 bg-white/[0.03] p-4 reveal-fade-up card-hover-lift">
+                <article
+                  use:reveal
+                  class="material-cell rounded-2xl p-4 reveal-fade-up card-hover-lift"
+                >
                   <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
                   <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
                   <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
@@ -650,12 +674,12 @@
             </div>
           </div>
 
-          <div class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Odds Boosts</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Track enhanced prices and compare the boosted value against the old line.
             </p>
-            <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
+            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
               <table class="min-w-[620px] w-full text-left text-sm">
                 <thead
                   class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
@@ -684,18 +708,22 @@
           </div>
         </section>
 
-        <section id="guides" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section id="guides" class="material-panel p-4 sm:p-5">
           <h2 class="page-hub-title text-2xl">Betting Guides</h2>
           <p class="mt-1 text-sm text-text-tertiary">
             Expert guides and practical tools to help you understand each market before betting.
           </p>
-          <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4" use:reveal data-reveal-stagger="true">
+          <div
+            class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4"
+            use:reveal
+            data-reveal-stagger="true"
+          >
             {#each guideCards as guide}
               {@const GuideIcon = guide.icon}
               <a
                 href={guide.href}
                 use:reveal
-                class="reveal-fade-up group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
+                class="material-cell reveal-fade-up group rounded-2xl p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
               >
                 <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
                 <h3 class="mt-3 text-base font-bold text-white">{guide.title}</h3>
@@ -717,12 +745,12 @@
         </section>
 
         <section class="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-          <div class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Top Sports</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Explore betting markets for all major sports.
             </p>
-            <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
+            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
               <table class="min-w-[700px] w-full text-left text-sm">
                 <thead
                   class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
@@ -750,14 +778,14 @@
             </div>
           </div>
 
-          <div id="payments" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div id="payments" class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Payment Methods</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Fast, secure, and familiar ways to fund a Canadian betting account.
             </p>
             <div class="mt-4 grid grid-cols-2 gap-3">
               {#each paymentMethods as method}
-                <div class="rounded-lg border border-white/10 bg-white/[0.03] p-4 text-center">
+                <div class="material-cell rounded-2xl p-4 text-center">
                   <WalletCards class="mx-auto mb-2 h-5 w-5 text-text-body" aria-hidden="true" />
                   <p class="text-sm font-bold text-white">{method}</p>
                   <p class="mt-1 text-xs uppercase tracking-[0.12em] text-text-tertiary">
@@ -770,7 +798,7 @@
         </section>
 
         <section class="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
-          <div class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Latest News</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Stay up to date with betting previews and market explainers.
@@ -779,7 +807,7 @@
               {#each newsCards as news}
                 <a
                   href={news.href}
-                  class="group grid gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-3 sm:grid-cols-[92px_1fr]"
+                  class="material-cell group grid gap-3 rounded-2xl p-3 sm:grid-cols-[92px_1fr]"
                 >
                   <div
                     class="flex h-20 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-slate-blue/25 to-prestige-gold/10"
@@ -802,12 +830,12 @@
             </div>
           </div>
 
-          <div class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+          <div class="material-panel p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Football Leagues</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Bet on major football leagues and outright competition markets.
             </p>
-            <div class="mt-4 overflow-x-auto rounded-lg border border-white/8">
+            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
               <table class="min-w-[680px] w-full text-left text-sm">
                 <thead
                   class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
@@ -836,7 +864,7 @@
           </div>
         </section>
 
-        <section class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section class="material-panel p-4 sm:p-5">
           <h2 class="page-hub-title text-2xl">Statistics Center</h2>
           <p class="mt-1 text-sm text-text-tertiary">
             Use odds, payout, and player-safety tools before placing a bet.
@@ -846,7 +874,7 @@
               {@const ToolIcon = tool.icon}
               <a
                 href={tool.href}
-                class="group rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-slate-blue/40"
+                class="material-cell group rounded-2xl p-4 transition-colors hover:border-slate-blue/40"
               >
                 <ToolIcon class="h-6 w-6 text-slate-blue" aria-hidden="true" />
                 <h3 class="mt-3 text-sm font-bold text-white">{tool.label}</h3>
@@ -856,7 +884,7 @@
           </div>
         </section>
 
-        <section id="support" class="navy-card navy-card--flat rounded-xl p-4 sm:p-5">
+        <section id="support" class="material-panel p-4 sm:p-5">
           <h2 class="page-hub-title text-2xl">Help Center</h2>
           <p class="mt-1 text-sm text-text-tertiary">
             Need help? Start with the most common sportsbook support topics.
@@ -866,7 +894,7 @@
               {@const SupportIcon = card.icon}
               <a
                 href={card.href}
-                class="rounded-lg border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-prestige-gold/35"
+                class="material-cell rounded-2xl p-4 transition-colors hover:border-prestige-gold/35"
               >
                 <SupportIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
                 <h3 class="mt-3 text-sm font-bold text-white">{card.title}</h3>
@@ -880,9 +908,7 @@
           </div>
         </section>
 
-        <section
-          class="rounded-xl border border-prestige-gold/20 bg-prestige-gold/[0.055] p-5 text-center"
-        >
+        <section class="material-panel p-5 text-center">
           <Flame class="mx-auto h-7 w-7 text-prestige-gold" aria-hidden="true" />
           <h2 class="page-hub-title mt-3 text-3xl">Ready for the sportsbook?</h2>
           <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-text-body">
@@ -899,6 +925,5 @@
         </section>
       </main>
     </div>
-
   </div>
 </div>

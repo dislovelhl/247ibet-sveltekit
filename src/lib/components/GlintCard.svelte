@@ -1,8 +1,9 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
   import { reveal, type RevealOptions } from '$lib/animations/reveal';
 
   let { children, class: className = "", style = "", useReveal = false, revealOptions = {} } = $props<{ 
-    children: any; 
+    children: Snippet; 
     class?: string; 
     style?: string;
     useReveal?: boolean;

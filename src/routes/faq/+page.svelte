@@ -136,7 +136,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-20">
+<div class="min-h-screen bg-navy-black pb-20">
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
@@ -146,7 +146,7 @@
       </ol>
     </nav>
 
-    <header class="relative mb-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+    <header class="material-panel relative mb-16 overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.1),transparent_50%)]"></div>
       <div class="relative z-10 p-8 md:p-14 text-center md:text-left">
         <h1 class="page-hero-title mb-6">
@@ -161,13 +161,13 @@
     {#if faqData.length > 0}
       <div class="grid gap-12 lg:grid-cols-[300px_1fr]">
         <!-- Category Sidebar -->
-        <aside class="hidden lg:block space-y-2 sticky top-24 h-fit">
+        <aside class="material-panel hidden lg:block space-y-2 sticky top-24 h-fit p-3">
           <h2 class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary mb-6 px-4">Categories</h2>
           {#each faqData as cat}
             {@const Icon = cat.icon}
             <a
               href="#{cat.id}"
-              class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all hover:bg-white/5 text-text-body hover:text-white group"
+              class="material-cell flex items-center gap-3 px-4 py-3 rounded-2xl transition-all hover:bg-white/5 text-text-body hover:text-white group"
             >
               <Icon class="h-4 w-4 text-text-tertiary group-hover:text-prestige-gold transition-colors" />
               <span class="text-sm font-bold">{cat.title}</span>
@@ -189,7 +189,7 @@
               <div class="grid gap-4">
                 {#each cat.questions as q, i}
                   {@const qId = `${cat.id}-${i}`}
-                  <div class="glass-thin rounded-2xl overflow-hidden border border-white/5 transition-all hover:border-white/10">
+                  <div class="material-cell rounded-2xl overflow-hidden transition-all hover:border-white/10">
                     <button
                       class="w-full flex items-center justify-between p-6 text-left hover:bg-white/[0.02] transition-colors"
                       onclick={() => toggleFaq(qId)}
@@ -216,7 +216,7 @@
     {/if}
 
     <footer class="mt-24 grid gap-8 md:grid-cols-2">
-      <div class="navy-card p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
+      <div class="material-panel p-8 rounded-3xl flex flex-col justify-between">
         <div>
           <h2 class="text-2xl font-bold text-white mb-4">Still have questions?</h2>
           <p class="text-text-body mb-8">Our support team is available 24/7 to help with account, deposit, or technical issues.</p>
@@ -226,7 +226,7 @@
         </a>
       </div>
 
-      <div class="navy-card p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
+      <div class="material-panel p-8 rounded-3xl flex flex-col justify-between">
         <div>
           <h2 class="text-2xl font-bold text-white mb-4">Responsible Gambling</h2>
           <p class="text-text-body mb-8">Learn how to set deposit limits, take breaks, and access support resources in your province.</p>

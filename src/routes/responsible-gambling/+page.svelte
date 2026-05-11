@@ -218,7 +218,7 @@
   <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 text-white">
+<div class="min-h-screen bg-navy-black text-white">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -228,9 +228,7 @@
       </ol>
     </nav>
 
-    <header
-      class="relative overflow-hidden rounded-xl border border-white/10 bg-[linear-gradient(90deg,#090f1d,#0d1629)] p-7 shadow-2xl md:p-12"
-    >
+    <header class="material-panel relative overflow-hidden rounded-[2rem] p-7 shadow-2xl md:p-12">
       <div
         class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-35"
       ></div>
@@ -248,12 +246,10 @@
             At 247iBET, your well-being is our priority. Our player protection framework is built on
             evidence-based standards, proactive monitoring, and confidential support.
           </p>
-          <div
-            class="mt-9 grid max-w-3xl gap-3 rounded-xl border border-white/10 bg-black/28 p-3 sm:grid-cols-3"
-          >
+          <div class="material-group mt-9 grid max-w-3xl gap-3 p-3 sm:grid-cols-3">
             {#each trustItems as item}
               {@const Icon = item.icon}
-              <div class="flex gap-3 rounded-lg bg-white/[0.035] p-4">
+              <div class="material-cell flex gap-3 rounded-2xl p-4">
                 <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
                 <div>
                   <p class="text-sm font-black">{item.title}</p>
@@ -265,7 +261,7 @@
         </div>
 
         <div
-          class="mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-xl border border-white/15 bg-black/35 shadow-2xl backdrop-blur-sm"
+          class="material-panel mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-[2rem] shadow-2xl"
         >
           <ShieldCheck class="h-28 w-28 text-prestige-gold" strokeWidth={1.3} aria-hidden="true" />
           <p class="mt-6 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
@@ -279,7 +275,7 @@
     </header>
 
     <section class="mt-7 grid gap-6 lg:grid-cols-2">
-      <article class="navy-card p-7 md:p-8">
+      <article class="material-panel p-7 md:p-8">
         <div class="mb-5 flex items-center gap-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold"
@@ -302,7 +298,7 @@
         </ul>
       </article>
 
-      <article class="navy-card p-7 md:p-8">
+      <article class="material-panel p-7 md:p-8">
         <div class="mb-5 flex items-center gap-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-lg bg-prestige-gold/15 text-prestige-gold"
@@ -321,7 +317,7 @@
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.035] p-5 transition-colors hover:border-prestige-gold/35"
+              class="material-cell flex items-center justify-between gap-4 rounded-2xl p-5 transition-colors hover:border-prestige-gold/35"
             >
               <div>
                 <p class="font-black text-white">{link.name}</p>
@@ -337,7 +333,7 @@
       </article>
     </section>
 
-    <section class="mt-7 navy-card p-6 md:p-8">
+    <section class="material-panel mt-7 p-6 md:p-8">
       <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 class="text-3xl font-black uppercase">Quick Self-Assessment</h2>
@@ -354,14 +350,14 @@
       </div>
 
       {#if !submitted}
-        <div class="mt-7 divide-y divide-white/8 rounded-xl border border-white/10 bg-black/18">
+        <div class="material-group mt-7 divide-y divide-white/8">
           {#each assessmentQuestions as question, index}
-            <div class="grid gap-4 p-4 md:grid-cols-[1fr_auto] md:items-center">
+             <div class="grid gap-4 p-4 soft-separator md:grid-cols-[1fr_auto] md:items-center">
               <div class="flex gap-3">
                 <HelpCircle class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
                 <p class="text-sm font-semibold text-text-body">{question}</p>
               </div>
-              <div class="grid grid-cols-2 gap-2">
+              <div class="segmented-chrome grid grid-cols-2 gap-2 rounded-xl p-1">
                 <button
                   type="button"
                   aria-pressed={answers[index] === 'yes'}
@@ -423,7 +419,7 @@
       {/if}
     </section>
 
-    <section class="mt-7 navy-card p-6 md:p-8">
+    <section class="material-panel mt-7 p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Platform Control Infrastructure</h2>
       <p class="mt-2 text-sm text-text-body">
         Powerful tools to help you manage your play, your way.
@@ -431,7 +427,7 @@
       <div class="mt-7 grid gap-4 md:grid-cols-4">
         {#each controlTools as tool}
           {@const Icon = tool.icon}
-          <article class="rounded-xl border border-white/10 bg-white/[0.035] p-5">
+          <article class="material-cell rounded-2xl p-5">
             <Icon class="h-8 w-8 text-prestige-gold" aria-hidden="true" />
             <h3 class="mt-5 text-xl font-black">{tool.title}</h3>
             <p class="mt-3 min-h-[72px] text-sm leading-6 text-text-body">{tool.body}</p>
@@ -447,12 +443,12 @@
       </div>
     </section>
 
-    <section class="mt-7 navy-card overflow-hidden p-6 md:p-8">
+    <section class="material-panel mt-7 overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Safety Tools at a Glance</h2>
       <p class="mt-2 text-sm text-text-body">
         Use these tools anytime from your Responsible Gaming dashboard.
       </p>
-      <div class="mt-6 overflow-x-auto rounded-xl border border-white/10">
+      <div class="material-group mt-6 overflow-x-auto">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
             <tr>
@@ -463,7 +459,7 @@
           </thead>
           <tbody class="divide-y divide-white/8">
             {#each tableRows as row}
-              <tr>
+              <tr class="soft-separator">
                 <td class="px-5 py-4 font-black text-white">{row.tool}</td>
                 <td class="px-5 py-4 text-text-body">{row.best}</td>
                 <td class="px-5 py-4 text-text-body">{row.step}</td>
@@ -475,7 +471,7 @@
     </section>
 
     <section class="mt-7 grid gap-4 md:grid-cols-[1fr_auto]">
-      <div class="rounded-xl border border-white/10 bg-navy-card/80 p-6">
+      <div class="material-panel p-6">
         <div class="flex gap-4">
           <HelpCircle class="h-9 w-9 shrink-0 text-prestige-gold" aria-hidden="true" />
           <div>
@@ -492,7 +488,7 @@
     </section>
 
     <section
-      class="mt-7 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[linear-gradient(100deg,#0d1629,#080d18)] p-8 shadow-2xl md:p-10"
+      class="material-panel mt-7 overflow-hidden p-8 shadow-2xl md:p-10"
     >
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>

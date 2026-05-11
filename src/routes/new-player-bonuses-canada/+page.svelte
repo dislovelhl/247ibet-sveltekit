@@ -99,7 +99,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </svelte:head>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
-  <header class="space-y-4 reveal-fade-up" use:reveal>
+  <header class="material-panel space-y-4 reveal-fade-up p-6 md:p-8" use:reveal>
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Bonuses · Canada · 2026
     </div>
@@ -111,7 +111,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       reviewed, which showed a welcome bonus up to C$2000 plus 10 free spins. Use the screenshot as
       a starting point, then verify the cashier terms before claiming.
     </p>
-    <div class="relative my-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card">
+    <div class="material-cell relative my-6 h-44 overflow-hidden rounded-2xl">
       <img
         src="/images/generated/bonus-wagering-hero.webp"
         alt=""
@@ -127,7 +127,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <AffiliateDisclosure />
 
-  <aside class="navy-card rounded-lg p-5">
+  <aside class="material-panel p-5">
     <div class="flex items-start gap-3">
       <Shield class="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
       <div>
@@ -144,7 +144,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </aside>
 
-  <section use:reveal data-reveal-stagger="true" class="navy-card rounded-lg p-5"
+  <section use:reveal data-reveal-stagger="true" class="material-panel p-5"
  aria-labelledby="snapshot-heading">
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
@@ -159,7 +159,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 sm:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
           <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
           <div class="p-4">
             <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
@@ -172,7 +172,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </section>
 
-  <section use:reveal data-reveal-stagger="true" class="navy-card rounded-lg p-5"
+  <section use:reveal data-reveal-stagger="true" class="material-panel p-5"
  aria-labelledby="sports-tieins-heading">
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
@@ -187,7 +187,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 md:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article use:reveal class="reveal-fade-up overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] card-hover-lift">
+        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
           <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
           <div class="p-4">
             <p class="text-[10px] uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
@@ -206,7 +206,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </h2>
     <div class="space-y-3">
       {#each bonusTypes as b}
-        <div use:reveal class="reveal-fade-up navy-card rounded-lg p-4 flex flex-col gap-1.5 card-hover-lift">
+         <div use:reveal class="material-cell reveal-fade-up rounded-2xl p-4 flex flex-col gap-1.5 card-hover-lift">
           <div class="flex items-center justify-between gap-4">
             <span class="font-semibold text-[#F1F5F9] text-sm">{b.name}</span>
             <span
@@ -225,7 +225,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <h2 id="terms-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
       Terms to Check Before Claiming
     </h2>
-    <div class="navy-card rounded-lg p-5">
+    <div class="material-group p-5">
       <ul class="space-y-2">
         {#each termsList as t}
           <li class="flex items-start gap-3 text-sm text-[#94A3B8]">
@@ -253,13 +253,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <ReadyToPlay />
 
-  <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">
+  <nav aria-label="Related pages" class="soft-separator border-t pt-6">
     <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-widest font-medium">Related</p>
     <div class="flex flex-wrap gap-3">
       {#each relatedLinks as l}
         <a
           href={l.href}
-          class="text-xs text-[#4A9EBF] hover:underline bg-[#142038] px-3 py-1.5 rounded-md"
+          class="floating-chrome text-xs text-[#4A9EBF] hover:underline px-3 py-1.5"
         >
           {l.label}
         </a>
@@ -267,7 +267,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </nav>
 
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
+  <div class="material-panel mt-8 p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a
       href="/responsible-gambling"
       class="text-slate-blue hover:underline">Responsible gambling resources</a

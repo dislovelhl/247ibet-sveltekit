@@ -148,7 +148,6 @@
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
   };
-
 </script>
 
 <svelte:head>
@@ -166,7 +165,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-20">
+<div class="min-h-screen bg-navy-black pb-20">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-12">
       <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
@@ -190,11 +189,11 @@
         </p>
 
         <div
-          class="mt-10 grid gap-3 rounded-xl border border-white/10 bg-navy-card/70 p-4 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
+          class="material-group mt-10 grid gap-2 p-2 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
         >
           {#each trustItems as item}
             {@const Icon = item.icon}
-            <div class="flex gap-3 rounded-lg bg-black/14 p-3">
+            <div class="material-cell flex gap-3 rounded-2xl p-3">
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
               >
@@ -210,7 +209,7 @@
       </div>
 
       <div
-        class="relative overflow-hidden rounded-xl border border-white/12 bg-navy-card shadow-2xl aspect-[5/6] sm:aspect-auto"
+        class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[5/6] sm:aspect-auto"
       >
         <img
           src="/images/generated/interac-payment-hero.webp"
@@ -226,8 +225,8 @@
             Interac keeps sensitive payment steps inside your bank flow while 247iBET records the
             cashier result.
           </p>
-          <div class="mt-8 rounded-xl border border-white/10 bg-black/24 p-4">
-            <div class="flex flex-wrap items-center gap-3">
+          <div class="material-cell mt-8 rounded-2xl p-4">
+            <div class="segmented-chrome flex flex-wrap items-center gap-2 rounded-full p-1">
               {#each amountOptions as amount}
                 <button
                   type="button"
@@ -262,7 +261,7 @@
     </header>
 
     <section
-      class="mt-14 rounded-xl border border-prestige-gold/45 bg-prestige-gold/7 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
+      class="material-panel mt-14 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
     >
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div class="flex gap-4">
@@ -293,7 +292,7 @@
     </section>
 
     <section class="mt-12 grid gap-6 lg:grid-cols-2">
-      <div class="navy-card p-6 md:p-8">
+      <div class="material-panel p-6 md:p-8">
         <div class="mb-8 flex items-center gap-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
@@ -302,9 +301,9 @@
           </div>
           <h2 class="text-3xl font-black text-white">How to Deposit</h2>
         </div>
-        <ol class="space-y-7">
+        <ol class="material-group space-y-2 p-2">
           {#each depositSteps as step, index}
-            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+            <li class="material-cell grid grid-cols-[2.25rem_1fr] gap-4 rounded-2xl p-4">
               <span
                 class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
                 >{index + 1}</span
@@ -318,7 +317,7 @@
         </ol>
       </div>
 
-      <div class="navy-card p-6 md:p-8">
+      <div class="material-panel p-6 md:p-8">
         <div class="mb-8 flex items-center gap-4">
           <div
             class="flex h-14 w-14 items-center justify-center rounded-full border border-prestige-gold/35 bg-prestige-gold/10 text-prestige-gold"
@@ -327,9 +326,9 @@
           </div>
           <h2 class="text-3xl font-black text-white">How to Withdraw</h2>
         </div>
-        <ol class="space-y-7">
+        <ol class="material-group space-y-2 p-2">
           {#each withdrawalSteps as step, index}
-            <li class="grid grid-cols-[2.25rem_1fr] gap-4">
+            <li class="material-cell grid grid-cols-[2.25rem_1fr] gap-4 rounded-2xl p-4">
               <span
                 class="flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
                 >{index + 1}</span
@@ -344,13 +343,13 @@
       </div>
     </section>
 
-    <section class="mt-12 navy-card overflow-hidden p-6 md:p-8">
+    <section class="material-panel mt-12 overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black text-white">Timing &amp; Expectation Limits</h2>
-      <div class="table-scroll-wrap mt-7">
+      <div class="material-cell table-scroll-wrap mt-7 rounded-2xl">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
             <tr
-              class="border-b border-white/10 text-[11px] uppercase tracking-[0.16em] text-text-tertiary"
+              class="border-b soft-separator text-[11px] uppercase tracking-[0.16em] text-text-tertiary"
             >
               <th class="px-4 py-4 font-black">Service</th>
               <th class="px-4 py-4 font-black">Typical Time</th>
@@ -370,9 +369,7 @@
           </tbody>
         </table>
       </div>
-      <div
-        class="mt-7 flex gap-3 rounded-lg border border-white/10 bg-black/24 p-4 text-sm text-text-body"
-      >
+      <div class="material-cell mt-7 flex gap-3 rounded-2xl p-4 text-sm text-text-body">
         <ShieldCheck class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
         <p>
           All times are estimates and may vary based on bank, verification status, and account
@@ -381,10 +378,13 @@
       </div>
     </section>
 
-    <section class="mt-12 grid gap-6 md:grid-cols-2">
+    <section class="material-group mt-12 grid gap-2 p-2 md:grid-cols-2">
       {#each quickCards as card}
         {@const Icon = card.icon}
-        <a href={card.href} class="navy-card group p-7 transition-transform hover:-translate-y-0.5">
+        <a
+          href={card.href}
+          class="material-cell group rounded-[22px] p-7 transition-transform hover:-translate-y-0.5"
+        >
           <div class="flex items-start justify-between gap-6">
             <div>
               <h2 class="text-2xl font-black text-white">{card.title}</h2>
@@ -405,7 +405,7 @@
       {/each}
     </section>
 
-    <section class="mt-12 navy-card p-6 md:p-8">
+    <section class="material-panel mt-12 p-6 md:p-8">
       <h2 class="text-3xl font-black text-white">Interac FAQ</h2>
       <div class="mt-6 divide-y divide-white/8">
         {#each faqItems as item, index}
@@ -438,9 +438,7 @@
       </p>
     </section>
 
-    <section
-      class="mt-12 overflow-hidden rounded-xl border border-prestige-gold/45 bg-[radial-gradient(circle_at_0%_50%,rgba(212,148,58,0.16),transparent_32%),linear-gradient(105deg,#0d1629,#080d18)] p-7 shadow-2xl md:p-10"
-    >
+    <section class="material-panel mt-12 overflow-hidden p-7 shadow-2xl md:p-10">
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
           <h2 class="text-3xl font-black text-white md:text-4xl">
@@ -456,6 +454,5 @@
         </SafeExternalLink>
       </div>
     </section>
-
   </div>
 </div>

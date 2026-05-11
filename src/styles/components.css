@@ -1,10 +1,16 @@
 @layer utilities {
   /* ── Prestige Navy card system ── */
   .navy-card {
-    background: linear-gradient(180deg, rgba(20, 32, 56, 0.42), rgba(13, 22, 41, 0.96)), #0d1629;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 12px;
-    box-shadow: var(--shadow-navy), var(--shadow-gold-accent);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 38%),
+      linear-gradient(180deg, rgba(20, 32, 56, 0.46), rgba(13, 22, 41, 0.96)),
+      #0d1629;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.06) inset,
+      var(--shadow-navy),
+      var(--shadow-gold-accent);
     position: relative;
     overflow: hidden;
     transition:
@@ -14,11 +20,11 @@
       transform 180ms ease;
   }
   .navy-card:hover {
-    border-color: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.15);
     box-shadow:
-      0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
-      var(--shadow-navy-deep);
-    transform: translateY(-4px) scale(1.01);
+      0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+      0 18px 42px -26px rgba(0, 0, 0, 0.68);
+    transform: translateY(-2px);
   }
 
   .shimmer-effect {
@@ -73,13 +79,16 @@
 
   /* ── Luxury Card ── */
   .luxury-card {
-    background: linear-gradient(175deg, rgba(20, 32, 56, 0.92) 0%, rgba(11, 19, 36, 0.95) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-radius: 18px;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.09), transparent 36%),
+      radial-gradient(circle at 100% 0%, rgba(212, 148, 58, 0.07), transparent 34%),
+      linear-gradient(175deg, rgba(20, 32, 56, 0.9) 0%, rgba(11, 19, 36, 0.94) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-top-color: rgba(255, 255, 255, 0.22);
+    border-radius: 22px;
     box-shadow:
       0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
-      0 18px 42px -22px rgba(0, 0, 0, 0.68);
+      0 16px 38px -24px rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: hidden;
     transition:
@@ -107,6 +116,32 @@
       0 1px 0 0 rgba(255, 255, 255, 0.1) inset,
       0 22px 48px -24px rgba(0, 0, 0, 0.72);
     transform: translateY(-1px);
+  }
+
+  .material-group {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-top-color: rgba(255, 255, 255, 0.2);
+    background:
+      radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.08), transparent 34%),
+      radial-gradient(circle at 92% 6%, rgba(212, 148, 58, 0.06), transparent 30%),
+      linear-gradient(180deg, rgba(20, 32, 56, 0.74), rgba(13, 22, 41, 0.82));
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.09) inset,
+      0 18px 44px -28px rgba(0, 0, 0, 0.76);
+  }
+
+  .material-cell {
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-top-color: rgba(255, 255, 255, 0.14);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
+      rgba(13, 22, 41, 0.56);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.055) inset,
+      0 10px 26px -22px rgba(0, 0, 0, 0.62);
   }
 
   .luxury-border {

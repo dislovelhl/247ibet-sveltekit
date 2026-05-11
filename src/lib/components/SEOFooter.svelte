@@ -48,16 +48,20 @@
 
 <footer
   aria-label="Site footer"
-  class="mt-16 border-t border-white/5 bg-navy-black pb-[calc(env(safe-area-inset-bottom,0px)+5rem)] sm:mt-20 md:pb-0"
+  class="mt-16 border-t border-white/5 bg-[linear-gradient(180deg,rgba(13,22,41,0.38),rgba(7,12,24,1)_28%)] pb-[calc(env(safe-area-inset-bottom,0px)+5rem)] sm:mt-20 md:pb-0"
 >
   <div class="container mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-7xl">
       <!-- Main 3-col grid -->
       <div
-        class="grid grid-cols-1 gap-12 border-b border-white/5 py-14 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-16"
+        class="material-group grid grid-cols-1 gap-5 p-5 sm:p-7 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-6 lg:p-8"
       >
         <!-- Brand column -->
-        <section aria-labelledby="footer-brand-heading" use:reveal class="reveal-fade-up">
+        <section
+          aria-labelledby="footer-brand-heading"
+          use:reveal
+          class="material-cell reveal-fade-up rounded-[22px] p-5"
+        >
           <div class="mb-5 flex items-center gap-4">
             <img
               src="/images/brand/logo.png"
@@ -88,7 +92,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-prestige-gold/30 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
+                class="segmented-item flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-gray-500 transition-colors hover:border-prestige-gold/30 hover:bg-prestige-gold/10 hover:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
               >
                 <svg
                   aria-hidden="true"
@@ -109,7 +113,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Join ${SITE.name} on Telegram`}
-              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-gray-500 transition-colors hover:border-white/25 hover:text-gray-300"
+              class="segmented-item flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-gray-500 transition-colors hover:border-white/25 hover:bg-white/[0.055] hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
             >
               <Send class="h-4 w-4" aria-hidden="true" />
             </a>
@@ -118,7 +122,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Follow ${SITE.name} on TikTok`}
-              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-text-body transition-colors hover:border-white/25 hover:text-white"
+              class="segmented-item flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-text-body transition-colors hover:border-white/25 hover:bg-white/[0.055] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
             >
               <Music2 class="h-4 w-4" aria-hidden="true" />
             </a>
@@ -126,7 +130,11 @@
         </section>
 
         <!-- Play links -->
-        <nav aria-labelledby="footer-play-heading" use:reveal class="reveal-fade-up">
+        <nav
+          aria-labelledby="footer-play-heading"
+          use:reveal
+          class="material-cell reveal-fade-up rounded-[22px] p-5"
+        >
           <h2
             id="footer-play-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
@@ -138,7 +146,7 @@
               <li class="reveal-fade-up" use:reveal>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[44px] w-full items-center rounded-xl px-3 py-2 text-sm text-text-body transition-colors hover:bg-white/[0.035] hover:text-prestige-gold focus-visible:bg-white/[0.045] focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -148,7 +156,11 @@
         </nav>
 
         <!-- Info + Safety -->
-        <section aria-labelledby="footer-info-heading" use:reveal class="reveal-fade-up">
+        <section
+          aria-labelledby="footer-info-heading"
+          use:reveal
+          class="material-cell reveal-fade-up rounded-[22px] p-5"
+        >
           <h2
             id="footer-info-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
@@ -160,7 +172,7 @@
               <li class="reveal-fade-up" use:reveal>
                 <a
                   href={link.href}
-                  class="inline-flex min-h-[44px] items-center rounded-sm py-2 text-sm text-text-body transition-colors hover:text-prestige-gold focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
+                  class="inline-flex min-h-[44px] w-full items-center rounded-xl px-3 py-2 text-sm text-text-body transition-colors hover:bg-white/[0.035] hover:text-prestige-gold focus-visible:bg-white/[0.045] focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
                 >
                   {link.label}
                 </a>
@@ -168,7 +180,7 @@
             {/each}
           </ul>
 
-          <div class="mt-8 border-t border-white/5 pt-6">
+          <div class="material-cell mt-8 rounded-2xl p-4">
             <p class="text-xs leading-relaxed text-text-tertiary">
               Problem gambling helplines:
               <a
@@ -189,13 +201,13 @@
       </div>
 
       <!-- Affiliate disclosure -->
-      <div class="py-6 border-b border-white/5" use:reveal>
+      <div class="material-group my-5 p-4 sm:p-5" use:reveal>
         <AffiliateDisclosure variant="footer" />
       </div>
 
       <!-- Legal bar -->
       <div
-        class="flex flex-col gap-3 py-6 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between reveal-fade-up"
+        class="material-group reveal-fade-up flex flex-col gap-3 p-4 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between"
         use:reveal
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>

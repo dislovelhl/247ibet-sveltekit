@@ -123,7 +123,6 @@
     },
   ];
 
-
   const parallax = useMouseParallax(20);
 </script>
 
@@ -176,35 +175,45 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-20" onmousemove={parallax.handleMouseMove} role="presentation">
+<div
+  class="min-h-screen bg-navy-black pb-20"
+  onmousemove={parallax.handleMouseMove}
+  role="presentation"
+>
   <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
     <nav aria-label="Breadcrumb" class="mb-6">
-      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary">
+      <ol
+        class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
+      >
         <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
         <li class="text-prestige-gold">Ontario</li>
       </ol>
     </nav>
 
-    <header class="relative mb-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
+    <header class="material-panel relative mb-12 overflow-hidden rounded-[2.5rem] shadow-2xl">
       <img
         src="/images/generated/canada-market-hero.webp"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
         style="transform: translate3d({parallax.x * 0.4}px, {parallax.y * 0.4}px, 0) scale(1.1);"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
-      
-      <div class="relative z-10 p-8 md:p-14 glass-premium animate-float-3d mx-6 my-8 rounded-3xl border border-white/20 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
-           style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
+      ></div>
+
+      <div
+        class="material-panel relative z-10 p-8 md:p-14 animate-float-3d mx-6 my-8 rounded-3xl shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
+        style="transform: translate3d({-parallax.x * 0.8}px, {-parallax.y * 0.8}px, 0);"
+      >
         <div class="flex flex-wrap items-center gap-3 mb-8">
-          <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 shadow-lg">
+          <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
             <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
               Market Active
             </p>
           </div>
-          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+          <div class="floating-chrome px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
               19+ · Fully Regulated · Secure Gaming
             </p>
@@ -213,63 +222,85 @@
 
         <h1 class="page-hero-title !tracking-tighter">
           Ontario <br />
-          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">iGaming Hub</span>
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+            >iGaming Hub</span
+          >
         </h1>
 
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Your premier destination for Ontario regulated iGaming. Experience secure casino games, 
+          Your premier destination for Ontario regulated iGaming. Experience secure casino games,
           live sports betting, and lightning-fast Interac payouts.
         </p>
 
-        <div class="mt-10 flex items-center justify-between border-t border-white/10 pt-8">
-        </div>
+        <div class="mt-10 flex items-center justify-between border-t soft-separator pt-8"></div>
       </div>
     </header>
 
-  <AffiliateDisclosure />
+    <AffiliateDisclosure />
 
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Ontario Availability &amp; Setup</h2>
-    <p class="text-sm text-gray-300 leading-relaxed mb-6">
-      Ontario players should confirm age eligibility, current account access, payment support, and
-      withdrawal handling before moving from registration to deposit.
-    </p>
-    <div class="grid gap-4 md:grid-cols-2 text-sm text-gray-300">
-      <div class="navy-card rounded-xl p-4">
-        <h3 class="font-bold text-white mb-2">Player Access</h3>
-        <p class="leading-relaxed">
-          Real-money access is intended for players who are physically in Ontario and at least 19
-          years of age.
-        </p>
-      </div>
-      <div class="navy-card rounded-xl p-4">
-        <h3 class="font-bold text-white mb-2">Cashier Check</h3>
-        <p class="leading-relaxed">
-          Interac deposits can be simple while withdrawals still depend on KYC, review queues, and
-          bank-side completion.
-        </p>
-      </div>
-    </div>
-  </section>
-
-    <section class="mb-16 grid gap-6 md:grid-cols-2">
-      <a
-        href="/ontario/online-casino"
-        class="glass-thin group flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
-      >
-        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
-        <div>
-          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">Ontario Casino</h3>
-          <p class="mt-4 text-sm leading-relaxed text-text-body font-light">
-            Move straight into slots, live dealer games, and table games with the Ontario route already in mind.
+    <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
+      <h2 class="text-2xl font-bold mb-4">Ontario Availability &amp; Setup</h2>
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        Ontario players should confirm age eligibility, current account access, payment support, and
+        withdrawal handling before moving from registration to deposit.
+      </p>
+      <div class="material-group grid gap-2 p-2 md:grid-cols-2 text-sm text-gray-300">
+        <div class="material-cell rounded-2xl p-4">
+          <h3 class="font-bold text-white mb-2">Player Access</h3>
+          <p class="leading-relaxed">
+            Real-money access is intended for players who are physically in Ontario and at least 19
+            years of age.
           </p>
         </div>
-        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
+        <div class="material-cell rounded-2xl p-4">
+          <h3 class="font-bold text-white mb-2">Cashier Check</h3>
+          <p class="leading-relaxed">
+            Interac deposits can be simple while withdrawals still depend on KYC, review queues, and
+            bank-side completion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="material-group mb-16 grid gap-2 p-2 md:grid-cols-2">
+      <a
+        href="/ontario/online-casino"
+        class="material-cell group relative flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] hover:border-prestige-gold/30"
+      >
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
+        ></div>
+        <div>
+          <div
+            class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          </div>
+          <h3
+            class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
+          >
+            Ontario Casino
+          </h3>
+          <p class="mt-4 text-sm leading-relaxed text-text-body font-light">
+            Move straight into slots, live dealer games, and table games with the Ontario route
+            already in mind.
+          </p>
+        </div>
+        <div
+          class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+        >
           Explore Casino
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
         </div>
@@ -277,152 +308,177 @@
 
       <a
         href="/sportsbook"
-        class="glass-thin group flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] border border-white/5 hover:border-prestige-gold/30"
+        class="material-cell group relative flex flex-col justify-between overflow-hidden rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] hover:border-prestige-gold/30"
       >
-        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"></div>
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
+        ></div>
         <div>
-          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          <div
+            class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              />
             </svg>
           </div>
-          <h3 class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors !tracking-tighter">Ontario Sports</h3>
+          <h3
+            class="font-display text-2xl font-black uppercase text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
+          >
+            Ontario Sports
+          </h3>
           <p class="mt-4 text-sm leading-relaxed text-text-body font-light">
             Bet on NHL, NBA, and more with an Ontario-focused route into the sportsbook.
           </p>
         </div>
-        <div class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all">
+        <div
+          class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+        >
           Explore Sportsbook
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
         </div>
       </a>
     </section>
 
-  <div class="mb-10">
-    <AffiliateDisclosure />
-    <p class="mt-3 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Visit the <a href="https://www.igamingontario.ca/en" target="_blank" rel="noopener noreferrer" class="text-slate-blue hover:underline">iGaming Ontario operator directory</a> to verify current licensing status before registering or depositing.
-    </p>
-  </div>
-
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Ontario supporting guides</h2>
-    <div class="grid gap-4 md:grid-cols-2">
-      {#each guideItems as item}
-        <a
-          href={item.href}
-          class="navy-card rounded-xl p-4 transition-colors hover:border-slate-blue/30"
-        >
-          <div class="font-bold text-white mb-2">{item.title}</div>
-          <p class="text-sm text-gray-400 leading-relaxed">{item.description}</p>
-        </a>
-      {/each}
-    </div>
-  </section>
-
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Ontario platform features</h2>
-    <p class="text-sm text-gray-400 leading-relaxed mb-5">
-      Explore our platform features to understand our cashier flow, mobile experience, and secure 
-      gaming environment in Ontario.
-    </p>
-    <div class="grid gap-4 md:grid-cols-2">
-      {#each reviewCards as item}
-        <a
-          href={item.href}
-          class="navy-card rounded-xl p-4 transition-colors hover:border-slate-blue/30"
-        >
-          <div class="font-bold text-white mb-2">{item.title}</div>
-          <p class="text-sm text-gray-400 leading-relaxed">{item.description}</p>
-        </a>
-      {/each}
-    </div>
-  </section>
-
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Primary Ontario checks before signup</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b border-white/10 bg-white/3">
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Check</th>
-            <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Why it matters</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-white/5 text-gray-300">
-          <tr>
-            <td class="p-4 font-semibold text-white">Verify current operator status</td>
-            <td class="p-4"
-              >Ontario availability should be confirmed against current official market information
-              before registration.</td
-            >
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold text-white">Check Interac and cashier support</td>
-            <td class="p-4"
-              >Deposits can be easy while withdrawals still depend on KYC, payout review, and
-              bank-side completion.</td
-            >
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold text-white">Review bonus and wagering terms</td>
-            <td class="p-4"
-              >Ontario public-entry content should not lead with inducements. Terms still matter
-              before you opt in.</td
-            >
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold text-white">Keep responsible gambling tools visible</td>
-            <td class="p-4"
-              >Deposit limits, time-outs, self-exclusion, and support contacts should be easy to
-              find before you play.</td
-            >
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="navy-card rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
-    <h2 class="text-2xl font-bold mb-4">Source references</h2>
-    <div class="grid gap-4 md:grid-cols-3">
-      {#each sourceCards as source}
-        <a
-          href={source.href}
+    <div class="mb-10">
+      <AffiliateDisclosure />
+      <p class="material-cell mt-3 rounded-2xl p-4 text-xs text-text-tertiary">
+        Visit the <a
+          href="https://www.igamingontario.ca/en"
           target="_blank"
-          rel="noreferrer noopener"
-          class="navy-card rounded-xl p-4 transition-colors hover:border-slate-blue/30"
-        >
-          <div class="font-bold text-white mb-2">{source.name}</div>
-          <p class="text-sm text-gray-400 leading-relaxed">{source.note}</p>
-        </a>
-      {/each}
+          rel="noopener noreferrer"
+          class="text-slate-blue hover:underline">iGaming Ontario operator directory</a
+        > to verify current licensing status before registering or depositing.
+      </p>
     </div>
-  </section>
 
-  <section class="mb-10" use:reveal>
-    <h2 class="text-2xl font-bold mb-5">Cross-province context</h2>
-    <div class="grid gap-4 md:grid-cols-2">
-      {#each crossProvinceItems as item}
-        <a
-          href={item.href}
-          class="rounded-2xl border border-white/10 bg-black/20 p-5 transition-colors hover:border-slate-blue/30 hover:bg-black/30"
-        >
-          <div class="text-lg font-bold text-white mb-2">{item.title}</div>
-          <p class="text-sm leading-relaxed text-gray-400">{item.description}</p>
-        </a>
-      {/each}
+    <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
+      <h2 class="text-2xl font-bold mb-4">Ontario supporting guides</h2>
+      <div class="material-group grid gap-2 p-2 md:grid-cols-2">
+        {#each guideItems as item}
+          <a
+            href={item.href}
+            class="material-cell rounded-2xl p-4 transition-colors hover:border-slate-blue/30"
+          >
+            <div class="font-bold text-white mb-2">{item.title}</div>
+            <p class="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
+      <h2 class="text-2xl font-bold mb-4">Ontario platform features</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">
+        Explore our platform features to understand our cashier flow, mobile experience, and secure
+        gaming environment in Ontario.
+      </p>
+      <div class="material-group grid gap-2 p-2 md:grid-cols-2">
+        {#each reviewCards as item}
+          <a
+            href={item.href}
+            class="material-cell rounded-2xl p-4 transition-colors hover:border-slate-blue/30"
+          >
+            <div class="font-bold text-white mb-2">{item.title}</div>
+            <p class="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
+      <h2 class="text-2xl font-bold mb-4">Primary Ontario checks before signup</h2>
+      <div class="material-cell overflow-x-auto rounded-2xl">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b soft-separator bg-white/3">
+              <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Check</th>
+              <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Why it matters</th
+              >
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 text-gray-300">
+            <tr>
+              <td class="p-4 font-semibold text-white">Verify current operator status</td>
+              <td class="p-4"
+                >Ontario availability should be confirmed against current official market
+                information before registration.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Check Interac and cashier support</td>
+              <td class="p-4"
+                >Deposits can be easy while withdrawals still depend on KYC, payout review, and
+                bank-side completion.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Review bonus and wagering terms</td>
+              <td class="p-4"
+                >Ontario public-entry content should not lead with inducements. Terms still matter
+                before you opt in.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Keep responsible gambling tools visible</td>
+              <td class="p-4"
+                >Deposit limits, time-outs, self-exclusion, and support contacts should be easy to
+                find before you play.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
+      <h2 class="text-2xl font-bold mb-4">Source references</h2>
+      <div class="material-group grid gap-2 p-2 md:grid-cols-3">
+        {#each sourceCards as source}
+          <a
+            href={source.href}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="material-cell rounded-2xl p-4 transition-colors hover:border-slate-blue/30"
+          >
+            <div class="font-bold text-white mb-2">{source.name}</div>
+            <p class="text-sm text-gray-400 leading-relaxed">{source.note}</p>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="material-panel mb-10 p-6 md:p-8" use:reveal>
+      <h2 class="text-2xl font-bold mb-5">Cross-province context</h2>
+      <div class="material-group grid gap-2 p-2 md:grid-cols-2">
+        {#each crossProvinceItems as item}
+          <a
+            href={item.href}
+            class="material-cell rounded-2xl p-5 transition-colors hover:border-slate-blue/30 hover:bg-black/30"
+          >
+            <div class="text-lg font-bold text-white mb-2">{item.title}</div>
+            <p class="text-sm leading-relaxed text-gray-400">{item.description}</p>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <FAQ items={faqItems.map((f) => ({ q: f.question, a: f.answer }))} title="Ontario FAQ" />
+
+    <div class="material-panel mt-8 p-4 text-xs text-text-tertiary">
+      Play responsibly. 19+ only. <a
+        href="/responsible-gambling"
+        class="text-slate-blue hover:underline">Responsible gambling resources</a
+      >.
     </div>
-  </section>
-
-    <FAQ items={faqItems.map(f => ({ q: f.question, a: f.answer }))} title="Ontario FAQ" />
-
-
-  <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-    Play responsibly. 19+ only. <a
-      href="/responsible-gambling"
-      class="text-slate-blue hover:underline">Responsible gambling resources</a
-    >.
-  </div>
   </div>
 </div>

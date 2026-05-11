@@ -1,6 +1,15 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  interface Particle {
+    x: number;
+    y: number;
+    size: number;
+    speedX: number;
+    speedY: number;
+    opacity: number;
+  }
+
   let canvas: HTMLCanvasElement;
 
   onMount(() => {
@@ -12,7 +21,7 @@
     canvas.width = width;
     canvas.height = height;
 
-    const particles: any[] = [];
+    const particles: Particle[] = [];
     const particleCount = 35;
 
     for (let i = 0; i < particleCount; i++) {
