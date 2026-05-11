@@ -261,7 +261,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pt-6 text-white" role="presentation">
+<div class="min-h-screen bg-navy-black text-white" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div

@@ -47,7 +47,7 @@
 >
   <main
     id="main-content"
-    class="flex-grow pt-[calc(4rem+env(safe-area-inset-top,0px))] lg:pt-[calc(8.5rem+env(safe-area-inset-top,0px))]"
+    class="flex-grow pt-[calc(3.5rem+env(safe-area-inset-top,0px))] lg:pt-[calc(6.5rem+env(safe-area-inset-top,0px))]"
   >
     {#key page.url.pathname}
       <div in:fade={{ duration: 120 }}>

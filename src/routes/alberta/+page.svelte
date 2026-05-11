@@ -118,7 +118,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
         class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
