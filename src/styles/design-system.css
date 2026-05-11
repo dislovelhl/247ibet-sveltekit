@@ -1,4 +1,12 @@
 @layer utilities {
+  .text-luxury {
+    font-family: var(--font-luxury);
+    font-style: italic;
+  }
+  .tracking-boutique {
+    letter-spacing: 0.14em;
+  }
+
   /* ── Typography & Headers ── */
   .money-hero-display {
     font-family: var(--font-display);

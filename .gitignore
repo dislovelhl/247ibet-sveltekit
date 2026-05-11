@@ -52,3 +52,7 @@ dist/
 apps/chatgpt-app/
 videos/
 **/capture/screenshots/
+
+# AI Agent Artifacts
+.superpowers/
+.hermes/
