@@ -1,3 +1,6 @@
+import { browser } from '$app/environment';
 import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
-injectSpeedInsights();
+if (browser && !['127.0.0.1', 'localhost'].includes(window.location.hostname)) {
+  injectSpeedInsights();
+}

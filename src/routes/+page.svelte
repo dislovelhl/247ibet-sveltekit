@@ -910,11 +910,9 @@
         >
       </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {#each guideCards as card, i}
+          {#each guideCards as card}
             <GlintCard
-              useReveal={true}
-              style="--reveal-delay: {i * 100}ms"
-              class="reveal-fade-up luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+              class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
             >
               <a
                 href={card.href}

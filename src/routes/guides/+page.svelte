@@ -41,9 +41,35 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
-  <section class="mx-auto max-w-5xl mt-8">
-    <h2 class="text-2xl font-bold text-white mb-4">Guide Categories</h2>
+<div class="container mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
+  <section class="material-panel mt-8 overflow-hidden p-6 sm:p-8 lg:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.68fr_0.32fr] lg:items-end">
+      <div>
+        <p class="page-hero-kicker">Canada betting resources</p>
+        <h1 class="page-hero-title mt-4 text-[clamp(2.5rem,6vw,4.5rem)]">
+          Guides for smarter casino and sportsbook decisions
+        </h1>
+        <p class="page-hero-subtitle mt-4 max-w-3xl text-base sm:text-lg">
+          Explore our 247iBET guides on Interac payouts, provincial market rules, odds,
+          responsible gaming, and practical betting basics for Canadian players.
+        </p>
+      </div>
+
+      <div class="material-cell rounded-[22px] p-5 sm:p-6">
+        <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
+          Inside this hub
+        </p>
+        <ul class="mt-4 space-y-3 text-sm leading-6 text-text-body">
+          <li>Interac, withdrawals, and payment clarity</li>
+          <li>Ontario and Alberta market explainers</li>
+          <li>Odds, bankroll, and safer-play basics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto mt-10 max-w-5xl">
+    <h2 class="mb-4 text-2xl font-bold text-white">Guide Categories</h2>
     <div class="navy-card overflow-x-auto">
       <table class="w-full text-sm">
         <thead>

@@ -2,7 +2,6 @@
   import { Music2, Send } from 'lucide-svelte';
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   import { SITE } from '$lib/site';
-  import { reveal } from '$lib/animations';
 
   const SOCIAL = [
     {
@@ -57,11 +56,7 @@
         class="material-group grid grid-cols-1 gap-5 p-5 sm:p-7 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-6 lg:p-8"
       >
         <!-- Brand column -->
-        <section
-          aria-labelledby="footer-brand-heading"
-          use:reveal
-          class="material-cell reveal-fade-up rounded-[22px] p-5"
-        >
+        <section aria-labelledby="footer-brand-heading" class="material-cell rounded-[22px] p-5">
           <div class="mb-5 flex items-center gap-4">
             <img
               src="/images/brand/logo.png"
@@ -130,11 +125,7 @@
         </section>
 
         <!-- Play links -->
-        <nav
-          aria-labelledby="footer-play-heading"
-          use:reveal
-          class="material-cell reveal-fade-up rounded-[22px] p-5"
-        >
+        <nav aria-labelledby="footer-play-heading" class="material-cell rounded-[22px] p-5">
           <h2
             id="footer-play-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
@@ -143,7 +134,7 @@
           </h2>
           <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each playLinks as link}
-              <li class="reveal-fade-up" use:reveal>
+              <li>
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] w-full items-center rounded-xl px-3 py-2 text-sm text-text-body transition-colors hover:bg-white/[0.035] hover:text-prestige-gold focus-visible:bg-white/[0.045] focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -156,11 +147,7 @@
         </nav>
 
         <!-- Info + Safety -->
-        <section
-          aria-labelledby="footer-info-heading"
-          use:reveal
-          class="material-cell reveal-fade-up rounded-[22px] p-5"
-        >
+        <section aria-labelledby="footer-info-heading" class="material-cell rounded-[22px] p-5">
           <h2
             id="footer-info-heading"
             class="mb-5 text-xs font-bold uppercase tracking-[0.1em] text-gray-300"
@@ -169,7 +156,7 @@
           </h2>
           <ul class="space-y-0.5" data-reveal-stagger="true">
             {#each infoLinks as link}
-              <li class="reveal-fade-up" use:reveal>
+              <li>
                 <a
                   href={link.href}
                   class="inline-flex min-h-[44px] w-full items-center rounded-xl px-3 py-2 text-sm text-text-body transition-colors hover:bg-white/[0.035] hover:text-prestige-gold focus-visible:bg-white/[0.045] focus-visible:text-prestige-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/60"
@@ -201,14 +188,13 @@
       </div>
 
       <!-- Affiliate disclosure -->
-      <div class="material-group my-5 p-4 sm:p-5" use:reveal>
+      <div class="material-group my-5 p-4 sm:p-5">
         <AffiliateDisclosure variant="footer" />
       </div>
 
       <!-- Legal bar -->
       <div
-        class="material-group reveal-fade-up flex flex-col gap-3 p-4 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between"
-        use:reveal
+        class="material-group flex flex-col gap-3 p-4 font-mono text-xs text-text-tertiary md:flex-row md:items-center md:justify-between"
       >
         <p>&copy; 2026 {SITE.legalName} &middot; {SITE.locale}</p>
         <nav aria-label="Legal links" class="flex flex-wrap gap-x-5 gap-y-1">

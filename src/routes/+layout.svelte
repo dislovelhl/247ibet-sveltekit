@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../app.css';
-  import { dev } from '$app/environment';
+  import { browser, dev } from '$app/environment';
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
   import { inject } from '@vercel/analytics';
@@ -10,7 +10,11 @@
   import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
   import Atmosphere from '$lib/components/Atmosphere.svelte';
 
+  const shouldInjectVercelTelemetry =
+    browser && !['127.0.0.1', 'localhost'].includes(window.location.hostname);
+
   $effect(() => {
+    if (!shouldInjectVercelTelemetry) return;
     inject({ mode: dev ? 'development' : 'production' });
   });
 
