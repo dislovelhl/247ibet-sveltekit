@@ -92,3 +92,37 @@ describe('dynamic route metadata', () => {
     expect(source).not.toContain('canonicalUrl(`/features/${$page.params.slug}`)');
   });
 });
+
+describe('casino and sportsbook hub shell alignment', () => {
+  const hubFiles = ['src/routes/casino/+page.svelte', 'src/routes/sportsbook/+page.svelte'];
+
+  it('keeps affiliate disclosure below hub content instead of directly under breadcrumbs', () => {
+    for (const file of hubFiles) {
+      const source = readFileSync(file, 'utf-8');
+      const breadcrumbIndex = source.indexOf('<nav aria-label="Breadcrumb"');
+      const heroIndex = source.indexOf('<section class="material-panel relative overflow-hidden');
+      const disclosureIndex = source.indexOf('<AffiliateDisclosure variant="inline"');
+
+      expect(breadcrumbIndex).toBeGreaterThan(-1);
+      const finalPanelIndex = source.lastIndexOf('<section class="material-panel');
+
+      expect(heroIndex).toBeGreaterThan(breadcrumbIndex);
+      expect(disclosureIndex).toBeGreaterThan(heroIndex);
+      expect(disclosureIndex).toBeGreaterThan(finalPanelIndex);
+    }
+  });
+
+  it('uses the same full-width hub shell for casino and sportsbook pages', () => {
+    for (const file of hubFiles) {
+      const source = readFileSync(file, 'utf-8');
+
+      expect(source).toContain('class="min-h-dvh bg-navy-black pb-20 text-white"');
+      expect(source).toContain('<div class="mx-auto w-full">');
+      expect(source).toContain(
+        '<section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">',
+      );
+      expect(source).not.toContain('lg:grid-cols-[210px_minmax(0,1fr)]');
+      expect(source).not.toContain('Sportsbook page sections');
+    }
+  });
+});

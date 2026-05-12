@@ -7,12 +7,10 @@
     BarChart3,
     CircleDollarSign,
     CreditCard,
-    Dumbbell,
     Flame,
     Goal,
     GraduationCap,
     Headphones,
-    Landmark,
     LockKeyhole,
     ShieldCheck,
     Sparkles,
@@ -36,23 +34,6 @@
       'Canadian sportsbook education for NHL, CFL, NBA, UFC, and more. Learn odds formats, market types, Interac funding checks, same-game parlays, and betting-tool concepts.',
     canonical: canonicalUrl('/sportsbook'),
   };
-
-  const sideNav = [
-    { href: '#offers', label: 'Offers' },
-    { href: '#live', label: 'Live Betting' },
-    { href: '#guides', label: 'Betting Guides' },
-    { href: '#payments', label: 'Payments' },
-    { href: '#support', label: 'Help Center' },
-  ];
-
-  const quickSports = [
-    { href: '/sportsbook/football', label: 'Football' },
-    { href: '/sportsbook/nhl', label: 'NHL' },
-    { href: '/sportsbook/nba', label: 'NBA' },
-    { href: '/sportsbook/ufc', label: 'UFC / MMA' },
-    { href: '/sportsbook/soccer', label: 'Soccer' },
-    { href: '/sportsbook/parlays', label: 'Parlays' },
-  ];
 
   const heroOffers = [
     {
@@ -326,7 +307,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pb-20" role="presentation">
+<div class="min-h-dvh bg-navy-black pb-20 text-white" role="presentation">
   <div class="mx-auto w-full">
     <nav aria-label="Breadcrumb" class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
       <ol class="flex gap-2 text-xs font-black uppercase tracking-[0.12em] text-text-tertiary">
@@ -336,600 +317,529 @@
       </ol>
     </nav>
 
-    <div class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
-      <AffiliateDisclosure variant="inline" />
-    </div>
+    <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+      <BackgroundAtmosphere
+        src="/images/generated/sportsbook-premium-hero.webp"
+        parallaxMultiplier={0.4}
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
+      ></div>
 
-    <div
-      class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]"
-    >
-      <aside class="hidden lg:block">
-        <div
-          class="material-panel sticky top-28 space-y-6 rounded-[2rem] p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
-        >
-          <a
-            href="/"
-            class="material-cell group flex items-center gap-3 rounded-2xl px-4 py-3 text-xs font-black uppercase tracking-widest text-white transition-all hover:border-prestige-gold/30"
-          >
-            <div
-              class="flex h-8 w-8 items-center justify-center rounded-xl bg-prestige-gold/10 text-prestige-gold border border-prestige-gold/20 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110"
-            >
-              <Landmark class="h-4 w-4" aria-hidden="true" />
-            </div>
-            Home
-          </a>
-          <nav
-            aria-label="Sportsbook page sections"
-            class="space-y-1.5 border-t soft-separator pt-6"
-          >
-            {#each sideNav as item}
-              <a
-                href={item.href}
-                class="flex items-center rounded-xl px-4 py-2.5 text-xs font-black text-text-body transition-all hover:bg-white/5 hover:text-prestige-gold"
-              >
-                {item.label}
-              </a>
-            {/each}
-          </nav>
-          <div class="border-t soft-separator pt-6">
-            <p
-              class="px-4 pb-3 font-display text-xs font-black uppercase tracking-[0.2em] text-prestige-gold"
-            >
-              Popular Sports
+      <div
+        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+      >
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
+            <span class="live-dot" aria-hidden="true"></span>
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
+              Live Markets Open
             </p>
-            <div class="space-y-1.5">
-              {#each quickSports as sport}
-                <a
-                  href={sport.href}
-                  class="material-cell group flex items-center gap-3 rounded-xl px-4 py-2.5 text-xs font-bold text-text-body transition-all hover:border-slate-blue/30 hover:text-white"
-                >
-                  <div
-                    class="flex h-6 w-6 items-center justify-center rounded-lg bg-slate-blue/10 text-slate-blue border border-slate-blue/20 transition-all group-hover:bg-slate-blue group-hover:text-white group-hover:scale-110"
-                  >
-                    <Dumbbell class="h-3 w-3" aria-hidden="true" />
-                  </div>
-                  {sport.label}
-                </a>
-              {/each}
-            </div>
+          </div>
+          <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
+            Canadian Sportsbook Hub
+          </p>
+        </div>
+
+        <h1 class="page-hero-title !tracking-tighter">
+          The Arena of <br />
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+            >Performance</span
+          >
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
+          Learn how odds move, which Canadian markets to verify, how Interac funding checks work,
+          and where same-game parlays and betting tools fit before platform handoff.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="hero-cta-primary group min-w-[220px] shimmer-effect btn-magnetic"
+          >
+            Access Sportsbook
+            <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </SafeExternalLink>
+          <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic">
+            Compare Odds
+          </a>
+        </div>
+        <p
+          class="mt-6 max-w-2xl text-xs uppercase tracking-wider leading-relaxed text-text-tertiary/60"
+        >
+          {IBET_DISCLAIMER}
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="offers"
+      use:reveal
+      data-reveal-stagger="true"
+      class="material-group grid gap-2 p-2 sm:grid-cols-3"
+    >
+      {#each heroOffers as offer}
+        <article
+          use:reveal
+          class="material-cell reveal-fade-up group relative flex flex-col items-center gap-6 overflow-hidden rounded-[22px] p-8 text-center transition-all hover:border-prestige-gold/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] card-hover-lift"
+        >
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
+          ></div>
+          <div
+            class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110"
+          >
+            <Flame class="h-6 w-6" />
+          </div>
+          <div>
+            <p class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary">
+              {offer.eyebrow}
+            </p>
+            <h2
+              class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
+            >
+              {offer.headline}
+            </h2>
+            <p class="mt-4 text-sm leading-relaxed text-text-body/80 font-light">
+              {offer.body}
+            </p>
+          </div>
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+          >
+            {offer.cta}
+            <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+          </SafeExternalLink>
+        </article>
+      {/each}
+    </section>
+
+    <section class="material-group mt-5 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4">
+      {#each trustStrip as item}
+        {@const TrustIcon = item.icon}
+        <div class="material-cell flex items-center gap-3 rounded-[20px] p-4">
+          <TrustIcon class="h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
+          <div>
+            <p class="text-sm font-bold text-white">{item.label}</p>
+            <p class="text-xs text-text-tertiary">{item.detail}</p>
           </div>
         </div>
-      </aside>
+      {/each}
+    </section>
 
-      <main class="min-w-0 space-y-5">
-        <header class="material-panel relative min-w-0 overflow-hidden rounded-[2.5rem] shadow-2xl">
-          <BackgroundAtmosphere
-            src="/images/generated/sportsbook-premium-hero.webp"
-            parallaxMultiplier={0.4}
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
-          ></div>
-
-          <div
-            class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
-            style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y *
-              0.8}px, 0);"
-          >
-            <div class="flex flex-wrap items-center gap-3 mb-8">
-              <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
-                <span class="live-dot" aria-hidden="true"></span>
-                <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
-                  Live Markets Open
-                </p>
-              </div>
-              <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
-                Canadian Sportsbook Hub
-              </p>
-            </div>
-
-            <h1 class="page-hero-title !tracking-tighter">
-              The Arena of <br />
-              <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
-                >Performance</span
-              >
-            </h1>
-
-            <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-              Learn how odds move, which Canadian markets to verify, how Interac funding checks work,
-              and where same-game parlays and betting tools fit before platform handoff.
-            </p>
-
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <SafeExternalLink
-                href={IBET_URLS.register}
-                class="hero-cta-primary group min-w-[220px] shimmer-effect btn-magnetic"
-              >
-                Access Sportsbook
-                <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </SafeExternalLink>
-              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic">
-                Compare Odds
-              </a>
-            </div>
-            <p
-              class="mt-6 max-w-2xl text-xs uppercase tracking-wider leading-relaxed text-text-tertiary/60"
-            >
-              {IBET_DISCLAIMER}
-            </p>
-          </div>
-        </header>
-
-        <div
-          id="offers"
-          use:reveal
-          data-reveal-stagger="true"
-          class="material-group grid gap-2 p-2 sm:grid-cols-3"
+    <section id="bookmakers" class="material-panel p-4 sm:p-5">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="page-hub-title text-2xl">Best Sportsbooks</h2>
+          <p class="mt-1 text-sm text-text-tertiary">
+            Compare top betting sites, feature depth, payout speed, and market coverage.
+          </p>
+        </div>
+        <a
+          href="/best-sports-betting-sites-canada"
+          class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
+          >View full review</a
         >
-          {#each heroOffers as offer}
+      </div>
+      <div class="material-cell overflow-x-auto rounded-2xl">
+        <table class="min-w-[760px] w-full text-left text-sm">
+          <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+            <tr>
+              <th class="px-4 py-3">Bookmaker</th>
+              <th class="px-4 py-3">Welcome</th>
+              <th class="px-4 py-3">Boosts</th>
+              <th class="px-4 py-3">Payout speed</th>
+              <th class="px-4 py-3">Rating</th>
+              <th class="px-4 py-3 text-right">Visit</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/8">
+            {#each sportsbookRows as row}
+              <tr class={row.highlight ? 'bg-prestige-gold/[0.045]' : ''}>
+                <td class="px-4 py-4">
+                  <span class="font-display text-lg font-semibold text-white">{row.name}</span>
+                </td>
+                <td class="px-4 py-4 text-text-body">{row.welcome}</td>
+                <td class="px-4 py-4 text-text-body">{row.boosts}</td>
+                <td class="px-4 py-4 text-text-body">{row.payout}</td>
+                <td class="px-4 py-4">
+                  <span
+                    class="inline-flex items-center gap-1 {row.highlight
+                      ? 'text-prestige-gold'
+                      : 'text-text-tertiary'}"
+                  >
+                    <Star
+                      class="h-3.5 w-3.5 {row.highlight
+                        ? 'fill-prestige-gold'
+                        : 'fill-none stroke-current'}"
+                      aria-hidden="true"
+                    />
+                    <span class="font-mono text-xs">{row.rating}</span>
+                  </span>
+                </td>
+                <td class="px-4 py-4 text-right">
+                  <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm"
+                    >Visit site</SafeExternalLink
+                  >
+                </td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="odds" class="material-panel p-4 sm:p-5">
+      <div class="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="page-hub-title text-2xl">Top Sports Betting Odds</h2>
+          <p class="mt-1 text-sm text-text-tertiary">
+            Compare featured odds across popular pre-game markets.
+          </p>
+        </div>
+        <div class="segmented-chrome flex flex-wrap gap-1 rounded-2xl p-1">
+          {#each ['Football', 'NHL', 'NBA', 'UFC / MMA'] as tab, index}
+            <span
+              class="segmented-item rounded-xl px-3 py-2 text-xs font-bold {index === 0
+                ? 'bg-prestige-gold/10 text-prestige-gold'
+                : 'text-text-body'}">{tab}</span
+            >
+          {/each}
+        </div>
+      </div>
+      <div class="material-cell overflow-x-auto rounded-2xl">
+        <table class="min-w-[760px] w-full text-left text-sm">
+          <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+            <tr>
+              <th class="px-4 py-3">Match</th>
+              <th class="px-4 py-3">Market</th>
+              <th class="px-4 py-3">247iBET</th>
+              <th class="px-4 py-3">Other</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/8">
+            {#each topOdds as row}
+              <tr>
+                <td class="px-4 py-3 font-semibold text-white">{row.match}</td>
+                <td class="px-4 py-3 text-text-body">{row.pick}</td>
+                <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
+                <td class="odds px-4 py-3 text-text-body">{row.other}</td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="live" class="material-panel p-4 sm:p-5">
+      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <span class="live-tag"><span class="live-dot"></span> Live betting</span>
+          <h2 class="page-hub-title mt-2 text-2xl">In-Play Event Board</h2>
+          <p class="mt-1 text-sm text-text-tertiary">
+            Live prices move quickly. Always confirm the accepted odds before placing a bet.
+          </p>
+        </div>
+        <a
+          href="/sportsbook/live-betting"
+          class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
+          >View live guide</a
+        >
+      </div>
+      <div class="material-cell overflow-x-auto rounded-2xl">
+        <table class="min-w-[760px] w-full text-left text-sm">
+          <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+            <tr>
+              <th class="px-4 py-3">Event</th>
+              <th class="px-4 py-3">Score</th>
+              <th class="px-4 py-3">247iBET</th>
+              <th class="px-4 py-3">Other</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/8">
+            {#each liveRows as row}
+              <tr>
+                <td class="px-4 py-3 font-semibold text-white">{row.event}</td>
+                <td class="odds px-4 py-3 text-success">{row.score}</td>
+                <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
+                <td class="odds px-4 py-3 text-text-body">{row.other}</td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 gap-5 xl:grid-cols-[0.9fr_1.1fr]">
+      <div class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Sportsbook Offers</h2>
+        <p class="mt-1 text-sm text-text-tertiary">
+          Compare featured promos and account-level value before choosing where to play.
+        </p>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          {#each offerCards as offer}
             <article
               use:reveal
-              class="material-cell reveal-fade-up group relative flex flex-col items-center gap-6 overflow-hidden rounded-[22px] p-8 text-center transition-all hover:border-prestige-gold/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] card-hover-lift"
+              class="material-cell rounded-2xl p-4 reveal-fade-up card-hover-lift"
             >
-              <div
-                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shimmer-effect pointer-events-none"
-              ></div>
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 text-prestige-gold ring-1 ring-white/10 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:scale-110"
+              <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
+              <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
+              <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
+                {offer.detail}
+              </p>
+              <SafeExternalLink href={IBET_URLS.register} class="page-cta-secondary-sm mt-4 w-full"
+                >{offer.cta}</SafeExternalLink
               >
-                <Flame class="h-6 w-6" />
-              </div>
-              <div>
-                <p class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary">
-                  {offer.eyebrow}
-                </p>
-                <h2
-                  class="mt-3 font-display text-2xl font-black uppercase leading-tight text-white group-hover:text-prestige-gold transition-colors !tracking-tighter"
-                >
-                  {offer.headline}
-                </h2>
-                <p class="mt-4 text-sm leading-relaxed text-text-body/80 font-light">
-                  {offer.body}
-                </p>
-              </div>
-              <SafeExternalLink
-                href={IBET_URLS.register}
-                class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
-              >
-                {offer.cta}
-                <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </SafeExternalLink>
             </article>
           {/each}
         </div>
+      </div>
 
-        <div class="material-group mt-5 grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4">
-          {#each trustStrip as item}
-            {@const TrustIcon = item.icon}
-            <div class="material-cell flex items-center gap-3 rounded-[20px] p-4">
-              <TrustIcon class="h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
-              <div>
-                <p class="text-sm font-bold text-white">{item.label}</p>
-                <p class="text-xs text-text-tertiary">{item.detail}</p>
-              </div>
+      <div class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Odds Boosts</h2>
+        <p class="mt-1 text-sm text-text-tertiary">
+          Track enhanced prices and compare the boosted value against the old line.
+        </p>
+        <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
+          <table class="min-w-[620px] w-full text-left text-sm">
+            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+              <tr>
+                <th class="px-4 py-3">Boost</th>
+                <th class="px-4 py-3">Event</th>
+                <th class="px-4 py-3">Old</th>
+                <th class="px-4 py-3">Boosted</th>
+                <th class="px-4 py-3">Book</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/8">
+              {#each boosts as row}
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-white">{row.boost}</td>
+                  <td class="px-4 py-3 text-text-body">{row.event}</td>
+                  <td class="odds px-4 py-3 text-text-tertiary">{row.old}</td>
+                  <td class="odds px-4 py-3 font-bold text-prestige-gold">{row.boosted}</td>
+                  <td class="px-4 py-3 text-text-body">{row.book}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="material-panel p-4 sm:p-5">
+      <h2 class="page-hub-title text-2xl">Betting Guides</h2>
+      <p class="mt-1 text-sm text-text-tertiary">
+        Expert guides and practical tools to help you understand each market before betting.
+      </p>
+      <div
+        class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4"
+        use:reveal
+        data-reveal-stagger="true"
+      >
+        {#each guideCards as guide}
+          {@const GuideIcon = guide.icon}
+          <a
+            href={guide.href}
+            use:reveal
+            class="material-cell reveal-fade-up group rounded-2xl p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
+          >
+            <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
+            <h3 class="mt-3 text-base font-bold text-white">{guide.title}</h3>
+            <p class="mt-2 min-h-[58px] text-sm leading-6 text-text-tertiary">
+              {guide.body}
+            </p>
+            <span
+              class="mt-3 inline-flex items-center gap-1 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
+            >
+              Read more
+              <ArrowRight
+                class="h-3 w-3 transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </span>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
+      <div class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Top Sports</h2>
+        <p class="mt-1 text-sm text-text-tertiary">Explore betting markets for all major sports.</p>
+        <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
+          <table class="min-w-[700px] w-full text-left text-sm">
+            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+              <tr>
+                <th class="px-4 py-3">Sport</th>
+                <th class="px-4 py-3">Events</th>
+                <th class="px-4 py-3">Top market</th>
+                <th class="px-4 py-3">247iBET</th>
+                <th class="px-4 py-3">Other</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/8">
+              {#each sportsRows as row}
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-white">{row.sport}</td>
+                  <td class="stat px-4 py-3 text-text-body">{row.events}</td>
+                  <td class="px-4 py-3 text-text-body">{row.market}</td>
+                  <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
+                  <td class="odds px-4 py-3 text-text-body">{row.other}</td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="payments" class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Payment Methods</h2>
+        <p class="mt-1 text-sm text-text-tertiary">
+          Fast, secure, and familiar ways to fund a Canadian betting account.
+        </p>
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          {#each paymentMethods as method}
+            <div class="material-cell rounded-2xl p-4 text-center">
+              <WalletCards class="mx-auto mb-2 h-5 w-5 text-text-body" aria-hidden="true" />
+              <p class="text-sm font-bold text-white">{method}</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.12em] text-text-tertiary">
+                Payment option
+              </p>
             </div>
           {/each}
         </div>
+      </div>
+    </section>
 
-        <section id="bookmakers" class="material-panel p-4 sm:p-5">
-          <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 class="page-hub-title text-2xl">Best Sportsbooks</h2>
-              <p class="mt-1 text-sm text-text-tertiary">
-                Compare top betting sites, feature depth, payout speed, and market coverage.
-              </p>
-            </div>
+    <section class="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
+      <div class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Latest News</h2>
+        <p class="mt-1 text-sm text-text-tertiary">
+          Stay up to date with betting previews and market explainers.
+        </p>
+        <div class="mt-4 space-y-3">
+          {#each newsCards as news}
             <a
-              href="/best-sports-betting-sites-canada"
-              class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
-              >View full review</a
+              href={news.href}
+              class="material-cell group grid gap-3 rounded-2xl p-3 sm:grid-cols-[92px_1fr]"
             >
-          </div>
-          <div class="material-cell overflow-x-auto rounded-2xl">
-            <table class="min-w-[760px] w-full text-left text-sm">
-              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
-                <tr>
-                  <th class="px-4 py-3">Bookmaker</th>
-                  <th class="px-4 py-3">Welcome</th>
-                  <th class="px-4 py-3">Boosts</th>
-                  <th class="px-4 py-3">Payout speed</th>
-                  <th class="px-4 py-3">Rating</th>
-                  <th class="px-4 py-3 text-right">Visit</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-white/8">
-                {#each sportsbookRows as row}
-                  <tr class={row.highlight ? 'bg-prestige-gold/[0.045]' : ''}>
-                    <td class="px-4 py-4">
-                      <span class="font-display text-lg font-semibold text-white">{row.name}</span>
-                    </td>
-                    <td class="px-4 py-4 text-text-body">{row.welcome}</td>
-                    <td class="px-4 py-4 text-text-body">{row.boosts}</td>
-                    <td class="px-4 py-4 text-text-body">{row.payout}</td>
-                    <td class="px-4 py-4">
-                      <span
-                        class="inline-flex items-center gap-1 {row.highlight
-                          ? 'text-prestige-gold'
-                          : 'text-text-tertiary'}"
-                      >
-                        <Star
-                          class="h-3.5 w-3.5 {row.highlight
-                            ? 'fill-prestige-gold'
-                            : 'fill-none stroke-current'}"
-                          aria-hidden="true"
-                        />
-                        <span class="font-mono text-xs">{row.rating}</span>
-                      </span>
-                    </td>
-                    <td class="px-4 py-4 text-right">
-                      <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm"
-                        >Visit site</SafeExternalLink
-                      >
-                    </td>
-                  </tr>
-                {/each}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="odds" class="material-panel p-4 sm:p-5">
-          <div class="mb-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 class="page-hub-title text-2xl">Top Sports Betting Odds</h2>
-              <p class="mt-1 text-sm text-text-tertiary">
-                Compare featured odds across popular pre-game markets.
-              </p>
-            </div>
-            <div class="segmented-chrome flex flex-wrap gap-1 rounded-2xl p-1">
-              {#each ['Football', 'NHL', 'NBA', 'UFC / MMA'] as tab, index}
-                <span
-                  class="segmented-item rounded-xl px-3 py-2 text-xs font-bold {index === 0
-                    ? 'bg-prestige-gold/10 text-prestige-gold'
-                    : 'text-text-body'}">{tab}</span
-                >
-              {/each}
-            </div>
-          </div>
-          <div class="material-cell overflow-x-auto rounded-2xl">
-            <table class="min-w-[760px] w-full text-left text-sm">
-              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
-                <tr>
-                  <th class="px-4 py-3">Match</th>
-                  <th class="px-4 py-3">Market</th>
-                  <th class="px-4 py-3">247iBET</th>
-                  <th class="px-4 py-3">Other</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-white/8">
-                {#each topOdds as row}
-                  <tr>
-                    <td class="px-4 py-3 font-semibold text-white">{row.match}</td>
-                    <td class="px-4 py-3 text-text-body">{row.pick}</td>
-                    <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.other}</td>
-                  </tr>
-                {/each}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="live" class="material-panel p-4 sm:p-5">
-          <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <span class="live-tag"><span class="live-dot"></span> Live betting</span>
-              <h2 class="page-hub-title mt-2 text-2xl">In-Play Event Board</h2>
-              <p class="mt-1 text-sm text-text-tertiary">
-                Live prices move quickly. Always confirm the accepted odds before placing a bet.
-              </p>
-            </div>
-            <a
-              href="/sportsbook/live-betting"
-              class="text-xs font-bold uppercase tracking-[0.12em] text-prestige-gold hover:text-prestige-gold-light"
-              >View live guide</a
-            >
-          </div>
-          <div class="material-cell overflow-x-auto rounded-2xl">
-            <table class="min-w-[760px] w-full text-left text-sm">
-              <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
-                <tr>
-                  <th class="px-4 py-3">Event</th>
-                  <th class="px-4 py-3">Score</th>
-                  <th class="px-4 py-3">247iBET</th>
-                  <th class="px-4 py-3">Other</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-white/8">
-                {#each liveRows as row}
-                  <tr>
-                    <td class="px-4 py-3 font-semibold text-white">{row.event}</td>
-                    <td class="odds px-4 py-3 text-success">{row.score}</td>
-                    <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                    <td class="odds px-4 py-3 text-text-body">{row.other}</td>
-                  </tr>
-                {/each}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="grid grid-cols-1 gap-5 xl:grid-cols-[0.9fr_1.1fr]">
-          <div class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Sportsbook Offers</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Compare featured promos and account-level value before choosing where to play.
-            </p>
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              {#each offerCards as offer}
-                <article
-                  use:reveal
-                  class="material-cell rounded-2xl p-4 reveal-fade-up card-hover-lift"
-                >
-                  <p class="font-display text-xl font-semibold text-white">{offer.brand}</p>
-                  <p class="mt-2 text-2xl font-black text-prestige-gold">{offer.amount}</p>
-                  <p class="mt-1 min-h-[38px] text-sm leading-6 text-text-tertiary">
-                    {offer.detail}
-                  </p>
-                  <SafeExternalLink
-                    href={IBET_URLS.register}
-                    class="page-cta-secondary-sm mt-4 w-full">{offer.cta}</SafeExternalLink
-                  >
-                </article>
-              {/each}
-            </div>
-          </div>
-
-          <div class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Odds Boosts</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Track enhanced prices and compare the boosted value against the old line.
-            </p>
-            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
-              <table class="min-w-[620px] w-full text-left text-sm">
-                <thead
-                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-                >
-                  <tr>
-                    <th class="px-4 py-3">Boost</th>
-                    <th class="px-4 py-3">Event</th>
-                    <th class="px-4 py-3">Old</th>
-                    <th class="px-4 py-3">Boosted</th>
-                    <th class="px-4 py-3">Book</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-white/8">
-                  {#each boosts as row}
-                    <tr>
-                      <td class="px-4 py-3 font-semibold text-white">{row.boost}</td>
-                      <td class="px-4 py-3 text-text-body">{row.event}</td>
-                      <td class="odds px-4 py-3 text-text-tertiary">{row.old}</td>
-                      <td class="odds px-4 py-3 font-bold text-prestige-gold">{row.boosted}</td>
-                      <td class="px-4 py-3 text-text-body">{row.book}</td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section id="guides" class="material-panel p-4 sm:p-5">
-          <h2 class="page-hub-title text-2xl">Betting Guides</h2>
-          <p class="mt-1 text-sm text-text-tertiary">
-            Expert guides and practical tools to help you understand each market before betting.
-          </p>
-          <div
-            class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4"
-            use:reveal
-            data-reveal-stagger="true"
-          >
-            {#each guideCards as guide}
-              {@const GuideIcon = guide.icon}
-              <a
-                href={guide.href}
-                use:reveal
-                class="material-cell reveal-fade-up group rounded-2xl p-4 transition-colors hover:border-prestige-gold/35 card-hover-lift"
+              <div
+                class="flex h-20 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-slate-blue/25 to-prestige-gold/10"
               >
-                <GuideIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
-                <h3 class="mt-3 text-base font-bold text-white">{guide.title}</h3>
-                <p class="mt-2 min-h-[58px] text-sm leading-6 text-text-tertiary">
-                  {guide.body}
+                <Goal class="h-8 w-8 text-white/75" aria-hidden="true" />
+              </div>
+              <div>
+                <h3 class="font-bold text-white group-hover:text-prestige-gold">
+                  {news.title}
+                </h3>
+                <p class="mt-1 text-sm leading-6 text-text-tertiary">{news.body}</p>
+                <p class="mt-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary">
+                  {news.meta}
                 </p>
-                <span
-                  class="mt-3 inline-flex items-center gap-1 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold"
-                >
-                  Read more
-                  <ArrowRight
-                    class="h-3 w-3 transition-transform group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </span>
-              </a>
-            {/each}
-          </div>
-        </section>
+              </div>
+            </a>
+          {/each}
+        </div>
+      </div>
 
-        <section class="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-          <div class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Top Sports</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Explore betting markets for all major sports.
-            </p>
-            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
-              <table class="min-w-[700px] w-full text-left text-sm">
-                <thead
-                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-                >
-                  <tr>
-                    <th class="px-4 py-3">Sport</th>
-                    <th class="px-4 py-3">Events</th>
-                    <th class="px-4 py-3">Top market</th>
-                    <th class="px-4 py-3">247iBET</th>
-                    <th class="px-4 py-3">Other</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-white/8">
-                  {#each sportsRows as row}
-                    <tr>
-                      <td class="px-4 py-3 font-semibold text-white">{row.sport}</td>
-                      <td class="stat px-4 py-3 text-text-body">{row.events}</td>
-                      <td class="px-4 py-3 text-text-body">{row.market}</td>
-                      <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.other}</td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="payments" class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Payment Methods</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Fast, secure, and familiar ways to fund a Canadian betting account.
-            </p>
-            <div class="mt-4 grid grid-cols-2 gap-3">
-              {#each paymentMethods as method}
-                <div class="material-cell rounded-2xl p-4 text-center">
-                  <WalletCards class="mx-auto mb-2 h-5 w-5 text-text-body" aria-hidden="true" />
-                  <p class="text-sm font-bold text-white">{method}</p>
-                  <p class="mt-1 text-xs uppercase tracking-[0.12em] text-text-tertiary">
-                    Payment option
-                  </p>
-                </div>
+      <div class="material-panel min-w-0 p-4 sm:p-5">
+        <h2 class="page-hub-title text-2xl">Football Leagues</h2>
+        <p class="mt-1 text-sm text-text-tertiary">
+          Bet on major football leagues and outright competition markets.
+        </p>
+        <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
+          <table class="min-w-[680px] w-full text-left text-sm">
+            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
+              <tr>
+                <th class="px-4 py-3">League</th>
+                <th class="px-4 py-3">Matches</th>
+                <th class="px-4 py-3">Top market</th>
+                <th class="px-4 py-3">247iBET</th>
+                <th class="px-4 py-3">Other</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/8">
+              {#each leagueRows as row}
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-white">{row.league}</td>
+                  <td class="stat px-4 py-3 text-text-body">{row.matches}</td>
+                  <td class="px-4 py-3 text-text-body">{row.market}</td>
+                  <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
+                  <td class="odds px-4 py-3 text-text-body">{row.other}</td>
+                </tr>
               {/each}
-            </div>
-          </div>
-        </section>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        <section class="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
-          <div class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Latest News</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Stay up to date with betting previews and market explainers.
-            </p>
-            <div class="mt-4 space-y-3">
-              {#each newsCards as news}
-                <a
-                  href={news.href}
-                  class="material-cell group grid gap-3 rounded-2xl p-3 sm:grid-cols-[92px_1fr]"
-                >
-                  <div
-                    class="flex h-20 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-slate-blue/25 to-prestige-gold/10"
-                  >
-                    <Goal class="h-8 w-8 text-white/75" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-white group-hover:text-prestige-gold">
-                      {news.title}
-                    </h3>
-                    <p class="mt-1 text-sm leading-6 text-text-tertiary">{news.body}</p>
-                    <p
-                      class="mt-2 font-mono text-xs uppercase tracking-[0.12em] text-text-tertiary"
-                    >
-                      {news.meta}
-                    </p>
-                  </div>
-                </a>
-              {/each}
-            </div>
-          </div>
-
-          <div class="material-panel min-w-0 p-4 sm:p-5">
-            <h2 class="page-hub-title text-2xl">Football Leagues</h2>
-            <p class="mt-1 text-sm text-text-tertiary">
-              Bet on major football leagues and outright competition markets.
-            </p>
-            <div class="material-cell mt-4 overflow-x-auto rounded-2xl">
-              <table class="min-w-[680px] w-full text-left text-sm">
-                <thead
-                  class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary"
-                >
-                  <tr>
-                    <th class="px-4 py-3">League</th>
-                    <th class="px-4 py-3">Matches</th>
-                    <th class="px-4 py-3">Top market</th>
-                    <th class="px-4 py-3">247iBET</th>
-                    <th class="px-4 py-3">Other</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-white/8">
-                  {#each leagueRows as row}
-                    <tr>
-                      <td class="px-4 py-3 font-semibold text-white">{row.league}</td>
-                      <td class="stat px-4 py-3 text-text-body">{row.matches}</td>
-                      <td class="px-4 py-3 text-text-body">{row.market}</td>
-                      <td class="odds px-4 py-3 text-prestige-gold">{row.ibet}</td>
-                      <td class="odds px-4 py-3 text-text-body">{row.other}</td>
-                    </tr>
-                  {/each}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section class="material-panel p-4 sm:p-5">
-          <h2 class="page-hub-title text-2xl">Statistics Center</h2>
-          <p class="mt-1 text-sm text-text-tertiary">
-            Use odds, payout, and player-safety tools before placing a bet.
-          </p>
-          <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {#each statTools as tool}
-              {@const ToolIcon = tool.icon}
-              <a
-                href={tool.href}
-                class="material-cell group rounded-2xl p-4 transition-colors hover:border-slate-blue/40"
-              >
-                <ToolIcon class="h-6 w-6 text-slate-blue" aria-hidden="true" />
-                <h3 class="mt-3 text-sm font-bold text-white">{tool.label}</h3>
-                <p class="mt-2 text-sm leading-6 text-text-tertiary">{tool.body}</p>
-              </a>
-            {/each}
-          </div>
-        </section>
-
-        <section id="support" class="material-panel p-4 sm:p-5">
-          <h2 class="page-hub-title text-2xl">Help Center</h2>
-          <p class="mt-1 text-sm text-text-tertiary">
-            Need help? Start with the most common sportsbook support topics.
-          </p>
-          <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {#each supportCards as card}
-              {@const SupportIcon = card.icon}
-              <a
-                href={card.href}
-                class="material-cell rounded-2xl p-4 transition-colors hover:border-prestige-gold/35"
-              >
-                <SupportIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
-                <h3 class="mt-3 text-sm font-bold text-white">{card.title}</h3>
-                <p class="mt-2 text-sm leading-6 text-text-tertiary">{card.body}</p>
-                <span
-                  class="mt-3 inline-block text-xs font-black uppercase tracking-[0.12em] text-text-body"
-                  >Read more</span
-                >
-              </a>
-            {/each}
-          </div>
-        </section>
-
-        <section class="material-panel p-5 text-center">
-          <Flame class="mx-auto h-7 w-7 text-prestige-gold" aria-hidden="true" />
-          <h2 class="page-hub-title mt-3 text-3xl">Ready for the sportsbook?</h2>
-          <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-text-body">
-            Review the market, confirm the odds on the separate gaming platform, set your limits,
-            and use this sportsbook education hub as a starting point.
-          </p>
-          <SafeExternalLink
-            href={IBET_URLS.register}
-            class="hero-cta-primary mt-5 w-full justify-center sm:w-auto sm:min-w-72 btn-magnetic"
+    <section class="material-panel p-4 sm:p-5">
+      <h2 class="page-hub-title text-2xl">Statistics Center</h2>
+      <p class="mt-1 text-sm text-text-tertiary">
+        Use odds, payout, and player-safety tools before placing a bet.
+      </p>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {#each statTools as tool}
+          {@const ToolIcon = tool.icon}
+          <a
+            href={tool.href}
+            class="material-cell group rounded-2xl p-4 transition-colors hover:border-slate-blue/40"
           >
-            Enter sportsbook
-            <ArrowRight class="h-4 w-4" aria-hidden="true" />
-          </SafeExternalLink>
-        </section>
-      </main>
-    </div>
+            <ToolIcon class="h-6 w-6 text-slate-blue" aria-hidden="true" />
+            <h3 class="mt-3 text-sm font-bold text-white">{tool.label}</h3>
+            <p class="mt-2 text-sm leading-6 text-text-tertiary">{tool.body}</p>
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section id="support" class="material-panel p-4 sm:p-5">
+      <h2 class="page-hub-title text-2xl">Help Center</h2>
+      <p class="mt-1 text-sm text-text-tertiary">
+        Need help? Start with the most common sportsbook support topics.
+      </p>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {#each supportCards as card}
+          {@const SupportIcon = card.icon}
+          <a
+            href={card.href}
+            class="material-cell rounded-2xl p-4 transition-colors hover:border-prestige-gold/35"
+          >
+            <SupportIcon class="h-6 w-6 text-prestige-gold" aria-hidden="true" />
+            <h3 class="mt-3 text-sm font-bold text-white">{card.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-text-tertiary">{card.body}</p>
+            <span
+              class="mt-3 inline-block text-xs font-black uppercase tracking-[0.12em] text-text-body"
+              >Read more</span
+            >
+          </a>
+        {/each}
+      </div>
+    </section>
+
+    <section class="material-panel p-5 text-center">
+      <Flame class="mx-auto h-7 w-7 text-prestige-gold" aria-hidden="true" />
+      <h2 class="page-hub-title mt-3 text-3xl">Ready for the sportsbook?</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-text-body">
+        Review the market, confirm the odds on the separate gaming platform, set your limits, and
+        use this sportsbook education hub as a starting point.
+      </p>
+      <SafeExternalLink
+        href={IBET_URLS.register}
+        class="hero-cta-primary mt-5 w-full justify-center sm:w-auto sm:min-w-72 btn-magnetic"
+      >
+        Enter sportsbook
+        <ArrowRight class="h-4 w-4" aria-hidden="true" />
+      </SafeExternalLink>
+    </section>
+
+    <section class="mx-auto mt-10 max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
+      <AffiliateDisclosure variant="inline" />
+    </section>
   </div>
 </div>

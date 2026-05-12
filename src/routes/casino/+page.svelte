@@ -261,8 +261,8 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black text-white" role="presentation">
-  <div class="mx-auto">
+<div class="min-h-dvh bg-navy-black pb-20 text-white" role="presentation">
+  <div class="mx-auto w-full">
     <nav aria-label="Breadcrumb" class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
       <ol class="flex gap-2 text-xs font-black uppercase tracking-[0.12em] text-text-tertiary">
         <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
@@ -270,10 +270,6 @@
         <li class="text-text-body">Casino</li>
       </ol>
     </nav>
-
-    <div class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
-      <AffiliateDisclosure variant="inline" />
-    </div>
 
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
@@ -533,6 +529,10 @@
           </a>
         </div>
       </div>
+    </section>
+
+    <section class="mx-auto mt-10 max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
+      <AffiliateDisclosure variant="inline" />
     </section>
   </div>
 </div>
