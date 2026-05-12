@@ -173,9 +173,9 @@
 <nav
   aria-label="Main navigation"
   style="transform: translateZ(0); will-change: transform; padding-top: env(safe-area-inset-top, 0px);"
-  class="sticky top-0 z-50 border-b border-white/5 transition-all duration-300 ease-out {scrolled
+  class="!fixed !overflow-visible top-0 left-0 right-0 z-50 transition-all duration-300 ease-out {scrolled
     ? 'bg-navy-black/35 shadow-[0_20px_70px_-28px_rgba(0,0,0,0.92)] backdrop-blur-xl'
-    : 'bg-navy-black/95 border-b border-white/10 backdrop-blur-md'}"
+    : 'bg-gradient-to-b from-navy-black/55 via-navy-black/25 to-transparent backdrop-blur-sm'}"
 >
   <!-- Tier 1: Utility bar — desktop only, remains visible on scroll -->
   <div

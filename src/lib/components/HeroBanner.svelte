@@ -24,7 +24,7 @@
   </div>
 
   <div
-    class="relative z-10 mx-auto w-full max-w-[1720px] px-4 py-16 sm:px-6 sm:py-20 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:py-24 xl:px-16"
+    class="relative z-10 mx-auto w-full max-w-[1720px] px-4 pt-32 pb-16 sm:px-6 sm:pt-40 sm:pb-20 lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:pt-48 lg:pb-24 xl:px-16"
   >
     <!-- Left: Typography block -->
     <div

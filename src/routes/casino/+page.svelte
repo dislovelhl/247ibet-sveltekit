@@ -262,7 +262,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black text-white" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
+  <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"

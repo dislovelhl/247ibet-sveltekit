@@ -31,7 +31,7 @@ function formatNumber(value: number, decimals: number): string {
 
 /**
  * Low-level: animate a counter from start to end, calling callback with formatted strings.
- * Default prefix: C$
+ * Default prefix: empty
  */
 export function animateCounter(
   callback: (value: string) => void,
@@ -42,7 +42,7 @@ export function animateCounter(
     end,
     duration = 2000,
     decimals = 0,
-    prefix = 'C$',
+    prefix = '',
     suffix = '',
     ease = easeOutExpo
   } = options;
@@ -69,7 +69,7 @@ export function animateCounter(
 
 /**
  * Svelte action: <span use:counter={{ end: 5000 }}>0</span>
- * Default prefix is C$, so "0" becomes "C$5,000" when animated.
+ * Default prefix is empty.
  */
 export function counter(node: HTMLElement, options: CounterOptions): void {
   animateCounter((val) => {
@@ -82,11 +82,11 @@ export function counter(node: HTMLElement, options: CounterOptions): void {
  * Returns a reactive $state string that animates to the target value.
  *
  * Usage:
- *   const jackpot = useAnimatedCounter({ end: 1_000_000, decimals: 2 });
+ *   const jackpot = useAnimatedCounter({ end: 1_000_000, decimals: 2, prefix: 'C$' });
  *   // {{ jackpot.value }} → "C$1,000,000.00"
  */
 export function useAnimatedCounter(options: CounterOptions) {
-  const { start = 0, decimals = 0, prefix = 'C$' } = options;
+  const { start = 0, decimals = 0, prefix = '' } = options;
   const initial = formatNumber(start, decimals);
 
   // We need to return an object with a .value that is reactive.

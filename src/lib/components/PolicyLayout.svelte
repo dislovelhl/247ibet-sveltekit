@@ -53,9 +53,9 @@
 </svelte:head>
 
 <div class="min-h-dvh bg-navy-black pb-24 overflow-x-hidden" in:fade={{ duration: 400 }}>
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
     <!-- Breadcrumbs -->
-    <nav aria-label="Breadcrumb" class="mb-6 pt-10">
+    <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
