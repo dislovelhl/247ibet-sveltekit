@@ -131,15 +131,7 @@
     },
   ];
 
-  const amountOptions = [50, 100, 250, 1000];
-
-  let selectedAmount = $state(100);
   let openFaq = $state(0);
-
-  const reviewWindow = $derived(
-    selectedAmount >= 1000 ? 'manual review may apply' : 'standard review',
-  );
-  const estimatedWindow = $derived(selectedAmount >= 1000 ? '30-60 min' : '15-30 min');
 
   const faqSchema = {
     '@context': 'https://schema.org',
