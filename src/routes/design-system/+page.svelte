@@ -9,8 +9,8 @@
     ['05', 'Status badges', 'status'],
     ['06', 'Money & odds type', 'money'],
     ['07', 'Odds buttons', 'odds'],
-    ['08', 'Bet slip', 'slip'],
-    ['09', 'Jackpot ticker', 'jackpot'],
+    ['08', 'Handoff panel', 'slip'],
+    ['09', 'Data ticker', 'jackpot'],
     ['10', 'Live indicators', 'live'],
     ['11', 'Segmented & tabs', 'segmented'],
     ['12', 'Filter chips', 'chips'],
@@ -30,7 +30,7 @@
       { name: 'navy-raised', hex: '#142038', use: 'nav · modals · inputs' },
     ],
     accents: [
-      { name: 'prestige-gold', hex: '#D4943A', use: 'CTA · AGCO · key data' },
+      { name: 'prestige-gold', hex: '#D4943A', use: 'CTA · verification · key data' },
       { name: 'prestige-gold-light', hex: '#E8AC52', use: 'CTA hover' },
       { name: 'slate-blue', hex: '#4A9EBF', use: 'links · info' },
     ],
@@ -84,9 +84,9 @@
     ['Header', '`Parlay · N legs` mono kicker; combined American odds top-right.'],
     ['Legs list', '`navy-card--flat --compact` rows; mono price always right-aligned.'],
     ['Odds-shift', '`alert--warning` fires inline whenever a leg price moves after add.'],
-    ['Stake input', '`ds-input--money` (Mono 700, tabular). Quick-stake `chip` row underneath.'],
+    ['Amount input', '`ds-input--money` (Mono 700, tabular). Preset `chip` row underneath.'],
     ['Totals', 'Top hairline divider; mono labels left, gold to-win, white return.'],
-    ['Footer copy', '19+, province, AGCO line — 11px text-tertiary, never decorative.'],
+    ['Footer copy', '19+, province, verification line — 11px text-tertiary, never decorative.'],
   ];
 
   function renderCode(v: string) {
@@ -125,7 +125,7 @@
           >
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
           </svg>
-          AGCO Regulated
+          Verify Licensing
         </span>
         <span class="status-badge status-badge--live">
           <span class="live-dot"></span> Ontario · Live
@@ -158,12 +158,12 @@
       <p class="mt-6 max-w-2xl text-[1.0625rem] leading-relaxed text-text-body">
         A regulated iGaming aesthetic — calm, layered, fact-first. Authoritative editorial
         typography over a single navy palette, with amber-gold reserved for conversion moments and
-        AGCO trust marks. Dark-mode only. No glow, no glass on content surfaces, no neon.
+        verification trust marks. Dark-mode only. No glow, no glass on content surfaces, no neon.
       </p>
 
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a href="#palette" class="btn-gold">Tour the system</a>
-        <a href="#slip" class="btn-ghost">See the bet slip</a>
+        <a href="#slip" class="btn-ghost">See the mock panel</a>
       </div>
     </div>
 
@@ -172,9 +172,7 @@
       class="navy-card navy-card--elevated rounded-xl p-6 text-[12px] lg:w-[280px]"
       aria-label="Colophon"
     >
-      <div
-        class="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-prestige-gold"
-      >
+      <div class="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-prestige-gold">
         Colophon · v1
       </div>
       <dl class="mt-4 space-y-3">
@@ -196,9 +194,7 @@
   <div class="grid gap-14 xl:grid-cols-[200px_1fr] xl:gap-16">
     <nav aria-label="Sections" class="hidden xl:block">
       <div class="sticky top-28">
-        <div
-          class="font-mono text-xs font-semibold uppercase tracking-[0.28em] text-text-tertiary"
-        >
+        <div class="font-mono text-xs font-semibold uppercase tracking-[0.28em] text-text-tertiary">
           Index
         </div>
         <ol class="mt-4 space-y-1.5">
@@ -390,7 +386,7 @@
             <p
               class="mt-3 font-display text-[clamp(2.5rem,5.5vw,4rem)] font-light leading-[0.98] tracking-[-0.045em] text-text-primary"
             >
-              Online casino &amp; sportsbook — fast Interac payouts.
+              Online casino &amp; sportsbook guidance — Interac payout caveats.
             </p>
           </div>
           <div class="grid gap-6 md:grid-cols-2">
@@ -419,7 +415,7 @@
                 aria-label="Heading 2 type specimen"
                 class="font-sans text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-text-primary"
               >
-                Verified payout times
+                Payout timing caveats
               </div>
             </div>
             <div class="navy-card navy-card--flat p-6">
@@ -457,8 +453,9 @@
                 Body · 16/1.72
               </div>
               <p class="text-text-body">
-                Play 500+ casino games and bet on your favourite sports. Fast Interac deposits and
-                withdrawals, live dealer tables, and same-game parlays — built for Canadian players.
+                Use public guides to understand casino categories, sports markets, Interac payout
+                caveats, live dealer formats, and same-game parlay concepts before verifying
+                availability on the operating platform.
               </p>
             </div>
             <div class="navy-card navy-card--flat p-6">
@@ -470,7 +467,7 @@
               <span
                 class="font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-prestige-gold"
               >
-                AGCO Regulated · Last reviewed Apr 2026
+                Verify Licensing · Last reviewed Apr 2026
               </span>
             </div>
           </div>
@@ -580,7 +577,7 @@
             </span>
             <span class="status-badge status-badge--soon">Alberta · July 2026</span>
             <span class="status-badge status-badge--blocked">Québec · Blocked</span>
-            <span class="status-badge status-badge--licensed">AGCO Regulated</span>
+            <span class="status-badge status-badge--licensed">Verify Licensing</span>
           </div>
         </div>
       </section>
@@ -712,7 +709,7 @@
         </div>
       </section>
 
-      <!-- 08 — Bet slip -->
+      <!-- 08 — Handoff panel -->
       <section id="slip">
         <header class="mb-10">
           <div class="font-mono text-[11px] font-semibold tracking-[0.28em] text-prestige-gold">
@@ -721,7 +718,7 @@
           <h2
             class="mt-3 font-sans text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-text-primary"
           >
-            Bet slip
+            Handoff panel
           </h2>
           <p class="mt-3 max-w-2xl text-text-body">
             Sticky right-rail surface with mono stake input, combined American odds, to-win, and the
@@ -749,7 +746,7 @@
             </ol>
           </aside>
 
-          <!-- The bet slip itself -->
+          <!-- Static mock panel only -->
           <div class="bet-slip p-6">
             <div class="flex items-center justify-between">
               <div
@@ -774,7 +771,7 @@
             <div class="alert alert--warning mt-5">
               <span class="alert__icon">!</span>
               <div>
-                <div class="alert__title">Odds shifted</div>
+                <div class="alert__title">Sample value shifted</div>
                 <div class="alert__body">
                   Toronto ML moved <span class="odds-shift odds-shift--down">▼ −145 → −165</span> since
                   you added it.
@@ -783,7 +780,7 @@
             </div>
 
             <div class="mt-5">
-              <label class="field-label" for="ds-stake">Stake</label>
+              <label class="field-label" for="ds-stake">Sample amount</label>
               <div class="flex items-center gap-2">
                 <span class="font-mono text-[14px] text-text-tertiary">$</span>
                 <input
@@ -803,24 +800,24 @@
 
             <dl class="mt-5 space-y-1.5 border-t border-white/5 pt-4 font-mono text-[12px]">
               <div class="flex justify-between">
-                <dt class="text-text-body">To win</dt>
+                <dt class="text-text-body">Sample upside</dt>
                 <dd class="text-prestige-gold">$121.50</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-text-body">Total return</dt>
+                <dt class="text-text-body">Sample total</dt>
                 <dd class="text-text-primary">$146.50</dd>
               </div>
             </dl>
 
-            <button type="button" class="btn-gold mt-5 w-full">Place bet</button>
+            <button type="button" class="btn-gold mt-5 w-full">Mock action</button>
             <p class="mt-3 text-center text-[11px] leading-relaxed text-text-tertiary">
-              19+ · ON · AGCO regulated. Play within your limits.
+              19+ · ON · Verify licensing. Play within your limits.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- 09 — Jackpot ticker -->
+      <!-- 09 — Data ticker -->
       <section id="jackpot">
         <header class="mb-10">
           <div class="font-mono text-[11px] font-semibold tracking-[0.28em] text-prestige-gold">
@@ -829,7 +826,7 @@
           <h2
             class="mt-3 font-sans text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-text-primary"
           >
-            Jackpot ticker
+            Data ticker
           </h2>
           <p class="mt-3 max-w-2xl text-text-body">
             The only place gold may glow. Always paired with a context line so it reads as data, not
@@ -997,9 +994,12 @@
             </div>
             <label class="field-label" for="ds-email">Email</label>
             <input id="ds-email" class="ds-input" type="email" placeholder="you@example.ca" />
-            <p class="field-help">We use this to verify your account against AGCO records.</p>
+            <p class="field-help">
+              Mock field only; production account verification belongs to the separate gaming
+              platform.
+            </p>
 
-            <label class="field-label mt-5" for="ds-deposit">Deposit limit</label>
+            <label class="field-label mt-5" for="ds-deposit">Limit value</label>
             <input
               id="ds-deposit"
               class="ds-input ds-input--money"
@@ -1017,12 +1017,14 @@
             </div>
             <label class="field-label" for="ds-province">Province</label>
             <select id="ds-province" class="ds-select">
-              <option value="ON" selected>Ontario · AGCO regulated</option>
+              <option value="ON" selected>Ontario · verify licensing</option>
               <option value="AB">Alberta · pre-launch</option>
               <option value="BC">British Columbia</option>
               <option value="QC">Québec · blocked</option>
             </select>
-            <p class="field-help">Determines which licensed operators we can show.</p>
+            <p class="field-help">
+              Determines which jurisdiction-specific content and verification guidance we can show.
+            </p>
           </div>
 
           <div class="navy-card navy-card--flat p-6">
@@ -1037,7 +1039,7 @@
             </label>
             <label class="ds-checkbox mt-3">
               <input type="checkbox" />
-              <span>Email me on Interac payout confirmations.</span>
+              <span>Email me when payout-guidance content changes.</span>
             </label>
           </div>
 
@@ -1167,8 +1169,10 @@
           <div class="alert alert--success">
             <span class="alert__icon">✓</span>
             <div>
-              <div class="alert__title">Withdrawal sent · 47 min</div>
-              <div class="alert__body">CA$245.00 paid via Interac e-Transfer to TD ••3421.</div>
+              <div class="alert__title">Withdrawal status example</div>
+              <div class="alert__body">
+                Operator platform would confirm completed withdrawal details.
+              </div>
             </div>
           </div>
           <div class="alert alert--info">
@@ -1300,7 +1304,7 @@
             <div
               class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
-              Deposit limit · weekly
+              Limit value · weekly
             </div>
             <div class="flex items-baseline justify-between">
               <span class="text-[13px] text-text-body">$420 of $500</span>
@@ -1335,7 +1339,7 @@
       </section>
 
       <!-- Coda -->
-      <footer class="border-t border-white/5 ">
+      <footer class="border-t border-white/5">
         <hr class="seam-rule mb-8" aria-hidden="true" />
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-text-tertiary">
           247iBET · Prestige Navy · Dark mode only

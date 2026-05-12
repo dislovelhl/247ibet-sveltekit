@@ -86,6 +86,22 @@ These are expected seams, not implemented backend guarantees in this repository:
 | Analytics events | Emit public-web events such as CTA click, signup lead submitted, page viewed. | Event taxonomy and privacy rules for any platform-side event ingestion. |
 | Future content/personalization APIs | Render safe content modules with static fallback. | API contract defining allowed personalization inputs, caching, privacy, and failure behavior. |
 
+## AGCO/iGaming Ontario operational handoff
+
+This public web repository can document public-safe licence evidence references, but it does not own the operational controls required to conduct or manage gaming in Ontario. Those controls belong to the separate gaming platform and the licensed operating entity.
+
+| Compliance / readiness area | Public web repo responsibility | Separate gaming platform / operator responsibility |
+| --- | --- | --- |
+| Legal operator identity | Display only legal/compliance-approved public wording after evidence-gate activation. | Maintain the legal entity, business/trade names, licence records, renewal calendar, and regulator correspondence. |
+| AGCO registration | Store public-safe registration metadata in `src/lib/ibet-brand.ts` only after `pnpm compliance:agco:licensed` passes with approved evidence. | Hold the AGCO Certificate of Registration, registration number/type, expiry/renewal evidence, and any registration conditions. |
+| iGaming Ontario operating agreement | Link or display only approved public wording and directory/source references. | Maintain the iGO operating agreement, approved brands/sites, Ontario launch conditions, and commercial obligations. |
+| Technology and game readiness | Do not claim games, critical gaming systems, or payment systems are certified from this repo. | Own ITL certification, technology compliance confirmation, game/provider readiness, regulatory reporting setup, secure data/channel setup, and go-live approval or conditions. |
+| Responsible-gambling operations | Provide education and official support/resource links. | Own account-level limits, play breaks, self-exclusion enforcement, player-risk monitoring, interventions, and supporting records. |
+| AML, finance, and reporting | Avoid collecting or displaying sensitive player/account/payment state. | Own AML submissions, financial information submissions, GGR/funds-transfer testing, FINTRAC/reporting setup, and ongoing regulator notifications. |
+| Public regulatory status API | Render neutral fallback copy if status is unavailable or ambiguous. | Provide a versioned, public-safe regulatory status contract if the web layer will display live licence or platform-readiness state. |
+
+Activation rule: the web repo may not publish AGCO/iGO licence claims, badges, Ontario operator-status claims, go-live claims, or regulated-site availability claims until the private evidence package is complete and the strict evidence gate passes. If the platform cannot provide confirmed status, this repo must stay in verification-first no-proof posture.
+
 ## Backend-dependency labels
 
 When UI implies a backend dependency, make the state explicit in code comments, docs, or copy:
@@ -141,6 +157,8 @@ The public web platform can launch as a brand/acquisition/content site before th
 - no approved API contract for the relevant integration point;
 - no canonical platform URL or handoff route for registration/login/operator CTAs;
 - no legal/compliance review of promotion, payment, responsible-gaming, jurisdiction, or account-state copy;
+- no approved AGCO/iGaming Ontario evidence handoff for public licence, go-live, directory, or operating-agreement claims;
+- no confirmed platform owner for AGCO registration renewal, iGO operating-agreement conditions, ITL certification, technology compliance confirmation, regulatory reporting, secure data/channel setup, AML/financial submissions, responsible-gambling operations, and player-risk monitoring;
 - no failure-state design for unavailable, ambiguous, or stale platform data;
 - no security review for CORS, CSRF, token storage, PII handling, rate limits, audit logging, and analytics taxonomy;
 - UI displays wallet balances, KYC status, active odds, bonus eligibility, payment state, bet state, or transaction completion without platform API confirmation;

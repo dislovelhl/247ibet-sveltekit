@@ -6,20 +6,20 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
-  <title>Best No Deposit Extra Spins Canada 2026 | Verified Offers</title>
+  <title>No Deposit Extra Spins Canada 2026 | Offer Terms Guide</title>
   <meta
     name="description"
-    content="Find the most reliable no deposit extra spins in Canada. Our experts audit wagering requirements, game restrictions, and payout limits for Ontario and Alberta players."
+    content="Compare no deposit extra spin terms in Canada, including wagering requirements, game restrictions, payout limits, and province-specific availability checks."
   />
-  <meta property="og:title" content="Best No Deposit Extra Spins Canada 2026 | Verified Offers" />
+  <meta property="og:title" content="No Deposit Extra Spins Canada 2026 | Offer Terms Guide" />
   <meta
     property="og:description"
-    content="Find the most reliable no deposit extra spins in Canada. Our experts audit wagering requirements, game restrictions, and payout limits for Ontario and Alberta players."
+    content="Compare no deposit extra spin terms in Canada, including wagering requirements, game restrictions, payout limits, and province-specific availability checks."
   />
-  <meta name="twitter:title" content="Best No Deposit Extra Spins Canada 2026 | Verified Offers" />
+  <meta name="twitter:title" content="No Deposit Extra Spins Canada 2026 | Offer Terms Guide" />
   <meta
     name="twitter:description"
-    content="Find the most reliable no deposit extra spins in Canada. Wagering requirements, game restrictions, and payout limits audited."
+    content="Compare no deposit extra spin terms in Canada, including wagering requirements, game restrictions, payout limits, and availability checks."
   />
   <link rel="canonical" href={canonicalUrl('/guides/no-deposit-free-spins')} />
   <JsonLd
@@ -28,7 +28,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       '@type': 'Article',
       headline: 'Best No Deposit Extra Spins: The Definitive Canadian Player Guide',
       description:
-        'Everything you need to know about claiming and winning from no deposit extra spins at regulated Canadian online casinos.',
+        'Educational guidance for reviewing no deposit extra spin terms, wagering rules, payout limits, and current operator availability in Canada.',
       url: 'https://247ibet.ca/guides/no-deposit-free-spins',
       datePublished: '2026-05-09',
       dateModified: '2026-05-09',

@@ -6,6 +6,20 @@ import { scoreEEAT } from './steps/score-eeat.js';
 import { writeReport } from './steps/write-report.js';
 import { updateSitemap } from './steps/update-sitemap.js';
 
+export function buildLlmsTxtProposed(baseUrl: string, generatedAt: string): string {
+  const lines = [
+    `# 247iBET — Canadian iGaming Public Web Guide`,
+    `# Public brand, SEO, acquisition, compliance-content, and integration shell for a separate gaming platform.`,
+    `# No-documentary-proof public-web mode: verify operator status against official regulator sources before relying on licence claims.`,
+    ``,
+    ...PAGE_REGISTRY.map((p) => `- ${baseUrl}${p.path === '/' ? '' : p.path} — tier:${p.tier}`),
+    ``,
+    `# Updated: ${generatedAt}`,
+  ];
+
+  return lines.join('\n');
+}
+
 export async function geoOptimizerWorkflow(): Promise<GeoResult> {
   'use workflow';
   const generatedAt = new Date().toISOString();
@@ -14,8 +28,10 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
 
   // Robustness: Use a batch size to avoid hitting rate limits or consuming too much memory
   const batchSize = 5;
-  const results: Array<PromiseSettledResult<{ page: typeof PAGE_REGISTRY[0], score: EEATScore }>> = [];
-  
+  const results: Array<
+    PromiseSettledResult<{ page: (typeof PAGE_REGISTRY)[0]; score: EEATScore }>
+  > = [];
+
   for (let i = 0; i < PAGE_REGISTRY.length; i += batchSize) {
     const batch = PAGE_REGISTRY.slice(i, i + batchSize);
     const batchResults = await Promise.allSettled(
@@ -49,7 +65,9 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     if (score.structuredData === 0)
       recommendations.push(`Add JSON-LD structured data to ${page.path}`);
     if (score.directAnswer === 0)
-      recommendations.push(`Add a direct answer (<p>) immediately following the main heading on ${page.path}`);
+      recommendations.push(
+        `Add a direct answer (<p>) immediately following the main heading on ${page.path}`,
+      );
     if (score.tableData === 0)
       recommendations.push(`Add a data table to summarize structured information on ${page.path}`);
     if (score.summaryBox === 0)
@@ -61,15 +79,6 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
   const avgScore =
     scores.length > 0 ? Math.round(scores.reduce((sum, s) => sum + s.total, 0) / scores.length) : 0;
 
-  const lines = [
-    `# 247iBET — LLM-Friendly Sitemap`,
-    `# Canada's regulated iGaming authority`,
-    ``,
-    ...PAGE_REGISTRY.map((p) => `- ${baseUrl}${p.path === '/' ? '' : p.path} — tier:${p.tier}`),
-    ``,
-    `# Updated: ${generatedAt}`,
-  ];
-
   const result: GeoResult = {
     generatedAt,
     version: '1.0',
@@ -78,7 +87,7 @@ export async function geoOptimizerWorkflow(): Promise<GeoResult> {
     avgScore,
     recommendations,
     failures,
-    llmsTxtProposed: lines.join('\n'),
+    llmsTxtProposed: buildLlmsTxtProposed(baseUrl, generatedAt),
   };
 
   // Move side effect into a step

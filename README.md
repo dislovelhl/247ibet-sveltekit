@@ -21,6 +21,7 @@ pnpm check
 pnpm lint
 pnpm test
 pnpm build
+pnpm compliance:agco
 ```
 
 Use Node 24.x. The repository pins that contract in `.node-version`, `package.json#engines`, SvelteKit adapter runtime config, and Vercel function route config.
@@ -29,8 +30,11 @@ Current branch verification baseline:
 
 - `pnpm check` — Svelte diagnostics must be clean.
 - `pnpm lint` — ESLint must pass with no warnings.
-- `pnpm test` — Vitest currently covers **190 tests across 29 files**.
+- `pnpm test` — Vitest must pass across the current unit and integration suite.
 - `pnpm build` — production SvelteKit/Vercel build must complete.
+- `pnpm compliance:agco` — public copy and licence-evidence guard must pass in no-documentary-proof mode unless an approved private evidence file is supplied.
+- `pnpm compliance:agco:evidence:init` — create the gitignored private AGCO/iGO evidence JSON scaffold for legal/compliance activation rehearsal.
+- `AGCO_EVIDENCE_FILE=docs/compliance/agco-license-evidence.local.json pnpm compliance:agco:evidence` — validate a filled private evidence file without requiring public brand metadata to be activated yet.
 
 ## Documentation
 

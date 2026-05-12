@@ -47,7 +47,7 @@
     {
       question: 'Are sportsbook bonuses available in provinces outside Ontario?',
       answer:
-        'Ontario-licensed operators only serve Ontario residents and cannot offer promotions cross-provincially. Bettors in BC, Alberta, and other provinces may access offshore sportsbooks that operate under Kahnawake licensing and offer their own promotions.',
+        'Ontario-licensed operators only serve Ontario residents and cannot offer promotions cross-provincially. Bettors in BC, Alberta, and other provinces should verify the current legal status, regulator, terms, and consumer protections for any sportsbook before registering or claiming promotions.',
     },
   ];
 </script>

@@ -2,7 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-import { articleSchema } from '$lib/json-ld';
+  import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -20,16 +20,16 @@ import { articleSchema } from '$lib/json-ld';
     {
       question: 'How long does it take a new casino to get AGCO approved?',
       answer:
-        "The AGCO's iGaming operator registration process typically takes several months from application to launch. Operators must satisfy technical compliance, responsible gambling, AML/KYC, and financial standards reviews. This means AGCO-approved new casinos have passed substantial scrutiny before you play.",
+        "The AGCO's iGaming operator registration process typically takes several months from application to launch. Operators must satisfy technical compliance, responsible gambling, AML/KYC, and financial standards reviews. This means Ontario-registered new casinos should have completed regulator-reviewed steps before launch; verify the current iGO directory and AGCO records before depositing.",
     },
     {
       question: 'Can players outside Ontario use new Canadian casinos?',
       answer:
-        'AGCO licensing only covers Ontario. Players in BC, Alberta, Manitoba, and other provinces may access new offshore-licensed operators that legally serve Canadians, though without provincial oversight. Alberta is actively developing its own iGaming framework for 2026–2027.',
+        "AGCO licensing only covers Ontario. Players in BC, Alberta, Manitoba, and other provinces should check their local provincial framework, the operator's disclosed regulator, and available consumer protections before registering. Alberta is actively developing its own iGaming framework for 2026–2027.",
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -81,7 +81,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -90,13 +90,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white font-medium">New Online Casinos</li>
       </ol>
     </nav>
-    <h1 class="page-hero-title mb-4">
-      New Online Casinos Canada 2026
-    </h1>
+    <h1 class="page-hero-title mb-4">New Online Casinos Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Launch tracking for the newest licensed operators entering the Ontario and Alberta markets.
-      Our compliance team vets each entrant for legal standing, platform stability, and Canadian
-      payment localized support.
+      Editorial launch tracking for operators entering the Ontario and Alberta markets. Verify
+      current regulator status, platform availability, and Canadian payment support directly with
+      official sources before registering.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
@@ -111,24 +109,25 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <div class="navy-card rounded-xl p-5">
         <h3 class="text-white font-bold mb-2">AGCO Licensing Status</h3>
         <p class="text-sm text-gray-400 font-sans leading-relaxed">
-          New operators in Ontario must complete AGCO's operator registration and supplier approval
-          process before accepting players. We verify licence status in real-time — never recommend
-          unlicensed entrants.
+          New operators in Ontario must complete AGCO registration and iGaming Ontario market steps
+          before accepting players. Treat this page as an editorial checklist and verify current
+          licence status against official regulator sources.
         </p>
       </div>
       <div class="navy-card rounded-xl p-5">
         <h3 class="text-white font-bold mb-2">Payout Infrastructure</h3>
         <p class="text-sm text-gray-400 font-sans leading-relaxed">
-          A new casino is only as good as its withdrawal pipeline. We verify Interac e-Transfer is
-          available from day one, test KYC processing time, and confirm minimum payout thresholds
-          match AGCO standards.
+          A new casino is only as good as its withdrawal pipeline. Check whether Interac e-Transfer
+          is available, KYC review is complete, and payout thresholds match the operator's current
+          cashier terms before depositing.
         </p>
       </div>
       <div class="navy-card rounded-xl p-5">
         <h3 class="text-white font-bold mb-2">Responsible Gambling Tools</h3>
         <p class="text-sm text-gray-400 font-sans leading-relaxed">
-          New AGCO operators are required to implement deposit limits, self-exclusion, reality
-          checks, and problem gambling messaging at launch. We check compliance before any listing.
+          New Ontario operators are expected to provide responsible-gambling controls such as
+          limits, self-exclusion routes, reality checks, and problem-gambling messaging. Verify
+          these controls on the operating platform before play.
         </p>
       </div>
     </div>

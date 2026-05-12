@@ -77,7 +77,7 @@
     '@type': 'Article',
     headline: `NBA Betting Canada ${new Date().getFullYear()} — Best Markets, Odds & Tips`,
     description:
-      'Bet on the NBA in Canada at 247iBET — game lines, player props, parlays, and live in-play.',
+      'NBA betting in Canada guide — game lines, player props, parlays, live in-play concepts, and platform availability checks.',
     url: 'https://247ibet.ca/events/nba-betting-canada',
     datePublished: '2026-03-01',
     dateModified: '2026-03-30',
@@ -102,7 +102,7 @@
   <title>NBA Betting Canada {CURRENT_YEAR} — Best Markets, Odds &amp; Tips | 247iBET</title>
   <meta
     name="description"
-    content="Bet on the NBA in Canada at 247iBET — game lines, player props, parlays, and live in-play. Fast Interac payouts. 19+."
+    content="NBA betting Canada guide: game lines, player props, parlays, live in-play concepts, payout caveats, and 19+ reminders."
   />
   <meta
     property="og:title"
@@ -110,7 +110,7 @@
   />
   <meta
     property="og:description"
-    content="Bet on the NBA in Canada at 247iBET — game lines, player props, parlays, and live in-play. Fast Interac payouts. 19+."
+    content="NBA betting Canada guide: game lines, player props, parlays, live in-play concepts, payout caveats, and 19+ reminders."
   />
   <meta property="og:type" content="article" />
   <link rel="canonical" href={canonicalUrl('/events/nba-betting-canada')} />
@@ -118,7 +118,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl space-y-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl space-y-16">
   <header>
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -132,8 +132,8 @@
       NBA Betting Canada {CURRENT_YEAR}
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
-      Bet on NBA games at 247iBET — game lines, player props, same-game parlays, and live in-play.
-      Fast Interac payouts across Canada.
+      Explore NBA betting concepts for Canada — game lines, player props, same-game parlays, and
+      live in-play. Verify market availability and payout terms on the operating platform.
     </p>
   </header>
 
@@ -150,7 +150,7 @@
 
   <section aria-labelledby="markets-heading">
     <h2 id="markets-heading" class="text-2xl font-bold text-[#F1F5F9] mb-5">
-      NBA Betting Markets at 247iBET
+      NBA Betting Market Concepts
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {#each markets as m}
@@ -188,8 +188,8 @@
 
   <IBetShowcase
     variant="banner"
-    ctaText="Bet on NBA"
-    contextLabel="Kahnawake licensed · Interac deposits · Live in-play"
+    ctaText="Explore NBA Guide"
+    contextLabel="Verify licensing · Interac guidance · Event betting guide"
   />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">

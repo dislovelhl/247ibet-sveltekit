@@ -48,7 +48,7 @@ import { CheckCircle2 } from 'lucide-svelte';
     ],
   };
 
-  const heroCtaText = 'Play Baccarat Now';
+  const heroCtaText = 'Explore Baccarat Guide';
   const bannerContextLabel = 'Banker or Player · Live baccarat · Fast table pace · CAD bankroll';
 
   const faqTitle = 'Baccarat FAQ';
@@ -82,24 +82,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>Baccarat Online Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+    content="Learn how baccarat works for Canadian players with Banker, Player, and Tie bet basics, live-table context, and practical strategy notes."
   />
   <meta property="og:title" content="Baccarat Online Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+    content="Learn how baccarat works for Canadian players with Banker, Player, and Tie bet basics, live-table context, and practical strategy notes."
   />
   <meta name="twitter:title" content="Baccarat Online Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics."
+    content="Learn how baccarat works for Canadian players with Banker, Player, and Tie bet basics, live-table context, and practical strategy notes."
   />
   <link rel="canonical" href={canonicalUrl('/casino/baccarat')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Baccarat Online Canada | 247iBET Canada',
       description:
-        'Play baccarat online in Canada at 247iBET. Understand Banker, Player, and Tie bets, learn how live baccarat works, and review the practical strategy basics.',
+        'Learn how baccarat works for Canadian players with Banker, Player, and Tie bet basics, live-table context, and practical strategy notes.',
       url: canonicalUrl('/casino/baccarat'),
       datePublished: '2026-04-27',
     })}

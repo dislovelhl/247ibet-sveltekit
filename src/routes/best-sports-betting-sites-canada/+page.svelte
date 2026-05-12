@@ -43,7 +43,7 @@
     {
       question: 'Which sportsbooks are available in Ontario vs other provinces?',
       answer:
-        'Ontario has the most restrictive regulated market. Some operators are available only in Ontario while others operate under Kahnawake licensing and serve multiple provinces. Always verify availability for your province before registering.',
+        'Ontario has the clearest open regulated market. Some operators are available only in Ontario, while availability in other provinces depends on the operator, disclosed regulator, and provincial rules. Always verify current availability and legal status for your province before registering.',
     },
     {
       question: 'Can I bet on CFL games in Canada?',
@@ -53,7 +53,7 @@
     {
       question: 'Do Canadian sportsbooks pay out winnings in CAD?',
       answer:
-        'Ontario-regulated operators generally transact in Canadian dollars. Offshore or Kahnawake-serving operators also often offer CAD accounts. Always confirm account currency at registration to avoid conversion fees.',
+        'Ontario-regulated operators generally transact in Canadian dollars. Non-Ontario operators may also offer CAD accounts, but users should verify the operator, regulator, account currency, and consumer protections at registration to avoid conversion fees or unsupported access.',
     },
   ];
 </script>
@@ -77,8 +77,10 @@
   <link rel="canonical" href={canonicalUrl('/best-sports-betting-sites-canada')} />
   <JsonLd
     schema={articleSchema({
-      headline: 'Best Sports Betting Sites Canada 2026: Features, Licensing & User Experience | 247iBET',
-      description: 'Compare Canadian sportsbooks by NHL, CFL, NBA, and UFC market depth, Interac funding, province availability, and live-betting quality.',
+      headline:
+        'Best Sports Betting Sites Canada 2026: Features, Licensing & User Experience | 247iBET',
+      description:
+        'Compare Canadian sportsbooks by NHL, CFL, NBA, and UFC market depth, Interac funding, province availability, and live-betting quality.',
       url: canonicalUrl('/best-sports-betting-sites-canada'),
       datePublished: '2026-04-27',
     })}
@@ -111,7 +113,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -122,8 +124,8 @@
     </nav>
     <div class="mb-5 flex flex-wrap items-center gap-2">
       <span class="page-hero-kicker">Canadian sportsbook rankings — 2026</span>
-      <span class="status-badge status-badge--licensed">AGCO verified</span>
-      <span class="live-tag"><span class="live-dot"></span> Live markets open</span>
+      <span class="status-badge status-badge--licensed">Verify licensing</span>
+      <span class="live-tag"><span class="live-dot"></span> Verify market availability</span>
     </div>
     <h1 class="page-hero-title mb-4 text-[clamp(2rem,7vw,3.25rem)]">
       Best Sports Betting Sites Canada
@@ -140,7 +142,9 @@
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
   <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
-    <h2 class="text-2xl sm:text-3xl font-bold mb-6">Canadian Sports Coverage — What Matters Most</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6">
+      Canadian Sports Coverage — What Matters Most
+    </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
       {#each sportItems as { sport, note }}
         <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08]">
@@ -182,11 +186,27 @@
       >.
     </div>
 
-      <nav class="mt-8 flex flex-wrap gap-6" aria-label="Related pages">
-        <a href="/sportsbook-bonuses-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Sportsbook Bonuses</a>
-        <a href="/free-bets-canada" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Free Bets Canada</a>
-        <a href="/guides/sports-betting-odds-explained" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Betting Odds Explained</a>
-        <a href="/tools/odds-calculator" class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider">Odds Calculator</a>
-      </nav>
-    </div>
+    <nav class="mt-8 flex flex-wrap gap-6" aria-label="Related pages">
+      <a
+        href="/sportsbook-bonuses-canada"
+        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+        >Sportsbook Bonuses</a
+      >
+      <a
+        href="/free-bets-canada"
+        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+        >Free Bets Canada</a
+      >
+      <a
+        href="/guides/sports-betting-odds-explained"
+        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+        >Betting Odds Explained</a
+      >
+      <a
+        href="/tools/odds-calculator"
+        class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
+        >Odds Calculator</a
+      >
+    </nav>
+  </div>
 </div>

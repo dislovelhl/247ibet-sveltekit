@@ -4,8 +4,8 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
 
   const trustPoints = [
-    'Fast Interac Payouts in Canada',
-    'Casino and sportsbook in one account',
+    'Interac payout caveats explained',
+    'Casino and sportsbook handoff guidance',
     'Mobile-ready access for Canadian players',
   ] as const;
 </script>
@@ -18,31 +18,30 @@
       <div>
         <div class="page-hero-kicker mb-3 sm:mb-4">
           <BadgeCheck class="h-3.5 w-3.5" aria-hidden="true" />
-          Built for Canadian players
+          Public guide for Canadian players
         </div>
 
         <h2
           id="ready-to-play-heading"
           class="page-hero-title max-w-3xl text-2xl leading-tight sm:text-3xl md:text-5xl"
         >
-          Ready to open your <span class="text-prestige-gold">247iBET account?</span>
+          Ready to verify <span class="text-prestige-gold">platform terms?</span>
         </h2>
 
         <p
           class="page-hero-subtitle mt-4 max-w-2xl text-sm leading-relaxed sm:mt-6 sm:text-base md:text-lg"
         >
-          Access casino games, live sports betting, and Interac deposits in one place. Join 247iBET
-          for faster funding, simpler withdrawals, and a mobile-ready account built around Canadian
-          play.
+          Use 247iBET to review casino categories, sportsbook concepts, Interac payment caveats, and
+          responsible-play checks before handing off to the separate gaming platform.
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
           <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary w-full sm:w-auto">
-            CREATE ACCOUNT
+            VISIT PLATFORM
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </SafeExternalLink>
           <SafeExternalLink href={IBET_URLS.casino} class="page-cta-secondary w-full sm:w-auto">
-            EXPLORE CASINO
+            EXPLORE CASINO GUIDE
           </SafeExternalLink>
         </div>
 
@@ -68,7 +67,7 @@
             href={IBET_URLS.casino}
             class="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.02] px-5 py-4 text-sm font-bold text-white transition-all hover:border-prestige-gold/40 hover:bg-white/[0.05] group/item"
           >
-            <span>Casino Games</span>
+            <span>Casino Guides</span>
             <ArrowRight
               class="h-4 w-4 text-prestige-gold transition-transform duration-200 group-hover/item:translate-x-1"
               aria-hidden="true"

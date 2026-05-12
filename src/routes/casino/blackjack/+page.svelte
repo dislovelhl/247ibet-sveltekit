@@ -48,7 +48,7 @@ import { articleSchema } from '$lib/json-ld';
     ],
   };
 
-  const heroCtaText = 'Play Blackjack Now';
+  const heroCtaText = 'Explore Blackjack Guide';
   const bannerContextLabel = 'Classic hands · Multi-hand tables · Live blackjack · CAD banking';
 
   const faqTitle = 'Blackjack FAQ';
@@ -82,24 +82,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>Blackjack Online Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+    content="Learn blackjack online in Canada with classic, multi-hand, and live blackjack concepts, basic strategy principles, and typical RTP ranges."
   />
   <meta property="og:title" content="Blackjack Online Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+    content="Learn blackjack online in Canada with classic, multi-hand, and live blackjack concepts, basic strategy principles, and typical RTP ranges."
   />
   <meta name="twitter:title" content="Blackjack Online Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges."
+    content="Learn blackjack online in Canada with classic, multi-hand, and live blackjack concepts, basic strategy principles, and typical RTP ranges."
   />
   <link rel="canonical" href={canonicalUrl('/casino/blackjack')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Blackjack Online Canada | 247iBET Canada',
       description:
-        'Play blackjack online in Canada at 247iBET. Compare classic, multi-hand, and live blackjack, review basic strategy principles, and understand typical RTP ranges.',
+        'Learn blackjack online in Canada with classic, multi-hand, and live blackjack concepts, basic strategy principles, and typical RTP ranges.',
       url: canonicalUrl('/casino/blackjack'),
       datePublished: '2026-04-27',
     })}

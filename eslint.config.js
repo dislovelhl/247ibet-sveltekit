@@ -40,7 +40,7 @@ export default ts.config(
     },
   },
   {
-    files: ['**/*.ts', '**/*.js'],
+    files: ['**/*.ts', '**/*.js', '**/*.mjs'],
     languageOptions: {
       globals: {
         ...globals.node,

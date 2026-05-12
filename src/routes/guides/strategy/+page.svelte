@@ -2,7 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -57,7 +57,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -76,9 +76,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           Elite Strategy Series
         </div>
-        <h1 class="page-hero-title mb-4">
-          Mastering the Meta: Strategies for Elite Level Play
-        </h1>
+        <h1 class="page-hero-title mb-4">Mastering the Meta: Strategies for Elite Level Play</h1>
         <p class="text-xl text-gray-300 leading-relaxed">
           In the ever-evolving landscape of competitive gaming, mechanical skill is often the
           barrier to entry, but game knowledge is the ceiling. To truly ascend the ranks, one must
@@ -92,9 +90,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <h2 class="text-2xl font-bold text-white mb-4">Strategy Principles at a Glance</h2>
         <div class="overflow-x-auto">
           <table class="min-w-full text-left text-sm">
-            <thead
-              class="text-xs uppercase tracking-widest text-gray-500 border-b border-white/10"
-            >
+            <thead class="text-xs uppercase tracking-widest text-gray-500 border-b border-white/10">
               <tr>
                 <th class="px-3 py-3">Principle</th>
                 <th class="px-3 py-3">What It Means</th>
@@ -192,8 +188,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <div class="navy-card rounded-2xl p-6 border border-white/10">
         <h3 class="font-bold text-xl text-white mb-2">Ready to Apply These Strategies?</h3>
         <p class="text-sm text-gray-400 mb-6 leading-relaxed">
-          Join 247iBET and put your knowledge to work — fast Interac payouts, 500+ games, and live
-          sports betting.
+          Use 247iBET guides to prepare before platform handoff — verify payout timing, game
+          availability, and sports markets on the separate gaming platform.
         </p>
         <a
           href={canonicalUrl('/register')}
@@ -201,7 +197,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           rel="noopener noreferrer"
           class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-prestige-gold text-navy-black font-semibold text-sm hover:opacity-90 transition-opacity uppercase tracking-[0.14em]"
         >
-          Start Playing at 247iBET →
+          Visit Platform →
         </a>
       </div>
 

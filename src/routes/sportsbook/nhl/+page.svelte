@@ -11,7 +11,7 @@
     heading: 'NHL Betting in Canada',
     breadcrumbLabel: 'NHL Betting',
     metaDescription:
-      'Understand NHL betting in Canada with Canadian team coverage, puck lines, totals, live in-play markets, and Stanley Cup futures at 247iBET.',
+      'Understand NHL betting in Canada with Canadian team coverage, puck lines, totals, live in-play concepts, Stanley Cup futures, and platform availability checks.',
     keywords: 'NHL betting Canada, hockey betting Canada, NHL odds Canada',
     heroSubheading:
       'Track Canadian teams, compare puck line and total markets, and follow live NHL odds throughout the regular season, playoffs, and Stanley Cup futures board.',
@@ -64,9 +64,9 @@
           'Moneyline, puck line, totals, and player props are the most common NHL markets. Futures such as Stanley Cup and division winners stay active for much longer horizons.',
       },
       {
-        question: 'Can I bet on Canadian NHL teams at 247iBET?',
+        question: 'Can Canadian NHL teams appear in sportsbook markets?',
         answer:
-          'Yes. Canadian clubs like the Maple Leafs, Canadiens, Oilers, Canucks, Flames, Jets, and Senators are part of the standard NHL board with pre-game and live markets.',
+          'Canadian clubs like the Maple Leafs, Canadiens, Oilers, Canucks, Flames, Jets, and Senators commonly appear on NHL boards, but market availability must be confirmed on the operating platform.',
       },
       {
         question: 'How does live NHL betting differ from pre-game betting?',
@@ -172,7 +172,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -186,7 +186,11 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
+      <img
+        src={page.heroImage}
+        alt={page.title + ' — online betting in Canada'}
+        class="h-full w-full object-cover opacity-80"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
@@ -283,7 +287,11 @@
   </section>
 
   <div class="mt-14">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel={page.ctaContextLabel} />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Check Availability"
+      contextLabel={page.ctaContextLabel}
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

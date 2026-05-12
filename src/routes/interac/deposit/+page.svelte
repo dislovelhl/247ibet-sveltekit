@@ -7,9 +7,9 @@
 
   const steps = [
     {
-      title: 'Access the Cashier',
+      title: 'Access the platform cashier',
       description:
-        'Log into your 247iBET account and click on the "Deposit" button in the top navigation or account menu.',
+        'Log into the separate gaming platform and use its cashier or account menu if deposits are available in your jurisdiction.',
     },
     {
       title: 'Select Interac',
@@ -50,25 +50,25 @@
 </script>
 
 <svelte:head>
-  <title>How to Deposit with Interac at 247iBET: A Step-by-Step Guide</title>
+  <title>How Interac Deposits Work: A Canadian Player Guide</title>
   <meta
     name="description"
-    content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
+    content="Learn how Interac e-Transfer casino deposits usually work, including CAD support, operator checks, and bank-side timing caveats."
   />
   <meta
     property="og:title"
-    content="How to Deposit with Interac at 247iBET: A Step-by-Step Guide"
+    content="How Interac Deposits Work: A Canadian Player Guide"
   />
   <meta
     property="og:description"
-    content="Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits."
+    content="Learn how Interac e-Transfer casino deposits usually work, including CAD support, operator checks, and bank-side timing caveats."
   />
   <link rel="canonical" href={canonicalUrl('/interac/deposit')} />
   <JsonLd
     schema={articleSchema({
-      headline: 'How to Deposit with Interac at 247iBET: A Step-by-Step Guide',
+      headline: 'How Interac Deposits Work: A Canadian Player Guide',
       description:
-        'Learn how to deposit funds using Interac e-Transfer. Follow our step-by-step instructions for fast, secure, and CAD-native casino deposits.',
+        'Learn how Interac e-Transfer casino deposits usually work, including CAD support, operator checks, and bank-side timing caveats.',
       url: canonicalUrl('/interac/deposit'),
       datePublished: '2026-04-27',
     })}
@@ -76,7 +76,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -99,7 +99,7 @@
       </p>
       <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
         Your bank may apply standard e-Transfer transaction charges. Ensure the name on your bank
-        account matches your 247iBET account.
+        account matches your operating-platform account.
       </p>
     </div>
   </section>
@@ -136,8 +136,8 @@
       <li class="flex items-start gap-3">
         <CheckCircle class="w-4 h-4 text-green-500 shrink-0 mt-1" aria-hidden="true" />
         <span
-          >Your bank account name <strong class="text-white">must match</strong> the name on your 247iBET
-          account.</span
+          >Your bank account name <strong class="text-white">must match</strong> the name on the
+          account at the operator or separate gaming platform.</span
         >
       </li>
       <li class="flex items-start gap-3">
@@ -151,7 +151,7 @@
   </section>
 
   <section class="mt-12">
-    <IBetShowcase variant="banner" ctaText="Start Deposit" />
+    <IBetShowcase variant="banner" ctaText="Review Deposit Steps" />
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
@@ -163,12 +163,12 @@
     <a
       href="/casino"
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Play casino with Interac</a
+      >Explore casino Interac guidance</a
     >
     <a
       href="/sportsbook"
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Bet on sports with Interac</a
+      >Explore sportsbook Interac guidance</a
     >
   </nav>
 

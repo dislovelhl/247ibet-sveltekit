@@ -2,7 +2,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
-import { articleSchema } from '$lib/json-ld';
+  import { articleSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-03-30';
 
@@ -10,12 +10,12 @@ import { articleSchema } from '$lib/json-ld';
     {
       question: 'What is RTP and what is a good percentage for Canadian casinos?',
       answer:
-        'RTP (Return to Player) is the theoretical percentage of all wagered money a game pays back over time. The Canadian iGaming average is 95%–97% for slots. Blackjack and video poker offer RTPs above 99% with optimal play. AGCO-licensed operators are required to use certified RNG systems, ensuring advertised RTPs are accurate.',
+        'RTP (Return to Player) is the theoretical percentage of all wagered money a game pays back over time. The Canadian iGaming average is 95%–97% for slots. Blackjack and video poker offer RTPs above 99% with optimal play. AGCO-licensed operators are expected to use certified game systems and disclose RTP information, but certification and RTP details remain operator- and game-specific.',
     },
     {
       question: 'How fast are Interac withdrawals at Canadian online casinos?',
       answer:
-        "Ontario-facing operators with Interac e-Transfer often process withdrawals within 1 to 24 hours after KYC verification is complete. Operators advertising 'instant' withdrawals may still apply manual review for first withdrawals or larger amounts. Bank transfers usually take longer.",
+        'Ontario-facing operators with Interac e-Transfer still vary by KYC status, bonus review, fraud checks, and bank-side completion. Operators advertising quick withdrawals may still apply manual review for first withdrawals or larger amounts. Verify current cashier timing before depositing.',
     },
     {
       question: 'Are there withdrawal limits at Canadian online casinos?',
@@ -29,26 +29,26 @@ import { articleSchema } from '$lib/json-ld';
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>Best Paying Online Casinos Canada 2026 | RTP &amp; Payouts</title>
   <meta
     name="description"
-    content="Compare Canadian online casinos by verified RTP, Interac withdrawal speed, payout limits, and KYC timing."
+    content="Compare Canadian online casinos by RTP disclosures, Interac withdrawal caveats, payout limits, and KYC timing reminders."
   />
   <meta property="og:title" content="Best Paying Online Casinos Canada 2026 | RTP &amp; Payouts" />
   <meta
     property="og:description"
-    content="Canadian online casinos ranked by payout percentage, Interac timelines, and withdrawal limits."
+    content="Canadian online casino guidance by payout percentage, Interac caveats, and withdrawal-limit transparency."
   />
   <link rel="canonical" href={canonicalUrl('/best-paying-online-casinos-canada')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Best Paying Online Casinos Canada 2026 | RTP & Payouts',
       description:
-        'Compare Canadian online casinos by verified RTP, Interac withdrawal speed, payout limits, and KYC timing.',
+        'Compare Canadian online casinos by RTP disclosures, Interac withdrawal caveats, payout limits, and KYC timing reminders.',
       url: canonicalUrl('/best-paying-online-casinos-canada'),
       datePublished: '2026-04-27',
     })}
@@ -81,7 +81,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -92,14 +92,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </nav>
     <div class="mb-5 flex flex-wrap items-center gap-2">
       <span class="page-hero-kicker">Payout-first rankings — 2026</span>
-      <span class="status-badge status-badge--licensed">AGCO verified</span>
+      <span class="status-badge status-badge--licensed">Verify licensing</span>
     </div>
     <h1 class="page-hero-title mb-4 text-[clamp(2rem,7vw,3.25rem)]">
       Best Paying Online Casinos Canada
     </h1>
     <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
-      Canadian casinos compared by verified RTP, payout transparency, and withdrawal speed — which
-      sites actually return value and cash out cleanly.
+      Canadian casinos compared by RTP disclosures, payout transparency, and withdrawal caveats —
+      verify current cashier terms before depositing.
     </p>
     <p class="mt-3 text-xs text-text-tertiary">Last updated: {LAST_UPDATED}</p>
   </header>
@@ -109,51 +109,59 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <IBetShowcase variant="hero" showFeatures={true} showPros={true} />
 
   <section class="navy-card mt-16 rounded-2xl p-6 md:p-8">
-    <h2 class="text-2xl sm:text-3xl font-bold mb-4">What We Measure Before We Put a Casino on This List</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+      What We Measure Before We Put a Casino on This List
+    </h2>
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400 font-sans leading-relaxed"
     >
       <div>
-        <h3 class="text-white font-bold mb-2">RTP Certification <span class="stat text-prestige-gold">(30%)</span></h3>
+        <h3 class="text-white font-bold mb-2">
+          RTP Certification <span class="stat text-prestige-gold">(30%)</span>
+        </h3>
         <p>
           Return to Player (RTP) percentages must be certified by testing labs. We check that
           published RTPs match the certified figure and flag anything that looks padded or vague.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">Withdrawal Speed <span class="stat text-prestige-gold">(35%)</span></h3>
+        <h3 class="text-white font-bold mb-2">
+          Withdrawal Speed <span class="stat text-prestige-gold">(35%)</span>
+        </h3>
         <p>
-          Our primary metric. We test Interac e-Transfer withdrawal timelines from real accounts.
-          Sites that move money quickly after KYC are easier to trust and easier to recommend.
+          Our primary metric is transparency. We review Interac e-Transfer withdrawal terms,
+          documented payout evidence where available, and caveats around KYC, bonus review,
+          approval, and bank-side timing.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">Withdrawal Limits &amp; Fees <span class="stat text-prestige-gold">(20%)</span></h3>
+        <h3 class="text-white font-bold mb-2">
+          Withdrawal Limits &amp; Fees <span class="stat text-prestige-gold">(20%)</span>
+        </h3>
         <p>
-          We assess minimum withdrawal thresholds (should be ≤<span class="money">$20</span>), maximum daily/monthly limits,
-          and whether withdrawal fees apply. High-limit players should verify VIP withdrawal caps
-          before depositing large amounts.
+          We assess minimum withdrawal thresholds (should be ≤<span class="money">$20</span>),
+          maximum daily/monthly limits, and whether withdrawal fees apply. High-limit players should
+          verify VIP withdrawal caps before depositing large amounts.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-2">KYC Processing <span class="stat text-prestige-gold">(15%)</span></h3>
+        <h3 class="text-white font-bold mb-2">
+          KYC Processing <span class="stat text-prestige-gold">(15%)</span>
+        </h3>
         <p>
-          Identity verification delays are the #1 complaint in Canadian casino withdrawals. We test
-          KYC completion time from document submission to approval — operators that take more than
-          24 hours lose ranking points regardless of withdrawal speed.
+          Identity verification delays are a common complaint in Canadian casino withdrawals. We
+          review disclosed KYC steps, document requirements, and available evidence about approval
+          friction without presenting unverified timing guarantees.
         </p>
       </div>
     </div>
     <p class="mt-4 text-xs text-gray-600 font-sans">
-      Scores reflect current platform checks as of {LAST_UPDATED}. We may earn affiliate
-      commissions —
+      Scores reflect public review checks as of {LAST_UPDATED}. We may earn affiliate commissions —
       <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline"
         >read our disclosure</a
       >.
     </p>
-    <a href="/about/how-we-test" class="view-all-link mt-4">
-      How we verify operators →
-    </a>
+    <a href="/about/how-we-test" class="view-all-link mt-4"> How we verify operators → </a>
   </section>
 
   <section class="navy-card mt-8 rounded-2xl p-6 md:p-8">
@@ -170,17 +178,23 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <tbody class="divide-y divide-white/5">
           <tr>
             <td class="p-4 text-white font-bold">RTP</td>
-            <td class="p-4 text-gray-300">Certified game values, usually <span class="stat text-white">95%+</span></td>
+            <td class="p-4 text-gray-300"
+              >Certified game values, usually <span class="stat text-white">95%+</span></td
+            >
             <td class="p-4 text-gray-300">Higher certified RTP improves long-run player value.</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-bold">Interac speed</td>
-            <td class="p-4 text-gray-300"><span class="stat text-white">1–4 hours</span> after KYC</td>
-            <td class="p-4 text-gray-300">Fast withdrawals reduce friction after a win.</td>
+            <td class="p-4 text-gray-300">Verify current cashier terms after KYC</td>
+            <td class="p-4 text-gray-300"
+              >Transparent timing disclosures reduce payout uncertainty.</td
+            >
           </tr>
           <tr>
             <td class="p-4 text-white font-bold">Withdrawal limits</td>
-            <td class="p-4 text-gray-300"><span class="money text-white">$20</span> minimum, clear daily/monthly caps</td>
+            <td class="p-4 text-gray-300"
+              ><span class="money text-white">$20</span> minimum, clear daily/monthly caps</td
+            >
             <td class="p-4 text-gray-300">Transparent limits make cashouts easier to plan.</td>
           </tr>
         </tbody>

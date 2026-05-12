@@ -32,7 +32,7 @@ export function organizationSchema(): Record<string, unknown> {
     url: 'https://247ibet.ca',
     logo: 'https://247ibet.ca/images/brand/logo.png',
     description:
-      '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information.',
+      '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payment-method expectations, and safer-play information.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'CA',
@@ -50,7 +50,7 @@ export function organizationSchema(): Record<string, unknown> {
     knowsAbout: [
       'Online Casino Canada',
       'Sports Betting Canada',
-      'Interac Casino Payouts',
+      'Interac Casino Payment Methods',
       'Live Dealer Casino',
       'Responsible Gambling',
       'Canadian iGaming Regulations',

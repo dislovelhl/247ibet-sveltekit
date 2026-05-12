@@ -24,7 +24,7 @@
     'Unsolicited marketing emails',
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -85,7 +85,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -102,9 +102,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     >
       Risk Intelligence
     </div>
-    <h1 class="page-hero-title mb-4">
-      Legit &amp; Safe Online Casinos Canada 2026
-    </h1>
+    <h1 class="page-hero-title mb-4">Legit &amp; Safe Online Casinos Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       In the complex landscape of Canadian iGaming, identifying a legit casino goes beyond checking
       for a fancy design. It requires a deep dive into licensing, financial segregation, and
@@ -161,19 +159,20 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         How to manually verify
       </h3>
       <p class="text-sm text-gray-400 mb-6 leading-relaxed">
-        To be 100% certain, you can search for the operator's name directly on the iGaming Ontario
-        public list or the AGCO Registry of Gaming Establishments.
+        To verify an operator, search the exact legal operator or brand name on official Ontario
+        sources and compare the listed domain, category, and current status before relying on any
+        licensing claim.
       </p>
       <div class="flex gap-3">
         <div
           class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
-          iGO VERIFIED
+          CHECK iGO LISTING
         </div>
         <div
           class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
-          AGCO LICENSED
+          CHECK AGCO STATUS
         </div>
       </div>
     </div>

@@ -16,11 +16,11 @@ export const AUTHORS: Record<string, Author> = {
   editorial: {
     id: 'editorial',
     name: '247iBET Team',
-    title: 'Platform Team',
-    bio: 'Our team maintains and verifies all platform standards on 247iBET. We prioritize security, fast payments, and responsible gaming for all Canadian players.',
+    title: 'Editorial Team',
+    bio: 'Our editorial team maintains public guides, source checks, affiliate disclosures, and responsible-gambling resources for Canadian readers.',
     credentials: [
-      'Dedicated iGaming operations since 2020',
-      'Continuous platform verification and security auditing',
+      'Canadian iGaming editorial coverage',
+      'Source verification and public-content review',
     ],
   },
   // TODO: Add named authors with real credentials

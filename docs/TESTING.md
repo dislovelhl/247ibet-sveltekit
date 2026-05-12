@@ -4,7 +4,7 @@
 
 | Layer | Runner | Location | Count |
 | --- | --- | --- | --- |
-| Unit/integration | Vitest | `tests/**/*.test.ts` | 190 tests across 29 files in the current checkout |
+| Unit/integration | Vitest | `tests/**/*.test.ts` | Run `pnpm test` for the current count |
 | Component | Vitest + jsdom | `tests/components/**` | Included in `pnpm test`; can also be targeted with `pnpm test:components` |
 | E2E | Playwright | `tests/e2e/**/*.spec.ts` | Available via `pnpm test:e2e`; some diagnostic/speculative crawls remain intentionally skipped |
 

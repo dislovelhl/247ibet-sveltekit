@@ -11,9 +11,18 @@
   ];
 
   let odds = $state(initialOdds);
+  const tickerItems = $derived([...odds, ...odds]);
 
   onMount(() => {
-    const interval = setInterval(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (prefersReducedMotion.matches) {
+      return;
+    }
+
+    let intervalId: ReturnType<typeof setInterval> | null = null;
+
+    const tick = () => {
       odds = odds.map(o => {
         if (Math.random() > 0.8) {
           const change = (Math.random() - 0.5) * 0.05;
@@ -26,9 +35,34 @@
         }
         return o;
       });
-    }, 3000);
+    };
 
-    return () => clearInterval(interval);
+    const start = () => {
+      if (intervalId !== null || document.visibilityState !== 'visible') return;
+      intervalId = setInterval(tick, 3000);
+    };
+
+    const stop = () => {
+      if (intervalId === null) return;
+      clearInterval(intervalId);
+      intervalId = null;
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        start();
+      } else {
+        stop();
+      }
+    };
+
+    start();
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   });
 </script>
 
@@ -40,7 +74,7 @@
   
   <div class="relative flex-1 overflow-hidden h-full">
     <div class="odds-marquee flex items-center gap-12 px-6 h-full whitespace-nowrap">
-      {#each [...odds, ...odds] as item}
+      {#each tickerItems as item}
         <div class="flex items-center gap-3">
           <span class="text-[11px] font-bold text-text-tertiary uppercase">{item.match}</span>
           <span class="text-[11px] font-medium text-white/60">{item.pick}</span>
@@ -72,5 +106,12 @@
 
   .odds-marquee:hover {
     animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .odds-marquee {
+      animation: none;
+      transform: none;
+    }
   }
 </style>

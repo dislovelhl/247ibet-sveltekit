@@ -33,8 +33,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -81,7 +80,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -92,15 +91,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </nav>
     <div class="mb-5 flex flex-wrap items-center gap-2">
       <span class="page-hero-kicker">Mobile casino rankings</span>
-      <span class="status-badge status-badge--licensed">AGCO data-protection vetted</span>
+      <span class="status-badge status-badge--licensed">Verify licensing status</span>
     </div>
     <h1 class="page-hero-title text-[clamp(2rem,8vw,3.75rem)] mb-4">
       Best Casino Apps Canada 2026
     </h1>
     <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
       Top-rated Canadian casino apps reviewed for game stability and Interac speed — we prioritize
-      native iOS/Android experiences that maintain strict AGCO data protection and provincial
-      residency verification standards.
+      native iOS/Android experiences with clear privacy terms, responsible-gambling tools, and
+      province-aware eligibility checks.
     </p>
     <p class="mt-3 text-xs text-text-tertiary">
       Last updated: <time datetime="2026-03-01" class="stat">2026-03-01</time>
@@ -131,7 +130,6 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         {/each}
       </div>
     </div>
-
 
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a

@@ -14,7 +14,7 @@
     },
     {
       q: 'Can I use an offshore casino from Canada?',
-      a: 'Many Canadians use Kahnawake Gaming Commission-licensed platforms (located in Kahnawake, Québec), which have a long history of serving Canadian players. These are not illegal for players under current Canadian law.',
+      a: 'Rules vary by province, regulator, and operator. Before using any platform outside a provincial regulated market, verify the current licence, legal availability, player protections, and responsible-gambling tools from official sources.',
     },
     {
       q: 'What is the legal gambling age in Canada?',
@@ -203,7 +203,7 @@ import JsonLd from '$lib/components/JsonLd.svelte';
 
   <IBetShowcase
     variant="banner"
-    ctaText="Play at 247iBET"
+    ctaText="Review Platform Guidance"
     contextLabel="Quality Canadian Platform · 18+/19+"
   />
 

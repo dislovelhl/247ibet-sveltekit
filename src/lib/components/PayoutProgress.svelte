@@ -6,8 +6,8 @@
 
   const steps = [
     { label: 'Approval', icon: ShieldCheck, detail: 'Operator review' },
-    { label: 'Processing', icon: Zap, detail: 'Network routing' },
-    { label: 'Funds Sent', icon: BadgeCheck, detail: 'In your account' },
+    { label: 'Processing', icon: Zap, detail: 'Operator/network routing' },
+    { label: 'Bank Timing', icon: BadgeCheck, detail: 'Timing varies' },
   ];
 </script>
 
@@ -15,12 +15,12 @@
   <div class="mb-8 flex items-center justify-between">
     <div class="flex flex-col">
       <h3 class="text-sm font-bold uppercase tracking-[0.14em] text-prestige-gold">
-        Interac Payout Speed
+        Interac Payment Timing
       </h3>
-      <span class="font-luxury text-xs text-prestige-gold-400 opacity-70">Canadian Trusted Network</span>
+      <span class="font-luxury text-xs text-prestige-gold-400 opacity-70">Illustrative public guide</span>
     </div>
     <span class="rounded-full bg-success/10 px-3 py-1 text-xs font-bold text-success border border-success/20">
-      LIVE NETWORK STATUS
+      TIMING VARIES
     </span>
   </div>
 
@@ -60,7 +60,7 @@
 
   <div class="mt-8 rounded-lg bg-navy-black/40 p-3 border border-white/5">
     <p class="text-xs leading-relaxed text-text-body">
-      <span class="font-bold text-prestige-gold">Interac timing note:</span> 247iBET payout guidance treats withdrawal timing as operator-dependent. Approval reviews, KYC, and bank processing can all affect when funds arrive.
+      <span class="font-bold text-prestige-gold">Interac timing note:</span> 247iBET payment guidance treats withdrawal timing as operator-dependent. Approval reviews, KYC, and bank processing can all affect when funds arrive.
     </p>
   </div>
 </GlintCard>

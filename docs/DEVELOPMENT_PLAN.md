@@ -98,14 +98,14 @@
 
 ## P0 Deliverables (April 2026)
 
-All 77 tests across 8 files are passing. The test gate is now enforced in CI.
+The current test suite is covered by CI; run `pnpm test` for the current file/test count before quoting it outside the repository.
 
 ### ✅ DONE (May 4, 2026)
 - [x] P0-1: Fix dependency vulnerabilities — resolved via pnpm overrides for undici, devalue, uuid, and cookie
 - [x] P0-2: Write tests for site.ts (15 tests)
 - [x] P0-3: Write tests for auth.ts (8 tests)
 - [x] P0-4: Update AGENTS.md with test commands
-- [x] P0-5: Verify all tests pass (now 147 tests)
+- [x] P0-5: Verify all tests pass via `pnpm test`
 - [x] P1-6: Write tests for ibet-brand.ts — refactored URL derivation to use robust deriveLoginUrl helper with full unit test coverage
 - [x] P1-7: Write tests for age-gate-client.ts — verified existing browser and SSR path tests provide full coverage for localStorage branching and legacy keys
 - [x] P1-8: Migrate 3 files from Svelte 4 to Svelte 5 patterns — migrated AgeGate.svelte and +layout.svelte to $effect; verified GuideHighlights.svelte already modernized
@@ -131,10 +131,10 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 - **Impact**: Security-critical timing comparison verified and documented.
 
 ### [P0] 4. Update AGENTS.md with test commands and lint gate
-- **Done**: Updated Commands section with pnpm test, added test status paragraph. Tests now part of the 4-gate CI.
+- **Done**: Updated Commands section with pnpm test, added test status paragraph. Tests are part of the current quality-gate sequence.
 
-### [P0] 5. Run `pnpm test` and verify all 22 tests pass
-- **Done**: All 77 tests pass. Gate now runs `pnpm check && pnpm lint && pnpm build && pnpm test`.
+### [P0] 5. Run `pnpm test` and verify the current suite passes
+- **Done**: Test gate is covered by the current quality sequence: `pnpm check && pnpm lint && pnpm test && pnpm build && pnpm compliance:agco`.
 
 ---
 

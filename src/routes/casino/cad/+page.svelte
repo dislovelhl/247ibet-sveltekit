@@ -3,24 +3,24 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
-import { articleSchema } from '$lib/json-ld';
+  import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'CAD Casino';
 
   const intro = {
     eyebrow: 'CAD casino Canada',
     title: 'Why Canadian-dollar accounts remove friction',
-    body: 'When your casino balance, deposits, and withdrawals all stay in CAD, you can read your bankroll accurately without mentally adjusting for exchange rates. That clarity becomes even more useful when you want to move funds in and out through familiar local banking methods.',
+    body: 'When an operating platform supports CAD balances, deposits, and withdrawals, players can read their bankroll without mentally adjusting for exchange rates. That clarity is useful when comparing local banking methods and payout terms.',
   };
 
   const cards = [
     {
       title: 'No Conversion Layer',
-      body: 'A CAD balance helps you avoid hidden foreign-exchange drift between deposit, play, and withdrawal activity.',
+      body: 'A CAD balance can help avoid foreign-exchange drift between funding, play, and withdrawal activity where the operating platform supports it.',
     },
     {
       title: 'CAD Deposits and Withdrawals',
-      body: 'Keeping the same currency on both sides of the cashier makes it easier to track bankroll movement and expected payout amounts.',
+      body: 'Keeping the same currency on both sides of the cashier can make bankroll movement and expected payout amounts easier to understand.',
     },
     {
       title: 'Interac Integration',
@@ -31,7 +31,7 @@ import { articleSchema } from '$lib/json-ld';
   const leftRail = {
     title: 'Why CAD support matters',
     items: [
-      'A Canadian-dollar balance makes bankroll planning simpler because your deposit amount, game stakes, and withdrawal request all stay in the same currency.',
+      'A Canadian-dollar balance can make bankroll planning simpler when deposit amounts, game stakes, and withdrawal requests stay in the same currency.',
       'You avoid extra ambiguity around exchange-rate movement, especially if you deposit and cash out at different times.',
       'CAD support pairs naturally with Interac e-Transfer, the Canadian payment rail highlighted on 247iBET.',
     ],
@@ -73,14 +73,14 @@ import { articleSchema } from '$lib/json-ld';
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>CAD Casino Canada | Play in Canadian Dollars | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup."
+    content="Understand how CAD casino balances, deposits, withdrawals, conversion fees, and Interac fit into a local banking setup before verifying terms on the operating platform."
   />
   <meta
     property="og:title"
@@ -88,7 +88,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <meta
     property="og:description"
-    content="Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup."
+    content="Understand how CAD casino balances, deposits, withdrawals, conversion fees, and Interac fit into a local banking setup before verifying terms on the operating platform."
   />
   <meta
     name="twitter:title"
@@ -96,14 +96,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <meta
     name="twitter:description"
-    content="Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup."
+    content="Understand how CAD casino balances, deposits, withdrawals, conversion fees, and Interac fit into a local banking setup before verifying terms on the operating platform."
   />
   <link rel="canonical" href={canonicalUrl('/casino/cad')} />
   <JsonLd
     schema={articleSchema({
       headline: 'CAD Casino Canada | Play in Canadian Dollars | 247iBET Canada',
       description:
-        'Play casino in Canadian dollars at 247iBET. Understand how CAD deposits and withdrawals work, why avoiding conversion fees matters, and how Interac fits into a local banking setup.',
+        'Understand how CAD casino balances, deposits, withdrawals, conversion fees, and Interac fit into a local banking setup before verifying terms on the operating platform.',
       url: canonicalUrl('/casino/cad'),
       datePublished: '2026-04-27',
     })}
@@ -137,7 +137,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4 pb-20  sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -158,13 +158,11 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </div>
 
   <header class="mb-10">
-    <h1 class="page-hero-title mb-4">
-      Play Casino in Canadian Dollars
-    </h1>
+    <h1 class="page-hero-title mb-4">Play Casino in Canadian Dollars</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
-      A CAD casino account keeps deposits, wagering, and withdrawals in the same currency Canadian
-      players already use. That means clearer bankroll tracking, fewer foreign-exchange surprises,
-      and a smoother path when you pair the cashier with Interac.
+      CAD casino support can keep deposits, wagering, and withdrawals in the same currency Canadian
+      players already use. That can mean clearer bankroll tracking, fewer foreign-exchange
+      surprises, and a smoother verification checklist when Interac is available.
     </p>
   </header>
 

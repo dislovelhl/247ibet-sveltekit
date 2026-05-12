@@ -11,7 +11,7 @@
     heading: 'CFL Betting in Canada',
     breadcrumbLabel: 'CFL Betting',
     metaDescription:
-      'Explore CFL betting in Canada with team coverage, Grey Cup futures, common bet types, and Canadian football rules that affect pricing at 247iBET.',
+      'Explore CFL betting in Canada with team coverage, Grey Cup futures, common bet types, and Canadian football rules that can affect sportsbook pricing.',
     keywords: 'CFL betting Canada, Canadian football betting, Grey Cup betting',
     heroSubheading:
       'Bet on Canadian football with regular-season team coverage, Grey Cup futures, and market notes shaped by CFL-specific rules such as three downs and the rouge.',
@@ -172,7 +172,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -186,7 +186,11 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
+      <img
+        src={page.heroImage}
+        alt={page.title + ' — online betting in Canada'}
+        class="h-full w-full object-cover opacity-80"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
@@ -283,7 +287,11 @@
   </section>
 
   <div class="mt-14">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel={page.ctaContextLabel} />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Check Availability"
+      contextLabel={page.ctaContextLabel}
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

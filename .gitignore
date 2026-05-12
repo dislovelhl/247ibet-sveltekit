@@ -20,6 +20,9 @@ vite.config.ts.timestamp-*
 # Workflow audit reports and runtime data (local only, gitignored)
 static/reports/
 .workflow-data/
+docs/compliance/agco-license-evidence.local.json
+docs/compliance/*.local.json
+docs/compliance/*.private.json
 
 # OS
 .DS_Store

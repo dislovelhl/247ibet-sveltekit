@@ -49,7 +49,7 @@ import { articleSchema } from '$lib/json-ld';
     ],
   };
 
-  const heroCtaText = 'Play Slots Now';
+  const heroCtaText = 'Explore Slots Guide';
   const bannerContextLabel = 'Classic reels · Video slots · Progressive jackpots · CAD play';
 
   const faqTitle = 'Online Slots FAQ';
@@ -83,24 +83,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>Online Slots Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play online slots in Canada at 247iBET. Learn how RTP works, compare classic, video, and progressive slots, and understand the providers Canadian players usually look for."
+    content="Learn online slots in Canada, including how RTP works, how classic, video, and progressive slots differ, and which provider signals Canadian players usually review."
   />
   <meta property="og:title" content="Online Slots Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play online slots in Canada at 247iBET. Learn how RTP works, compare classic, video, and progressive slots, and understand the providers Canadian players usually look for."
+    content="Learn online slots in Canada, including how RTP works, how classic, video, and progressive slots differ, and which provider signals Canadian players usually review."
   />
   <meta name="twitter:title" content="Online Slots Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play online slots in Canada at 247iBET. Learn how RTP works, compare classic, video, and progressive slots, and understand the providers Canadian players usually look for."
+    content="Learn online slots in Canada, including how RTP works, how classic, video, and progressive slots differ, and which provider signals Canadian players usually review."
   />
   <link rel="canonical" href={canonicalUrl('/casino/slots')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Online Slots Canada | 247iBET Canada',
       description:
-        'Play online slots in Canada at 247iBET. Learn how RTP works, compare classic, video, and progressive slots, and understand the providers Canadian players usually look for.',
+        'Learn online slots in Canada, including how RTP works, how classic, video, and progressive slots differ, and which provider signals Canadian players usually review.',
       url: canonicalUrl('/casino/slots'),
       datePublished: '2026-04-27',
     })}
@@ -171,8 +171,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <h1 class="page-hero-title mb-4">Play Online Slots in Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Online slots give Canadian players the widest game variety, from simple three-reel formats to
-      feature-heavy video slots and progressive jackpots. At 247iBET, the key is matching RTP,
-      volatility, and bankroll pace to the type of play you actually want.
+      feature-heavy video slots and progressive jackpots. The key is matching RTP, volatility, and bankroll pace to the type of play
+      you actually want, then verifying current game details on the separate platform.
     </p>
   </header>
 

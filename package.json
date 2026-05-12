@@ -19,7 +19,11 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "test:components": "vitest run --environment jsdom 'tests/components/**'"
+    "test:components": "vitest run --environment jsdom 'tests/components/**'",
+    "compliance:agco": "node scripts/agco-evidence-gate.mjs",
+    "compliance:agco:licensed": "node scripts/agco-evidence-gate.mjs --require-approved",
+    "compliance:agco:evidence:init": "node scripts/agco-evidence-init.mjs",
+    "compliance:agco:evidence": "node scripts/agco-evidence-gate.mjs --require-complete-evidence"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",

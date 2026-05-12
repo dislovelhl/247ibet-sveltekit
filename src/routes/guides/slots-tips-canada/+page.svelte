@@ -9,7 +9,7 @@
     {
       n: 1,
       title: 'Understand RTP Before You Play',
-      body: 'RTP (Return to Player) is the percentage of all wagers a slot returns as winnings over millions of spins. A 96% RTP slot returns $96 for every $100 wagered on average — over time. RTP is a long-run statistical measure, not a per-session guarantee. At AGCO-licensed casinos, all slot RTPs must be certified and published. 247iBET requires minimum 95.5% average RTP across its lobby.',
+      body: 'RTP (Return to Player) is the percentage of all wagers a slot returns as winnings over millions of spins. A 96% RTP slot returns $96 for every $100 wagered on average — over time. RTP is a long-run statistical measure, not a per-session guarantee. At AGCO-licensed casinos, slot RTPs should be certified and available from the operator or provider. Verify the current game lobby and RTP disclosure before playing.',
       highlight: 'Look for slots with 96%+ RTP.',
     },
     {
@@ -21,7 +21,7 @@
     {
       n: 3,
       title: 'Set a Session Budget Before You Spin',
-      body: 'Decide your maximum session loss before starting — and stop when you reach it. This is the single most effective risk management technique. Divide your session budget by your average bet size to estimate how many spins you can take. Example: $50 session budget ÷ $0.50 per spin = 100 spins. Most regulated casinos (including 247iBET) let you set deposit and session limits in account settings.',
+      body: 'Decide your maximum session loss before starting — and stop when you reach it. This is the single most effective risk management technique. Divide your session budget by your average bet size to estimate how many spins you can take. Example: $50 session budget ÷ $0.50 per spin = 100 spins. Most regulated casinos provide account-limit tools; verify deposit and session-limit controls before playing.',
       highlight: 'Deposit limits protect your budget automatically.',
     },
     {
@@ -69,7 +69,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -125,13 +125,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <JsonLd
     schema={howToSchema({
       name: 'Online Slots Tips Canada',
-      description: 'Practical slots tips for Canadian players covering RTP, variance, bankroll control, and RNG certification.',
+      description:
+        'Practical slots tips for Canadian players covering RTP, variance, bankroll control, and RNG certification.',
       steps: tips.map((t) => ({ name: t.title, text: t.body.substring(0, 300) })),
     })}
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-widest"
@@ -144,7 +145,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       players at certified online casinos.
     </p>
     <p class="text-xs text-[#8492A6]">
-      Updated March 2026 · 18+/19+ · 247iBET requires 95.5%+ RTP certification
+      Updated March 2026 · 18+/19+ · Verify current RTP disclosures before playing
     </p>
   </header>
 
@@ -203,8 +204,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <p class="font-semibold text-[#F1F5F9] text-sm mb-1">Responsible Gambling Reminder</p>
         <p class="text-xs text-[#94A3B8] leading-relaxed">
           Slots are designed as entertainment, not income. No strategy eliminates the house edge.
-          Set deposit limits, use session reminders, and use the self-exclusion tools available at
-          247iBET.
+          Set deposit limits, use session reminders, and use the responsible-gambling and self-exclusion tools available through the operator or
+          separate gaming platform.
           <a href="/responsible-gambling" class="text-[#4A9EBF] underline decoration-dotted"
             >Responsible gambling resources →</a
           >
@@ -216,7 +217,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <IBetShowcase
     variant="hero"
     showFeatures={true}
-    ctaText="Play Slots at 247iBET"
+    ctaText="Review Slots Guidance"
     contextLabel="500+ certified slots · 95.5%+ RTP · Interac deposits"
   />
 

@@ -11,7 +11,7 @@
     heading: 'NBA Betting in Canada',
     breadcrumbLabel: 'NBA Betting',
     metaDescription:
-      'Review NBA betting in Canada with Raptors coverage, spread and total markets, player props, live in-play odds, and playoff futures at 247iBET.',
+      'Review NBA betting in Canada with Raptors coverage, spread and total market concepts, player props, in-play odds, and playoff futures.',
     keywords: 'NBA betting Canada, basketball betting Canada, NBA odds Canada',
     heroSubheading:
       'Follow Raptors games, compare spread and total markets, and track live NBA odds through the regular season, playoffs, and championship futures cycle.',
@@ -59,7 +59,7 @@
     infoPanelAccent: 'blue',
     faqItems: [
       {
-        question: 'What are the main NBA bet types at 247iBET?',
+        question: 'What are the main NBA bet types?',
         answer:
           'Spread, moneyline, totals, player props, and selected same-game parlay combinations are the main NBA betting options. Futures expand closer to the playoffs.',
       },
@@ -178,7 +178,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -192,7 +192,11 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
+      <img
+        src={page.heroImage}
+        alt={page.title + ' — online betting in Canada'}
+        class="h-full w-full object-cover opacity-80"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
@@ -289,7 +293,11 @@
   </section>
 
   <div class="mt-14">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel={page.ctaContextLabel} />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Check Availability"
+      contextLabel={page.ctaContextLabel}
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

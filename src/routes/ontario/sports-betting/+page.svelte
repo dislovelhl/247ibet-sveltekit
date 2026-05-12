@@ -13,7 +13,7 @@
     {
       question: 'Can I bet on the NHL in Ontario?',
       answer:
-        'Absolutely. NHL is one of the most popular markets in Ontario. We offer extensive pre-game and live in-play options for all NHL games.',
+        'NHL is one of the most popular Ontario sports-betting markets. Verify current pre-game and live in-play availability with the operator or separate gaming platform before wagering.',
     },
     {
       question: 'What is the legal betting age in Ontario?',
@@ -22,7 +22,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -69,7 +69,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -82,8 +82,9 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </nav>
     <h1 class="page-hero-title mb-4">Ontario Sports Betting</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
-      Bet on sports in Ontario with live odds, deep NHL and NBA markets, and Interac-friendly
-      payment paths. Use this page to check age rules, account access, and payout expectations.
+      Explore Ontario sports-betting rules, live-odds concepts, NHL/NBA market education, and
+      Interac-friendly payment caveats. Use this page to check age rules, account access, and payout
+      expectations.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: 2026-04-02</p>
   </header>
@@ -113,14 +114,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <div class="space-y-2">
         <h3 class="font-bold text-white uppercase tracking-tight text-xs">Responsible Play</h3>
         <p>
-          Use limits, breaks, and self-exclusion tools before your sportsbook routine starts to feel
+          Use platform-level limits, breaks, and self-exclusion tools before betting starts to feel
           automatic.
         </p>
       </div>
     </div>
   </section>
 
-  <IBetShowcase variant="hero" showFeatures={true} ctaText="Start Betting" />
+  <IBetShowcase variant="hero" showFeatures={true} ctaText="Explore Sportsbook Guide" />
 
   <section class="mt-16 space-y-12">
     <div>
@@ -132,8 +133,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           <h3 class="text-lg font-bold text-white mb-3">Explore All Sports Markets</h3>
           <p class="text-sm text-gray-400 mb-4">
-            Browse the full 247iBET sportsbook — NHL, NBA, UFC, parlays, and live betting for
-            Canadian players.
+            Browse 247iBET sportsbook education — NHL, NBA, UFC, parlays, and live-betting concepts
+            for Canadian players.
           </p>
           <span class="text-prestige-gold text-xs font-bold uppercase">Explore Sportsbook →</span>
         </a>

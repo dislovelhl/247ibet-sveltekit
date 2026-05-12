@@ -2,7 +2,6 @@
   import { ArrowRight, ChevronDown } from 'lucide-svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_CTA, IBET_URLS } from '$lib/ibet-brand';
-  import { counter } from '$lib/animations';
   import PayoutProgress from '$lib/components/PayoutProgress.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import { globalParallax } from '$lib/runes.svelte';

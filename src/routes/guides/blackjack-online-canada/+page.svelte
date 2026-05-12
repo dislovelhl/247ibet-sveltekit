@@ -25,7 +25,7 @@
     {
       name: 'Live Dealer Blackjack',
       rtp: '99.28–99.59%',
-      desc: 'Real dealer streamed in HD — Interactive Dealer, Evolution, or Pragmatic Live. Available 24/7 at 247iBET.',
+      desc: 'Real dealer streamed in HD — Interactive Dealer, Evolution, or Pragmatic Live. Availability depends on the operator and provider lineup.',
     },
     {
       name: 'Speed Blackjack',
@@ -90,7 +90,7 @@
   const faqs = [
     {
       q: 'Is online blackjack rigged at Canadian casinos?',
-      a: 'At AGCO-licensed and reputable offshore-licensed Canadian casinos, all digital blackjack games use certified Random Number Generators (RNG) tested by eCOGRA, iTech Labs, or GLI. The RNG ensures card shuffling is genuinely random and the published RTP is accurate. 247iBET exclusively uses RNG-certified game providers.',
+      a: 'At AGCO-licensed and reputable offshore-licensed Canadian casinos, all digital blackjack games use certified Random Number Generators (RNG) tested by eCOGRA, iTech Labs, or GLI. Certification is operator- and provider-specific, so verify the current game provider and certification details before playing.',
     },
     {
       q: 'What is the house edge in online blackjack?',
@@ -102,15 +102,14 @@
     },
     {
       q: 'What is the legal gambling age for blackjack in Canada?',
-      a: '19 in most provinces (ON, BC, MB, SK, NS, NB). 18 in Alberta and Québec. 247iBET requires age verification for all accounts.',
+      a: '19 in most provinces (ON, BC, MB, SK, NS, NB). 18 in Alberta and Québec. Regulated operators require age verification before play.',
     },
   ];
 
   const liveFeatures = ['24/7 Available', 'HD Streaming', 'Multiple Limits', 'Interac Deposits'];
 
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-
-  </script>
+</script>
 
 <svelte:head>
   <title>Online Blackjack Canada 2026 — Rules, Strategy &amp; Where to Play | 247iBET</title>
@@ -138,7 +137,8 @@
   <JsonLd
     schema={articleSchema({
       headline: 'Online Blackjack Canada 2026 — Rules, Strategy & Where to Play | 247iBET',
-      description: 'Online blackjack for Canadian players: game rules, basic strategy, RTP rates, live dealer blackjack, and AGCO-licensed casinos. 18+/19+.',
+      description:
+        'Online blackjack for Canadian players: game rules, basic strategy, RTP rates, live dealer blackjack, and AGCO-licensed casinos. 18+/19+.',
       url: canonicalUrl('/guides/blackjack-online-canada'),
       datePublished: '2026-04-27',
     })}
@@ -172,7 +172,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-[0.12em]"
@@ -266,13 +266,14 @@
 
   <section aria-labelledby="live-heading">
     <h2 id="live-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
-      Live Dealer Blackjack at 247iBET
+      Live Dealer Blackjack Guidance
     </h2>
     <div class="navy-card rounded-lg p-5 space-y-3">
       <p class="text-sm text-[#94A3B8] leading-relaxed">
-        247iBET offers live dealer blackjack 24/7 — real dealers streamed in HD with real cards.
-        Multiple table limits from low-stakes casual play to high-roller tables. Available to
-        players 18+/19+ in all supported Canadian provinces.
+        Some operators offer live dealer blackjack with real dealers streamed in HD; verify
+        availability on the separate gaming platform. Multiple table limits from low-stakes casual
+        play to high-roller tables. Available to players 18+/19+ in all supported Canadian
+        provinces.
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {#each liveFeatures as f}
@@ -311,7 +312,7 @@
   <IBetShowcase
     variant="hero"
     showFeatures={true}
-    ctaText="Play Live Blackjack"
+    ctaText="Explore Blackjack Guide"
     contextLabel="Live dealer · 24/7 · Interac deposits"
   />
 
@@ -347,7 +348,6 @@
       >
     </div>
   </nav>
-
 
   <div
     class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs leading-5 text-text-tertiary"

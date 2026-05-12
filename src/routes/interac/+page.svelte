@@ -21,28 +21,28 @@
 
   const trustItems = [
     {
-      title: 'Trusted by Canadians',
-      body: 'Canada&apos;s most trusted payment method',
+      title: 'Common CAD rail',
+      body: 'A familiar Canadian bank transfer method',
       icon: BadgeCheck,
     },
     {
-      title: 'Fast & Reliable',
-      body: 'Deposits in minutes. Withdrawals in 1-24 hours.',
+      title: 'Timing varies',
+      body: 'Deposits and withdrawals depend on operator and bank checks.',
       icon: Clock3,
     },
     {
-      title: 'Secure & Protected',
-      body: 'Bank-level security to protect your funds',
+      title: 'Bank-side flow',
+      body: 'Interac transfers run through participating financial institutions.',
       icon: ShieldCheck,
     },
   ];
 
   const depositSteps = [
-    'Log in to your 247iBET account',
+    'Open the operating-platform account',
     'Navigate to the Cashier',
     'Enter your deposit amount',
     'Confirm the transaction',
-    'Funds in your account',
+    'Wait for cashier confirmation',
   ];
 
   const withdrawalSteps = [
@@ -50,21 +50,21 @@
     'Confirm your account is verified',
     'Wait for operator approval',
     'Accept the transfer',
-    'Funds in your bank account',
+    'Wait for bank-side settlement',
   ];
 
   const timingRows = [
     {
       service: 'Interac Deposit',
-      time: 'Immediate - 10 mins',
+      time: 'Operator/bank dependent',
       limit: 'CAD $10 - $3,000',
-      notes: 'Most deposits are instant.',
+      notes: 'Timing varies by operator and bank checks.',
     },
     {
       service: 'Interac Withdrawal',
-      time: '1 - 24 hours (post-approval)',
+      time: 'Post-approval timing varies',
       limit: 'CAD $20 - $5,000',
-      notes: 'Payouts typically received in 15-30 mins.',
+      notes: 'Bank-side receipt timing varies after approval.',
     },
     {
       service: 'Account Verification',
@@ -94,19 +94,19 @@
   const faqItems = [
     {
       q: 'How long does an Interac withdrawal take?',
-      a: 'Once the operator approves your withdrawal, Interac e-Transfer typically arrives within 15–30 minutes. First withdrawals may take longer due to initial KYC checks.',
+      a: 'After operator approval, bank-side Interac e-Transfer timing can vary. First withdrawals may take longer because of KYC, bonus review, banking, or fraud checks.',
     },
     {
       q: 'Are there fees for using Interac?',
-      a: '247iBET does not charge fees for Interac e-Transfer deposits or withdrawals. Your bank may charge a nominal fee for sending e-Transfers — check with your financial institution.',
+      a: 'Fees vary by operator cashier and by financial institution. Verify the live platform terms and your bank plan before sending an e-Transfer.',
     },
     {
       q: 'What is the minimum Interac deposit?',
-      a: 'The minimum Interac e-Transfer deposit at 247iBET is CAD $10. Maximum deposits vary by account verification level and banking partner.',
+      a: 'Interac e-Transfer minimums and maximums vary by operator, account verification level, and banking partner. Verify the live cashier terms before depositing.',
     },
     {
       q: 'Is Interac safer than cards?',
-      a: 'Interac e-Transfer uses bank-level encryption and does not share your banking details with the casino — you send funds directly from your bank. This makes it as safe or safer than card payments for online gambling transactions.',
+      a: 'Interac e-Transfer runs through participating financial institutions and does not send money by email or text. Casino safety still depends on using a properly regulated operator, matching account details, and completing KYC before withdrawals.',
     },
     {
       q: 'Why was my Interac transfer declined?',
@@ -118,19 +118,19 @@
 </script>
 
 <svelte:head>
-  <title>Interac Casino Canada: Fast Deposits & Withdrawals at 247iBET</title>
+  <title>Interac Casino Canada: Deposits, Withdrawals & Limits | 247iBET</title>
   <meta
     name="description"
-    content="Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance."
+    content="Use Interac e-Transfer guidance to compare Canadian casino deposits, withdrawals, limits, fees, and cashier checks before funding an account."
   />
   <link rel="canonical" href={canonicalUrl('/interac')} />
   <JsonLd
     schema={{
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Interac Casino Canada: Fast Deposits & Withdrawals at 247iBET',
+      headline: 'Interac Casino Canada: Deposits, Withdrawals and Limits',
       description:
-        'Use Interac e-Transfer for fast Canadian casino deposits and withdrawals at 247iBET. Clear timing, secure CAD payments, and step-by-step guidance.',
+        'Use Interac e-Transfer guidance to compare Canadian casino deposits, withdrawals, limits, fees, and cashier checks before funding an account.',
       url: canonicalUrl('/interac'),
       datePublished: '2026-05-09',
       dateModified: '2026-05-09',
@@ -165,7 +165,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black text-white" role="presentation">
-  <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16 ">
+  <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
@@ -176,19 +176,25 @@
 
     <AffiliateDisclosure variant="inline" />
 
-    <header class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl">
-      <BackgroundAtmosphere 
-        src="/images/generated/interac-payment-hero.webp" 
+    <header
+      class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
+    >
+      <BackgroundAtmosphere
+        src="/images/generated/interac-payment-hero.webp"
         parallaxMultiplier={0.4}
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
-      
-      <div 
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
+      ></div>
+
+      <div
         class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 md:max-w-2xl text-left"
         style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="mb-5 flex items-center gap-2">
-          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+          <div
+            class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]"
+          >
             <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               CAD Native Payments
             </p>
@@ -197,15 +203,21 @@
 
         <h1 class="page-hero-title !tracking-tighter">
           Deposit &amp; Withdraw <br />
-          with <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Interac</span>
+          with
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Interac</span
+          >
         </h1>
         <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Fast, secure, and trusted. Use Interac e-Transfer to deposit and withdraw CAD at 247iBET, built for Canadian players.
+          Use Interac e-Transfer guidance to understand CAD deposits, withdrawals, timing caveats,
+          and cashier checks before visiting the separate gaming platform.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-[200px] shimmer-effect btn-magnetic">
-            Start Funding
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="hero-cta-primary min-w-[200px] shimmer-effect btn-magnetic"
+          >
+            Visit Platform
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </SafeExternalLink>
           <a href="#timing" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
@@ -232,7 +244,8 @@
       {/each}
     </div>
 
-    <section id="timing"
+    <section
+      id="timing"
       class="material-panel mt-14 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
     >
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -244,12 +257,12 @@
           </div>
           <div>
             <p class="font-black text-white">
-              Interac e-Transfer payouts at 247iBET are typically processed within 15-30 minutes of
-              approval.
+              Interac e-Transfer payout timing depends on operator approval, account verification,
+              bonus review, and bank-side processing.
             </p>
             <p class="mt-2 max-w-3xl text-sm leading-6 text-text-body">
-              This process includes fraud checks and bank verification. In rare cases, timing may
-              vary based on bank and security review.
+              Treat any exact timing, limit, or fee as a live operating-platform term to verify
+              before depositing or withdrawing.
             </p>
           </div>
         </div>
@@ -284,14 +297,14 @@
                 <span class="block text-lg font-black text-white">{step}</span>
                 <span class="mt-2 block text-sm leading-6 text-text-body">
                   {index === 0
-                    ? 'Access your account and make sure you have enabled 2FA.'
+                    ? 'Access the operating-platform account and use any required security controls.'
                     : index === 1
                       ? 'Select Deposit and choose Interac e-Transfer from the list of payment methods.'
                       : index === 2
-                        ? 'Input the amount you wish to fund.'
+                        ? 'Input the amount shown as eligible in the live cashier.'
                         : index === 3
                           ? 'Follow the secure Interac prompts to authorize the transfer from your bank.'
-                          : 'Your deposit is credited in minutes.'}
+                          : 'Wait for the cashier confirmation before assuming funds are available.'}
                 </span>
               </span>
             </li>
@@ -323,10 +336,10 @@
                     : index === 1
                       ? 'Ensure your account is fully verified to prevent delays.'
                       : index === 2
-                        ? 'Withdrawals are reviewed and approved, typically within 1-24 hours.'
+                        ? 'Withdrawals require operator review; timing varies by platform, KYC, and bonus status.'
                         : index === 3
                           ? 'Accept the Interac e-Transfer directly in your email or through your bank.'
-                          : 'Once accepted, funds typically arrive within 15-30 minutes.'}
+                          : 'Bank-side completion timing can vary after the transfer is accepted.'}
                 </span>
               </span>
             </li>
@@ -434,7 +447,7 @@
         Still have questions? <a
           href="/contact"
           class="font-black text-prestige-gold hover:text-prestige-gold-light"
-          >Contact our support team 24/7.</a
+          >Use the appropriate operator support channel for account issues.</a
         >
       </p>
     </section>
@@ -442,15 +455,14 @@
     <section class="material-panel mt-12 overflow-hidden p-7 shadow-2xl md:p-10">
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
-          <h2 class="text-3xl font-black text-white md:text-4xl">
-            Ready to make a secure deposit?
-          </h2>
+          <h2 class="text-3xl font-black text-white md:text-4xl">Ready to verify cashier terms?</h2>
           <p class="mt-3 text-base text-text-body">
-            Join 247iBET today and enjoy fast, trusted Interac payments.
+            Review current platform terms, eligibility, and responsible-play controls before
+            depositing.
           </p>
         </div>
         <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
-          Join Now - It&apos;s Free
+          Visit Platform
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
       </div>

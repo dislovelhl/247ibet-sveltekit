@@ -48,7 +48,7 @@ import { articleSchema } from '$lib/json-ld';
     ],
   };
 
-  const heroCtaText = 'Play Roulette Now';
+  const heroCtaText = 'Explore Roulette Guide';
   const bannerContextLabel = 'European wheels · French rules · Live roulette · CAD play';
 
   const faqTitle = 'Roulette FAQ';
@@ -82,24 +82,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>Roulette Online Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+    content="Learn roulette online in Canada by comparing European, French, and American roulette, reviewing odds differences, and seeing how live roulette fits in."
   />
   <meta property="og:title" content="Roulette Online Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+    content="Learn roulette online in Canada by comparing European, French, and American roulette, reviewing odds differences, and seeing how live roulette fits in."
   />
   <meta name="twitter:title" content="Roulette Online Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in."
+    content="Learn roulette online in Canada by comparing European, French, and American roulette, reviewing odds differences, and seeing how live roulette fits in."
   />
   <link rel="canonical" href={canonicalUrl('/casino/roulette')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Roulette Online Canada | 247iBET Canada',
       description:
-        'Play roulette online in Canada at 247iBET. Compare European, French, and American roulette, review the odds differences, and see how live roulette fits in.',
+        'Learn roulette online in Canada by comparing European, French, and American roulette, reviewing odds differences, and seeing how live roulette fits in.',
       url: canonicalUrl('/casino/roulette'),
       datePublished: '2026-04-27',
     })}

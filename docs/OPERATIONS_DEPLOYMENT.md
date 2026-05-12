@@ -33,17 +33,18 @@ Quality gates:
 pnpm check      # svelte-kit sync + svelte-check
 pnpm lint       # ESLint over repo source
 pnpm test       # Vitest suite
-pnpm build      # production build
-pnpm test:e2e   # Playwright, when browser deps are installed
+pnpm build           # production build
+pnpm compliance:agco # no-proof public-copy/evidence guard
+pnpm test:e2e        # Playwright, when browser deps are installed
 ```
 
 Preferred pre-ship sequence:
 
 ```bash
-pnpm check && pnpm lint && pnpm test && pnpm build
+pnpm check && pnpm lint && pnpm test && pnpm build && pnpm compliance:agco
 ```
 
-For documentation-only changes, still run at least `pnpm lint`, `pnpm test`, and `pnpm build` when docs include path/command/source references that could drift or when repository policy requires the full gate.
+For documentation-only changes, still run at least `pnpm lint`, `pnpm test`, `pnpm build`, and `pnpm compliance:agco` when docs include path/command/source references that could drift or when repository policy requires the full gate.
 
 ## Environment variables
 
@@ -179,11 +180,12 @@ PY
 - [ ] Run `pnpm lint`.
 - [ ] Run `pnpm test`.
 - [ ] Run `pnpm build`.
+- [ ] Run `pnpm compliance:agco`.
 - [ ] Run targeted Playwright/browser checks for user-visible UI changes.
 - [ ] Confirm no secrets or generated scratch files are staged.
 - [ ] Confirm generated project assets under `static/images/generated/` have matching route references and optimized `.webp` variants.
 - [ ] If public IA changed, update sitemap/search/workflow registry/LLM maps as appropriate.
-- [ ] If claims changed, verify licensing/payout/bonus/game-count caveats.
+- [ ] If claims changed, verify licensing/payout/bonus/game-count caveats. For AGCO/iGaming Ontario licence-claim activation, follow `docs/compliance/agco-license-activation-runbook.md` and run the strict private-evidence gate.
 
 ## Recovery runbooks
 

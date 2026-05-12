@@ -27,6 +27,9 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | [Performance](./PERFORMANCE.md) | Active | Performance budget, generated-image policy, font policy, bundle checks, and Lighthouse workflow. |
 | [Accessibility](./A11Y.md) | Active | WCAG target, implemented patterns, and pending audits. |
 | [Compliance audit](./COMPLIANCE_AUDIT_v0.3.md) | Snapshot | Historical compliance state; verify before treating as current. |
+| [AGCO licence evidence checklist](./compliance/agco-license-evidence-checklist.md) | Active | Required documentary evidence before public AGCO/iGaming Ontario licence claims may be enabled. |
+| [AGCO licence activation runbook](./compliance/agco-license-activation-runbook.md) | Active | Exact activation, verification, and rollback steps after private evidence is approved. |
+| [AGCO web-surface control matrix](./compliance/agco-web-surface-control-matrix.md) | Active | Control map for licence, affiliate, responsible-gambling, payment, promotion, and platform-boundary claims. |
 | [Development plan](./DEVELOPMENT_PLAN.md) | Snapshot | Historical planning artifact; useful for context, not a live roadmap. |
 | [Systemic improvement](./SYSTEMIC_IMPROVEMENT.md) | Snapshot | Historical audit/remediation summary. |
 | [Agent labels](./agents/triage-labels.md) | Support | Issue and agent-triage labeling. |
@@ -47,6 +50,7 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | --- | --- | --- |
 | Brand, canonical URL, SEO defaults | `src/lib/site.ts` | [Content model](./CONTENT_MODEL.md) |
 | Partner/platform URLs, CTA labels, disclosure | `src/lib/ibet-brand.ts` | [Content model](./CONTENT_MODEL.md), [Gaming platform contract](./integration/gaming-platform-contract.md) |
+| AGCO/iGaming Ontario licence activation | `src/lib/ibet-brand.ts`, `docs/compliance/agco-license-evidence.template.json`, `scripts/agco-evidence-gate.mjs` | [AGCO licence evidence checklist](./compliance/agco-license-evidence-checklist.md), [AGCO licence activation runbook](./compliance/agco-license-activation-runbook.md), [AGCO web-surface control matrix](./compliance/agco-web-surface-control-matrix.md) |
 | Routes and sitemap | `src/routes/**`, `src/routes/sitemap.xml/+server.ts` | [Architecture](./ARCHITECTURE.md), [Content model](./CONTENT_MODEL.md) |
 | SEO/GEO/AEO page registry | `src/lib/workflows/pages.ts` | [Content model](./CONTENT_MODEL.md), [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) |
 | Design tokens and utilities | `DESIGN.md`, `src/styles/**`, `src/app.css` | [Design system](./DESIGN_SYSTEM.md) |
@@ -57,6 +61,6 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 
 ## Current checkout notes
 
-- Vitest currently covers **190 tests across 29 files**; re-run `pnpm test` before quoting the number outside the repository.
+- Run `pnpm test` for the current Vitest file/test count before quoting coverage outside the repository.
 - Generated hero image references under `/images/generated/...` should resolve to files in `static/images/generated/`; use `.webp` from route markup and keep the source `.png` for future re-optimization.
 - Workflow API routes share server-only helpers in `src/lib/server/workflow-route.ts`; avoid reintroducing per-route secret-check or start-response duplication.

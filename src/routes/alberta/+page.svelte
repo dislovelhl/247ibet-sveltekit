@@ -27,15 +27,15 @@
   const benchmarkReviewCards = [
     {
       href: '/casino',
-      title: '247iBET Casino',
+      title: '247iBET Casino Guide',
       description:
-        'Canadian casino and sportsbook — check current availability for Alberta players.',
+        'Canadian casino guide coverage — check current operator availability for Alberta players.',
     },
     {
       href: '/sportsbook',
-      title: '247iBET Sportsbook',
+      title: '247iBET Sportsbook Guide',
       description:
-        'Sports betting markets for NHL, NBA, UFC, and more. Check Alberta access status.',
+        'Sports-betting market education for NHL, NBA, UFC, and more. Check Alberta access status.',
     },
   ];
 
@@ -65,31 +65,30 @@
         'Use the age grid when you need Alberta-specific guidance alongside Ontario and Quebec.',
     },
   ];
-
 </script>
 
 <svelte:head>
   <title>Online Casino Alberta | 247iBET</title>
   <meta
     name="description"
-    content="Your authority on the Alberta regulated iGaming launch. 247iBET verified tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
+    content="Alberta regulated iGaming launch guide with official-source tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
   />
   <meta property="og:title" content="Online Casino Alberta | 247iBET" />
   <meta
     property="og:description"
-    content="Your authority on the Alberta regulated iGaming launch. 247iBET verified tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
+    content="Alberta regulated iGaming launch guide with official-source tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
   />
   <meta name="twitter:title" content="Online Casino Alberta | 247iBET" />
   <meta
     name="twitter:description"
-    content="Your authority on the Alberta regulated iGaming launch. 247iBET verified tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
+    content="Alberta regulated iGaming launch guide with official-source tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators."
   />
   <link rel="canonical" href={canonicalUrl('/alberta')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Online Casino Alberta | 247iBET',
       description:
-        'Your authority on the Alberta regulated iGaming launch. 247iBET verified tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators.',
+        'Alberta regulated iGaming launch guide with official-source tracking of AGLC licensing, legal sportsbooks, and upcoming casino operators.',
       url: canonicalUrl('/alberta'),
       datePublished: '2026-04-27',
     })}
@@ -118,7 +117,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
         class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
@@ -134,7 +133,8 @@
         src="/images/generated/canada-market-hero.webp"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
-        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y *
+          0.4}px, 0) scale(1.1);"
       />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
@@ -147,9 +147,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
-              Launch Watch
-            </p>
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">Launch Watch</p>
           </div>
           <div class="floating-chrome px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
@@ -268,8 +266,8 @@
     <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
       <h2 class="text-2xl font-bold mb-4">Platform performance benchmarks</h2>
       <p class="text-sm text-gray-400 leading-relaxed mb-5">
-        These benchmarks highlight our platform standards across different provincial contexts. They
-        are based on our commitment to secure and transparent iGaming.
+        These benchmarks highlight public-web evaluation standards across different provincial
+        contexts. They are based on our commitment to secure and transparent iGaming.
       </p>
       <div class="material-group grid gap-2 p-2 md:grid-cols-2">
         {#each benchmarkReviewCards as item}

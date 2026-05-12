@@ -193,8 +193,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           Aim Higher, Play Smarter
         </h3>
         <p class="text-gray-400 text-sm mb-6 pb-6 border-b border-white/10 leading-relaxed">
-          Identify the best high-limit casinos with verified fast payout records in our comparative
-          operator matrix.
+          Identify high-limit casino factors with documented payout terms, source checks, and
+          operator-dependent timing caveats in the comparative matrix.
         </p>
         <a
           href="/best-paying-online-casinos-canada"
@@ -209,8 +209,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
               >iGaming Security Checked</span
             >
             <p class="text-xs text-gray-500 italic mt-1">
-              High-win withdrawals at our recommended sites are processed via encrypted Interac
-              channels for maximum security.
+              High-win withdrawal safety depends on operator controls, Interac availability,
+              identity checks, and bank-side completion. Verify terms before moving funds.
             </p>
           </div>
         </div>

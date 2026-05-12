@@ -26,7 +26,7 @@
     ],
   };
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -54,7 +54,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -104,16 +104,16 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           3-leg parlay at <span class="odds">-110</span>/<span class="odds">-110</span>/<span
             class="odds">-110</span
           >
-          pays roughly <span class="odds">+596</span> (+5.96:1) but has only a ~12.5% implied
-          probability of winning all three legs.
+          pays roughly <span class="odds">+596</span> (+5.96:1) but has only a ~12.5% implied probability
+          of winning all three legs.
         </p>
       </div>
       <div>
         <h3 class="text-white font-bold mb-2">Same-game parlays (SGP)</h3>
         <p>
           Same-game parlays combine bets from a single game (e.g., NHL game winner + total goals).
-          247iBET offers same-game parlays across major Canadian sports markets. Note: SGP odds are
-          often correlated — sportsbooks adjust payouts accordingly.
+          Same-game parlay availability depends on the operator and sport. Note: SGP odds are often
+          correlated — sportsbooks adjust payouts accordingly.
         </p>
       </div>
     </div>

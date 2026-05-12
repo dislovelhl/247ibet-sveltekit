@@ -14,7 +14,7 @@
     {
       question: 'How fast are Interac casino deposits and withdrawals in Canada?',
       answer:
-        'Interac says transfers are almost instant, but can take up to 30 minutes depending on your bank or credit union. Casino withdrawals add a second layer: operator review, KYC checks, and fraud screening. In 247iBET testing across 18 licensed Ontario operators in Q1 2026, 14 processed Interac withdrawals within 4 hours.',
+        'Interac says transfers are almost instant, but can take up to 30 minutes depending on your bank or credit union. Casino withdrawals add a second layer: operator review, KYC checks, bonus status, fraud screening, and bank-side completion. Verify current payout timing in the licensed operator cashier.',
     },
     {
       question: 'What are typical Interac transfer limits at Canadian casinos?',
@@ -55,9 +55,9 @@
       note: 'Interac says Canadians use products across a network of nearly 300 institutions.',
     },
     {
-      metric: '247iBET payout checks',
-      value: '14 of 18 withdrawals within 4 hours',
-      note: 'First-party testing at licensed Ontario operators in Q1 2026.',
+      metric: 'Operator payout checks',
+      value: 'Verify live cashier terms',
+      note: 'Withdrawal timing depends on operator approval, KYC, bonus review, and bank-side completion.',
     },
   ];
 
@@ -104,7 +104,7 @@
     {
       name: '247iBET How We Test',
       href: '/about/how-we-test',
-      note: 'Our withdrawal-speed and payment-method testing methodology.',
+      note: 'Our public-source withdrawal-speed and payment-method review methodology.',
     },
   ];
 
@@ -117,14 +117,13 @@
   ];
 
   const stats = [
-    { stat: '14 / 18', label: 'Platforms processed Interac payouts < 4 hours in live Q1 testing.' },
-    { stat: '100%', label: 'Compliance with mandatory license display in cashier footers.' },
-    { stat: '16%', label: 'Requested secondary KYC on first-time Interac withdrawals.' },
+    { stat: 'Verify', label: 'Current operator cashier terms before assuming payout timing.' },
+    { stat: 'Check', label: 'Licence display and official regulator status before registration.' },
+    { stat: 'Prepare', label: 'Secondary KYC can be requested on first-time Interac withdrawals.' },
   ];
 
   import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-
-  </script>
+</script>
 
 <svelte:head>
   <title>Interac Casino Guide Canada 2026 | 247iBET</title>
@@ -168,23 +167,40 @@
         name: f.question,
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
-    }}/>
+    }}
+  />
   <JsonLd
     schema={howToSchema({
       name: 'Interac Casino Guide Canada 2026',
-      description: 'Interac casino guide for Canadian players. Audit deposits, withdrawals, limits, fees, common banking questions, and Play responsibly before you use the cashier.',
+      description:
+        'Interac casino guide for Canadian players. Audit deposits, withdrawals, limits, fees, common banking questions, and Play responsibly before you use the cashier.',
       steps: [
-        { name: 'Choose Interac e-Transfer as your payment method', text: 'Access the verified operator cashier and select Interac e-Transfer from the primary payment directory. Interac is one of the most common deposit options on licensed Canadian casino sites.' },
-        { name: 'Set your deposit amount within limits', text: 'Confirm both your bank limit and the casino cashier limit before sending money. Interac consumer transaction limits are set by your financial institution, typically $2,000 to $3,000 per transfer. Casino-specific minimums and maximums are separate.' },
-        { name: 'Complete the transfer through your online banking', text: 'Execute the transfer via your native institutional banking interface. Interac says transfers are almost instant but can take up to 30 minutes depending on your bank or credit union. Money moves through financial institution payment networks, not by email.' },
-        { name: 'Finalize security question or Autodeposit confirmation', text: 'Complete the security question or Autodeposit confirmation protocols. Autodeposit settings live inside your online or mobile banking profile and can reduce interception risk by removing the need for a security question.' },
-        { name: 'For withdrawals: complete KYC first', text: 'Pre-emptive KYC document verification ensures faster payouts. Withdrawals depend on operator approval, KYC checks, and fraud screening. In 247iBET testing, 14 of 18 licensed Ontario operators processed Interac withdrawals within 4 hours for verified accounts.' },
+        {
+          name: 'Choose Interac e-Transfer as your payment method',
+          text: 'Access the verified operator cashier and select Interac e-Transfer from the primary payment directory. Interac is one of the most common deposit options on licensed Canadian casino sites.',
+        },
+        {
+          name: 'Set your deposit amount within limits',
+          text: 'Confirm both your bank limit and the casino cashier limit before sending money. Interac consumer transaction limits are set by your financial institution, typically $2,000 to $3,000 per transfer. Casino-specific minimums and maximums are separate.',
+        },
+        {
+          name: 'Complete the transfer through your online banking',
+          text: 'Execute the transfer via your native institutional banking interface. Interac says transfers are almost instant but can take up to 30 minutes depending on your bank or credit union. Money moves through financial institution payment networks, not by email.',
+        },
+        {
+          name: 'Finalize security question or Autodeposit confirmation',
+          text: 'Complete the security question or Autodeposit confirmation protocols. Autodeposit settings live inside your online or mobile banking profile and can reduce interception risk by removing the need for a security question.',
+        },
+        {
+          name: 'For withdrawals: complete KYC first',
+          text: 'Pre-emptive KYC document verification can reduce payout friction. Withdrawals depend on operator approval, KYC checks, bonus review, fraud screening, and bank-side completion. Verify current timing in the licensed operator cashier.',
+        },
       ],
     })}
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -285,8 +301,9 @@
       </table>
     </div>
     <p class="text-xs text-gray-500 mt-4">
-      Sources: Interac FAQ and Interac e-Transfer 101, plus 247iBET first-party payout testing from
-      Q1 2026.
+      Sources: Interac FAQ and Interac e-Transfer 101, plus operator-disclosed cashier terms where
+      available. Verify current payout timing directly with the operating platform before
+      depositing.
     </p>
   </section>
 
@@ -436,9 +453,9 @@
       {/each}
     </div>
     <p class="text-xs text-gray-500 italic m-0">
-      Methodology: 247iBET reviewers used real-money accounts, completed standard KYC, and recorded
-      elapsed time from withdrawal request to bank receipt using Interac e-Transfer. Results
-      describe our tests, not a promise for every account or every withdrawal amount.
+      Methodology: this public guide summarizes operator-disclosed Interac timing factors,
+      common cashier terms, identity-check dependencies, and bank-side processing caveats. It does
+      not represent first-party account testing by this public site or a promise for any withdrawal amount.
     </p>
   </section>
 
@@ -543,7 +560,6 @@
       </li>
     </ul>
   </nav>
-
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

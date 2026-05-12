@@ -3,7 +3,7 @@
   import { canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -61,7 +61,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -78,9 +78,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     >
       Consumer Protection
     </div>
-    <h1 class="page-hero-title mb-4">
-      Provincially Regulated vs Offshore Sites
-    </h1>
+    <h1 class="page-hero-title mb-4">Provincially Regulated vs Offshore Sites</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       As the Canadian iGaming landscape matures with Ontario's established market and Alberta's
       evolving frameworks, making the right choice between a regulated and unregulated operator has
@@ -107,7 +105,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       <div class="navy-card rounded-2xl p-6 border border-white/10">
         <div class="text-red-400 text-2xl mb-4">⚠</div>
-        <h3 class="text-xl font-bold text-white mb-2">No Guaranteed Payouts</h3>
+        <h3 class="text-xl font-bold text-white mb-2">Payout Recourse Can Be Limited</h3>
         <p class="text-gray-400 text-sm leading-relaxed">
           Unregulated sites can withhold your winnings without consequence. You have no legal
           recourse within Canada if an offshore operator refuses to process your withdrawal.
@@ -146,8 +144,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </h2>
     <p class="text-[#94A3B8] mb-6 leading-relaxed">
       Regulated operators are subjected to rigorous testing by independent laboratories to verify
-      the fairness (RNG) of their games. Additionally, their financial reserves are strictly
-      separated from operational funds, meaning your deposits are always secure.
+      the fairness (RNG) of their games. Additionally, regulated frameworks may require player-fund segregation or other controls.
+      Verify the current operator terms and regulator rules before assuming how deposits are protected.
     </p>
 
     <ul class="space-y-4">
@@ -195,8 +193,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <div>
           <strong class="text-white block">Segregated Player Funds</strong>
           <span class="text-gray-400 text-sm"
-            >Your deposits are protected — regulated operators must keep player funds separate from
-            operational accounts.</span
+            >Player-fund controls vary by regulator and operator — verify the current segregation,
+            trust-account, and insolvency-protection rules before depositing.</span
           >
         </div>
       </li>
@@ -206,14 +204,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <div class="navy-card rounded-2xl p-6 border border-prestige-gold/20 mb-10">
     <h3 class="text-lg font-bold text-white mb-3">Play Safe, Play Legal</h3>
     <p class="text-gray-400 text-sm leading-relaxed mb-4">
-      Always verify that a sportsbook or casino displays the official AGCO or applicable provincial
-      regulatory seal before depositing funds.
+      Always verify a sportsbook or casino against official AGCO, iGaming Ontario, or applicable
+      provincial regulator sources before depositing funds. Do not rely on a badge alone.
     </p>
     <a
       href="/best-online-casinos-canada"
       class="inline-flex items-center gap-2 bg-prestige-gold text-navy-black font-bold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
     >
-      View AGCO-Licensed Casinos →
+      View Operator-Status Checklist →
     </a>
   </div>
 

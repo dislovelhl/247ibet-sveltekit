@@ -8,7 +8,7 @@
   <title>Elite Features & Platform Standards | 247iBET Canada</title>
   <meta
     name="description"
-    content="Explore the elite features of 247iBET: premium games, lightning-fast Interac payouts, and industry-leading security standards."
+    content="Explore 247iBET guidance: casino categories, sportsbook education, Interac payout caveats, and security-aware platform handoffs."
   />
   <link rel="canonical" href={canonicalUrl(`/reviews/${$page.params.slug}`)} />
 </svelte:head>
@@ -26,8 +26,8 @@
 
   <h1 class="page-hero-title mb-4">Platform Standards & Features</h1>
   <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8] mb-8">
-    Discover what makes 247iBET the premier choice for Canadian players — from our lightning-fast
-    payouts to our curated library of premium casino games.
+    Discover 247iBET guidance for Canadian readers — from Interac payout caveats to payouts to our
+    curated library of premium casino games.
   </p>
 
   <div class="navy-card rounded-2xl p-8 text-center">
@@ -41,7 +41,7 @@
   <div class="mt-12">
     <IBetShowcase
       variant="banner"
-      ctaText="Join 247iBET"
+      ctaText="Visit Platform"
       contextLabel="Fast CAD payouts · Interac deposits · 19+"
     />
   </div>

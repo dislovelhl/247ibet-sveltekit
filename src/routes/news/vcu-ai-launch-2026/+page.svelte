@@ -71,7 +71,7 @@
     class="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-prestige-gold/10 blur-[100px] opacity-25 pointer-events-none"
   ></div>
 
-  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-4xl">
     <nav aria-label="Breadcrumb" class="mb-8">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -114,20 +114,20 @@
       </h2>
       <ul class="space-y-2 text-sm text-gray-300">
         <li class="flex items-start gap-2">
-          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Real-time AGCO and AGLC compliance
-          signal tracking across Ontario and Alberta markets
+          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Official-source AGCO and AGLC compliance-signal
+          tracking across Ontario and Alberta markets
         </li>
         <li class="flex items-start gap-2">
           <span class="text-prestige-gold shrink-0 mt-0.5">•</span> AI-ready structured data infrastructure
           for citation by ChatGPT, Claude, Perplexity, and Google AI Overviews
         </li>
         <li class="flex items-start gap-2">
-          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Standardized operator data across
-          47+ Ontario-licensed operators
+          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Standardized public operator data
+          fields for Ontario market-directory review
         </li>
         <li class="flex items-start gap-2">
-          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Interac payout speed and KYC friction
-          benchmarking at scale
+          <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Interac payout-policy and KYC friction
+          fields based on public/operator-disclosed evidence
         </li>
         <li class="flex items-start gap-2">
           <span class="text-prestige-gold shrink-0 mt-0.5">•</span> Alberta launch watchlist with operator
@@ -166,17 +166,17 @@
       <h2 class="text-2xl font-bold text-white">Alberta Market Tracking</h2>
       <p>
         With Alberta's regulated private-operator market expected to launch under the Alberta
-        iGaming Corporation (AiGC), 247iBET has deployed dedicated tracking infrastructure for
-        operator readiness, licensing signals, and market entry timelines. The platform's Alberta
-        watchlist provides real-time editorial scoring of operator launch probability.
+        iGaming Corporation (AiGC), 247iBET publishes dedicated editorial tracking pages for
+        operator readiness, licensing signals, and market entry timelines. The Alberta watchlist
+        provides periodic editorial context and should not be treated as live regulatory status.
       </p>
 
       <h2 class="text-2xl font-bold text-white">About 247iBET</h2>
       <p>
-        247iBET is a Canadian iGaming intelligence platform tracking Ontario and Alberta operator
-        markets for casino and sportsbook players. The platform provides operator reviews,
-        regulatory compliance signals, payment method analysis, and responsible gambling resources
-        for players across Canada.
+        247iBET is a Canadian iGaming editorial intelligence site covering Ontario and Alberta
+        market context for casino and sportsbook readers. The public web surface provides educational
+        reviews, regulator-source references, payment-method explainers, and responsible-gambling
+        resources for readers across Canada.
       </p>
     </div>
 

@@ -1,0 +1,61 @@
+{
+  "legalOperatorIdentity": {
+    "legalEntityName": "",
+    "businessOrTradeNames": [],
+    "approvedDomains": [],
+    "notes": "Do not put secrets here; store confidential documents in the private legal evidence system."
+  },
+  "agcoRegistration": {
+    "registrationNumber": "",
+    "registrationType": "",
+    "effectiveDate": "YYYY-MM-DD",
+    "expiryOrRenewalDate": "YYYY-MM-DD",
+    "officialDocumentReference": "",
+    "publicRegistryUrl": ""
+  },
+  "igamingOntarioOperatingAgreement": {
+    "agreementReference": "",
+    "approvedBrands": [],
+    "approvedSites": [],
+    "jurisdictionScope": [],
+    "launchOrActivationConditions": []
+  },
+  "ontarioGoLiveReadiness": {
+    "agcoCertificateOfRegistrationReference": "",
+    "technologyComplianceConfirmationReference": "",
+    "regulatoryReportingSetupReference": "",
+    "secureDataChannelSetupReference": "",
+    "goLiveApprovalOrConditionsReference": ""
+  },
+  "directoryReconciliation": {
+    "directoryUrl": "https://www.igamingontario.ca/en/player/regulated-igaming-market",
+    "listingName": "",
+    "listingDateShownByIGO": "YYYY-MM-DD",
+    "categories": [],
+    "screenshotOrArchiveReference": ""
+  },
+  "publicCopyApproval": {
+    "approverNameOrRole": "",
+    "approvalDate": "YYYY-MM-DD",
+    "approvedLicenceWording": "",
+    "approvedBadgeOrLogoRules": "",
+    "approvedPagesOrComponents": []
+  },
+  "releaseGate": {
+    "maySetIbetProfileAgcoLicensedTrue": false,
+    "mayPublishAgcoOrIGOClaims": false,
+    "releaseOwnerNameOrRole": "",
+    "approvalDate": "YYYY-MM-DD",
+    "mustRun": [
+      "pnpm check",
+      "pnpm lint",
+      "pnpm test",
+      "pnpm build",
+      "pnpm compliance:agco",
+      "AGCO_EVIDENCE_FILE=docs/compliance/agco-license-evidence.local.json pnpm compliance:agco:evidence",
+      "pnpm compliance:agco:licensed",
+      "AGCO_EVIDENCE_FILE=docs/compliance/agco-license-evidence.local.json pnpm compliance:agco:licensed",
+      "git diff --check"
+    ]
+  }
+}

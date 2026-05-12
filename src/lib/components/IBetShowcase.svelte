@@ -132,7 +132,7 @@
     </div>
   </div>
 {:else}
-  <section class="relative overflow-hidden" aria-label="247iBET platform showcase">
+  <section class="relative overflow-hidden" aria-label="247iBET public guide showcase">
     <div class="bg-navy-black p-8 md:p-14 relative">
       <div class="relative z-10">
         <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-10">

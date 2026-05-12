@@ -4,20 +4,19 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>Best Betting Apps Canada 2026 | iOS &amp; Android | 247iBET</title>
   <meta
     name="description"
-    content="Compare Canadian sports betting apps for iPhone and Android. We rate live betting UX, Interac deposits, parlay builders, and AGCO licensing."
+    content="Compare Canadian sports betting apps for iPhone and Android. Review live betting UX, Interac policy notes, parlay builders, and official licensing checks."
   />
   <meta property="og:title" content="Best Betting Apps Canada 2026 | iOS &amp; Android | 247iBET" />
   <meta
     property="og:description"
-    content="Compare Canadian sports betting apps for iPhone and Android. We rate live betting UX, Interac deposits, parlay builders, and AGCO licensing."
+    content="Compare Canadian sports betting apps for iPhone and Android. Review live betting UX, Interac policy notes, parlay builders, and official licensing checks."
   />
   <link rel="canonical" href={canonicalUrl('/best-betting-apps-canada')} />
   <JsonLd
@@ -41,7 +40,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       '@type': 'Article',
       headline: 'Best Betting Apps Canada 2026 — iOS & Android',
       description:
-        'Compare Canadian sports betting apps for iPhone and Android. We rate live betting UX, Interac deposits, parlay builders, and AGCO licensing.',
+        'Compare Canadian sports betting apps for iPhone and Android. Review live betting UX, Interac policy notes, parlay builders, and official licensing checks.',
       url: 'https://247ibet.ca/best-betting-apps-canada',
       datePublished: '2026-03-01',
       dateModified: '2026-03-30',
@@ -49,7 +48,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -60,15 +59,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </nav>
     <div class="mb-5 flex flex-wrap items-center gap-2">
       <span class="page-hero-kicker">Mobile sportsbook rankings</span>
-      <span class="live-tag"><span class="live-dot"></span> Live odds tested</span>
-      <span class="status-badge status-badge--licensed">AGCO licensed picks</span>
+      <span class="live-tag"><span class="live-dot"></span> Odds UX reviewed</span>
+      <span class="status-badge status-badge--licensed">Verify licensing</span>
     </div>
     <h1 class="page-hero-title text-[clamp(2rem,8vw,3.75rem)] mb-4">
       Best Betting Apps Canada 2026
     </h1>
     <p class="page-hero-subtitle max-w-3xl text-base sm:text-lg">
-      Field-tested mobile rankings for iOS and Android sportsbooks in Canada — evaluated on
-      biometric login security, SGP builder latency, and AGCO-compliant responsible gambling tools
+      Mobile rankings for iOS and Android sportsbooks in Canada — reviewed for login-security
+      disclosures, SGP builder UX, and responsible-gambling tools aligned to Ontario expectations
       for on-the-go wagering.
     </p>
     <p class="mt-3 text-xs text-text-tertiary">
@@ -115,7 +114,6 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         reliability — for casual betting, mobile web is fully sufficient.
       </p>
     </div>
-
 
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
       Play responsibly. 19+ only. <a

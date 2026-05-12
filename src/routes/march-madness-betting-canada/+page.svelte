@@ -24,7 +24,7 @@
     },
     {
       type: 'Same-game parlays',
-      desc: 'Combine game winner + player props + total into one bet on a single game. Available at 247iBET and major Canadian sportsbooks for March Madness markets.',
+      desc: 'Combine game winner + player props + total into one bet on a single game. Availability depends on the operating platform and current Canadian sportsbook terms.',
     },
     {
       type: 'Live in-play',
@@ -32,14 +32,14 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>March Madness Betting Canada 2026 — NCAA Tournament Guide | 247iBET</title>
   <meta
     name="description"
-    content="How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites."
+    content="March Madness betting in Canada guide covering NCAA tournament markets, bracket contests, live in-play concepts, and official Ontario operator checks."
   />
   <meta
     property="og:title"
@@ -47,7 +47,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <meta
     property="og:description"
-    content="How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites."
+    content="March Madness betting in Canada guide covering NCAA tournament markets, bracket contests, live in-play concepts, and official Ontario operator checks."
   />
   <meta
     name="twitter:title"
@@ -55,13 +55,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
   <meta
     name="twitter:description"
-    content="How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites."
+    content="March Madness betting in Canada guide covering NCAA tournament markets, bracket contests, live in-play concepts, and official Ontario operator checks."
   />
   <link rel="canonical" href={canonicalUrl('/march-madness-betting-canada')} />
   <JsonLd
     schema={articleSchema({
       headline: 'March Madness Betting Canada 2026 — NCAA Tournament Guide | 247iBET',
-      description: 'How to bet on March Madness in Canada. Best sportsbooks for NCAA tournament betting, bracket contests, live in-play tips, and AGCO-licensed Ontario sites.',
+      description:
+        'March Madness betting in Canada guide covering NCAA tournament markets, bracket contests, live in-play concepts, and official Ontario operator checks.',
       url: canonicalUrl('/march-madness-betting-canada'),
       datePublished: '2026-04-27',
     })}
@@ -83,7 +84,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -92,9 +93,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">March Madness Betting</li>
       </ol>
     </nav>
-    <h1 class="page-hero-title mb-4">
-      March Madness Betting Canada 2026
-    </h1>
+    <h1 class="page-hero-title mb-4">March Madness Betting Canada 2026</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Best Canadian sportsbooks for NCAA tournament betting — game lines, futures, live in-play, and
       bracket-style contests. AGCO-licensed Ontario options highlighted.

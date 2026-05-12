@@ -88,7 +88,7 @@
     {
       name: '247iBET How We Test',
       href: '/about/how-we-test',
-      note: 'Our documented process for KYC, payment, and withdrawal verification.',
+      note: 'Editorial process for reviewing public KYC, payment, and withdrawal information.',
     },
     {
       name: 'Interac e-Transfer 101',

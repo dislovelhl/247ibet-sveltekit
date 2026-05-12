@@ -62,7 +62,7 @@
   <article class="material-panel rounded-3xl p-8 md:p-12 reveal-fade-up" use:reveal>
     <div class="mb-8 rounded-xl border border-error/30 bg-error/5 p-6 text-center">
       <p class="text-lg font-black text-error uppercase tracking-widest">
-        19+ · Play Responsibly · Ontario & Alberta Only
+        19+ in Ontario · 18+ in Alberta · Play Responsibly
       </p>
       <p class="mt-2 text-sm text-text-body">
         This is an archived reference page. This page is not a current offer page. Eligibility,

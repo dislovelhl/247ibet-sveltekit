@@ -80,24 +80,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <title>Mobile Casino Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+    content="Learn how mobile casino access works in Canada, including mobile web, PWA-style access, device support, and touch-screen game considerations."
   />
   <meta property="og:title" content="Mobile Casino Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+    content="Learn how mobile casino access works in Canada, including mobile web, PWA-style access, device support, and touch-screen game considerations."
   />
   <meta name="twitter:title" content="Mobile Casino Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens."
+    content="Learn how mobile casino access works in Canada, including mobile web, PWA-style access, device support, and touch-screen game considerations."
   />
   <link rel="canonical" href={canonicalUrl('/casino/mobile')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Mobile Casino Canada | 247iBET Canada',
       description:
-        'Play mobile casino in Canada at 247iBET. Learn how mobile web and PWA-style access work, which devices are best supported, and which games feel strongest on touch screens.',
+        'Learn how mobile casino access works in Canada, including mobile web, PWA-style access, device support, and touch-screen game considerations.',
       url: canonicalUrl('/casino/mobile'),
       datePublished: '2026-04-27',
     })}

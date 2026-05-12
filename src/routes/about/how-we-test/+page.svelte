@@ -11,7 +11,6 @@
     BookOpen,
   } from 'lucide-svelte';
 
-
   const CRITERIA = [
     {
       icon: ShieldCheck,
@@ -32,13 +31,13 @@
       color: 'text-orange-400',
       bg: 'bg-orange-500/10 border border-orange-500/20',
       steps: [
-        'Open a real-money account with standard verification',
-        'Complete full KYC (photo ID, proof of address) before testing',
-        'Make a deposit and wager minimum playthrough requirements',
-        'Submit an Interac e-Transfer withdrawal request',
-        'Record exact elapsed time from request to bank receipt',
-        'Test multiple times across different days and times',
-        'Compare published claims vs actual measured times',
+        'Review available public cashier terms, operator documentation, and approved evidence before making payout claims',
+        'Check what KYC documents and approval steps the operator discloses before first withdrawal',
+        'Review deposit, wagering, and playthrough terms without presenting unverified public inducements',
+        'Review Interac withdrawal availability and documented payout evidence where available',
+        'Record only verified timing evidence, and otherwise use caveated timing language',
+        'Re-check evidence across updates instead of relying on a single stale claim',
+        'Compare public claims against official terms, regulator sources, and documented evidence',
       ],
     },
     {
@@ -48,11 +47,11 @@
       bg: 'bg-yellow-500/10 border border-yellow-500/20',
       steps: [
         'Confirm Interac e-Transfer availability (critical for Canadians)',
-        'Test deposit processing time for each listed method',
-        'Verify withdrawal method availability matches deposit methods',
+        'Review deposit-processing terms for each listed method',
+        'Verify whether withdrawal method availability matches deposit methods in current terms',
         'Check for hidden fees on deposits or withdrawals',
         'Confirm CAD account availability (no currency conversion required)',
-        'Test minimum/maximum deposit and withdrawal limits',
+        'Review minimum/maximum deposit and withdrawal limits in current terms',
       ],
     },
     {
@@ -64,7 +63,7 @@
         'For casinos: count unique slot titles, live dealer tables, and table game variants',
         'Verify RNG certification by eCOGRA, iTech Labs, or equivalent',
         'For sportsbooks: check depth of NHL, CFL, NBA, NFL, and UFC markets',
-        'Test in-play betting availability and lag/latency',
+        'Review in-play betting availability and any disclosed latency or market restrictions',
         'Assess same-game parlay (SGP) builder quality',
         'Identify any Canadian-specific game or market restrictions',
       ],
@@ -75,8 +74,8 @@
       color: 'text-purple-400',
       bg: 'bg-purple-500/10 border border-purple-500/20',
       steps: [
-        'Test live chat response time (target: < 3 minutes)',
-        'Submit a withdrawal support ticket and measure response time',
+        'Review live chat availability, published support hours, and documented response evidence',
+        'Review withdrawal-support channels and documented response evidence where available',
         'Verify Canadian toll-free phone line availability',
         'Check for bilingual (EN/FR) support options',
         'Attempt to escalate a dispute and record the process',
@@ -103,17 +102,17 @@
   <title>How We Verify Online Casinos and Sportsbooks | 247iBET</title>
   <meta
     name="description"
-    content="Our Canadian casino and sportsbook testing covers licensing checks, real withdrawal tests, payment methods, KYC documentation, support response, and game fairness audits."
+    content="Our Canadian casino and sportsbook review process covers licensing checks, payout-term evidence, payment methods, KYC documentation, support channels, and game-fairness disclosures."
   />
   <meta property="og:title" content="How We Verify Online Casinos and Sportsbooks | 247iBET" />
   <meta
     property="og:description"
-    content="Canadian casino and sportsbook verification methodology covering licensing, withdrawals, payments, KYC, and game fairness."
+    content="Canadian casino and sportsbook verification methodology covering official licensing sources, public payout terms, payment availability, support, and game-fairness disclosures."
   />
   <meta name="twitter:title" content="How We Verify Online Casinos and Sportsbooks | 247iBET" />
   <meta
     name="twitter:description"
-    content="Our Canadian iGaming testing process: licensing, withdrawals, payments, KYC, support, and promotional fairness."
+    content="Our Canadian iGaming review process: official licensing sources, public payout terms, payment availability, support, and promotional fairness."
   />
   <link rel="canonical" href={canonicalUrl('/about/how-we-test')} />
   <JsonLd
@@ -122,13 +121,13 @@
       '@type': 'WebPage',
       headline: 'How We Verify Online Casinos and Sportsbooks',
       description:
-        'Documented Canadian iGaming testing methodology covering licensing, withdrawals, payments, KYC, support, and promotional fairness.',
+        'Documented Canadian iGaming review methodology covering official licensing sources, public payout terms, payment availability, support, and promotional fairness.',
       url: 'https://247ibet.ca/about/how-we-test',
     }}
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -157,9 +156,9 @@
       </div>
       <h1 class="page-hero-title mb-4">How We Maintain Platform Standards</h1>
       <p class="text-lg text-gray-300 font-sans max-w-2xl leading-relaxed">
-        Every featured page on 247iBET follows a documented, repeatable verification process. We
-        open real accounts, make real deposits, and test real withdrawals. No pay-to-place. No
-        undisclosed conflicts.
+        Every featured page on 247iBET follows a documented, repeatable review process. We
+        prioritize official regulator sources, current operator terms, public cashier information,
+        and documented evidence where available. No pay-to-place. No undisclosed conflicts.
       </p>
     </div>
   </header>
@@ -168,7 +167,7 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-4">Verification Principles</h2>
     <ul class="space-y-3 text-sm text-gray-400 font-sans">
-      {#each ['We open and fund real accounts — our team tests withdrawals with real money.', 'Operators cannot pay for placement or to alter their position.', "We disclose all commercial relationships — commissions don't influence our placement decisions.", 'Featured pages are updated at least quarterly; major changes are updated within 72 hours.', 'We comply with AGCO advertising guidelines — bonus amounts are not displayed on public pages.', 'We cite primary sources — regulators, operator T&Cs, and test results — not secondary claims.'] as principle}
+      {#each ['We review available operator terms, public cashier information, and documented payout evidence where available.', 'Operators cannot pay for placement or to alter their position.', "We disclose all commercial relationships — commissions don't influence our placement decisions.", 'Featured pages are updated at least quarterly; major changes are updated within 72 hours.', 'We apply AGCO-aware advertising controls — bonus amounts are not displayed as public inducements.', 'We cite primary sources — regulators, operator T&Cs, and documented evidence — not secondary claims.'] as principle}
         <li class="flex items-start gap-2">
           <ShieldCheck class="w-4 h-4 text-slate-blue shrink-0 mt-0.5" aria-hidden="true" />
           {principle}
@@ -202,7 +201,7 @@
   <section class="navy-card rounded-2xl p-6 mb-8">
     <h2 class="text-xl font-bold mb-3">Update Policy</h2>
     <p class="text-sm text-gray-400 font-sans mb-3">
-      All account verification checks display a "last checked" date. Full re-checks happen quarterly.
+      All public review checks display a "last checked" date. Full re-checks happen quarterly.
       Triggered re-checks happen within 72 hours when:
     </p>
     <ul class="space-y-2 text-sm text-gray-400 font-sans">
@@ -222,5 +221,4 @@
       >Affiliate Disclosure</a
     >.
   </div>
-
 </div>

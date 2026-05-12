@@ -22,9 +22,9 @@
       : ''}"
   >
     <strong class="text-text-body">Affiliate Disclosure:</strong>
-    Our platform provides independent reviews and guides for Canadian iGaming. We may receive
-    commissions from the operators featured on this page through our affiliate links. This does not
-    affect our editorial integrity or the fairness of our ratings.
+    This public site provides independent reviews and guides for Canadian iGaming. We may receive
+    commissions from the operators featured on this page through affiliate links. This does not
+    affect editorial standards or the fairness of ratings.
     <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">Learn more</a>.
   </div>
 {/if}

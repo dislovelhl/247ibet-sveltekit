@@ -14,7 +14,7 @@
     ['KYC required', 'Yes (PayPal + casino)', 'Yes (casino only)'],
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -72,7 +72,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -100,15 +100,15 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <section class="mb-8">
     <IBetShowcase
       variant="compact"
-      ctaText="Deposit at 247iBET"
-      contextLabel="Interac deposits available"
+      ctaText="Check cashier methods"
+      contextLabel="Verify current methods on the gaming platform"
     />
   </section>
 
   <div class="navy-card mb-4 rounded-2xl p-4 border border-yellow-500/20">
     <p class="text-sm text-yellow-300">
-      Note: 247iBET supports Interac e-Transfer for deposits and withdrawals. For the fastest and
-      most seamless experience, Interac is the recommended method.
+      Note: Interac e-Transfer is commonly available at Canadian-facing operators. Verify current
+      deposit and withdrawal methods on the separate gaming platform before funding an account.
     </p>
   </div>
 

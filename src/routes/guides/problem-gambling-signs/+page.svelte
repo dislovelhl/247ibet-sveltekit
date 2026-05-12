@@ -85,7 +85,7 @@
     },
     {
       name: 'Self-Exclusion',
-      desc: "Permanently or indefinitely close your account. All AGCO-licensed operators integrate with iGaming Ontario's province-wide exclusion register.",
+      desc: 'Block access for a set period or indefinitely, depending on the operator and province. iGaming Ontario says each regulated Ontario operator offers its own self-exclusion program while a centralized program is still being developed.',
     },
     {
       name: 'GameSense Advisor',
@@ -165,7 +165,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#EF4444] uppercase tracking-widest"
@@ -199,8 +199,6 @@
       </div>
     </div>
   </header>
-
-
 
   <section aria-labelledby="signs-b-heading">
     <h2 id="signs-b-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
@@ -287,10 +285,11 @@
 
   <section aria-labelledby="tools-heading">
     <h2 id="tools-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
-      Responsible Gambling Tools at 247iBET
+      Responsible Gambling Tools to Look For
     </h2>
     <p class="text-sm text-[#94A3B8] mb-4 leading-relaxed">
-      AGCO regulations require all licensed Ontario operators to provide the following tools:
+      Ontario operators must provide safer-gambling controls, but account-level settings live on the
+      separate operating platform. Verify the current tools before playing:
     </p>
     <div class="space-y-3">
       {#each tools as t}

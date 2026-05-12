@@ -27,7 +27,7 @@
       statusColor: 'border-green-500/30 text-green-400',
       date: 'Available now — check current Alberta access',
       highlight:
-        'Canadian casino and sportsbook with fast payouts, NHL/NBA/UFC markets, and 24/7 support.',
+        'Canadian casino and sportsbook guidance with NHL/NBA/UFC market education, payout caveats, and platform handoff reminders.',
       provinces: ['Ontario', 'Alberta'],
     },
     {
@@ -37,7 +37,7 @@
       statusColor: 'border-yellow-500/30 text-yellow-400',
       date: 'Alberta launch TBC — monitoring AIGC licensing',
       highlight:
-        'Multiple Ontario-licensed operators are monitoring the Alberta market. Check back for updates.',
+        'Multiple operators active in Ontario may monitor the Alberta market. Treat this as a launch-watch signal, not Alberta approval.',
       provinces: ['Ontario'],
     },
   ];
@@ -65,7 +65,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -134,7 +134,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-6xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-6xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -146,9 +146,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </nav>
 
   <header class="mb-10">
-    <h1 class="page-hero-title mb-4">
-      Upcoming Alberta Sportsbooks
-    </h1>
+    <h1 class="page-hero-title mb-4">Upcoming Alberta Sportsbooks</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Alberta's regulated private-operator iGaming market is expected to launch under the Alberta
       iGaming Corporation (AiGC). This page is a launch watchlist, not an official approval

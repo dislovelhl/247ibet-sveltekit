@@ -28,54 +28,54 @@
   const trustItems = [
     { title: '100% Canadian Focused', icon: ShieldCheck },
     { title: 'Secure & Reliable', icon: LockKeyhole },
-    { title: '24/7 Customer Support', icon: Headphones },
+    { title: 'Support Pathways', icon: Headphones },
   ];
 
   const featureCards = [
     {
       title: 'Interac Payouts',
-      body: 'Our deposits are fast and secure. Withdrawals are processed quickly following approval and verification.',
+      body: 'Deposit and withdrawal timing depends on operator approval, verification, bonus review, and bank-side completion.',
       href: '/deposit',
       cta: 'View Payout Details',
       icon: Zap,
     },
     {
-      title: '500+ Casino Games',
-      body: 'Premium slots, table games, jackpots, and exclusive originals.',
+      title: 'Casino Game Guides',
+      body: 'Educational guides for slots, table games, jackpots, and live-dealer categories.',
       href: '/casino/slots',
       cta: 'Explore Games',
       icon: Trophy,
     },
     {
-      title: 'Elite Sportsbook',
-      body: 'Pre-game and live betting on NHL, CFL, NBA, UFC, and more.',
+      title: 'Sportsbook Guide',
+      body: 'Educational coverage of pre-game and live-betting markets across NHL, CFL, NBA, UFC, and more.',
       href: '/sportsbook',
-      cta: 'Bet Now',
+      cta: 'Explore Guide',
       icon: Gamepad2,
     },
     {
       title: 'Live Dealer Tables',
-      body: 'Real dealers. Real excitement. Our live casino is available 24/7.',
+      body: 'Learn how live-dealer tables work and verify current availability on the separate gaming platform.',
       href: '/casino/live-casino',
-      cta: 'Play Live',
+      cta: 'Explore Live Guide',
       icon: MonitorPlay,
     },
   ];
 
   const safetyStrip = [
     {
-      title: 'Fully Licensed',
-      body: 'We maintain strict compliance with provincial regulations',
+      title: 'Verify Licensing',
+      body: 'Verify current operator status against official provincial regulator sources',
       icon: BadgeCheck,
     },
     {
       title: 'Secure & Private',
-      body: 'Advanced encryption and data protection for all players',
+      body: 'Use operators with clear security, privacy, and account-protection controls',
       icon: LockKeyhole,
     },
     {
-      title: '24/7 Support',
-      body: 'Our dedicated team is here to help you around the clock',
+      title: 'Support Guidance',
+      body: 'Support and escalation pathways are explained before platform handoff',
       icon: Headphones,
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       title: 'Live Casino',
-      body: 'Live dealer roulette, blackjack and more. Real dealers. Real thrill.',
+      body: 'Live dealer roulette, blackjack, and more — verify current provider availability before playing.',
       href: '/casino/live-casino',
       image: '/images/generated/casino-live-hero.webp',
       icon: MonitorPlay,
@@ -114,7 +114,7 @@
     },
     {
       title: 'Roulette Online',
-      body: 'European, American, French and more. All your favourite roulette tables.',
+      body: 'European, American, French, and other roulette variants explained for comparison.',
       href: '/casino/roulette',
       image: '/images/generated/casino-roulette-hero.webp',
       icon: CircleDollarSign,
@@ -145,7 +145,7 @@
   const whyCards = [
     {
       title: 'CAD Native Banking',
-      body: 'No currency conversion fees. Deposits and withdrawals in CAD with no FX surprises.',
+      body: 'CAD banking guidance explains how to avoid unnecessary FX friction before depositing.',
       icon: CreditCard,
     },
     {
@@ -154,18 +154,18 @@
       icon: Zap,
     },
     {
-      title: '24/7 Support',
-      body: 'Our support team is available anytime to assist with account or gaming questions.',
+      title: 'Support Guidance',
+      body: 'Use official operator support for account issues; this site explains escalation and safety paths.',
       icon: Headphones,
     },
   ];
 
   const platformStats = [
-    { label: 'Casino games', value: '500+' },
-    { label: 'Live dealer tables', value: 'Available 24/7' },
-    { label: 'Interac e-Transfer', value: 'Deposits instant' },
-    { label: 'Withdrawal speed', value: 'Typically under 24h' },
-    { label: 'Support', value: '24/7 live chat' },
+    { label: 'Casino guides', value: 'Category coverage' },
+    { label: 'Live dealer', value: 'Verify availability' },
+    { label: 'Interac e-Transfer', value: 'Timing varies' },
+    { label: 'Withdrawal timing', value: 'Approval dependent' },
+    { label: 'Support', value: 'Operator-owned' },
     { label: 'Currency', value: 'CAD native' },
     { label: 'Mobile', value: 'Desktop & mobile' },
   ];
@@ -173,19 +173,19 @@
   const faqItems = [
     {
       q: 'Are online casinos legal in Canada?',
-      a: 'Access depends on your province. We maintain strict compliance with all local regulations. Confirm our availability in your province before joining.',
+      a: 'Access depends on province, operator registration, and current platform availability. Verify official regulator sources before opening an account.',
     },
     {
       q: 'What payment methods are available for deposits and withdrawals?',
-      a: 'Interac e-Transfer is our featured banking method for Canadian players — deposits are fast and CAD-native. Withdrawals are processed quickly after standard account and security checks.',
+      a: 'Interac e-Transfer is a common CAD banking method for Canadian players. Deposit and withdrawal timing depends on operator approval, account checks, and bank-side completion.',
     },
     {
       q: 'How fast are casino payouts?',
-      a: 'Withdrawal timing depends on account status, identity verification (KYC), and bank processing. Most Interac payouts complete within 15–30 minutes after approval.',
+      a: 'Withdrawal timing depends on account status, identity verification, bonus review, operator approval, and bank processing. Verify live cashier terms before relying on timing estimates.',
     },
     {
       q: 'What types of games are available?',
-      a: 'We offer over 500 premium casino games including online slots, live dealer tables (roulette, blackjack, baccarat), and classic table games optimized for all devices.',
+      a: 'Availability depends on the separate gaming platform or operator you choose. Use public guides to compare slots, live dealer tables, roulette, blackjack, baccarat, and mobile compatibility before handoff.',
     },
   ];
 
@@ -196,9 +196,9 @@
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Online Casino Canada',
-      headline: 'Online Casino Canada: Slots, Live Games & Fast Payouts',
+      headline: 'Online Casino Canada: Slots, Live Games & Payout Guidance',
       description:
-        'Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts.',
+        'Explore online casino game categories in Canada with 247iBET public guides: slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and payout caveats.',
       url: 'https://247ibet.ca/casino',
       author: {
         '@type': 'Organization',
@@ -219,31 +219,30 @@
       ],
     },
   ];
-
 </script>
 
 <svelte:head>
-  <title>Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET</title>
+  <title>Online Casino Canada: Slots, Live Games & Payout Guidance | 247iBET</title>
   <meta
     name="description"
-    content="Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts."
+    content="Explore online casino game categories in Canada with 247iBET public guides: slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and payout caveats."
   />
   <meta
     property="og:title"
-    content="Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET"
+    content="Online Casino Canada: Slots, Live Games & Payout Guidance | 247iBET"
   />
   <meta
     property="og:description"
-    content="Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts."
+    content="Explore online casino game categories in Canada with 247iBET public guides: slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and payout caveats."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://247ibet.ca/casino" />
   <link rel="canonical" href={canonicalUrl('/casino')} />
   <JsonLd
     schema={articleSchema({
-      headline: 'Online Casino Canada: Slots, Live Games & Fast Payouts | 247iBET',
+      headline: 'Online Casino Canada: Slots, Live Games & Payout Guidance | 247iBET',
       description:
-        'Play online casino games in Canada with 247iBET. Explore slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and fast Interac payouts.',
+        'Explore online casino game categories in Canada with 247iBET public guides: slots, live dealer tables, blackjack, roulette, baccarat, CAD banking, and payout caveats.',
       url: canonicalUrl('/casino'),
       datePublished: '2026-04-27',
     })}
@@ -279,7 +278,8 @@
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
-        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y *
+          0.4}px, 0) scale(1.1);"
       ></div>
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
@@ -299,8 +299,8 @@
         </div>
 
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Experience our world-class catalogue of 500+ casino games, live dealer tables, and
-          lightning-fast Interac payments. Join the elite rank of Canadian players today.
+          Explore public casino category guides, live-dealer education, and Interac payment caveats
+          before verifying current availability on the separate gaming platform.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
@@ -349,7 +349,7 @@
           Canadian online casino and sports betting, ethically reviewed.
         </p>
         <div class="mt-5 flex flex-wrap gap-3">
-          {#each ['Fast Deposits', 'Fair Gaming', 'Secure & Private'] as item}
+          {#each ['Payment caveats', 'Fair-play checks', 'Security reminders'] as item}
             <span class="floating-chrome px-3 py-1 text-xs font-black text-success">{item}</span>
           {/each}
         </div>
@@ -358,7 +358,7 @@
         href={IBET_URLS.register}
         class="hero-cta-primary min-w-64 justify-center btn-magnetic"
       >
-        Play Now
+        Visit Platform
         <ArrowRight class="h-5 w-5" aria-hidden="true" />
       </SafeExternalLink>
     </section>
@@ -463,7 +463,7 @@
                     <div
                       class="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all"
                     >
-                      Enter Lobby
+                      Read Guide
                       <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -477,7 +477,7 @@
 
     <section class="mt-10">
       <div class="mb-6">
-        <h2 class="text-3xl font-black">Why Play Casino at 247iBET?</h2>
+        <h2 class="text-3xl font-black">Why Use 247iBET Casino Guides?</h2>
       </div>
       <div class="material-group grid gap-2 p-2 md:grid-cols-3">
         {#each whyCards as card}
@@ -506,14 +506,15 @@
       <div class="grid items-center gap-7 lg:grid-cols-[1fr_auto]">
         <div>
           <p class="mb-3 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
-            Canada&apos;s go-to online casino
+            Canadian casino guide
           </p>
           <h2 class="text-4xl font-black md:text-5xl">
-            Casino games, sports markets, and Interac payouts &mdash; all in one place.
+            Casino categories, sports-market education, and Interac payout caveats — all in one
+            place.
           </h2>
           <p class="mt-4 max-w-2xl text-lg leading-8 text-text-body">
-            Join 247iBET for a premium Canadian gaming experience trusted by players across the
-            country.
+            Use 247iBET as a public guide, then verify eligibility, licensing, and platform terms
+            before playing.
           </p>
         </div>
         <div class="flex flex-col gap-3">
@@ -521,14 +522,14 @@
             href={IBET_URLS.register}
             class="hero-cta-primary w-full justify-center sm:w-auto sm:min-w-72 btn-magnetic"
           >
-            Start Playing
+            Visit Platform
             <ArrowRight class="h-5 w-5" aria-hidden="true" />
           </SafeExternalLink>
           <a
             href="/responsible-gambling"
             class="hero-cta-secondary w-full justify-center sm:w-auto sm:min-w-72"
           >
-            Safety Tools
+            Responsible Gambling Resources
           </a>
         </div>
       </div>

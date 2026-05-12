@@ -9,15 +9,15 @@
 </script>
 
 <svelte:head>
-  <title>Search — Platform Features &amp; Guides | 247iBET</title>
+  <title>Search — Public-Site Features &amp; Guides | 247iBET</title>
   <meta
     name="description"
-    content="Search 247iBET for platform features, betting guides, casino bonuses, tools, and Canadian iGaming news."
+    content="Search 247iBET for public-site features, betting guides, casino bonus explainers, tools, and Canadian iGaming news."
   />
-  <meta property="og:title" content="Search — Platform Features & Guides | 247iBET" />
+  <meta property="og:title" content="Search — Public-Site Features & Guides | 247iBET" />
   <meta
     property="og:description"
-    content="Search 247iBET for platform features, betting guides, casino bonuses, tools, and Canadian iGaming news."
+    content="Search 247iBET for public-site features, betting guides, casino bonus explainers, tools, and Canadian iGaming news."
   />
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href={canonicalUrl('/search')} />

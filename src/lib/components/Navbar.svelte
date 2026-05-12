@@ -47,11 +47,11 @@
     { href: '/sportsbook/nhl', label: 'NHL' },
     { href: '/sportsbook/nba', label: 'NBA' },
     { href: '/sportsbook/ufc', label: 'UFC' },
-    { href: '/fast-payouts', label: 'Fast Payouts' },
+    { href: '/fast-payouts', label: 'Payout Guide' },
   ];
 
   const quickLinks = [
-    { href: '/fast-payouts', label: 'Fast payouts', icon: CreditCard },
+    { href: '/fast-payouts', label: 'Payout guide', icon: CreditCard },
     { href: '/legal-online-gambling-canada', label: 'Legal guide', icon: ShieldCheck },
     { href: '/responsible-gambling', label: 'Responsible gaming', icon: Headphones },
   ] as const;
@@ -178,12 +178,8 @@
     : 'bg-gradient-to-b from-navy-black/55 via-navy-black/25 to-transparent backdrop-blur-sm'}"
 >
   <!-- Tier 1: Utility bar — desktop only, remains visible on scroll -->
-  <div
-    class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100"
-  >
-    <div
-      class="hidden h-8 items-center justify-end px-4 sm:px-6 lg:flex lg:px-8"
-    >
+  <div class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100">
+    <div class="hidden h-8 items-center justify-end px-4 sm:px-6 lg:flex lg:px-8">
       <div class="floating-chrome flex items-center gap-0.5 px-1">
         <a
           href="https://x.com/247ibet"
@@ -337,13 +333,13 @@
   </div>
 
   <!-- Tier 3: Sub-nav — desktop only, remains visible on scroll -->
-  <div
-    class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100"
-  >
+  <div class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100">
     <div class="hidden lg:block">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Quick category navigation">
-          <ul class="segmented-chrome mt-2 flex min-h-[44px] items-center overflow-x-auto rounded-full px-1 [scrollbar-width:none]">
+          <ul
+            class="segmented-chrome mt-2 flex min-h-[44px] items-center overflow-x-auto rounded-full px-1 [scrollbar-width:none]"
+          >
             {#each subLinks as link (link.href)}
               <li>
                 <a
@@ -389,9 +385,11 @@
     >
       <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
         <div class="flex items-center justify-between mb-4">
-          <p class="font-mono text-xs uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
-          <button 
-            type="button" 
+          <p class="font-mono text-xs uppercase tracking-[0.15em] text-text-tertiary">
+            Navigation Menu
+          </p>
+          <button
+            type="button"
             onclick={closeMobileMenu}
             class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
           >
@@ -404,6 +402,7 @@
           <div class="grid grid-cols-2 gap-2">
             <a
               href="/"
+              data-sveltekit-preload-data="tap"
               class="segmented-item col-span-2 flex min-h-[46px] items-center justify-center rounded-2xl px-4 text-sm font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
               '/'
                 ? 'bg-prestige-gold/[0.12] text-prestige-gold'
@@ -417,6 +416,7 @@
             {#each mainLinks as item (item.href)}
               <a
                 href={item.href}
+                data-sveltekit-preload-data="tap"
                 class="segmented-item flex min-h-[46px] items-center justify-center rounded-2xl px-3 text-center text-sm font-bold transition-colors hover:bg-white/[0.05] hover:text-prestige-gold focus-visible:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/70 {pathname ===
                 item.href
                   ? 'bg-prestige-gold/[0.12] text-prestige-gold'
@@ -439,6 +439,7 @@
               {@const ItemIcon = item.icon}
               <a
                 href={item.href}
+                data-sveltekit-preload-data="tap"
                 class="material-cell flex min-h-[48px] items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-text-body transition-colors hover:border-prestige-gold/30 hover:text-white focus-visible:border-prestige-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold/40"
                 onclick={closeMobileMenu}
               >
@@ -455,7 +456,10 @@
         <div class="flex flex-col gap-3 border-t soft-separator pt-6">
           <a
             href={PARTNER.url}
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
             class="page-cta-primary w-full"
+            aria-label={`${IBET_CTA.primary} — affiliate handoff`}
             onclick={closeMobileMenu}
           >
             {IBET_CTA.primary}
@@ -464,6 +468,7 @@
 
           <a
             href="/responsible-gambling"
+            data-sveltekit-preload-data="tap"
             class="segmented-item flex min-h-[48px] items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white transition-colors hover:border-prestige-gold/30 hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black"
             onclick={closeMobileMenu}
           >
@@ -477,4 +482,3 @@
     </div>
   {/if}
 </nav>
-av>

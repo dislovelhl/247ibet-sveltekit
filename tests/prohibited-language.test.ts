@@ -27,9 +27,11 @@ const SRC_ROOT = resolve(process.cwd(), 'src');
 const ROUTES_DIR = join(SRC_ROOT, 'routes');
 const COMPONENTS_DIR = join(SRC_ROOT, 'lib/components');
 const PUBLIC_TS_FILES = [
+  join(SRC_ROOT, 'lib/authors.ts'),
   join(SRC_ROOT, 'lib/ibet-brand.ts'),
   join(SRC_ROOT, 'lib/site.ts'),
   join(SRC_ROOT, 'lib/json-ld.ts'),
+  join(SRC_ROOT, 'lib/search-index.ts'),
 ];
 
 /** Routes excluded from scanning (pattern match on relative path) */
@@ -201,6 +203,36 @@ const PROHIBITED: ProhibitedPhrase[] = [
     exempt: [/responsible-gambling/],  // Educational mention of what "Canadian licensed" means is OK
   },
   {
+    pattern: /legally\s+serve\s+Canadians/i,
+    severity: 'P1',
+    reason:
+      'Broad offshore/operator legality claim without province-specific legal evidence. Use verification-first provincial/regulator language.',
+  },
+  {
+    pattern: /operate\s+under\s+Kahnawake\s+licensing/i,
+    severity: 'P1',
+    reason:
+      'Broad Kahnawake licensing/availability claim needs operator-specific evidence and should not be stated as a general public-web guarantee.',
+  },
+  {
+    pattern: /AGCO-approved\s+new\s+casinos/i,
+    severity: 'P1',
+    reason:
+      'Use registered/listed/current-verification language rather than implying blanket AGCO approval of new casinos.',
+  },
+  {
+    pattern: /licensed\s+operators\s+across\s+Ontario\s+and\s+Alberta/i,
+    severity: 'P1',
+    reason:
+      'Implies cross-province operator licensing scope without current documentary support. Use launch-watch/verify-current-status language.',
+  },
+  {
+    pattern: /Discover\s+Licensed\s+Casinos/i,
+    severity: 'P1',
+    reason:
+      'SEO title overstates licensing discovery; use verify-licensing language unless exact current approved operators are sourced.',
+  },
+  {
     pattern: /Best\s+odds\s+guarantee/i,
     severity: 'P1',
     reason: 'Best odds guarantee is an unsupported comparative claim.',
@@ -221,6 +253,181 @@ const PROHIBITED: ProhibitedPhrase[] = [
     severity: 'P1',
     reason:
       'Province-specific CTA framing that may read as a call-to-action inducement on Ontario public pages. Use neutral language.',
+  },
+  {
+    pattern: /\bat\s+247iBET\b/i,
+    severity: 'P1',
+    reason:
+      'Reads like first-party operational casino/sportsbook/payment execution. Use public-guide or separate-platform wording.',
+  },
+  {
+    pattern: /\b247iBET\s+account\b/i,
+    severity: 'P1',
+    reason:
+      'Implies this public web repo owns player account state. Use separate-platform/operator account wording.',
+  },
+  {
+    pattern: /247iBET\s+reviewers\s+used\s+real-money\s+accounts/i,
+    severity: 'P1',
+    reason:
+      'Implies first-party real-money testing and KYC/payment execution without documentary evidence.',
+  },
+  {
+    pattern: /247iBET\s+platform\s+activity/i,
+    severity: 'P1',
+    reason:
+      'Ambiguous first-party platform wording. Use public-site, editorial, or separate-platform wording.',
+  },
+  {
+    pattern: /247iBET\s+platform\s+showcase/i,
+    severity: 'P1',
+    reason:
+      'Ambiguous first-party platform showcase label. Use public-guide or separate-platform wording.',
+  },
+  {
+    pattern: /every\s+layer\s+of\s+the\s+247iBET\s+experience/i,
+    severity: 'P1',
+    reason:
+      'Implies first-party operational security ownership. Use public guide or separate-platform controls wording.',
+  },
+  {
+    pattern: /industry-leading\s+standards\s+to\s+protect\s+your\s+data\s+and\s+funds/i,
+    severity: 'P1',
+    reason:
+      'Unsupported security/funds protection claim. Use educational security-control language.',
+  },
+  {
+    pattern: /deposits\s+are\s+always\s+secure/i,
+    severity: 'P1',
+    reason:
+      'Absolute funds-safety guarantee. Use regulator/operator verification language instead.',
+  },
+  {
+    pattern: /Our\s+team\s+maintains\s+and\s+verifies\s+all\s+platform\s+standards\s+on\s+247iBET/i,
+    severity: 'P1',
+    reason:
+      'Implies first-party platform standards and operational verification ownership.',
+  },
+  {
+    pattern: /fast\s+payments,\s+and\s+responsible\s+gaming\s+for\s+all\s+Canadian\s+players/i,
+    severity: 'P1',
+    reason:
+      'Implied operator/payment/RG performance claim from author metadata.',
+  },
+  {
+    pattern: /premier\s+Canadian\s+sportsbook/i,
+    severity: 'P1',
+    reason:
+      'Operator-style sportsbook positioning without documentary licence evidence. Use sportsbook education wording.',
+  },
+  {
+    pattern: /Lightning-fast\s+Interac\s+funding/i,
+    severity: 'P1',
+    reason:
+      'Unsupported payment-speed and funding claim. Use Interac funding-check education wording.',
+  },
+  {
+    pattern: /247iBET\s+earns\s+revenue\s+from\s+platform\s+activity/i,
+    severity: 'P1',
+    reason:
+      'Ambiguous platform-activity revenue wording. Use public-site CTA routing or owned brand surfaces wording.',
+  },
+  {
+    pattern: /247iBET\s+monitoring\s+operator\s+licensing\s+progress/i,
+    severity: 'P1',
+    reason:
+      'Can read like live licence tracking. Use editorial watchlist/source-check context.',
+  },
+  {
+    pattern: /iGaming\s+intelligence\s+platform\s+tracking\s+Ontario\s+and\s+Alberta\s+operator\s+markets/i,
+    severity: 'P1',
+    reason:
+      'Can overstate live regulatory/operator tracking. Use editorial intelligence/site wording.',
+  },
+  {
+    pattern: /Learn\s+about\s+our\s+rapid\s+Interac\s+deposit\s+and\s+withdrawal\s+processing/i,
+    severity: 'P1',
+    reason: 'Can imply first-party payment processing. Use operator-dependent timing language.',
+  },
+  {
+    pattern: /Explore\s+our\s+welcome\s+offers/i,
+    severity: 'P1',
+    reason: 'Can imply first-party bonus offers. Use bonus-guide language.',
+  },
+  {
+    pattern: /Our\s+platform\s+provides\s+independent\s+reviews/i,
+    severity: 'P1',
+    reason: 'Can frame this repo as the gaming platform. Use public-site framing.',
+  },
+  {
+    pattern: /Search\s+247iBET\s+for\s+platform\s+features/i,
+    severity: 'P1',
+    reason: 'Can imply gaming-platform features. Use public-site feature language.',
+  },
+  {
+    pattern: /Canadian\s+casino\s+and\s+sportsbook\s+—\s+check\s+current\s+availability/i,
+    severity: 'P1',
+    reason: 'Can imply 247iBET is the casino/sportsbook. Use guide/operator-availability wording.',
+  },
+  {
+    pattern: /We\s+offer\s+over\s+500\s+premium\s+casino\s+games/i,
+    severity: 'P1',
+    reason: 'Can imply this repo or brand directly offers casino game execution.',
+  },
+  {
+    pattern: /We\s+offer\s+extensive\s+pre-game\s+and\s+live\s+in-play\s+options/i,
+    severity: 'P1',
+    reason: 'Can imply this repo or brand directly offers sportsbook markets.',
+  },
+  {
+    pattern: /Verified\s+payout\s+times/i,
+    severity: 'P1',
+    reason: 'Can imply payout timing has been verified as a first-party operational fact.',
+  },
+  {
+    pattern: /Only\s+register\s+at\s+Ontario-regulated\s+operators\s+to\s+ensure\s+your\s+funds\s+and\s+personal\s+data\s+are\s+protected/i,
+    severity: 'P1',
+    reason: 'Overstates protection guarantees; use source-check and terms-review wording.',
+  },
+  {
+    pattern: /verified\s+fast\s+payout\s+records\s+in\s+our\s+comparative\s+operator\s+matrix/i,
+    severity: 'P1',
+    reason: 'Can imply payout speed verification beyond public-source review.',
+  },
+  {
+    pattern: /our\s+recommended\s+sites\s+are\s+processed\s+via\s+encrypted\s+Interac\s+channels/i,
+    severity: 'P1',
+    reason: 'Can imply first-party site recommendation and payment-processing guarantees.',
+  },
+  {
+    pattern: /from\s+our\s+senior\s+cashier\s+team/i,
+    severity: 'P1',
+    reason: 'Can imply this repo owns cashier or withdrawal operations.',
+  },
+  {
+    pattern: /Follow\s+our\s+step-by-step\s+instructions\s+for\s+fast,\s+secure,\s+and\s+CAD-native\s+casino\s+deposits/i,
+    severity: 'P1',
+    reason: 'Can imply first-party deposit execution and guaranteed secure deposit speed.',
+  },
+  {
+    pattern: /Our\s+documented\s+process\s+for\s+KYC,\s+payment,\s+and\s+withdrawal\s+verification/i,
+    severity: 'P1',
+    reason: 'Can imply first-party KYC/payment/withdrawal verification rather than editorial review.',
+  },
+  {
+    pattern: /Our\s+methodology\s+for\s+KYC,\s+payout,\s+and\s+withdrawal-speed\s+checks/i,
+    severity: 'P1',
+    reason: 'Can imply operational payout/KYC testing rather than public-source editorial review.',
+  },
+  {
+    pattern: /Best\s+No\s+Deposit\s+Extra\s+Spins\s+Canada\s+2026\s+\|\s+Verified\s+Offers/i,
+    severity: 'P1',
+    reason: 'Can imply current offers are verified promotional terms.',
+  },
+  {
+    pattern: /Find\s+the\s+most\s+reliable\s+no\s+deposit\s+extra\s+spins\s+in\s+Canada/i,
+    severity: 'P1',
+    reason: 'Can imply verified current offers instead of educational offer-term review.',
   },
 
   // --- P2: Needs review (may be acceptable in non-inducement context) ---

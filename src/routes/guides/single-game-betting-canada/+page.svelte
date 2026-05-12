@@ -23,7 +23,7 @@
     {
       year: '2026',
       event:
-        'Alberta expected to launch a regulated open market — 247iBET tracking operator licensing progress.',
+        'Alberta expected to launch a regulated open market — track operator licensing progress through official AGLC and government sources.',
     },
   ];
 
@@ -69,12 +69,12 @@
       a: 'A single-game bet (moneyline, spread, total) covers one outcome from one game. A parlay combines two or more selections, and all must win for the bet to pay out — but the potential payout is multiplied. Single-game bets have better individual odds accuracy but lower maximum payouts than parlays.',
     },
     {
-      q: 'Does 247iBET offer single-game sports betting in Canada?',
-      a: '247iBET offers full single-game markets for Canadian players, including live in-play betting on NHL, NBA, NFL, and more. Ontario players can access both single-event and multi-event betting.',
+      q: 'How do I verify single-game sports betting availability in Canada?',
+      a: 'Single-game markets and live in-play betting availability depend on the operator, province, and current sportsbook configuration. Verify live markets on the separate gaming platform before wagering.',
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -140,7 +140,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-widest"
@@ -198,7 +198,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <IBetShowcase
     variant="hero"
-    ctaText="Bet Single Games at 247iBET"
+    ctaText="Compare Single-Game Betting Guidance"
     showFeatures={true}
     contextLabel="NHL · CFL · NBA · UFC · Live in-play"
   />

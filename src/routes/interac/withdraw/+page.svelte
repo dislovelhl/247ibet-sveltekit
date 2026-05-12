@@ -12,24 +12,24 @@
         'Upload your ID and proof of address before requesting a payout. Verified accounts move through review faster and avoid first-withdrawal holds.',
     },
     {
-      title: 'Open Withdrawals',
+      title: 'Open the operator withdrawal area',
       description:
-        'Log into your 247iBET account, go to the cashier, and choose the withdrawal option from your account menu.',
+        'Log into the separate gaming platform, go to the cashier or account area, and choose the withdrawal option from the platform menu.',
     },
     {
       title: 'Select Interac',
       description:
-        'Choose Interac e-Transfer, enter your cashout amount, and confirm that any bonus wagering requirements are fully cleared.',
+        'If available, choose Interac e-Transfer, enter the cashout amount, and confirm that any bonus wagering requirements are fully cleared on the operating platform.',
     },
     {
       title: 'Wait for Approval',
       description:
-        '247iBET reviews the request for security, account verification, and withdrawal limits. Most approved requests move within a few hours.',
+        'The operating platform reviews the request for security, account verification, withdrawal limits, bonus status, and bank-side requirements. Timing varies by operator and account state.',
     },
     {
       title: 'Accept the Transfer',
       description:
-        'Once approved, Interac sends the transfer notice by email or SMS. Follow the link or auto-deposit prompt to receive the funds in your bank account.',
+        'If the operating platform approves the withdrawal and Interac is used, transfer notices may arrive by email or SMS. Follow the operator and bank instructions for completion.',
     },
   ];
 
@@ -50,22 +50,22 @@
 </script>
 
 <svelte:head>
-  <title>Interac Withdrawal Times at 247iBET Canada</title>
+  <title>Interac Withdrawal Timing Guide Canada</title>
   <meta
     name="description"
-    content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
+    content="Learn what affects Interac e-Transfer withdrawal timing in Canada, including operator approval, identity checks, bank processing, and live cashier terms."
   />
-  <meta property="og:title" content="Interac Withdrawal Times at 247iBET Canada" />
+  <meta property="og:title" content="Interac Withdrawal Timing Guide Canada" />
   <meta
     property="og:description"
-    content="Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts."
+    content="Learn what affects Interac e-Transfer withdrawal timing in Canada, including operator approval, identity checks, bank processing, and live cashier terms."
   />
   <link rel="canonical" href={canonicalUrl('/interac/withdraw')} />
   <JsonLd
     schema={articleSchema({
-      headline: 'Interac Withdrawal Times at 247iBET Canada',
+      headline: 'Interac Withdrawal Timing Guide Canada',
       description:
-        'Find out how long Interac e-Transfer withdrawals take at 247iBET. Follow our withdrawal guide for fast, secure CAD payouts.',
+        'Learn what affects Interac e-Transfer withdrawal timing in Canada, including operator approval, identity checks, bank processing, and live cashier terms.',
       url: canonicalUrl('/interac/withdraw'),
       datePublished: '2026-04-27',
     })}
@@ -73,7 +73,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-3xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -91,12 +91,12 @@
   <section class="mt-12">
     <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
       <p class="font-bold text-white text-sm">
-        Interac withdrawals typically arrive within 1-4 hours after operator approval. First
-        withdrawals may take 24-48 hours due to KYC verification.
+        Interac withdrawal timing varies after operator approval. First withdrawals may take 24-48
+        hours due to KYC verification.
       </p>
       <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
-        Ensure your bank account name matches your 247iBET account. Check your bank's e-Transfer
-        acceptance settings.
+        Ensure your bank account name matches your operating-platform account. Check your bank's
+        e-Transfer acceptance settings.
       </p>
     </div>
   </section>
@@ -134,8 +134,8 @@
           <strong class="mb-1 block text-xs uppercase tracking-tight text-text-primary"
             >Large Amounts:</strong
           >
-          High-value withdrawals (typically over CAD $2,000) may require additional manual approval steps
-          from our senior cashier team.
+          High-value withdrawals may require additional manual approval steps from the selected
+          operator, cashier provider, or compliance team.
         </p>
       </div>
       <div class="space-y-4">
@@ -162,7 +162,10 @@
     <ul class="space-y-4 text-sm text-text-body">
       <li class="flex items-start gap-3">
         <CheckCircle class="mt-1 h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
-        <span>Your bank account name must match the name registered on your 247iBET account.</span>
+        <span
+          >Your bank account name generally must match the name registered on the operating platform
+          account.</span
+        >
       </li>
       <li class="flex items-start gap-3">
         <CheckCircle class="mt-1 h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
@@ -181,7 +184,7 @@
   </section>
 
   <section class="mt-12">
-    <IBetShowcase variant="banner" ctaText="Withdraw Funds" />
+    <IBetShowcase variant="banner" ctaText="Review Withdrawal Steps" />
   </section>
 
   <nav class="mt-12 flex flex-wrap gap-6" aria-label="Related pages">
@@ -193,12 +196,12 @@
     <a
       href="/casino"
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Play casino games</a
+      >Explore casino guides</a
     >
     <a
       href="/fast-payouts"
       class="text-slate-blue font-bold text-sm hover:underline uppercase tracking-wider"
-      >Compare payout speeds</a
+      >Compare payout caveats</a
     >
   </nav>
 

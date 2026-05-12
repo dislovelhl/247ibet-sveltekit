@@ -46,13 +46,15 @@
   const operatorAudits = [
     {
       href: '/casino',
-      title: '247iBET Casino Audit',
-      description: 'Game depth, cashier flow, and Ontario withdrawal benchmarks.',
+      title: '247iBET Casino Guide Review',
+      description:
+        'Game-category education, cashier-verification prompts, and current-status handoff guidance.',
     },
     {
       href: '/sportsbook',
-      title: '247iBET Sportsbook Audit',
-      description: 'Withdrawal speed benchmarks and Ontario market transparency.',
+      title: '247iBET Sportsbook Guide Review',
+      description:
+        'Market-availability prompts, licensing checks, and sportsbook handoff guidance.',
     },
   ];
 
@@ -80,7 +82,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -147,13 +149,14 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <JsonLd
     schema={howToSchema({
       name: 'Ontario Casino Operator Checks',
-      description: 'Use this Ontario casino checklist to verify market status, Interac support, KYC workflow, and payout handling before you open an account.',
+      description:
+        'Use this Ontario casino checklist to verify market status, Interac support, KYC workflow, and payout handling before you open an account.',
       steps: auditFramework.map((s) => ({ name: s.title, text: s.description })),
     })}
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -164,9 +167,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">Ontario Casino Operator Checks</li>
       </ol>
     </nav>
-    <h1 class="page-hero-title mb-4">
-      Ontario Casino Operator Checks
-    </h1>
+    <h1 class="page-hero-title mb-4">Ontario Casino Operator Checks</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Use this checklist before you open an Ontario casino account. The goal is not to find the
       loudest operator claim, but to verify market status, payment support, KYC friction, and

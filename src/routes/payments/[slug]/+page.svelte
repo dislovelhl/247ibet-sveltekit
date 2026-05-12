@@ -8,7 +8,7 @@
   <title>Payment Methods Guide | 247iBET Canada</title>
   <meta
     name="description"
-    content="Complete guide to payment methods at 247iBET for Canadian players — Interac, deposits, withdrawals."
+    content="Public guide to Canadian online casino payment methods, including Interac, deposit concepts, withdrawal timing factors, and operator cashier checks."
   />
   <link rel="canonical" href={canonicalUrl(`/payments/${$page.params.slug}`)} />
 </svelte:head>
@@ -24,7 +24,7 @@
 
   <h1 class="page-hero-title mb-4">Payment Guide</h1>
   <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8] mb-8">
-    Detailed payment method guide for Canadian players at 247iBET.
+    Detailed public payment-method guide for Canadian players comparing operator cashier concepts and verification steps.
   </p>
 
   <div class="navy-card rounded-2xl p-8 text-center">

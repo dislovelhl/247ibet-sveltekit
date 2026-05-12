@@ -11,22 +11,22 @@
   const bonusTypes = [
     {
       name: 'Welcome Bonus Snapshot',
-      desc: 'The latest promo creative reviewed by our team showed a welcome offer up to C$2000 plus 10 free spins. Treat that as an observed bonus snapshot and confirm deposit minimums, wagering, and eligible games inside the cashier before opting in.',
+      desc: 'The latest archived promo creative includes welcome-offer language. Treat it as a historical creative snapshot and confirm current eligibility, deposit minimums, wagering, and eligible games on the operating platform before opting in.',
       riskLevel: 'Terms heavy',
     },
     {
       name: 'Free Bet Welcome Offer',
-      desc: 'Receive free bet credits on your first qualifying bet. Typically lower wagering (often 1x) than casino bonuses.',
+      desc: 'Free bet credits may be offered on a qualifying bet where current platform terms allow them. Wagering mechanics are usually different from casino bonuses.',
       riskLevel: 'Lower',
     },
     {
       name: 'No Deposit Bonus',
-      desc: 'Credits awarded just for registering — no deposit required. Higher wagering requirements, strict withdrawal limits. Rare in regulated Canadian market.',
+      desc: 'No-deposit credits, where available, may have higher wagering requirements and strict withdrawal limits. They are rare in regulated Canadian-market contexts.',
       riskLevel: 'Higher terms',
     },
     {
       name: 'Matched Free Bets',
-      desc: 'Deposit a qualifying amount and receive free bets equal to that deposit (up to a cap). Common at AGCO-licensed sportsbooks.',
+      desc: 'Matched free-bet structures, where available, usually require a qualifying deposit and cap. Verify current terms and Ontario advertising rules before opting in.',
       riskLevel: 'Lower',
     },
     {
@@ -54,14 +54,14 @@
     { href: '/guides/wagering-requirements-explained', label: 'Wagering Requirements' },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>New Player Welcome Offers Canada 2026 | Welcome Offers | 247iBET</title>
   <meta
     name="description"
-    content="New player welcome offers at Canadian sportsbooks and online casinos, including the latest image-observed 247iBET welcome bonus snapshot of up to C$2000 plus 10 free spins and the terms to verify before claiming."
+    content="New player welcome offers at Canadian sportsbooks and online casinos, including archived 247iBET welcome creative context and the terms to verify before claiming."
   />
   <meta property="og:title" content="New Player Welcome Offers Canada 2026 | Welcome Offers" />
   <meta
@@ -98,18 +98,16 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="material-panel space-y-4 reveal-fade-up p-6 md:p-8" use:reveal>
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Bonuses · Canada · 2026
     </div>
-    <h1 class="page-hero-title">
-      New Player Welcome Offers Canada
-    </h1>
+    <h1 class="page-hero-title">New Player Welcome Offers Canada</h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
-      Welcome offers explained for Canadian players — including the latest 247iBET promo image we
-      reviewed, which showed a welcome bonus up to C$2000 plus 10 free spins. Use the screenshot as
-      a starting point, then verify the cashier terms before claiming.
+      Welcome offers explained for Canadian players — including archived 247iBET promo-image
+      context. Use public creative only as a starting point, then verify current cashier terms
+      before claiming.
     </p>
     <div class="material-cell relative my-6 h-44 overflow-hidden rounded-2xl">
       <img
@@ -122,7 +120,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       ></div>
       <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
     </div>
-    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
+    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · Ontario rules explained</p>
   </header>
 
   <AffiliateDisclosure />
@@ -144,8 +142,12 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </aside>
 
-  <section use:reveal data-reveal-stagger="true" class="material-panel p-5"
- aria-labelledby="snapshot-heading">
+  <section
+    use:reveal
+    data-reveal-stagger="true"
+    class="material-panel p-5"
+    aria-labelledby="snapshot-heading"
+  >
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
         <p class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
@@ -159,8 +161,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
     <div class="mt-4 grid gap-4 sm:grid-cols-3">
       {#each IBET_PROMO_SNAPSHOT as promo}
-        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
-          <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
+        <article
+          use:reveal
+          class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift"
+        >
+          <img
+            src={promo.image}
+            alt={promo.alt}
+            class="h-auto w-full border-b border-white/10 object-cover"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="p-4">
             <p class="text-xs uppercase tracking-[0.16em] text-[#4A9EBF]">{promo.title}</p>
             <h3 class="mt-2 text-sm font-bold text-white">{promo.headline}</h3>
@@ -172,8 +183,12 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </div>
   </section>
 
-  <section use:reveal data-reveal-stagger="true" class="material-panel p-5"
- aria-labelledby="sports-tieins-heading">
+  <section
+    use:reveal
+    data-reveal-stagger="true"
+    class="material-panel p-5"
+    aria-labelledby="sports-tieins-heading"
+  >
     <div class="flex items-start justify-between gap-4 flex-col sm:flex-row sm:items-center">
       <div>
         <p class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest mb-2">
@@ -183,12 +198,21 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           Sportsbook-adjacent creatives tied to the same campaign set
         </h2>
       </div>
-      <span class="text-xs text-[#94A3B8]">Useful context, but not claimable welcome-offer rules</span>
+      <span class="text-xs text-[#94A3B8]"
+        >Useful context, but not claimable welcome-offer rules</span
+      >
     </div>
     <div class="mt-4 grid gap-4 md:grid-cols-3">
       {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-        <article use:reveal class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift">
-          <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" />
+        <article
+          use:reveal
+          class="material-cell reveal-fade-up overflow-hidden rounded-2xl card-hover-lift"
+        >
+          <img
+            src={creative.image}
+            alt={creative.alt}
+            class="h-auto w-full border-b border-white/10 object-cover"
+          />
           <div class="p-4">
             <p class="text-xs uppercase tracking-[0.16em] text-[#4A9EBF]">{creative.title}</p>
             <h3 class="mt-2 text-sm font-bold text-white">{creative.headline}</h3>
@@ -206,7 +230,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     </h2>
     <div class="space-y-3">
       {#each bonusTypes as b}
-         <div use:reveal class="material-cell reveal-fade-up rounded-2xl p-4 flex flex-col gap-1.5 card-hover-lift">
+        <div
+          use:reveal
+          class="material-cell reveal-fade-up rounded-2xl p-4 flex flex-col gap-1.5 card-hover-lift"
+        >
           <div class="flex items-center justify-between gap-4">
             <span class="font-semibold text-[#F1F5F9] text-sm">{b.name}</span>
             <span
@@ -247,8 +274,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <IBetShowcase
     variant="hero"
-    ctaText="See Welcome Offer at 247iBET"
-    contextLabel="Latest reviewed creative showed up to C$2000 + 10 free spins; verify terms after registration"
+    ctaText="Review Welcome Offer Guidance"
+    contextLabel="Archived welcome creative reviewed; verify current terms after registration"
   />
 
   <ReadyToPlay />
@@ -257,10 +284,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <p class="text-xs text-[#8492A6] mb-3 uppercase tracking-widest font-medium">Related</p>
     <div class="flex flex-wrap gap-3">
       {#each relatedLinks as l}
-        <a
-          href={l.href}
-          class="floating-chrome text-xs text-[#4A9EBF] hover:underline px-3 py-1.5"
-        >
+        <a href={l.href} class="floating-chrome text-xs text-[#4A9EBF] hover:underline px-3 py-1.5">
           {l.label}
         </a>
       {/each}

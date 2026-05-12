@@ -79,7 +79,7 @@
     '@type': 'Article',
     headline: 'World Cup Betting Canada 2026 — FIFA Tournament Odds & Markets',
     description:
-      'Bet on the 2026 FIFA World Cup in Canada — game lines, tournament winner odds, group stage betting, and live in-play.',
+      'World Cup betting in Canada guide — game lines, tournament winner odds, group-stage markets, live in-play concepts, and platform availability checks.',
     url: 'https://247ibet.ca/events/world-cup-betting-canada',
     datePublished: '2026-03-01',
     dateModified: '2026-03-30',
@@ -104,7 +104,7 @@
   <title>World Cup Betting Canada 2026 — FIFA Tournament Odds &amp; Markets | 247iBET</title>
   <meta
     name="description"
-    content="Bet on the 2026 FIFA World Cup in Canada — Canada co-hosts the tournament. Game lines, tournament winner odds, group stage betting, and live in-play at 247iBET. Fast Interac payouts."
+    content="World Cup betting Canada guide: tournament winner odds, group-stage markets, live in-play concepts, payout caveats, and availability checks."
   />
   <meta
     property="og:title"
@@ -112,7 +112,7 @@
   />
   <meta
     property="og:description"
-    content="Bet on the 2026 FIFA World Cup in Canada — game lines, tournament winner odds, group stage betting, and live in-play at 247iBET."
+    content="World Cup betting Canada guide: game lines, tournament winner odds, group-stage betting, live in-play concepts, and availability checks."
   />
   <meta property="og:type" content="article" />
   <link rel="canonical" href={canonicalUrl('/events/world-cup-betting-canada')} />
@@ -120,7 +120,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl space-y-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl space-y-16">
   <header>
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -130,12 +130,11 @@
       </ol>
     </nav>
     <div class="text-xs font-mono text-text-tertiary mb-1">Last updated: 2026-03-01</div>
-    <h1 class="page-hero-title mb-4">
-      World Cup Betting Canada 2026
-    </h1>
+    <h1 class="page-hero-title mb-4">World Cup Betting Canada 2026</h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
-      Bet on the 2026 FIFA World Cup at 247iBET — Canada co-hosts the tournament. Game lines,
-      tournament winner, group stage, player props, and live in-play. Fast Interac payouts. 18+/19+.
+      Explore 2026 FIFA World Cup betting concepts for Canada. Game lines, tournament winner, group
+      stage, player props, and live in-play availability must be verified on the operating platform.
+      18+/19+.
     </p>
   </header>
 
@@ -147,7 +146,7 @@
     variant="hero"
     ctaText="Bet on the World Cup"
     showFeatures={true}
-    contextLabel="2026 FIFA World Cup · Canada co-host · Kahnawake licensed"
+    contextLabel="2026 FIFA World Cup · Canada co-host · Verify availability"
   />
 
   <section aria-labelledby="context-heading">
@@ -198,7 +197,7 @@
   <IBetShowcase
     variant="banner"
     ctaText="Bet on World Cup 2026"
-    contextLabel="Kahnawake licensed · Interac deposits · Live in-play"
+    contextLabel="Verify licensing · Interac guidance · Event betting guide"
   />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">

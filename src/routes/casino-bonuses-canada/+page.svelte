@@ -23,7 +23,7 @@
     },
     {
       q: 'Do casino bonuses differ by province in Canada?',
-      a: 'Ontario is the only province with mandatory AGCO-licensed operators. Players outside Ontario may access offshore-licensed casinos (Malta Gaming Authority, Kahnawake) that have different advertising rules and bonus structures. AGCO-licensed operators are generally restricted from offering bonuses to non-Ontario residents.',
+      a: 'Ontario has a dedicated private-operator framework through AGCO and iGaming Ontario. Outside Ontario, legal availability, advertising rules, and bonus structures vary by province and operator, so verify the current regulator, licence, and eligibility terms before relying on any promotion.',
     },
     {
       q: 'Can I claim a casino bonus and withdraw immediately?',
@@ -92,9 +92,11 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
-      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40">
+      <ol
+        class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40"
+      >
         <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
         <li class="text-prestige-gold">Casino Bonuses</li>
@@ -104,12 +106,10 @@
     <header
       class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
     >
-      <BackgroundAtmosphere
-        src="/images/brand/casino-bonuses-hero.png"
-        parallaxMultiplier={0.4}
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent">
-      </div>
+      <BackgroundAtmosphere src="/images/brand/casino-bonuses-hero.png" parallaxMultiplier={0.4} />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
+      ></div>
 
       <div
         class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14 lg:max-w-3xl"
@@ -159,12 +159,12 @@
       <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
           <p class="text-xs font-mono uppercase tracking-[0.16em] text-[#4A9EBF]">Promo snapshot</p>
-          <h2 class="mt-2 text-2xl font-bold">Latest image-observed 247iBET offers</h2>
+          <h2 class="mt-2 text-2xl font-bold">Archived image-observed 247iBET creatives</h2>
         </div>
         <p class="max-w-xl text-xs text-text-tertiary">
-          These amounts came from a reviewed bonus creative rather than a fully legible cashier
-          terms page. Treat them as a current snapshot and confirm the operative rules before
-          claiming.
+          These archived creatives are not current public offers and do not replace live cashier
+          terms. Verify current eligibility, jurisdiction, and operative rules on the separate
+          gaming platform before opting in.
         </p>
       </div>
       <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -245,7 +245,9 @@
             <tr class="soft-separator border-b bg-white/3">
               <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Bonus type</th>
               <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Typical value</th>
-              <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs">Common tradeoff</th>
+              <th class="text-left p-4 text-gray-400 font-mono uppercase text-xs"
+                >Common tradeoff</th
+              >
             </tr>
           </thead>
           <tbody class="divide-y divide-white/5">

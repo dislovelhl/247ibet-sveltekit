@@ -44,8 +44,7 @@
     { href: '/best-sports-betting-sites-canada', label: 'Best Sportsbooks' },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
-
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -89,19 +88,17 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Promotions Guide · Canada
     </div>
-    <h1 class="page-hero-title">
-      Sportsbook Welcome Offers Canada 2026
-    </h1>
+    <h1 class="page-hero-title">Sportsbook Welcome Offers Canada 2026</h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
       How sportsbook welcome offers work, what the terms actually mean, and what to check before
       claiming at a Canadian sportsbook.
     </p>
-    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
+    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · Ontario rules explained</p>
   </header>
 
   <AffiliateDisclosure />
@@ -171,26 +168,24 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </section>
 
   <section aria-labelledby="ibet-heading">
-    <h2 id="ibet-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">
-      Free Bet Offers at 247iBET
-    </h2>
+    <h2 id="ibet-heading" class="text-xl font-bold text-[#F1F5F9] mb-4">Free Bet Offer Guidance</h2>
     <div class="navy-card rounded-lg p-5 space-y-3">
       <p class="text-sm text-[#94A3B8] leading-relaxed">
-        247iBET offers promotional credits for new and existing players. Specific offer details are
-        available on the 247iBET platform for registered players — Ontario advertising standards
-        mean specific bonus amounts are not publicly listed here.
+        Some operators may show promotional credits to eligible registered users. Specific offer
+        details, if available, are shown on the operating platform for eligible registered users —
+        Ontario advertising standards mean specific bonus amounts are not publicly listed here.
       </p>
       <p class="text-sm text-[#94A3B8] leading-relaxed">
-        All 247iBET promotions use transparent terms, clear wagering requirements, and responsible
-        conditions.
+        Current promotions, if available, must show transparent terms, wagering requirements,
+        eligibility rules, and responsible-gambling conditions on the operating platform.
       </p>
     </div>
   </section>
 
   <IBetShowcase
     variant="hero"
-    ctaText="See Offer at 247iBET"
-    contextLabel="View promotional offers after signing in"
+    ctaText="Review Eligibility"
+    contextLabel="Verify eligibility and terms on the operating platform"
   />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">
@@ -206,7 +201,6 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       {/each}
     </div>
   </nav>
-
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
     Play responsibly. 19+ only. <a

@@ -7,7 +7,7 @@
   <meta name="description" content="Expert iGaming guide for Canadian players from 247iBET." />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -34,8 +34,8 @@
   <div class="mt-12">
     <IBetShowcase
       variant="banner"
-      ctaText="Play at 247iBET"
-      contextLabel="Fast payouts · Interac · 19+"
+      ctaText="Review 247iBET Guidance"
+      contextLabel="Payout caveats · Interac · 19+"
     />
   </div>
 </div>

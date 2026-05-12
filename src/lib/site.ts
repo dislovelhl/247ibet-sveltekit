@@ -21,7 +21,8 @@ function resolveSiteUrl(): string {
 export const SITE = {
   url: resolveSiteUrl(),
   name: '247iBET',
-  tagline: 'Canadian iGaming guide covering casino reviews, sportsbook education, and Interac payout guidance.',
+  tagline:
+    'Canadian iGaming guide covering casino reviews, sportsbook education, and Interac payment-method guidance.',
   legalName: '247iBET Media Inc.',
   locale: 'en-CA',
   ogImage: '/og-image.png',
@@ -42,11 +43,11 @@ export const SITE = {
 } as const;
 
 export const SEO = {
-  defaultTitle: '247iBET: Canadian iGaming Guide, Sportsbook Reviews & Interac Payout Education',
+  defaultTitle: '247iBET: Canadian iGaming Guide, Sportsbook Reviews & Interac Payment Education',
   defaultDescription:
-    '247iBET covers casino reviews, sportsbook education, Interac payout expectations, and safer-play resources for Canadian audiences.',
+    '247iBET covers casino reviews, sportsbook education, Interac payment-method expectations, and safer-play resources for Canadian audiences.',
   defaultKeywords:
-    'online casino canada, fast payouts casino, interac casino, ontario casino, sports betting canada',
+    'online casino canada, payment guidance casino, interac casino, ontario casino, sports betting canada',
   titleTemplate: '%s | 247iBET',
 } as const;
 

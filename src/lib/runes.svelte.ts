@@ -14,11 +14,51 @@ export const globalParallax = $state({
 });
 
 if (browser) {
-  window.addEventListener('mousemove', (e) => {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    // Normalize to -10 to +10 range (default factor 20)
-    globalParallax.x = (clientX / innerWidth - 0.5) * 20;
-    globalParallax.y = (clientY / innerHeight - 0.5) * 20;
-  });
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const supportsFinePointer = window.matchMedia('(pointer: fine)');
+  const supportsHover = window.matchMedia('(hover: hover)');
+
+  if (!prefersReducedMotion.matches && supportsFinePointer.matches && supportsHover.matches) {
+    let frameId: number | null = null;
+    let nextX = 0;
+    let nextY = 0;
+
+    const commit = () => {
+      frameId = null;
+      globalParallax.x = nextX;
+      globalParallax.y = nextY;
+    };
+
+    window.addEventListener(
+      'pointermove',
+      (event) => {
+        if (document.visibilityState !== 'visible') return;
+
+        const { clientX, clientY } = event;
+        const { innerWidth, innerHeight } = window;
+
+        // Normalize to -10 to +10 range (default factor 20)
+        nextX = (clientX / innerWidth - 0.5) * 20;
+        nextY = (clientY / innerHeight - 0.5) * 20;
+
+        if (frameId !== null) return;
+        frameId = window.requestAnimationFrame(commit);
+      },
+      { passive: true },
+    );
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') return;
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+        frameId = null;
+      }
+
+      nextX = 0;
+      nextY = 0;
+      globalParallax.x = 0;
+      globalParallax.y = 0;
+    });
+  }
 }

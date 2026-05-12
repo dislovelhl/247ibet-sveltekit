@@ -29,14 +29,14 @@
   const reviewCards = [
     {
       href: '/casino',
-      title: '247iBET Casino',
+      title: '247iBET Casino Guide',
       description:
-        'Ontario-available casino with fast payouts, live dealer games, and 24/7 support.',
+        'Ontario-focused casino guidance with payout caveats, live dealer education, and platform handoff reminders.',
     },
     {
       href: '/sportsbook',
-      title: '247iBET Sportsbook',
-      description: 'Sports betting for Ontario players — NHL, NBA, UFC, and more.',
+      title: '247iBET Sportsbook Guide',
+      description: 'Sports-betting education for Ontario players — NHL, NBA, UFC, and more.',
     },
   ];
 
@@ -122,7 +122,6 @@
         'Use the legal and product background page when sportsbook copy needs federal context rather than operator claims.',
     },
   ];
-
 </script>
 
 <svelte:head>
@@ -175,7 +174,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
         class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
@@ -191,7 +190,8 @@
         src="/images/generated/canada-market-hero.webp"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
-        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
+        style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y *
+          0.4}px, 0) scale(1.1);"
       />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
@@ -204,13 +204,11 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
-              Market Active
-            </p>
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">Market Active</p>
           </div>
           <div class="floating-chrome px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
             <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
-              19+ · Fully Regulated · Secure Gaming
+              19+ · Verify Operator Status · Responsible Play
             </p>
           </div>
         </div>
@@ -223,8 +221,9 @@
         </h1>
 
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Your premier destination for Ontario regulated iGaming. Experience secure casino games,
-          live sports betting, and lightning-fast Interac payouts.
+          A public guide to Ontario regulated iGaming sources, casino-game education, sports-betting
+          concepts, and Interac payout caveats. Verify any operator status directly with iGaming
+          Ontario before registering.
         </p>
 
         <div class="mt-10 flex items-center justify-between border-t soft-separator pt-8"></div>
@@ -374,8 +373,8 @@
     <section class="material-panel rounded-2xl p-6 md:p-8 mb-10 reveal-fade-up" use:reveal>
       <h2 class="text-2xl font-bold mb-4">Ontario platform features</h2>
       <p class="text-sm text-gray-400 leading-relaxed mb-5">
-        Explore our platform features to understand our cashier flow, mobile experience, and secure
-        gaming environment in Ontario.
+        Explore public feature guides to understand cashier-flow considerations, mobile experience,
+        and secure gaming environment in Ontario.
       </p>
       <div class="material-group grid gap-2 p-2 md:grid-cols-2">
         {#each reviewCards as item}

@@ -6,7 +6,7 @@ describe('authors registry', () => {
     expect(AUTHORS.editorial).toMatchObject({
       id: 'editorial',
       name: '247iBET Team',
-      title: 'Platform Team',
+      title: 'Editorial Team',
     });
     expect(AUTHORS.editorial.bio.length).toBeGreaterThan(40);
     expect(AUTHORS.editorial.credentials.length).toBeGreaterThan(0);

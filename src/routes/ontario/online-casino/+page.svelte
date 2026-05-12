@@ -22,7 +22,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -69,7 +69,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -80,9 +80,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <li class="text-white">Online Casino</li>
       </ol>
     </nav>
-    <h1 class="page-hero-title mb-4">
-      Ontario Online Casino Games
-    </h1>
+    <h1 class="page-hero-title mb-4">Ontario Online Casino Games</h1>
     <p class="max-w-3xl text-base leading-relaxed text-[#94A3B8]">
       Access Ontario casino gaming with slots, live dealer blackjack, and Interac-friendly payments.
       Use this page to check age rules, account access, and the path from deposit to withdrawal.
@@ -133,10 +131,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
           href="/casino"
           class="navy-card rounded-2xl border border-white/10 p-6 hover:border-prestige-gold/30 transition-colors"
         >
-          <h3 class="text-lg font-bold text-white mb-3">Explore All Casino Games</h3>
+          <h3 class="text-lg font-bold text-white mb-3">Explore Casino Guide</h3>
           <p class="text-sm text-gray-400 mb-4">
-            Browse the full 247iBET casino — slots, live dealer, table games, and more for Canadian
-            players.
+            Read 247iBET casino guide coverage for slots, live dealer formats, table games, and
+            availability checks before visiting the separate gaming platform.
           </p>
           <span class="text-prestige-gold text-xs font-bold uppercase">Explore Casino →</span>
         </a>
@@ -146,8 +144,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         >
           <h3 class="text-lg font-bold text-white mb-3">Interac Payments in Ontario</h3>
           <p class="text-sm text-gray-400 mb-4">
-            Deposit and withdraw with Interac e-Transfer — the fastest CAD payment path for Ontario
-            players.
+            Use Interac e-Transfer guidance to compare cashier timing, limits, fees, KYC checks, and
+            bank-side caveats before funding an account.
           </p>
           <span class="text-slate-blue text-xs font-bold uppercase">Interac Details →</span>
         </a>
@@ -158,7 +156,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <section class="mt-12">
     <IBetShowcase
       variant="banner"
-      ctaText="Play Now"
+      ctaText="Visit Platform"
       contextLabel="Ontario Access · Interac CAD · 19+"
     />
   </section>

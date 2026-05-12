@@ -3,7 +3,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import IBetShowcase from '$lib/components/IBetShowcase.svelte';
   import { CheckCircle2 } from 'lucide-svelte';
-import { articleSchema } from '$lib/json-ld';
+  import { articleSchema } from '$lib/json-ld';
 
   const pageName = 'Live Casino';
   const heroImage = '/images/generated/casino-live-hero.webp';
@@ -47,7 +47,7 @@ import { articleSchema } from '$lib/json-ld';
     ],
   };
 
-  const heroCtaText = 'Play Live Casino';
+  const heroCtaText = 'Explore Live Casino Guide';
   const bannerContextLabel = 'Live blackjack · Roulette · Baccarat · HD dealer tables';
 
   const faqTitle = 'Live Casino FAQ';
@@ -74,31 +74,31 @@ import { articleSchema } from '$lib/json-ld';
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
   <title>Live Casino Canada | 247iBET Canada</title>
   <meta
     name="description"
-    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+    content="Learn how live casino tables work in Canada, compare blackjack, roulette, and baccarat formats, and review what matters in an HD streaming setup."
   />
   <meta property="og:title" content="Live Casino Canada | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+    content="Learn how live casino tables work in Canada, compare blackjack, roulette, and baccarat formats, and review what matters in an HD streaming setup."
   />
   <meta name="twitter:title" content="Live Casino Canada | 247iBET Canada" />
   <meta
     name="twitter:description"
-    content="Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup."
+    content="Learn how live casino tables work in Canada, compare blackjack, roulette, and baccarat formats, and review what matters in an HD streaming setup."
   />
   <link rel="canonical" href={canonicalUrl('/casino/live-casino')} />
   <JsonLd
     schema={articleSchema({
       headline: 'Live Casino Canada | 247iBET Canada',
       description:
-        'Play live casino in Canada at 247iBET. Learn how live dealer tables work, compare blackjack, roulette, and baccarat, and see what matters in an HD streaming setup.',
+        'Learn how live casino tables work in Canada, compare blackjack, roulette, and baccarat formats, and review what matters in an HD streaming setup.',
       url: canonicalUrl('/casino/live-casino'),
       datePublished: '2026-04-27',
     })}
@@ -132,7 +132,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4 pb-20  sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -162,7 +162,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   </div>
 
   <header class="mb-10">
-    <h1 class="page-hero-title mb-4">Play Live Casino in Canada</h1>
+    <h1 class="page-hero-title mb-4">Live Casino Guide Canada</h1>
     <p class="text-base text-text-body leading-relaxed max-w-3xl">
       Live casino blends the convenience of online play with real dealers, real tables, and HD
       studio streams. For Canadian players, the experience comes down to table variety, streaming

@@ -11,7 +11,7 @@
     heading: 'UFC Betting in Canada',
     breadcrumbLabel: 'UFC Betting',
     metaDescription:
-      'Learn how UFC betting works in Canada with fight night coverage, method-of-victory markets, round betting, props, and live odds at 247iBET.',
+      'Learn how UFC betting works in Canada with fight night coverage, method-of-victory market concepts, round betting, props, and live-odds basics.',
     keywords: 'UFC betting Canada, MMA betting Canada, UFC odds Canada',
     heroSubheading:
       'Follow fight nights and major PPV cards with method-of-victory, round, and prop markets, plus live UFC odds that move as the fight develops.',
@@ -172,7 +172,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -186,7 +186,11 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
+      <img
+        src={page.heroImage}
+        alt={page.title + ' — online betting in Canada'}
+        class="h-full w-full object-cover opacity-80"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
@@ -283,7 +287,11 @@
   </section>
 
   <div class="mt-14">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel={page.ctaContextLabel} />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Check Availability"
+      contextLabel={page.ctaContextLabel}
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

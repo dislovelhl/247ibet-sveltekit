@@ -13,6 +13,22 @@
   const shouldInjectVercelTelemetry =
     browser && !['127.0.0.1', 'localhost'].includes(window.location.hostname);
 
+  let prefersReducedMotion = $state(false);
+
+  $effect(() => {
+    if (!browser) return;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => {
+      prefersReducedMotion = mediaQuery.matches;
+    };
+
+    update();
+    mediaQuery.addEventListener('change', update);
+
+    return () => mediaQuery.removeEventListener('change', update);
+  });
+
   $effect(() => {
     if (!shouldInjectVercelTelemetry) return;
     inject({ mode: dev ? 'development' : 'production' });
@@ -48,7 +64,7 @@
 >
   <main id="main-content" class="flex-grow pt-[env(safe-area-inset-top,0px)]">
     {#key page.url.pathname}
-      <div in:fade={{ duration: 120 }}>
+      <div in:fade={{ duration: prefersReducedMotion ? 0 : 120 }}>
         {@render children()}
       </div>
     {/key}

@@ -26,7 +26,7 @@ export const IBET_URLS = {
 export const IBET_PROFILE = {
   name: '247iBET',
   tagline:
-    'Public 247iBET web platform covering casino guides, sportsbook education, Interac payout guidance, and safe handoff paths to the separate gaming platform.',
+    'Public 247iBET web platform covering casino guides, sportsbook education, Interac payment-method guidance, and safe handoff paths to the separate gaming platform.',
   rating: null,
   logo: '/images/brand/logo.png',
   established: 2020,
@@ -40,7 +40,7 @@ export const IBET_PROFILE = {
   features: [
     {
       icon: 'Zap',
-      label: 'Interac payout guidance',
+      label: 'Interac payment guidance',
       detail:
         'Interac withdrawals may complete after operator approval, but timing varies with KYC, account review, and bank processing.',
       accent: 'text-[#4A9EBF]',
@@ -72,9 +72,9 @@ export const IBET_PROFILE = {
     },
   ],
   trustSignals: [
-    'Interac payout guidance with approval and bank-processing caveats clearly explained',
+    'Interac payment-method guidance with approval and bank-processing caveats clearly explained',
     'Editorial focus on safer-play tools, payout terms, and operator transparency',
-    'Transparent bonus terms — wagering, expiry, and limits clearly shown',
+    'Archived creative terms are framed as verification-required, not current public offers',
     'Responsible-gambling education and links to account-level controls on the separate gaming platform',
     'Casino and sportsbook guides with platform handoff routes clearly separated',
   ],
@@ -87,7 +87,7 @@ export const IBET_PROFILE = {
     },
     {
       label: 'Payments',
-      value: 'Interac payout guidance',
+      value: 'Interac payment guidance',
       detail:
         'We explain operator approval, KYC review, and bank-side timing so readers know why payouts can vary.',
     },
@@ -105,7 +105,7 @@ export const IBET_PROFILE = {
     },
   ],
   pros: [
-    'Interac payout expectations explained with operator-approval caveats',
+    'Interac payment-method expectations explained with operator-approval caveats',
     'Casino catalogue guidance without repo-owned game execution',
     'Sportsbook education without repo-owned odds execution',
     'Canadian-first support and handoff guidance',
@@ -119,39 +119,39 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     slug: 'welcome-bonus',
     group: 'bonus',
     title: 'Welcome Offer Snapshot',
-    headline: 'Get C$2000 bonus back + 10 free spins',
+    headline: 'Archived welcome offer creative',
     period: 'Welcome offer snapshot — verify terms on the gaming platform',
     summary:
-      'Creative snapshot: new-player bonus language may appear on platform materials. Verify deposit minimums, wagering requirements, eligible games, expiry, and eligibility on the separate gaming platform before opting in.',
+      'Creative snapshot: new-player bonus language may appear on platform materials. Exact bonus values, deposit minimums, wagering requirements, eligible games, expiry, and eligibility must be verified on the separate gaming platform before opting in.',
     image: '/images/creatives/welcome-bonus-back.webp',
-    alt: '247iBET welcome offer snapshot: Get $2000 bonus back plus 10 free spins.',
-    observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247iBET.ca'],
+    alt: '247iBET archived welcome offer creative snapshot requiring current terms verification.',
+    observedText: ['ARCHIVED BONUS CREATIVE', 'VERIFY CURRENT TERMS', '247iBET.ca'],
   },
   {
     slug: 'every-deposit-bonus',
     group: 'bonus',
     title: 'Every Deposit Bonus',
-    headline: 'C$1000 bonus every deposit',
+    headline: 'Archived every-deposit creative',
     period: 'Ongoing snapshot — verify terms on the gaming platform',
     summary:
-      'Creative snapshot: every-deposit bonus language may appear on platform materials. Confirm whether the cap applies per deposit, per day, or over a campaign window on the separate gaming platform.',
+      'Creative snapshot: every-deposit bonus language may appear on platform materials. Confirm current caps, eligibility, jurisdiction, and campaign windows on the separate gaming platform.',
     image: '/images/creatives/every-deposit-bonus.webp',
-    alt: '247iBET: $1000 bonus every deposit.',
-    observedText: ['$1000 BONUS EVERY DEPOSIT'],
+    alt: '247iBET archived every-deposit bonus creative requiring current terms verification.',
+    observedText: ['ARCHIVED DEPOSIT BONUS CREATIVE'],
   },
   {
     slug: 'mothers-day-double-rewards',
     group: 'bonus',
     title: "Mother's Day Double Rewards",
-    headline: 'Deposit C$50, get C$50 bonus',
+    headline: 'Archived seasonal rewards creative',
     period: 'May 1–10 snapshot — verify terms on the gaming platform',
     summary:
-      "Creative snapshot: Mother's Day Double Rewards used deposit-and-bonus language. Check wagering, eligible games, expiry, and availability on the separate gaming platform.",
+      "Creative snapshot: Mother's Day Double Rewards used deposit-and-bonus language. Check current values, wagering, eligible games, expiry, and availability on the separate gaming platform.",
     image: '/images/creatives/mothers-day-double-rewards.webp',
-    alt: "247iBET Mother's Day Double Rewards: Deposit $50 Get $50 Bonus.",
+    alt: "247iBET archived Mother's Day Double Rewards creative requiring current terms verification.",
     observedText: [
       "Mother's Day Double Rewards",
-      'Deposit $50 Get $50 Bonus',
+      'ARCHIVED REWARDS CREATIVE',
       'May. 1st – May. 10',
     ],
   },

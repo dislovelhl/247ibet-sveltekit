@@ -128,7 +128,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <ul class="space-y-2 text-sm text-gray-400">
           <li>Regulated option: PlayAlberta (AGLC-operated)</li>
           <li>Private-operator open market expected — tracking in progress</li>
-          <li>247iBET monitoring operator licensing progress for 2026</li>
+          <li>247iBET publishes editorial watchlist context for 2026 operator-readiness signals</li>
           <li>Check current status before registering at any site</li>
         </ul>
       </div>

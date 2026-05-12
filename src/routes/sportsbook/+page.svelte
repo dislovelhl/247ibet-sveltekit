@@ -33,7 +33,7 @@
   const page = {
     title: 'Canadian Sportsbook: Odds, Parlays & Live Betting | 247iBET',
     description:
-      'The premier Canadian sportsbook for NHL, CFL, NBA, UFC, and more. Enjoy live odds, fast Interac funding, same-game parlays, and elite betting tools.',
+      'Canadian sportsbook education for NHL, CFL, NBA, UFC, and more. Learn odds formats, market types, Interac funding checks, same-game parlays, and betting-tool concepts.',
     canonical: canonicalUrl('/sportsbook'),
   };
 
@@ -58,20 +58,20 @@
     {
       eyebrow: 'New Player Offer',
       headline: 'Elite Starter Offer',
-      body: 'Get started with our premium sports welcome package. Access Canadian-focused markets and live odds instantly.',
-      cta: 'Review Offer',
+      body: 'Review how sportsbook welcome packages are structured and verify any current offer only after registration on the separate gaming platform.',
+      cta: 'Review Terms Guide',
     },
     {
       eyebrow: 'Odds Boost',
       headline: 'Enhanced Prices',
-      body: 'Enjoy boosted prices on marquee NHL, NBA, soccer, UFC, and football events every single day.',
-      cta: 'Bet Now',
+      body: 'Learn how odds boosts are structured, then verify current availability, eligibility, and terms on the separate gaming platform.',
+      cta: 'Check Availability',
     },
     {
       eyebrow: 'Parlay Specials',
       headline: 'Same-Game Parlays',
-      body: 'Maximize your potential with our weekly sports promotions and featured parlay specials.',
-      cta: 'View Offers',
+      body: 'Understand parlay-special mechanics and verify current eligibility before opting in on the separate gaming platform.',
+      cta: 'View Guide',
     },
   ];
 
@@ -340,7 +340,9 @@
       <AffiliateDisclosure variant="inline" />
     </div>
 
-    <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
+    <div
+      class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]"
+    >
       <aside class="hidden lg:block">
         <div
           class="material-panel sticky top-28 space-y-6 rounded-[2rem] p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
@@ -395,9 +397,7 @@
       </aside>
 
       <main class="min-w-0 space-y-5">
-        <header
-          class="material-panel relative min-w-0 overflow-hidden rounded-[2.5rem] shadow-2xl"
-        >
+        <header class="material-panel relative min-w-0 overflow-hidden rounded-[2.5rem] shadow-2xl">
           <BackgroundAtmosphere
             src="/images/generated/sportsbook-premium-hero.webp"
             parallaxMultiplier={0.4}
@@ -408,7 +408,8 @@
 
           <div
             class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14"
-            style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+            style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y *
+              0.8}px, 0);"
           >
             <div class="flex flex-wrap items-center gap-3 mb-8">
               <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
@@ -430,8 +431,8 @@
             </h1>
 
             <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-              Real-time odds. Deep Canadian markets. Lightning-fast Interac funding. Your strategic
-              edge in the betting landscape starts here.
+              Learn how odds move, which Canadian markets to verify, how Interac funding checks work,
+              and where same-game parlays and betting tools fit before platform handoff.
             </p>
 
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -442,7 +443,9 @@
                 Access Sportsbook
                 <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </SafeExternalLink>
-              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic"> Compare Odds </a>
+              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic">
+                Compare Odds
+              </a>
             </div>
             <p
               class="mt-6 max-w-2xl text-xs uppercase tracking-wider leading-relaxed text-text-tertiary/60"
@@ -915,8 +918,8 @@
           <Flame class="mx-auto h-7 w-7 text-prestige-gold" aria-hidden="true" />
           <h2 class="page-hub-title mt-3 text-3xl">Ready for the sportsbook?</h2>
           <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-text-body">
-            Review the market, confirm the odds, set your limits, and use the 247iBET sportsbook hub
-            as your starting point.
+            Review the market, confirm the odds on the separate gaming platform, set your limits,
+            and use this sportsbook education hub as a starting point.
           </p>
           <SafeExternalLink
             href={IBET_URLS.register}

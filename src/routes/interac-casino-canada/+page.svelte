@@ -32,7 +32,7 @@
     {
       question: 'How fast are Interac withdrawals at Canadian casinos?',
       answer:
-        'Interac says transfers are almost instant but can take up to 30 minutes depending on your bank or credit union. Casino withdrawals are slower because the operator still needs to approve the payout. In 247iBET testing across 18 licensed Ontario operators in Q1 2026, 14 processed Interac withdrawals within 4 hours.',
+        'Interac says transfers are almost instant but can take up to 30 minutes depending on your bank or credit union. Casino withdrawals can be slower because the operator still needs to approve the payout, complete account checks, and confirm banking details. Verify current timing in the licensed operator cashier before depositing.',
     },
     {
       question: 'What is the minimum Interac deposit at Canadian casinos?',
@@ -60,7 +60,7 @@
     {
       title: 'Send the e-Transfer from your bank',
       description:
-        "Log into your online banking. Send an Interac e-Transfer to the casino's deposit email address. Use the security question/answer provided in the casino instructions. Funds typically arrive in minutes.",
+        "Log into your online banking. Send an Interac e-Transfer to the casino's deposit email address. Use the security question/answer provided in the casino instructions. Funding speed varies by operator, bank, and account checks.",
     },
     {
       title: 'Withdrawals work in reverse',
@@ -88,7 +88,7 @@
     '@type': 'Article',
     headline: 'Interac Casino Canada 2026',
     description:
-      'Use Interac e-Transfer at 247iBET Canada with direct answers on deposit speed, withdrawal timing, limits, fees, and payout checks.',
+      'Use this Interac e-Transfer guide to understand Canadian casino deposit timing, withdrawal checks, limits, fees, and payout caveats.',
     url: 'https://247ibet.ca/interac-casino-canada',
     datePublished: '2026-03-01',
     dateModified: LAST_UPDATED,
@@ -104,7 +104,7 @@
     })),
   };
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -127,7 +127,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
   <div
     aria-hidden="true"
     class="fixed right-0 top-0 -z-10 h-[400px] w-[400px] rounded-full bg-yellow-500/5 blur-[100px] opacity-30 pointer-events-none"
@@ -153,12 +153,12 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <div class="my-6 rounded-xl border border-prestige-gold/20 bg-prestige-gold/5 p-5">
     <p class="font-bold text-white text-sm">
-      Interac e-Transfer payouts at 247iBET are typically processed within 15–30 minutes of
-      approval.
+      Interac e-Transfer payout timing depends on operator approval, account verification, and
+      bank-side processing.
     </p>
     <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
-      This provides the fastest legal withdrawal route for Canadian players, with direct bank
-      integration and no hidden processing fees.
+      Treat any specific timing, limit, or fee as a production-platform term to verify in the
+      licensed operator cashier before depositing or withdrawing.
     </p>
   </div>
 

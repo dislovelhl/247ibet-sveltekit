@@ -77,7 +77,7 @@
     '@type': 'Article',
     headline: `UFC Betting Canada ${new Date().getFullYear()} — MMA Odds, Markets & Tips`,
     description:
-      'Bet on UFC in Canada — fight winner, method of victory, round betting, and live in-play at 247iBET.',
+      'UFC betting in Canada guide — fight winner, method of victory, round betting, live in-play concepts, and platform availability checks.',
     url: 'https://247ibet.ca/events/ufc-betting-canada',
     datePublished: '2026-03-01',
     dateModified: '2026-03-30',
@@ -102,7 +102,7 @@
   <title>UFC Betting Canada {CURRENT_YEAR} — MMA Odds, Markets &amp; Tips | 247iBET</title>
   <meta
     name="description"
-    content="Bet on UFC in Canada — fight winner, method of victory, round betting, and live in-play at 247iBET. Fast Interac payouts. 18+/19+."
+    content="UFC betting Canada guide: fight winner, method of victory, round betting, live in-play concepts, payout caveats, and 18+/19+ reminders."
   />
   <meta
     property="og:title"
@@ -110,7 +110,7 @@
   />
   <meta
     property="og:description"
-    content="Bet on UFC in Canada — fight winner, method of victory, round betting, and live in-play at 247iBET. Fast Interac payouts. 18+/19+."
+    content="UFC betting Canada guide: fight winner, method of victory, round betting, live in-play concepts, payout caveats, and 18+/19+ reminders."
   />
   <meta property="og:type" content="article" />
   <link rel="canonical" href={canonicalUrl('/events/ufc-betting-canada')} />
@@ -118,7 +118,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl space-y-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl space-y-16">
   <header>
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -132,8 +132,8 @@
       UFC Betting Canada {CURRENT_YEAR}
     </h1>
     <p class="text-[#94A3B8] text-lg leading-relaxed max-w-2xl">
-      Bet on all UFC events at 247iBET — fight winner, method of victory, round betting, and live
-      in-play. Fast Interac payouts. 18+/19+.
+      Explore UFC betting concepts for Canada — fight winner, method of victory, round betting, and
+      live in-play. Verify market availability and payout terms on the operating platform. 18+/19+.
     </p>
   </header>
 
@@ -177,8 +177,8 @@
 
   <IBetShowcase
     variant="banner"
-    ctaText="Bet on UFC"
-    contextLabel="All events · Method of victory · Live in-play · Interac deposits"
+    ctaText="Explore UFC Guide"
+    contextLabel="All events · Method of victory · Live in-play · Interac caveats"
   />
 
   <nav aria-label="Related pages" class="border-t border-white/[0.08] pt-6">

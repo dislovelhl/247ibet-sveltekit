@@ -14,6 +14,14 @@ export type SearchResult = SearchItem & {
   matchedTerms: string[];
 };
 
+type SearchableItem = SearchItem & {
+  normalizedTitle: string;
+  normalizedDescription: string;
+  normalizedHref: string;
+  normalizedCategory: string;
+  normalizedTags: string;
+};
+
 export const SEARCH_ITEMS: SearchItem[] = [
   {
     title: 'Interac Casino Canada',
@@ -34,7 +42,8 @@ export const SEARCH_ITEMS: SearchItem[] = [
   },
   {
     title: 'Best Online Casinos Canada',
-    description: 'Find regulated casino options, bonus context, payout notes, and safety checks.',
+    description:
+      'Compare casino options with regulator-verification caveats, bonus context, payment notes, and safety checks.',
     href: '/best-online-casinos-canada',
     category: 'Guide',
     tags: ['casino', 'online', 'canada', 'bonuses'],
@@ -42,7 +51,8 @@ export const SEARCH_ITEMS: SearchItem[] = [
   },
   {
     title: 'Ontario iGaming Hub',
-    description: 'Ontario market guidance for legal sportsbook and online casino play.',
+    description:
+      'Ontario market guidance for verifying sportsbook and online-casino operator status.',
     href: '/ontario',
     category: 'Hub',
     tags: ['ontario', 'regulated', 'casino', 'sportsbook'],
@@ -50,23 +60,25 @@ export const SEARCH_ITEMS: SearchItem[] = [
   },
   {
     title: 'Alberta iGaming Hub',
-    description: 'Follow Alberta betting launch readiness, legal context, and operator checks.',
+    description:
+      'Follow Alberta betting launch readiness, legal context, and operator-source checks.',
     href: '/alberta',
     category: 'Hub',
     tags: ['alberta', 'regulated', 'sportsbook', 'casino'],
     featured: true,
   },
   {
-    title: 'Fast Payouts at 247iBET',
-    description: 'Learn about our rapid Interac deposit and withdrawal processing.',
+    title: 'Fast Payout Guidance',
+    description:
+      'Learn why Interac deposit and withdrawal timing can vary by operator, KYC review, and bank processing.',
     href: '/fast-payouts',
     category: 'Guide',
     tags: ['payouts', 'withdrawals', 'banking', 'casino'],
     featured: true,
   },
   {
-    title: '247iBET Casino Bonuses',
-    description: 'Explore our welcome offers, free spins, and transparent wagering terms.',
+    title: '247iBET Casino Bonus Guide',
+    description: 'Explore welcome-offer concepts, free-spin caveats, and wagering-term checks.',
     href: '/casino-bonuses-canada',
     category: 'Guide',
     tags: ['casino', 'bonuses', 'wagering', 'free spins'],
@@ -122,7 +134,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
   },
   {
     title: '247iBET Features',
-    description: 'Explore our platform features and performance standards.',
+    description: 'Explore public web guides, integration boundaries, and evaluation standards.',
     href: '/features/247ibet',
     category: 'Feature',
     tags: ['features', 'platform', '247ibet'],
@@ -130,7 +142,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
   {
     title: 'Canadian iGaming News',
     description:
-      'Market intelligence for Canadian betting regulation, operators, and product changes.',
+      'Public market context for Canadian betting regulation, operator-source checks, and product changes.',
     href: '/news',
     category: 'News',
     tags: ['news', 'regulation', 'operators', 'canada'],
@@ -147,23 +159,29 @@ const normalize = (value: string) =>
 const tokenize = (value: string) =>
   Array.from(new Set(normalize(value).split(' ').filter(Boolean)));
 
-const scoreItem = (item: SearchItem, terms: string[], normalizedQuery: string) => {
-  const title = normalize(item.title);
-  const description = normalize(item.description);
-  const slug = normalize(item.href);
-  const category = normalize(item.category);
-  const tags = normalize(item.tags.join(' '));
+const SEARCHABLE_ITEMS: SearchableItem[] = SEARCH_ITEMS.map((item) => ({
+  ...item,
+  normalizedTitle: normalize(item.title),
+  normalizedDescription: normalize(item.description),
+  normalizedHref: normalize(item.href),
+  normalizedCategory: normalize(item.category),
+  normalizedTags: normalize(item.tags.join(' ')),
+}));
+
+const FEATURED_SEARCH_ITEMS = SEARCH_ITEMS.filter((item) => item.featured);
+
+const scoreItem = (item: SearchableItem, terms: string[], normalizedQuery: string) => {
   const matchedTerms: string[] = [];
   let score = 0;
 
   for (const term of terms) {
     let termScore = 0;
 
-    if (title.includes(term)) termScore += 12;
-    if (slug.includes(term)) termScore += 8;
-    if (tags.includes(term)) termScore += 5;
-    if (category.includes(term)) termScore += 3;
-    if (description.includes(term)) termScore += 2;
+    if (item.normalizedTitle.includes(term)) termScore += 12;
+    if (item.normalizedHref.includes(term)) termScore += 8;
+    if (item.normalizedTags.includes(term)) termScore += 5;
+    if (item.normalizedCategory.includes(term)) termScore += 3;
+    if (item.normalizedDescription.includes(term)) termScore += 2;
 
     if (termScore > 0) {
       score += termScore;
@@ -175,8 +193,8 @@ const scoreItem = (item: SearchItem, terms: string[], normalizedQuery: string) =
 
   score += matchedTerms.length * 6;
   if (matchedTerms.length === terms.length) score += 20;
-  if (title.includes(normalizedQuery)) score += 30;
-  if (slug.includes(normalizedQuery)) score += 12;
+  if (item.normalizedTitle.includes(normalizedQuery)) score += 30;
+  if (item.normalizedHref.includes(normalizedQuery)) score += 12;
   if (item.featured) score += 2;
 
   return { score, matchedTerms };
@@ -188,9 +206,18 @@ export const searchItems = (query: string, limit = 12): SearchResult[] => {
 
   if (terms.length === 0) return [];
 
-  return SEARCH_ITEMS.map((item) => {
+  return SEARCHABLE_ITEMS.map((item) => {
     const { score, matchedTerms } = scoreItem(item, terms, normalizedQuery);
-    return { ...item, score, matchedTerms };
+    return {
+      title: item.title,
+      description: item.description,
+      href: item.href,
+      category: item.category,
+      tags: item.tags,
+      featured: item.featured,
+      score,
+      matchedTerms,
+    };
   })
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
@@ -198,4 +225,4 @@ export const searchItems = (query: string, limit = 12): SearchResult[] => {
 };
 
 export const getFeaturedSearchItems = (limit = 6): SearchItem[] =>
-  SEARCH_ITEMS.filter((item) => item.featured).slice(0, limit);
+  FEATURED_SEARCH_ITEMS.slice(0, limit);

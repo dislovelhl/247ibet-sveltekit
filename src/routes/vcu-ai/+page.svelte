@@ -10,7 +10,7 @@
     url: 'https://247ibet.ca',
     logo: 'https://247ibet.ca/images/brand/logo.png',
     description:
-      'Canadian iGaming intelligence hub tracking Ontario and Alberta operator markets for casino and sportsbook players.',
+      'Canadian iGaming intelligence hub summarizing Ontario and Alberta market context for public education and platform handoff planning.',
   };
 </script>
 
@@ -18,12 +18,12 @@
   <title>iGaming Intelligence for Canada | 247iBET</title>
   <meta
     name="description"
-    content="247iBET tracks the Canadian regulated market — real-time operator data, AGCO and AGLC compliance signals, and clear paths to the best casino and sportsbook options for Ontario and Alberta players."
+    content="This public guide summarizes Canadian regulated-market context, official-source checks, responsible-gambling resources, and verification paths for Ontario and Alberta readers."
   />
   <meta property="og:title" content="iGaming Intelligence for Canada | 247iBET" />
   <meta
     property="og:description"
-    content="247iBET tracks the Canadian regulated market — real-time operator data, AGCO and AGLC compliance signals, and clear paths to the best casino and sportsbook options for Ontario and Alberta players."
+    content="This public guide summarizes Canadian regulated-market context, official-source checks, responsible-gambling resources, and verification paths for Ontario and Alberta readers."
   />
   <link rel="canonical" href={canonicalUrl('/vcu-ai')} />
   <JsonLd schema={orgSchema} />
@@ -44,20 +44,17 @@
     class="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,12,24,0.78)_0%,rgba(7,12,24,0.9)_45%,rgba(7,12,24,1)_100%)]"
   ></div>
 
-  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
     <header class="max-w-4xl mx-auto text-center mb-16">
       <div
         class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-blue/10 border border-slate-blue/30 text-slate-blue text-xs font-bold tracking-widest uppercase mb-6"
       >
         iGaming Intelligence Hub
       </div>
-      <h1 class="page-hero-title mb-6">
-        247iBET iGaming Intelligence
-      </h1>
+      <h1 class="page-hero-title mb-6">247iBET iGaming Intelligence</h1>
       <p class="text-gray-300 text-lg md:text-xl font-sans leading-relaxed max-w-3xl mx-auto">
-        247iBET tracks the Canadian regulated market — real-time operator data, AGCO and AGLC
-        compliance signals, and clear paths to the best casino and sportsbook options for Ontario
-        and Alberta players.
+        This public guide summarizes Canadian regulated-market context, official-source checks,
+        responsible-gambling resources, and verification paths for Ontario and Alberta readers.
       </p>
     </header>
 
@@ -68,7 +65,8 @@
         <div class="text-slate-blue text-2xl mb-3">🏛️</div>
         <h2 class="text-white font-bold mb-2">Ontario Market</h2>
         <p class="text-gray-400 text-sm font-sans leading-relaxed">
-          AGCO-licensed operators tracked in real time. Open private market since April 2022.
+          Ontario private-market context with official-source checks. Verify current operators in
+          the iGaming Ontario directory before playing.
         </p>
       </div>
       <div class="navy-card rounded-2xl p-6">
@@ -83,7 +81,8 @@
         <div class="text-green-400 text-2xl mb-3">⚡</div>
         <h2 class="text-white font-bold mb-2">Payout Intelligence</h2>
         <p class="text-gray-400 text-sm font-sans leading-relaxed">
-          Withdrawal speed benchmarks, Interac e-Transfer processing data, and KYC friction signals.
+          Payout-timing education covering Interac e-Transfer, KYC, bonus review, and bank-side
+          caveats.
         </p>
       </div>
     </div>

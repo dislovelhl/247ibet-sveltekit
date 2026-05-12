@@ -6,7 +6,7 @@
     {
       question: 'What does the payout time checker measure?',
       answer:
-        'It compares the withdrawal speed we have recorded or verified for each casino, with Interac as the benchmark where applicable. It is meant to help you choose a site that fits how quickly you want your money to land.',
+        'It compares public payout-policy ranges, operator-disclosed timing, and Interac caveats where available. It is a planning reference, not confirmation that a withdrawal will complete on this site or on a fixed timeline.',
     },
     {
       question: 'Why do some withdrawals show as pending?',
@@ -73,7 +73,7 @@
   <title>Casino Payout Time Checker Canada 2026 — Withdrawal Speed by Site | 247iBET</title>
   <meta
     name="description"
-    content="Interactive payout time reference for all major Canadian online casinos. Compare Interac e-Transfer withdrawal speeds, payment methods, and verified processing times."
+    content="Interactive payout time reference for Canadian online casinos. Compare Interac e-Transfer policy ranges, payment methods, and operator-disclosed processing caveats."
   />
   <meta
     property="og:title"
@@ -81,13 +81,13 @@
   />
   <meta
     property="og:description"
-    content="Compare Interac e-Transfer withdrawal speeds, payment methods, and verified processing times for Canadian online casinos."
+    content="Compare Interac e-Transfer withdrawal policy ranges, payment methods, and operator-disclosed processing caveats for Canadian online casinos."
   />
   <link rel="canonical" href={canonicalUrl('/tools/payout-time-checker')} />
   <JsonLd {schema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -103,9 +103,9 @@
     </div>
     <h1 class="page-hero-title text-3xl md:text-4xl mb-3">Casino Payout Time Checker</h1>
     <p class="page-hero-subtitle mt-3 max-w-2xl text-base">
-      Reference withdrawal speeds for all major Canadian online casinos. Sorted by payout score —
-      fastest sites appear first. Interac e-Transfer is the main benchmark because it is the most
-      common CAD payout rail for Canadian players.
+      Reference withdrawal policy ranges for Canadian online casinos. Interac e-Transfer is the main
+      comparison point because it is a common CAD payout rail, but actual timing depends on operator
+      approval, KYC status, banking details, and current cashier terms.
     </p>
   </header>
 

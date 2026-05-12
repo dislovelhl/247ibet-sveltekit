@@ -21,7 +21,7 @@ Data sourced from [describe source, sample size, methodology].
 [Data and analysis]
 
 ## About 247iBET
-247iBET is Canada's premier online casino and sportsbook, offering 500+ casino games, full sportsbook coverage, and fast Interac payouts.
+247iBET is a Canadian public web platform for casino guides, sportsbook education, Interac payment guidance, responsible-gambling resources, and safe handoffs to the separate gaming platform.
 
 ## Media Assets
 - [Link to charts/graphs]

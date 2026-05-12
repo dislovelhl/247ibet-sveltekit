@@ -170,7 +170,7 @@
       name: 'Responsible Gambling Canada',
       headline: 'Safe Play Protocols',
       description:
-        'Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts.',
+        'Use this public responsible-gambling guide for self-assessment, limit-setting concepts, cooling-off and self-exclusion resources, and Canadian support contacts.',
       url: 'https://247ibet.ca/responsible-gambling',
       author: {
         '@type': 'Organization',
@@ -202,12 +202,12 @@
   <title>Safe Play Protocols | Responsible Gambling Canada | 247iBET</title>
   <meta
     name="description"
-    content="Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts."
+    content="Use this public responsible-gambling guide for self-assessment, limit-setting concepts, cooling-off and self-exclusion resources, and Canadian support contacts."
   />
   <meta property="og:title" content="Safe Play Protocols | Responsible Gambling Canada | 247iBET" />
   <meta
     property="og:description"
-    content="Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts."
+    content="Use this public responsible-gambling guide for self-assessment, limit-setting concepts, cooling-off and self-exclusion resources, and Canadian support contacts."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/responsible-gambling" />
@@ -216,7 +216,7 @@
     schema={articleSchema({
       headline: 'Safe Play Protocols | Responsible Gambling Canada | 247iBET',
       description:
-        'Use 247iBET safe play protocols, self-assessment, deposit limits, cooling-off tools, self-exclusion resources, and Canadian support contacts.',
+        'Use this public responsible-gambling guide for self-assessment, limit-setting concepts, cooling-off and self-exclusion resources, and Canadian support contacts.',
       url: canonicalUrl('/responsible-gambling'),
       datePublished: '2026-04-27',
     })}
@@ -269,7 +269,7 @@
           247iBET publishes public responsible-gambling guidance and links to independent support
           resources. Account controls, cashier features, and wagering activity belong to the
           separate operating platform you choose to use. <strong
-            >Minimum age: 19+ in Ontario and Alberta.</strong
+            >Minimum age: 19+ in Ontario and 18+ in Alberta.</strong
           >
         </p>
 

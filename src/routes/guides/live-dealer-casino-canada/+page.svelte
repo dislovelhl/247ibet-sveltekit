@@ -55,7 +55,7 @@
     },
   ];
 
-import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 </script>
 
 <svelte:head>
@@ -110,7 +110,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -138,8 +138,8 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <section class="mb-8">
     <IBetShowcase
       variant="compact"
-      ctaText="Play Live Casino"
-      contextLabel="AGCO-licensed · Live tables"
+      ctaText="Explore Live Casino Guide"
+      contextLabel="Verify licensing · Live-table guide"
     />
   </section>
 

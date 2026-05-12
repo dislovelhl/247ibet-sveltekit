@@ -13,16 +13,31 @@
   let canvas: HTMLCanvasElement;
 
   onMount(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const supportsFinePointer = window.matchMedia('(pointer: fine)');
+
+    if (prefersReducedMotion.matches || !supportsFinePointer.matches) {
+      return;
+    }
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     let width = window.innerWidth;
     let height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
+    let frameId = 0;
+
+    const syncCanvasSize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    };
+
+    syncCanvasSize();
 
     const particles: Particle[] = [];
-    const particleCount = 35;
+    const particleCount = width < 768 ? 16 : 35;
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
@@ -54,20 +69,42 @@
         ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
     }
 
-    animate();
+    const startAnimation = () => {
+      if (frameId !== 0) return;
+      animate();
+    };
+
+    const stopAnimation = () => {
+      if (frameId === 0) return;
+      cancelAnimationFrame(frameId);
+      frameId = 0;
+    };
+
+    startAnimation();
 
     const handleResize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+      syncCanvasSize();
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        startAnimation();
+      } else {
+        stopAnimation();
+      }
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      stopAnimation();
+      window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   });
 </script>
 

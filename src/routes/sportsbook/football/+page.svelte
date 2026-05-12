@@ -11,7 +11,7 @@
     heading: 'Football Betting in Canada',
     breadcrumbLabel: 'Football Betting',
     metaDescription:
-      'Understand football betting in Canada with NFL coverage, spreads, totals, props, futures, and Super Bowl markets at 247iBET.',
+      'Understand football betting in Canada with NFL coverage, spreads, totals, props, futures, and Super Bowl market concepts.',
     keywords: 'football betting Canada, NFL betting Canada, Super Bowl betting',
     heroSubheading:
       'Compare NFL spreads, totals, props, and futures, with live markets and Super Bowl betting tracked through the full football season in Canada.',
@@ -59,7 +59,7 @@
     infoPanelAccent: 'gold',
     faqItems: [
       {
-        question: 'What are the main football bets at 247iBET?',
+        question: 'What are the main football bet types?',
         answer:
           'Spread, moneyline, totals, player props, and futures are the main football betting markets. Super Bowl and conference futures grow in importance later in the year.',
       },
@@ -178,7 +178,7 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-5xl px-4  pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -192,7 +192,11 @@
     <div
       class="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-60"
     >
-      <img src={page.heroImage} alt={page.title + " — online betting in Canada"} class="h-full w-full object-cover opacity-80" />
+      <img
+        src={page.heroImage}
+        alt={page.title + ' — online betting in Canada'}
+        class="h-full w-full object-cover opacity-80"
+      />
       <div
         class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/60 to-transparent"
       ></div>
@@ -289,7 +293,11 @@
   </section>
 
   <div class="mt-14">
-    <IBetShowcase variant="banner" ctaText="Bet Now" contextLabel={page.ctaContextLabel} />
+    <IBetShowcase
+      variant="banner"
+      ctaText="Check Availability"
+      contextLabel={page.ctaContextLabel}
+    />
   </div>
 
   <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">

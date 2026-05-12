@@ -115,9 +115,7 @@
     role="navigation"
     aria-label="Quick actions"
   >
-    <div
-      class="floating-action-tray p-2.5"
-    >
+    <div class="floating-action-tray p-2.5">
       <div class="flex items-center gap-2">
         {#if installPrompt}
           <button
@@ -131,9 +129,10 @@
           <a
             href={IBET_URLS.casino}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow sponsored noopener noreferrer"
+            data-sveltekit-preload-data="tap"
             class="flex min-h-[48px] flex-1 items-center justify-center gap-2 btn-glossy-gold btn-magnetic shimmer-effect rounded-2xl px-2 py-3 text-xs font-black active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
-            aria-label="Open 247iBET Casino"
+            aria-label="Open affiliate casino handoff"
           >
             <Trophy class="h-4 w-4 shrink-0" aria-hidden="true" />
             Casino
@@ -143,9 +142,10 @@
         <a
           href={IBET_URLS.register}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
+          data-sveltekit-preload-data="tap"
           class="segmented-item flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.065] px-2 py-3 text-xs font-bold text-white transition-all hover:bg-white/10 active:scale-95 btn-magnetic focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-raised min-[360px]:text-sm"
-          aria-label="Open 247iBET Sports Betting"
+          aria-label="Open affiliate sportsbook handoff"
         >
           <Star class="h-4 w-4 shrink-0 text-prestige-gold" aria-hidden="true" />
           Sports
