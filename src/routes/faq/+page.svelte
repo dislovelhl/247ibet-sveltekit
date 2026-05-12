@@ -22,16 +22,16 @@
       icon: UserPlus,
       questions: [
         {
-          q: 'How do I open a 247iBET account?',
-          a: 'Opening an account takes about two minutes. Choose **Sign Up**, enter your details (name, email, mobile), verify your identity via SMS link (AGCO requirement), and set your credentials.'
+          q: 'How do I open a new 247iBET account as a Canadian player?',
+          a: 'To register for a new 247iBET account, you must be 19 or older in Ontario and Alberta. The process takes approximately two minutes: Click **Sign Up**, enter your legal name and contact details, and complete the mandatory identity verification via the SMS link provided.'
         },
         {
-          q: 'What games can Canadians play?',
-          a: 'Regulated operators offer **Sports Betting** (NHL, NFL, UFC), **Online Slots**, **Live Casino** (Blackjack, Roulette), and **Virtual Sports**. Availability varies by province; Ontario has the full catalogue.'
+          q: 'What types of online casino games are available in Canada?',
+          a: 'Eligible Canadian players can access a wide variety of regulated games including **Online Slots**, **Live Dealer Blackjack**, **Roulette**, and **Baccarat**. We also offer a comprehensive **Sportsbook** for NHL, NBA, and NFL betting.'
         },
         {
-          q: 'How to register as a new player in Canada?',
-          a: '1. Click **Sign Up**. 2. **Verification**: Follow the SMS link to upload ID and a selfie. 3. **Final Steps**: Confirm username/password and legal requirements.'
+          q: 'Is it safe to play at online casinos in Canada?',
+          a: 'Yes, playing at regulated online casinos in Canada is safe when you use established platforms like 247iBET. We prioritize player security through 256-bit encryption, mandatory identity verification (KYC), and strict adherence to responsible gaming standards.'
         }
       ]
     },
@@ -41,16 +41,12 @@
       icon: Wallet,
       questions: [
         {
-          q: 'How do I make a deposit with Interac?',
-          a: 'Log in, go to the **Cashier**, select **Interac**, enter the amount and your registered email/mobile, then complete the bank transfer flow.'
+          q: 'How do I deposit money using Interac e-Transfer?',
+          a: 'To fund your account with Interac, log in and navigate to the **Cashier**. Select **Interac e-Transfer**, specify your deposit amount, and follow the secure prompts from your Canadian bank to authorize the transfer.'
         },
         {
-          q: 'Why was my deposit declined?',
-          a: 'Common reasons include mismatched emails, reaching daily bank limits, or bank-side blocks. Verify your Interac details and contact your bank if issues persist.'
-        },
-        {
-          q: 'What are the deposit timelines?',
-          a: 'Interac e-Transfers are typically processed in **under 10 minutes**. In rare cases, bank delays can extend this to 24 hours.'
+          q: 'How long does an Interac deposit take to reach my account?',
+          a: 'Most Interac e-Transfer deposits land in your 247iBET account instantly or within **10 minutes**. In rare cases, your financial institution may require up to 24 hours to process the transaction.'
         }
       ]
     },
@@ -60,16 +56,12 @@
       icon: Banknote,
       questions: [
         {
-          q: 'How do I withdraw with Interac?',
-          a: 'Log in, open the **Withdraw** tab in your cashier, verify your email if it&apos;s new, select **Interac**, and enter your withdrawal amount.'
+          q: 'How do I withdraw my winnings from 247iBET?',
+          a: 'To withdraw funds, go to the **Withdraw** section of the cashier. Select your preferred method (featured: Interac e-Transfer), enter the amount you wish to payout, and confirm the request. Ensure your account is fully verified to avoid delays.'
         },
         {
-          q: 'Why is my withdrawal pending?',
-          a: 'All requests undergo a standard security and KYC review. While top-tier operators process within hours, payment method timing and verification status can affect speed.'
-        },
-        {
-          q: 'What are the payout timelines?',
-          a: 'Interac payouts typically land **within 15-30 minutes** after operator approval. Unverified accounts may take up to 24 hours for review.'
+          q: 'How fast are Interac withdrawals at 247iBET?',
+          a: 'Interac payouts at 247iBET are typically received within **15 to 30 minutes** after our team approves the withdrawal request. First-time payouts or unverified accounts may require additional review time up to 24 hours.'
         }
       ]
     },

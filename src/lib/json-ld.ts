@@ -23,6 +23,46 @@ export function jsonLdScriptHtml(schema: unknown): string {
   return `<script type="application/ld+json">${safeJsonLd(schema)}${JSON_LD_SCRIPT_CLOSE}`;
 }
 
+export function organizationSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://247ibet.ca/#org',
+    name: '247iBET',
+    url: 'https://247ibet.ca',
+    logo: 'https://247ibet.ca/images/brand/logo.png',
+    description:
+      '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and player bonuses.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'CA',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Canada',
+    },
+    sameAs: [
+      'https://x.com/247ibet',
+      'https://www.instagram.com/247ibet/',
+      'https://t.me/247iBET',
+      'https://www.tiktok.com/@247ibet',
+    ],
+    knowsAbout: [
+      'Online Casino Canada',
+      'Sports Betting Canada',
+      'Interac Casino Payouts',
+      'Live Dealer Casino',
+      'Responsible Gambling',
+      'Canadian iGaming Regulations',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'French'],
+    },
+  };
+}
+
 // Reusable Article schema builder — use on any content page.
 // Pages with Article + BreadcrumbList + FAQPage are cited 2x more by AI engines.
 export interface ArticleSchemaOpts {

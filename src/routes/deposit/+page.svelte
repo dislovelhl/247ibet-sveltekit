@@ -17,6 +17,8 @@
   import { IBET_URLS } from '$lib/ibet-brand';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import { globalParallax } from '$lib/runes.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import { howToSchema } from '$lib/json-ld';
 
   const trustItems = [
     { title: 'Trusted by Canadians', body: 'CAD-native account funding', icon: BadgeCheck },
@@ -157,6 +159,16 @@
   />
   <link rel="canonical" href={canonicalUrl('/deposit')} />
   <JsonLd schema={faqSchema} />
+  <JsonLd
+    schema={howToSchema({
+      name: 'How to Deposit with Interac at 247iBET',
+      description: 'Step-by-step guide to funding your 247iBET account using Interac e-Transfer.',
+      steps: depositSteps.map((step) => ({
+        name: step.title,
+        text: step.body,
+      })),
+    })}
+  />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
@@ -170,6 +182,8 @@
         <li class="text-prestige-gold">Deposit &amp; Withdraw</li>
       </ol>
     </nav>
+
+    <AffiliateDisclosure variant="inline" />
 
     <header
       class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"

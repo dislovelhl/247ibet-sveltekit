@@ -28,6 +28,7 @@
   import { reveal } from '$lib/animations';
   import { globalParallax } from '$lib/runes.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   const page = {
     title: 'Canadian Sportsbook: Odds, Parlays & Live Betting | 247iBET',
@@ -327,15 +328,19 @@
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
   <div class="mx-auto w-full">
-    <nav aria-label="Breadcrumb">
-      <ol>
-        <li><a href="/">Home</a></li>
+    <nav aria-label="Breadcrumb" class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
+      <ol class="flex gap-2 text-xs font-black uppercase tracking-[0.12em] text-text-tertiary">
+        <li><a href="/" class="hover:text-prestige-gold transition-colors">Home</a></li>
         <li>/</li>
-        <li>Sportsbook</li>
+        <li class="text-text-body">Sportsbook</li>
       </ol>
     </nav>
 
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
+    <div class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16">
+      <AffiliateDisclosure variant="inline" />
+    </div>
+
+    <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
         <div
           class="material-panel sticky top-28 space-y-6 rounded-[2rem] p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"

@@ -163,6 +163,9 @@
     </div>
 
     <div class="px-2 pt-1.5 text-center">
+      <span class="block text-[10px] leading-tight text-text-tertiary mb-1">
+        Affiliate Disclosure: This site may earn commissions from featured operators.
+      </span>
       <span class="text-xs leading-snug text-text-tertiary">
         18+/19+ by province · Gamble responsibly · Terms apply
       </span>

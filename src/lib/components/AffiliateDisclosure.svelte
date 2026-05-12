@@ -21,10 +21,10 @@
       ? 'mt-4'
       : ''}"
   >
-    <strong class="text-text-body">247iBET Standards:</strong>
-    We are committed to providing a secure and transparent iGaming environment for all Canadian
-    players. Our platform features advanced 256-bit encryption and robust responsible gaming tools.
-    Always play within your means.
-    <a href="/responsible-gambling" class="text-slate-blue hover:underline">Learn more</a>.
+    <strong class="text-text-body">Affiliate Disclosure:</strong>
+    Our platform provides independent reviews and guides for Canadian iGaming. We may receive
+    commissions from the operators featured on this page through our affiliate links. This does not
+    affect our editorial integrity or the fairness of our ratings.
+    <a href="/about/affiliate-disclosure" class="text-slate-blue hover:underline">Learn more</a>.
   </div>
 {/if}

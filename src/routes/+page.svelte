@@ -17,6 +17,8 @@
   import OddsTicker from '$lib/components/OddsTicker.svelte';
   import GlintCard from '$lib/components/GlintCard.svelte';
   import HeroBanner from '$lib/components/HeroBanner.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
+  import { organizationSchema } from '$lib/json-ld';
 
   const LAST_UPDATED = '2026-04-29';
 
@@ -380,6 +382,7 @@
   <meta property="og:url" content={SITE.url} />
   <link rel="canonical" href={canonicalUrl('/')} />
   <JsonLd schema={homeSchema} />
+  <JsonLd schema={organizationSchema()} />
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black text-white no-shell-pad" role="presentation">
@@ -391,6 +394,7 @@
     class="mx-auto max-w-[1720px] px-4 pt-1 sm:px-6 lg:px-10 xl:px-16"
     aria-label="Jump links"
   >
+    <AffiliateDisclosure variant="inline" />
     <div class="segmented-chrome flex gap-2 overflow-x-auto rounded-[24px] p-1.5 snap-x snap-mandatory scroll-smooth hide-scrollbar">
       {#each jumpLinks as link}
         <a
@@ -908,8 +912,6 @@
         >
       </div>
     </section>
-
-
 
     <!-- Gold moment: full-bleed CTA -->
     <section

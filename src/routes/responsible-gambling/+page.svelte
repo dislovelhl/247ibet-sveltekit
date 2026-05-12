@@ -71,6 +71,11 @@
       href: 'https://aglc.ca/gambling/help-problem-gambling',
     },
     {
+      name: 'AGLC — Responsible Gambling',
+      meta: 'Alberta canonical regulatory resources · aglc.ca',
+      href: 'https://aglc.ca/gaming/responsible-gambling',
+    },
+    {
       name: 'Gamblers Anonymous Canada',
       meta: 'Peer-support fellowship meetings · gamblersanonymous.org',
       href: 'https://www.gamblersanonymous.org/',
@@ -254,7 +259,7 @@
           <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Protocols</span>
         </h1>
         <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
-          At 247iBET, your well-being is our priority. Our player protection framework is built on evidence-based standards and proactive monitoring.
+          At 247iBET, your well-being is our priority. Our player protection framework is built on evidence-based standards and proactive monitoring. <strong>Minimum age: 19+ in Ontario and Alberta.</strong>
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">

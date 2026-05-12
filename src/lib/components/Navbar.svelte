@@ -297,6 +297,8 @@
       <div class="hidden sm:block">
         <a
           href={PARTNER.url}
+          target="_blank"
+          rel="noopener noreferrer nofollow sponsored"
           class="page-cta-primary-sm shimmer-effect"
           aria-label={IBET_CTA.primary}
         >
@@ -475,3 +477,4 @@
     </div>
   {/if}
 </nav>
+av>

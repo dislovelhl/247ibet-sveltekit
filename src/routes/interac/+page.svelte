@@ -17,6 +17,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import { globalParallax } from '$lib/runes.svelte';
+  import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   const trustItems = [
     {
@@ -172,6 +173,8 @@
         <li class="text-white font-medium">Interac Payouts</li>
       </ol>
     </nav>
+
+    <AffiliateDisclosure variant="inline" />
 
     <header class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl">
       <BackgroundAtmosphere 
