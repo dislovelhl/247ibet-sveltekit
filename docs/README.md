@@ -12,6 +12,7 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | Page | Use it for |
 | --- | --- |
 | [Architecture](./ARCHITECTURE.md) | Understand the SvelteKit app boundary, route structure, workflows, security posture, and runtime contracts. |
+| [Gaming platform contract](./integration/gaming-platform-contract.md) | Understand the boundary between this public web shell and the separate operational gaming platform. |
 | [Content model](./CONTENT_MODEL.md) | Plan or review casino, sportsbook, market, tool, policy, news, guide, and search pages. |
 | [Design system](./DESIGN_SYSTEM.md) | Apply prestige navy tokens, typography, shared CSS utilities, component rules, and accessibility baselines. |
 | [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) | Run local gates, deploy on Vercel, operate cron/workflow endpoints, and recover from common failures. |
@@ -37,7 +38,7 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 1. **Current-checkout truth first.** Prefer source files, tests, and generated artifacts in this checkout over stale historical docs.
 2. **Task-oriented pages.** Each doc should answer “what do I do next?” and link to source paths.
 3. **No dependency creep.** Keep docs as Markdown unless a future explicit task authorizes a docs-site package.
-4. **Cautious regulated-copy posture.** Legal, licensing, payout, bonus, game-count, and affiliate claims need caveats or source checks.
+4. **Cautious regulated-copy posture.** Legal, licensing, payout, bonus, game-count, wallet, KYC, odds, payment, and affiliate claims need caveats, source checks, or explicit gaming-platform API backing.
 5. **AI-readable summaries.** Update `static/llms.txt` or `static/llms-full.txt` only when the public site map or positioning changes; do not use them as the only repo documentation.
 
 ## Source-of-truth matrix
@@ -45,7 +46,7 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | Topic | Primary source | Documentation surface |
 | --- | --- | --- |
 | Brand, canonical URL, SEO defaults | `src/lib/site.ts` | [Content model](./CONTENT_MODEL.md) |
-| Partner URLs, CTA labels, disclosure | `src/lib/ibet-brand.ts` | [Content model](./CONTENT_MODEL.md) |
+| Partner/platform URLs, CTA labels, disclosure | `src/lib/ibet-brand.ts` | [Content model](./CONTENT_MODEL.md), [Gaming platform contract](./integration/gaming-platform-contract.md) |
 | Routes and sitemap | `src/routes/**`, `src/routes/sitemap.xml/+server.ts` | [Architecture](./ARCHITECTURE.md), [Content model](./CONTENT_MODEL.md) |
 | SEO/GEO/AEO page registry | `src/lib/workflows/pages.ts` | [Content model](./CONTENT_MODEL.md), [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) |
 | Design tokens and utilities | `DESIGN.md`, `src/styles/**`, `src/app.css` | [Design system](./DESIGN_SYSTEM.md) |

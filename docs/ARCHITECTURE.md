@@ -5,7 +5,26 @@ description: System architecture for the 247iBET SvelteKit application.
 
 # Architecture
 
-247iBET is a SvelteKit 2 / Svelte 5 site deployed to Vercel with Node 24 serverless functions. The product surface is an independent Canadian iGaming guide with content hubs, evergreen guides, market trackers, tools, policy pages, search, and protected operational workflow endpoints.
+247iBET is a SvelteKit 2 / Svelte 5 public web platform deployed to Vercel with Node 24 serverless functions. The product surface is the public brand, SEO, acquisition, compliance-content, affiliate/operator CTA, signup/lead-capture, CMS-ready, API-ready, and AI-workflow-ready frontend shell for the 247iBET brand. The actual gaming platform is a separate project.
+
+
+## Important architecture clarification
+
+The operational gaming platform is a separate project. This repository should not implement or pretend to implement casino games, sportsbook odds execution, betting transactions, wallet or balance state, deposits, withdrawals, KYC, risk engine behavior, bonus engine behavior, player-account backend behavior, gaming-provider integrations, or real-money game execution.
+
+This repository owns the public-facing web layer:
+
+- brand website and SEO landing pages;
+- acquisition funnel and affiliate/operator CTA routing;
+- compliance-safe content surface and age-gated public experience;
+- signup/lead capture surface;
+- CMS-ready frontend and API-ready shell;
+- AI-ready content and workflow surfaces;
+- integration layer for the separate gaming platform.
+
+Where UI implies a backend dependency, label the dependency as static marketing content, mocked/demo content, a future API integration point, or production API required. Do not hard-code fake gaming state. The site can launch as a brand/acquisition platform before the separate gaming backend is connected.
+
+See [`docs/integration/gaming-platform-contract.md`](./integration/gaming-platform-contract.md) for the frontend-to-platform ownership matrix, API boundaries, security assumptions, failure behavior, environment variables, and launch blockers.
 
 ## High-level map
 
@@ -16,7 +35,10 @@ flowchart TD
   Layout --> Pages[src/routes/** pages]
   Pages --> Components[src/lib/components]
   Pages --> SiteConfig[src/lib/site.ts + ibet-brand.ts]
+  Pages --> PlatformHandoffs[Separate gaming platform handoff URLs / APIs]
   Pages --> JsonLd[JsonLd.svelte + json-ld.ts]
+  Vercel --> LeadAPI[src/routes/api/signup]
+  LeadAPI --> LeadWorkflow[src/workflows/user-signup]
   Vercel --> APIs[src/routes/api/workflows]
   APIs --> Workflows[src/workflows]
   Workflows --> Registry[src/lib/workflows/pages.ts]
@@ -51,6 +73,7 @@ Primary route groups:
 | Editorial/policy | `/about/*`, `/editorial-policy`, `/sources`, `/responsible-gambling`, `/security` | Trust, disclosure, methodology, and safer-play content. |
 | Search | `/search` | Client-side ranked search over repo-authored index data. |
 | Admin | `/admin/*` | Feature-flagged internal surfaces with token-based session-cookie auth and a `/admin/login` portal. |
+| Signup/lead API | `/api/signup` | Lead-capture workflow trigger; not a player-account registration backend. |
 | API workflows | `/api/workflows/*` | Authenticated SEO/GEO/AEO workflow triggers and status endpoint. |
 | Generated XML | `/sitemap.xml` | Static route list filtered for public crawlability. |
 
@@ -76,7 +99,7 @@ Implications:
 | `src/lib/age-gate-client.ts` | Client-side age-gate state and legacy-key migration helpers. |
 | `src/lib/server/auth.ts` | Constant-time secret comparison helper for server-only routes. |
 | `src/lib/server/admin.ts` | Admin feature-flag and session-cookie helpers. |
-| `src/lib/server/signup.ts` | Server-side signup request validation shared by route code and tests. |
+| `src/lib/server/signup.ts` | Server-side signup/lead request validation shared by route code and tests; not wallet, KYC, or player-account state. |
 | `src/lib/server/workflow-route.ts` | Shared workflow route auth and `{ runId, status: 'started' }` response helpers. |
 
 ## Static asset architecture
@@ -139,6 +162,12 @@ Workflow pages are split between API route wrappers and workflow implementations
 
 Workflow route wrappers should use `src/lib/server/workflow-route.ts` for shared secret validation and start-response formatting. This keeps manual POST auth, cron GET auth, and the public response shape consistent across SEO, GEO, AEO, and status surfaces.
 
+## Integration boundary with the gaming platform
+
+The SvelteKit site may route users to the separate gaming platform or consume safe display APIs, but it must not become the transactional gaming system. Expected integration points include signup or registration handoff, login handoff, operator CTA handoff, promotions/bonus display data, payment-method display data, responsible-gaming links, optional user-session handoff, analytics events, and future content/personalization APIs.
+
+Safe-failure rule: if a gaming-platform API is unavailable, public pages should show static fallback guidance or hide backend-dependent account/betting/payment UI. Never imply that a transaction, bet, deposit, withdrawal, bonus award, KYC approval, or account action completed unless confirmed by the separate gaming-platform API.
+
 ## Security boundaries
 
 - Vercel headers set `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, HSTS, and Reporting Endpoints.
@@ -146,7 +175,8 @@ Workflow route wrappers should use `src/lib/server/workflow-route.ts` for shared
 - Workflow POST endpoints require `x-workflow-secret` and GET cron endpoints require `Authorization: Bearer <CRON_SECRET>`.
 - Workflow status output intentionally projects a narrow DTO instead of returning raw workflow runtime objects.
 - Admin routes are gated by `ADMIN_ENABLED` plus the `ibet_admin_session` cookie validated against `ADMIN_TOKEN`; `/admin/login` sets and clears the session cookie.
-- Affiliate links should use `SafeExternalLink` or equivalent `nofollow sponsored noopener noreferrer` attributes.
+- Affiliate/operator links should use `SafeExternalLink` or equivalent `nofollow sponsored noopener noreferrer` attributes.
+- Gaming-platform API credentials, player sessions, wallet state, KYC results, bet placement, cashier actions, and real-money transaction confirmations belong to the separate gaming platform unless a future API contract explicitly delegates a read-only or handoff-safe subset to this frontend.
 
 ## Public crawl and AI surfaces
 
@@ -161,3 +191,4 @@ Workflow route wrappers should use `src/lib/server/workflow-route.ts` for shared
 - Workflow and Braintrust Vite plugins are build-only because dev-mode watch behavior can cause loops.
 - Node 24 is the local-development and Vercel runtime contract; the current GitHub Actions workflow is still pinned separately to Node 22 in `.github/workflows/ci.yml`.
 - New docs should stay Markdown-only unless a future task explicitly authorizes a docs-site dependency.
+- Do not describe this repository as the gaming platform, sportsbook backend, casino backend, payment platform, player wallet, KYC system, or real-money gaming engine.

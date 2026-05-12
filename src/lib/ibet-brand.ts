@@ -25,42 +25,48 @@ export const IBET_URLS = {
 
 export const IBET_PROFILE = {
   name: '247iBET',
-  tagline: 'Canadian iGaming guide covering casino reviews, sportsbook education, and Interac payout guidance.',
+  tagline:
+    'Public 247iBET web platform covering casino guides, sportsbook education, Interac payout guidance, and safe handoff paths to the separate gaming platform.',
   rating: null,
   logo: '/images/brand/logo.png',
   established: 2020,
   licences: [],
   agcoLicensed: false,
   minAge: 18,
-  withdrawalSpeed: 'Interac payouts may complete after operator approval, with timing varying by KYC, bonus review, and bank processing',
+  withdrawalSpeed:
+    'Interac payouts may complete after operator approval, with timing varying by KYC, bonus review, and bank processing',
   paymentMethods: ['Interac'],
   provinces: ['ON', 'AB', 'BC', 'MB', 'SK', 'QC', 'NS', 'NB', 'PE', 'NL'],
   features: [
     {
       icon: 'Zap',
       label: 'Interac payout guidance',
-      detail: 'Interac withdrawals may complete after operator approval, but timing varies with KYC, account review, and bank processing.',
+      detail:
+        'Interac withdrawals may complete after operator approval, but timing varies with KYC, account review, and bank processing.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
     {
       icon: 'Gamepad2',
-      label: '500+ Casino Games',
-      detail: 'Slots, blackjack, roulette, baccarat, and live dealer from top providers.',
+      label: 'Casino guide coverage',
+      detail:
+        'Guides to slots, blackjack, roulette, baccarat, and live dealer formats; real game execution belongs to the separate gaming platform.',
       accent: 'text-yellow-400',
       bg: 'bg-yellow-500/8 border-yellow-500/20',
     },
     {
       icon: 'Trophy',
-      label: 'Full Sportsbook',
-      detail: 'NHL, NBA, NFL, UFC, soccer — competitive odds, live betting, and parlay options.',
+      label: 'Sportsbook guide coverage',
+      detail:
+        'Education for NHL, NBA, NFL, UFC, soccer, odds formats, live-betting concepts, and parlays; odds execution belongs to the separate gaming platform.',
       accent: 'text-green-400',
       bg: 'bg-green-500/8 border-green-500/20',
     },
     {
       icon: 'MonitorPlay',
       label: 'Live dealer coverage',
-      detail: 'Guidance on blackjack, roulette, baccarat, and other live dealer formats commonly offered by operators.',
+      detail:
+        'Guidance on blackjack, roulette, baccarat, and other live dealer formats commonly offered by operators.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
@@ -69,37 +75,41 @@ export const IBET_PROFILE = {
     'Interac payout guidance with approval and bank-processing caveats clearly explained',
     'Editorial focus on safer-play tools, payout terms, and operator transparency',
     'Transparent bonus terms — wagering, expiry, and limits clearly shown',
-    'Responsible gaming tools built into every 247iBET account',
-    '500+ premium casino games and full sportsbook coverage',
+    'Responsible-gambling education and links to account-level controls on the separate gaming platform',
+    'Casino and sportsbook guides with platform handoff routes clearly separated',
   ],
   trustPanel: [
     {
       label: 'Security',
       value: '256-bit SSL encrypted',
-      detail: 'Our platform uses bank-grade encryption to protect your account, payments, and identity.',
+      detail:
+        'This public web layer uses secure transport and safe-link practices; player account, payment, and identity controls belong to the separate gaming platform.',
     },
     {
       label: 'Payments',
       value: 'Interac payout guidance',
-      detail: 'We explain operator approval, KYC review, and bank-side timing so readers know why payouts can vary.',
+      detail:
+        'We explain operator approval, KYC review, and bank-side timing so readers know why payouts can vary.',
     },
     {
       label: 'Fair Play',
       value: 'Game fairness and live dealer explainers',
-      detail: 'We describe common RNG and live dealer concepts in educational terms rather than making certification claims about operators.',
+      detail:
+        'We describe common RNG and live dealer concepts in educational terms rather than making certification claims about operators.',
     },
     {
       label: 'Support',
-      value: '24/7 Dedicated Assistance',
-      detail: 'Our support team is available around the clock to help with any account or gaming queries.',
+      value: 'Support and contact guidance',
+      detail:
+        'Public support content routes users to contact, responsible-gambling, and platform support resources without handling player account state.',
     },
   ],
   pros: [
     'Interac payout expectations explained with operator-approval caveats',
-    'Elite casino catalogue with 500+ games',
-    'Full sportsbook with competitive live odds',
-    'Dedicated 24/7 Canadian-first support',
-    'Advanced responsible gaming tools',
+    'Casino catalogue guidance without repo-owned game execution',
+    'Sportsbook education without repo-owned odds execution',
+    'Canadian-first support and handoff guidance',
+    'Responsible-gambling education and links to platform controls',
   ],
   cons: ['Must be 19+ (or 18+ in select provinces). Always play within your limits.'],
 } as const;
@@ -110,9 +120,9 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     group: 'bonus',
     title: 'Welcome Offer Snapshot',
     headline: 'Get C$2000 bonus back + 10 free spins',
-    period: 'Welcome offer — see cashier for full terms',
+    period: 'Welcome offer snapshot — verify terms on the gaming platform',
     summary:
-      'New players get up to C$2000 bonus back plus 10 free spins on sign-up. Check deposit minimums, wagering requirements, eligible games, and expiry in our cashier before opting in.',
+      'Creative snapshot: new-player bonus language may appear on platform materials. Verify deposit minimums, wagering requirements, eligible games, expiry, and eligibility on the separate gaming platform before opting in.',
     image: '/images/creatives/welcome-bonus-back.webp',
     alt: '247iBET welcome offer snapshot: Get $2000 bonus back plus 10 free spins.',
     observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247iBET.ca'],
@@ -122,9 +132,9 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     group: 'bonus',
     title: 'Every Deposit Bonus',
     headline: 'C$1000 bonus every deposit',
-    period: 'Ongoing — see cashier for full terms',
+    period: 'Ongoing snapshot — verify terms on the gaming platform',
     summary:
-      'Enjoy a C$1000 bonus on every deposit you make. Confirm whether the cap applies per deposit, per day, or over a campaign window in our cashier.',
+      'Creative snapshot: every-deposit bonus language may appear on platform materials. Confirm whether the cap applies per deposit, per day, or over a campaign window on the separate gaming platform.',
     image: '/images/creatives/every-deposit-bonus.webp',
     alt: '247iBET: $1000 bonus every deposit.',
     observedText: ['$1000 BONUS EVERY DEPOSIT'],
@@ -132,14 +142,18 @@ export const IBET_CREATIVE_SNAPSHOTS = [
   {
     slug: 'mothers-day-double-rewards',
     group: 'bonus',
-    title: 'Mother\'s Day Double Rewards',
+    title: "Mother's Day Double Rewards",
     headline: 'Deposit C$50, get C$50 bonus',
-    period: 'May 1–10 — see cashier for full terms',
+    period: 'May 1–10 snapshot — verify terms on the gaming platform',
     summary:
-      'Celebrate with our Mother\'s Day Double Rewards event. Deposit C$50 and get a C$50 bonus. Check wagering and eligible games in our cashier.',
+      "Creative snapshot: Mother's Day Double Rewards used deposit-and-bonus language. Check wagering, eligible games, expiry, and availability on the separate gaming platform.",
     image: '/images/creatives/mothers-day-double-rewards.webp',
-    alt: '247iBET Mother\'s Day Double Rewards: Deposit $50 Get $50 Bonus.',
-    observedText: ['Mother\'s Day Double Rewards', 'Deposit $50 Get $50 Bonus', 'May. 1st – May. 10'],
+    alt: "247iBET Mother's Day Double Rewards: Deposit $50 Get $50 Bonus.",
+    observedText: [
+      "Mother's Day Double Rewards",
+      'Deposit $50 Get $50 Bonus',
+      'May. 1st – May. 10',
+    ],
   },
   {
     slug: 'live-bonus-unified-mma',
@@ -148,7 +162,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Live Bonus event for Unified MMA 63',
     period: 'Sep. 26 at Rebel, Toronto',
     summary:
-      'We were proud to sponsor Unified MMA 63 with a Live Bonus event at Rebel Toronto. Check our sportsbook for current fight-night promotions.',
+      'We were proud to sponsor Unified MMA 63 with a Live Bonus event at Rebel Toronto. Check the separate gaming platform for current fight-night promotions.',
     image: '/images/creatives/live-bonus-unified-mma.webp',
     alt: '247iBET Unified MMA 63: Live Bonus. Sep. 26 Rebel Toronto.',
     observedText: ['LIVE BONUS', 'SEP.26', 'REBEL · TORONTO', '247iBET UNIFIED MMA 63'],
@@ -160,7 +174,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Proud sponsor of Cody Chovancek',
     period: 'Ongoing sponsorship',
     summary:
-      '247iBET is a proud sponsor of Unified MMA athlete Cody Chovancek. Follow his journey and bet on his fights in our sportsbook.',
+      '247iBET is a proud sponsor of Unified MMA athlete Cody Chovancek. Follow his journey and verify any fight-market availability on the separate gaming platform.',
     image: '/images/creatives/our-champ-cody-chovancek.jpg',
     alt: '247iBET Our Champ: Cody Chovancek and Unified MMA.',
     observedText: ['OUR CHAMP', 'CODY CHOVANCEK', '247iBET.ca', '247iBET UNIFIED MMA'],
@@ -172,7 +186,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     headline: 'Official sponsor of Unified MMA',
     period: 'Ongoing sponsorship',
     summary:
-      '247iBET is an official sponsor of Unified MMA. Check our sportsbook for exclusive fight-night odds and promotions.',
+      '247iBET is an official sponsor of Unified MMA. Check the separate gaming platform for current fight-night markets and promotions.',
     image: '/images/creatives/unified-mma-sponsorship.jpg',
     alt: 'Unified MMA sponsorship: 247iBET and partner logos.',
     observedText: ['UNIFIED MMA SPONSORSHIP', '247iBET'],
@@ -199,7 +213,12 @@ export const IBET_CREATIVE_SNAPSHOTS = [
       'Our team was at the TABOO Toronto event Oct. 12–19. Stay tuned for our next event appearance.',
     image: '/images/creatives/play-for-pleasure.webp',
     alt: 'TABOO event: Play for Pleasure. Oct. 12–19, Toronto International Centre.',
-    observedText: ['PLAY FOR PLEASURE', 'OCT. 12–19', 'TORONTO INTERNATIONAL CENTRE', '247iBET TABOO'],
+    observedText: [
+      'PLAY FOR PLEASURE',
+      'OCT. 12–19',
+      'TORONTO INTERNATIONAL CENTRE',
+      '247iBET TABOO',
+    ],
   },
   {
     slug: 'spin-your-fantasy',
@@ -217,20 +236,20 @@ export const IBET_CREATIVE_SNAPSHOTS = [
 
 export const IBET_PROMO_SNAPSHOT = IBET_CREATIVE_SNAPSHOTS.filter(({ group }) => group === 'bonus');
 export const IBET_SPORTSBOOK_CREATIVE_SNAPSHOT = IBET_CREATIVE_SNAPSHOTS.filter(
-  ({ group }) => group === 'sportsbook'
+  ({ group }) => group === 'sportsbook',
 );
 export const IBET_EVENT_CREATIVE_SNAPSHOT = IBET_CREATIVE_SNAPSHOTS.filter(
-  ({ group }) => group === 'event'
+  ({ group }) => group === 'event',
 );
 
 export const IBET_CTA = {
-  primary: 'Play Now',
-  casino: 'Play Casino',
-  sports: 'Bet Now',
+  primary: 'Visit Platform',
+  casino: 'Explore Casino Guide',
+  sports: 'Explore Sportsbook Guide',
   bonus: 'Review Bonus Terms',
-  deposit: 'Fast Payouts',
-  register: 'Sign Up',
-  fastPayout: 'Get Paid Fast',
+  deposit: 'Compare Payout Guidance',
+  register: 'Start Signup Handoff',
+  fastPayout: 'Compare Payout Guidance',
 } as const;
 
 export const IBET_DISCLAIMER =

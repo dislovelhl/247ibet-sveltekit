@@ -5,7 +5,7 @@ description: Repo-local guide for developing, operating, and maintaining the 247
 
 # 247iBET SvelteKit
 
-247iBET is an independent Canadian iGaming guide built with SvelteKit 2, Svelte 5, Tailwind CSS 4, and Vercel. The site publishes casino, sportsbook, Interac payout, provincial market, responsible-gambling, and editorial-policy content for Canadian players.
+247iBET is a SvelteKit 2 / Svelte 5 public web platform for the 247iBET brand: SEO growth, compliance-safe acquisition, affiliate/operator routing, API integration, CMS expansion, analytics, and future AI-assisted content workflows. The operational gaming platform is a separate project; this repository is the modern public web, acquisition, SEO, compliance-content, and integration shell for that separate gaming product.
 
 ## Quick start
 
@@ -39,6 +39,7 @@ The canonical repo-local documentation starts at [`docs/README.md`](docs/README.
 Core pages:
 
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — application boundaries, route architecture, data/config flow, security gates, workflow APIs.
+- [`docs/integration/gaming-platform-contract.md`](docs/integration/gaming-platform-contract.md) — frontend-to-gaming-platform boundary, API handoff assumptions, safe failure behavior, and launch blockers.
 - [`docs/CONTENT_MODEL.md`](docs/CONTENT_MODEL.md) — site taxonomy, page types, SEO/GEO/AEO metadata rules, editorial posture.
 - [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) — design tokens, CSS modules, component patterns, accessibility rules.
 - [`docs/OPERATIONS_DEPLOYMENT.md`](docs/OPERATIONS_DEPLOYMENT.md) — local commands, Vercel deployment, environment variables, cron/workflow operation, runbooks.
@@ -77,7 +78,7 @@ Before shipping image work, verify that all `/images/generated/...` references r
 
 ## Operating guardrails
 
-- Keep user-facing copy in an independent-guide posture. Do not drift into operator-style claims.
+- Keep user-facing copy in a public-web / independent-guide posture. Do not drift into operator-style claims or imply this repo owns wallet, KYC, casino-game, sportsbook, cashier, or real-money transaction functionality.
 - Preserve transparent affiliate CTAs such as `Visit Partner Site` and safe link attributes.
 - Treat licensing, payout timing, bonus, and game-count statements as claims that need caveats or current source verification.
 - Do not add new documentation-site packages unless explicitly requested.

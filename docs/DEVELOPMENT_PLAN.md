@@ -174,6 +174,49 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 - **Impact**: Clean build output; technical debt reduced.
 - **Confidence**: High
 
+
+## Workstream J — Integration Boundary With Separate Gaming Platform
+
+Because the gaming functionality lives in a separate project, define clean frontend-to-platform boundaries.
+
+### Tasks
+
+1. Create or document expected API integration points:
+   - signup / registration handoff;
+   - login handoff;
+   - operator CTA handoff;
+   - promotions / bonus data;
+   - payment method display data;
+   - responsible gaming links;
+   - user session handoff, if applicable;
+   - analytics events;
+   - future content/personalization APIs.
+2. Do not hard-code fake gaming state.
+3. Where UI implies a backend dependency, make it explicit:
+   - static marketing content;
+   - mocked/demo content;
+   - future API integration point;
+   - production API required.
+4. Maintain the integration contract document at [`docs/integration/gaming-platform-contract.md`](integration/gaming-platform-contract.md), including:
+   - frontend-owned responsibilities;
+   - gaming-platform-owned responsibilities;
+   - API boundaries;
+   - security assumptions;
+   - required environment variables;
+   - failure behavior;
+   - launch blockers.
+5. Make failure states safe:
+   - if gaming API is unavailable, show safe fallback content;
+   - do not expose broken account/betting/payment UI;
+   - do not imply a transaction completed unless confirmed by the gaming project API.
+
+### Acceptance criteria
+
+- The repo clearly separates public web responsibilities from gaming-platform responsibilities.
+- No page pretends to provide real gaming functionality.
+- Future API integration points are documented.
+- The site can launch as a brand/acquisition platform before the gaming backend is connected.
+
 ## Parking Lot (P2 — Backlog)
 
 ### [P2] 12. Move generated hero images to CDN
