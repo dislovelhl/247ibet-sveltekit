@@ -1,0 +1,14 @@
+/* TEAM */
+Project: 247iBET
+Site: https://247ibet.ca
+Focus: Canadian iGaming guides, market intelligence, and responsible-gambling resources
+
+/* STACK */
+Framework: SvelteKit 2
+UI: Svelte 5 + Tailwind CSS 4
+Hosting: Vercel
+Utilities: robots.txt, sitemap.xml, llms.txt, llms-full.txt, site.webmanifest
+
+/* CONTACT */
+General: https://247ibet.ca/contact
+Security: security@247ibet.ca

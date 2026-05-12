@@ -27,10 +27,11 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="{SITE.name} — {SITE.tagline}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={ogImageUrl()} />
-  <link rel="preconnect" href="https://boapi.ibet247.ca" />
-  <link rel="dns-prefetch" href="https://boapi.ibet247.ca" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content={ogImageUrl()} />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="preconnect" href="https://boapi.ibet247.ca" />
+	<link rel="dns-prefetch" href="https://boapi.ibet247.ca" />
 </svelte:head>
 
 <a

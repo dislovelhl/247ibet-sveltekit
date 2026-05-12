@@ -1,0 +1,5 @@
+Contact: mailto:security@247ibet.ca
+Canonical: https://247ibet.ca/.well-known/security.txt
+Policy: https://247ibet.ca/security
+Preferred-Languages: en, fr
+Expires: 2027-05-12T00:00:00.000Z

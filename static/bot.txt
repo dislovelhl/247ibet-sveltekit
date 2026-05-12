@@ -1,0 +1,6 @@
+# 247iBET crawler entrypoints
+Robots: https://247ibet.ca/robots.txt
+Sitemap: https://247ibet.ca/sitemap.xml
+LLMs: https://247ibet.ca/llms.txt
+LLMs-Full: https://247ibet.ca/llms-full.txt
+Security: https://247ibet.ca/.well-known/security.txt
