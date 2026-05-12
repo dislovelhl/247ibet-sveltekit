@@ -12,7 +12,8 @@
     ArrowRight,
     ExternalLink
   } from 'lucide-svelte';
-
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   const faqData = [
     {
@@ -136,8 +137,8 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pb-20">
-  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+<div class="min-h-screen bg-navy-black pb-20" role="presentation">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
@@ -146,13 +147,30 @@
       </ol>
     </nav>
 
-    <header class="material-panel relative mb-16 overflow-hidden rounded-[2.5rem] shadow-2xl">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.1),transparent_50%)]"></div>
-      <div class="relative z-10 p-8 md:p-14 text-center md:text-left">
-        <h1 class="page-hero-title mb-6">
-          Frequently Asked <span class="text-prestige-gold">Questions</span>
+    <header class="material-panel relative mb-16 overflow-hidden rounded-[2.5rem] shadow-2xl min-h-[400px]">
+      <BackgroundAtmosphere 
+        src="/images/generated/faq-help-hero.webp" 
+        parallaxMultiplier={0.4}
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
+      
+      <div 
+        class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 md:max-w-2xl text-left"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+      >
+        <div class="mb-5 flex items-center gap-2">
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              Help Center
+            </p>
+          </div>
+        </div>
+
+        <h1 class="page-hero-title !tracking-tighter">
+          Frequently Asked <br />
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Questions</span>
         </h1>
-        <p class="max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+        <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
           Everything you need to know about Canadian iGaming — from Interac deposits to account verification and bonus rules.
         </p>
       </div>

@@ -13,6 +13,8 @@
     Users,
     WalletCards,
   } from 'lucide-svelte';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   type Answer = 'yes' | 'no' | null;
 
@@ -218,61 +220,66 @@
   <JsonLd schema={responsibleGamblingSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black text-white">
+<div class="min-h-screen bg-navy-black text-white" role="presentation">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-        <li><a href="/" class="hover:text-white">Home</a></li>
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
         <li>/</li>
         <li class="text-white font-medium">Responsible Gambling</li>
       </ol>
     </nav>
 
-    <header class="material-panel relative overflow-hidden rounded-[2rem] p-7 shadow-2xl md:p-12">
-      <div
-        class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-35"
-      ></div>
-      <div
-        class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_72%_30%,rgba(212,148,58,0.24),transparent_34%),url('/images/generated/safe-play-shield-hero.webp')] bg-cover bg-center opacity-70 md:block"
-      ></div>
-
-      <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
-        <div>
-          <h1 class="page-hero-title">
-            Safe Play <br />
-            <span class="text-prestige-gold">Protocols</span>
-          </h1>
-          <p class="mt-7 max-w-3xl text-lg leading-8 text-text-body">
-            At 247iBET, your well-being is our priority. Our player protection framework is built on
-            evidence-based standards, proactive monitoring, and confidential support.
-          </p>
-          <div class="material-group mt-9 grid max-w-3xl gap-3 p-3 sm:grid-cols-3">
-            {#each trustItems as item}
-              {@const Icon = item.icon}
-              <div class="material-cell flex gap-3 rounded-2xl p-4">
-                <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
-                <div>
-                  <p class="text-sm font-black">{item.title}</p>
-                  <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
-                </div>
-              </div>
-            {/each}
+    <header class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl">
+      <BackgroundAtmosphere 
+        src="/images/generated/safe-play-shield-hero.webp" 
+        parallaxMultiplier={0.4}
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
+      
+      <div 
+        class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 md:max-w-2xl text-left"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+      >
+        <div class="mb-5 flex items-center gap-2">
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              Safe Play Framework
+            </p>
           </div>
         </div>
 
-        <div
-          class="material-panel mx-auto flex h-72 w-full max-w-lg flex-col items-center justify-center rounded-[2rem] shadow-2xl"
-        >
-          <ShieldCheck class="h-28 w-28 text-prestige-gold" strokeWidth={1.3} aria-hidden="true" />
-          <p class="mt-6 text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
-            Committed to you
-          </p>
-          <p class="mt-4 max-w-xs text-center text-sm leading-6 text-text-body">
-            Operating to high standards of player protection.
-          </p>
+        <h1 class="page-hero-title !tracking-tighter">
+          Safe Play <br />
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Protocols</span>
+        </h1>
+        <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
+          At 247iBET, your well-being is our priority. Our player protection framework is built on evidence-based standards and proactive monitoring.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#assessment" class="hero-cta-primary min-w-[200px] shimmer-effect btn-magnetic">
+            Self-Assessment
+          </a>
+          <a href="#tools" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
+            Player Tools
+          </a>
         </div>
       </div>
     </header>
+
+    <div class="material-group mt-9 mb-12 grid max-w-[1720px] gap-3 p-3 sm:grid-cols-3">
+      {#each trustItems as item}
+        {@const Icon = item.icon}
+        <div class="material-cell flex gap-3 rounded-2xl p-4">
+          <Icon class="h-6 w-6 shrink-0 text-prestige-gold" aria-hidden="true" />
+          <div>
+            <p class="text-sm font-black">{item.title}</p>
+            <p class="mt-1 text-sm leading-6 text-text-body">{item.body}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
 
     <section class="mt-7 grid gap-6 lg:grid-cols-2">
       <article class="material-panel p-7 md:p-8">
@@ -333,7 +340,7 @@
       </article>
     </section>
 
-    <section class="material-panel mt-7 p-6 md:p-8">
+    <section id="assessment" class="material-panel mt-12 p-6 md:p-8">
       <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 class="text-3xl font-black uppercase">Quick Self-Assessment</h2>
@@ -419,7 +426,7 @@
       {/if}
     </section>
 
-    <section class="material-panel mt-7 p-6 md:p-8">
+    <section id="tools" class="material-panel mt-12 p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Platform Control Infrastructure</h2>
       <p class="mt-2 text-sm text-text-body">
         Powerful tools to help you manage your play, your way.
@@ -443,7 +450,7 @@
       </div>
     </section>
 
-    <section class="material-panel mt-7 overflow-hidden p-6 md:p-8">
+    <section class="material-panel mt-12 overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Safety Tools at a Glance</h2>
       <p class="mt-2 text-sm text-text-body">
         Use these tools anytime from your Responsible Gaming dashboard.
@@ -470,7 +477,7 @@
       </div>
     </section>
 
-    <section class="mt-7 grid gap-4 md:grid-cols-[1fr_auto]">
+    <section class="mt-12 grid gap-4 md:grid-cols-[1fr_auto]">
       <div class="material-panel p-6">
         <div class="flex gap-4">
           <HelpCircle class="h-9 w-9 shrink-0 text-prestige-gold" aria-hidden="true" />
@@ -488,7 +495,7 @@
     </section>
 
     <section
-      class="material-panel mt-7 overflow-hidden p-8 shadow-2xl md:p-10"
+      class="material-panel mt-12 overflow-hidden p-8 shadow-2xl md:p-10"
     >
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>

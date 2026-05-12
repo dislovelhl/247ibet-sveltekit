@@ -15,6 +15,8 @@
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
   import JsonLd from '$lib/components/JsonLd.svelte';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   const trustItems = [
     {
@@ -161,67 +163,73 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black text-white">
+<div class="min-h-screen bg-navy-black text-white" role="presentation">
   <main class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
-        <li><a href="/" class="hover:text-white">Home</a></li>
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
         <li aria-hidden="true">/</li>
         <li class="text-white font-medium">Interac Payouts</li>
       </ol>
     </nav>
 
-    <header class="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
-      <div>
-        <h1 class="page-hero-title">
+    <header class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl">
+      <BackgroundAtmosphere 
+        src="/images/generated/interac-payment-hero.webp" 
+        parallaxMultiplier={0.4}
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
+      
+      <div 
+        class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 md:max-w-2xl text-left"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+      >
+        <div class="mb-5 flex items-center gap-2">
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              CAD Native Payments
+            </p>
+          </div>
+        </div>
+
+        <h1 class="page-hero-title !tracking-tighter">
           Deposit &amp; Withdraw <br />
-          with <span class="text-prestige-gold">Interac</span> in Canada
+          with <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Interac</span>
         </h1>
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
-          Fast, secure, and trusted. Use Interac e-Transfer to deposit and withdraw CAD at 247iBET,
-          built for Canadian players.
+        <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
+          Fast, secure, and trusted. Use Interac e-Transfer to deposit and withdraw CAD at 247iBET, built for Canadian players.
         </p>
 
-        <div class="material-group mt-10 grid gap-2 p-2 sm:grid-cols-3">
-          {#each trustItems as item}
-            {@const Icon = item.icon}
-            <div class="material-cell flex gap-3 rounded-2xl p-3">
-              <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
-              >
-                <Icon class="h-5 w-5" aria-hidden="true" />
-              </div>
-              <div>
-                <p class="text-sm font-black text-white">{item.title}</p>
-                <p class="mt-1 text-xs leading-5 text-text-body">{@html item.body}</p>
-              </div>
-            </div>
-          {/each}
-        </div>
-      </div>
-
-      <div
-        class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[5/6] sm:aspect-auto"
-      >
-        <img
-          src="/images/generated/interac-payment-hero.webp"
-          alt="Interac e-Transfer secure payment visual"
-          class="h-full min-h-[340px] w-full object-cover"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-navy-black/70 via-transparent to-transparent"
-        ></div>
-        <div class="absolute inset-x-0 bottom-0 p-8">
-          <p class="text-base font-semibold text-white">Secure payments. Trusted by millions.</p>
-          <p class="mt-2 max-w-md text-sm leading-6 text-text-body">
-            Interac keeps sensitive payment steps inside your bank flow while 247iBET records the
-            cashier result.
-          </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary min-w-[200px] shimmer-effect btn-magnetic">
+            Start Funding
+            <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </SafeExternalLink>
+          <a href="#timing" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
+            View Timing
+          </a>
         </div>
       </div>
     </header>
 
-    <section
+    <div class="material-group mt-10 mb-12 grid gap-2 p-2 sm:grid-cols-3">
+      {#each trustItems as item}
+        {@const Icon = item.icon}
+        <div class="material-cell flex gap-3 rounded-2xl p-3">
+          <div
+            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
+          >
+            <Icon class="h-5 w-5" aria-hidden="true" />
+          </div>
+          <div>
+            <p class="text-sm font-black text-white">{item.title}</p>
+            <p class="mt-1 text-xs leading-5 text-text-body">{@html item.body}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+
+    <section id="timing"
       class="material-panel mt-14 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
     >
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -244,7 +252,7 @@
         </div>
         <a
           href="/fast-payouts"
-          class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold hover:text-prestige-gold-light"
+          class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light"
         >
           Learn more about timing
           <ArrowRight class="h-4 w-4" aria-hidden="true" />

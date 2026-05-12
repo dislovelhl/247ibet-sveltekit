@@ -2,6 +2,8 @@
   import { SITE, canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import { fade } from 'svelte/transition';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   interface Props {
     title: string;
@@ -50,10 +52,10 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pt-10 pb-24 overflow-x-hidden" in:fade={{ duration: 400 }}>
-  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
+<div class="min-h-dvh bg-navy-black pb-24 overflow-x-hidden" in:fade={{ duration: 400 }}>
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
     <!-- Breadcrumbs -->
-    <nav aria-label="Breadcrumb" class="mb-6">
+    <nav aria-label="Breadcrumb" class="mb-6 pt-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
@@ -62,34 +64,36 @@
     </nav>
 
     <!-- Hero Header -->
-    <header class="relative mb-16 overflow-hidden rounded-[2.5rem] border border-white/10 bg-navy-card shadow-2xl">
-      <!-- Animated Background elements -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.1),transparent_50%)]"></div>
-      <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-prestige-gold/5 blur-[100px]"></div>
-      <div class="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-slate-blue/5 blur-[100px]"></div>
+    <header class="material-panel relative mb-16 overflow-hidden rounded-[2.5rem] shadow-2xl min-h-[400px]">
+      <BackgroundAtmosphere 
+        src="/images/generated/policy-document-hero.webp" 
+        parallaxMultiplier={0.4}
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
 
-      <div class="relative z-10 p-8 md:p-14 lg:p-20 text-center md:text-left">
+      <div 
+        class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 lg:p-20 md:max-w-3xl text-left"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
+      >
         <div class="mb-8 flex justify-center md:justify-start">
-          <div class="glass-regular inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10">
-            <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
               Official Document
             </p>
           </div>
         </div>
 
-        <h1 class="page-hero-title lg:text-7xl">
+        <h1 class="page-hero-title lg:text-7xl !tracking-tighter">
           {title}
         </h1>
 
         {#if subtitle}
-          <p class="mt-8 mx-auto md:mx-0 max-w-2xl text-lg leading-relaxed text-text-body/90 md:text-xl">
+          <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
             {subtitle}
           </p>
         {/if}
 
         <div class="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6">
-          <div class="h-4 w-px bg-white/10 hidden sm:block"></div>
           <span class="text-xs font-bold uppercase tracking-widest text-text-tertiary">
             Effective: {lastUpdated}
           </span>
@@ -97,13 +101,10 @@
       </div>
     </header>
 
-    <div class="grid lg:grid-cols-[1fr_300px] gap-12">
+    <div class="grid lg:grid-cols-[1fr_360px] gap-12">
       <!-- Main Content -->
       <div class="z-10">
-        <article class="glass-thin rounded-[2rem] p-8 md:p-12 lg:p-16 border border-white/5 relative overflow-hidden">
-           <!-- Subtle shimmer background -->
-          <div class="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
-          
+        <article class="material-panel rounded-[2rem] p-8 md:p-12 lg:p-16 relative overflow-hidden">
           <div class="prose prose-invert prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:text-white prose-p:text-text-body prose-li:text-text-body max-w-none relative z-10">
             {@render children?.()}
           </div>
@@ -132,7 +133,7 @@
       <aside class="hidden lg:block">
         <div class="sticky top-24 space-y-8">
           {#if sections.length > 0}
-            <section class="glass-regular rounded-3xl p-8 border border-white/10">
+            <section class="material-panel rounded-3xl p-8">
               <h2 class="text-xs font-black uppercase tracking-widest text-white mb-6">In this document</h2>
               <nav>
                 <ul class="space-y-4">
@@ -152,7 +153,7 @@
             </section>
           {/if}
 
-          <section class="navy-card rounded-3xl p-8 border border-white/10">
+          <section class="material-panel rounded-3xl p-8 bg-prestige-gold/5 border-prestige-gold/10">
             <h2 class="text-xs font-black uppercase tracking-widest text-white mb-6">Need Help?</h2>
             <p class="text-sm text-text-body mb-6 leading-relaxed">
               If you have questions regarding our legal documents, please contact our compliance team.
@@ -179,6 +180,7 @@
     padding-bottom: 1rem;
     font-size: 1.5rem;
     line-height: 2rem;
+    font-weight: 900;
   }
   :global(.prose h3) {
     margin-top: 2.5rem;
@@ -186,10 +188,12 @@
     color: var(--color-prestige-gold);
     font-size: 1.25rem;
     line-height: 1.75rem;
+    font-weight: 800;
   }
   :global(.prose p) {
     margin-bottom: 1.5rem;
     line-height: 1.625;
+    font-weight: 300;
   }
   :global(.prose ul) {
     margin-bottom: 2rem;
@@ -199,6 +203,7 @@
   :global(.prose li) {
     position: relative;
     padding-left: 1.5rem;
+    font-weight: 300;
   }
   :global(.prose li + li) {
     margin-top: 0.75rem;
@@ -211,9 +216,9 @@
     font-weight: 700;
   }
   :global(.prose a) {
-    color: var(--color-slate-blue);
+    color: var(--color-prestige-gold);
     text-decoration-line: none;
-    text-decoration-color: color-mix(in srgb, var(--color-prestige-gold) 50%, transparent);
+    font-weight: 600;
   }
   :global(.prose a:hover) {
     text-decoration-line: underline;
