@@ -382,7 +382,7 @@
   <JsonLd schema={homeSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black text-white" role="presentation">
+<div class="min-h-screen bg-navy-black text-white no-shell-pad" role="presentation">
   <HeroBanner lastUpdated={LAST_UPDATED} />
 
   <OddsTicker />
@@ -404,7 +404,7 @@
   </nav>
 
   <div
-    class="mx-auto max-w-[1720px] space-y-5 px-4 py-5 sm:space-y-7 sm:px-6 sm:py-7 lg:px-10 xl:px-16"
+    class="mx-auto max-w-[1720px] space-y-4 px-4 pb-12 sm:space-y-6 sm:px-6 sm:pb-20 lg:px-10 xl:px-16"
   >
     <section
       id="trust-verification"

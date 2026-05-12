@@ -158,15 +158,15 @@
     padding-right: var(--route-shell-pad-x) !important;
   }
 
-  main > div > .min-h-dvh.bg-navy-black,
-  main > div > .min-h-screen.bg-navy-black {
+  main > div > .min-h-dvh.bg-navy-black:not(.no-shell-pad),
+  main > div > .min-h-screen.bg-navy-black:not(.no-shell-pad) {
     padding-top: var(--route-shell-top) !important;
   }
 
   @media (min-width: 1024px) {
     main > div > .container.mx-auto,
-    main > div > .min-h-dvh.bg-navy-black,
-    main > div > .min-h-screen.bg-navy-black {
+    main > div > .min-h-dvh.bg-navy-black:not(.no-shell-pad),
+    main > div > .min-h-screen.bg-navy-black:not(.no-shell-pad) {
       padding-top: var(--route-shell-top-lg) !important;
     }
   }

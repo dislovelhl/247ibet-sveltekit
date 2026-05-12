@@ -1,6 +1,6 @@
 # Mobile Typography Visual QA
 
-Generated: 2026-05-12T01:57:21.505Z
+Generated: 2026-05-12T02:51:42.009Z
 
 Scope: Playwright typography audit for representative 247iBET routes at the approved viewport matrix. Screenshots are saved in `.omx/reports/mobile-typography-screenshots/{viewport}/{slug}.png`.
 

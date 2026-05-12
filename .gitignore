@@ -5,9 +5,6 @@ build
 .pytest_cache/
 .playwright-mcp/
 .swc/
-.env
-.env.*
-!.env.example
 vite.config.ts.timestamp-*
 .gstack/
 .omc/
@@ -39,14 +36,21 @@ Thumbs.db
 coverage/
 *.lcov
 *.log
-.playwright-mcp/
 **/.thumbnails/
 **/.waveform-cache/
 dist/
 
 # Env
+.env
+.env.*
+!.env.example
 .env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
 .env.production
+.env.production.local
 
 # npm
 *.tgz
@@ -57,5 +61,14 @@ videos/
 **/capture/screenshots/
 
 # AI Agent Artifacts
+.AGENT.md
+AGENT.md
+AGENTS.md
+.CLAUDE.md
+CLAUDE.md
+.HERMES.md
+HERMES.md
+.GEMINI.md
+GEMINI.md
 .superpowers/
 .hermes/
