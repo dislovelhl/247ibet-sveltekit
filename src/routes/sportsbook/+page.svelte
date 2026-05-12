@@ -27,6 +27,7 @@
   import { articleSchema } from '$lib/json-ld';
   import { reveal } from '$lib/animations';
   import { globalParallax } from '$lib/runes.svelte';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
 
   const page = {
     title: 'Canadian Sportsbook: Odds, Parlays & Live Betting | 247iBET',
@@ -326,6 +327,14 @@
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40">
+        <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">Sportsbook</li>
+      </ol>
+    </nav>
+
     <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
         <div
@@ -381,14 +390,12 @@
       </aside>
 
       <main class="min-w-0 space-y-5">
-        <section
+        <header
           class="material-panel relative min-w-0 overflow-hidden rounded-[2.5rem] shadow-2xl"
         >
-          <img
+          <BackgroundAtmosphere
             src="/images/generated/sportsbook-premium-hero.webp"
-            alt=""
-            class="absolute inset-0 h-full w-full object-cover opacity-40"
-            style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y * 0.4}px, 0) scale(1.1);"
+            parallaxMultiplier={0.4}
           />
           <div
             class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
@@ -430,7 +437,7 @@
                 Access Sportsbook
                 <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </SafeExternalLink>
-              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin"> Compare Odds </a>
+              <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic"> Compare Odds </a>
             </div>
             <p
               class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60"
@@ -438,7 +445,7 @@
               {IBET_DISCLAIMER}
             </p>
           </div>
-        </section>
+        </header>
 
         <div
           id="offers"

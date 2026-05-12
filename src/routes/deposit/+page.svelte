@@ -15,6 +15,8 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import SafeExternalLink from '$lib/components/SafeExternalLink.svelte';
   import { IBET_URLS } from '$lib/ibet-brand';
+  import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
+  import { globalParallax } from '$lib/runes.svelte';
 
   const trustItems = [
     { title: 'Trusted by Canadians', body: 'CAD-native account funding', icon: BadgeCheck },
@@ -165,103 +167,94 @@
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black pb-20">
+<div class="min-h-screen bg-navy-black pb-20" role="presentation">
   <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16">
-    <nav aria-label="Breadcrumb" class="mb-12">
-      <ol class="flex items-center gap-3 text-xs font-semibold text-text-tertiary">
-        <li><a href="/" class="transition-colors hover:text-white">Home</a></li>
-        <li aria-hidden="true">/</li>
-        <li><a href="/interac" class="transition-colors hover:text-white">Interac</a></li>
-        <li aria-hidden="true">/</li>
-        <li class="text-white">Deposit &amp; Withdraw</li>
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40">
+        <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li><a href="/interac" class="transition-colors hover:text-prestige-gold">Interac</a></li>
+        <li aria-hidden="true" class="text-white/20">/</li>
+        <li class="text-prestige-gold">Deposit &amp; Withdraw</li>
       </ol>
     </nav>
 
-    <header class="grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
-      <div>
-        <h1 class="page-hero-title">
-          Deposit &amp; Withdraw <br />
-          with <span class="text-prestige-gold">Interac</span> in Canada
-        </h1>
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-text-body">
-          Fast, secure, and trusted Interac e-Transfer deposits and withdrawals at 247iBET, built
-          for Canadian players who want CAD-native banking.
-        </p>
-
-        <div
-          class="material-group mt-10 grid gap-2 p-2 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
-        >
-          {#each trustItems as item}
-            {@const Icon = item.icon}
-            <div class="material-cell flex gap-3 rounded-2xl p-3">
-              <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
-              >
-                <Icon class="h-5 w-5" aria-hidden="true" />
-              </div>
-              <div>
-                <p class="text-sm font-black text-white">{item.title}</p>
-                <p class="mt-1 text-xs leading-5 text-text-body">{item.body}</p>
-              </div>
-            </div>
-          {/each}
-        </div>
+    <header
+      class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
+    >
+      <BackgroundAtmosphere
+        src="/images/generated/interac-payment-hero.webp"
+        parallaxMultiplier={0.4}
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent">
       </div>
 
       <div
-        class="material-panel relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[5/6] sm:aspect-auto"
+        class="material-panel relative z-10 mx-4 my-6 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-8 md:p-14 lg:max-w-3xl"
+        style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
-        <img
-          src="/images/generated/interac-payment-hero.webp"
-          alt="Interac e-Transfer secure payment visual"
-          class="h-full min-h-[520px] w-full object-cover"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-navy-black/86 via-navy-black/15 to-transparent"
-        ></div>
-        <div class="absolute inset-x-0 bottom-0 p-8">
-          <p class="text-base font-semibold text-white">Secure payments. Trusted by millions.</p>
-          <p class="mt-2 max-w-md text-sm leading-6 text-text-body">
-            Interac keeps sensitive payment steps inside your bank flow while 247iBET records the
-            cashier result.
-          </p>
-          <div class="material-cell mt-8 rounded-2xl p-4">
-            <div class="segmented-chrome flex flex-wrap items-center gap-2 rounded-full p-1">
-              {#each amountOptions as amount}
-                <button
-                  type="button"
-                  class="rounded-full border px-4 py-2 text-xs font-black transition-colors {selectedAmount ===
-                  amount
-                    ? 'border-prestige-gold bg-prestige-gold text-navy-black'
-                    : 'border-white/10 bg-white/5 text-white hover:border-white/24'}"
-                  onclick={() => (selectedAmount = amount)}
-                >
-                  ${amount}
-                </button>
-              {/each}
-            </div>
-            <div class="mt-5 grid gap-3 text-sm sm:grid-cols-2">
-              <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
-                  Selected amount
-                </p>
-                <p class="mt-1 text-xl font-black text-white">CAD ${selectedAmount}</p>
-              </div>
-              <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary">
-                  Estimated payout
-                </p>
-                <p class="mt-1 text-xl font-black text-prestige-gold">{estimatedWindow}</p>
-              </div>
-            </div>
-            <p class="mt-4 text-xs text-text-body">Status: {reviewWindow}</p>
+        <div class="mb-5 flex flex-wrap items-center gap-3">
+          <div
+            class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]"
+          >
+            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              CAD Native · Bank Secured
+            </p>
           </div>
+          <span class="text-luxury tracking-boutique text-[11px] text-prestige-gold/60"
+            >Instant Deposits</span
+          >
+        </div>
+
+        <h1 class="page-hero-title !tracking-tighter">
+          Deposit &amp; Withdraw <br />
+          with <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+            >Interac</span
+          >
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
+          Fast, secure, and trusted Interac e-Transfer funding at 247iBET. Built for Canadian
+          players who demand direct bank integration and high-speed payouts.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="hero-cta-primary group min-w-[200px] shimmer-effect btn-magnetic"
+          >
+            Start Funding
+            <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </SafeExternalLink>
+          <a href="#timing" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
+            Check Timing
+          </a>
         </div>
       </div>
     </header>
 
+    <div
+      class="material-group mb-12 grid gap-2 p-2 shadow-[0_22px_60px_-45px_rgba(212,148,58,0.5)] sm:grid-cols-3"
+    >
+      {#each trustItems as item}
+        {@const Icon = item.icon}
+        <div class="material-cell flex gap-3 rounded-2xl p-3">
+          <div
+            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-prestige-gold/30 bg-prestige-gold/10 text-prestige-gold"
+          >
+            <Icon class="h-5 w-5" aria-hidden="true" />
+          </div>
+          <div>
+            <p class="text-sm font-black text-white">{item.title}</p>
+            <p class="mt-1 text-xs leading-5 text-text-body">{item.body}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+
     <section
-      class="material-panel mt-14 p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
+      id="timing"
+      class="material-panel p-5 shadow-[0_18px_60px_-45px_rgba(212,148,58,0.65)] md:p-6"
     >
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div class="flex gap-4">
