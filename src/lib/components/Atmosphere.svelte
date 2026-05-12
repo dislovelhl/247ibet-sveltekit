@@ -76,7 +76,7 @@
   class="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-40"
 ></canvas>
 
-<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+<div class="pointer-events-none fixed inset-0 z-[-1] overflow-hidden">
   <!-- Saturated Light Leaks -->
   <div class="absolute -top-[10%] -left-[10%] h-[50%] w-[50%] animate-pulse rounded-full bg-slate-blue/15 blur-[120px]" style="animation-duration: 8s"></div>
   <div class="absolute top-[30%] -right-[5%] h-[40%] w-[40%] animate-pulse rounded-full bg-prestige-gold/10 blur-[100px]" style="animation-delay: 2s; animation-duration: 10s"></div>
