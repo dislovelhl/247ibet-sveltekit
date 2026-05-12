@@ -26,22 +26,26 @@
     {
       label: 'Interac payouts',
       body: 'Often completed after operator approval; timing varies by review and bank processing',
-      icon: Zap,
+      image: '/images/generated/elite-assets-set.png',
+      position: '0% 0%',
     },
     {
       label: 'Casino',
       body: 'Game-category guides for slots, live dealer, and table games',
-      icon: Trophy,
+      image: '/images/generated/elite-assets-set.png',
+      position: '100% 0%',
     },
     {
       label: 'Sportsbook',
       body: 'Market education for NHL, NBA, NFL, UFC, soccer, and live betting',
-      icon: BadgeCheck,
+      image: '/images/generated/elite-assets-set.png',
+      position: '0% 100%',
     },
     {
       label: 'Safety',
       body: 'KYC, limits, self-exclusion, and support resources',
-      icon: ShieldCheck,
+      image: '/images/generated/elite-assets-set.png',
+      position: '100% 100%',
     },
   ];
 
@@ -428,28 +432,35 @@
   >
     <section
       id="trust-verification"
-      class="material-group grid gap-2 p-2 sm:grid-cols-2 lg:grid-cols-4"
+      class="material-group grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4"
     >
       {#each heroTrust as item, i}
-        {@const Icon = item.icon}
         <GlintCard
           useReveal={true}
           style="--reveal-delay: {i * 100}ms"
-          class="material-cell reveal-fade-up group relative flex items-start gap-4 rounded-[22px] p-5 transition-all hover:scale-[1.01] hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] sm:p-6 card-hover-lift"
+          class="material-cell reveal-fade-up group relative flex flex-col gap-5 overflow-hidden rounded-[32px] p-6 transition-all hover:scale-[1.02] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.8)] card-hover-lift"
         >
           <div
-            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-prestige-gold/10 text-prestige-gold transition-all group-hover:scale-110 group-hover:bg-prestige-gold group-hover:text-navy-black group-hover:shadow-[0_0_20px_rgba(212,148,58,0.4)]"
+            class="relative h-32 w-full overflow-hidden rounded-2xl bg-black/40 ring-1 ring-white/10"
           >
-            <Icon class="h-6 w-6" aria-hidden="true" />
+            <div 
+              class="absolute inset-0 bg-cover bg-no-repeat transition-transform duration-700 group-hover:scale-125"
+              style="background-image: url({item.image}); background-position: {item.position}; background-size: 200% 200%;"
+            ></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           </div>
           <div>
             <p
-              class="text-xs font-black uppercase tracking-widest text-prestige-gold/80 group-hover:text-prestige-gold"
+              class="text-[11px] font-black uppercase tracking-[0.2em] text-prestige-gold transition-colors group-hover:text-white"
             >
               {item.label}
             </p>
-            <p class="mt-1.5 text-sm font-medium leading-relaxed text-text-primary">{item.body}</p>
+            <p class="mt-2 text-sm font-medium leading-relaxed text-text-primary opacity-80 group-hover:opacity-100 transition-opacity">
+              {item.body}
+            </p>
           </div>
+          <!-- Corner accent -->
+          <div class="absolute -right-2 -bottom-2 h-12 w-12 rounded-full bg-prestige-gold/5 blur-xl group-hover:bg-prestige-gold/20 transition-all"></div>
         </GlintCard>
       {/each}
     </section>
@@ -604,64 +615,88 @@
     <section
       id="interac-flow"
       use:reveal
-      class="material-panel reveal-fade-up glow-gold grid gap-5 p-5 sm:p-6 lg:grid-cols-[0.32fr_0.68fr]"
+      class="material-panel reveal-fade-up glow-gold grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.3fr_0.7fr]"
     >
-      <div>
-        <h2 class="text-4xl font-black md:text-5xl">Interac deposits and withdrawals</h2>
-        <p class="mt-3 text-sm leading-6 text-text-body">
-          Deposit and withdrawal timing depends on the separate gaming platform, operator approval,
-          identity verification, bonus terms, and bank processing times.
+      <div class="flex flex-col justify-center">
+        <div class="mb-6 h-20 w-20 overflow-hidden rounded-3xl bg-prestige-gold/10 p-2 ring-1 ring-prestige-gold/20">
+          <div 
+            class="h-full w-full bg-cover bg-no-repeat"
+            style="background-image: url('/images/generated/elite-assets-set.png'); background-position: 0% 0%; background-size: 200% 200%;"
+          ></div>
+        </div>
+        <h2 class="font-display text-4xl font-black md:text-5xl tracking-tight">Interac<br/><span class="text-gradient-gold">Payout Flow</span></h2>
+        <p class="mt-4 text-base leading-relaxed text-text-body">
+          Our verified education on the standard Interac e-Transfer lifecycle, from initial deposit to final bank processing.
         </p>
-        <a href="/deposit" class="page-cta-primary-sm mt-5 inline-flex btn-magnetic"
-          >Compare Payouts</a
-        >
+        <div class="mt-8 flex gap-4">
+          <a href="/deposit" class="page-cta-primary-sm btn-magnetic">Compare Payouts</a>
+        </div>
       </div>
       <div
         use:reveal
         data-reveal-stagger="true"
-        class="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4"
+        class="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-2"
       >
         {#each processSteps as step, index}
-          <article use:reveal class="material-cell reveal-fade-up rounded-2xl p-5 card-hover-lift">
+          <article use:reveal class="material-cell reveal-fade-up group relative overflow-hidden rounded-[32px] p-6 transition-all hover:bg-white/[0.03] card-hover-lift">
             <div
-              class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-prestige-gold text-sm font-black text-navy-black"
+              class="mb-6 flex h-10 w-10 items-center justify-center rounded-2xl bg-prestige-gold text-base font-black text-navy-black shadow-[0_0_20px_rgba(212,148,58,0.4)] group-hover:scale-110 transition-transform"
             >
               {index + 1}
             </div>
-            <h3 class="font-black text-prestige-gold">{step.title}</h3>
-            <p class="mt-3 text-sm leading-6 text-text-body sm:min-h-[72px]">{step.body}</p>
-            <span
-              class="mt-4 inline-flex rounded-full bg-success/10 px-3 py-1 text-xs font-black text-success"
-              >{step.status}</span
-            >
+            <h3 class="text-xl font-black text-white group-hover:text-prestige-gold transition-colors">{step.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-text-body sm:min-h-[60px]">{step.body}</p>
+            <div class="mt-6 flex items-center gap-2">
+              <span
+                class="inline-flex rounded-full bg-success/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-success ring-1 ring-success/20"
+              >
+                {step.status}
+              </span>
+            </div>
+            <!-- Decorative path line -->
+            {#if index < 3}
+               <div class="absolute right-0 top-1/2 hidden h-px w-12 bg-gradient-to-r from-prestige-gold/20 to-transparent lg:block"></div>
+            {/if}
           </article>
         {/each}
       </div>
     </section>
 
-    <section use:reveal class="material-group reveal-fade-up p-4 sm:p-8">
+    <section use:reveal class="material-group reveal-fade-up p-6 sm:p-10">
+      <div class="mb-12 text-center lg:text-left">
+        <p class="font-luxury text-prestige-gold-400 mb-2 opacity-80 text-xl tracking-[0.2em] uppercase">Unmatched Standards</p>
+        <h2 class="font-display text-[clamp(2.5rem,6vw,5rem)] font-black leading-tight tracking-tighter text-white">
+          Why 247iBET <span class="text-gradient-gold">Stands Out</span>
+        </h2>
+      </div>
+
       <div
         use:reveal
         data-reveal-stagger="true"
-        class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
       >
+        <!-- Large Primary Card -->
         <div
-          class="material-cell flex flex-col justify-center rounded-[22px] p-6 sm:col-span-2 sm:row-span-2 lg:p-10"
+          class="material-cell group relative flex flex-col justify-end overflow-hidden rounded-[40px] p-8 sm:col-span-2 sm:row-span-2 lg:p-12 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] transition-all card-hover-lift"
         >
-          <p class="font-luxury text-prestige-gold-400 mb-2 opacity-80">Unmatched Standards</p>
-          <h2
-            class="font-display text-3xl font-black leading-tight tracking-tighter text-white md:text-5xl"
-          >
-            Why 247iBET <span class="text-gold-foil">Stands Out</span>
-          </h2>
-          <p class="mt-6 text-lg leading-relaxed text-text-body">
-            A research-first guide for Canadian players, prioritizing transparent payout caveats,
-            safer-play tools, and clearer operator comparison points.
-          </p>
-          <div class="mt-8">
-            <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm btn-magnetic">
-              Get Started
-            </SafeExternalLink>
+          <div class="absolute inset-0 z-0">
+             <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/40 to-transparent z-10"></div>
+             <div 
+               class="h-full w-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+               style="background-image: url('/images/generated/elite-hero-abstract.png'); opacity: 0.4;"
+             ></div>
+          </div>
+          <div class="relative z-20">
+            <h3 class="text-3xl font-black text-white md:text-5xl leading-[1.1]">The Definitive <br/>Canadian Authority</h3>
+            <p class="mt-6 text-lg leading-relaxed text-text-body max-w-lg">
+              A research-first guide for Canadian players, prioritizing transparent payout caveats,
+              safer-play tools, and clearer operator comparison points.
+            </p>
+            <div class="mt-10">
+              <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm btn-magnetic h-14 px-8">
+                Explore The Guide
+              </SafeExternalLink>
+            </div>
           </div>
         </div>
 
@@ -670,37 +705,44 @@
           <GlintCard
             useReveal={true}
             style="--reveal-delay: {(i + 2) * 100}ms"
-            class="material-cell reveal-fade-up group relative overflow-hidden rounded-[22px] p-6 transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
+            class="material-cell reveal-fade-up group relative overflow-hidden rounded-[32px] p-8 transition-all hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.6)] card-hover-lift"
           >
             <div class="relative z-10">
-              <Icon
-                class="h-8 w-8 text-prestige-gold transition-transform group-hover:scale-110"
-                aria-hidden="true"
-              />
-              <h3 class="mt-4 font-display text-xl font-black text-white">{item.title}</h3>
-              <p class="mt-2 text-sm leading-relaxed text-text-body">{item.body}</p>
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 group-hover:bg-prestige-gold group-hover:text-navy-black transition-all">
+                <Icon
+                  class="h-7 w-7 transition-transform group-hover:scale-110"
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 class="font-display text-2xl font-black text-white tracking-tight">{item.title}</h3>
+              <p class="mt-4 text-sm leading-relaxed text-text-body opacity-80 group-hover:opacity-100 transition-opacity">{item.body}</p>
             </div>
+            <!-- Dynamic Glow -->
             <div
-              class="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-prestige-gold/5 blur-2xl transition-all group-hover:bg-prestige-gold/10"
+              class="absolute -right-8 -bottom-8 h-32 w-32 rounded-full bg-prestige-gold/5 blur-3xl transition-all group-hover:bg-prestige-gold/20"
             ></div>
           </GlintCard>
         {/each}
       </div>
     </section>
 
-    <section class="grid gap-6 xl:grid-cols-2">
-      <div class="material-panel p-5">
-        <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2 class="text-3xl font-black">Casino</h2>
-          <a href="/casino" class="view-all-link">Explore Casino <ArrowRight class="h-3 w-3" /></a>
+    <section class="grid gap-8 xl:grid-cols-2">
+      <div class="material-panel relative overflow-hidden p-6 sm:p-10">
+        <div class="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-prestige-gold/5 blur-[80px]" aria-hidden="true"></div>
+        <div class="relative z-10 mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="font-luxury text-prestige-gold-400 mb-1 text-xs tracking-[0.2em] uppercase">Elite Categories</p>
+            <h2 class="font-display text-4xl font-black text-white tracking-tight">Casino</h2>
+          </div>
+          <a href="/casino" class="view-all-link h-10 px-4 ring-1 ring-white/10 hover:ring-prestige-gold/30">Explore Suite <ArrowRight class="h-4 w-4" /></a>
         </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
+        <div class="relative z-10 grid gap-5 sm:grid-cols-2">
           {#each casinoCards as card}
             <a
               href={card.href}
-              class="material-cell group relative overflow-hidden rounded-[22px] transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
+              class="material-cell group relative overflow-hidden rounded-[32px] transition-all hover:bg-white/[0.03] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.8)] card-hover-lift"
             >
-              <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
+              <div class="relative h-44 w-full overflow-hidden sm:h-40">
                 <img
                   src={card.image}
                   alt={card.alt}
@@ -709,11 +751,12 @@
                   loading="lazy"
                   decoding="async"
                   sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
                 {#if card.title.includes('Live')}
                   <div
-                    class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-xs font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30"
+                    class="absolute top-4 right-4 flex items-center gap-2 rounded-full bg-navy-black/60 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30"
                   >
                     <span
                       class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"
@@ -722,20 +765,20 @@
                   </div>
                 {/if}
               </div>
-              <div class="p-5">
+              <div class="p-6">
                 <h3
-                  class="font-display text-lg font-black text-white group-hover:text-prestige-gold"
+                  class="font-display text-xl font-black text-white group-hover:text-prestige-gold transition-colors"
                 >
                   {card.title}
                 </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-3">
+                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">
                   {card.body}
                 </p>
                 <div
-                  class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white"
+                  class="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-[0.15em] text-prestige-gold/60 transition-colors group-hover:text-prestige-gold"
                 >
-                  Explore
-                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  Enter Lounge
+                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-2" />
                 </div>
               </div>
             </a>
@@ -743,20 +786,22 @@
         </div>
       </div>
 
-      <div class="material-panel p-5">
-        <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h2 class="text-3xl font-black">Sportsbook</h2>
-          <a href="/sportsbook" class="view-all-link"
-            >Explore Sportsbook <ArrowRight class="h-3 w-3" /></a
-          >
+      <div class="material-panel relative overflow-hidden p-6 sm:p-10">
+        <div class="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-prestige-gold/5 blur-[80px]" aria-hidden="true"></div>
+        <div class="relative z-10 mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="font-luxury text-prestige-gold-400 mb-1 text-xs tracking-[0.2em] uppercase">Premium Markets</p>
+            <h2 class="font-display text-4xl font-black text-white tracking-tight">Sportsbook</h2>
+          </div>
+          <a href="/sportsbook" class="view-all-link h-10 px-4 ring-1 ring-white/10 hover:ring-prestige-gold/30">Explore Markets <ArrowRight class="h-4 w-4" /></a>
         </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
+        <div class="relative z-10 grid gap-5 sm:grid-cols-2">
           {#each sportsCards as card}
             <a
               href={card.href}
-              class="material-cell group relative overflow-hidden rounded-[22px] transition-all hover:shadow-[0_18px_38px_-24px_rgba(0,0,0,0.72)] card-hover-lift"
+              class="material-cell group relative overflow-hidden rounded-[32px] transition-all hover:bg-white/[0.03] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.8)] card-hover-lift"
             >
-              <div class="relative h-36 w-full overflow-hidden sm:h-32 shimmer-effect">
+              <div class="relative h-44 w-full overflow-hidden sm:h-40">
                 <img
                   src={card.image}
                   alt={card.alt}
@@ -765,11 +810,12 @@
                   loading="lazy"
                   decoding="async"
                   sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
                 {#if card.title.includes('Live')}
                   <div
-                    class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-xs font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30"
+                    class="absolute top-4 right-4 flex items-center gap-2 rounded-full bg-navy-black/60 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30"
                   >
                     <span
                       class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"
@@ -778,20 +824,20 @@
                   </div>
                 {/if}
               </div>
-              <div class="p-5">
+              <div class="p-6">
                 <h3
-                  class="font-display text-lg font-black text-white group-hover:text-prestige-gold"
+                  class="font-display text-xl font-black text-white group-hover:text-prestige-gold transition-colors"
                 >
                   {card.title}
                 </h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-3">
+                <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">
                   {card.body}
                 </p>
                 <div
-                  class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white"
+                  class="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-[0.15em] text-prestige-gold/60 transition-colors group-hover:text-prestige-gold"
                 >
-                  Explore
-                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  View Markets
+                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-2" />
                 </div>
               </div>
             </a>
@@ -800,53 +846,63 @@
       </div>
     </section>
 
-    <section id="bonus-terms" class="material-panel p-5 sm:p-6">
-      <div class="grid gap-6 lg:grid-cols-[0.28fr_0.72fr]">
-        <div>
-          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">Bonuses</p>
-          <h2 class="mt-3 text-3xl font-black">Check the terms before claiming</h2>
-          <p class="mt-3 text-sm leading-6 text-text-body">
-            Promotions can add value only when the rules are clear. Review wagering, expiry, max
-            bet, eligible games or markets, and withdrawal limits before opting in.
+    <section id="bonus-terms" class="material-panel relative overflow-hidden p-8 sm:p-12">
+      <!-- Background glow -->
+      <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-prestige-gold/10 blur-[100px]" aria-hidden="true"></div>
+      
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[0.35fr_0.65fr]">
+        <div class="flex flex-col justify-center">
+          <p class="font-luxury text-prestige-gold-400 mb-4 text-sm tracking-[0.2em] uppercase">Market Transparency</p>
+          <h2 class="font-display text-4xl font-black md:text-5xl tracking-tight leading-[0.95] text-white">
+            Master the <br/><span class="text-gradient-gold">Bonus Landscape</span>
+          </h2>
+          <p class="mt-6 text-base leading-relaxed text-text-body">
+            Promotions add value only when the rules are clear. Our education clarifies wagering, expiry, and eligibility before you commit.
           </p>
-          <a href="/casino-bonuses-canada" class="page-cta-primary-sm mt-5 inline-flex"
-            >Check Bonus Terms</a
-          >
+          <div class="mt-10">
+            <a href="/casino-bonuses-canada" class="page-cta-primary-sm btn-magnetic h-14 px-8">Check Bonus Terms</a>
+          </div>
         </div>
-        <div class="grid gap-3 lg:hidden">
-          {#each bonusRows as row}
-            <article class="material-cell rounded-2xl p-4">
-              <div class="flex items-start justify-between gap-3">
-                <h3 class="font-black text-white">{row.type}</h3>
-                <span
-                  class="shrink-0 rounded-full bg-prestige-gold/10 px-3 py-1 text-xs font-black text-prestige-gold"
-                >
-                  {row.goodFor}
-                </span>
-              </div>
-              <p class="mt-3 text-sm leading-6 text-text-body">{row.check}</p>
-            </article>
-          {/each}
-        </div>
-        <div class="material-cell table-scroll-wrap hidden overflow-x-auto rounded-2xl lg:block">
-          <table class="w-full min-w-[720px] text-left text-sm">
-            <thead class="bg-white/[0.04] text-xs uppercase tracking-[0.12em] text-text-tertiary">
-              <tr>
-                <th class="px-4 py-3">Bonus type</th>
-                <th class="px-4 py-3">Good for</th>
-                <th class="px-4 py-3">Check before claiming</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/8">
-              {#each bonusRows as row}
+
+        <div class="grid gap-4">
+           <div class="material-cell table-scroll-wrap hidden overflow-x-auto rounded-[32px] lg:block border border-white/5">
+            <table class="w-full min-w-[720px] text-left text-sm">
+              <thead class="bg-white/[0.04] text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
                 <tr>
-                  <td class="px-4 py-3 font-black text-white">{row.type}</td>
-                  <td class="px-4 py-3 text-prestige-gold">{row.goodFor}</td>
-                  <td class="px-4 py-3 text-text-body">{row.check}</td>
+                  <th class="px-6 py-5">Bonus Category</th>
+                  <th class="px-6 py-5">Target Player</th>
+                  <th class="px-6 py-5">Elite Check</th>
                 </tr>
-              {/each}
-            </tbody>
-          </table>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                {#each bonusRows as row}
+                  <tr class="group transition-colors hover:bg-white/[0.02]">
+                    <td class="px-6 py-5 font-black text-white">{row.type}</td>
+                    <td class="px-6 py-5">
+                      <span class="inline-flex rounded-full bg-prestige-gold/10 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-prestige-gold ring-1 ring-prestige-gold/20">
+                        {row.goodFor}
+                      </span>
+                    </td>
+                    <td class="px-6 py-5 text-text-body leading-relaxed">{row.check}</td>
+                  </tr>
+                {/each}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid gap-4 lg:hidden">
+            {#each bonusRows as row}
+              <article class="material-cell rounded-[24px] p-6 border border-white/5">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  <h3 class="font-black text-white text-lg">{row.type}</h3>
+                  <span class="inline-flex rounded-full bg-prestige-gold/10 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-prestige-gold ring-1 ring-prestige-gold/20">
+                    {row.goodFor}
+                  </span>
+                </div>
+                <p class="text-sm leading-relaxed text-text-body">{row.check}</p>
+              </article>
+            {/each}
+          </div>
         </div>
       </div>
     </section>
@@ -945,46 +1001,58 @@
       </div>
     </section>
 
-    <section class="material-panel p-6">
-      <div class="grid items-center gap-6 lg:grid-cols-[0.7fr_0.3fr]">
+    <section class="material-panel relative overflow-hidden p-8 sm:p-12">
+      <div class="absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-success/5 blur-[100px]" aria-hidden="true"></div>
+      <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[0.7fr_0.3fr]">
         <div>
-          <p class="text-xs font-black uppercase tracking-[0.12em] text-prestige-gold">
-            Responsible gaming
-          </p>
-          <h2 class="mt-3 text-3xl font-black">Gambling should be entertainment</h2>
-          <p class="mt-3 max-w-4xl text-sm leading-6 text-text-body">
-            Set a budget before playing, use deposit and session limits, and take a break if
-            gambling stops feeling fun. Support is available through provincial resources and
-            responsible-gaming organizations.
+          <div class="mb-6 flex items-center gap-3">
+             <div class="h-10 w-10 flex items-center justify-center rounded-xl bg-success/10 text-success ring-1 ring-success/20">
+                <ShieldCheck class="h-6 w-6" />
+             </div>
+             <p class="text-xs font-black uppercase tracking-[0.2em] text-success">
+               Responsible gaming
+             </p>
+          </div>
+          <h2 class="font-display text-4xl font-black text-white tracking-tight leading-[1.1]">Gambling should remain<br/><span class="text-success">Entertainment</span></h2>
+          <p class="mt-6 max-w-4xl text-base leading-relaxed text-text-body">
+            Set your budget, use session limits, and take breaks. Support is available through provincial resources and verified responsible-gaming organizations.
           </p>
         </div>
-        <a href="/responsible-gambling" class="page-cta-primary justify-center"
-          >View Responsible Gaming Tools</a
-        >
+        <div class="flex justify-end">
+          <a href="/responsible-gambling" class="page-cta-primary h-14 px-8 justify-center w-full lg:w-auto btn-magnetic ring-1 ring-white/10"
+            >Access Support Tools</a
+          >
+        </div>
       </div>
     </section>
 
     <!-- Gold moment: full-bleed CTA -->
     <section
-      class="overflow-hidden rounded-2xl bg-gradient-to-br from-prestige-gold-400 via-prestige-gold to-prestige-gold-600 p-8 shadow-[0_0_60px_-10px_rgba(212,148,58,0.35)] sm:p-12 md:p-16"
+      class="relative overflow-hidden rounded-[48px] bg-gradient-to-br from-prestige-gold-400 via-prestige-gold to-prestige-gold-600 p-10 shadow-[0_40px_100px_-20px_rgba(212,148,58,0.4)] sm:p-16 md:p-24"
     >
-      <div class="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+      <div class="absolute inset-0 z-0 opacity-10 mix-blend-overlay">
+         <div class="h-full w-full bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 0h20L0 20z\" fill=\"%23000\" fill-opacity=\".1\"/%3E%3C/svg%3E')] bg-repeat"></div>
+      </div>
+      
+      <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <h2 class="text-3xl font-black text-navy-black sm:text-5xl md:text-6xl">
-            Ready to join <span class="text-navy-black/80">247iBET</span>?
+          <h2 class="font-display text-4xl font-black text-navy-black sm:text-6xl md:text-7xl leading-[0.9] tracking-tighter">
+            Elite iGaming<br /><span class="opacity-70">Starts Here.</span>
           </h2>
-          <p class="mt-4 max-w-2xl text-base leading-7 text-navy-black/80 sm:text-lg sm:leading-8">
+          <p class="mt-8 max-w-2xl text-lg leading-relaxed text-navy-black/90 sm:text-xl font-medium">
             Explore public guides, verify eligibility, and use the separate gaming platform only
             after checking current terms and responsible-play controls.
           </p>
         </div>
-        <SafeExternalLink
-          href={IBET_URLS.register}
-          class="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full bg-navy-black px-12 py-5 text-base font-black uppercase tracking-[0.12em] text-prestige-gold shadow-2xl transition-all hover:scale-105 hover:bg-navy-black/90 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] active:scale-100 w-full justify-center sm:w-auto sm:min-w-72"
-        >
-          {IBET_CTA.register}
-          <ArrowRight class="h-5 w-5" aria-hidden="true" />
-        </SafeExternalLink>
+        <div class="flex flex-col gap-4 sm:flex-row lg:justify-end">
+          <SafeExternalLink
+            href={IBET_URLS.register}
+            class="inline-flex min-h-[72px] items-center justify-center gap-3 rounded-full bg-navy-black px-12 py-5 text-lg font-black uppercase tracking-[0.15em] text-prestige-gold shadow-2xl transition-all hover:scale-105 hover:bg-navy-black/90 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] active:scale-100 w-full lg:w-auto"
+          >
+            {IBET_CTA.register}
+            <ArrowRight class="h-6 w-6 transition-transform group-hover:translate-x-2" aria-hidden="true" />
+          </SafeExternalLink>
+        </div>
       </div>
     </section>
   </div>

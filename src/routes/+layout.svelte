@@ -8,6 +8,7 @@
   import Navbar from '$lib/components/Navbar.svelte';
   import SEOFooter from '$lib/components/SEOFooter.svelte';
   import StickyMobileCTA from '$lib/components/StickyMobileCTA.svelte';
+  import MobileBottomNav from '$lib/components/MobileBottomNav.svelte';
   import Atmosphere from '$lib/components/Atmosphere.svelte';
 
   const shouldInjectVercelTelemetry =
@@ -73,3 +74,4 @@
 </div>
 
 <StickyMobileCTA />
+<MobileBottomNav />

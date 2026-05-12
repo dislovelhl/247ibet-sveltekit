@@ -111,7 +111,7 @@
   <div
     transition:fly={{ y: 100, duration: 350, easing: cubicOut }}
     class="fixed inset-x-0 z-40 mx-auto w-[calc(100%_-_1rem)] max-w-lg md:hidden safe-bottom"
-    style="bottom: calc(1rem + env(safe-area-inset-bottom, 0px))"
+    style="bottom: calc(6rem + env(safe-area-inset-bottom, 0px))"
     role="navigation"
     aria-label="Quick actions"
   >
