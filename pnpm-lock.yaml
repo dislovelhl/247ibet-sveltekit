@@ -21,6 +21,9 @@ importers:
       '@fontsource/jetbrains-mono':
         specifier: ^5.0.0
         version: 5.2.8
+      '@fontsource/outfit':
+        specifier: ^5.0.0
+        version: 5.2.8
       '@fontsource/playfair-display':
         specifier: ^5.0.0
         version: 5.2.8
@@ -717,6 +720,9 @@ packages:
 
   '@fontsource/jetbrains-mono@5.2.8':
     resolution: {integrity: sha512-6w8/SG4kqvIMu7xd7wt6x3idn1Qux3p9N62s6G3rfldOUYHpWcc2FKrqf+Vo44jRvqWj2oAtTHrZXEP23oSKwQ==}
+
+  '@fontsource/outfit@5.2.8':
+    resolution: {integrity: sha512-rXC6g0MqD7cOBjht0bMqc43qM6lRqDLML9KXsmg9uykz0wLQhy8Z/ajrMG6iyoT3NJR+MYgU+OEHp7uHoTb+Yw==}
 
   '@fontsource/playfair-display@5.2.8':
     resolution: {integrity: sha512-fUEhib70SszNhQVsGbUMSsWJhr7Je0rdeuZdtGpDNu0GKF1xJM8QhpI/y0pckU25GcChXm9TLOmeZupkvvZo2g==}
@@ -4885,6 +4891,8 @@ snapshots:
   '@fontsource/be-vietnam-pro@5.2.8': {}
 
   '@fontsource/jetbrains-mono@5.2.8': {}
+
+  '@fontsource/outfit@5.2.8': {}
 
   '@fontsource/playfair-display@5.2.8': {}
 

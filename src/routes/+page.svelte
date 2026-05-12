@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition';
   import { SITE, canonicalUrl } from '$lib/site';
   import JsonLd from '$lib/components/JsonLd.svelte';
   import {
@@ -907,151 +908,241 @@
       </div>
     </section>
 
-    <section class="material-panel p-5">
-      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-        <h2 class="text-3xl font-black">Expert Guides</h2>
-        <a href="/guides" class="view-all-link">View All Guides <ArrowRight class="h-3 w-3" /></a>
+    <section class="material-panel relative overflow-hidden p-6 sm:p-8 lg:p-10" data-reveal="true">
+      <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-prestige-gold/5 blur-[100px]" aria-hidden="true"></div>
+      
+      <div class="relative z-10 mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-luxury text-prestige-gold-400 mb-2 text-sm tracking-[0.2em] uppercase">Knowledge Base</p>
+          <h2 class="font-display text-3xl font-black md:text-4xl tracking-tight text-white">Expert Guides</h2>
+        </div>
+        <a href="/guides" class="view-all-link btn-magnetic h-11 px-6">View All Knowledge <ArrowRight class="ml-2 h-4 w-4" /></a>
       </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
-        {#each guideCards as card}
-          <GlintCard
-            class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Main Featured Guide -->
+        <div class="group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-navy-raised/50 shadow-2xl transition-all hover:bg-navy-raised hover:shadow-prestige-gold/5 lg:col-span-2 lg:row-span-2" data-reveal="true">
+          <a href={guideCards[0].href} class="flex h-full flex-col">
+            <div class="relative h-64 w-full shrink-0 overflow-hidden lg:h-full">
+              <img
+                src={guideCards[0].image}
+                alt={guideCards[0].alt}
+                width="1200"
+                height="800"
+                loading="lazy"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-black via-navy-black/40 to-transparent"></div>
+              
+              <div class="absolute bottom-0 left-0 p-6 sm:p-8">
+                <div class="mb-3 inline-flex rounded-full bg-prestige-gold/20 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-prestige-gold backdrop-blur-md ring-1 ring-prestige-gold/30">
+                  Featured Guide
+                </div>
+                <h3 class="font-display text-2xl font-black leading-tight text-white sm:text-3xl lg:text-4xl">
+                  {guideCards[0].title}
+                </h3>
+                <p class="mt-4 max-w-xl text-base text-text-body opacity-80 line-clamp-2">
+                  {guideCards[0].body}
+                </p>
+                <div class="mt-6 flex items-center gap-3 font-mono text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors">
+                  Dive Deep <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-2" />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Secondary Guides -->
+        {#each guideCards.slice(1) as card, i}
+          <div 
+            class="group material-cell relative flex flex-col overflow-hidden rounded-[28px] border border-white/5 p-2 transition-all hover:border-white/10 hover:bg-white/[0.02]"
+            data-reveal="true"
+            data-reveal-delay={200 + (i * 100)}
           >
-            <a href={card.href} class="contents">
-              <div
-                class="relative h-44 w-full shrink-0 overflow-hidden rounded-xl lg:h-32 shimmer-effect"
-              >
+            <a href={card.href} class="flex h-full flex-col">
+              <div class="relative h-40 w-full shrink-0 overflow-hidden rounded-[22px] shimmer-effect">
                 <img
                   src={card.image}
                   alt={card.alt}
-                  width="600"
-                  height="400"
+                  width="400"
+                  height="250"
                   loading="lazy"
-                  decoding="async"
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-navy-black/60 to-transparent"
-                ></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 to-transparent"></div>
               </div>
-              <div class="flex flex-col justify-between px-2 pb-2">
+              <div class="flex flex-grow flex-col justify-between p-4">
                 <div>
-                  <h3
-                    class="font-display text-base font-black leading-snug text-white group-hover:text-prestige-gold transition-colors"
-                  >
+                  <h3 class="font-display text-lg font-black leading-tight text-white transition-colors group-hover:text-prestige-gold">
                     {card.title}
                   </h3>
-                  <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-3">
+                  <p class="mt-2 text-xs leading-relaxed text-text-body line-clamp-2 opacity-70">
                     {card.body}
                   </p>
                 </div>
-                <div
-                  class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors"
-                >
-                  Read Guide
-                  <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                <div class="mt-4 flex items-center gap-2 font-mono text-[10px] font-black uppercase tracking-widest text-prestige-gold/80 transition-colors group-hover:text-prestige-gold">
+                  Explore <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </a>
-          </GlintCard>
+          </div>
         {/each}
       </div>
     </section>
 
-    <section id="faq-section" class="material-panel p-5">
-      <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-        <h2 class="text-3xl font-black">Frequently Asked Questions</h2>
-        <a href="/faq" class="view-all-link">View All FAQs <ArrowRight class="h-3 w-3" /></a>
+    <section id="faq-section" class="material-panel relative overflow-hidden p-6 sm:p-8 lg:p-10" data-reveal="true">
+      <div class="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-prestige-gold/5 blur-[100px]" aria-hidden="true"></div>
+      
+      <div class="relative z-10 mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-luxury text-prestige-gold-400 mb-2 text-sm tracking-[0.2em] uppercase">Support & Clarity</p>
+          <h2 class="font-display text-3xl font-black md:text-4xl tracking-tight text-white">General Inquiry</h2>
+        </div>
+        <a href="/faq" class="view-all-link btn-magnetic h-11 px-6">Full FAQ Archive <ArrowRight class="ml-2 h-4 w-4" /></a>
       </div>
-      <div class="flex flex-col gap-3">
+
+      <div class="relative z-10 flex flex-col gap-3">
         {#each faqs as faq, i}
           <div
-            class="material-cell group overflow-hidden rounded-2xl transition-all hover:border-white/15"
+            class="material-cell group overflow-hidden rounded-[24px] border border-white/5 transition-all hover:border-white/10 hover:bg-white/[0.01]"
+            data-reveal="true"
+            data-reveal-delay={100 + (i * 50)}
           >
             <button
               id="home-faq-btn-{i}"
               type="button"
-              class="flex w-full items-center justify-between px-5 py-5 text-left text-base font-black text-white transition-colors hover:bg-white/[0.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
+              class="flex w-full items-center justify-between px-6 py-6 text-left transition-colors hover:bg-white/[0.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold"
               aria-expanded={homeFaqOpenIndex === i}
               aria-controls="home-faq-panel-{i}"
               onclick={() => (homeFaqOpenIndex = homeFaqOpenIndex === i ? null : i)}
             >
-              <span class="max-w-[90%]">{faq.q}</span>
+              <span class="max-w-[90%] font-display text-base font-black text-white sm:text-lg">{faq.q}</span>
               <div
-                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 transition-all group-hover:bg-prestige-gold group-hover:text-navy-black {homeFaqOpenIndex ===
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-text-tertiary transition-all group-hover:border-prestige-gold/30 group-hover:text-prestige-gold {homeFaqOpenIndex ===
                 i
-                  ? 'rotate-180 bg-prestige-gold text-navy-black'
+                   ? 'rotate-180 border-prestige-gold/50 bg-prestige-gold text-navy-black'
                   : ''}"
               >
                 <ChevronDown class="h-5 w-5" aria-hidden="true" />
               </div>
             </button>
-            <div
-              id="home-faq-panel-{i}"
-              role="region"
-              aria-labelledby="home-faq-btn-{i}"
-              hidden={homeFaqOpenIndex !== i}
-              class="border-t soft-separator bg-black/[0.15] px-5 py-5"
-            >
-              <p class="text-sm leading-relaxed text-text-body">{faq.a}</p>
-            </div>
+            {#if homeFaqOpenIndex === i}
+              <div
+                id="home-faq-panel-{i}"
+                role="region"
+                aria-labelledby="home-faq-btn-{i}"
+                class="border-t border-white/5 bg-black/[0.15] px-6 py-6"
+                transition:fade={{ duration: 200 }}
+              >
+                <p class="max-w-4xl text-sm leading-relaxed text-text-body sm:text-base">{faq.a}</p>
+              </div>
+            {/if}
           </div>
         {/each}
       </div>
     </section>
 
-    <section class="material-panel relative overflow-hidden p-8 sm:p-12">
-      <div class="absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-success/5 blur-[100px]" aria-hidden="true"></div>
-      <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[0.7fr_0.3fr]">
-        <div>
-          <div class="mb-6 flex items-center gap-3">
-             <div class="h-10 w-10 flex items-center justify-center rounded-xl bg-success/10 text-success ring-1 ring-success/20">
+    <section class="material-panel relative overflow-hidden p-8 sm:p-12 lg:p-16" data-reveal="true">
+      <div class="absolute -left-32 -bottom-32 h-96 w-96 rounded-full bg-success/10 blur-[120px]" aria-hidden="true"></div>
+      <div class="absolute -right-32 -top-32 h-64 w-64 rounded-full bg-success/5 blur-[100px]" aria-hidden="true"></div>
+      
+      <div class="relative z-10 grid items-center gap-12 lg:grid-cols-[1fr_auto]">
+        <div class="max-w-3xl">
+          <div class="mb-8 flex items-center gap-4">
+             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-success/15 text-success shadow-[0_0_20px_rgba(34,197,94,0.2)] ring-1 ring-success/30">
                 <ShieldCheck class="h-6 w-6" />
              </div>
-             <p class="text-xs font-black uppercase tracking-[0.2em] text-success">
-               Responsible gaming
+             <div class="h-px w-12 bg-success/20"></div>
+             <p class="font-mono text-xs font-black uppercase tracking-[0.3em] text-success/80">
+               Editorial Standard
              </p>
           </div>
-          <h2 class="font-display text-4xl font-black text-white tracking-tight leading-[1.1]">Gambling should remain<br/><span class="text-success">Entertainment</span></h2>
-          <p class="mt-6 max-w-4xl text-base leading-relaxed text-text-body">
-            Set your budget, use session limits, and take breaks. Support is available through provincial resources and verified responsible-gaming organizations.
-          </p>
+          
+          <h2 class="font-display text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.05]">
+            Gambling should remain<br/><span class="text-success text-shadow-sm">Entertainment</span>
+          </h2>
+          
+          <div class="mt-8 grid gap-6 sm:grid-cols-2">
+            <div class="space-y-2">
+              <p class="text-sm font-black uppercase tracking-widest text-white/40">The Approach</p>
+              <p class="text-base leading-relaxed text-text-body">Set your budget, use session limits, and take breaks. We only feature sites with verified safety controls.</p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-sm font-black uppercase tracking-widest text-white/40">The Resources</p>
+              <p class="text-base leading-relaxed text-text-body">Support is available through provincial resources like CAMH and ConnexOntario 24/7.</p>
+            </div>
+          </div>
         </div>
-        <div class="flex justify-end">
-          <a href="/responsible-gambling" class="page-cta-primary h-14 px-8 justify-center w-full lg:w-auto btn-magnetic ring-1 ring-white/10"
+
+        <div class="flex flex-col items-center gap-6">
+          <a href="/responsible-gambling" class="page-cta-primary min-h-[64px] min-w-[240px] justify-center px-10 text-lg btn-magnetic shadow-[0_20px_40px_rgba(0,0,0,0.4)] ring-1 ring-white/10"
             >Access Support Tools</a
           >
+          <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary">
+            <span class="h-1 w-1 rounded-full bg-success"></span>
+            Verified Safe Links
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Gold moment: full-bleed CTA -->
     <section
-      class="relative overflow-hidden rounded-[48px] bg-gradient-to-br from-prestige-gold-400 via-prestige-gold to-prestige-gold-600 p-10 shadow-[0_40px_100px_-20px_rgba(212,148,58,0.4)] sm:p-16 md:p-24"
+      class="glass-premium relative overflow-hidden rounded-[48px] border border-white/20 p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] sm:p-16 md:p-24"
+      data-reveal="true"
     >
-      <div class="absolute inset-0 z-0 opacity-10 mix-blend-overlay">
-         <div class="h-full w-full bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 0h20L0 20z\" fill=\"%23000\" fill-opacity=\".1\"/%3E%3C/svg%3E')] bg-repeat"></div>
+      <!-- Background elite visual -->
+      <div class="absolute inset-0 z-0 opacity-20 mix-blend-soft-light">
+         <div class="h-full w-full bg-repeat" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h40L0 40z&quot; fill=&quot;%23FFF&quot; fill-opacity=&quot;.05&quot;/%3E%3C/svg%3E')"></div>
       </div>
+      <div class="absolute -right-64 -top-64 h-[600px] w-[600px] rounded-full bg-prestige-gold/20 blur-[160px]" aria-hidden="true"></div>
+      <div class="absolute -left-64 -bottom-64 h-[600px] w-[600px] rounded-full bg-navy-raised/40 blur-[160px]" aria-hidden="true"></div>
       
-      <div class="relative z-10 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <h2 class="font-display text-4xl font-black text-navy-black sm:text-6xl md:text-7xl leading-[0.9] tracking-tighter">
-            Elite iGaming<br /><span class="opacity-70">Starts Here.</span>
+      <div class="relative z-10 grid items-center gap-16 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="max-w-3xl">
+          <div class="mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md">
+            <span class="flex h-2 w-2 animate-pulse rounded-full bg-prestige-gold shadow-[0_0_8px_rgba(212,148,58,0.8)]"></span>
+            <span class="font-mono text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold">Platform cutover active</span>
+          </div>
+          
+          <h2 class="font-display text-5xl font-black text-white sm:text-7xl md:text-8xl leading-[0.85] tracking-tighter">
+            Elite iGaming<br /><span class="text-gradient-gold">Starts Here.</span>
           </h2>
-          <p class="mt-8 max-w-2xl text-lg leading-relaxed text-navy-black/90 sm:text-xl font-medium">
+          <p class="mt-10 max-w-xl text-lg leading-relaxed text-text-body sm:text-xl font-medium opacity-80">
             Explore public guides, verify eligibility, and use the separate gaming platform only
             after checking current terms and responsible-play controls.
           </p>
         </div>
-        <div class="flex flex-col gap-4 sm:flex-row lg:justify-end">
-          <SafeExternalLink
-            href={IBET_URLS.register}
-            class="inline-flex min-h-[72px] items-center justify-center gap-3 rounded-full bg-navy-black px-12 py-5 text-lg font-black uppercase tracking-[0.15em] text-prestige-gold shadow-2xl transition-all hover:scale-105 hover:bg-navy-black/90 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] active:scale-100 w-full lg:w-auto"
-          >
-            {IBET_CTA.register}
-            <ArrowRight class="h-6 w-6 transition-transform group-hover:translate-x-2" aria-hidden="true" />
-          </SafeExternalLink>
+
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <SafeExternalLink
+              href={IBET_URLS.register}
+              class="page-cta-primary min-h-[80px] w-full justify-center gap-4 rounded-[32px] text-xl font-black shadow-2xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {IBET_CTA.register}
+              <ArrowRight class="h-6 w-6 transition-transform group-hover:translate-x-2" aria-hidden="true" />
+            </SafeExternalLink>
+            
+            <p class="text-center font-mono text-[10px] uppercase tracking-widest text-text-tertiary">
+              Strictly 18+/19+ · Terms & Conditions Apply
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-8 opacity-60">
+            <div class="text-center">
+              <p class="font-display text-xl font-black text-white">Instant</p>
+              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Deposits</p>
+            </div>
+            <div class="text-center">
+              <p class="font-display text-xl font-black text-white">24/7</p>
+              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Guidance</p>
+            </div>
+            <div class="text-center">
+              <p class="font-display text-xl font-black text-white">Verified</p>
+              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Payouts</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
