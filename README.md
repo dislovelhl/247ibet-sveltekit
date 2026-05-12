@@ -29,7 +29,7 @@ Current branch verification baseline:
 
 - `pnpm check` — Svelte diagnostics must be clean.
 - `pnpm lint` — ESLint must pass with no warnings.
-- `pnpm test` — Vitest currently covers **200 tests across 30 files**.
+- `pnpm test` — Vitest currently covers **190 tests across 29 files**.
 - `pnpm build` — production SvelteKit/Vercel build must complete.
 
 ## Documentation

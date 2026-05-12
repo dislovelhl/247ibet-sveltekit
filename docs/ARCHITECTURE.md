@@ -159,5 +159,5 @@ Workflow route wrappers should use `src/lib/server/workflow-route.ts` for shared
 
 - Do not add HTML route CDN caching while the age-gate approach depends on hooks/client state; see `docs/PERFORMANCE.md` for the cache-coherency constraint.
 - Workflow and Braintrust Vite plugins are build-only because dev-mode watch behavior can cause loops.
-- Node 24 is the runtime contract across local, CI, and Vercel function config.
+- Node 24 is the local-development and Vercel runtime contract; the current GitHub Actions workflow is still pinned separately to Node 22 in `.github/workflows/ci.yml`.
 - New docs should stay Markdown-only unless a future task explicitly authorizes a docs-site dependency.

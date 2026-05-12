@@ -4,15 +4,17 @@
 
 Every push to `main` and every pull request targeting `main` runs the `quality-gates` job
 defined in `.github/workflows/ci.yml`. All four gates must pass before a PR can be merged.
+The current workflow uses `actions/setup-node@v4` with `node-version: 22`, even though local
+development and Vercel runtime docs target Node 24.x.
 
 ## The 4 Gates
 
-|| Step | Command | What it checks |
-||------|---------|----------------|
-|| Type check | `pnpm check` | SvelteKit + TypeScript types via `svelte-check` |
-|| Lint | `pnpm lint` | ESLint rules across `.svelte`, `.ts`, `.js` files |
-|| Unit + integration tests | `pnpm test` | Vitest test suite (113 tests across 14 files) |
-|| Build | `pnpm build` | Full production build via Vite / `@sveltejs/adapter-auto` |
+| Step | Command | What it checks |
+|------|---------|----------------|
+| Type check | `pnpm check` | SvelteKit + TypeScript types via `svelte-check` |
+| Lint | `pnpm lint` | ESLint rules across `.svelte`, `.ts`, `.js` files |
+| Unit + integration tests | `pnpm test` | Vitest test suite (190 tests across 29 files in the current checkout) |
+| Build | `pnpm build` | Full production build via Vite and `@sveltejs/adapter-vercel` |
 
 ## Running Locally
 

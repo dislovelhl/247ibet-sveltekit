@@ -56,6 +56,6 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 
 ## Current checkout notes
 
-- Vitest currently covers **200 tests across 30 files**; re-run `pnpm test` before quoting the number outside the repository.
+- Vitest currently covers **190 tests across 29 files**; re-run `pnpm test` before quoting the number outside the repository.
 - Generated hero image references under `/images/generated/...` should resolve to files in `static/images/generated/`; use `.webp` from route markup and keep the source `.png` for future re-optimization.
 - Workflow API routes share server-only helpers in `src/lib/server/workflow-route.ts`; avoid reintroducing per-route secret-check or start-response duplication.
