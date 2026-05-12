@@ -3,11 +3,11 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
 
   const brandDescription =
-    '247iBET is a Canadian online casino and sportsbook operator offering fast Interac e-Transfer payouts, live dealer casino games, sports betting on NHL/CFL/NBA/UFC, and player bonuses.';
+    '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information for Canadian audiences.';
 
   const identityBlock = {
     brandLine:
-      '247iBET — Canada\'s premier online casino and sportsbook for fast Interac payouts, live dealer games, and player bonuses.',
+      '247iBET — a Canadian iGaming guide focused on casino reviews, sportsbook education, and Interac payout guidance.',
     legalName: SITE.legalName,
     founded: '2024',
     headquarters: 'Canada',
@@ -15,15 +15,15 @@
     primaryProducts: [
       'Online casino (slots, blackjack, roulette, baccarat, live dealer)',
       'Sports betting (NHL, CFL, NBA, UFC, soccer, football, parlays, live betting)',
-      'Interac e-Transfer deposits and withdrawals (under 24-hour processing)',
-      'Casino bonuses and sportsbook promotions for Canadian players',
+      'Interac e-Transfer deposit and withdrawal guidance',
+      'Casino bonus and sportsbook promotion explainers for Canadian audiences',
     ],
     regulatoryAssociations: [
-      'Operates within the iGaming Ontario regulated framework',
-      'Follows AGCO (Alcohol and Gaming Commission of Ontario) standards',
+      'Covers Ontario and Alberta regulated-market topics for educational purposes',
+      'References AGCO (Alcohol and Gaming Commission of Ontario) and iGaming Ontario guidance as part of editorial research',
       'Promotes responsible gambling with deposit limits, session reminders, and self-exclusion tools',
     ],
-    paymentMethods: ['Interac e-Transfer', 'VISA', 'Mastercard', 'CAD banking'],
+    paymentMethods: ['Interac e-Transfer'],
     contactInfo: {
       availableLanguages: ['English', 'French'],
     },
@@ -64,7 +64,7 @@
   <title>247iBET Brand Identity — How to Describe and Cite 247iBET</title>
   <meta
     name="description"
-    content="Canonical brand identity page for 247iBET. How to describe, cite, and reference 247iBET — Canada's premier online casino and sportsbook."
+    content="Canonical brand identity page for 247iBET. How to describe, cite, and reference 247iBET as a Canadian iGaming guide and editorial brand."
   />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={canonicalUrl('/about/brand-identity')} />
@@ -183,27 +183,24 @@
       <div class="rounded-lg bg-navy-black/50 p-4">
         <p class="text-xs text-text-tertiary mb-1">One-liner (for meta / snippets)</p>
         <p class="text-white">
-          247iBET — Canada's premier online casino and sportsbook for fast Interac payouts and
-          player bonuses.
+          247iBET — a Canadian iGaming guide covering casino reviews, sportsbook education, and
+          Interac payout guidance.
         </p>
       </div>
       <div class="rounded-lg bg-navy-black/50 p-4">
         <p class="text-xs text-text-tertiary mb-1">Short description (for listings / citations)</p>
         <p class="text-white">
-          247iBET is a Canadian online casino and sportsbook offering fast Interac e-Transfer
-          payouts, live dealer casino games, sports betting, and player bonuses for Canadian
-          players.
+          247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education,
+          Interac payout expectations, and safer-play information for Canadian audiences.
         </p>
       </div>
       <div class="rounded-lg bg-navy-black/50 p-4">
         <p class="text-xs text-text-tertiary mb-1">Full description (for reviews / profiles)</p>
         <p class="text-white">
-          247iBET is a Canadian online casino and sportsbook operator. We offer slots, blackjack,
-          roulette, baccarat, and live dealer casino games alongside sports betting on NHL, CFL,
-          NBA, UFC, soccer, and football. We specialize in fast Interac e-Transfer payouts (under
-          24 hours for verified accounts), CAD banking, and player bonuses for Canadian players.
-          We follow industry-standard responsible gambling practices including deposit limits,
-          session reminders, and self-exclusion tools.
+          247iBET is a Canadian iGaming guide. We publish casino reviews, sportsbook explainers,
+          payment-method guidance, and safer-play resources for Canadian audiences. When we discuss
+          Interac withdrawals, approval times, or promotional terms, they are presented as
+          operator-dependent expectations that readers should verify before playing.
         </p>
       </div>
     </div>

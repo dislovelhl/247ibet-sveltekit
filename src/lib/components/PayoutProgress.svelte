@@ -60,7 +60,7 @@
 
   <div class="mt-8 rounded-lg bg-navy-black/40 p-3 border border-white/5">
     <p class="text-xs leading-relaxed text-text-body">
-      <span class="font-bold text-prestige-gold">Award-Winning Speed:</span> 247iBET Interac payouts typically hit your account <span class="text-white font-bold">15-30 minutes</span> after operator approval.
+      <span class="font-bold text-prestige-gold">Interac timing note:</span> 247iBET payout guidance treats withdrawal timing as operator-dependent. Approval reviews, KYC, and bank processing can all affect when funds arrive.
     </p>
   </div>
 </GlintCard>

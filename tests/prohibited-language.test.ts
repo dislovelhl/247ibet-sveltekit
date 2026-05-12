@@ -17,13 +17,20 @@
 
 import { describe, it, expect } from 'vitest';
 import { readdirSync, readFileSync, statSync } from 'fs';
-import { join, relative } from 'path';
+import { join, relative, resolve } from 'path';
 
 // ---------------------------------------------------------------------------
 // Config
 // ---------------------------------------------------------------------------
 
-const ROUTES_DIR = join(process.cwd(), 'src/routes');
+const SRC_ROOT = resolve(process.cwd(), 'src');
+const ROUTES_DIR = join(SRC_ROOT, 'routes');
+const COMPONENTS_DIR = join(SRC_ROOT, 'lib/components');
+const PUBLIC_TS_FILES = [
+  join(SRC_ROOT, 'lib/ibet-brand.ts'),
+  join(SRC_ROOT, 'lib/site.ts'),
+  join(SRC_ROOT, 'lib/json-ld.ts'),
+];
 
 /** Routes excluded from scanning (pattern match on relative path) */
 const EXEMPT_ROUTE_PATTERNS = [
@@ -122,6 +129,56 @@ const PROHIBITED: ProhibitedPhrase[] = [
       'Unsupported absolute payout speed claim. Use "Interac withdrawals after operator approval" framing.',
   },
   {
+    pattern: /verified\s+security\s+and\s+licensing/i,
+    severity: 'P0',
+    reason: 'Combines security and licensing verification claims without documentary proof.',
+  },
+  {
+    pattern: /regulated\s+and\s+secure\s+gaming\s+environment/i,
+    severity: 'P1',
+    reason: 'Reads like an operator authorization and security guarantee claim.',
+  },
+  {
+    pattern: /instant\s+Interac\s+withdrawals/i,
+    severity: 'P1',
+    reason: 'Absolute payout-speed claim. Use operator-approval and timing-varies wording instead.',
+  },
+  {
+    pattern: /players\s+online/i,
+    severity: 'P1',
+    reason: 'Implies live user telemetry without a verified real-time data source.',
+  },
+  {
+    pattern: /\b\d[\d,]*\+\s+Canadian\s+Players\b/i,
+    severity: 'P1',
+    reason: 'User-count claim requires verifiable audience data.',
+  },
+  {
+    pattern: /Canada'?s\s+premier\s+online\s+casino\s+and\s+sportsbook/i,
+    severity: 'P1',
+    reason: 'Unsupported operator-style superiority claim.',
+  },
+  {
+    pattern: /certified\s+and\s+secure\s+gaming\s+environment/i,
+    severity: 'P1',
+    reason: 'Certification/security claim without evidence or scope.',
+  },
+  {
+    pattern: /certified\s+RNG\s*(?:&|and)\s*live\s+dealer/i,
+    severity: 'P1',
+    reason: 'Certification claim about game fairness/live dealer offering without proof.',
+  },
+  {
+    pattern: /operates\s+within\s+the\s+iGaming\s+Ontario\s+regulated\s+framework/i,
+    severity: 'P0',
+    reason: 'Implies 247iBET itself operates under Ontario authorization.',
+  },
+  {
+    pattern: /follows\s+AGCO\s*\([^)]*\)?\s*standards/i,
+    severity: 'P0',
+    reason: 'Implies 247iBET itself is held to AGCO operator standards rather than discussing them editorially.',
+  },
+  {
     pattern: /fastest\s+available\s+to\s+Canadian\s+players/i,
     severity: 'P1',
     reason: 'Unsupported comparative superlative for payout speed.',
@@ -185,17 +242,21 @@ const PROHIBITED: ProhibitedPhrase[] = [
 // File utilities
 // ---------------------------------------------------------------------------
 
-function walkDir(dir: string): string[] {
+function walkDir(dir: string, allowedExtensions = ['.svelte']): string[] {
   const results: string[] = [];
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) {
-      results.push(...walkDir(full));
-    } else if (entry.endsWith('.svelte')) {
+      results.push(...walkDir(full, allowedExtensions));
+    } else if (allowedExtensions.some((ext) => entry.endsWith(ext))) {
       results.push(full);
     }
   }
   return results;
+}
+
+function relativeToSrc(file: string): string {
+  return relative(SRC_ROOT, file);
 }
 
 function isExempt(relPath: string, exemptPatterns: RegExp[]): boolean {
@@ -206,15 +267,19 @@ function isExempt(relPath: string, exemptPatterns: RegExp[]): boolean {
 // Tests
 // ---------------------------------------------------------------------------
 
-const allSvelteFiles = walkDir(ROUTES_DIR);
+const allPublicFiles = [
+  ...walkDir(ROUTES_DIR, ['.svelte']),
+  ...walkDir(COMPONENTS_DIR, ['.svelte']),
+  ...PUBLIC_TS_FILES,
+];
 
 describe('Prohibited language gate — compliance', () => {
   for (const rule of PROHIBITED) {
     it(`[${rule.severity}] "${rule.pattern.source}" must not appear in public pages`, () => {
       const violations: string[] = [];
 
-      for (const file of allSvelteFiles) {
-        const rel = relative(ROUTES_DIR, file);
+      for (const file of allPublicFiles) {
+        const rel = file.startsWith(ROUTES_DIR) ? relative(ROUTES_DIR, file) : relativeToSrc(file);
 
         // Skip globally exempt routes
         if (EXEMPT_ROUTE_PATTERNS.some((p) => p.test(rel))) continue;

@@ -25,21 +25,21 @@ export const IBET_URLS = {
 
 export const IBET_PROFILE = {
   name: '247iBET',
-  tagline: 'Canada\'s premier online casino and sportsbook — fast Interac payouts, live dealer, and exclusive bonuses.',
+  tagline: 'Canadian iGaming guide covering casino reviews, sportsbook education, and Interac payout guidance.',
   rating: null,
   logo: '/images/brand/logo.png',
   established: 2020,
   licences: [],
   agcoLicensed: false,
   minAge: 18,
-  withdrawalSpeed: 'Interac payouts typically 15-30 minutes after approval',
+  withdrawalSpeed: 'Interac payouts may complete after operator approval, with timing varying by KYC, bonus review, and bank processing',
   paymentMethods: ['Interac'],
   provinces: ['ON', 'AB', 'BC', 'MB', 'SK', 'QC', 'NS', 'NB', 'PE', 'NL'],
   features: [
     {
       icon: 'Zap',
-      label: 'Fast Interac Payouts',
-      detail: 'Typically 15-30 minutes after approval. One of the fastest payout casinos in Canada.',
+      label: 'Interac payout guidance',
+      detail: 'Interac withdrawals may complete after operator approval, but timing varies with KYC, account review, and bank processing.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
@@ -59,15 +59,15 @@ export const IBET_PROFILE = {
     },
     {
       icon: 'MonitorPlay',
-      label: 'Live Dealer 24/7',
-      detail: 'Real dealers, real tables, real-time. Blackjack, roulette, baccarat — available around the clock.',
+      label: 'Live dealer coverage',
+      detail: 'Guidance on blackjack, roulette, baccarat, and other live dealer formats commonly offered by operators.',
       accent: 'text-[#4A9EBF]',
       bg: 'bg-[#4A9EBF]/8 border-[#4A9EBF]/20',
     },
   ],
   trustSignals: [
-    'Our commitment to fast Interac payouts — typically 15-30 minutes after approval',
-    'Certified and secure gaming environment for all Canadian players',
+    'Interac payout guidance with approval and bank-processing caveats clearly explained',
+    'Editorial focus on safer-play tools, payout terms, and operator transparency',
     'Transparent bonus terms — wagering, expiry, and limits clearly shown',
     'Responsible gaming tools built into every 247iBET account',
     '500+ premium casino games and full sportsbook coverage',
@@ -80,13 +80,13 @@ export const IBET_PROFILE = {
     },
     {
       label: 'Payments',
-      value: 'Fast Interac Payouts',
-      detail: 'We prioritize Canadian-first banking. Most payouts complete in 15-30 minutes after approval.',
+      value: 'Interac payout guidance',
+      detail: 'We explain operator approval, KYC review, and bank-side timing so readers know why payouts can vary.',
     },
     {
       label: 'Fair Play',
-      value: 'Certified RNG & Live Dealer',
-      detail: 'All our games use certified random number generators, with live tables streamed in real time.',
+      value: 'Game fairness and live dealer explainers',
+      detail: 'We describe common RNG and live dealer concepts in educational terms rather than making certification claims about operators.',
     },
     {
       label: 'Support',
@@ -95,7 +95,7 @@ export const IBET_PROFILE = {
     },
   ],
   pros: [
-    'Lightning-fast Interac payouts (15-30 mins)',
+    'Interac payout expectations explained with operator-approval caveats',
     'Elite casino catalogue with 500+ games',
     'Full sportsbook with competitive live odds',
     'Dedicated 24/7 Canadian-first support',
@@ -108,13 +108,13 @@ export const IBET_CREATIVE_SNAPSHOTS = [
   {
     slug: 'welcome-bonus',
     group: 'bonus',
-    title: 'Welcome Bonus',
+    title: 'Welcome Offer Snapshot',
     headline: 'Get C$2000 bonus back + 10 free spins',
     period: 'Welcome offer — see cashier for full terms',
     summary:
       'New players get up to C$2000 bonus back plus 10 free spins on sign-up. Check deposit minimums, wagering requirements, eligible games, and expiry in our cashier before opting in.',
     image: '/images/creatives/welcome-bonus-back.webp',
-    alt: '247iBET welcome bonus: Get $2000 bonus back plus 10 free spins.',
+    alt: '247iBET welcome offer snapshot: Get $2000 bonus back plus 10 free spins.',
     observedText: ['GET $2000 BONUS BACK', '+10 FREE SPINS', '247iBET.ca'],
   },
   {
@@ -227,7 +227,7 @@ export const IBET_CTA = {
   primary: 'Play Now',
   casino: 'Play Casino',
   sports: 'Bet Now',
-  bonus: 'Claim Bonus',
+  bonus: 'Review Bonus Terms',
   deposit: 'Fast Payouts',
   register: 'Sign Up',
   fastPayout: 'Get Paid Fast',

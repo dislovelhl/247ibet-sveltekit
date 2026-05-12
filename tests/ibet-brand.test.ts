@@ -110,14 +110,15 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
     expect(IBET_DISCLAIMER).toContain('T&Cs');
   });
 
-  it('uses operator-style CTAs', () => {
+  it('uses direct but non-inducement CTAs', () => {
     expect(IBET_CTA.primary).toBe('Play Now');
     expect(IBET_CTA.register).toBe('Sign Up');
     expect(IBET_CTA.deposit).toBe('Fast Payouts');
+    expect(IBET_CTA.bonus).toBe('Review Bonus Terms');
     expect(Object.values(IBET_CTA)).toContain('Play Now');
   });
 
-  it('keeps the trust copy direct while preserving responsible-play language', () => {
+  it('keeps the trust copy educational while preserving responsible-play language', () => {
     const profileText = [
       IBET_PROFILE.tagline,
       IBET_PROFILE.withdrawalSpeed,
@@ -128,13 +129,13 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
       IBET_DISCLAIMER,
     ].join(' ');
 
-    expect(profileText).toContain('15-30 minutes after approval');
-    expect(profileText).toContain("Canada's premier online casino and sportsbook");
-    expect(profileText).toContain('Certified and secure gaming environment for all Canadian players');
+    expect(profileText).toContain('operator approval');
+    expect(profileText).toContain('Canadian iGaming guide');
+    expect(profileText).toContain('operator transparency');
     expect(profileText).toContain('Responsible gaming tools built into every 247iBET account');
     expect(profileText).toContain('Play responsibly');
     expect(profileText).not.toMatch(
-      /independent guide|may earn commission|5,000\+|Fully regulated|Kahnawake Licensed|AGCO compliance/,
+      /15-30 minutes after approval|premier online casino and sportsbook|Certified and secure gaming environment|Fully regulated|Kahnawake Licensed|AGCO compliance/,
     );
   });
 });

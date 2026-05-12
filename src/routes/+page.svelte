@@ -23,7 +23,11 @@
   const LAST_UPDATED = '2026-04-29';
 
   const heroTrust = [
-    { label: 'Interac payouts', body: 'Typically 15-30 minutes after approval', icon: Zap },
+    {
+      label: 'Interac payouts',
+      body: 'Often completed after operator approval; timing varies by review and bank processing',
+      icon: Zap,
+    },
     { label: 'Casino', body: '500+ games, including slots and live dealer', icon: Trophy },
     { label: 'Sportsbook', body: 'NHL, NBA, NFL, UFC, soccer, and live betting', icon: BadgeCheck },
     {
@@ -36,7 +40,7 @@
   const whyCards = [
     {
       title: 'Payments & payouts',
-      body: 'Fast Interac e-Transfer deposits and withdrawals with minimal friction for all verified players.',
+      body: 'Interac deposit and withdrawal guidance with approval, KYC, and bank-processing caveats clearly explained.',
       icon: Zap,
     },
     {
@@ -90,12 +94,12 @@
     {
       title: 'Deposit',
       body: 'Choose Interac and confirm the transfer through your bank.',
-      status: 'Instant to 30 minutes',
+      status: 'Usually prompt',
     },
     {
       title: 'Verification',
       body: 'Complete identity checks if required before larger or first withdrawals.',
-      status: 'Instant to 24 hours',
+      status: 'Review dependent',
     },
     {
       title: 'Withdraw',
@@ -105,7 +109,7 @@
     {
       title: 'Interac payout',
       body: 'Funds are sent after approval; first withdrawals or bank delays may take longer.',
-      status: 'Usually 15-30 minutes',
+      status: 'Timing varies',
     },
   ];
 
@@ -135,7 +139,7 @@
   const standOut = [
     {
       title: 'Full Transparency',
-      body: 'Verified security and licensing for a safe Canadian iGaming experience.',
+      body: 'Editorial checks on payout terms, safer-play tools, and regulated-market disclosures for Canadian readers.',
       icon: ShieldCheck,
     },
     {
@@ -251,11 +255,11 @@
   const faqs = [
     {
       q: 'Is 247iBET licensed in my province?',
-      a: '247iBET is our elite casino and sportsbook for eligible Canadian players. We are fully committed to regulatory compliance; please confirm the legal registration status and provincial eligibility in your specific region through our current terms and your provincial regulator before signing up.',
+       a: '247iBET is an independent Canadian iGaming guide. Readers should confirm any operator\'s registration status, product availability, and provincial eligibility directly with the operator and the relevant regulator before signing up.',
     },
     {
       q: 'How fast are Interac withdrawals?',
-      a: 'We prioritize speed. Interac withdrawals are typically processed within 15-30 minutes after our team approves the request. First withdrawals, larger payouts, KYC checks, bonus review, or bank-side delays may occasionally take longer.',
+       a: 'Interac withdrawals are often completed after operator approval, but timing varies. First withdrawals, larger payouts, KYC checks, bonus review, and bank-side delays can all extend the timeline.',
     },
     {
       q: 'What documents do you require for verification?',
@@ -306,7 +310,7 @@
       name: SITE.name,
       url: SITE.url,
       description:
-        'Premier Canadian online casino and sportsbook offering 247iBET casino games, elite sports betting markets, lightning-fast Interac payouts, and secure responsible gaming.',
+         'Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information.',
       publisher: {
         '@type': 'Organization',
         '@id': `${SITE.url}/#org`,
@@ -322,7 +326,7 @@
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
       description:
-        '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and player bonuses for Canadian players.',
+         '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information for Canadian audiences.',
       areaServed: {
         '@type': 'Country',
         name: 'Canada',
@@ -365,18 +369,18 @@
 </script>
 
 <svelte:head>
-  <title>247iBET Canada: Premier Casino, Sportsbook & Fast Interac Payouts</title>
+  <title>247iBET Canada: iGaming Guide, Sportsbook Reviews & Interac Payout Education</title>
   <meta
     name="description"
-    content="Experience 247iBET Canada: play our premium casino games, bet on your favorite sports, and enjoy lightning-fast Interac payouts. Sign up today for the ultimate iGaming experience."
+    content="Explore 247iBET Canada for casino reviews, sportsbook education, payout guidance, and safer-play resources for Canadian audiences."
   />
   <meta
     property="og:title"
-    content="247iBET Canada: Premier Casino, Sportsbook & Fast Interac Payouts"
+    content="247iBET Canada: iGaming Guide, Sportsbook Reviews & Interac Payout Education"
   />
   <meta
     property="og:description"
-    content="Join 247iBET Canada for premium casino games, live sports betting, and instant Interac withdrawals. Your elite iGaming destination."
+    content="Explore 247iBET Canada for casino reviews, sportsbook education, Interac payout guidance, and safer-play resources."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={SITE.url} />
@@ -486,15 +490,15 @@
           Trust & verification
         </p>
         <h2 class="font-display text-4xl font-black sm:text-5xl">
-          Safe & Secure iGaming Experience
+          Editorial checks for Canadian iGaming readers
         </h2>
         <p class="mt-5 max-w-md text-sm leading-6 text-text-body">
-          We maintain the highest standards for security, payment reliability, and
-          responsible-gaming controls. Our platform ensures your data and transactions are protected
-          using industry-leading encryption and verification protocols for a seamless Canadian gaming experience.
+          We focus on clear payout caveats, safer-play tools, and regulated-market context so
+          readers can evaluate operators with more confidence. Use this guide as research support,
+          then verify operator terms, approval flows, and provincial eligibility before depositing.
         </p>
         <ul class="mt-5 space-y-3 text-sm text-text-body">
-          {#each ['Regulated and secure gaming environment', 'Verified Interac e-Transfer payouts', 'Fast KYC and identity verification', 'Dedicated 24/7 player support'] as item}
+          {#each ['Educational coverage of regulated-market topics', 'Interac payout guidance with approval caveats', 'Verification steps explained before first withdrawal', 'Responsible-gambling and support resources highlighted'] as item}
             <li class="flex gap-3">
               <BadgeCheck class="mt-0.5 h-5 w-5 shrink-0 text-success" aria-hidden="true" />
               <span>{item}</span>
@@ -631,8 +635,8 @@
             Why 247iBET <span class="text-gold-foil">Stands Out</span>
           </h2>
           <p class="mt-6 text-lg leading-relaxed text-text-body">
-            The premium choice for Canadian players, prioritizing security,
-            lightning-fast payments, and transparent gaming terms.
+            A research-first guide for Canadian players, prioritizing transparent payout caveats,
+            safer-play tools, and clearer operator comparison points.
           </p>          <div class="mt-8">
              <SafeExternalLink href={IBET_URLS.register} class="page-cta-primary-sm btn-magnetic">
                 Get Started

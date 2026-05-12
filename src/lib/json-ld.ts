@@ -32,7 +32,7 @@ export function organizationSchema(): Record<string, unknown> {
     url: 'https://247ibet.ca',
     logo: 'https://247ibet.ca/images/brand/logo.png',
     description:
-      '247iBET is Canada\'s premier online casino and sportsbook, offering fast Interac payouts, live dealer games, and player bonuses.',
+      '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'CA',
