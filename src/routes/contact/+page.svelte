@@ -5,7 +5,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import { globalParallax } from '$lib/runes.svelte';
-  import { ArrowRight, Mail, Phone, Users } from 'lucide-svelte';
+  import { ArrowRight, Mail } from 'lucide-svelte';
 
 </script>
 

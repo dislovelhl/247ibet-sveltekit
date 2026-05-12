@@ -4,7 +4,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
   import BackgroundAtmosphere from '$lib/components/BackgroundAtmosphere.svelte';
   import { globalParallax } from '$lib/runes.svelte';
-  import { ArrowRight, BookOpen, ExternalLink, ShieldCheck } from 'lucide-svelte';
+  import { ArrowRight, ExternalLink, ShieldCheck } from 'lucide-svelte';
 
   const sources = [
     {
