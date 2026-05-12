@@ -28,9 +28,13 @@
   ];
 
   const trustItems = [
-    { title: 'Player First', body: 'Your safety comes first', icon: ShieldCheck },
-    { title: 'Confidential', body: '100% private and secure', icon: LockKeyhole },
-    { title: '24/7 Support', body: 'Help is always available', icon: Clock3 },
+    {
+      title: 'Player First',
+      body: 'Use limits and support before play escalates',
+      icon: ShieldCheck,
+    },
+    { title: 'Private', body: 'This page does not collect your answers', icon: LockKeyhole },
+    { title: 'Support', body: 'Independent help resources are listed below', icon: Clock3 },
   ];
 
   const riskItems = [
@@ -56,23 +60,18 @@
       href: 'https://www.albertahealthservices.ca/',
     },
     {
-      name: 'iGaming Ontario — Self-Exclusion',
-      meta: 'Ontario provincial self-exclusion registry · igamingontario.ca',
-      href: 'https://igamingontario.ca/en/self-exclusion',
+      name: 'iGaming Ontario — Self-Exclusion FAQ',
+      meta: 'Ontario operator self-exclusion information · igamingontario.ca',
+      href: 'https://www.igamingontario.ca/en/player/player-faqs',
+    },
+    {
+      name: 'iGaming Ontario — Responsible Gambling',
+      meta: 'Ontario responsible-gambling resources · igamingontario.ca',
+      href: 'https://www.igamingontario.ca/en/player/responsible-gambling',
     },
     {
       name: 'AGLC — Voluntary Self-Exclusion Program',
-      meta: 'Alberta self-exclusion registry · aglc.ca',
-      href: 'https://aglc.ca/gambling/help-problem-gambling/voluntary-self-exclusion-vse-program',
-    },
-    {
-      name: 'AGLC — Help with Problem Gambling',
-      meta: 'Alberta provincial RG resources · aglc.ca',
-      href: 'https://aglc.ca/gambling/help-problem-gambling',
-    },
-    {
-      name: 'AGLC — Responsible Gambling',
-      meta: 'Alberta canonical regulatory resources · aglc.ca',
+      meta: 'Alberta self-exclusion and responsible-gambling resources · aglc.ca',
       href: 'https://aglc.ca/gaming/responsible-gambling',
     },
     {
@@ -85,25 +84,25 @@
   const controlTools = [
     {
       title: 'Deposit Limits',
-      body: 'Set daily, weekly or monthly limits that suit your budget.',
-      cta: 'Set Limit',
+      body: 'Look for daily, weekly, or monthly limits in any gaming account you use.',
+      cta: 'Review Limits',
       icon: WalletCards,
     },
     {
       title: 'Cooling-Off Periods',
-      body: 'Take a break from betting. Choose a custom time-out.',
-      cta: 'Take a Break',
+      body: 'Use account time-outs or breaks where the operating platform offers them.',
+      cta: 'Plan a Break',
       icon: Clock3,
     },
     {
       title: 'Self-Exclusion',
-      body: 'Lock your account for 6 months, 1 year or permanently.',
-      cta: 'Get Started',
+      body: 'Use official self-exclusion resources or operator tools when you need a longer break.',
+      cta: 'Find Resources',
       icon: LockKeyhole,
     },
     {
       title: 'Session Limits',
-      body: 'Set reminders or automatic session time-outs.',
+      body: 'Use reminders or session time-outs where available to manage time spent playing.',
       cta: 'Manage Time',
       icon: HelpCircle,
     },
@@ -235,19 +234,25 @@
       </ol>
     </nav>
 
-    <header class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl">
-      <BackgroundAtmosphere 
-        src="/images/generated/safe-play-shield-hero.webp" 
+    <header
+      class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
+    >
+      <BackgroundAtmosphere
+        src="/images/generated/safe-play-shield-hero.webp"
         parallaxMultiplier={0.4}
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>
-      
-      <div 
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"
+      ></div>
+
+      <div
         class="material-panel relative z-10 mx-4 my-8 animate-float-3d rounded-3xl p-8 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)] sm:mx-6 sm:my-10 md:p-14 md:max-w-2xl text-left"
         style="transform: translate3d({-globalParallax.x * 0.8}px, {-globalParallax.y * 0.8}px, 0);"
       >
         <div class="mb-5 flex items-center gap-2">
-          <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
+          <div
+            class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]"
+          >
             <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               Safe Play Framework
             </p>
@@ -256,10 +261,16 @@
 
         <h1 class="page-hero-title !tracking-tighter">
           Safe Play <br />
-          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Protocols</span>
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]"
+            >Protocols</span
+          >
         </h1>
         <p class="mt-8 text-lg leading-relaxed text-text-body md:text-xl font-light">
-          At 247iBET, your well-being is our priority. Our player protection framework is built on evidence-based standards and proactive monitoring. <strong>Minimum age: 19+ in Ontario and Alberta.</strong>
+          247iBET publishes public responsible-gambling guidance and links to independent support
+          resources. Account controls, cashier features, and wagering activity belong to the
+          separate operating platform you choose to use. <strong
+            >Minimum age: 19+ in Ontario and Alberta.</strong
+          >
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
@@ -320,8 +331,8 @@
           <h2 class="text-3xl font-black uppercase">Active Support Matrix</h2>
         </div>
         <p class="max-w-2xl text-sm leading-6 text-text-body">
-          We work with trusted organizations to provide professional assistance for players in
-          Canada.
+          Start with independent support organizations, regulator resources, and official
+          self-exclusion information for your province.
         </p>
         <div class="mt-7 space-y-4">
           {#each supportLinks as link}
@@ -364,7 +375,7 @@
       {#if !submitted}
         <div class="material-group mt-7 divide-y divide-white/8">
           {#each assessmentQuestions as question, index}
-             <div class="grid gap-4 p-4 soft-separator md:grid-cols-[1fr_auto] md:items-center">
+            <div class="grid gap-4 p-4 soft-separator md:grid-cols-[1fr_auto] md:items-center">
               <div class="flex gap-3">
                 <HelpCircle class="mt-0.5 h-5 w-5 shrink-0 text-prestige-gold" aria-hidden="true" />
                 <p class="text-sm font-semibold text-text-body">{question}</p>
@@ -434,7 +445,8 @@
     <section id="tools" class="material-panel mt-12 p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Platform Control Infrastructure</h2>
       <p class="mt-2 text-sm text-text-body">
-        Powerful tools to help you manage your play, your way.
+        Common controls to look for before using any gaming account. Availability and settings vary
+        by operator and province.
       </p>
       <div class="mt-7 grid gap-4 md:grid-cols-4">
         {#each controlTools as tool}
@@ -458,7 +470,8 @@
     <section class="material-panel mt-12 overflow-hidden p-6 md:p-8">
       <h2 class="text-3xl font-black uppercase">Safety Tools at a Glance</h2>
       <p class="mt-2 text-sm text-text-body">
-        Use these tools anytime from your Responsible Gaming dashboard.
+        Use these controls where the operating platform makes them available, and prefer official
+        regulator or health resources when you need help.
       </p>
       <div class="material-group mt-6 overflow-x-auto">
         <table class="w-full min-w-[760px] text-left text-sm">
@@ -489,7 +502,7 @@
           <div>
             <h2 class="text-xl font-black">Need help now?</h2>
             <p class="mt-2 text-sm text-text-body">
-              You&apos;re not alone. Our support partners are here 24/7.
+              You&apos;re not alone. Independent support resources are available now.
             </p>
           </div>
         </div>
@@ -499,14 +512,12 @@
       >
     </section>
 
-    <section
-      class="material-panel mt-12 overflow-hidden p-8 shadow-2xl md:p-10"
-    >
+    <section class="material-panel mt-12 overflow-hidden p-8 shadow-2xl md:p-10">
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
           <h2 class="text-4xl font-black">Play smart. Stay in control.</h2>
           <p class="mt-3 text-base text-text-body">
-            Tools, support, and guidance right when you need it.
+            Public guidance, official links, and support resources before gambling stops being fun.
           </p>
         </div>
         <a href="/responsible-gambling#tools" class="hero-cta-primary justify-center">

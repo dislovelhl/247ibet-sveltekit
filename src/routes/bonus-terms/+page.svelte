@@ -10,16 +10,16 @@
 </script>
 
 <svelte:head>
-  <title>Bonus Terms Creative Snapshot | 247iBET Canada</title>
+  <title>Archived Bonus Creative Snapshot | 247iBET Canada</title>
   <meta
     name="description"
-    content="Reviewed bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders to verify wagering, expiry, eligibility, and cashier rules before claiming."
+    content="Archived bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders that eligibility, wagering, expiry, and account rules require current verification."
   />
   <meta name="robots" content="noindex, nofollow" />
-  <meta property="og:title" content="Bonus Terms Creative Snapshot | 247iBET Canada" />
+  <meta property="og:title" content="Archived Bonus Creative Snapshot | 247iBET Canada" />
   <meta
     property="og:description"
-    content="Reviewed bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders to verify wagering, expiry, eligibility, and cashier rules before claiming."
+    content="Archived bonus and campaign creative snapshot for 247iBET, grouped by offer type with reminders that eligibility, wagering, expiry, and account rules require current verification."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://247ibet.ca/bonus-terms" />
@@ -29,8 +29,8 @@
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Bonus Terms Creative Snapshot',
-        description: 'Latest reviewed bonus creative summarized for transparency.',
+        name: 'Archived Bonus Creative Snapshot',
+        description: 'Archived bonus creative summarized for transparency, not as a current offer.',
         url: 'https://247ibet.ca/bonus-terms',
       },
       {
@@ -41,7 +41,7 @@
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Bonus Terms Creative Snapshot',
+            name: 'Archived Bonus Creative Snapshot',
             item: 'https://247ibet.ca/bonus-terms',
           },
         ],
@@ -50,7 +50,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 z-10 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 z-10 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -65,41 +65,72 @@
         19+ · Play Responsibly · Ontario & Alberta Only
       </p>
       <p class="mt-2 text-sm text-text-body">
-        This is an archived reference page. Current offers and legal terms are only available within the secure cashier after registration and verification.
+        This is an archived reference page. This page is not a current offer page. Eligibility,
+        wagering, expiry, jurisdiction, and account rules must be verified through the applicable
+        operating platform before any reliance.
       </p>
     </div>
 
     <nav aria-label="Bonus terms table of contents" class="segmented-chrome mb-8 rounded-2xl p-4">
       <p class="text-xs font-black uppercase tracking-[0.14em] text-slate-blue">On this page</p>
       <div class="mt-3 flex flex-wrap gap-2">
-        <a href="#observed-bonus-offers" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Observed bonus offers</a>
-        <a href="#sportsbook-tie-ins" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Sportsbook tie-ins</a>
-        <a href="#event-creatives" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Event creatives</a>
-        <a href="#needs-verification" class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white">Needs verification</a>
+        <a
+          href="#observed-bonus-offers"
+          class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white"
+          >Archived bonus creative observations</a
+        >
+        <a
+          href="#sportsbook-tie-ins"
+          class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white"
+          >Sportsbook tie-ins</a
+        >
+        <a
+          href="#event-creatives"
+          class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white"
+          >Event creatives</a
+        >
+        <a
+          href="#needs-verification"
+          class="floating-chrome px-3 py-1 text-xs text-gray-300 hover:text-white"
+          >Needs verification</a
+        >
       </div>
     </nav>
     <header class="mb-12 border-b soft-separator pb-8">
       <h1 class="page-hero-title mb-4">
-        Current <span class="text-slate-blue">Bonus Snapshot</span>
+        Archived <span class="text-slate-blue">Bonus Snapshot</span>
       </h1>
-      <p class="text-gray-400 font-sans">Last updated: <time datetime="2026-05-06">May 2026</time></p>
+      <p class="text-gray-400 font-sans">
+        Last updated: <time datetime="2026-05-06">May 2026</time>
+      </p>
     </header>
 
     <div
       class="prose prose-invert max-w-none prose-headings:text-white prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-6 prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-slate-blue marker:text-prestige-gold"
     >
       <p>
-        This noindex page archives all reviewed 247iBET-related creatives we were given: direct bonus
-        images, combat-sports tie-ins, and event-style artwork. It is published for transparency, not
-        as a guaranteed inducement. Always confirm the operative rules inside the cashier before
-        depositing.
+        This noindex page archives all reviewed 247iBET-related creatives we were given: direct
+        bonus images, combat-sports tie-ins, and event-style artwork. It is published for
+        transparency, not as a current public inducement, offer, or representation of Ontario
+        availability. Always confirm the operative rules, licensing status, jurisdiction, and
+        eligibility through official sources and the applicable operating platform before relying on
+        any creative.
       </p>
 
-      <h2 id="observed-bonus-offers">Observed bonus offers</h2>
+      <h2 id="observed-bonus-offers">Archived bonus creative observations</h2>
       <div class="not-prose grid gap-6" data-reveal-stagger="true">
         {#each IBET_PROMO_SNAPSHOT as promo}
-          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
-            <img src={promo.image} alt={promo.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
+          <article
+            use:reveal
+            class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift"
+          >
+            <img
+              src={promo.image}
+              alt={promo.alt}
+              class="h-auto w-full border-b border-white/10 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{promo.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{promo.headline}</h3>
@@ -107,7 +138,9 @@
               <p class="mt-4 text-xs text-gray-400">{promo.period}</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 {#each promo.observedText as line}
-                  <span class="segmented-chrome rounded-full px-2.5 py-1 text-[11px] text-gray-300">{line}</span>
+                  <span class="segmented-chrome rounded-full px-2.5 py-1 text-[11px] text-gray-300"
+                    >{line}</span
+                  >
                 {/each}
               </div>
             </div>
@@ -118,8 +151,17 @@
       <h2 id="sportsbook-tie-ins">Sportsbook and combat-sports tie-ins</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_SPORTSBOOK_CREATIVE_SNAPSHOT as creative}
-          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
-            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
+          <article
+            use:reveal
+            class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift"
+          >
+            <img
+              src={creative.image}
+              alt={creative.alt}
+              class="h-auto w-full border-b border-white/10 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
@@ -133,8 +175,17 @@
       <h2 id="event-creatives">Event-style creatives included for completeness</h2>
       <div class="not-prose grid gap-6 md:grid-cols-2">
         {#each IBET_EVENT_CREATIVE_SNAPSHOT as creative}
-          <article use:reveal class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift">
-            <img src={creative.image} alt={creative.alt} class="h-auto w-full border-b border-white/10 object-cover" loading="lazy" decoding="async" />
+          <article
+            use:reveal
+            class="material-cell overflow-hidden rounded-2xl reveal-scale-in card-hover-lift"
+          >
+            <img
+              src={creative.image}
+              alt={creative.alt}
+              class="h-auto w-full border-b border-white/10 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="p-5">
               <p class="text-xs uppercase tracking-[0.16em] text-slate-blue">{creative.title}</p>
               <h3 class="mt-2 text-lg font-bold text-white">{creative.headline}</h3>
@@ -149,15 +200,18 @@
       <ul>
         <li>Minimum deposit required to unlock each offer.</li>
         <li>Wagering or playthrough multipliers applied to bonus funds or free-spin winnings.</li>
-        <li>Game and market eligibility, including whether free spins are tied to one slot title.</li>
+        <li>
+          Game and market eligibility, including whether free spins are tied to one slot title.
+        </li>
         <li>Maximum cashout, max-bet, or bonus-abuse restrictions.</li>
         <li>Whether the every-deposit cap applies per deposit, per day, or across the campaign.</li>
       </ul>
 
       <h2>How to use this page</h2>
       <p>
-        Treat the image-visible amounts as a current snapshot only. If the cashier shows different
-        terms after registration, the cashier rules should be treated as authoritative.
+        Treat image-visible amounts as archived creative text only. If current account terms,
+        regulator sources, or operator rules differ, those current sources should be treated as
+        authoritative.
       </p>
     </div>
   </article>
@@ -171,6 +225,4 @@
       <li><a href="/contact">Contact and Support</a></li>
     </ul>
   </section>
-
-
 </div>

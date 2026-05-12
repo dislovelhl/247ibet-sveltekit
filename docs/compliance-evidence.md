@@ -20,6 +20,9 @@
 | **Fast-payouts page** | Updated title from "Fast Payout Casino Canada" to "Interac Casino Withdrawal Guide Canada". Removed "Institutional-grade tracking" claim. Removed "zero unnecessary delays" promise. Fixed "fastest available" FAQ answer. Softened image badge language. |
 | **AffiliateDisclosure component** | Expanded disclosure text to include full AGCO-compliant language: "compensation does not determine licensing status, legality, or user eligibility". Added `cta` variant for near-CTA placement. |
 | **Prohibited language test** | Created `tests/prohibited-language.test.ts` as CI gate against regulatory regressions. Scans all public `.svelte` route files for 20 prohibited pattern categories (P0/P1/P2 severity). |
+| **Editorial policy** | Added explicit licensing-boundary and affiliate-disclosure language: 247iBET public content must not be represented as AGCO licensed, iGaming Ontario registered, or an Ontario operator without official documentary proof. |
+| **Responsible gambling** | Reframed responsible-gambling copy as public guidance, added visible 19+ language, kept Ontario/Alberta official support/self-exclusion resources, and clarified that account controls live on the separate operating platform. |
+| **Bonus terms** | Reframed `/bonus-terms` as a noindex archived creative snapshot, not a current offer page or public inducement, with required verification of eligibility, jurisdiction, licensing, and current operating-platform terms. |
 
 ### Why it changed
 
@@ -34,14 +37,14 @@ jdzd.com / 247iBET positioned itself as both an editorial guide AND implied oper
 
 | Risk | Severity | Status | Owner action required |
 |---|---|---|---|
-| `/bonus-terms` page — 200% / 40× wagering content at live canonical URL | HIGH | Not fixed in this pass | Needs noindex validation + age gate addition |
+| `/bonus-terms` page — archived promotional creative at public URL | HIGH | Mitigated 2026-05-12 | Noindex retained; copy reframed as archived creative only, not a current offer or Ontario availability claim. Legal/product sign-off still required before relying on any terms. |
 | `rel="sponsored"` on `SafeExternalLink` — already present | PASS | ✅ | — |
 | No above-fold affiliate disclosure on `/` homepage | MEDIUM | Partially addressed via component upgrade | Add `<AffiliateDisclosure />` near hero CTA on `/+page.svelte` |
 | No above-fold affiliate disclosure on `/sportsbook` | MEDIUM | Pending | Add `<AffiliateDisclosure />` near hero section |
-| `editorial-policy` page noindex and thin content | MEDIUM | Not fixed | Needs affiliate disclosure reference and AGCO posture statement |
-| Gamblers Anonymous Canada missing from `/responsible-gambling` | MEDIUM | Not fixed | Add to `supportLinks` array |
-| AGLC self-exclusion registry link missing | MEDIUM | Not fixed | Add `aglc.ca/responsible-gambling` link |
-| `19+` statement missing from `/responsible-gambling` page body | MEDIUM | Not fixed | Add to visible page body text |
+| `editorial-policy` page noindex and thin content | MEDIUM | Mitigated 2026-05-12 | Added affiliate disclosure reference and conservative AGCO/iGO licensing-boundary statement. |
+| Gamblers Anonymous Canada missing from `/responsible-gambling` | MEDIUM | Fixed before 2026-05-12 | Present in `supportLinks` as peer-support resource. |
+| AGLC self-exclusion registry link missing | MEDIUM | Fixed before 2026-05-12 | AGLC voluntary self-exclusion and responsible-gambling resources present in `supportLinks`. |
+| `19+` statement missing from `/responsible-gambling` page body | MEDIUM | Fixed before 2026-05-12 | Visible hero copy says minimum age is 19+ in Ontario and Alberta. |
 | `/ontario/online-casino` – description says "fast payouts" | LOW | Not fixed in this pass | Review and soften |
 | Odds data in sportsbook/casino tables (e.g. `2.10`, `1.92`) | LOW | No change — static sample data clearly labeled as comparison | Label as "sample odds" more clearly |
 
@@ -57,9 +60,9 @@ jdzd.com / 247iBET positioned itself as both an editorial guide AND implied oper
 | `/sportsbook` | ✅ Fixed | Inducement offer cards removed/reframed. Trust strip corrected. Meta cleaned. |
 | `/casino` | ✅ Fixed | Licensing badge removed. Speed superlatives removed. FAQ corrected. |
 | `/fast-payouts` | ✅ Fixed | Title corrected. Guarantee language removed. FAQ answer corrected. |
-| `/responsible-gambling` | ⚠️ Partial | Existing structure good. Missing: 19+ in body, AGLC link, Gamblers Anonymous. |
-| `/editorial-policy` | ⚠️ Partial | noindex + thin content. Needs affiliate disclosure reference. |
-| `/bonus-terms` | ❌ Not fixed | 200%/40× on live URL — highest remaining risk. |
+| `/responsible-gambling` | ✅ Updated | Public guidance framing, 19+ body copy, Ontario/iGO support information, AGLC self-exclusion/responsible-gambling links, and Gamblers Anonymous resource present. |
+| `/editorial-policy` | ✅ Updated | Added affiliate disclosure reference and explicit licensing/operator-status boundary. |
+| `/bonus-terms` | ⚠️ Mitigated | Noindex archived creative snapshot. Copy now says it is not a current offer, public inducement, or Ontario availability representation; current terms/licensing/eligibility still require official verification. |
 | `/deposit` | ✅ Reviewed | Good framing — uses "Varies" and "KYC required" language. |
 | `/interac-casino-canada` | ✅ Reviewed | Educational framing. No unsupported speed guarantee found in primary copy. |
 
@@ -70,7 +73,10 @@ jdzd.com / 247iBET positioned itself as both an editorial guide AND implied oper
 | Source | URL | Relevance |
 |---|---|---|
 | AGCO (Alcohol and Gaming Commission of Ontario) | https://www.agco.ca/ | Ontario gaming regulation and licensing registry |
-| iGaming Ontario | https://www.igamingontario.ca/en | Ontario market operator directory and public registrant list |
+| iGaming Ontario | https://www.igamingontario.ca/en | Ontario market operator information and player resources |
+| iGaming Ontario regulated market directory | https://www.igamingontario.ca/en/player/regulated-igaming-market | Official reference for currently listed regulated operator sites; use before making Ontario operator-status claims. |
+| iGaming Ontario responsible gambling | https://www.igamingontario.ca/en/player/responsible-gambling | Official Ontario responsible-gambling information. |
+| iGaming Ontario player FAQs | https://www.igamingontario.ca/en/player/player-faqs | Official Ontario operator self-exclusion FAQ. |
 | AGCO Registrar Standards for Internet Gaming (2022) | https://www.agco.ca/sites/default/files/2022-02/Registrar-Standards-for-Internet-Gaming.pdf | Advertising and inducement standards for Ontario |
 | AGLC (Alberta Gaming, Liquor and Cannabis) | https://www.aglc.ca/gaming | Alberta gaming regulation and licensing |
 | AGLC Responsible Gambling | https://www.aglc.ca/gaming/responsible-gambling | Alberta responsible gambling resources |
@@ -150,10 +156,11 @@ jdzd.com / 247iBET positioned itself as both an editorial guide AND implied oper
 - [x] `SafeExternalLink` uses `rel="nofollow sponsored noopener noreferrer"`
 - [x] Prohibited language CI gate test created
 - [ ] Above-fold affiliate disclosure near hero CTAs on `/`, `/casino`, `/sportsbook` (partial)
-- [ ] Self-exclusion registry links for Ontario and Alberta
-- [ ] Gamblers Anonymous Canada in `/responsible-gambling`
-- [ ] 19+ age statement in `/responsible-gambling` body copy
-- [ ] `/bonus-terms` 200%/40× content resolved or gated
+- [x] Self-exclusion/support links for Ontario and Alberta
+- [x] Gamblers Anonymous Canada in `/responsible-gambling`
+- [x] 19+ age statement in `/responsible-gambling` body copy
+- [x] `/editorial-policy` licensing-boundary and affiliate-disclosure posture added
+- [x] `/bonus-terms` public copy reframed as noindex archived creative, not a current offer or Ontario availability claim
 
 ---
 
@@ -161,15 +168,15 @@ jdzd.com / 247iBET positioned itself as both an editorial guide AND implied oper
 
 **Classification: Launch with caveats**
 
-The platform has a sound compliance foundation with proper affiliate disclosure in the layout shell, responsible gambling links in all footers, province-aware framing, and educational CTA language on the homepage and province pages.
+The public website has a sound compliance foundation with proper affiliate disclosure in the layout shell, responsible gambling links in all footers, province-aware framing, and educational CTA language on the homepage and province pages.
 
-The changes in this review materially reduce the highest-risk items. However, three areas must be resolved before AGCO/AGLC editorial review submission:
+The changes in this review materially reduce the highest-risk items. After the 2026-05-12 content hardening pass, the main pre-submission items are:
 
-1. **`/bonus-terms`** — 200% / 40× bonus figures on a live canonical URL without age gate is the single highest remaining regulatory risk.
-2. **Above-fold affiliate disclosure** — Proximity requirement near CTAs on `/`, `/casino`, `/sportsbook` still partially unresolved (footer disclosure alone is insufficient on mobile).
-3. **Self-exclusion registry links** — iGO and AGLC self-exclusion links are absent from `/responsible-gambling`. AGCO Registrar Standards § 4.3 expects these.
+1. **`/bonus-terms` legal/product sign-off** — the page is noindex and framed as archived creative only, but any current offer, eligibility, jurisdiction, wagering, or account-rule reliance still needs product/compliance confirmation.
+2. **Above-fold affiliate disclosure** — proximity requirement near CTAs on `/`, `/casino`, `/sportsbook` still partially unresolved (footer disclosure alone is insufficient on mobile).
+3. **Licensing proof** — do not add Ontario operator, AGCO licence, or iGaming Ontario registration claims unless official documentary evidence is available and checked against regulator sources.
 
-**Do not represent jdzd.com as AGCO-licensed or iGaming Ontario-registered** until Questions #1 and #2 in the Open Questions section are answered with documentary evidence.
+**Do not represent jdzd.com or 247iBET as AGCO-licensed, iGaming Ontario-registered, or an Ontario regulated operator** until Questions #1 and #2 in the Open Questions section are answered with documentary evidence and checked against official regulator sources.
 
 ---
 
