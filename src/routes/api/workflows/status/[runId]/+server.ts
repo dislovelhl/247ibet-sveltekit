@@ -1,6 +1,5 @@
-import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
-import { safeEq } from '$lib/server/auth.js';
+import { requireWorkflowSecret } from '$lib/server/workflow-route.js';
 import { getRun } from 'workflow/api';
 import type { RequestHandler } from './$types';
 
@@ -33,11 +32,8 @@ function projectRun(runId: string, run: unknown): RunStatusDTO {
 }
 
 export const GET: RequestHandler = async ({ request, params }) => {
-  const secret = request.headers.get('x-workflow-secret') ?? '';
-  const expected = env.WORKFLOW_SECRET ?? '';
-  if (!expected || !safeEq(secret, expected)) {
-    return json({ error: 'unauthorized' }, { status: 401 });
-  }
+  const unauthorized = requireWorkflowSecret(request);
+  if (unauthorized) return unauthorized;
 
   const { runId } = params;
   if (!RUN_ID_RE.test(runId)) {

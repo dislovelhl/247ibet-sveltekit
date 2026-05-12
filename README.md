@@ -25,6 +25,13 @@ pnpm build
 
 Use Node 24.x. The repository pins that contract in `.node-version`, `package.json#engines`, SvelteKit adapter runtime config, and Vercel function route config.
 
+Current branch verification baseline:
+
+- `pnpm check` — Svelte diagnostics must be clean.
+- `pnpm lint` — ESLint must pass with no warnings.
+- `pnpm test` — Vitest currently covers **200 tests across 30 files**.
+- `pnpm build` — production SvelteKit/Vercel build must complete.
+
 ## Documentation
 
 The canonical repo-local documentation starts at [`docs/README.md`](docs/README.md). It follows Geistdocs-style principles — clear navigation, frontmatter, concise page summaries, task-oriented sections, and source-linked references — without adding a docs-site dependency.
@@ -45,12 +52,28 @@ Existing specialist docs remain under `docs/` for CI, testing, security, perform
 | Routes           | `src/routes/**`                                        | SvelteKit page, server, XML, API, and workflow endpoints.                      |
 | Components       | `src/lib/components/**`                                | Shared UI such as nav, footer, CTAs, disclosure, JSON-LD, and content blocks.  |
 | Site config      | `src/lib/site.ts`, `src/lib/ibet-brand.ts`             | Brand, partner URLs, canonical URL helpers, CTA labels, trust/disclaimer copy. |
+| Server helpers   | `src/lib/server/**`                                    | Auth, admin session, signup validation, and workflow route helpers.            |
 | Content registry | `src/lib/workflows/pages.ts`                           | Audited page registry used by SEO/GEO/AEO workflows.                           |
 | Workflows        | `src/workflows/**`, `src/routes/api/workflows/**`      | SEO audit, GEO optimizer, AEO schema generation, and status surfaces.          |
 | Styles           | `src/app.css`, `src/styles/**`, `DESIGN.md`            | Tailwind 4 theme, global CSS layers, prestige navy design tokens.              |
-| Static assets    | `static/**`                                            | Favicons, Open Graph image, LLM maps, reports, and images served directly.     |
+| Static assets    | `static/**`                                            | Favicons, Open Graph image, LLM maps, reports, and generated hero imagery.     |
 | Tests            | `tests/**`, `vitest.config.ts`, `playwright.config.ts` | Unit/integration and E2E coverage.                                             |
 | Deployment       | `svelte.config.js`, `vite.config.ts`, `vercel.json`    | Adapter, plugins, CSP, headers, redirects, cron schedule, Node runtime.        |
+
+## Generated website imagery
+
+Generated hero images live in `static/images/generated/` and are referenced from routes as `/images/generated/<name>.webp`. Keep both the source `.png` and optimized `.webp` when adding project-bound generated images unless a future storage policy changes.
+
+Recent generated hero assets cover trust/support surfaces:
+
+- `contact-support-hero`
+- `policy-document-hero`
+- `regulatory-sources-hero`
+- `transparency-report-hero`
+- `faq-help-hero`
+- `security-protection-hero`
+
+Before shipping image work, verify that all `/images/generated/...` references resolve and that `.webp` files remain reasonably compressed for hero usage.
 
 ## Operating guardrails
 

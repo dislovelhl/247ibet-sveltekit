@@ -1,56 +1,55 @@
-import { sleep, FatalError } from "workflow";
+import { FatalError, sleep } from 'workflow';
+
+interface SignupUser {
+  id: string;
+  email: string;
+}
 
 export async function handleUserSignup(email: string) {
-  "use workflow";
+  'use workflow';
 
   const user = await createUser(email);
   await sendWelcomeEmail(user);
 
-  await sleep("5s"); // Pause for 5s - doesn't consume any resources
+  await sleep('5s');
   await sendOnboardingEmail(user);
 
-  console.log("Workflow is complete! Run 'npx workflow web' to inspect your run")
+  console.info(
+    '[user-signup]',
+    JSON.stringify({
+      event: 'workflow-complete',
+      userId: user.id,
+      email: user.email,
+    }),
+  );
 
-  return { userId: user.id, status: "onboarded" };
+  return { userId: user.id, status: 'onboarded' as const };
 }
 
-async function createUser(email: string) {
-  "use step";
+async function createUser(email: string): Promise<SignupUser> {
+  'use step';
 
-  console.log(`Creating user with email: ${email}`);
-
-  // Full Node.js access - database calls, APIs, etc.
-  return { id: crypto.randomUUID(), email };
-}
-
-async function sendWelcomeEmail(user: { id: string; email: string; }) {
-  "use step";
-
-  console.log(`Sending welcome email to user: ${user.id}`);
-
-  // Robustness: Add a timeout to simulate a slow external service
-  await new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error("Timeout sending welcome email")), 10000);
-    // Simulate network delay
-    setTimeout(() => {
-      clearTimeout(timeout);
-      resolve(null);
-    }, Math.random() * 2000);
-  });
-
-  if (Math.random() < 0.3) {
-  // By default, steps will be retried for unhandled errors
-   throw new Error("Temporary network failure - will retry");
-  }
-}
-
-async function sendOnboardingEmail(user: { id: string; email: string}) {
-  "use step";
-
-  if (!user.email.includes("@")) {
-    // To skip retrying, throw a FatalError instead
-    throw new FatalError("Invalid Email");
+  const normalizedEmail = email.trim().toLowerCase();
+  if (!normalizedEmail || !normalizedEmail.includes('@')) {
+    throw new FatalError('Invalid email address');
   }
 
-  console.log(`Sending onboarding email to user: ${user.id}`);
+  const user = { id: crypto.randomUUID(), email: normalizedEmail };
+  console.info('[user-signup]', JSON.stringify({ event: 'user-created', userId: user.id }));
+  return user;
+}
+
+async function sendWelcomeEmail(user: SignupUser): Promise<void> {
+  'use step';
+
+  console.info('[user-signup]', JSON.stringify({ event: 'welcome-email-queued', userId: user.id }));
+}
+
+async function sendOnboardingEmail(user: SignupUser): Promise<void> {
+  'use step';
+
+  console.info(
+    '[user-signup]',
+    JSON.stringify({ event: 'onboarding-email-queued', userId: user.id }),
+  );
 }

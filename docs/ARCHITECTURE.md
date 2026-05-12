@@ -21,6 +21,7 @@ flowchart TD
   APIs --> Workflows[src/workflows]
   Workflows --> Registry[src/lib/workflows/pages.ts]
   Workflows --> Reports[static/reports/**]
+  Pages --> Assets[static/images/generated]
 ```
 
 ## Runtime stack
@@ -75,6 +76,29 @@ Implications:
 | `src/lib/age-gate-client.ts` | Client-side age-gate state and legacy-key migration helpers. |
 | `src/lib/server/auth.ts` | Constant-time secret comparison helper for server-only routes. |
 | `src/lib/server/admin.ts` | Admin feature-flag and session-cookie helpers. |
+| `src/lib/server/signup.ts` | Server-side signup request validation shared by route code and tests. |
+| `src/lib/server/workflow-route.ts` | Shared workflow route auth and `{ runId, status: 'started' }` response helpers. |
+
+## Static asset architecture
+
+Website hero imagery is served from `static/images/generated/` and referenced in route markup with `/images/generated/<asset>.webp`.
+
+Current conventions:
+
+- Keep the optimized `.webp` as the route-consumed asset.
+- Keep the matching source `.png` alongside the `.webp` for future re-optimization or replacement.
+- Use wide hero-safe compositions with usable negative space for page copy overlays.
+- Avoid readable text, real regulator logos, unverified seals, or imagery implying guaranteed gambling outcomes.
+- Verify new references with a simple missing-file scan before shipping.
+
+Trust/support hero assets currently include:
+
+- `contact-support-hero`
+- `policy-document-hero`
+- `regulatory-sources-hero`
+- `transparency-report-hero`
+- `faq-help-hero`
+- `security-protection-hero`
 
 ## Component architecture
 
@@ -112,6 +136,8 @@ Workflow pages are split between API route wrappers and workflow implementations
 | `/api/workflows/status/[runId]` | `workflow/api` projection | Returns a narrow run-status DTO without leaking runtime internals. |
 
 `src/lib/workflows/pages.ts` is the audited page registry used by workflow jobs. Keep it in sync when public priority pages are added, removed, or materially renamed.
+
+Workflow route wrappers should use `src/lib/server/workflow-route.ts` for shared secret validation and start-response formatting. This keeps manual POST auth, cron GET auth, and the public response shape consistent across SEO, GEO, AEO, and status surfaces.
 
 ## Security boundaries
 

@@ -101,6 +101,29 @@ Commercial labels should come from `IBET_CTA` in `src/lib/ibet-brand.ts` where p
 - Avoid adding dependencies for simple visual patterns; prefer Svelte, CSS, and existing lucide-svelte icons.
 - Keep Svelte 5 idioms (`$state`, `$derived`, `$props`) consistent with adjacent files.
 
+## Generated hero image guidelines
+
+Generated hero imagery for the public site lives in `static/images/generated/`. Pages should reference optimized `.webp` files using `/images/generated/<asset>.webp`; keep the matching `.png` source in the same directory.
+
+Current trust/support hero set:
+
+| Asset stem | Primary surface |
+| --- | --- |
+| `contact-support-hero` | Contact and support messaging. |
+| `policy-document-hero` | Policy, terms, privacy, and document-layout pages. |
+| `regulatory-sources-hero` | Sources and evidence/reference pages. |
+| `transparency-report-hero` | How-we-work and methodology pages. |
+| `faq-help-hero` | FAQ and help-center surfaces. |
+| `security-protection-hero` | Security and player-protection pages. |
+
+Image prompt/design requirements:
+
+- Use wide, hero-safe compositions with calm negative space for overlaid headings.
+- Match the prestige navy, graphite, frosted-glass, and gold-accent visual language.
+- Prefer abstract editorial motifs over literal gambling scenes on trust, safety, legal, and support pages.
+- Avoid readable in-image text, watermarks, real regulator marks, real operator logos, and anything that implies guaranteed wins, guaranteed safety, or verified regulatory status beyond page copy.
+- Optimize to WebP after generation and keep file sizes aligned with existing hero assets.
+
 ## Accessibility baselines
 
 Implemented baselines:
@@ -132,4 +155,5 @@ Use decorative effects sparingly on content-heavy pages. Do not rely on animatio
 - [ ] Keeps focus visible and keyboard navigation intact.
 - [ ] Uses transparent affiliate CTA wording.
 - [ ] Avoids hiding legal/affiliate disclaimers in compact variants.
+- [ ] Keeps generated imagery decorative when it repeats adjacent copy; use empty alt text for purely decorative hero backgrounds.
 - [ ] Verifies visual changes with `pnpm check`, `pnpm lint`, relevant tests, and browser/E2E smoke when UI behavior changes.

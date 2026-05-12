@@ -66,6 +66,27 @@ Current state per `package.json`:
 - LCP candidate has `loading="eager" fetchpriority="high"`.
 - All other above-the-fold images have `loading="lazy" decoding="async"`.
 
+## Generated Hero Asset Policy
+
+Route-consumed generated hero imagery lives in `static/images/generated/` and should be referenced as `/images/generated/<asset>.webp`.
+
+Performance rules:
+
+- Commit optimized `.webp` assets for route usage.
+- Keep the matching `.png` source only for future re-optimization or replacement; route markup should not reference the `.png`.
+- Use the existing 16:9-ish hero size convention unless the consuming component changes.
+- Aim for WebP sizes comparable to existing hero assets; investigate any new generated hero that is materially larger than the current 50-150 KB range.
+- Do not add remote image origins for generated hero work unless CSP and cache policy are updated deliberately.
+
+Current trust/support generated hero stems:
+
+- `contact-support-hero`
+- `policy-document-hero`
+- `regulatory-sources-hero`
+- `transparency-report-hero`
+- `faq-help-hero`
+- `security-protection-hero`
+
 ## Route Prefetch Tuning (B6 — Audit pending)
 
 Current `+layout.svelte` and `Navbar.svelte` use SvelteKit's default `data-sveltekit-preload-data="hover"` (the framework default). Audit for over-aggressive viewport prefetch on mobile:

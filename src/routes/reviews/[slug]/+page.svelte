@@ -10,10 +10,10 @@
     name="description"
     content="Explore the elite features of 247iBET: premium games, lightning-fast Interac payouts, and industry-leading security standards."
   />
-  <link rel="canonical" href={canonicalUrl(`/features/${$page.params.slug}`)} />
+  <link rel="canonical" href={canonicalUrl(`/reviews/${$page.params.slug}`)} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs leading-5 text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>

@@ -3,21 +3,22 @@
 ## Test layers
 
 | Layer | Runner | Location | Count |
-|---|---|---|---|
-| Unit | vitest | `tests/*.test.ts` | 113 tests (14 files) |
-| E2E | Playwright | `tests/e2e/**/*.spec.ts` | Scaffold (1 spec file, skipped) |
+| --- | --- | --- | --- |
+| Unit/integration | Vitest | `tests/**/*.test.ts` | 200 tests across 30 files in the current checkout |
+| Component | Vitest + jsdom | `tests/components/**` | Included in `pnpm test`; can also be targeted with `pnpm test:components` |
+| E2E | Playwright | `tests/e2e/**/*.spec.ts` | Available via `pnpm test:e2e`; some diagnostic/speculative crawls remain intentionally skipped |
 
 ---
 
 ## Running each suite locally
 
-### Unit tests (existing — always run first)
+### Unit/integration tests (existing — always run first)
 
 ```bash
 pnpm test
 ```
 
-Runs all `tests/**/*.test.ts` under the `node` environment. Must exit 0.
+Runs all `tests/**/*.test.ts`. Must exit 0. Re-run before quoting test counts outside the repository because the number changes as coverage is added.
 
 ### Component tests
 
@@ -25,7 +26,7 @@ Runs all `tests/**/*.test.ts` under the `node` environment. Must exit 0.
 pnpm test:components
 ```
 
-Equivalent to `vitest run --environment jsdom 'tests/components/**'`. Placeholder tests pass immediately. Real render tests require the jsdom environment fix described below.
+Equivalent to `vitest run --environment jsdom 'tests/components/**'`.
 
 ### E2E tests (Playwright)
 
@@ -53,35 +54,23 @@ npx playwright install
 
 ---
 
-## Known gaps / follow-up items for orchestrator
+## Recent coverage additions
 
-### 1. jsdom environment for component tests
+- Signup request validation lives in `src/lib/server/signup.ts` and is covered by `tests/api-signup.test.ts`.
+- Workflow route auth helpers live in `src/lib/server/workflow-route.ts` and are covered by `tests/workflow-route.test.ts`.
+- Author registry fallback behavior is covered by `tests/authors.test.ts`.
+- Dynamic route canonical regressions are covered in `tests/pages.test.ts`.
 
-`vitest.config.ts` currently sets `environment: 'node'` globally. Component tests that mount Svelte components need `jsdom`. Two options:
+## Known gaps / follow-up items
 
-**Option A — per-glob override (recommended):** Add `environmentMatchGlobs` to `vitest.config.ts`:
-
-```ts
-test: {
-  environmentMatchGlobs: [
-    ['tests/components/**', 'jsdom'],
-  ],
-  // ...existing config
-}
-```
-
-**Option B — per-file directive:** Add `// @vitest-environment jsdom` as the very first line of each component test file.
-
-`vitest.config.ts` is **outside Team E's file scope** — do not modify it until the orchestrator approves. The placeholder component tests (`expect(true).toBe(true)`) pass today without jsdom. Real render tests will fail until one of the above options is applied.
-
-### 2. D6 synthetic CSP crawl placeholder
+### 1. D6 synthetic CSP crawl placeholder
 
 `tests/e2e/csp-synthetic-crawl.spec.ts` is scaffolded but skipped via `test.skip`. It will be unskipped after:
 
 - A4 reporting sink is wired
 - The `top20Routes` array is filled out from the real sitemap (15 route comments are pre-stubbed in the file)
 
-### 3. Playwright browser install in CI
+### 2. Playwright browser install in CI
 
 The [CI pipeline](CI.md) should add a step before `pnpm test:e2e`:
 

@@ -108,10 +108,11 @@ curl -X POST "$PUBLIC_SITE_URL/api/workflows/aeo-schema" \
   -d '{"pages":["home","casino"],"force":true}'
 ```
 
-The workflow route wrappers return either:
+The workflow route wrappers return:
 
-- `202 { runId, status: 'started' }` when the workflow runtime starts asynchronously.
-- `200 { runId, status: 'completed-sync' }` when the route falls back to synchronous local execution.
+- `202 { runId, status: 'started' }` when the workflow runtime accepts the run.
+
+Shared route behavior lives in `src/lib/server/workflow-route.ts`; use that helper for workflow secret checks, cron bearer checks, and start-response formatting instead of duplicating per-route logic.
 
 Status lookup:
 
@@ -125,6 +126,41 @@ The status endpoint returns only `runId`, `status`, `startedAt`, `completedAt`, 
 ## Report artifacts
 
 Workflow/report outputs are expected under `static/reports/**` when generated locally or by workflow code. Existing report families include SEO, GEO, performance, lighthouse, and mobile typography artifacts. Do not quote report metrics as current unless the artifact was regenerated for the branch being discussed.
+
+## Generated image artifacts
+
+Project-bound generated hero images live under `static/images/generated/` and should be committed when they are referenced by route markup.
+
+Operational rules:
+
+- Route markup should reference `.webp` files.
+- Keep the matching `.png` source beside the `.webp` unless a future storage policy says otherwise.
+- Optimize new generated images with WebP before staging them.
+- Run a missing-reference scan before release when adding or renaming generated images.
+
+Example missing-reference scan:
+
+```bash
+python3 - <<'PY'
+from pathlib import Path
+import re
+
+missing = []
+pattern = re.compile(r'''/images/generated/([^"'\s)]+)''')
+for p in Path('src').rglob('*'):
+    if p.is_file() and p.suffix in {'.svelte', '.ts', '.js'}:
+        for m in pattern.finditer(p.read_text(errors='ignore')):
+            target = Path('static/images/generated') / m.group(1)
+            if not target.exists():
+                missing.append((str(p), str(target)))
+
+if missing:
+    for source, target in missing:
+        print(f'{source}: missing {target}')
+    raise SystemExit(1)
+print('All generated image references resolve.')
+PY
+```
 
 ## Security operations
 
@@ -145,6 +181,7 @@ Workflow/report outputs are expected under `static/reports/**` when generated lo
 - [ ] Run `pnpm build`.
 - [ ] Run targeted Playwright/browser checks for user-visible UI changes.
 - [ ] Confirm no secrets or generated scratch files are staged.
+- [ ] Confirm generated project assets under `static/images/generated/` have matching route references and optimized `.webp` variants.
 - [ ] If public IA changed, update sitemap/search/workflow registry/LLM maps as appropriate.
 - [ ] If claims changed, verify licensing/payout/bonus/game-count caveats.
 

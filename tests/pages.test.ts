@@ -84,4 +84,11 @@ describe('dynamic route metadata', () => {
       expect(source).not.toMatch(/href="https:\/\/247ibet\.ca\/[^"]*\{\$page\.params\.slug\}"/);
     }
   });
+
+  it('keeps reviews dynamic canonical URLs under the reviews path', () => {
+    const source = readFileSync('src/routes/reviews/[slug]/+page.svelte', 'utf-8');
+
+    expect(source).toContain('canonicalUrl(`/reviews/${$page.params.slug}`)');
+    expect(source).not.toContain('canonicalUrl(`/features/${$page.params.slug}`)');
+  });
 });

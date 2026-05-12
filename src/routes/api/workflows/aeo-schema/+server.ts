@@ -1,7 +1,9 @@
-import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
-import { safeEq } from '$lib/server/auth.js';
-import { start } from 'workflow/api';
+import {
+  requireCronSecret,
+  requireWorkflowSecret,
+  startWorkflowResponse,
+} from '$lib/server/workflow-route.js';
 import type { RequestHandler } from './$types';
 import { aeoSchemaWorkflow } from '../../../../workflows/aeo-schema.js';
 import type { AeoSchemaInput } from '$lib/workflows/types.js';
@@ -42,11 +44,8 @@ function validateInput(
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-  const secret = request.headers.get('x-workflow-secret') ?? '';
-  const expected = env.WORKFLOW_SECRET ?? '';
-  if (!expected || !safeEq(secret, expected)) {
-    return json({ error: 'unauthorized' }, { status: 401 });
-  }
+  const unauthorized = requireWorkflowSecret(request);
+  if (unauthorized) return unauthorized;
 
   const cl = request.headers.get('content-length');
   if (cl && Number(cl) > MAX_BODY_BYTES) {
@@ -67,18 +66,13 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'invalid input', detail: v.reason }, { status: 400 });
   }
 
-  const { runId } = await start(aeoSchemaWorkflow, [v.value]);
-  return json({ runId, status: 'started' }, { status: 202 });
+  return startWorkflowResponse(aeoSchemaWorkflow, [v.value]);
 };
 
 // Vercel Cron calls GET with Authorization: Bearer <CRON_SECRET>
 export const GET: RequestHandler = async ({ request }) => {
-  const auth = request.headers.get('authorization') ?? '';
-  const expected = env.CRON_SECRET ? `Bearer ${env.CRON_SECRET}` : '';
-  if (!expected || !safeEq(auth, expected)) {
-    return json({ error: 'unauthorized' }, { status: 401 });
-  }
+  const unauthorized = requireCronSecret(request);
+  if (unauthorized) return unauthorized;
 
-  const { runId } = await start(aeoSchemaWorkflow, [{}]);
-  return json({ runId, status: 'started' }, { status: 202 });
+  return startWorkflowResponse(aeoSchemaWorkflow, [{}]);
 };

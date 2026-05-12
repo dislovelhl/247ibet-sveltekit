@@ -23,7 +23,7 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | [CI](./CI.md) | Active | Quality gates and branch-protection guidance. Re-check test counts against the current branch before quoting them externally. |
 | [Testing](./TESTING.md) | Active | Test layers, command usage, and known gaps. |
 | [Security](./SECURITY.md) | Active | CSP, headers, admin gating, and vulnerability reporting notes. |
-| [Performance](./PERFORMANCE.md) | Active | Performance budget, image/font policy, bundle checks, and Lighthouse workflow. |
+| [Performance](./PERFORMANCE.md) | Active | Performance budget, generated-image policy, font policy, bundle checks, and Lighthouse workflow. |
 | [Accessibility](./A11Y.md) | Active | WCAG target, implemented patterns, and pending audits. |
 | [Compliance audit](./COMPLIANCE_AUDIT_v0.3.md) | Snapshot | Historical compliance state; verify before treating as current. |
 | [Development plan](./DEVELOPMENT_PLAN.md) | Snapshot | Historical planning artifact; useful for context, not a live roadmap. |
@@ -49,5 +49,13 @@ This directory is the repo-local documentation home for the 247iBET SvelteKit pr
 | Routes and sitemap | `src/routes/**`, `src/routes/sitemap.xml/+server.ts` | [Architecture](./ARCHITECTURE.md), [Content model](./CONTENT_MODEL.md) |
 | SEO/GEO/AEO page registry | `src/lib/workflows/pages.ts` | [Content model](./CONTENT_MODEL.md), [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) |
 | Design tokens and utilities | `DESIGN.md`, `src/styles/**`, `src/app.css` | [Design system](./DESIGN_SYSTEM.md) |
+| Generated hero images | `static/images/generated/**` | [Design system](./DESIGN_SYSTEM.md), [Performance](./PERFORMANCE.md) |
+| Server-only helpers | `src/lib/server/**` | [Architecture](./ARCHITECTURE.md), [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) |
 | Runtime, CSP, Vercel headers | `svelte.config.js`, `vercel.json` | [Architecture](./ARCHITECTURE.md), [Operations & deployment](./OPERATIONS_DEPLOYMENT.md) |
 | Tests and gates | `package.json`, `vitest.config.ts`, `playwright.config.ts`, `tests/**` | [Operations & deployment](./OPERATIONS_DEPLOYMENT.md), [Testing](./TESTING.md) |
+
+## Current checkout notes
+
+- Vitest currently covers **200 tests across 30 files**; re-run `pnpm test` before quoting the number outside the repository.
+- Generated hero image references under `/images/generated/...` should resolve to files in `static/images/generated/`; use `.webp` from route markup and keep the source `.png` for future re-optimization.
+- Workflow API routes share server-only helpers in `src/lib/server/workflow-route.ts`; avoid reintroducing per-route secret-check or start-response duplication.
