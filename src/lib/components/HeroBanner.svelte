@@ -43,7 +43,7 @@
         </div>
         <div class="flex items-center gap-2 rounded-full bg-prestige-gold/10 px-3 py-1 ring-1 ring-prestige-gold/20">
           <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
-          <span class="text-[10px] font-black uppercase tracking-wider text-success">
+          <span class="text-xs font-black uppercase tracking-wider text-success">
             <span use:counter={{ start: 1200, end: 1458, duration: 3000 }}>1,246</span> Players Online
           </span>
         </div>
@@ -75,19 +75,19 @@
       <div class="mt-8 grid grid-cols-2 gap-3 border-t border-white/10 pt-6 sm:grid-cols-4">
         <div class="text-center">
           <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">500+</p>
-          <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Casino Games</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-text-tertiary">Casino Games</p>
         </div>
         <div class="text-center">
           <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">15-30<span class="text-sm">min</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Interac Payouts</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-text-tertiary">Interac Payouts</p>
         </div>
         <div class="text-center">
           <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-white">24/7</p>
-          <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Player Support</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-text-tertiary">Player Support</p>
         </div>
         <div class="text-center">
           <p class="text-[clamp(1.2rem,2vw,1.6rem)] font-black text-prestige-gold">50K+</p>
-          <p class="text-[10px] font-bold uppercase tracking-wider text-text-tertiary">Canadian Players</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-text-tertiary">Canadian Players</p>
         </div>
       </div>
     </div>

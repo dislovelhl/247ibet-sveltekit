@@ -71,7 +71,7 @@
     class="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-prestige-gold/10 blur-[100px] opacity-25 pointer-events-none"
   ></div>
 
-  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
     <nav aria-label="Breadcrumb" class="mb-8">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>
@@ -84,7 +84,7 @@
 
     <div class="mb-6">
       <div
-        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-[10px] font-bold tracking-widest uppercase mb-4"
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-blue/10 border border-slate-blue/20 text-slate-blue text-xs font-bold tracking-widest uppercase mb-4"
       >
         Press Release · April 5, 2026
       </div>

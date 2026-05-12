@@ -49,7 +49,7 @@ Primary route groups:
 | Payments/tools | `/interac*`, `/deposit`, `/fast-payouts`, `/tools/*` | Interac, payout, calculator, and utility journeys. |
 | Editorial/policy | `/about/*`, `/editorial-policy`, `/sources`, `/responsible-gambling`, `/security` | Trust, disclosure, methodology, and safer-play content. |
 | Search | `/search` | Client-side ranked search over repo-authored index data. |
-| Admin | `/admin/*` | Feature-flagged and hard-denied internal surfaces until real auth lands. |
+| Admin | `/admin/*` | Feature-flagged internal surfaces with token-based session-cookie auth and a `/admin/login` portal. |
 | API workflows | `/api/workflows/*` | Authenticated SEO/GEO/AEO workflow triggers and status endpoint. |
 | Generated XML | `/sitemap.xml` | Static route list filtered for public crawlability. |
 
@@ -74,7 +74,7 @@ Implications:
 | `src/lib/authors.ts` | Author metadata used by bylines and editorial trust surfaces. |
 | `src/lib/age-gate-client.ts` | Client-side age-gate state and legacy-key migration helpers. |
 | `src/lib/server/auth.ts` | Constant-time secret comparison helper for server-only routes. |
-| `src/lib/server/admin.ts` | Admin feature-flag gate. |
+| `src/lib/server/admin.ts` | Admin feature-flag and session-cookie helpers. |
 
 ## Component architecture
 
@@ -119,7 +119,7 @@ Workflow pages are split between API route wrappers and workflow implementations
 - SvelteKit CSP is configured in report-only mode in `svelte.config.js`.
 - Workflow POST endpoints require `x-workflow-secret` and GET cron endpoints require `Authorization: Bearer <CRON_SECRET>`.
 - Workflow status output intentionally projects a narrow DTO instead of returning raw workflow runtime objects.
-- Admin routes are gated by `ADMIN_ENABLED` and still hard-denied until real auth lands.
+- Admin routes are gated by `ADMIN_ENABLED` plus the `ibet_admin_session` cookie validated against `ADMIN_TOKEN`; `/admin/login` sets and clears the session cookie.
 - Affiliate links should use `SafeExternalLink` or equivalent `nofollow sponsored noopener noreferrer` attributes.
 
 ## Public crawl and AI surfaces

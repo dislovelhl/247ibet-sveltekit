@@ -7,7 +7,7 @@ const config = {
   kit: {
     csp: {
       mode: 'auto',
-      directives: {
+      reportOnly: {
         'default-src': ["'none'"],
         'img-src': ["'self'", 'data:', 'https:'],
         'media-src': ["'self'"],
@@ -19,7 +19,7 @@ const config = {
         'object-src': ["'none'"],
         'base-uri': ["'none'"],
         'form-action': ["'self'"],
-        'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : []
+        'report-uri': process.env.CSP_REPORT_URI ? [process.env.CSP_REPORT_URI] : ['/api/csp-report']
       }
     },
     adapter: adapter({

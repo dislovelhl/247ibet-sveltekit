@@ -1,119 +1,51 @@
 # AGENTS.md
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+Repository guidance for Codex and future maintainers working in this checkout.
 
-## Skill routing
+## Source of truth
 
-When the user's request matches an available skill, ALWAYS invoke it using the Skill
-tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
-The skill has specialized workflows that produce better results than ad-hoc answers.
+Before making project-specific claims, inspect the current checkout first:
 
-Key routing rules:
+- `README.md`
+- `package.json`
+- `src/routes/**`
+- `src/lib/site.ts` and `src/lib/ibet-brand.ts`
+- `src/lib/components/**`
+- `src/styles/**` and `src/app.css`
+- `static/**`
+- `tests/**`
+- `docs/**`
 
-- Product ideas, "is this worth building", brainstorming → invoke office-hours
-- Bugs, errors, "why is this broken", 500 errors → invoke investigate
-- Ship, deploy, push, create PR → invoke ship
-- QA, test the site, find bugs → invoke qa
-- Code review, check my diff → invoke review
-- Update docs after shipping → invoke document-release
-- Weekly retro → invoke retro
-- Design system, brand → invoke design-consultation
-- Visual audit, design polish → invoke design-review
-- Architecture review → invoke plan-eng-review
-- Save progress, checkpoint, resume → invoke checkpoint
-- Code quality, health check → invoke health
+Do not rely on memory when the answer can be verified in the repo.
 
-## Voice & Tone
+## Documentation rules
 
-This site speaks as **247iBET itself** — a first-party brand, NOT a third-party reviewer or "independent guide."
+- Put repo documentation under `docs/website-project/` unless a task says otherwise.
+- Keep the docs honest: if something is not verifiable from source, mark it `TBD`.
+- Do not invent routes, CMS integrations, analytics, or compliance claims.
+- If a route redirects, is a placeholder, or depends on missing data, say so clearly.
+- When the site surface changes, update the docs package alongside it.
 
-**First-party positioning:**
-- "Our casino", "our sportsbook", "our bonuses", "our Interac payouts" — not "they offer" or "we reviewed"
-- CTA buttons: "Play Now", "Claim Bonus", "Sign Up" — not "Visit Partner Site"
-- No "independent guide", "editorial team", "we review", "editorial stance" language
-- No "may earn commission" disclaimers in body copy (keep only where legally required in footer)
+## Project-specific cautions
 
-**Tone:**
-- Confident, direct, brand-own voice
-- Bonus pages: present offers as *our offers*, not "image-observed creatives"
-- Trust signals: speak as the operator, not as someone evaluating the operator
+- This repo contains a mix of public marketing pages, editorial/help content, internal admin tools, and workflow endpoints.
+- Some pages use first-party product language, while others use independent-guide / editorial language. Keep the voice consistent within each page type and call out any mismatch instead of smoothing it over.
+- Regulated iGaming copy needs extra care: licensing, age, payout, bonus, and legal statements should be verified before they are treated as current.
+- Treat `/home`, `/features/*`, CMS-fed routes, redirects, and canonical URLs as high-risk areas when reviewing navigation or SEO.
 
-**Pages to review for tone alignment:**
-- Bonuses / new-player-bonuses-canada
-- Homepage hero and trust sections
-- Footer disclaimer
-- All CTA labels (`IBET_CTA`)
+## Done means verified
 
-## Commands
+For documentation work, “done” means:
 
-```bash
-pnpm dev          # start dev server (localhost:5173)
-pnpm build        # production build
-pnpm preview      # preview production build locally
-pnpm check        # type-check via svelte-check (run before committing)
-pnpm lint         # ESLint
-pnpm test         # run vitest test suite (113 tests)
-```
+1. The requested files exist.
+2. Route coverage matches the actual checkout.
+3. Unknowns are marked `TBD`.
+4. Recommendations are tied to observed evidence.
+5. The final summary lists what was created, what changed, and what could not be verified.
 
-Test suite: 141 tests across 16 test files (unit + integration). The three gates before pushing are: `pnpm check && pnpm lint && pnpm build && pnpm test`.
+## Practical workflow
 
-## Architecture
-
-**Stack**: SvelteKit 2 + Svelte 5 (runes), Tailwind CSS v4, TypeScript strict, pnpm, deployed on Vercel via `@sveltejs/adapter-auto`.
-
-### Key lib files
-
-| File                         | Purpose                                                                                                                       |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `src/lib/site.ts`            | Single source of truth — `SITE`, `SEO`, `TRACKING`, `PARTNER` constants. All canonical URLs and brand strings come from here. |
-| `src/lib/ibet-brand.ts`      | 247iBET product data — `IBET_PROFILE`, `IBET_URLS`, `IBET_CTA`, `IBET_DISCLAIMER`. Derives URLs from `$lib/site`.             |
-| `src/lib/age-gate-client.ts` | Age verification backed by `localStorage` (v1). Session API stubs are no-ops — wired up in v2.                                |
-
-### Layout shell (`src/routes/+layout.svelte`)
-
-Every page is wrapped by: `AgeGate` modal → `Navbar` → `<main>` (fade transition on route change) → `SEOFooter` → `StickyMobileCTA`. Vercel Analytics and Speed Insights are injected on mount.
-
-### Route groups
-
-- `/casino/*`, `/sportsbook/*` — game-type sub-hubs
-- `/ontario/*`, `/alberta/*` — province landing pages
-- `/guides/[...slug]` — editorial guides (catch-all with specific named pages taking priority)
-- `/reviews/[slug]`, `/events/[slug]`, `/news/[slug]`, `/payments/[slug]`, `/authors/[slug]` — dynamic content pages
-- `/tools/*` — interactive calculators (odds, parlay, payout)
-- `/admin/*` — internal affiliate/analytics dashboards
-- `/design-system`, `/lab/design-exploration` — design reference pages (not production content)
-
-- Most pages are client-rendered, but global routing intercepts are handled server-side via `src/routes/+layout.server.ts` (age gate and cache control) and `src/routes/admin/+layout.server.ts` (admin access checks).
-
-### CSS architecture
-
-`src/app.css` is the single entry point — it imports Tailwind v4 then six modular files:
-
-| File                       | Contains                                                                                                                    |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `styles/theme.css`         | `@theme` block — all design tokens (colors, fonts, spacing, shadows)                                                        |
-| `styles/base.css`          | Global resets and body defaults                                                                                             |
-| `styles/animations.css`    | Keyframe animations                                                                                                         |
-| `styles/glass.css`         | `.glass-thin/regular/thick/shimmer` glassmorphism utilities                                                                 |
-| `styles/components.css`    | Reusable component classes (`.navy-card`, CTA buttons, etc.)                                                                |
-| `styles/design-system.css` | Page-level typography utilities and iGaming-specific UI (`.page-hero-title`, `.odds`, `.live-dot`, `.jackpot-ticker`, etc.) |
-
-**Tailwind v4 note**: tokens are declared in `@theme {}` inside `styles/theme.css`, not in a `tailwind.config.js`. Use Tailwind class names that map to those tokens (e.g. `text-prestige-gold`, `bg-navy-card`).
-
-### Design tokens (key values)
-
-- **Surfaces**: `navy-black` (#070C18), `navy-card` (#0D1629), `navy-raised` (#142038)
-- **Accents**: `prestige-gold` (#D4943A), `slate-blue` (#4A9EBF)
-- **Fonts**: Plus Jakarta Sans (body/heading), Be Vietnam Pro (display/sans), JetBrains Mono (numbers/odds)
-
-### Svelte 5 patterns
-
-This project uses Svelte 5 runes throughout — use `$state`, `$derived`, `$effect`, `$props` (not `let`, `reactive`, `onDestroy` patterns from Svelte 4).
-
-### Vite quirk
-
-`vite.config.ts` includes a `cssInlineSSRFix` plugin that works around a Vite 6 bug where `?inline` CSS modules lack `export default` in SSR mode. Do not remove it.
-
-### Environment variables
-
-SvelteKit public env vars use the `PUBLIC_` prefix (not `NEXT_PUBLIC_`). `PUBLIC_SITE_URL` overrides the canonical URL; `VERCEL_URL` is the automatic fallback on preview deployments.
+- Prefer small, source-backed changes over broad assumptions.
+- Use clear headings, tables, and direct language.
+- Keep markdown readable for non-technical stakeholders.
+- If you add or rename routes, update sitemap, search, and docs together.

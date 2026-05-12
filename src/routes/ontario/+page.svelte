@@ -175,7 +175,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
         class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
@@ -204,12 +204,12 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
               Market Active
             </p>
           </div>
           <div class="floating-chrome px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               19+ · Fully Regulated · Secure Gaming
             </p>
           </div>
@@ -294,7 +294,7 @@
           </p>
         </div>
         <div
-          class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+          class="mt-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
         >
           Explore Casino
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -336,7 +336,7 @@
           </p>
         </div>
         <div
-          class="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+          class="mt-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
         >
           Explore Sportsbook
           <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />

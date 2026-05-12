@@ -73,7 +73,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto max-w-3xl px-4 pt-10 pb-20 sm:px-6 lg:px-8">
+<div class="container mx-auto max-w-3xl px-4  pb-20 sm:px-6 lg:px-8">
   <header class="mb-10">
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">

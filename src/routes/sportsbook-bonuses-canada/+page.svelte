@@ -101,7 +101,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
   <header class="material-panel mb-10 reveal-fade-up p-6 md:p-8" use:reveal>
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">

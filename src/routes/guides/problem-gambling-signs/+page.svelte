@@ -165,7 +165,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#EF4444] uppercase tracking-widest"
@@ -271,7 +271,7 @@
         >
           <div class="shrink-0">
             <span
-              class="text-[10px] font-semibold text-[#8492A6] bg-[#142038] px-2 py-0.5 rounded uppercase tracking-wide"
+              class="text-xs font-semibold text-[#8492A6] bg-[#142038] px-2 py-0.5 rounded uppercase tracking-wide"
               >{r.type}</span
             >
           </div>

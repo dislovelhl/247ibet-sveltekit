@@ -32,10 +32,10 @@
 
   @keyframes shimmer-sweep {
     0% {
-      transform: translateX(-150%) skewX(-25deg);
+      background-position: 200% 0;
     }
     100% {
-      transform: translateX(150%) skewX(-25deg);
+      background-position: -200% 0;
     }
   }
 

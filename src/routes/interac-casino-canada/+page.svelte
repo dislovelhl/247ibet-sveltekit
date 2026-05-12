@@ -127,7 +127,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   <JsonLd schema={faqSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
   <div
     aria-hidden="true"
     class="fixed right-0 top-0 -z-10 h-[400px] w-[400px] rounded-full bg-yellow-500/5 blur-[100px] opacity-30 pointer-events-none"
@@ -200,7 +200,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <h2 class="text-2xl font-bold mb-4">Interac Quick Facts</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full text-left text-sm">
-        <thead class="text-[10px] uppercase tracking-widest text-gray-500 border-b border-white/10">
+        <thead class="text-xs uppercase tracking-widest text-gray-500 border-b border-white/10">
           <tr>
             <th class="px-3 py-3">Check</th>
             <th class="px-3 py-3">What to Verify</th>

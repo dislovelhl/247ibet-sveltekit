@@ -71,7 +71,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -86,7 +86,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <article class="lg:col-span-2">
       <div class="mb-10">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest uppercase mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-bold tracking-widest uppercase mb-6"
         >
           Elite Strategy
         </div>
@@ -205,10 +205,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         <div class="mt-6 flex items-start gap-3">
           <span class="text-prestige-gold shrink-0">✓</span>
           <div>
-            <span class="text-[10px] text-white font-bold uppercase tracking-widest block"
+            <span class="text-xs text-white font-bold uppercase tracking-widest block"
               >iGaming Security Checked</span
             >
-            <p class="text-[10px] text-gray-500 italic mt-1">
+            <p class="text-xs text-gray-500 italic mt-1">
               High-win withdrawals at our recommended sites are processed via encrypted Interac
               channels for maximum security.
             </p>

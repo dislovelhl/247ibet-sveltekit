@@ -24,7 +24,7 @@
       {#each presets as preset}
         <button
           type="button"
-          class="rounded-full border border-white/10 px-3 py-1.5 text-xs font-bold text-text-body transition hover:border-prestige-gold/50 hover:text-white"
+          class="rounded-full border border-white/10 px-4 min-h-[44px] min-w-[44px] flex items-center justify-center text-xs font-bold text-text-body transition hover:border-prestige-gold/50 hover:text-white"
           class:border-prestige-gold={odds === preset}
           class:text-prestige-gold={odds === preset}
           onclick={() => (odds = preset)}

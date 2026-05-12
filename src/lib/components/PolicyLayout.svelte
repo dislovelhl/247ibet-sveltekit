@@ -52,12 +52,12 @@
   />
 </svelte:head>
 
-<div class="min-h-dvh bg-navy-black pb-24 overflow-x-hidden" in:fade={{ duration: 400 }}>
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+<div class="min-h-screen min-h-dvh bg-navy-black pb-24 overflow-x-hidden">
+  <div class="mx-auto">
     <!-- Breadcrumbs -->
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
-        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="/" class="flex min-h-[44px] items-center hover:text-white transition-colors">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
         <li class="text-prestige-gold">{title}</li>
       </ol>
@@ -77,7 +77,7 @@
       >
         <div class="mb-8 flex justify-center md:justify-start">
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               Official Document
             </p>
           </div>
@@ -111,14 +111,14 @@
 
           <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div class="flex flex-wrap gap-x-8 gap-y-4">
-              <a href="/security" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Security Standards</a>
-              <a href="/responsible-gambling" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Responsible Gambling</a>
-              <a href="/contact" class="text-[10px] font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Contact Support</a>
+              <a href="/security" class="flex min-h-[44px] items-center text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Security Standards</a>
+              <a href="/responsible-gambling" class="flex min-h-[44px] items-center text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Responsible Gambling</a>
+              <a href="/contact" class="flex min-h-[44px] items-center text-xs font-black uppercase tracking-widest text-text-tertiary hover:text-prestige-gold transition-colors">Contact Support</a>
             </div>
             
             <button 
               onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
+              class="group flex min-h-[44px] items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
             >
               Back to Top
               <svg class="h-4 w-4 transition-transform group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -134,7 +134,7 @@
         <div class="sticky top-24 space-y-8">
           {#if sections.length > 0}
             <section class="material-panel rounded-3xl p-8">
-              <h2 class="text-xs font-black uppercase tracking-widest text-white mb-6">In this document</h2>
+              <h2 class="text-sm font-black uppercase tracking-widest text-white mb-6">In this document</h2>
               <nav>
                 <ul class="space-y-4">
                   {#each sections as section}
@@ -154,7 +154,7 @@
           {/if}
 
           <section class="material-panel rounded-3xl p-8 bg-prestige-gold/5 border-prestige-gold/10">
-            <h2 class="text-xs font-black uppercase tracking-widest text-white mb-6">Need Help?</h2>
+            <h2 class="text-sm font-black uppercase tracking-widest text-white mb-6">Need Help?</h2>
             <p class="text-sm text-text-body mb-6 leading-relaxed">
               If you have questions regarding our legal documents, please contact our compliance team.
             </p>

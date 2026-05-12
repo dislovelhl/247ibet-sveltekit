@@ -131,7 +131,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div
       class="flex items-center gap-2 text-xs font-medium text-[#4A9EBF] uppercase tracking-widest"
@@ -143,7 +143,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       RTP, variance, bankroll management, and the myths to ignore — a practical guide for Canadian
       players at certified online casinos.
     </p>
-    <p class="text-[10px] text-[#8492A6]">
+    <p class="text-xs text-[#8492A6]">
       Updated March 2026 · 18+/19+ · 247iBET requires 95.5%+ RTP certification
     </p>
   </header>

@@ -60,15 +60,13 @@ if (env.ADMIN_ENABLED !== 'true') {
 
 The env var defaults to absent/unset on all Vercel deployments (preview and production). An absent var evaluates as `undefined !== 'true'`, so the 404 fires. Returning 404 rather than 401 or 403 minimizes information disclosure — an attacker scanning routes gets no confirmation that an admin surface exists.
 
-To enable the admin surface on a specific deployment, set `ADMIN_ENABLED=true` in the Vercel project environment variables for that environment only.
+**Gate 2 — Token-backed session cookie** (`ibet_admin_session`):
 
-**Gate 2 — Hard-deny** (`error(401)` upstream):
+`requireAdminSession()` compares the cookie value against `ADMIN_TOKEN` with constant-time equality. Missing or mismatched tokens redirect to `/admin/login?redirectTo=...` instead of exposing the protected page. The `/admin/login` portal accepts the authorization token, sets an HTTP-only, Secure, `SameSite=Strict` cookie for 24 hours, and the logout action clears that cookie.
 
-Even if the feature flag is enabled, the existing `error(401, 'Unauthorized')` fires immediately after. This gate will be replaced with a real authentication check (Stack Auth session or equivalent) in v0.3.1.
+The login route is also best-effort rate limited per client key and emits structured audit logs for login success, failure, rate limiting, and logout events. Those logs intentionally exclude the raw token.
 
-### Roadmap
-
-Real authentication (scoped to v0.3.1+) will replace the hard-deny `error(401)` with a session validation call. The feature flag gate will remain as an additional kill switch. Both gates must pass before any admin data is served.
+To enable the admin surface on a deployment, set both `ADMIN_ENABLED=true` and `ADMIN_TOKEN` in the Vercel project environment variables for that environment only. The feature flag remains the outer kill switch even though the token-based login flow is shipped.
 
 ## 5. Reporting a Vulnerability
 

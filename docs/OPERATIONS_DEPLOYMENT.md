@@ -53,12 +53,15 @@ For documentation-only changes, still run at least `pnpm lint`, `pnpm test`, and
 | --- | --- | --- |
 | `WORKFLOW_SECRET` | `/api/workflows/*` POST routes | Shared secret for manual workflow triggers. |
 | `CRON_SECRET` | `/api/workflows/*` GET routes | Bearer token expected from Vercel Cron. |
+| `ADMIN_ENABLED` | `/admin/*` routes | Feature flag that exposes the admin surface when set to `true`. |
+| `ADMIN_TOKEN` | `/admin/login`, `src/lib/server/admin.ts` | Shared admin authorization token stored in the session cookie after a successful login. |
 
 Other environment-dependent behavior:
 
 - `PUBLIC_SITE_URL` overrides canonical site URL in `src/lib/site.ts`.
 - `VERCEL_URL` is used as a fallback canonical base on Vercel when `PUBLIC_SITE_URL` is absent.
-- `ADMIN_ENABLED=true` enables the first admin gate, but admin routes still hard-deny until real auth replaces the current 401 gate.
+- `ADMIN_ENABLED=true` and `ADMIN_TOKEN` are required together for admin access; `/admin/login` exchanges the token for a 24-hour HTTP-only session cookie, and logout clears it.
+- The admin login route keeps a best-effort in-process rate limit and writes structured audit logs for success, failure, rate limiting, and logout.
 - `CSP_REPORT_URI` can populate the SvelteKit CSP `report-uri` directive.
 
 Do not commit real secrets. Vercel project environments should hold production, preview, and cron secrets.

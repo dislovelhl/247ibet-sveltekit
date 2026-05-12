@@ -118,7 +118,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
@@ -140,7 +140,7 @@
       >
         <div class="mb-5 flex items-center gap-2">
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               Editorial Grounding
             </p>
           </div>
@@ -195,8 +195,8 @@
                   <ExternalLink class="h-4 w-4 text-text-tertiary shrink-0" />
                 </div>
                 <div class="flex items-center gap-4 border-t border-white/5 pt-4">
-                  <span class="text-[10px] font-mono uppercase text-text-tertiary">Reviewed: {source.reviewed}</span>
-                  <span class="text-[10px] font-mono uppercase {source.stale ? 'text-prestige-gold' : 'text-success'}">
+                  <span class="text-xs font-mono uppercase text-text-tertiary">Reviewed: {source.reviewed}</span>
+                  <span class="text-xs font-mono uppercase {source.stale ? 'text-prestige-gold' : 'text-success'}">
                     Status: {source.stale ? 'stale' : 'fresh'}
                   </span>
                 </div>

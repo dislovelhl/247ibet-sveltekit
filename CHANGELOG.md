@@ -7,7 +7,7 @@ All notable changes to 247iBET are documented here.
 ### Added
 
 - **Nonce-based CSP scaffold** (Workstream A0) — SvelteKit `csp: { mode: 'auto' }` config in `svelte.config.js` with `script-src ['self']`. Vercel `Content-Security-Policy-Report-Only` header in `vercel.json` hardened from `'unsafe-inline'` → `'strict-dynamic'`. Enforcement on top-3 routes (`/`, `/casino`, `/sportsbook`) gated on synthetic Playwright crawl + 72h soak (Workstream A6).
-- **Admin defense-in-depth** (Workstream E1) — all three `/admin/*` server pages now wrap the existing `error(401)` hard-deny with a `ADMIN_ENABLED` feature flag returning `error(404)` in production. Admin surface is invisible by default unless explicitly enabled in env.
+- **Admin defense-in-depth** (Workstream E1) — all three `/admin/*` server pages now use an `ADMIN_ENABLED` feature flag plus token-backed session-cookie auth via `/admin/login`. Disabled deployments still 404, successful login mints an HTTP-only cookie for the admin shell, and the login route is rate-limited with structured audit logging.
 - **[Security docs](docs/SECURITY.md)** — threat model, accepted-risk register (3 HIGH undici CVEs documented with watch-and-bump policy), CSP policy explanation, admin-surface gating, vulnerability reporting placeholder.
 - **[Accessibility docs](docs/A11Y.md)** — WCAG 2.2 AA target documented, focus-visible patterns, accordion ARIA pattern reference, aria-label audit table, gold-on-navy contrast warning for designer follow-up, axe-core integration notes.
 - **[Performance docs](docs/PERFORMANCE.md)** — mobile p75 budget thresholds (LCP <2.5s, INP <200ms, CLS <0.1, performance ≥90), `@sveltejs/enhanced-img` decision (chosen over Vercel Blob to avoid LCP regression), bundle-composition tracking, cache-coherency constraint with the A1 hooks-based age gate, runnable Lighthouse script.
@@ -48,7 +48,7 @@ All notable changes to 247iBET are documented here.
 - F2: SSR evaluation follow-up for `/`, `/casino`, `/sportsbook` hot paths (tracked from [Performance docs](docs/PERFORMANCE.md#follow-ups-for-v031))
 - G1: Atomic-commit reorg of the dirty tree (per-hunk policy for `+layout.svelte`, `vercel.json`, `package.json`, `+page.svelte`; target 8-12 commits with workstream-ID prefixes)
 - BFG-purge of 183MB hero image history (clone-time, not runtime)
-- Real admin auth (token + rate-limit + audit log + MFA)
+- Admin auth follow-up: MFA if and when the admin surface moves from a shared token to per-user identities
 - Comprehensive component-test coverage beyond the 4 named placeholders
 
 ## [0.2.0] - 2026-04-29

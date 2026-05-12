@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-01T07:37:08.173Z",
+  "updatedAt": "2026-05-12T01:57:21.505Z",
   "state": "pass",
   "sourceArtifacts": [
     ".omx/reports/mobile-typography-audit.json",
@@ -8,7 +8,7 @@
     ".omx/reports/mobile-typography-playwright.json"
   ],
   "coverageArtifact": ".omx/reports/mobile-typography-coverage.md",
-  "capturedResultCount": 4,
+  "capturedResultCount": 44,
   "issueCount": 0,
   "skippedCount": 0,
   "blockers": []

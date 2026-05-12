@@ -85,7 +85,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -98,7 +98,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <header class="mb-10">
     <div
-      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest uppercase mb-6"
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-xs font-bold tracking-widest uppercase mb-6"
     >
       Risk Intelligence
     </div>
@@ -166,12 +166,12 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       </p>
       <div class="flex gap-3">
         <div
-          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-[10px] font-bold border border-prestige-gold/20"
+          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
           iGO VERIFIED
         </div>
         <div
-          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-[10px] font-bold border border-prestige-gold/20"
+          class="px-4 py-2 rounded-lg bg-prestige-gold/10 text-prestige-gold text-xs font-bold border border-prestige-gold/20"
         >
           AGCO LICENSED
         </div>

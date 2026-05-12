@@ -92,7 +92,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40">
         <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
@@ -119,7 +119,7 @@
           <div
             class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]"
           >
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               2026 Verified Rewards
             </p>
           </div>

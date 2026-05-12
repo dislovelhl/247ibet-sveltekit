@@ -80,7 +80,7 @@
 ### 3. Skill Tree
 - To reach **Proficient** in testing → need: vitest patterns, component testing, coverage analysis
 - To reach **Proficient** in security → need: OWASP iGaming checklist, session management, rate limiting
-- To unblock **production launch** → need: real admin auth, age verification, CSP enforcement
+- To unblock **production launch** → need: age verification, CSP enforcement, and admin hardening
 
 ### 4. OODA Loop
 - **Observe**: ✅ Good (systemic improvement audit found issues)
@@ -109,7 +109,7 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 - [x] P1-6: Write tests for ibet-brand.ts — refactored URL derivation to use robust deriveLoginUrl helper with full unit test coverage
 - [x] P1-7: Write tests for age-gate-client.ts — verified existing browser and SSR path tests provide full coverage for localStorage branching and legacy keys
 - [x] P1-8: Migrate 3 files from Svelte 4 to Svelte 5 patterns — migrated AgeGate.svelte and +layout.svelte to $effect; verified GuideHighlights.svelte already modernized
-- [x] P1-9: Implement real admin auth — implemented token-based authentication with secure cookies, login portal, and unified admin layout
+- [x] P1-9: Implement real admin auth — implemented token-based authentication with `ADMIN_ENABLED`, secure cookies, login portal, and unified admin layout
 - [x] P1-10: Add Content-Security-Policy enforcement — moved from Report-Only to directives in svelte.config.js; whitelisted Vercel domains
 - [x] P1-11: Clean 57 unused variable warnings — verified pnpm lint and pnpm check are clean
 
@@ -155,11 +155,15 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 - **Impact**: Codebase consistency improved; legacy `onMount` patterns reduced.
 - **Confidence**: High
 ### [P1] 9. Implement real admin auth
-- **Done**: Implemented secure token-based authentication (via `ADMIN_TOKEN` env var) with HTTP-only cookies, a dedicated `/admin/login` portal, and a unified `+layout.svelte` for the admin section.
-- **Impact**: Replaced 401 stubs with a functional, secure internal surface for administrators.
+- **Done**: Implemented secure token-based authentication (via `ADMIN_ENABLED` + `ADMIN_TOKEN`) with HTTP-only cookies, a dedicated `/admin/login` portal, and a unified `+layout.svelte` for the admin section.
+- **Impact**: Replaced 401 stubs with a feature-flagged internal surface that uses a persistent session cookie for administrators, plus best-effort login rate limiting and structured audit logs.
 - **Confidence**: High
 
-## Parking Lot (P2 — Backlog)
+### [P1] 9b. Admin auth hardening follow-up
+- **Done**: Added login rate limiting and structured audit logs to the admin login flow.
+- **Deferred**: MFA is only appropriate once the admin surface moves to per-user identities rather than a shared token.
+- **Confidence**: High
+
 ### [P1] 10. Add `Content-Security-Policy` enforcement
 - **Done**: Moved CSP config from `reportOnly` to `directives` in `svelte.config.js`; added `va.vercel-scripts.com` to `script-src`.
 - **Impact**: Active XSS protection enabled for production.
@@ -169,8 +173,6 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 - **Done**: Verified `pnpm lint` and `pnpm check` return zero warnings.
 - **Impact**: Clean build output; technical debt reduced.
 - **Confidence**: High
-
-### [P1] 9. Implement real admin auth (replace 401 stubs)
 
 ## Parking Lot (P2 — Backlog)
 
@@ -226,7 +228,7 @@ All 77 tests across 8 files are passing. The test gate is now enforced in CI.
 | Metric | Current | Target | How |
 |--------|---------|--------|-----|
 | Test coverage (lib files) | ~14% | 80% | Write tests for all 7 lib files |
-| HIGH security issues | 3 | 0 | Fix deps, enforce CSP, real admin auth |
+| HIGH security issues | 3 | 0 | Fix deps, enforce CSP, and keep admin auth hardened |
 | Lint warnings | 57 | <10 | Clean unused vars, migrate Svelte 5 |
 | .git size | 183MB | <50MB | Move images to CDN |
 | ADRs written | 0 | 3 | Document key architecture decisions |

@@ -2,6 +2,9 @@ node_modules
 .svelte-kit
 build
 .vercel
+.pytest_cache/
+.playwright-mcp/
+.swc/
 .env
 .env.*
 !.env.example

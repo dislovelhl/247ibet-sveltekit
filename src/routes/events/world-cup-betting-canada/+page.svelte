@@ -120,7 +120,7 @@
   <JsonLd schema={breadcrumbSchema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl space-y-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl space-y-16">
   <header>
     <nav aria-label="Breadcrumb" class="mb-4">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
@@ -162,7 +162,7 @@
         </div>
       {/each}
     </div>
-    <p class="text-[10px] text-[#8492A6] mt-2">
+    <p class="text-xs text-[#8492A6] mt-2">
       Tournament schedule subject to FIFA confirmation. Last updated March 2026.
     </p>
   </section>

@@ -128,7 +128,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -151,7 +151,7 @@
         >
           <BookOpen class="w-6 h-6 text-slate-blue" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-slate-blue uppercase tracking-[0.3em]">
+        <div class="text-xs font-mono text-slate-blue uppercase tracking-[0.3em]">
           Platform Standards
         </div>
       </div>

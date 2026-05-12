@@ -39,12 +39,11 @@ const getRouteBox = async (
   await page.goto(target.url, { waitUntil: 'networkidle' });
 
   return page.evaluate(({ label, url }) => {
-    const root = document.querySelector<HTMLElement>('main > div > .min-h-screen.bg-navy-black');
+    const root = document.querySelector<HTMLElement>('main > div > :is(.min-h-screen, .min-h-dvh).bg-navy-black');
     const shell =
       document.querySelector<HTMLElement>('main > div > .container.mx-auto') ??
-      root?.querySelector<HTMLElement>('main.mx-auto') ??
-      root?.querySelector<HTMLElement>(':scope > .mx-auto:not([class*="max-w-[1720px]"])') ??
-      root?.querySelector<HTMLElement>(':scope > .mx-auto[class*="max-w-[1720px]"]') ??
+      root?.querySelector<HTMLElement>(':is(main, div).mx-auto:not([class*="max-w-[1720px]"])') ??
+      root?.querySelector<HTMLElement>(':is(main, div).mx-auto[class*="max-w-[1720px]"]') ??
       root?.querySelector<HTMLElement>(':scope > section') ??
       root;
 

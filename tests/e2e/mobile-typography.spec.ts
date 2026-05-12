@@ -85,6 +85,11 @@ test.describe('mobile typography visual QA', () => {
       test(`${pageTarget.label} typography remains readable at ${viewport.label}`, async ({
         page,
       }) => {
+        page.on('console', (msg) => {
+          if (msg.text().startsWith('CLIPPED_ELEMENT')) {
+            console.log(msg.text());
+          }
+        });
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         const response = await page.goto(pageTarget.url, { waitUntil: 'networkidle' });
         await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -201,7 +206,7 @@ test.describe('mobile typography visual QA', () => {
               return found;
             });
 
-            const clippedTextCandidateCount = Array.from(
+            const clippedTextCandidates = Array.from(
               document.querySelectorAll('main h1, main h2, main h3, main p, main a, main button'),
             ).filter((element) => {
               if (!isVisible(element)) return false;
@@ -214,11 +219,16 @@ test.describe('mobile typography visual QA', () => {
                 style.display === '-webkit-box';
               if (!hasClippingStyle) return false;
               const htmlElement = element as HTMLElement;
-              return (
+              const isClipping = 
                 htmlElement.scrollWidth > htmlElement.clientWidth + 2 ||
-                htmlElement.scrollHeight > htmlElement.clientHeight + 2
-              );
-            }).length;
+                htmlElement.scrollHeight > htmlElement.clientHeight + 2;
+              
+              if (isClipping) {
+                console.log(`CLIPPED_ELEMENT: ${element.tagName} "${textFor(element).slice(0, 30)}" SW:${htmlElement.scrollWidth} CW:${htmlElement.clientWidth} SH:${htmlElement.scrollHeight} CH:${htmlElement.clientHeight}`);
+              }
+              return isClipping;
+            });
+            const clippedTextCandidateCount = clippedTextCandidates.length;
 
             const actionElements = Array.from(
               document.querySelectorAll(

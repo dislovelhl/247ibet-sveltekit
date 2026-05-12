@@ -71,7 +71,7 @@
   <JsonLd {schema} />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs leading-5 text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>

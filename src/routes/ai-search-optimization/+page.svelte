@@ -106,7 +106,7 @@
     class="absolute -left-24 top-1/4 -z-10 h-[320px] w-[320px] rounded-full bg-slate-blue/5 blur-[100px] opacity-30 pointer-events-none"
   ></div>
 
-  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  pb-20">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-xs text-text-tertiary">
         <li><a href="/" class="hover:text-white">Home</a></li>

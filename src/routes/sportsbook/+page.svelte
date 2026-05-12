@@ -326,16 +326,16 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
-    <nav aria-label="Breadcrumb" class="mb-6">
-      <ol class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-white/40">
-        <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
-        <li aria-hidden="true" class="text-white/20">/</li>
-        <li class="text-prestige-gold">Sportsbook</li>
+  <div class="mx-auto w-full">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li>Sportsbook</li>
       </ol>
     </nav>
 
-    <div class="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[210px_minmax(0,1fr)]">
       <aside class="hidden lg:block">
         <div
           class="material-panel sticky top-28 space-y-6 rounded-[2rem] p-5 shadow-[0_32px_120px_-30px_rgba(0,0,0,0.9)]"
@@ -366,7 +366,7 @@
           </nav>
           <div class="border-t soft-separator pt-6">
             <p
-              class="px-4 pb-3 font-display text-[10px] font-black uppercase tracking-[0.2em] text-prestige-gold"
+              class="px-4 pb-3 font-display text-xs font-black uppercase tracking-[0.2em] text-prestige-gold"
             >
               Popular Sports
             </p>
@@ -408,11 +408,11 @@
             <div class="flex flex-wrap items-center gap-3 mb-8">
               <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
                 <span class="live-dot" aria-hidden="true"></span>
-                <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+                <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
                   Live Markets Open
                 </p>
               </div>
-              <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+              <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
                 Canadian Sportsbook Hub
               </p>
             </div>
@@ -440,7 +440,7 @@
               <a href="#odds" class="hero-cta-secondary min-w-[220px] glass-thin btn-magnetic"> Compare Odds </a>
             </div>
             <p
-              class="mt-6 max-w-2xl text-[10px] uppercase tracking-wider leading-relaxed text-text-tertiary/60"
+              class="mt-6 max-w-2xl text-xs uppercase tracking-wider leading-relaxed text-text-tertiary/60"
             >
               {IBET_DISCLAIMER}
             </p>
@@ -467,7 +467,7 @@
                 <Flame class="h-6 w-6" />
               </div>
               <div>
-                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
+                <p class="text-xs font-black uppercase tracking-[0.2em] text-text-tertiary">
                   {offer.eyebrow}
                 </p>
                 <h2
@@ -481,7 +481,7 @@
               </div>
               <SafeExternalLink
                 href={IBET_URLS.register}
-                class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
+                class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold/60 group-hover:text-prestige-gold transition-all"
               >
                 {offer.cta}
                 <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -646,8 +646,8 @@
           </div>
         </section>
 
-        <section class="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
-          <div class="material-panel p-4 sm:p-5">
+        <section class="grid grid-cols-1 gap-5 xl:grid-cols-[0.9fr_1.1fr]">
+          <div class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Sportsbook Offers</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Compare featured promos and account-level value before choosing where to play.
@@ -672,7 +672,7 @@
             </div>
           </div>
 
-          <div class="material-panel p-4 sm:p-5">
+          <div class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Odds Boosts</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Track enhanced prices and compare the boosted value against the old line.
@@ -743,7 +743,7 @@
         </section>
 
         <section class="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-          <div class="material-panel p-4 sm:p-5">
+          <div class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Top Sports</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Explore betting markets for all major sports.
@@ -776,7 +776,7 @@
             </div>
           </div>
 
-          <div id="payments" class="material-panel p-4 sm:p-5">
+          <div id="payments" class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Payment Methods</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Fast, secure, and familiar ways to fund a Canadian betting account.
@@ -796,7 +796,7 @@
         </section>
 
         <section class="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
-          <div class="material-panel p-4 sm:p-5">
+          <div class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Latest News</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Stay up to date with betting previews and market explainers.
@@ -828,7 +828,7 @@
             </div>
           </div>
 
-          <div class="material-panel p-4 sm:p-5">
+          <div class="material-panel min-w-0 p-4 sm:p-5">
             <h2 class="page-hub-title text-2xl">Football Leagues</h2>
             <p class="mt-1 text-sm text-text-tertiary">
               Bet on major football leagues and outright competition markets.

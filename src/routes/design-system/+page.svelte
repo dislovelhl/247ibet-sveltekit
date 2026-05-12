@@ -173,7 +173,7 @@
       aria-label="Colophon"
     >
       <div
-        class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-prestige-gold"
+        class="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-prestige-gold"
       >
         Colophon · v1
       </div>
@@ -182,7 +182,7 @@
           <div
             class="flex items-baseline justify-between gap-3 border-b border-white/5 pb-2 last:border-0 last:pb-0"
           >
-            <dt class="font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+            <dt class="font-mono text-xs uppercase tracking-[0.22em] text-text-tertiary">
               {k}
             </dt>
             <dd class="text-right font-mono text-[11px] text-text-primary">{v}</dd>
@@ -197,7 +197,7 @@
     <nav aria-label="Sections" class="hidden xl:block">
       <div class="sticky top-28">
         <div
-          class="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-text-tertiary"
+          class="font-mono text-xs font-semibold uppercase tracking-[0.28em] text-text-tertiary"
         >
           Index
         </div>
@@ -211,7 +211,7 @@
               >
                 <span
                   aria-hidden="true"
-                  class="font-mono text-[10px] tracking-[0.18em] text-text-tertiary group-hover:text-prestige-gold"
+                  class="font-mono text-xs tracking-[0.18em] text-text-tertiary group-hover:text-prestige-gold"
                 >
                   {no}
                 </span>
@@ -245,7 +245,7 @@
           <!-- Surfaces -->
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Surfaces
             </div>
@@ -275,7 +275,7 @@
           <!-- Accents -->
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Accents
             </div>
@@ -305,7 +305,7 @@
           <!-- Semantic -->
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Semantic
             </div>
@@ -335,7 +335,7 @@
           <!-- iGaming -->
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               iGaming
             </div>
@@ -384,7 +384,7 @@
         </header>
         <div class="space-y-6">
           <div class="navy-card navy-card--flat p-8">
-            <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+            <div class="font-mono text-xs uppercase tracking-[0.22em] text-text-tertiary">
               Display · Be Vietnam Pro 300
             </div>
             <p
@@ -396,7 +396,7 @@
           <div class="grid gap-6 md:grid-cols-2">
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 H1 · Be Vietnam Pro 400 · 36px
               </div>
@@ -410,7 +410,7 @@
             </div>
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 H2 · Plus Jakarta 700 · 30px
               </div>
@@ -424,7 +424,7 @@
             </div>
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 H3 · Plus Jakarta 600 · 24px
               </div>
@@ -438,7 +438,7 @@
             </div>
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 H4 · Plus Jakarta 600 · 20px
               </div>
@@ -452,7 +452,7 @@
             </div>
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 Body · 16/1.72
               </div>
@@ -463,7 +463,7 @@
             </div>
             <div class="navy-card navy-card--flat p-6">
               <div
-                class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+                class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
               >
                 Caption / Kicker · Mono · tracked
               </div>
@@ -498,7 +498,7 @@
           {#each cards as [name, cls, copy]}
             <div class="{cls} p-6">
               <div
-                class="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-prestige-gold"
+                class="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-prestige-gold"
               >
                 {name}
               </div>
@@ -528,7 +528,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Primary · btn-gold
             </div>
@@ -539,7 +539,7 @@
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Secondary · btn-ghost
             </div>
@@ -570,7 +570,7 @@
         </header>
         <div class="navy-card navy-card--flat p-6">
           <div
-            class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+            class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
           >
             Variants
           </div>
@@ -605,7 +605,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Win amount · money-xl
             </div>
@@ -614,13 +614,13 @@
               <span class="money-xl text-text-primary"> 4,217</span>
               <span class="money-xl text-text-tertiary text-[0.5em] align-top">.84</span>
             </div>
-            <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-success">
+            <div class="mt-2 font-mono text-xs uppercase tracking-[0.22em] text-success">
               Verified · Paid in 47 min
             </div>
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Stake input · money-lg
             </div>
@@ -634,7 +634,7 @@
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               American · Decimal · Fractional
             </div>
@@ -647,7 +647,7 @@
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Odds shift
             </div>
@@ -680,7 +680,7 @@
         <div class="navy-card p-6">
           <div class="mb-4 flex items-center justify-between">
             <div>
-              <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-text-tertiary">
+              <div class="font-mono text-xs uppercase tracking-[0.22em] text-text-tertiary">
                 NHL · Tonight 19:00 ET
               </div>
               <div class="mt-1 text-[15px] font-semibold text-text-primary">
@@ -733,14 +733,14 @@
           <!-- Anatomy annotation -->
           <aside class="navy-card navy-card--flat p-6 lg:sticky lg:top-28">
             <div
-              class="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Anatomy
             </div>
             <ol class="mt-4 space-y-3 text-[13px] leading-relaxed text-text-body">
               {#each slipAnatomy as [k, v]}
                 <li class="grid grid-cols-[88px_1fr] gap-3">
-                  <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-prestige-gold"
+                  <span class="font-mono text-xs uppercase tracking-[0.18em] text-prestige-gold"
                     >{k}</span
                   >
                   <span>{@html renderCode(v)}</span>
@@ -753,7 +753,7 @@
           <div class="bet-slip p-6">
             <div class="flex items-center justify-between">
               <div
-                class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-prestige-gold"
+                class="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-prestige-gold"
               >
                 Parlay · 3 legs
               </div>
@@ -839,7 +839,7 @@
         </header>
         <div class="jackpot-ticker p-10 text-center">
           <div
-            class="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-prestige-gold"
+            class="font-mono text-xs font-semibold uppercase tracking-[0.28em] text-prestige-gold"
           >
             Mega Moolah · Pooled jackpot
           </div>
@@ -871,7 +871,7 @@
         </header>
         <div class="navy-card navy-card--flat p-6">
           <div
-            class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+            class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
           >
             Live tag · pulsing dot · odds shift
           </div>
@@ -905,7 +905,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Segmented · Sportsbook ↔ Casino ↔ Live
             </div>
@@ -919,7 +919,7 @@
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Underline tabs · with counts
             </div>
@@ -955,7 +955,7 @@
         </header>
         <div class="navy-card navy-card--flat p-6">
           <div
-            class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+            class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
           >
             Default · active · removable · with count
           </div>
@@ -991,7 +991,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Text · money input
             </div>
@@ -1011,7 +1011,7 @@
 
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Select
             </div>
@@ -1027,7 +1027,7 @@
 
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Checkbox
             </div>
@@ -1043,7 +1043,7 @@
 
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Radio · toggle
             </div>
@@ -1129,7 +1129,7 @@
         </header>
         <div class="navy-card navy-card--flat p-6">
           <div
-            class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+            class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
           >
             Title · text · circle · button
           </div>
@@ -1255,7 +1255,7 @@
         </header>
         <div class="navy-card navy-card--flat p-6">
           <div
-            class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+            class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
           >
             Hover the info dot
           </div>
@@ -1298,7 +1298,7 @@
         <div class="grid gap-6 md:grid-cols-2">
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               Deposit limit · weekly
             </div>
@@ -1312,7 +1312,7 @@
           </div>
           <div class="navy-card navy-card--flat p-6">
             <div
-              class="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-text-tertiary"
+              class="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary"
             >
               KYC · 4-step flow
             </div>
@@ -1323,7 +1323,7 @@
               <span class="steps__step"></span>
             </div>
             <div
-              class="mt-3 grid grid-cols-4 gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-text-tertiary"
+              class="mt-3 grid grid-cols-4 gap-2 font-mono text-xs uppercase tracking-[0.18em] text-text-tertiary"
             >
               <span>Identity</span>
               <span>Address</span>
@@ -1335,7 +1335,7 @@
       </section>
 
       <!-- Coda -->
-      <footer class="border-t border-white/5 pt-10">
+      <footer class="border-t border-white/5 ">
         <hr class="seam-rule mb-8" aria-hidden="true" />
         <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-text-tertiary">
           247iBET · Prestige Navy · Dark mode only

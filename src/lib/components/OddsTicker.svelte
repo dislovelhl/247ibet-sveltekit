@@ -35,7 +35,7 @@
 <div class="w-full bg-navy-black/40 border-y border-white/5 backdrop-blur-md overflow-hidden h-12 flex items-center">
   <div class="flex items-center px-4 border-r border-white/10 h-full bg-prestige-gold/5 shrink-0">
     <Zap class="w-4 h-4 text-prestige-gold mr-2" />
-    <span class="text-[10px] font-black uppercase tracking-widest text-prestige-gold whitespace-nowrap">Live Odds Ticker</span>
+    <span class="text-xs font-black uppercase tracking-widest text-prestige-gold whitespace-nowrap">Live Odds Ticker</span>
   </div>
   
   <div class="relative flex-1 overflow-hidden h-full">
@@ -47,9 +47,9 @@
           <span class="font-mono text-sm font-black {item.trend === 'up' ? 'text-success' : item.trend === 'down' ? 'text-error' : 'text-prestige-gold'} transition-colors duration-500">
             {item.odds}
             {#if item.trend === 'up'}
-              <span class="text-[10px] ml-0.5">↑</span>
+              <span class="text-xs ml-0.5">↑</span>
             {:else if item.trend === 'down'}
-              <span class="text-[10px] ml-0.5">↓</span>
+              <span class="text-xs ml-0.5">↓</span>
             {/if}
           </span>
         </div>

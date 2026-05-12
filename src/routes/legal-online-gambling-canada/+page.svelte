@@ -151,7 +151,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
@@ -173,7 +173,7 @@
       >
         <div class="mb-5 flex items-center gap-2">
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               Legal Guide 2026
             </p>
           </div>
@@ -217,7 +217,7 @@
             where you play.
           </p>
         </div>
-        <p class="text-[10px] text-gray-600 italic font-mono uppercase tracking-wider">
+        <p class="text-xs text-gray-600 italic font-mono uppercase tracking-wider">
           Note: This is general information, not legal advice. For legal interpretation, consult a
           Canadian gaming law specialist.
         </p>
@@ -226,7 +226,7 @@
 
     <section class="mb-12">
       <div class="flex items-baseline gap-4 mb-8">
-        <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+        <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest">
           Province-by-Province Status
         </h2>
         <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
@@ -241,12 +241,12 @@
               <div>
                 <span class="font-bold text-white text-lg">{p.province}</span>
                 <span
-                  class="ml-2 text-[10px] font-mono text-gray-500 bg-[#142038] px-2 py-1 rounded-md border border-white/5"
+                  class="ml-2 text-xs font-mono text-gray-500 bg-[#142038] px-2 py-1 rounded-md border border-white/5"
                   >{p.code}</span
                 >
               </div>
               <span
-                class="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/5 border border-white/10 {p.color}"
+                class="text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/5 border border-white/10 {p.color}"
                 >{p.status}</span
               >
             </div>
@@ -311,14 +311,14 @@
     </section>
 
     <section class="material-panel rounded-3xl p-6 md:p-10 mb-10 overflow-hidden">
-      <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-5">
+      <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-5">
         Province Snapshot
       </h2>
       <div class="material-cell overflow-x-auto rounded-2xl">
         <table class="w-full text-sm text-left">
           <thead>
             <tr
-              class="border-b border-white/5 bg-white/[0.03] text-[10px] font-mono font-bold text-gray-500 uppercase tracking-[0.2em]"
+              class="border-b border-white/5 bg-white/[0.03] text-xs font-mono font-bold text-gray-500 uppercase tracking-[0.2em]"
             >
               <th class="p-4">Province</th>
               <th class="p-4">Status</th>
@@ -386,7 +386,7 @@
 
     <section class="mt-12 space-y-4">
       <div class="flex items-baseline gap-4 mb-8">
-        <h2 class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+        <h2 class="text-xs font-mono text-gray-500 uppercase tracking-widest">
           Legal Online Gambling FAQ
         </h2>
         <div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>

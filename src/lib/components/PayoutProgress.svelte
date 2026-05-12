@@ -17,9 +17,9 @@
       <h3 class="text-sm font-bold uppercase tracking-[0.14em] text-prestige-gold">
         Interac Payout Speed
       </h3>
-      <span class="font-luxury text-[10px] text-prestige-gold-400 opacity-70">Canadian Trusted Network</span>
+      <span class="font-luxury text-xs text-prestige-gold-400 opacity-70">Canadian Trusted Network</span>
     </div>
-    <span class="rounded-full bg-success/10 px-3 py-1 text-[10px] font-bold text-success border border-success/20">
+    <span class="rounded-full bg-success/10 px-3 py-1 text-xs font-bold text-success border border-success/20">
       LIVE NETWORK STATUS
     </span>
   </div>
@@ -50,7 +50,7 @@
           <p class="text-xs font-bold {i + 1 <= activeStep ? 'text-white' : 'text-text-tertiary'}">
             {step.label}
           </p>
-          <p class="text-[10px] text-text-tertiary">
+          <p class="text-xs text-text-tertiary">
             {step.detail}
           </p>
         </div>
@@ -59,7 +59,7 @@
   </div>
 
   <div class="mt-8 rounded-lg bg-navy-black/40 p-3 border border-white/5">
-    <p class="text-[11px] leading-relaxed text-text-body">
+    <p class="text-xs leading-relaxed text-text-body">
       <span class="font-bold text-prestige-gold">Award-Winning Speed:</span> 247iBET Interac payouts typically hit your account <span class="text-white font-bold">15-30 minutes</span> after operator approval.
     </p>
   </div>

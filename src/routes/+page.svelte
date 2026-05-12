@@ -664,7 +664,7 @@
             >Explore Casino <ArrowRight class="h-3 w-3" /></a
           >
         </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
           {#each casinoCards as card}
             <a
               href={card.href}
@@ -682,7 +682,7 @@
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
-                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-xs font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
                     <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
                     Live Now
                   </div>
@@ -690,7 +690,7 @@
               </div>
               <div class="p-5">
                 <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-3">{card.body}</p>
                 <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white">
                   Explore
                   <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -710,7 +710,7 @@
             >Explore Sportsbook <ArrowRight class="h-3 w-3" /></a
           >
         </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
           {#each sportsCards as card}
             <a
               href={card.href}
@@ -728,7 +728,7 @@
                   class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
                 {#if card.title.includes('Live')}
-                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
+                  <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-navy-black/60 px-2 py-1 text-xs font-black uppercase tracking-wider text-success backdrop-blur-md ring-1 ring-success/30">
                     <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-success shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
                     Live Odds
                   </div>
@@ -736,7 +736,7 @@
               </div>
               <div class="p-5">
                 <h3 class="font-display text-lg font-black text-white group-hover:text-prestige-gold">{card.title}</h3>
-                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                <p class="mt-1.5 text-sm leading-relaxed text-text-body line-clamp-3">{card.body}</p>
                 <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors group-hover:text-white">
                   Explore
                   <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -810,7 +810,7 @@
           >View All Guides <ArrowRight class="h-3 w-3" /></a
         >
       </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2">
           {#each guideCards as card}
             <GlintCard
               class="luxury-card group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-3 transition-all hover:bg-navy-raised hover:shadow-2xl card-hover-lift"
@@ -835,9 +835,9 @@
                 <div class="flex flex-col justify-between px-2 pb-2">
                   <div>
                     <h3 class="font-display text-base font-black leading-snug text-white group-hover:text-prestige-gold transition-colors">{card.title}</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-2">{card.body}</p>
+                    <p class="mt-2 text-sm leading-relaxed text-text-body line-clamp-3">{card.body}</p>
                   </div>
-                  <div class="mt-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold transition-colors">
+                  <div class="mt-4 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold transition-colors">
                     Read Guide
                     <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
                   </div>

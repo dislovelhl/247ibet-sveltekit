@@ -251,7 +251,7 @@
 
   <!-- Tier 2: Main bar (always visible) -->
   <div
-    class="floating-chrome mx-auto flex h-14 w-[calc(100%_-_1rem)] max-w-[1720px] items-center justify-between gap-2 px-3 sm:h-16 sm:gap-4 sm:px-5 lg:px-7"
+    class="floating-chrome mx-auto flex h-14 w-[calc(100%_-_1rem)] max-w-[1720px] items-center justify-between gap-2 px-3 sm:h-16 sm:gap-2 lg:gap-4 lg:px-7"
   >
     <!-- Logo + desktop nav links -->
     <div class="flex min-w-0 items-center gap-3 lg:gap-8">
@@ -272,13 +272,13 @@
       </a>
 
       <ul
-        class="segmented-chrome hidden items-center rounded-full p-1 text-sm font-semibold text-gray-300 md:flex"
+        class="segmented-chrome hidden items-center rounded-full p-1 text-xs lg:text-sm font-semibold text-gray-300 md:flex"
       >
         {#each mainLinks as item (item.href)}
           <li>
             <a
               href={item.href}
-              class="segmented-item relative inline-flex min-h-[44px] items-center rounded-full px-4 text-text-body transition-colors hover:bg-white/[0.045] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black {pathname ===
+              class="segmented-item relative inline-flex min-h-[44px] items-center rounded-full px-1.5 lg:px-4 text-text-body transition-colors hover:bg-white/[0.045] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-prestige-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-black {pathname ===
               item.href
                 ? 'bg-prestige-gold/[0.14] text-prestige-gold shadow-[0_1px_0_rgba(255,255,255,0.08)_inset,0_0_0_1px_rgba(212,148,58,0.2)_inset]'
                 : ''}"
@@ -387,11 +387,11 @@
     >
       <div class="space-y-4 px-3 py-4 sm:px-4 sm:py-6">
         <div class="flex items-center justify-between mb-4">
-          <p class="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
+          <p class="font-mono text-xs uppercase tracking-[0.15em] text-text-tertiary">Navigation Menu</p>
           <button 
             type="button" 
             onclick={closeMobileMenu}
-            class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
+            class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold hover:text-white transition-colors"
           >
             Close
             <X class="h-4 w-4" />

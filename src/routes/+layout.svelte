@@ -45,7 +45,7 @@
 <div
   class="relative flex min-h-dvh flex-col overflow-x-hidden pb-[calc(7.5rem_+_env(safe-area-inset-bottom,0px))] md:pb-0"
 >
-  <main id="main-content" class="flex-grow">
+  <main id="main-content" class="flex-grow pt-[env(safe-area-inset-top,0px)]">
     {#key page.url.pathname}
       <div in:fade={{ duration: 120 }}>
         {@render children()}

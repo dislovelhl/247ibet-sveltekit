@@ -35,7 +35,7 @@
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-4xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-4xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -58,7 +58,7 @@
         >
           <Info class="w-6 h-6 text-yellow-400" aria-hidden="true" />
         </div>
-        <div class="text-[10px] font-mono text-yellow-400 uppercase tracking-[0.3em]">
+        <div class="text-xs font-mono text-yellow-400 uppercase tracking-[0.3em]">
           Transparency Notice
         </div>
       </div>

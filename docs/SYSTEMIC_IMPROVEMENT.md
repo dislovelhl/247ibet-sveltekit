@@ -17,7 +17,7 @@
 
 | Agent | Task | Status | Changes |
 |-------|------|--------|---------|
-| security-fixer | Fix HIGH issues | ✅ Complete | CSP+HSTS headers, safeJsonSerialize utility, admin auth stubs |
+| security-fixer | Fix HIGH issues | ✅ Complete | CSP+HSTS headers, safeJsonSerialize utility, token-based admin auth |
 | test-writer | Fill coverage gaps | ✅ Complete | vitest installed, 3 test files (22 tests), test scripts added |
 | style-fixer | Apply style fixes | ✅ Complete | ESLint+Prettier installed, `as any` fixed, configs created |
 | git-organizer-v2 | Final repo organization | ✅ Complete | .gitignore updated, SYSTEMIC_IMPROVEMENT.md moved to docs/ |
@@ -27,7 +27,7 @@
 ### Security (5 files)
 - `vercel.json` — Added CSP-Report-Only + HSTS headers
 - `src/lib/sanitize.ts` — New safeJsonSerialize utility
-- `src/routes/admin/*/+page.server.ts` — 3 auth stub files (401 on load)
+- `src/routes/admin/*/+page.server.ts` — 3 admin auth server files (feature flag + session cookie flow)
 
 ### Testing (5 files)
 - `vitest.config.ts` — Vitest configuration
@@ -61,7 +61,7 @@ pnpm test    ✅ 113 tests pass (14 test files)
 
 - [x] Fix unused variable warnings (cleared in v0.3.1)
 - [ ] Update undici/workflow dependencies (10 vulnerabilities)
-- [ ] Implement real admin auth (currently returns 401)
+- [x] Admin auth hardening follow-ups (rate limiting and audit log shipped; MFA deferred until per-user admin identities exist)
 - [ ] Implement server-side age verification
 - [x] Migrate Svelte 4 patterns to Svelte 5 (GuideHighlights, IntentHubs, how-we-test)
 - [ ] Move generated hero images to CDN (183MB .git)

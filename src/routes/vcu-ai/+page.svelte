@@ -44,7 +44,7 @@
     class="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,12,24,0.78)_0%,rgba(7,12,24,0.9)_45%,rgba(7,12,24,1)_100%)]"
   ></div>
 
-  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8  pb-20">
     <header class="max-w-4xl mx-auto text-center mb-16">
       <div
         class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-blue/10 border border-slate-blue/30 text-slate-blue text-xs font-bold tracking-widest uppercase mb-6"

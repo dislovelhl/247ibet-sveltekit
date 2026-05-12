@@ -261,8 +261,8 @@
   />
 </svelte:head>
 
-<div class="min-h-screen bg-navy-black text-white" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 pb-20 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+<div class="min-h-dvh bg-navy-black text-white" role="presentation">
+  <div class="mx-auto">
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
@@ -372,7 +372,7 @@
             <p class="mt-3 text-sm leading-relaxed text-text-body/80">{card.body}</p>
           </div>
           <div
-            class="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold"
+            class="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold"
           >
             {card.cta}
             <ArrowRight class="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -448,7 +448,7 @@
                       {card.body}
                     </p>
                     <div
-                      class="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all"
+                      class="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-prestige-gold group-hover:text-white transition-all"
                     >
                       Enter Lobby
                       <ArrowRight class="h-3 w-3 group-hover:translate-x-1 transition-transform" />

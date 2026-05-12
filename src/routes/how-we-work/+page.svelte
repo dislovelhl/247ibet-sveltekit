@@ -25,7 +25,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-10">
       <ol class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-text-tertiary">
         <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
@@ -47,7 +47,7 @@
       >
         <div class="mb-5 flex items-center gap-2">
           <div class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               Transparency Report
             </p>
           </div>
@@ -71,7 +71,7 @@
           <p class="mt-4 text-sm leading-relaxed text-text-body">
             We disclose how affiliate revenue supports the site. This transparency allows you to judge our rankings with full context.
           </p>
-          <div class="mt-6 text-[10px] font-black uppercase tracking-widest text-slate-blue">Disclosure →</div>
+          <div class="mt-6 text-xs font-black uppercase tracking-widest text-slate-blue">Disclosure →</div>
         </article>
 
         <article class="glass-liquid group rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl">
@@ -79,7 +79,7 @@
           <p class="mt-4 text-sm leading-relaxed text-text-body">
             Partners do not control our conclusions. Our editorial team operates independently to ensure reviews stay focused on real player value.
           </p>
-          <div class="mt-6 text-[10px] font-black uppercase tracking-widest text-slate-blue">Standards →</div>
+          <div class="mt-6 text-xs font-black uppercase tracking-widest text-slate-blue">Standards →</div>
         </article>
 
         <article class="glass-liquid group rounded-3xl p-8 transition-all hover:bg-navy-raised hover:shadow-2xl">
@@ -87,7 +87,7 @@
           <p class="mt-4 text-sm leading-relaxed text-text-body">
             We test, verify, and update on a strict schedule. Our goal is to provide the most current information available in the Canadian market.
           </p>
-          <div class="mt-6 text-[10px] font-black uppercase tracking-widest text-slate-blue">Process →</div>
+          <div class="mt-6 text-xs font-black uppercase tracking-widest text-slate-blue">Process →</div>
         </article>
       </div>
     </section>

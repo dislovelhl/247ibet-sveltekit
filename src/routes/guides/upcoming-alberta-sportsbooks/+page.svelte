@@ -134,7 +134,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-6xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-6xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -204,7 +204,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
               </p>
             </div>
             <span
-              class="rounded-full border px-3 py-1 text-[10px] font-mono uppercase tracking-wider {entry.statusColor}"
+              class="rounded-full border px-3 py-1 text-xs font-mono uppercase tracking-wider {entry.statusColor}"
               >{entry.registrationStatus}</span
             >
           </div>

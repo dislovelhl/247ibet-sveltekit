@@ -178,7 +178,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-5xl">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-5xl">
   <nav aria-label="Breadcrumb" class="mb-6">
     <ol class="flex items-center gap-2 text-xs text-text-tertiary">
       <li><a href="/" class="hover:text-white">Home</a></li>
@@ -198,7 +198,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     ></div>
     <div class="relative z-10">
       <div
-        class="text-[10px] font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
+        class="text-xs font-mono text-prestige-gold uppercase tracking-[0.3em] mb-3 font-black"
       >
         Institutional Protocol: Security &amp; Compliance
       </div>
@@ -290,13 +290,13 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <table class="w-full border-collapse">
         <thead class="bg-white/5">
           <tr>
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Document type</th
             >
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Typical examples</th
             >
-            <th class="text-left px-5 py-4 text-[10px] uppercase tracking-[0.16em] text-gray-400"
+            <th class="text-left px-5 py-4 text-xs uppercase tracking-[0.16em] text-gray-400"
               >Why it matters</th
             >
           </tr>

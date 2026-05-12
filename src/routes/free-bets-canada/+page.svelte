@@ -89,7 +89,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
   />
 </svelte:head>
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 max-w-3xl space-y-14">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8  pb-20 max-w-3xl space-y-14">
   <header class="space-y-4">
     <div class="text-xs font-medium text-[#4A9EBF] uppercase tracking-widest">
       Promotions Guide · Canada
@@ -101,7 +101,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       How sportsbook welcome offers work, what the terms actually mean, and what to check before
       claiming at a Canadian sportsbook.
     </p>
-    <p class="text-[10px] text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
+    <p class="text-xs text-[#8492A6]">Updated March 2026 · 18+/19+ · AGCO compliant</p>
   </header>
 
   <AffiliateDisclosure />

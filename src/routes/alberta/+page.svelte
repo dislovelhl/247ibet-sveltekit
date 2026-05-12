@@ -118,7 +118,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-navy-black pb-20" role="presentation">
-  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 pt-24 lg:pt-40">
+  <div class="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-10 xl:px-16 ">
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol
         class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-text-tertiary"
@@ -147,12 +147,12 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <div class="floating-chrome inline-flex items-center gap-2 px-4 py-1.5 shadow-lg">
             <span class="live-dot" aria-hidden="true"></span>
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-white">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-white">
               Launch Watch
             </p>
           </div>
           <div class="floating-chrome px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]">
-            <p class="text-[10px] font-black uppercase tracking-[0.15em] text-prestige-gold">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
               AGLC · 18+ · Pending 2026
             </p>
           </div>
@@ -201,7 +201,7 @@
           <h2 class="font-display text-2xl font-black uppercase text-white !tracking-tighter">
             Alberta Launch Guidance
           </h2>
-          <p class="text-[10px] font-black uppercase tracking-widest text-prestige-gold">
+          <p class="text-xs font-black uppercase tracking-widest text-prestige-gold">
             Important markers for the 2026 go-live
           </p>
         </div>
