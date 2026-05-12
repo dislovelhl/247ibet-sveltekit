@@ -1,9 +1,0 @@
-
-> 247ibet-sveltekit@0.2.0 test:e2e /home/martin/Downloads/247ibet-sveltekit/.omx/team/execute-the-approved-mobile-ty/worktrees/worker-5
-> playwright test -- tests/e2e/mobile-typography.spec.ts
-
-Error: No tests found.
-Make sure that arguments are regular expressions matching test files.
-You may need to escape symbols like "$" or "*" and quote the arguments.
-
- ELIFECYCLE  Command failed with exit code 1.
