@@ -19,7 +19,7 @@ describe('Navbar', () => {
     expect(logo).toBeTruthy();
     expect(logo?.getAttribute('src')).toContain('/images/brand/logo.png');
 
-    const expectedLabels = ['Casino', 'Sportsbook', 'Interac Payouts', 'Bonuses', 'Safety', 'FAQ'];
+    const expectedLabels = ['Casino', 'Sportsbook', 'Interac', 'Fast Payouts', 'Safety', 'FAQ'];
     for (const label of expectedLabels) {
       const matchingLink = Array.from(container.querySelectorAll('a')).find(
         (a) => a.textContent?.trim() === label
