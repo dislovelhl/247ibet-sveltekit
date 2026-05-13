@@ -50,6 +50,12 @@ Core pages:
 
 Existing specialist docs remain under `docs/` for CI, testing, security, performance, accessibility, compliance, agent labels, and historical improvement reports.
 
+## License
+
+This repository is source-available for non-commercial use. Any commercial use
+requires a separate written commercial license from the copyright holder. See
+[`LICENSE`](LICENSE).
+
 ## Project map
 
 | Area             | Path                                                   | Purpose                                                                        |
