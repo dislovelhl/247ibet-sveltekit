@@ -21,115 +21,121 @@
   import { howToSchema } from '$lib/json-ld';
 
   const trustItems = [
-    { title: 'Trusted by Canadians', body: 'CAD-native account funding', icon: BadgeCheck },
-    { title: 'Timing varies', body: 'Deposits depend on operator and bank confirmation', icon: Clock3 },
-    { title: 'Verification first', body: 'Review cashier terms before sending funds', icon: ShieldCheck },
+    { title: 'Deposit-first guidance', body: 'Check cashier terms before funding', icon: BadgeCheck },
+    { title: 'Limits vary', body: 'Bank and operator limits can differ', icon: Clock3 },
+    { title: 'Budget before play', body: 'Set limits before sending funds', icon: ShieldCheck },
   ];
 
   const depositSteps = [
     {
-      title: 'Log in on the operating platform',
-      body: 'Open the separate platform account and confirm your profile details are current.',
+      title: 'Confirm the live cashier method',
+      body: 'Open the operating-platform cashier and verify which CAD funding method is currently available before planning a deposit.',
     },
     {
-      title: 'Navigate to the Cashier',
-      body: 'Choose Deposit, then select Interac e-Transfer as your payment method.',
+      title: 'Check minimums, maximums, and fees',
+      body: 'Compare the cashier amount range with your bank transfer limit and any account-plan fees.',
     },
     {
-      title: 'Enter your deposit amount',
-      body: 'Set a CAD amount that fits your limit and review any active bonus terms.',
+      title: 'Review bonus impact first',
+      body: 'Read bonus terms before funding so wagering, game restrictions, or expiry rules do not surprise you later.',
     },
     {
-      title: 'Confirm the transaction',
-      body: 'Follow the Interac prompts from your bank to authorize the transfer.',
+      title: 'Set a responsible budget',
+      body: 'Choose a deposit amount that fits your entertainment budget and use platform limits where available.',
     },
     {
-      title: 'Funds appear after platform confirmation',
-      body: 'Once confirmed by the separate operating platform, the balance appears in its cashier.',
+      title: 'Wait for confirmed account credit',
+      body: 'Do not assume funds are playable until the separate operating platform confirms the deposit in the cashier balance.',
     },
   ];
 
   const withdrawalSteps = [
     {
-      title: 'Choose Interac e-Transfer',
-      body: 'Select Interac in the withdrawal section of the cashier.',
+      title: 'Match account details',
+      body: 'Use banking details that match the gaming account owner to reduce verification friction.',
     },
     {
-      title: 'Confirm your account is verified',
-      body: 'KYC verification helps prevent avoidable payout delays.',
+      title: 'Complete KYC early',
+      body: 'Identity checks may be required before withdrawals, so complete them before depositing larger amounts.',
     },
     {
-      title: 'Wait for operator approval',
-      body: 'Withdrawals are reviewed for account, bonus, and security checks.',
+      title: 'Keep deposit receipts',
+      body: 'Save transaction references until the cashier balance and account history both show the funded amount.',
     },
     {
-      title: 'Accept the transfer',
-      body: 'Accept the Interac notice from email or SMS into your bank.',
+      title: 'Avoid duplicate attempts',
+      body: 'If a deposit is pending, wait for bank and operator confirmation before trying the same transfer again.',
     },
     {
-      title: 'Bank-side settlement',
-      body: 'Approved transfers settle according to the operator, Interac, and bank-side process.',
+      title: 'Know the exit path',
+      body: 'Review withdrawal eligibility, payout timing, and bonus restrictions before the first deposit.',
     },
   ];
 
   const timingRows = [
     {
-      service: 'Interac Deposit',
-      timing: 'Operator/bank dependent',
-      limit: 'CAD $10 - $3,000',
-      notes: 'Timing depends on operator acceptance, bank confirmation, and account checks.',
+      service: 'Cashier availability',
+      timing: 'Check live before funding',
+      limit: 'Operator-defined',
+      notes: 'Available deposit methods, limits, and fee notices can change in the live cashier.',
     },
     {
-      service: 'Interac Withdrawal',
-      timing: 'Post-approval timing varies',
-      limit: 'CAD $20 - $5,000',
-      notes: 'Approval speed depends on verification and bonus review.',
+      service: 'Deposit confirmation',
+      timing: 'Bank/operator dependent',
+      limit: 'Account-specific',
+      notes: 'A transfer is not complete until the platform confirms the playable balance.',
     },
     {
-      service: 'Account Verification',
-      timing: 'Instant - 24 hours',
+      service: 'Bonus eligibility',
+      timing: 'Before deposit',
+      limit: 'Offer-specific',
+      notes: 'Some offers require opt-in, minimum deposit amounts, or specific payment eligibility.',
+    },
+    {
+      service: 'Account verification',
+      timing: 'Before cashout when requested',
       limit: 'N/A',
-      notes: 'Required before some withdrawal requests can be released.',
+      notes: 'KYC status affects withdrawal readiness even though this page focuses on deposits.',
     },
   ];
 
   const faqItems = [
     {
-      question: 'How long does an Interac withdrawal take?',
+      question: 'What should I check before making a casino deposit?',
       answer:
-        'Interac payout timing depends on the separate gaming platform, operator approval, account verification, bonus review, and bank-side completion. Verify live cashier terms before withdrawing.',
+        'Confirm the live cashier method, minimum and maximum amounts, possible fees, bonus eligibility, responsible-play limits, and whether your account details match your banking details.',
     },
     {
-      question: 'Are there fees for using Interac?',
+      question: 'Is the /deposit page the same as the Interac guide?',
       answer:
-        'Interac is commonly positioned as a lower-friction CAD banking route. Your bank account plan may still set transfer conditions, so review bank and operator terms before funding.',
+        'No. This page is the general deposit-readiness checklist. The Interac page explains the Interac e-Transfer rail, including deposit and withdrawal timing caveats.',
     },
     {
-      question: 'What is the minimum Interac deposit?',
+      question: 'Can a deposit affect withdrawals later?',
       answer:
-        'A typical minimum is CAD $10, though limits can vary by account, bank, and current cashier settings.',
+        'Yes. Bonus opt-ins, mismatched account details, missing KYC, or unresolved payment checks can slow or block later withdrawal requests.',
     },
     {
-      question: 'Is Interac safer than cards?',
+      question: 'Should I deposit before reading bonus terms?',
       answer:
-        'Interac uses your bank authentication flow and avoids entering card details in the cashier, which makes it a strong CAD payment option for many Canadian players.',
+        'No. Read the offer terms first, including minimum deposit, wagering requirements, game restrictions, expiry, and payment-method eligibility.',
     },
   ];
 
   const quickCards = [
     {
-      href: '/guides/interac-e-transfer-casino',
-      title: 'How to Deposit with Interac',
-      body: 'Review the bank handoff, cashier prompts, and first-deposit checks.',
+      href: '/interac',
+      title: 'Interac e-Transfer Details',
+      body: 'Use the dedicated Interac page for rail-specific deposit, withdrawal, and bank-side timing notes.',
       icon: Landmark,
-      cta: 'View Deposit Guide',
+      cta: 'Open Interac Guide',
     },
     {
       href: '/fast-payouts',
-      title: 'How to Withdraw with Interac',
-      body: 'Compare payout timing, KYC friction, and approval checkpoints.',
+      title: 'Withdrawal Readiness',
+      body: 'Review payout timing, KYC friction, and approval checkpoints before you fund an account.',
       icon: Banknote,
-      cta: 'View Withdrawal Guide',
+      cta: 'View Payout Guide',
     },
   ];
 
@@ -147,23 +153,23 @@
 </script>
 
 <svelte:head>
-  <title>Interac e-Transfer Casino Deposit Guide Canada | 247iBET</title>
+  <title>Casino Deposit Guide Canada: Cashier Checks & Limits | 247iBET</title>
   <meta
     name="description"
-    content="Interac e-Transfer casino deposit and withdrawal guide for Canada with timing expectations, KYC caveats, and cashier-verification reminders."
+    content="Canadian casino deposit checklist covering cashier methods, limits, bonus terms, verification readiness, and responsible funding reminders."
   />
-  <meta property="og:title" content="Interac e-Transfer Casino Deposit Guide Canada" />
+  <meta property="og:title" content="Casino Deposit Guide Canada: Cashier Checks & Limits" />
   <meta
     property="og:description"
-    content="How Interac e-Transfer casino deposits and withdrawals work in Canada, including approval, KYC, and bank-side timing caveats."
+    content="How to check casino deposit terms in Canada before funding an account, including limits, bonus impact, KYC readiness, and cashier confirmation."
   />
   <link rel="canonical" href={canonicalUrl('/deposit')} />
   <JsonLd schema={faqSchema} />
   <JsonLd
     schema={howToSchema({
-      name: 'How to evaluate Interac casino deposits in Canada',
+      name: 'How to check casino deposit terms in Canada',
       description:
-        'Step-by-step guide to checking Interac e-Transfer cashier terms before funding a casino account.',
+        'Step-by-step guide to checking cashier terms, limits, bonus impact, and verification readiness before funding a casino account.',
       steps: depositSteps.map((step) => ({
         name: step.title,
         text: step.body,
@@ -180,9 +186,7 @@
       >
         <li><a href="/" class="transition-colors hover:text-prestige-gold">Home</a></li>
         <li aria-hidden="true" class="text-white/20">/</li>
-        <li><a href="/interac" class="transition-colors hover:text-prestige-gold">Interac</a></li>
-        <li aria-hidden="true" class="text-white/20">/</li>
-        <li class="text-prestige-gold">Deposit &amp; Withdraw</li>
+        <li class="text-prestige-gold">Deposit Guide</li>
       </ol>
     </nav>
 
@@ -192,7 +196,7 @@
       class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
     >
       <BackgroundAtmosphere
-        src="/images/generated/interac-payment-hero.webp"
+        src="/images/generated/interac-payment-hero.png"
         parallaxMultiplier={0.4}
       />
       <div
@@ -208,24 +212,24 @@
             class="rounded-full border border-prestige-gold/20 bg-prestige-gold/10 px-4 py-1.5 shadow-[0_0_15px_rgba(212,148,58,0.15)]"
           >
             <p class="text-xs font-black uppercase tracking-[0.15em] text-prestige-gold">
-              CAD Native · Bank Secured
+              Deposit Checklist · Canada
             </p>
           </div>
           <span class="text-luxury tracking-boutique text-[11px] text-prestige-gold/60"
-            >Deposit Guide</span
+            >Funding Readiness</span
           >
         </div>
 
         <h1 class="page-hero-title !tracking-tighter">
-          Deposit &amp; Withdraw <br />
-          with
-          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Interac</span
+          Deposit Smarter <br />
+          Before You
+          <span class="text-prestige-gold drop-shadow-[0_0_30px_rgba(212,148,58,0.4)]">Fund</span
           >
         </h1>
 
         <p class="mt-8 max-w-2xl text-lg leading-relaxed text-text-body md:text-xl font-light">
-          Interac e-Transfer funding guidance for Canadian players, including bank handoff, operator
-          approval, verification checks, and payout timing caveats.
+          A Canadian deposit-readiness checklist for checking cashier methods, limits, bonus impact,
+          verification readiness, and responsible-play controls before sending funds.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
@@ -233,11 +237,11 @@
             href={IBET_URLS.register}
             class="hero-cta-primary group min-w-[200px] shimmer-effect btn-magnetic"
           >
-            Check Platform Terms
+            Check Live Cashier
             <ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </SafeExternalLink>
           <a href="#timing" class="hero-cta-secondary min-w-[200px] glass-thin btn-magnetic">
-            Check Timing
+            Review Checklist
           </a>
         </div>
       </div>
@@ -275,12 +279,12 @@
           </div>
           <div>
             <p class="font-black text-white">
-              Interac e-Transfer payout timing depends on operator approval, verification, bonus
-              review, and bank-side completion.
+              Deposit terms depend on the live operating-platform cashier, account status, bank limits,
+              bonus eligibility, and responsible-play controls.
             </p>
             <p class="mt-2 max-w-3xl text-sm leading-6 text-text-body">
-              Treat timing windows as estimates and verify the separate gaming platform's live
-              cashier terms before relying on them.
+              Treat this page as a pre-deposit checklist, not a promise that any method, amount, or
+              bonus term is currently available.
             </p>
           </div>
         </div>
@@ -288,7 +292,7 @@
           href="/fast-payouts"
           class="inline-flex items-center gap-2 text-sm font-black text-prestige-gold transition-colors hover:text-prestige-gold-light"
         >
-          Learn more about timing
+          Learn about payouts
           <ArrowRight class="h-4 w-4" aria-hidden="true" />
         </a>
       </div>
@@ -302,7 +306,7 @@
           >
             <Upload class="h-7 w-7" aria-hidden="true" />
           </div>
-          <h2 class="text-3xl font-black text-white">How to Deposit</h2>
+          <h2 class="text-3xl font-black text-white">Deposit Checklist</h2>
         </div>
         <ol class="material-group space-y-2 p-2">
           {#each depositSteps as step, index}
@@ -327,7 +331,7 @@
           >
             <Download class="h-7 w-7" aria-hidden="true" />
           </div>
-          <h2 class="text-3xl font-black text-white">How to Withdraw</h2>
+          <h2 class="text-3xl font-black text-white">Before You Deposit</h2>
         </div>
         <ol class="material-group space-y-2 p-2">
           {#each withdrawalSteps as step, index}
@@ -347,7 +351,7 @@
     </section>
 
     <section class="material-panel mt-12 overflow-hidden p-6 md:p-8">
-      <h2 class="text-3xl font-black text-white">Timing &amp; Expectation Limits</h2>
+      <h2 class="text-3xl font-black text-white">Cashier Terms to Verify</h2>
       <div class="material-cell table-scroll-wrap mt-7 rounded-2xl">
         <table class="w-full min-w-[760px] text-left text-sm">
           <thead>
@@ -409,7 +413,7 @@
     </section>
 
     <section class="material-panel mt-12 p-6 md:p-8">
-      <h2 class="text-3xl font-black text-white">Interac FAQ</h2>
+      <h2 class="text-3xl font-black text-white">Deposit FAQ</h2>
       <div class="mt-6 divide-y divide-white/8">
         {#each faqItems as item, index}
           <div>
@@ -444,14 +448,14 @@
     <section class="material-panel mt-12 overflow-hidden p-7 shadow-2xl md:p-10">
       <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div>
-          <h2 class="text-3xl font-black text-white md:text-4xl">Ready to verify cashier terms?</h2>
+          <h2 class="text-3xl font-black text-white md:text-4xl">Ready to check the live cashier?</h2>
           <p class="mt-3 text-base text-text-body">
-            Review current platform terms, eligibility, and responsible-play controls before
-            depositing.
+            Review current deposit terms, eligibility, and responsible-play controls before
+            sending funds.
           </p>
         </div>
         <SafeExternalLink href={IBET_URLS.register} class="hero-cta-primary">
-          Visit Platform
+          Open Platform
           <ArrowRight class="h-5 w-5" aria-hidden="true" />
         </SafeExternalLink>
       </div>

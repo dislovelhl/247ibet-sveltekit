@@ -125,7 +125,7 @@ import { articleSchema } from '$lib/json-ld';
       class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56"
     >
       <img
-        src="/images/generated/bonus-wagering-hero.webp"
+        src="/images/generated/bonus-wagering-hero.png"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />

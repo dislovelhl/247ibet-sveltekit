@@ -113,7 +113,7 @@ describe('IBET_CTA / IBET_DISCLAIMER (real module)', () => {
   it('uses direct but non-inducement CTAs', () => {
     expect(IBET_CTA.primary).toBe('Visit Platform');
     expect(IBET_CTA.register).toBe('Start Signup Handoff');
-    expect(IBET_CTA.deposit).toBe('Compare Payout Guidance');
+    expect(IBET_CTA.deposit).toBe('Deposit Checklist');
     expect(IBET_CTA.bonus).toBe('Review Bonus Terms');
     expect(Object.values(IBET_CTA)).toContain('Visit Platform');
   });

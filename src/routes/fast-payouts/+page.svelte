@@ -116,7 +116,7 @@
   <!-- Editorial image callout -->
   <div class="relative h-44 md:h-56 rounded-2xl overflow-hidden mb-10">
     <img
-      src="/images/generated/fast-payouts-hero.webp"
+      src="/images/generated/fast-payouts-hero.png"
       alt="Fast Interac e-Transfer casino payouts in Canada"
       class="h-full w-full object-cover"
     />

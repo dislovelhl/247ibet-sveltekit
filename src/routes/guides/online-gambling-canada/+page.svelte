@@ -4,7 +4,7 @@
   import JsonLd from '$lib/components/JsonLd.svelte';
 
   const depositChecks = [
-    { title: 'Confirm provincial registration', detail: 'Ontario: verify on the iGaming Ontario directory. Alberta: confirm PlayAlberta or licensed operator status via AGLC.' },
+    { title: 'Confirm provincial registration', detail: 'Ontario: verify on the iGaming Ontario directory. Alberta: confirm the official provincial platform or licensed operator status via AGLC.' },
     { title: 'Check Interac cashier support', detail: 'Interac deposits and withdrawals are standard at most AGCO-licensed sites. Confirm both directions before funding your account.' },
     { title: 'Read bonus wagering terms', detail: 'Wagering requirements of 30x–50x are typical. Always check expiry dates and maximum withdrawal caps tied to bonuses.' },
     { title: 'Verify responsible gambling tools', detail: 'Deposit limits, session reminders, cooling-off tools, and self-exclusion access are legally required at Ontario-licensed operators.' },
@@ -105,7 +105,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
       Yes, but the rules are provincial. Ontario operates a regulated private-operator market under
       iGaming Ontario and the AGCO. Alberta's regulated online gambling is currently available
-      through PlayAlberta. Players in other provinces should check their local lottery corporation
+      through the official provincial platform. Players in other provinces should check their local lottery corporation
       for regulated options.
     </p>
   </div>
@@ -126,7 +126,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
       <div class="navy-card rounded-2xl border border-white/10 p-6">
         <h3 class="font-bold text-white text-lg mb-3">Alberta</h3>
         <ul class="space-y-2 text-sm text-gray-400">
-          <li>Regulated option: PlayAlberta (AGLC-operated)</li>
+          <li>Regulated option: the official provincial platform (AGLC-operated)</li>
           <li>Private-operator open market expected — tracking in progress</li>
           <li>247iBET publishes editorial watchlist context for 2026 operator-readiness signals</li>
           <li>Check current status before registering at any site</li>

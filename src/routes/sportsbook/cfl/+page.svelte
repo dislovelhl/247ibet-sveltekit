@@ -15,7 +15,7 @@
     keywords: 'CFL betting Canada, Canadian football betting, Grey Cup betting',
     heroSubheading:
       'Bet on Canadian football with regular-season team coverage, Grey Cup futures, and market notes shaped by CFL-specific rules such as three downs and the rouge.',
-    heroImage: '/images/generated/sportsbook-football-hero.webp',
+    heroImage: '/images/generated/sportsbook-football-hero.png',
     overviewTitle: 'CFL betting coverage',
     overviewIntro:
       'CFL betting is built around Canadian football, not a copy of the NFL board. The rules and scoring details change how totals, spreads, and late-game situations are priced.',

@@ -15,7 +15,7 @@
     keywords: 'UFC betting Canada, MMA betting Canada, UFC odds Canada',
     heroSubheading:
       'Follow fight nights and major PPV cards with method-of-victory, round, and prop markets, plus live UFC odds that move as the fight develops.',
-    heroImage: '/images/generated/sportsbook-ufc-hero.webp',
+    heroImage: '/images/generated/sportsbook-ufc-hero.png',
     overviewTitle: 'How UFC betting is structured',
     overviewIntro:
       'MMA betting behaves differently from team sports because the menu is built around the matchup, the method of finish, and how quickly the market reacts during fight week.',

@@ -59,7 +59,7 @@
 
     <header class="material-panel relative mb-12 min-h-[400px] overflow-hidden rounded-[2.5rem] shadow-2xl">
       <BackgroundAtmosphere 
-        src="/images/generated/contact-support-hero.webp" 
+        src="/images/generated/contact-support-hero.png"
         parallaxMultiplier={0.4}
       />
       <div class="absolute inset-0 bg-gradient-to-r from-navy-black via-navy-black/80 to-transparent"></div>

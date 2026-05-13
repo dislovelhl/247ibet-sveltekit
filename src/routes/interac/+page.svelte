@@ -180,7 +180,7 @@
       class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
     >
       <BackgroundAtmosphere
-        src="/images/generated/interac-payment-hero.webp"
+        src="/images/generated/interac-payment-hero.png"
         parallaxMultiplier={0.4}
       />
       <div

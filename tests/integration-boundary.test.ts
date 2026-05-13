@@ -118,7 +118,7 @@ describe('central brand config avoids repo-owned gaming claims', () => {
     expect(IBET_CTA.primary).toBe('Visit Platform');
     expect(IBET_CTA.casino).toBe('Explore Casino Guide');
     expect(IBET_CTA.sports).toBe('Explore Sportsbook Guide');
-    expect(IBET_CTA.deposit).toBe('Compare Payout Guidance');
+    expect(IBET_CTA.deposit).toBe('Deposit Checklist');
     expect(IBET_CTA.register).toBe('Start Signup Handoff');
 
     expect(ctaText).not.toMatch(/Play Now|Play Casino|Bet Now|Fast Payouts|Get Paid Fast/i);

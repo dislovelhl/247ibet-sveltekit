@@ -7,7 +7,7 @@ import { articleSchema } from '$lib/json-ld';
 import { CheckCircle2 } from 'lucide-svelte';
 
   const pageName = 'Baccarat Online';
-  const heroImage = '/images/generated/casino-baccarat-hero.webp';
+  const heroImage = '/images/generated/casino-baccarat-hero.png';
 
   const intro = {
     eyebrow: 'Baccarat online Canada',

@@ -15,7 +15,7 @@
     keywords: 'NHL betting Canada, hockey betting Canada, NHL odds Canada',
     heroSubheading:
       'Track Canadian teams, compare puck line and total markets, and follow live NHL odds throughout the regular season, playoffs, and Stanley Cup futures board.',
-    heroImage: '/images/generated/sportsbook-nhl-hero.webp',
+    heroImage: '/images/generated/sportsbook-nhl-hero.png',
     overviewTitle: 'Canadian NHL betting coverage',
     overviewIntro:
       'NHL betting pages need to match how Canadian fans actually follow hockey: national broadcasts, rivalry games, playoff races, and futures that stay open for months.',

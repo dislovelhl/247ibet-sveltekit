@@ -111,7 +111,7 @@
     </p>
     <div class="material-cell relative my-6 h-44 overflow-hidden rounded-2xl">
       <img
-        src="/images/generated/bonus-wagering-hero.webp"
+        src="/images/generated/bonus-wagering-hero.png"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />
