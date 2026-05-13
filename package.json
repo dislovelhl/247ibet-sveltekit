@@ -62,7 +62,7 @@
     "@opentelemetry/api": "^1.9.1",
     "@vercel/analytics": "^1.0.0",
     "@vercel/speed-insights": "^1.0.0",
-    "braintrust": "3.9.0",
+    "braintrust": "3.10.0",
     "lucide-svelte": "^1.0.1",
     "workflow": "4.2.4"
   },
