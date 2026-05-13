@@ -27,26 +27,22 @@
     {
       label: 'Interac payouts',
       body: 'Often completed after operator approval; timing varies by review and bank processing',
-      image: '/images/generated/elite-assets-set.png',
-      position: '0% 0%',
+      image: '/images/generated/fast-payouts-hero.png',
     },
     {
       label: 'Casino',
       body: 'Game-category guides for slots, live dealer, and table games',
-      image: '/images/generated/elite-assets-set.png',
-      position: '100% 0%',
+      image: '/images/generated/casino-premium-hero.png',
     },
     {
       label: 'Sportsbook',
       body: 'Market education for NHL, NBA, NFL, UFC, soccer, and live betting',
-      image: '/images/generated/elite-assets-set.png',
-      position: '0% 100%',
+      image: '/images/generated/sportsbook-premium-hero.png',
     },
     {
       label: 'Safety',
       body: 'KYC, limits, self-exclusion, and support resources',
-      image: '/images/generated/elite-assets-set.png',
-      position: '100% 100%',
+      image: '/images/generated/elite-hero-abstract.png',
     },
   ];
 
@@ -441,11 +437,11 @@
           <div
             class="relative h-32 w-full overflow-hidden rounded-2xl bg-black/40 ring-1 ring-white/10"
           >
-            <div 
-              class="absolute inset-0 bg-cover bg-no-repeat transition-transform duration-700 group-hover:scale-125"
-              style="background-image: url({item.image}); background-position: {item.position}; background-size: 200% 200%;"
+            <div
+              class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110"
+              style="background-image: url({item.image});"
             ></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 via-navy-black/20 to-transparent"></div>
           </div>
           <div>
             <p
