@@ -15,7 +15,7 @@
     keywords: 'live betting Canada, in-play betting Canada, live odds Canada',
     heroSubheading:
       'Understand how live odds update during games, where in-play markets are deepest, and how cash-out and mobile execution fit into a live betting workflow.',
-    heroImage: '/images/generated/sportsbook-live-betting-hero.webp',
+    heroImage: '/images/generated/sportsbook-live-betting-hero.png',
     overviewTitle: 'How live betting works',
     overviewIntro:
       'Live or in-play betting updates the market after the event starts. The biggest difference from pre-game betting is speed: odds move with the score, time, and momentum of the event.',

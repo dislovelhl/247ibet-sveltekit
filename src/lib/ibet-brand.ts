@@ -123,7 +123,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Welcome offer snapshot — verify terms on the gaming platform',
     summary:
       'Creative snapshot: new-player bonus language may appear on platform materials. Exact bonus values, deposit minimums, wagering requirements, eligible games, expiry, and eligibility must be verified on the separate gaming platform before opting in.',
-    image: '/images/creatives/welcome-bonus-back.webp',
+    image: '/images/creatives/welcome-bonus-back.png',
     alt: '247iBET archived welcome offer creative snapshot requiring current terms verification.',
     observedText: ['ARCHIVED BONUS CREATIVE', 'VERIFY CURRENT TERMS', '247iBET.ca'],
   },
@@ -135,7 +135,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Ongoing snapshot — verify terms on the gaming platform',
     summary:
       'Creative snapshot: every-deposit bonus language may appear on platform materials. Confirm current caps, eligibility, jurisdiction, and campaign windows on the separate gaming platform.',
-    image: '/images/creatives/every-deposit-bonus.webp',
+    image: '/images/creatives/every-deposit-bonus.png',
     alt: '247iBET archived every-deposit bonus creative requiring current terms verification.',
     observedText: ['ARCHIVED DEPOSIT BONUS CREATIVE'],
   },
@@ -147,7 +147,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'May 1–10 snapshot — verify terms on the gaming platform',
     summary:
       "Creative snapshot: Mother's Day Double Rewards used deposit-and-bonus language. Check current values, wagering, eligible games, expiry, and availability on the separate gaming platform.",
-    image: '/images/creatives/mothers-day-double-rewards.webp',
+    image: '/images/creatives/mothers-day-double-rewards.png',
     alt: "247iBET archived Mother's Day Double Rewards creative requiring current terms verification.",
     observedText: [
       "Mother's Day Double Rewards",
@@ -163,7 +163,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Sep. 26 at Rebel, Toronto',
     summary:
       'We were proud to sponsor Unified MMA 63 with a Live Bonus event at Rebel Toronto. Check the separate gaming platform for current fight-night promotions.',
-    image: '/images/creatives/live-bonus-unified-mma.webp',
+    image: '/images/creatives/live-bonus-unified-mma.png',
     alt: '247iBET Unified MMA 63: Live Bonus. Sep. 26 Rebel Toronto.',
     observedText: ['LIVE BONUS', 'SEP.26', 'REBEL · TORONTO', '247iBET UNIFIED MMA 63'],
   },
@@ -199,7 +199,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Jan. 9–11 at Toronto International Centre',
     summary:
       'We were at the Toronto International Centre Jan. 9–11 for the Chase the Big Win motorcycle supershow. Join us at our next event appearance.',
-    image: '/images/creatives/chase-the-big-win.webp',
+    image: '/images/creatives/chase-the-big-win.png',
     alt: 'Chase the Big Win event: Jan. 9–11, Toronto International Centre.',
     observedText: ['CHASE THE BIG WIN', 'JAN. 9–11', 'TORONTO | INTERNATIONAL CENTRE'],
   },
@@ -211,7 +211,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Oct. 12–19 at Toronto International Centre',
     summary:
       'Our team was at the TABOO Toronto event Oct. 12–19. Stay tuned for our next event appearance.',
-    image: '/images/creatives/play-for-pleasure.webp',
+    image: '/images/creatives/play-for-pleasure.png',
     alt: 'TABOO event: Play for Pleasure. Oct. 12–19, Toronto International Centre.',
     observedText: [
       'PLAY FOR PLEASURE',
@@ -228,7 +228,7 @@ export const IBET_CREATIVE_SNAPSHOTS = [
     period: 'Nov. 14–16 at Edmonton Expo Centre',
     summary:
       'We connected with players at TABOO Edmonton Nov. 14–16. Check our events page for upcoming appearances near you.',
-    image: '/images/creatives/spin-your-fantasy.webp',
+    image: '/images/creatives/spin-your-fantasy.png',
     alt: 'TABOO Edmonton: Spin Your Fantasy. Nov. 14–16, Edmonton Expo Centre.',
     observedText: ['SPIN YOUR FANTASY', 'NOV. 14–16', 'EDMONTON EXPO CENTRE', '247iBET TABOO'],
   },
@@ -247,9 +247,9 @@ export const IBET_CTA = {
   casino: 'Explore Casino Guide',
   sports: 'Explore Sportsbook Guide',
   bonus: 'Review Bonus Terms',
-  deposit: 'Compare Payout Guidance',
+  deposit: 'Deposit Checklist',
   register: 'Start Signup Handoff',
-  fastPayout: 'Compare Payout Guidance',
+  fastPayout: 'Deposit Checklist',
 } as const;
 
 export const IBET_DISCLAIMER =

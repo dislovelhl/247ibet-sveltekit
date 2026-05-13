@@ -258,8 +258,8 @@
     },
     {
       href: '/deposit',
-      title: 'Deposits and withdrawals',
-      body: 'Review deposit and withdrawal options.',
+      title: 'Deposit checklist',
+      body: 'Review cashier checks before funding an account.',
       icon: CreditCard,
     },
     {
@@ -319,7 +319,7 @@
 
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <BackgroundAtmosphere
-        src="/images/generated/sportsbook-premium-hero.webp"
+        src="/images/generated/sportsbook-premium-hero.png"
         parallaxMultiplier={0.4}
       />
       <div

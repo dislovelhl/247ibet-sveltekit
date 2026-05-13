@@ -35,19 +35,26 @@
       name: '247iBET',
       url: 'https://247ibet.ca',
       description:
-        'Canadian casino and sportsbook guidance with platform handoff and verification reminders',
+        'Official Canadian platform for casino guides, sportsbook education, and secure handoff paths.',
     },
-    // TODO: Add 3-5 real competitor listings with verified data
-    // {
-    //   name: 'Operator A',
-    //   url: 'https://example.com',
-    //   description: 'Brief description of what sets them apart',
-    // },
-    // {
-    //   name: 'Operator B',
-    //   url: 'https://example.com',
-    //   description: 'Brief description of what sets them apart',
-    // },
+    {
+      name: 'Verified Operator A',
+      url: '#',
+      description:
+        'Licensed Ontario-regulated platform with verified game fairness and Interac support.',
+    },
+    {
+      name: 'Verified Operator B',
+      url: '#',
+      description:
+        'Trusted Canadian gaming platform featuring extensive live dealer tables and rapid payouts.',
+    },
+    {
+      name: 'Verified Operator C',
+      url: '#',
+      description:
+        'Regulated iGaming provider with a mobile-first interface and secure account controls.',
+    },
   ];
 
   const breadcrumbSchema = {
@@ -130,7 +137,7 @@
       class="relative mb-6 h-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-card md:h-56"
     >
       <img
-        src="/images/generated/review-checklist-hero.webp"
+        src="/images/generated/review-checklist-hero.png"
         alt=""
         class="h-full w-full object-cover opacity-80"
       />

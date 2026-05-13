@@ -15,7 +15,7 @@
     keywords: 'sports betting app Canada, mobile sportsbook Canada, bet on phone',
     heroSubheading:
       'See what a strong mobile sportsbook experience should deliver on phone: fast navigation, readable live odds, account access, and current-device support for Canadian bettors.',
-    heroImage: '/images/generated/sportsbook-premium-hero.webp',
+    heroImage: '/images/generated/sportsbook-premium-hero.png',
     overviewTitle: 'What matters on a mobile sportsbook',
     overviewIntro:
       'Mobile betting is less about marketing labels and more about usability. Canadian bettors need a phone experience that handles live pricing, deposits, and ticket review without extra friction.',

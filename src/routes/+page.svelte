@@ -27,26 +27,22 @@
     {
       label: 'Interac payouts',
       body: 'Often completed after operator approval; timing varies by review and bank processing',
-      image: '/images/generated/elite-assets-set.png',
-      position: '0% 0%',
+      image: '/images/generated/fast-payouts-hero.png',
     },
     {
       label: 'Casino',
       body: 'Game-category guides for slots, live dealer, and table games',
-      image: '/images/generated/elite-assets-set.png',
-      position: '100% 0%',
+      image: '/images/generated/casino-premium-hero.png',
     },
     {
       label: 'Sportsbook',
       body: 'Market education for NHL, NBA, NFL, UFC, soccer, and live betting',
-      image: '/images/generated/elite-assets-set.png',
-      position: '0% 100%',
+      image: '/images/generated/sportsbook-premium-hero.png',
     },
     {
       label: 'Safety',
       body: 'KYC, limits, self-exclusion, and support resources',
-      image: '/images/generated/elite-assets-set.png',
-      position: '100% 100%',
+      image: '/images/generated/elite-hero-abstract.png',
     },
   ];
 
@@ -180,30 +176,30 @@
   const casinoCards = [
     {
       title: 'Slots',
-      body: 'Slots, live dealer, blackjack, roulette, baccarat, and jackpots',
+      body: 'Themed reels, megaways, and jackpot slots.',
       href: '/casino/slots',
-      image: '/images/generated/casino-slots-hero.webp',
+      image: '/images/generated/casino-slots-hero.png',
       alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
     {
       title: 'Live Casino',
       body: 'Best for live dealer tables and streamed casino play',
       href: '/casino/live-casino',
-      image: '/images/generated/casino-live-hero.webp',
+      image: '/images/generated/casino-live-hero.png',
       alt: 'Live dealer casino table with cards, chips, and premium studio lighting.',
     },
     {
       title: 'Table Games',
       body: 'Best for classic casino rules and mobile table games',
       href: '/casino/blackjack',
-      image: '/images/generated/casino-blackjack-hero.webp',
+      image: '/images/generated/casino-blackjack-hero.png',
       alt: 'Classic blackjack table on a dark felt surface with polished chips.',
     },
     {
       title: 'Jackpots',
-      body: 'Check terms, RTP information, and provider availability',
+      body: 'RTP info and provider availability.',
       href: '/casino',
-      image: '/images/generated/casino-slots-hero.webp',
+      image: '/images/generated/casino-slots-hero.png',
       alt: 'Luxury casino slot reels and jackpots with a dark premium interface.',
     },
   ];
@@ -213,28 +209,28 @@
       title: 'Sports Betting',
       body: 'NHL, NBA, NFL, UFC, soccer, tennis, parlays, and futures',
       href: '/sportsbook',
-      image: '/images/generated/sportsbook-premium-hero.webp',
+      image: '/images/generated/sportsbook-premium-hero.png',
       alt: 'Premium sportsbook dashboard showing major leagues, odds, and betting markets.',
     },
     {
       title: 'Live Betting',
-      body: 'Confirm live market rules, accepted price, and settlement terms',
+      body: 'Live market rules, accepted price, and settlement.',
       href: '/sportsbook/live-betting',
-      image: '/images/generated/sportsbook-live-betting-hero.webp',
+      image: '/images/generated/sportsbook-live-betting-hero.png',
       alt: 'Live betting interface with rapidly updating odds and match coverage.',
     },
     {
       title: 'Hockey',
       body: 'Hockey markets for Canadian bettors',
       href: '/sportsbook/nhl',
-      image: '/images/generated/sportsbook-nhl-hero.webp',
+      image: '/images/generated/sportsbook-nhl-hero.png',
       alt: 'Hockey betting card with rink-inspired visuals and Canadian sports context.',
     },
     {
       title: 'Basketball',
       body: 'Basketball markets, props, and parlays',
       href: '/sportsbook/nba',
-      image: '/images/generated/sportsbook-nba-hero.webp',
+      image: '/images/generated/sportsbook-nba-hero.png',
       alt: 'Basketball betting card with props, parlays, and game-time odds.',
     },
   ];
@@ -242,30 +238,30 @@
   const guideCards = [
     {
       title: 'How Signup Handoffs Work in Canada',
-      body: 'A beginner guide to eligibility, verification, and market checks.',
+      body: 'Eligibility, verification, and market checks.',
       href: '/guides/single-game-betting-canada',
-      image: '/images/generated/sportsbook-parlay-hero.webp',
+      image: '/images/generated/sportsbook-parlay-hero.png',
       alt: 'Canadian sports betting guide card with parlays and strategy visuals.',
     },
     {
       title: 'Casino Game Categories Explained',
       body: 'Learn the major casino categories before verifying availability.',
       href: '/casino',
-      image: '/images/generated/casino-premium-hero.webp',
+      image: '/images/generated/casino-premium-hero.png',
       alt: 'Premium casino guide card with a refined dark-luxury atmosphere.',
     },
     {
       title: 'Fast Withdrawals Explained',
       body: 'Approval, KYC, and Interac timing explained.',
-      href: '/deposit',
-      image: '/images/generated/fast-payouts-hero.webp',
+      href: '/fast-payouts',
+      image: '/images/generated/fast-payouts-hero.png',
       alt: 'Fast payout guide card highlighting Interac timing and approval flow.',
     },
     {
       title: 'Bankroll Management 101',
       body: 'Set budgets and limits before playing.',
       href: '/guides/strategy',
-      image: '/images/generated/bonus-wagering-hero.webp',
+      image: '/images/generated/bonus-wagering-hero.png',
       alt: 'Bonus wagering guide card with casino terms and playthrough context.',
     },
   ];
@@ -298,10 +294,7 @@
   ];
 
   const jumpLinks = [
-    { href: '#why-it-stands-out', label: 'Why it stands out' },
-    { href: '#interac-flow', label: 'Interac flow' },
-    { href: '#casino-section', label: 'Casino' },
-    { href: '#sportsbook-section', label: 'Sportsbook' },
+    { href: '#interac-flow', label: 'How payouts work' },
     { href: '#bonus-terms', label: 'Bonus terms' },
     { href: '#faq-section', label: 'FAQ' },
   ];
@@ -328,7 +321,7 @@
       name: SITE.name,
       url: SITE.url,
       description:
-        'Canadian iGaming guide covering casino reviews, sportsbook education, Interac payout expectations, and safer-play information.',
+        '247iBET is a Canadian iGaming brand covering casino, sportsbook, and Interac e-Transfer payout expectations.',
       publisher: {
         '@type': 'Organization',
         '@id': `${SITE.url}/#org`,
@@ -344,7 +337,7 @@
       url: SITE.url,
       logo: `${SITE.url}/images/brand/logo.png`,
       description:
-        '247iBET is a Canadian iGaming guide covering casino reviews, sportsbook education, Interac payment-method expectations, and safer-play information for Canadian audiences.',
+        '247iBET is a Canadian iGaming brand covering casino, sportsbook, and Interac e-Transfer payout information for Canadian audiences.',
       areaServed: {
         '@type': 'Country',
         name: 'Canada',
@@ -387,18 +380,18 @@
 </script>
 
 <svelte:head>
-  <title>247iBET Canada: iGaming Guide, Sportsbook Reviews & Interac Payment Education</title>
+  <title>247iBET Canada — Casino, Sportsbook & Interac Payouts</title>
   <meta
     name="description"
-    content="Explore 247iBET Canada for casino reviews, sportsbook education, Interac payment guidance, and safer-play resources for Canadian audiences."
+    content="247iBET is Canada's premium iGaming brand: casino, sportsbook, and Interac e-Transfer payouts. 19+ to play (18+ in select provinces)."
   />
   <meta
     property="og:title"
-    content="247iBET Canada: iGaming Guide, Sportsbook Reviews & Interac Payment Education"
+    content="247iBET Canada — Casino, Sportsbook & Interac Payouts"
   />
   <meta
     property="og:description"
-    content="Explore 247iBET Canada for casino reviews, sportsbook education, Interac payment guidance, and safer-play resources."
+    content="Canada's premium iGaming brand: casino, sportsbook, and Interac e-Transfer payouts."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={SITE.url} />
@@ -444,11 +437,11 @@
           <div
             class="relative h-32 w-full overflow-hidden rounded-2xl bg-black/40 ring-1 ring-white/10"
           >
-            <div 
-              class="absolute inset-0 bg-cover bg-no-repeat transition-transform duration-700 group-hover:scale-125"
-              style="background-image: url({item.image}); background-position: {item.position}; background-size: 200% 200%;"
+            <div
+              class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110"
+              style="background-image: url({item.image});"
             ></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-black/80 via-navy-black/20 to-transparent"></div>
           </div>
           <div>
             <p
@@ -500,7 +493,7 @@
           preload="metadata"
           width="1280"
           height="720"
-          poster="/images/generated/casino-premium-hero.webp"
+          poster="/images/generated/casino-premium-hero.png"
           aria-label="247iBET casino guide, sportsbook education, and payment guidance overview video"
         >
           <source src="/videos/247ibet-home-promo.mp4" type="video/mp4" />
@@ -627,10 +620,10 @@
         </div>
         <h2 class="font-display text-4xl font-black md:text-5xl tracking-tight">Interac<br/><span class="text-gradient-gold">Payout Flow</span></h2>
         <p class="mt-4 text-base leading-relaxed text-text-body">
-          Our verified education on the standard Interac e-Transfer lifecycle, from initial deposit to final bank processing.
+          The standard Interac e-Transfer lifecycle &mdash; from initial deposit through KYC review to bank-side processing.
         </p>
         <div class="mt-8 flex gap-4">
-          <a href="/deposit" class="page-cta-primary-sm btn-magnetic">Compare Payouts</a>
+          <a href="/interac" class="page-cta-primary-sm btn-magnetic">View Interac Flow</a>
         </div>
       </div>
       <div
@@ -1065,7 +1058,7 @@
           <div class="mt-8 grid gap-6 sm:grid-cols-2">
             <div class="space-y-2">
               <p class="text-sm font-black uppercase tracking-widest text-white/40">The Approach</p>
-              <p class="text-base leading-relaxed text-text-body">Set your budget, use session limits, and take breaks. We only feature sites with verified safety controls.</p>
+              <p class="text-base leading-relaxed text-text-body">Set your budget, use session limits, and take breaks. Account-level safety controls live on the gaming platform.</p>
             </div>
             <div class="space-y-2">
               <p class="text-sm font-black uppercase tracking-widest text-white/40">The Resources</p>
@@ -1080,7 +1073,7 @@
           >
           <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary">
             <span class="h-1 w-1 rounded-full bg-success"></span>
-            Verified Safe Links
+            CAMH · ConnexOntario
           </div>
         </div>
       </div>
@@ -1124,23 +1117,23 @@
               <ArrowRight class="h-6 w-6 transition-transform group-hover:translate-x-2" aria-hidden="true" />
             </SafeExternalLink>
             
-            <p class="text-center font-mono text-[10px] uppercase tracking-widest text-text-tertiary">
+            <p class="text-center font-mono text-xs uppercase tracking-widest text-text-tertiary">
               Strictly 18+/19+ · Terms & Conditions Apply
             </p>
           </div>
 
           <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-8 opacity-60">
             <div class="text-center">
-              <p class="font-display text-xl font-black text-white">Instant</p>
-              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Deposits</p>
+              <p class="font-display text-xl font-black text-white">Interac</p>
+              <p class="text-xs font-bold uppercase tracking-widest text-text-tertiary">e-Transfer</p>
             </div>
             <div class="text-center">
-              <p class="font-display text-xl font-black text-white">24/7</p>
-              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Guidance</p>
+              <p class="font-display text-xl font-black text-white">CA</p>
+              <p class="text-xs font-bold uppercase tracking-widest text-text-tertiary">Built for Canada</p>
             </div>
             <div class="text-center">
-              <p class="font-display text-xl font-black text-white">Verified</p>
-              <p class="text-[9px] font-bold uppercase tracking-widest text-text-tertiary">Payouts</p>
+              <p class="font-display text-xl font-black text-white">19+</p>
+              <p class="text-xs font-bold uppercase tracking-widest text-text-tertiary">Age-gated</p>
             </div>
           </div>
         </div>

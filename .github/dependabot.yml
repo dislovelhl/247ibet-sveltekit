@@ -1,0 +1,53 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: America/Toronto
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    groups:
+      sveltekit:
+        patterns:
+          - "@sveltejs/*"
+          - "svelte"
+          - "svelte-*"
+      tooling:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "@eslint/*"
+          - "typescript-eslint"
+          - "prettier"
+          - "prettier-*"
+          - "vitest"
+          - "@vitest/*"
+          - "@playwright/*"
+          - "playwright"
+          - "playwright-core"
+      types:
+        patterns:
+          - "@types/*"
+    ignore:
+      # Pinned via pnpm.overrides in package.json — do not auto-bump.
+      - dependency-name: "undici"
+      - dependency-name: "devalue"
+      - dependency-name: "uuid"
+      - dependency-name: "cookie"
+      - dependency-name: "node-gyp-build-optional-packages"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "08:00"
+      timezone: America/Toronto
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - ci

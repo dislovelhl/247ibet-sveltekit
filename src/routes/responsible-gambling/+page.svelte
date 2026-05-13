@@ -238,7 +238,7 @@
       class="material-panel relative mb-12 min-h-[500px] overflow-hidden rounded-[2.5rem] shadow-2xl"
     >
       <BackgroundAtmosphere
-        src="/images/generated/safe-play-shield-hero.webp"
+        src="/images/generated/safe-play-shield-hero.png"
         parallaxMultiplier={0.4}
       />
       <div

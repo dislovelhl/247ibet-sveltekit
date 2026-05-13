@@ -33,10 +33,10 @@
 
   const featureCards = [
     {
-      title: 'Interac Payouts',
-      body: 'Deposit and withdrawal timing depends on operator approval, verification, bonus review, and bank-side completion.',
+      title: 'Deposit Checklist',
+      body: 'Review cashier methods, limits, bonus impact, and verification readiness before funding an account.',
       href: '/deposit',
-      cta: 'View Payout Details',
+      cta: 'Check Deposit Terms',
       icon: Zap,
     },
     {
@@ -95,49 +95,49 @@
       title: 'Online Slots',
       body: 'Thousands of top slot games from leading providers.',
       href: '/casino/slots',
-      image: '/images/generated/casino-slots-hero.webp',
+      image: '/images/generated/casino-slots-hero.png',
       icon: Sparkles,
     },
     {
       title: 'Live Casino',
       body: 'Live dealer roulette, blackjack, and more — verify current provider availability before playing.',
       href: '/casino/live-casino',
-      image: '/images/generated/casino-live-hero.webp',
+      image: '/images/generated/casino-live-hero.png',
       icon: MonitorPlay,
     },
     {
       title: 'Blackjack Online',
       body: 'Classic casino action with multiple blackjack variations to enjoy.',
       href: '/casino/blackjack',
-      image: '/images/generated/casino-blackjack-hero.webp',
+      image: '/images/generated/casino-blackjack-hero.png',
       icon: BadgeCheck,
     },
     {
       title: 'Roulette Online',
       body: 'European, American, French, and other roulette variants explained for comparison.',
       href: '/casino/roulette',
-      image: '/images/generated/casino-roulette-hero.webp',
+      image: '/images/generated/casino-roulette-hero.png',
       icon: CircleDollarSign,
     },
     {
       title: 'Baccarat Online',
       body: 'Point Baccarat, no commission baccarat, and more strategic table games.',
       href: '/casino/baccarat',
-      image: '/images/generated/casino-baccarat-hero.webp',
+      image: '/images/generated/casino-baccarat-hero.png',
       icon: CreditCard,
     },
     {
       title: 'Mobile Casino',
       body: 'Optimized for mobile. Enjoy casino on the go anytime, anywhere.',
       href: '/casino/mobile',
-      image: '/images/generated/casino-premium-hero.webp',
+      image: '/images/generated/casino-premium-hero.png',
       icon: Smartphone,
     },
     {
       title: 'CAD Casino',
       body: 'Play in CAD with Canadian dollars. No FX fees, no hassle.',
       href: '/casino/cad',
-      image: '/images/generated/casino-premium-hero.webp',
+      image: '/images/generated/casino-premium-hero.png',
       icon: CircleDollarSign,
     },
   ];
@@ -273,7 +273,7 @@
 
     <section class="material-panel relative overflow-hidden rounded-[2.5rem] shadow-2xl">
       <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.webp')] bg-cover bg-center opacity-60"
+        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(212,148,58,0.15),transparent_50%),url('/images/generated/casino-premium-hero.png')] bg-cover bg-center opacity-60"
         style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y *
           0.4}px, 0) scale(1.1);"
       ></div>

@@ -21,6 +21,7 @@
 
   const LOGO_SRC = '/images/brand/logo.png';
   const MOBILE_MENU_ID = 'mobile-menu-panel';
+  const MOBILE_MENU_OPEN_EVENT = '247ibet:mobile-menu-open-request';
   const FOCUSABLE_SELECTOR =
     'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -32,22 +33,10 @@
   const mainLinks: NavItem[] = [
     { href: '/casino', label: 'Casino' },
     { href: '/sportsbook', label: 'Sportsbook' },
-    { href: '/deposit', label: 'Interac Payouts' },
-    { href: '/casino-bonuses-canada', label: 'Bonuses' },
+    { href: '/interac', label: 'Interac' },
+    { href: '/fast-payouts', label: 'Fast Payouts' },
     { href: '/responsible-gambling', label: 'Safety' },
     { href: '/faq', label: 'FAQ' },
-  ];
-
-  const subLinks: NavItem[] = [
-    { href: '/casino/slots', label: 'Slots' },
-    { href: '/casino/blackjack', label: 'Blackjack' },
-    { href: '/casino/roulette', label: 'Roulette' },
-    { href: '/casino/baccarat', label: 'Baccarat' },
-    { href: '/casino/live-casino', label: 'Live Casino' },
-    { href: '/sportsbook/nhl', label: 'NHL' },
-    { href: '/sportsbook/nba', label: 'NBA' },
-    { href: '/sportsbook/ufc', label: 'UFC' },
-    { href: '/fast-payouts', label: 'Payout Guide' },
   ];
 
   const quickLinks = [
@@ -82,11 +71,22 @@
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') isMobileMenuOpen = false;
     };
+    const handleMobileMenuOpenRequest = () => {
+      if (isMobileMenuOpen) return;
+
+      lastMobileFocus =
+        document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      isMobileMenuOpen = true;
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
+    window.addEventListener(MOBILE_MENU_OPEN_EVENT, handleMobileMenuOpenRequest);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener(MOBILE_MENU_OPEN_EVENT, handleMobileMenuOpenRequest);
     };
   });
 
@@ -329,34 +329,6 @@
           <Menu class="w-6 h-6" aria-hidden="true" />
         {/if}
       </button>
-    </div>
-  </div>
-
-  <!-- Tier 3: Sub-nav — desktop only, remains visible on scroll -->
-  <div class="overflow-visible transition-[max-height,opacity] duration-200 ease-out opacity-100">
-    <div class="hidden lg:block">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav aria-label="Quick category navigation">
-          <ul
-            class="segmented-chrome mt-2 flex min-h-[44px] items-center overflow-x-auto rounded-full px-1 [scrollbar-width:none]"
-          >
-            {#each subLinks as link (link.href)}
-              <li>
-                <a
-                  href={link.href}
-                  class="flex h-full min-h-[40px] shrink-0 items-center rounded-full border-r border-white/5 px-4 font-mono text-xs uppercase tracking-[0.1em] transition-colors last:border-r-0 hover:bg-white/[0.04] hover:text-prestige-gold focus-visible:bg-prestige-gold/10 focus-visible:text-prestige-gold focus-visible:outline-none {pathname ===
-                  link.href
-                    ? 'text-prestige-gold'
-                    : 'text-text-body'}"
-                  aria-current={pathname === link.href ? 'page' : undefined}
-                >
-                  {link.label}
-                </a>
-              </li>
-            {/each}
-          </ul>
-        </nav>
-      </div>
     </div>
   </div>
 

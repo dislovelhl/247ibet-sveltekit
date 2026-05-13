@@ -6,12 +6,12 @@
     {
       question: 'What is a legal online casino in Canada?',
       answer:
-        'A legal online casino in Canada is an online gambling site that operates inside a provincial framework you can verify through an official source. In Ontario, that means an operator registered with the Alcohol and Gaming Commission of Ontario and contracted with iGaming Ontario. In Alberta, the regulated option is PlayAlberta.',
+        'A legal online casino in Canada is an online gambling site that operates inside a provincial framework you can verify through an official source. In Ontario, that means an operator registered with the Alcohol and Gaming Commission of Ontario and contracted with iGaming Ontario. In Alberta, the regulated option is the official provincial platform.',
     },
     {
       question: 'Is online casino legal in Canada?',
       answer:
-        "Online casino rules in Canada are provincial, not nationwide. In Ontario, legal private-sector sites must be registered with the Alcohol and Gaming Commission of Ontario and operate under an agreement with iGaming Ontario. In Alberta, PlayAlberta is currently the province's regulated online gambling site.",
+        "Online casino rules in Canada are provincial, not nationwide. In Ontario, legal private-sector sites must be registered with the Alcohol and Gaming Commission of Ontario and operate under an agreement with iGaming Ontario. In Alberta, the official provincial platform is currently the province's regulated online gambling site.",
     },
     {
       question: 'How many regulated online gambling sites are listed in Ontario?',
@@ -26,7 +26,7 @@
     {
       question: 'What is the only regulated online casino in Alberta right now?',
       answer:
-        "As of March 30, 2026, PlayAlberta remains Alberta's regulated online gambling site. If a casino claims to be fully regulated in Alberta but cannot point to that framework, you should verify the claim directly with Alberta Gaming, Liquor and Cannabis resources before depositing.",
+        "As of March 30, 2026, the official provincial platform remains Alberta's regulated online gambling site. If a casino claims to be fully regulated in Alberta but cannot point to that framework, you should verify the claim directly with Alberta Gaming, Liquor and Cannabis resources before depositing.",
     },
     {
       question: 'Can I use Interac at a licensed online casino in Canada?',
@@ -68,7 +68,7 @@
     },
     {
       metric: 'Alberta regulated option',
-      value: 'PlayAlberta',
+      value: 'Official Provincial Platform',
       context: "Alberta does not yet mirror Ontario's open multi-operator model.",
     },
   ];
@@ -245,10 +245,10 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
         class="text-prestige-gold hover:underline">iGaming Ontario</a
       >, while Alberta currently points players to
       <a
-        href="https://aglc.ca/playalberta"
+        href="https://aglc.ca"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-prestige-gold hover:underline">PlayAlberta</a
+        class="text-prestige-gold hover:underline">the official provincial platform</a
       >.
     </p>
     <p class="mt-2 text-xs text-text-tertiary">Last updated: March 30, 2026</p>
@@ -259,7 +259,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
     <p class="mt-2 text-xs text-text-tertiary leading-relaxed">
       Online casino rules in Canada are provincial. Ontario is the primary regulated
       private-operator market with 47 operators listed as of March 2026. Alberta currently relies on
-      a single-site state model (PlayAlberta). Always verify the operator against an official
+      a single-site state model. Always verify the operator against an official
       provincial source before depositing.
     </p>
   </div>

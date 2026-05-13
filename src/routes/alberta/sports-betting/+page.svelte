@@ -235,7 +235,7 @@ import AffiliateDisclosure from '$lib/components/AffiliateDisclosure.svelte';
 
   <div class="mt-16">
     <div class="mt-8 rounded-xl border border-white/10 bg-navy-card p-4 text-xs text-text-tertiary">
-      Play responsibly. 19+ only. <a
+      Play responsibly. 18+ only in Alberta. <a
         href="/responsible-gambling"
         class="text-slate-blue hover:underline">Responsible gambling resources</a
       >.

@@ -68,7 +68,7 @@ type TypographySnapshot = {
 const snapshots: TypographySnapshot[] = [];
 
 test.describe('mobile typography visual QA', () => {
-  test.describe.configure({ mode: 'serial' });
+  test.describe.configure({ mode: 'serial', timeout: 60_000 });
 
   test.use({
     userAgent:

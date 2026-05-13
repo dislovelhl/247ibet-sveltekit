@@ -130,7 +130,7 @@
 
     <header class="material-panel relative mb-12 overflow-hidden rounded-[2.5rem] shadow-2xl">
       <img
-        src="/images/generated/canada-market-hero.webp"
+        src="/images/generated/canada-market-hero.png"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-40"
         style="transform: translate3d({globalParallax.x * 0.4}px, {globalParallax.y *

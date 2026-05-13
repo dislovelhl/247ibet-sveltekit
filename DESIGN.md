@@ -94,6 +94,22 @@ Defined in `src/styles/glass.css`:
 
 ---
 
+## 🖼️ Asset Library (Stable Diffusion)
+
+The platform uses high-fidelity, custom-generated imagery to maintain a unique "Dark Luxury" aesthetic.
+
+### Visual Identity
+- **Prompt Base**: "Dark luxury theme, cinematic lighting, deep navy and gold palette, 8k resolution, high-end editorial feel."
+- **Asset Directory**: `/static/images/generated/`
+- **Format**: High-resolution `.png` (optimized for LCP where possible).
+
+### Core Hero Assets
+- `sportsbook-premium-hero.png`: Main sportsbook entry point.
+- `casino-slots-hero.png`: Casino and slots sections.
+- `fast-payouts-hero.png`: Payment and withdrawal guides.
+- `review-checklist-hero.png`: Ranking and checklist pages.
+- `safe-play-shield-hero.png`: Responsible gambling and trust signals.
+
 ## 🚀 Proposed Extensions (Generated via `ui-design-system`)
 
 To provide more UI depth, the following expanded scales are proposed for integration into `theme.css`:

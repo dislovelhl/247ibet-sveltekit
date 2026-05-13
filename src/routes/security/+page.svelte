@@ -64,7 +64,7 @@
       class="material-panel relative mb-16 overflow-hidden rounded-[2.5rem] shadow-2xl min-h-[400px]"
     >
       <BackgroundAtmosphere
-        src="/images/generated/security-protection-hero.webp"
+        src="/images/generated/security-protection-hero.png"
         parallaxMultiplier={0.4}
       />
       <div
